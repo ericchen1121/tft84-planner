@@ -11,4 +11,8 @@ const payloads={STYLES:read('src/styles.css'),DATA:JSON.stringify(data),ART:JSON
 for(const [name,content]of Object.entries(payloads))html=html.replace(`/*__${name}__*/`,()=>content.replace(/<\/script/gi,'<\\/script'));
 if(/\/\*__[A-Z]+__\*\//.test(html))throw Error('Unresolved template token');
 fs.writeFileSync(new URL('dist/index.html',root),html);
-console.log('Built standalone dist/index.html:',Buffer.byteLength(html),'bytes');
+// Branch-based GitHub Pages supports only / or /docs. Keep a root entry point
+// identical to dist so the user's existing main / (root) setting works.
+fs.writeFileSync(new URL('index.html',root),html);
+fs.writeFileSync(new URL('.nojekyll',root),'');
+console.log('Built standalone index.html and dist/index.html:',Buffer.byteLength(html),'bytes each');

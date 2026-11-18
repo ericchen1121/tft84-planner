@@ -59,6 +59,8 @@ assert.throws(()=>prepare(data,{population:0}));assert.throws(()=>prepare(data,{
 for(const trait_bonuses of [{Unknown:1},{Frontman:-1},{Frontman:1.5},{Frontman:17},[],null])assert.throws(()=>prepare(data,{trait_bonuses}));
 const timed=solve(data,{...DEFAULTS},{deadline:Date.now()-1});assert.equal(timed.status,'INCOMPLETE');
 const html=get('dist/index.html');
+assert.equal(get('index.html'),html,'Root GitHub Pages entry point must match dist');
+assert(fs.existsSync(new URL('.nojekyll',root)),'Branch Pages must skip Jekyll processing');
 assert.equal((html.match(/id="app-data"/g)||[]).length,1);
 const capture=id=>html.match(new RegExp('<script id="'+id+'"[^>]*>([\\s\\S]*?)<\\/script>'))?.[1];
 const embedded=JSON.parse(capture('app-data'));assert.equal(embedded.units.length,94);assert.equal(embedded.traits.length,47);

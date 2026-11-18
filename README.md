@@ -1,6 +1,6 @@
 # Eightfold — TFT Lineup Explorer
 
-A simple English web app for visualizing every TFT lineup that fits your rules. Open **[dist/index.html](dist/index.html)** after downloading it, or serve `dist/` with any static host. The complete application is a single HTML file; no account, backend, npm installation, or API key is required to use it.
+A simple English web app for visualizing every TFT lineup that fits your rules. Open the website at **https://ericchen1121.github.io/tft84-planner/**, download **[index.html](index.html)**, or serve `dist/` with any static host. The complete application is a single HTML file; no account, backend, npm installation, or API key is required to use it.
 
 ## Features
 
@@ -53,7 +53,7 @@ npm test
 npm run dev
 ```
 
-The local preview URL is printed by `npm run dev`. The application lives in `src/`; `tools/build.mjs` embeds everything in `dist/index.html`. Data lives in `dist/units.json`, artwork references in `dist/artwork.json`, and the verified packed preset in `dist/preset.bin`.
+The local preview URL is printed by `npm run dev`. The application lives in `src/`; `tools/build.mjs` embeds everything in identical root `index.html` and `dist/index.html` outputs. Data lives in `dist/units.json`, artwork references in `dist/artwork.json`, and the verified packed preset in `dist/preset.bin`.
 
 ### Validation
 
@@ -74,9 +74,15 @@ Browser visual/interaction QA was unavailable in the creation environment becaus
 
 ## Hosting
 
-`dist/index.html` can be hosted as-is. For GitHub Pages, select **GitHub Actions** in the repository's **Settings → Pages**, then manually run **Deploy GitHub Pages**. The workflow builds, tests and deploys `dist/`.
+The repository includes a root `index.html` and `.nojekyll` for the existing branch-based GitHub Pages configuration:
 
-This repository is private. GitHub Pages availability and site visibility depend on the account plan and repository configuration. The workflow is manual so that merely uploading the project does not change its audience. The CI workflow tests source changes without publishing a site.
+1. In **Settings → Pages**, choose **Deploy from a branch**.
+2. Select **main** and **/(root)**, then **Save**.
+3. After deployment, open **https://ericchen1121.github.io/tft84-planner/**.
+
+The publishing-folder menu only offers `/(root)` and `/docs`; `dist` and `src` are not options in this mode. You do not need to find or select them. After source edits, run `npm run build` and commit both generated HTML files; new commits to the configured branch automatically publish the root entry point.
+
+Alternatively, select **GitHub Actions** as the Pages source and manually run **Deploy GitHub Pages** to build, test and deploy `dist/`. The two publishing methods use the same generated app. GitHub Pages availability depends on the account plan and repository configuration; the CI workflow tests source changes without changing Pages settings.
 
 ## Data and artwork
 
