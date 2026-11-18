@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import zlib from 'node:zlib';
-import {prepare,solve,DEFAULTS,effectiveTraits} from '../src/solver.mjs';
+import {prepare,solve,DEFAULTS,effectiveTraits,EMBLEM_TRAITS} from '../src/solver.mjs';
 import {TRAIT_ZH,t,traitLabel,traitSearchText,setLanguage,getLanguage,localizedStaticText} from '../src/i18n.mjs';
 setLanguage('en');
 const data=JSON.parse(fs.readFileSync(new URL('../dist/units.json',import.meta.url)));
@@ -101,8 +101,12 @@ setLanguage('en');assert.equal(traitLabel('Frontman'),'Frontman');assert.equal(t
 // Check that changing the labels never changes canonical option values or selections.
 class SelectStub{constructor(){this.options=[];this.value='';}replaceChildren(){this.options=[];this.value='';}append(option){this.options.push(option);if(this.options.length===1)this.value=option.value;}}
 const selectNodes=new Map(['champion-filter','extra-unit','sona_feature_trait','extra-trait','emblem-trait','score-filter'].map(id=>[id,new SelectStub()]));
-const populate=appFunction('populateSelects','portrait',{DATA:data,ART:{units:{}},state:{records:[]},t,traitLabel,getLanguage,Option:class{constructor(text,value){this.text=text;this.value=value;}},document:{querySelectorAll:()=>[]},$:id=>selectNodes.get(id)});
+const populate=appFunction('populateSelects','portrait',{DATA:data,ART:{units:{}},state:{records:[]},EMBLEM_TRAITS,t,traitLabel,getLanguage,Option:class{constructor(text,value){this.text=text;this.value=value;}},document:{querySelectorAll:()=>[]},$:id=>selectNodes.get(id)});
 populate();selectNodes.get('emblem-trait').value='Gu Feng';selectNodes.get('extra-trait').value='Prodigy';
+assert.equal(selectNodes.get('emblem-trait').options.length,28);
+assert.deepEqual(selectNodes.get('emblem-trait').options.map(o=>o.value).sort(),[...EMBLEM_TRAITS].sort());
+assert.equal(selectNodes.get('extra-trait').options.length,47);
+assert(!selectNodes.get('emblem-trait').options.some(o=>['Synthwave','Country','Producer'].includes(o.value)));
 setLanguage('zh-Hant');populate();assert.equal(selectNodes.get('emblem-trait').value,'Gu Feng');assert.equal(selectNodes.get('extra-trait').value,'Prodigy');assert.equal(selectNodes.get('emblem-trait').options.find(o=>o.value==='Gu Feng').text,'國風');assert.equal(selectNodes.get('extra-trait').options.find(o=>o.value==='Prodigy').text,'不世之才');
 setLanguage('en');populate();assert.equal(selectNodes.get('emblem-trait').value,'Gu Feng');assert.equal(selectNodes.get('emblem-trait').options.find(o=>o.value==='Gu Feng').text,'Gu Feng');
 const scripts=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);new vm.Script(scripts.at(-1));

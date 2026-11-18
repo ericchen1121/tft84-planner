@@ -6,6 +6,13 @@ export const DEFAULTS = Object.freeze({
   backline_role_keywords:['Marksman','Caster','AttackSpecialist_Ammo'],
   exclude_unit_ids:[],extra_traits:{},trait_bonuses:{},sona_feature_trait:null,max_seconds:590,threads:4
 });
+// Emblem availability follows the trait-filter screenshot supplied by the user.
+export const EMBLEM_TRAITS=Object.freeze([
+  'Heartsteel','Frontman','Classical','Collab','Swiftstriker','Hitmaker','Encore',
+  'Juggernaut','Beach Pop','Pentakill','Slayer','Rock','Manager','EDM',
+  'Choreographer','Jazz','Arcanist','Bodyguard','Gu Feng','Hyperpop','Illbeats',
+  'Ionic Spark','K|DA','Prodigy','R&B','Renegade','Trickshot','True Damage'
+]);
 
 export function effectiveTraits(u,c) {
   return [...new Set([...u.traits,...(c.extra_traits?.[u.id]||[]),...(u.name==='Sona'&&c.sona_feature_trait?[c.sona_feature_trait]:[])])];

@@ -32,7 +32,10 @@ function populateSelects(){
  const sorted=[...DATA.units].sort((a,b)=>a.name.localeCompare(b.name));
  for(const id of ['champion-filter','extra-unit'])for(const u of sorted)$(id).append(new Option(t('{name} · {cost}g',{name:u.name,cost:u.cost}),u.id));
  const traits=[...DATA.traits].sort((a,b)=>traitLabel(a.name).localeCompare(traitLabel(b.name),getLanguage()));
- for(const id of ['sona_feature_trait','extra-trait','emblem-trait'])for(const trait of traits)$(id).append(new Option(traitLabel(trait.name),trait.name));
+ for(const id of ['sona_feature_trait','extra-trait','emblem-trait'])for(const trait of traits){
+  if(id==='emblem-trait'&&!EMBLEM_TRAITS.includes(trait.name))continue;
+  $(id).append(new Option(traitLabel(trait.name),trait.name));
+ }
  const maxScore=state.records.reduce((max,r)=>Math.max(max,r.score),40);
  for(let n=1;n<=maxScore;n++)$('score-filter').append(new Option(t('{n}+ synergy',{n}),String(n)));
  for(const [id,value]of Object.entries(saved))if([...$(id).options].some(option=>option.value===value))$(id).value=value;
