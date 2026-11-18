@@ -1,0 +1,815 @@
+{
+  "source": "https://tactics.tools/info/set-update",
+  "snapshot_date": "2026-11-18",
+  "notes": [
+    "Exact image hrefs were extracted by following the source page image links; none of the used URLs is merely guessed.",
+    "91 champion portrait hrefs and 44 trait icon hrefs were exposed. Rakan, Smeech, Sona and Boy Band, Producer, Collab had no linked image URLs in the retrieved page.",
+    "The missing source assets have null URLs. Use a clearly styled initials/neutral-icon fallback, not another champion's art.",
+    "Several portrait fetches timed out or returned transient Internal Error; their exact URLs are still observed source hrefs.",
+    "SVG source links were observed, but the retrieval tool does not render SVG. Browser img elements can request these URLs normally.",
+    "Copyright and trademark ownership remains with Riot Games and the image publisher. Provide source attribution; this manifest does not grant a separate redistribution license."
+  ],
+  "units": {
+    "u0": {
+      "name": "Elise",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Elise.jpg?w=290",
+      "source_ref": "turn299440071view0",
+      "status": "source_link_and_image_verified"
+    },
+    "u1": {
+      "name": "Gnar",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Gnar.jpg?w=290",
+      "source_ref": "turn170613744view0",
+      "status": "source_link_and_image_verified"
+    },
+    "u2": {
+      "name": "Katarina",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Katarina.jpg?w=290",
+      "source_ref": "turn170613744view1",
+      "status": "source_link_and_image_verified"
+    },
+    "u3": {
+      "name": "Kayn",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Kayn.jpg?w=290",
+      "source_ref": "turn170613744view2",
+      "status": "source_link_and_image_verified"
+    },
+    "u4": {
+      "name": "Kennen",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Kennen.jpg?w=290",
+      "source_ref": "turn170613744view3",
+      "status": "source_link_and_image_verified"
+    },
+    "u5": {
+      "name": "Kobuko",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Kobuko.jpg?w=290",
+      "source_ref": "turn170613744view4",
+      "status": "source_link_and_image_verified"
+    },
+    "u6": {
+      "name": "Lillia",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Lillia.jpg?w=290",
+      "source_ref": "turn170613744view5",
+      "status": "source_link_and_image_verified"
+    },
+    "u7": {
+      "name": "Neeko",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Neeko.jpg?w=290",
+      "source_ref": "turn170613744view6",
+      "status": "source_link_and_image_verified"
+    },
+    "u8": {
+      "name": "Olaf",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Olaf.jpg?w=290",
+      "source_ref": "turn170613744view7",
+      "status": "source_link_and_image_verified"
+    },
+    "u9": {
+      "name": "Sett",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Sett.jpg?w=290",
+      "source_ref": "turn170613744view8",
+      "status": "source_link_and_image_verified"
+    },
+    "u10": {
+      "name": "Taric",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Taric.jpg?w=290",
+      "source_ref": "turn170613744view9",
+      "status": "source_link_and_image_verified"
+    },
+    "u11": {
+      "name": "Varus",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Varus.jpg?w=290",
+      "source_ref": "turn170613744view10",
+      "status": "source_link_and_image_verified"
+    },
+    "u12": {
+      "name": "Yunara",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Yunara.jpg?w=290",
+      "source_ref": "turn170613744view11",
+      "status": "source_link_and_image_verified"
+    },
+    "u13": {
+      "name": "Ziggs",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Ziggs.jpg?w=290",
+      "source_ref": "turn170613744view12",
+      "status": "source_link_and_image_verified"
+    },
+    "u14": {
+      "name": "Zoe",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Zoe.jpg?w=290",
+      "source_ref": "turn170613744view13",
+      "status": "source_link_and_image_verified"
+    },
+    "u15": {
+      "name": "Annie",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Annie.jpg?w=290",
+      "source_ref": "turn170613744view14",
+      "status": "source_link_and_image_verified"
+    },
+    "u16": {
+      "name": "Ashe",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Ashe.jpg?w=290",
+      "source_ref": "turn170613744view15",
+      "status": "source_link_and_image_verified"
+    },
+    "u17": {
+      "name": "Camille",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Camille.jpg?w=290",
+      "source_ref": "turn170613744view16",
+      "status": "source_link_and_image_verified"
+    },
+    "u18": {
+      "name": "Ezreal",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Ezreal.jpg?w=290",
+      "source_ref": "turn170613744view17",
+      "status": "source_link_and_image_verified"
+    },
+    "u19": {
+      "name": "Gragas",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Gragas.jpg?w=290",
+      "source_ref": "turn170613744view18",
+      "status": "source_link_and_image_verified"
+    },
+    "u20": {
+      "name": "Illaoi",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Illaoi.jpg?w=290",
+      "source_ref": "turn170613744view19",
+      "status": "source_link_observed_fetch_error"
+    },
+    "u21": {
+      "name": "Jax",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Jax.jpg?w=290",
+      "source_ref": "turn481600623view0",
+      "status": "source_link_observed_fetch_error"
+    },
+    "u22": {
+      "name": "Karthus",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Karthus.jpg?w=290",
+      "source_ref": "turn481600623view1",
+      "status": "source_link_and_image_verified"
+    },
+    "u23": {
+      "name": "Lucian",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Lucian.jpg?w=290",
+      "source_ref": "turn481600623view2",
+      "status": "source_link_observed_fetch_error"
+    },
+    "u24": {
+      "name": "Lulu",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Lulu.jpg?w=290",
+      "source_ref": "turn481600623view3",
+      "status": "source_link_and_image_verified"
+    },
+    "u25": {
+      "name": "Lux",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Lux.jpg?w=290",
+      "source_ref": "turn481600623view4",
+      "status": "source_link_and_image_verified"
+    },
+    "u26": {
+      "name": "Nasus",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Nasus.jpg?w=290",
+      "source_ref": "turn481600623view5",
+      "status": "source_link_and_image_verified"
+    },
+    "u27": {
+      "name": "Qiyana",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Qiyana.jpg?w=290",
+      "source_ref": "turn481600623view6",
+      "status": "source_link_and_image_verified"
+    },
+    "u28": {
+      "name": "Renata Glasc",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_RenataGlasc.jpg?w=290",
+      "source_ref": "turn299440071view3",
+      "status": "source_link_and_image_verified"
+    },
+    "u29": {
+      "name": "Renekton",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Renekton.jpg?w=290",
+      "source_ref": "turn481600623view7",
+      "status": "source_link_and_image_verified"
+    },
+    "u30": {
+      "name": "Samira",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Samira.jpg?w=290",
+      "source_ref": "turn481600623view8",
+      "status": "source_link_and_image_verified"
+    },
+    "u31": {
+      "name": "Seraphine",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Seraphine.jpg?w=290",
+      "source_ref": "turn481600623view9",
+      "status": "source_link_and_image_verified"
+    },
+    "u32": {
+      "name": "Tristana",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Tristana.jpg?w=290",
+      "source_ref": "turn481600623view10",
+      "status": "source_link_and_image_verified"
+    },
+    "u33": {
+      "name": "Amumu",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Amumu.jpg?w=290",
+      "source_ref": "turn481600623view11",
+      "status": "source_link_and_image_verified"
+    },
+    "u34": {
+      "name": "Bard",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Bard.jpg?w=290",
+      "source_ref": "turn481600623view12",
+      "status": "source_link_and_image_verified"
+    },
+    "u35": {
+      "name": "Braum",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Braum.jpg?w=290",
+      "source_ref": "turn481600623view13",
+      "status": "source_link_and_image_verified"
+    },
+    "u36": {
+      "name": "Briar",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Briar.jpg?w=290",
+      "source_ref": "turn481600623view14",
+      "status": "source_link_and_image_verified"
+    },
+    "u37": {
+      "name": "Draven",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Draven.jpg?w=290",
+      "source_ref": "turn481600623view15",
+      "status": "source_link_and_image_verified"
+    },
+    "u38": {
+      "name": "Ekko",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Ekko.jpg?w=290",
+      "source_ref": "turn481600623view16",
+      "status": "source_link_and_image_verified"
+    },
+    "u39": {
+      "name": "Evelynn",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Evelynn.jpg?w=290",
+      "source_ref": "turn481600623view17",
+      "status": "source_link_and_image_verified"
+    },
+    "u40": {
+      "name": "Galio",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Galio.jpg?w=290",
+      "source_ref": "turn481600623view18",
+      "status": "source_link_and_image_verified"
+    },
+    "u41": {
+      "name": "K'Sante",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_KSante.jpg?w=290",
+      "source_ref": "turn299440071view4",
+      "status": "source_link_and_image_verified"
+    },
+    "u42": {
+      "name": "Kai'Sa",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_KaiSa.jpg?w=290",
+      "source_ref": "turn299440071view5",
+      "status": "source_link_and_image_verified"
+    },
+    "u43": {
+      "name": "Malzahar",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Malzahar.jpg?w=290",
+      "source_ref": "turn481600623view19",
+      "status": "source_link_and_image_verified"
+    },
+    "u44": {
+      "name": "Senna",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Senna.jpg?w=290",
+      "source_ref": "turn941780144view0",
+      "status": "source_link_and_image_verified"
+    },
+    "u45": {
+      "name": "Swain",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Swain.jpg?w=290",
+      "source_ref": "turn941780144view1",
+      "status": "source_link_and_image_verified"
+    },
+    "u46": {
+      "name": "Syndra",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Syndra.jpg?w=290",
+      "source_ref": "turn941780144view2",
+      "status": "source_link_and_image_verified"
+    },
+    "u47": {
+      "name": "Tibbers",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Tibbers.jpg?w=290",
+      "source_ref": "turn941780144view3",
+      "status": "source_link_observed_fetch_error"
+    },
+    "u48": {
+      "name": "Viego",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Viego.jpg?w=290",
+      "source_ref": "turn941780144view4",
+      "status": "source_link_and_image_verified"
+    },
+    "u49": {
+      "name": "Ahri",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Ahri.jpg?w=290",
+      "source_ref": "turn941780144view5",
+      "status": "source_link_and_image_verified"
+    },
+    "u50": {
+      "name": "Alistar",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Alistar.jpg?w=290",
+      "source_ref": "turn941780144view6",
+      "status": "source_link_and_image_verified"
+    },
+    "u51": {
+      "name": "Alune",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Alune.jpg?w=290",
+      "source_ref": "turn941780144view7",
+      "status": "source_link_and_image_verified"
+    },
+    "u52": {
+      "name": "Aurora",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Aurora.jpg?w=290",
+      "source_ref": "turn941780144view8",
+      "status": "source_link_and_image_verified"
+    },
+    "u53": {
+      "name": "Garen",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Garen.jpg?w=290",
+      "source_ref": "turn941780144view9",
+      "status": "source_link_and_image_verified"
+    },
+    "u54": {
+      "name": "Graves",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Graves.jpg?w=290",
+      "source_ref": "turn941780144view10",
+      "status": "source_link_and_image_verified"
+    },
+    "u55": {
+      "name": "Jhin",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Jhin.jpg?w=290",
+      "source_ref": "turn941780144view11",
+      "status": "source_link_and_image_verified"
+    },
+    "u56": {
+      "name": "Jinx",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Jinx.jpg?w=290",
+      "source_ref": "turn941780144view12",
+      "status": "source_link_and_image_verified"
+    },
+    "u57": {
+      "name": "Kayle",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Kayle.jpg?w=290",
+      "source_ref": "turn941780144view13",
+      "status": "source_link_and_image_verified"
+    },
+    "u58": {
+      "name": "Leona",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Leona.jpg?w=290",
+      "source_ref": "turn941780144view14",
+      "status": "source_link_and_image_verified"
+    },
+    "u59": {
+      "name": "Locke",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Locke.jpg?w=290",
+      "source_ref": "turn941780144view15",
+      "status": "source_link_and_image_verified"
+    },
+    "u60": {
+      "name": "Mel",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Mel.jpg?w=290",
+      "source_ref": "turn941780144view16",
+      "status": "source_link_and_image_verified"
+    },
+    "u61": {
+      "name": "Shyvana",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Shyvana.jpg?w=290",
+      "source_ref": "turn941780144view17",
+      "status": "source_link_and_image_verified"
+    },
+    "u62": {
+      "name": "Thresh",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Thresh.jpg?w=290",
+      "source_ref": "turn941780144view18",
+      "status": "source_link_and_image_verified"
+    },
+    "u63": {
+      "name": "Vayne",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Vayne.jpg?w=290",
+      "source_ref": "turn941780144view19",
+      "status": "source_link_and_image_verified"
+    },
+    "u64": {
+      "name": "Wukong",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Wukong.jpg?w=290",
+      "source_ref": "turn456035764view0",
+      "status": "source_link_and_image_verified"
+    },
+    "u65": {
+      "name": "Xayah",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Xayah.jpg?w=290",
+      "source_ref": "turn456035764view1",
+      "status": "source_link_and_image_verified"
+    },
+    "u66": {
+      "name": "Yasuo",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Yasuo.jpg?w=290",
+      "source_ref": "turn456035764view2",
+      "status": "source_link_and_image_verified"
+    },
+    "u67": {
+      "name": "Yone",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Yone.jpg?w=290",
+      "source_ref": "turn456035764view3",
+      "status": "source_link_and_image_verified"
+    },
+    "u68": {
+      "name": "Yorick",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Yorick.jpg?w=290",
+      "source_ref": "turn456035764view4",
+      "status": "source_link_and_image_verified"
+    },
+    "u69": {
+      "name": "Yuumi",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Yuumi.jpg?w=290",
+      "source_ref": "turn456035764view5",
+      "status": "source_link_and_image_verified"
+    },
+    "u70": {
+      "name": "Zac",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Zac.jpg?w=290",
+      "source_ref": "turn456035764view6",
+      "status": "source_link_and_image_verified"
+    },
+    "u71": {
+      "name": "Akali (K|DA)",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Akali_Kda.jpg?w=290",
+      "source_ref": "turn299440071view1",
+      "status": "source_link_and_image_verified"
+    },
+    "u72": {
+      "name": "Akali (True Damage)",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Akali_TrueDamage.jpg?w=290",
+      "source_ref": "turn299440071view2",
+      "status": "source_link_and_image_verified"
+    },
+    "u73": {
+      "name": "Aphelios",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Aphelios.jpg?w=290",
+      "source_ref": "turn456035764view7",
+      "status": "source_link_and_image_verified"
+    },
+    "u74": {
+      "name": "Dr. Mundo",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_DrMundo.jpg?w=290",
+      "source_ref": "turn299440071view6",
+      "status": "source_link_and_image_verified"
+    },
+    "u75": {
+      "name": "Gwen",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Gwen.jpg?w=290",
+      "source_ref": "turn456035764view8",
+      "status": "source_link_and_image_verified"
+    },
+    "u76": {
+      "name": "Janna",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Janna.jpg?w=290",
+      "source_ref": "turn456035764view9",
+      "status": "source_link_and_image_verified"
+    },
+    "u77": {
+      "name": "Lee Sin",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_LeeSin.jpg?w=290",
+      "source_ref": "turn299440071view7",
+      "status": "source_link_and_image_verified"
+    },
+    "u78": {
+      "name": "Miss Fortune",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_MissFortune.jpg?w=290",
+      "source_ref": "turn299440071view8",
+      "status": "source_link_and_image_verified"
+    },
+    "u79": {
+      "name": "Mordekaiser",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Mordekaiser.jpg?w=290",
+      "source_ref": "turn456035764view10",
+      "status": "source_link_and_image_verified"
+    },
+    "u80": {
+      "name": "Nidalee",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Nidalee.jpg?w=290",
+      "source_ref": "turn456035764view11",
+      "status": "source_link_observed_fetch_error"
+    },
+    "u81": {
+      "name": "Nunu & Willump",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Nunu.jpg?w=290",
+      "source_ref": "turn299440071view9",
+      "status": "source_link_and_image_verified"
+    },
+    "u82": {
+      "name": "Pyke",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Pyke.jpg?w=290",
+      "source_ref": "turn456035764view12",
+      "status": "source_link_and_image_verified"
+    },
+    "u83": {
+      "name": "Rell",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Rell.jpg?w=290",
+      "source_ref": "turn456035764view13",
+      "status": "source_link_and_image_verified"
+    },
+    "u84": {
+      "name": "Taliyah",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Taliyah.jpg?w=290",
+      "source_ref": "turn456035764view14",
+      "status": "source_link_and_image_verified"
+    },
+    "u85": {
+      "name": "Teemo",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Teemo.jpg?w=290",
+      "source_ref": "turn456035764view15",
+      "status": "source_link_and_image_verified"
+    },
+    "u86": {
+      "name": "Twisted Fate",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_TwistedFate.jpg?w=290",
+      "source_ref": "turn299440071view10",
+      "status": "source_link_observed_fetch_error"
+    },
+    "u87": {
+      "name": "Vi",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Vi.jpg?w=290",
+      "source_ref": "turn456035764view16",
+      "status": "source_link_and_image_verified"
+    },
+    "u88": {
+      "name": "Vladimir",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Vladimir.jpg?w=290",
+      "source_ref": "turn456035764view17",
+      "status": "source_link_and_image_verified"
+    },
+    "u89": {
+      "name": "Zeri",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_Zeri.jpg?w=290",
+      "source_ref": "turn456035764view18",
+      "status": "source_link_and_image_verified"
+    },
+    "u90": {
+      "name": "Baron Nashor",
+      "url": "https://ap.tft.tools/img/s99/face_full_ultrawide/DA_19_BaronNashor.jpg?w=290",
+      "source_ref": "turn299440071view11",
+      "status": "source_link_and_image_verified"
+    },
+    "u91": {
+      "name": "Rakan",
+      "url": null,
+      "status": "no_image_href_in_source",
+      "source_ref": "turn355993385view0"
+    },
+    "u92": {
+      "name": "Smeech",
+      "url": null,
+      "status": "no_image_href_in_source",
+      "source_ref": "turn355993385view0"
+    },
+    "u93": {
+      "name": "Sona",
+      "url": null,
+      "status": "no_image_href_in_source",
+      "source_ref": "turn355993385view0"
+    }
+  },
+  "traits": {
+    "Ionic Spark": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_ionicspark_w.svg",
+      "source_ref": "turn680394026view0",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Frontman": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_frontman_w.svg",
+      "source_ref": "turn680394026view1",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Pentakill": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_pentakill_w.svg",
+      "source_ref": "turn680394026view2",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Trickshot": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_trickshot_w.svg",
+      "source_ref": "turn680394026view3",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Classical": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_virtuoso_w.svg",
+      "source_ref": "turn680394026view4",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Slayer": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_slayer_w.svg",
+      "source_ref": "turn680394026view5",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Heartsteel": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_heartsteel_w.svg",
+      "source_ref": "turn680394026view6",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "True Damage": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_truedamage_w.svg",
+      "source_ref": "turn680394026view7",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Bodyguard": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_bodyguard_w.svg",
+      "source_ref": "turn680394026view8",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Hyperpop": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_glitterbomb_w.svg",
+      "source_ref": "turn680394026view9",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "K|DA": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_kda_w.svg",
+      "source_ref": "turn680394026view10",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Encore": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_encore_w.svg",
+      "source_ref": "turn680394026view11",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Prodigy": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_prodigy_w.svg",
+      "source_ref": "turn680394026view12",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Rock": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_demonvision_w.svg",
+      "source_ref": "turn680394026view13",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Juggernaut": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_juggernaut_w.svg",
+      "source_ref": "turn680394026view14",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Beach Pop": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_oceansong_w.svg",
+      "source_ref": "turn680394026view15",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Swiftstriker": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_swiftstriker_w.svg",
+      "source_ref": "turn680394026view16",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Arcanist": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_arcanist_w.svg",
+      "source_ref": "turn680394026view17",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Illbeats": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_illbeats_w.svg",
+      "source_ref": "turn680394026view18",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "EDM": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_edm_w.svg",
+      "source_ref": "turn680394026view19",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Jazz": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_jazz_w.svg",
+      "source_ref": "turn311873776view0",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Hitmaker": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_hitmaker_w.svg",
+      "source_ref": "turn311873776view1",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Choreographer": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_choreographer_w.svg",
+      "source_ref": "turn311873776view2",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Renegade": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_renegade_w.svg",
+      "source_ref": "turn311873776view3",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Indie": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_indie_w.svg",
+      "source_ref": "turn311873776view4",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Emo": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_emo_w.svg",
+      "source_ref": "turn311873776view5",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Composer": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_composer_w.svg",
+      "source_ref": "turn311873776view6",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Country": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_country_w.svg",
+      "source_ref": "turn311873776view7",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Manager": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_manager_w.svg",
+      "source_ref": "turn311873776view8",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Synthwave": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_synthwave_w.svg",
+      "source_ref": "turn311873776view9",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "R&B": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_rnb_w.svg",
+      "source_ref": "turn311873776view10",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Gu Feng": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_heavenscale_w.svg",
+      "source_ref": "turn311873776view11",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Freestyle": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_freestyle_w.svg",
+      "source_ref": "turn311873776view12",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Record Mogul": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_recordmogul_w.svg",
+      "source_ref": "turn311873776view13",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Melodic Heart": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_melodicheart_w.svg",
+      "source_ref": "turn311873776view14",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Windblessed": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_windblessed_w.svg",
+      "source_ref": "turn311873776view15",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "8-Bit": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_8bit_w.svg",
+      "source_ref": "turn311873776view16",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Mariachi": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_mariachi_w.svg",
+      "source_ref": "turn311873776view17",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Disco": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_disco_w.svg",
+      "source_ref": "turn311873776view18",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Beat Master": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_beatmaster_w.svg",
+      "source_ref": "turn311873776view19",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Hype Man": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_hypeman_w.svg",
+      "source_ref": "turn444162286view0",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Tango": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_tango_w.svg",
+      "source_ref": "turn444162286view1",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Goth": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_goth_w.svg",
+      "source_ref": "turn444162286view2",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "One Monster Band": {
+      "url": "https://ap.tft.tools/static/trait-icons/99da_19_onemonsterband_w.svg",
+      "source_ref": "turn444162286view3",
+      "status": "source_link_observed_svg_not_rendered"
+    },
+    "Boy Band": {
+      "url": null,
+      "status": "no_image_href_in_source",
+      "source_ref": "turn355993385view0"
+    },
+    "Producer": {
+      "url": null,
+      "status": "no_image_href_in_source",
+      "source_ref": "turn355993385view0"
+    },
+    "Collab": {
+      "url": null,
+      "status": "no_image_href_in_source",
+      "source_ref": "turn355993385view0"
+    }
+  }
+}

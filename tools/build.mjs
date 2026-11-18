@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import zlib from 'node:zlib';
+const root=new URL('../',import.meta.url);
+const read=p=>fs.readFileSync(new URL(p,root),'utf8');
+const data=JSON.parse(read('dist/units.json'));
+const rawArt=JSON.parse(read('dist/artwork.json'));
+const artwork={source:rawArt.source,snapshot_date:rawArt.snapshot_date,units:Object.fromEntries(Object.entries(rawArt.units).map(([id,a])=>[id,{url:a.url}])),traits:Object.fromEntries(Object.entries(rawArt.traits).map(([id,a])=>[id,{url:a.url}]))};
+let html=read('src/index.html');
+const solver=read('src/solver.mjs');
+const payloads={STYLES:read('src/styles.css'),DATA:JSON.stringify(data),ART:JSON.stringify(artwork),PRESET:zlib.gzipSync(fs.readFileSync(new URL('dist/preset.bin',root))).toString('base64'),SOLVER:solver,APP:solver.replace(/^export /gm,'')+'\n'+read('src/app.js')};
+for(const [name,content]of Object.entries(payloads))html=html.replace(`/*__${name}__*/`,()=>content.replace(/<\/script/gi,'<\\/script'));
+if(/\/\*__[A-Z]+__\*\//.test(html))throw Error('Unresolved template token');
+fs.writeFileSync(new URL('dist/index.html',root),html);
+console.log('Built standalone dist/index.html:',Buffer.byteLength(html),'bytes');

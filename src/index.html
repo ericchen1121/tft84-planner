@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090d17">
+  <meta name="description" content="Explore every level-eight TFT lineup that fits your rules. Visual champion cards, active traits, exact search and CSV export.">
+  <title>Eightfold — TFT Lineup Explorer</title>
+  <style>/*__STYLES__*/</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="Eightfold home"><span class="brand-mark">8<span>✦</span></span><span>EIGHTFOLD<small>TFT LINEUP EXPLORER</small></span></a>
+  <div class="header-right"><span class="set-tag"><i></i> SET 19 · PRISMATIC TOUR</span><button class="text-button" id="open-pool"><span aria-hidden="true">▦</span> Champion pool <span class="count-tag">94</span></button><button class="icon-button" id="open-help" aria-label="How scoring works">?</button></div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy"><div class="eyebrow"><span></span> THE LEVEL 8 LINEUP LAB</div><h1>Your rules.<br><em>Every possible board.</em></h1><p>Find the four-cost core that brings your whole team together.</p><div class="hero-tags"><span>✦ Exact lineup search</span><span>◈ Visual synergies</span><span>↗ Export every result</span></div></div>
+    <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-card hero-leona"><img data-hero="u58" alt=""><span>LEONA<small>4-COST · FRONTLINE</small></span></div><div class="hero-card hero-ahri"><img data-hero="u49" alt=""><span>AHRI<small>4-COST · CASTER</small></span></div><div class="hero-card hero-jinx"><img data-hero="u56" alt=""><span>JINX<small>4-COST · MARKSMAN</small></span></div><div class="art-caption"><span>8</span> SLOTS. ENDLESS POSSIBILITIES.</div></div>
+  </section>
+  <div class="workspace">
+    <aside class="criteria panel">
+      <div class="panel-heading"><div><span class="eyebrow">MAKE IT YOURS</span><h2>Search criteria</h2></div><button id="reset" class="text-button muted">Reset</button></div>
+      <form id="criteria-form">
+        <label class="field-title" for="population">Team population <span>Total slots</span></label><div class="stepper large-stepper"><button type="button" data-step="population:-1" aria-label="Decrease population">−</button><input id="population" name="population" type="number" min="1" max="16" value="8"><span>slots</span><button type="button" data-step="population:1" aria-label="Increase population">+</button></div>
+        <div class="field-pair cost-fields"><div><label class="field-title" for="min_four_cost"><i class="cost-dot cost-4"></i>4-cost minimum</label><input id="min_four_cost" name="min_four_cost" type="number" min="0" max="16" value="3"></div><div><label class="field-title" for="max_five_cost"><i class="cost-dot cost-5"></i>5-cost maximum</label><input id="max_five_cost" name="max_five_cost" type="number" min="0" max="16" value="1"></div></div>
+        <div class="rule-divider"></div>
+        <label class="field-title" for="min_trait_score">Minimum synergy score <output id="score-output">16</output></label><input id="min_trait_score" name="min_trait_score" type="range" min="0" max="30" value="16"><div class="range-labels"><span>0</span><span>30</span></div><p class="field-hint">Add the member counts of active traits.</p>
+        <div class="field-pair"><div><label class="field-title" for="min_frontline">Frontline minimum</label><input id="min_frontline" name="min_frontline" type="number" min="0" max="16" value="5"><p class="field-hint">Attack range ≤ <span id="range-label">2</span></p></div><div><label class="field-title" for="min_backline_four_cost">4-cost backline</label><input id="min_backline_four_cost" name="min_backline_four_cost" type="number" min="0" max="16" value="2"><p class="field-hint">Ranged carries & casters</p></div></div>
+        <label class="toggle-line"><span>Count unique traits<small>Include one-champion traits</small></span><input name="include_unique_traits" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
+        <label class="toggle-line"><span>Include 7-cost champions<small>Unlock requirements are not checked</small></span><input name="include_seven_cost" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
+        <details class="advanced"><summary>Advanced options <span>⌄</span></summary><div class="advanced-body">
+          <label class="field-title" for="score_mode">Scoring method</label><select id="score_mode" name="score_mode"><option value="active_members">Active trait members</option><option value="breakpoint">Highest reached breakpoint</option><option value="all_members">All trait members</option></select>
+          <div class="field-pair"><div><label class="field-title" for="frontline_max_range">Frontline range ≤</label><input id="frontline_max_range" name="frontline_max_range" type="number" min="0" max="6" value="2"></div><div><label class="field-title" for="max_seconds">Search limit (sec)</label><input id="max_seconds" name="max_seconds" type="number" min="1" max="3600" value="590"></div></div>
+          <label class="field-title" for="sona_feature_trait">Sona featured trait</label><select id="sona_feature_trait" name="sona_feature_trait"><option value="">None specified</option></select>
+          <p class="field-hint">Use a trait actually offered in your game.</p>
+          <div class="field-title">Extra trait assignments</div><div class="extra-picker"><select id="extra-unit" aria-label="Champion for extra trait"></select><select id="extra-trait" aria-label="Extra trait"></select><button class="icon-button" type="button" id="add-extra" aria-label="Add extra trait">+</button></div><div id="extra-list"></div>
+          <p class="field-hint">Set match-specific Collab or emblem traits.</p>
+        </div></details>
+        <div id="form-error" class="error-message" role="alert" hidden></div>
+        <button class="primary-button" id="search" type="submit"><span aria-hidden="true">⌕</span> Find lineups <span class="button-arrow">→</span></button>
+        <button class="stop-button" id="stop" type="button" hidden>■ Stop search</button>
+        <p class="privacy-note"><span aria-hidden="true">◉</span> Searches run on your device.</p>
+      </form>
+    </aside>
+    <section class="results-area" aria-label="Lineup search results">
+      <div class="stats-row"><div class="stat-card"><span class="stat-icon blue">▦</span><div><small>LINEUPS FOUND</small><strong id="stat-count">—</strong></div></div><div class="stat-card"><span class="stat-icon gold">✦</span><div><small>BEST SYNERGY</small><strong id="stat-score">—<span>pts</span></strong></div></div><div class="stat-card"><span class="stat-icon violet">◈</span><div><small>CHAMPION POOL</small><strong id="stat-pool">94<span>units</span></strong></div></div></div>
+      <div class="status-strip" id="status-strip" role="status"><span class="status-dot"></span><span id="status-text">Loading the verified preset…</span><span id="settings-changed" class="changed-tag" hidden>Settings changed</span><span id="elapsed"></span></div>
+      <div class="search-progress" id="progress" hidden><div class="progress-indeterminate"></div><span id="progress-caption">Searching all eligible combinations…</span></div>
+      <div class="results-heading"><div><span class="eyebrow">FIND YOUR FOUR-COST CORE</span><h2>Explore lineups <span id="visible-count"></span></h2></div><button class="outline-button" id="export" disabled><span aria-hidden="true">↓</span> Export CSV</button></div>
+      <div class="filter-bar"><label class="search-input"><span aria-hidden="true">⌕</span><input id="result-query" type="search" placeholder="Search champions or traits" aria-label="Search results"></label><select id="champion-filter" aria-label="Required champion"><option value="">Any champion</option></select><select id="score-filter" aria-label="Minimum result score"><option value="0">Any score</option></select><select id="sort" aria-label="Sort lineups"><option value="score">Highest synergy</option><option value="four">Most 4-costs</option><option value="unlocks">Fewest unlocks</option></select></div>
+      <div class="results-note"><span id="results-context">Level 8 · 4-cost core · Unique traits included</span><span>Combinations, not strength rankings</span></div>
+      <div class="lineup-grid" id="lineup-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden><span>◇</span><h3>No lineups match</h3><p id="empty-message">Try a lower synergy score or fewer frontline units.</p></div>
+      <nav class="pagination" aria-label="Result pages"><button class="outline-button" id="prev">← Previous</button><span id="page-label">Page 1</span><button class="outline-button" id="next">Next →</button></nav>
+    </section>
+  </div>
+  <footer><div><a class="footer-brand" href="#">EIGHTFOLD</a><span>Set 19 · Data snapshot Nov 18, 2026</span></div><p>Champion art © Riot Games · Data & images via <a href="https://tactics.tools/info/set-update" target="_blank" rel="noopener noreferrer">tactics.tools ↗</a></p></footer>
+</main>
+<dialog id="board-dialog" class="board-dialog"><button class="dialog-close icon-button" data-close="board-dialog" aria-label="Close board">×</button><span class="eyebrow">LINEUP DETAILS</span><h2 id="board-title">Your board</h2><p class="dialog-intro">Illustrative placement based on attack range. Not an optimized positioning recommendation.</p><div id="board-metrics" class="board-metrics"></div><div class="hex-board" id="hex-board"></div><div class="board-labels"><span>FRONTLINE</span><span>BACKLINE</span></div><h3>Active synergies</h3><div id="board-traits" class="board-traits"></div><p class="field-hint" id="unlock-note"></p></dialog>
+<dialog id="pool-dialog" class="pool-dialog"><button class="dialog-close icon-button" data-close="pool-dialog" aria-label="Close champion pool">×</button><span class="eyebrow">YOUR AVAILABLE CHAMPIONS</span><h2>Champion pool <span>94</span></h2><p class="dialog-intro">Uncheck a champion to exclude it from the next search.</p><input id="pool-query" type="search" placeholder="Search champions or traits…" aria-label="Search champion pool"><div class="pool-actions"><button class="text-button" id="select-all">Select all</button><button class="text-button" id="select-none">Clear all</button><span id="pool-selected">94 selected</span></div><div class="pool-grid" id="pool-grid"></div><div class="dialog-bottom"><button class="primary-button" data-close="pool-dialog">Apply champion pool →</button></div></dialog>
+<dialog id="help-dialog" class="help-dialog"><button class="dialog-close icon-button" data-close="help-dialog" aria-label="Close help">×</button><span class="eyebrow">A LITTLE CLARITY</span><h2>How the score works</h2><p>By default, add the number of champions in every <strong>active trait</strong>. A champion can contribute to more than one trait.</p><div class="score-example"><div><span>3 Choreographer</span><strong>+3</strong></div><div><span>2 Bodyguard</span><strong>+2</strong></div><div><span>1 Synthwave <small>unique trait</small></span><strong>+1</strong></div><div class="inactive-example"><span>1 Arcanist <small>needs 2 to activate</small></span><strong>+0</strong></div></div><p>The default minimum is <strong>16</strong>. Unique traits count unless you switch them off.</p><p>Frontline means attack range ≤2. Four-cost backline means attack range &gt;2 and a marksman, caster, or ranged ammo specialist role. This includes Jhin.</p><p>Baron Nashor uses 2 population slots. Seven-cost champions can be included, but unlock requirements and shop access are not simulated.</p><p>Collab assignments and Sona's featured trait vary by game. Specify them in Advanced options; otherwise only the source roster's printed traits count.</p><p class="field-hint">A stopped or timed-out search is labeled partial. Only a completed search represents all qualifying lineups. The default preset contains all 68,766 verified matches.</p></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+<script id="app-data" type="application/json">/*__DATA__*/</script>
+<script id="art-data" type="application/json">/*__ART__*/</script>
+<script id="preset-data" type="application/octet-stream">/*__PRESET__*/</script>
+<script id="solver-source" type="text/plain">/*__SOLVER__*/</script>
+<script>/*__APP__*/</script>
+</body>
+</html>

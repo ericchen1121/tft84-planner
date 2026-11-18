@@ -1,0 +1,1812 @@
+{
+  "source": "https://tactics.tools/info/set-update",
+  "snapshot_date": "2026-11-18",
+  "set": "Set 19 Prismatic Tour",
+  "units": [
+    {
+      "id": "u0",
+      "name": "Elise",
+      "cost": 1,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Ionic Spark",
+        "Frontman"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 64,
+      "exclusive_group": "u0"
+    },
+    {
+      "id": "u1",
+      "name": "Gnar",
+      "cost": 1,
+      "range": 2,
+      "role": "DA_Role_AttackSpecialist_Ammo",
+      "traits": [
+        "Pentakill",
+        "Trickshot"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 95,
+      "exclusive_group": "u1"
+    },
+    {
+      "id": "u2",
+      "name": "Katarina",
+      "cost": 1,
+      "range": 1,
+      "role": "DA_Role_MagicFighter",
+      "traits": [
+        "Classical",
+        "Slayer"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 126,
+      "exclusive_group": "u2"
+    },
+    {
+      "id": "u3",
+      "name": "Kayn",
+      "cost": 1,
+      "range": 1,
+      "role": "DA_Role_AttackFighter",
+      "traits": [
+        "Heartsteel",
+        "Slayer"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 157,
+      "exclusive_group": "u3"
+    },
+    {
+      "id": "u4",
+      "name": "Kennen",
+      "cost": 1,
+      "range": 2,
+      "role": "DA_Role_MagicTank_Manaless",
+      "traits": [
+        "True Damage",
+        "Bodyguard"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 188,
+      "exclusive_group": "u4"
+    },
+    {
+      "id": "u5",
+      "name": "Kobuko",
+      "cost": 1,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Hyperpop",
+        "Frontman"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 215,
+      "exclusive_group": "u5"
+    },
+    {
+      "id": "u6",
+      "name": "Lillia",
+      "cost": 1,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "K|DA",
+        "Bodyguard"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 254,
+      "exclusive_group": "u6"
+    },
+    {
+      "id": "u7",
+      "name": "Neeko",
+      "cost": 1,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "K|DA",
+        "Encore",
+        "Prodigy"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 285,
+      "exclusive_group": "u7"
+    },
+    {
+      "id": "u8",
+      "name": "Olaf",
+      "cost": 1,
+      "range": 1,
+      "role": "DA_Role_AttackTank_Manaless",
+      "traits": [
+        "Pentakill",
+        "Rock",
+        "Juggernaut"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 320,
+      "exclusive_group": "u8"
+    },
+    {
+      "id": "u9",
+      "name": "Sett",
+      "cost": 1,
+      "range": 1,
+      "role": "DA_Role_AttackTank",
+      "traits": [
+        "Heartsteel",
+        "Frontman"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 351,
+      "exclusive_group": "u9"
+    },
+    {
+      "id": "u10",
+      "name": "Taric",
+      "cost": 1,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Beach Pop",
+        "Juggernaut"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 386,
+      "exclusive_group": "u10"
+    },
+    {
+      "id": "u11",
+      "name": "Varus",
+      "cost": 1,
+      "range": 4,
+      "role": "DA_Role_AttackCaster",
+      "traits": [
+        "Rock",
+        "Encore"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 417,
+      "exclusive_group": "u11"
+    },
+    {
+      "id": "u12",
+      "name": "Yunara",
+      "cost": 1,
+      "range": 4,
+      "role": "DA_Role_AttackMarksman",
+      "traits": [
+        "Ionic Spark",
+        "Swiftstriker"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 448,
+      "exclusive_group": "u12"
+    },
+    {
+      "id": "u13",
+      "name": "Ziggs",
+      "cost": 1,
+      "range": 4,
+      "role": "DA_Role_MagicMarksman",
+      "traits": [
+        "Hyperpop",
+        "Arcanist",
+        "Swiftstriker"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 479,
+      "exclusive_group": "u13"
+    },
+    {
+      "id": "u14",
+      "name": "Zoe",
+      "cost": 1,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Beach Pop",
+        "Arcanist"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 516,
+      "exclusive_group": "u14"
+    },
+    {
+      "id": "u15",
+      "name": "Annie",
+      "cost": 2,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Ionic Spark",
+        "Arcanist",
+        "Juggernaut"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 547,
+      "exclusive_group": "u15"
+    },
+    {
+      "id": "u16",
+      "name": "Ashe",
+      "cost": 2,
+      "range": 4,
+      "role": "DA_Role_AttackMarksman",
+      "traits": [
+        "Beach Pop",
+        "Swiftstriker"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 582,
+      "exclusive_group": "u16"
+    },
+    {
+      "id": "u17",
+      "name": "Camille",
+      "cost": 2,
+      "range": 1,
+      "role": "DA_Role_AttackFighter",
+      "traits": [
+        "Rock",
+        "Slayer"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 619,
+      "exclusive_group": "u17"
+    },
+    {
+      "id": "u18",
+      "name": "Ezreal",
+      "cost": 2,
+      "range": 4,
+      "role": "DA_Role_AttackCaster",
+      "traits": [
+        "Heartsteel",
+        "Encore"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 652,
+      "exclusive_group": "u18"
+    },
+    {
+      "id": "u19",
+      "name": "Gragas",
+      "cost": 2,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "K|DA",
+        "Juggernaut"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 685,
+      "exclusive_group": "u19"
+    },
+    {
+      "id": "u20",
+      "name": "Illaoi",
+      "cost": 2,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Illbeats",
+        "Frontman"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 716,
+      "exclusive_group": "u20"
+    },
+    {
+      "id": "u21",
+      "name": "Jax",
+      "cost": 2,
+      "range": 1,
+      "role": "DA_Role_MagicFighter",
+      "traits": [
+        "EDM",
+        "Bodyguard",
+        "Swiftstriker"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 749,
+      "exclusive_group": "u21"
+    },
+    {
+      "id": "u22",
+      "name": "Karthus",
+      "cost": 2,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Pentakill",
+        "Arcanist"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 785,
+      "exclusive_group": "u22"
+    },
+    {
+      "id": "u23",
+      "name": "Lucian",
+      "cost": 2,
+      "range": 4,
+      "role": "DA_Role_AttackCaster",
+      "traits": [
+        "Jazz",
+        "Hitmaker",
+        "Encore"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 816,
+      "exclusive_group": "u23"
+    },
+    {
+      "id": "u24",
+      "name": "Lulu",
+      "cost": 2,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Hyperpop",
+        "Choreographer"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 851,
+      "exclusive_group": "u24"
+    },
+    {
+      "id": "u25",
+      "name": "Lux",
+      "cost": 2,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Ionic Spark",
+        "Prodigy"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 888,
+      "exclusive_group": "u25"
+    },
+    {
+      "id": "u26",
+      "name": "Nasus",
+      "cost": 2,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Classical",
+        "Bodyguard"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 919,
+      "exclusive_group": "u26"
+    },
+    {
+      "id": "u27",
+      "name": "Qiyana",
+      "cost": 2,
+      "range": 1,
+      "role": "DA_Role_AttackFighter",
+      "traits": [
+        "True Damage",
+        "Renegade"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 955,
+      "exclusive_group": "u27"
+    },
+    {
+      "id": "u28",
+      "name": "Renata Glasc",
+      "cost": 2,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Classical",
+        "Choreographer"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 988,
+      "exclusive_group": "u28"
+    },
+    {
+      "id": "u29",
+      "name": "Renekton",
+      "cost": 2,
+      "range": 1,
+      "role": "DA_Role_AttackTank",
+      "traits": [
+        "Beach Pop",
+        "Frontman"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1024,
+      "exclusive_group": "u29"
+    },
+    {
+      "id": "u30",
+      "name": "Samira",
+      "cost": 2,
+      "range": 4,
+      "role": "DA_Role_AttackCaster",
+      "traits": [
+        "Classical",
+        "Renegade",
+        "Trickshot"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 1055,
+      "exclusive_group": "u30"
+    },
+    {
+      "id": "u31",
+      "name": "Seraphine",
+      "cost": 2,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Indie"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 1097,
+      "exclusive_group": "u31"
+    },
+    {
+      "id": "u32",
+      "name": "Tristana",
+      "cost": 2,
+      "range": 4,
+      "role": "DA_Role_AttackCaster",
+      "traits": [
+        "Hyperpop",
+        "Hitmaker"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 1134,
+      "exclusive_group": "u32"
+    },
+    {
+      "id": "u33",
+      "name": "Amumu",
+      "cost": 3,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Emo"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1171,
+      "exclusive_group": "u33"
+    },
+    {
+      "id": "u34",
+      "name": "Bard",
+      "cost": 3,
+      "range": 4,
+      "role": "DA_Role_MagicMarksman",
+      "traits": [
+        "Jazz",
+        "Swiftstriker"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1198,
+      "exclusive_group": "u34"
+    },
+    {
+      "id": "u35",
+      "name": "Braum",
+      "cost": 3,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Illbeats",
+        "Juggernaut"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1231,
+      "exclusive_group": "u35"
+    },
+    {
+      "id": "u36",
+      "name": "Briar",
+      "cost": 3,
+      "range": 1,
+      "role": "DA_Role_AttackAssassin",
+      "traits": [
+        "Ionic Spark",
+        "Slayer"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1262,
+      "exclusive_group": "u36"
+    },
+    {
+      "id": "u37",
+      "name": "Draven",
+      "cost": 3,
+      "range": 4,
+      "role": "DA_Role_AttackCaster",
+      "traits": [
+        "Illbeats",
+        "Trickshot"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1293,
+      "exclusive_group": "u37"
+    },
+    {
+      "id": "u38",
+      "name": "Ekko",
+      "cost": 3,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "True Damage",
+        "Juggernaut",
+        "Prodigy"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1324,
+      "exclusive_group": "u38"
+    },
+    {
+      "id": "u39",
+      "name": "Evelynn",
+      "cost": 3,
+      "range": 1,
+      "role": "DA_Role_MagicFighter",
+      "traits": [
+        "K|DA",
+        "Renegade"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 1361,
+      "exclusive_group": "u39"
+    },
+    {
+      "id": "u40",
+      "name": "Galio",
+      "cost": 3,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Jazz",
+        "Frontman"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 1399,
+      "exclusive_group": "u40"
+    },
+    {
+      "id": "u41",
+      "name": "K'Sante",
+      "cost": 3,
+      "range": 1,
+      "role": "DA_Role_AttackTank",
+      "traits": [
+        "Heartsteel",
+        "Bodyguard"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1438,
+      "exclusive_group": "u41"
+    },
+    {
+      "id": "u42",
+      "name": "Kai'Sa",
+      "cost": 3,
+      "range": 4,
+      "role": "DA_Role_AttackMarksman",
+      "traits": [
+        "K|DA",
+        "Trickshot"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1471,
+      "exclusive_group": "u42"
+    },
+    {
+      "id": "u43",
+      "name": "Malzahar",
+      "cost": 3,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Composer",
+        "Prodigy"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1504,
+      "exclusive_group": "u43"
+    },
+    {
+      "id": "u44",
+      "name": "Senna",
+      "cost": 3,
+      "range": 4,
+      "role": "DA_Role_AttackCaster",
+      "traits": [
+        "True Damage",
+        "Hitmaker"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1535,
+      "exclusive_group": "u44"
+    },
+    {
+      "id": "u45",
+      "name": "Swain",
+      "cost": 3,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Rock",
+        "Arcanist",
+        "Frontman"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1566,
+      "exclusive_group": "u45"
+    },
+    {
+      "id": "u46",
+      "name": "Syndra",
+      "cost": 3,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Beach Pop",
+        "Choreographer"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 1601,
+      "exclusive_group": "u46"
+    },
+    {
+      "id": "u47",
+      "name": "Tibbers",
+      "cost": 3,
+      "range": 1,
+      "role": "DA_Role_AttackTank",
+      "traits": [
+        "Ionic Spark",
+        "Bodyguard"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 1637,
+      "exclusive_group": "u47"
+    },
+    {
+      "id": "u48",
+      "name": "Viego",
+      "cost": 3,
+      "range": 1,
+      "role": "DA_Role_AttackFighter",
+      "traits": [
+        "Pentakill",
+        "Choreographer",
+        "Slayer"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1676,
+      "exclusive_group": "u48"
+    },
+    {
+      "id": "u49",
+      "name": "Ahri",
+      "cost": 4,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "K|DA",
+        "Choreographer"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1711,
+      "exclusive_group": "u49"
+    },
+    {
+      "id": "u50",
+      "name": "Alistar",
+      "cost": 4,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Country"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 1743,
+      "exclusive_group": "u50"
+    },
+    {
+      "id": "u51",
+      "name": "Alune",
+      "cost": 4,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Heartsteel",
+        "Manager",
+        "Prodigy"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 1778,
+      "exclusive_group": "u51"
+    },
+    {
+      "id": "u52",
+      "name": "Aurora",
+      "cost": 4,
+      "range": 2,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Ionic Spark",
+        "Renegade"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1822,
+      "exclusive_group": "u52"
+    },
+    {
+      "id": "u53",
+      "name": "Garen",
+      "cost": 4,
+      "range": 1,
+      "role": "DA_Role_AttackTank",
+      "traits": [
+        "Synthwave",
+        "Choreographer"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1853,
+      "exclusive_group": "u53"
+    },
+    {
+      "id": "u54",
+      "name": "Graves",
+      "cost": 4,
+      "range": 2,
+      "role": "DA_Role_AttackFighter",
+      "traits": [
+        "Beach Pop",
+        "Renegade"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1884,
+      "exclusive_group": "u54"
+    },
+    {
+      "id": "u55",
+      "name": "Jhin",
+      "cost": 4,
+      "range": 5,
+      "role": "DA_Role_AttackSpecialist_Ammo",
+      "traits": [
+        "Classical",
+        "Encore"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 1915,
+      "exclusive_group": "u55"
+    },
+    {
+      "id": "u56",
+      "name": "Jinx",
+      "cost": 4,
+      "range": 4,
+      "role": "DA_Role_AttackMarksman",
+      "traits": [
+        "Ionic Spark",
+        "Hitmaker"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 1946,
+      "exclusive_group": "u56"
+    },
+    {
+      "id": "u57",
+      "name": "Kayle",
+      "cost": 4,
+      "range": 4,
+      "role": "DA_Role_MagicMarksman",
+      "traits": [
+        "Pentakill",
+        "Swiftstriker"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 1985,
+      "exclusive_group": "u57"
+    },
+    {
+      "id": "u58",
+      "name": "Leona",
+      "cost": 4,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "K|DA",
+        "Bodyguard",
+        "Manager"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2025,
+      "exclusive_group": "u58"
+    },
+    {
+      "id": "u59",
+      "name": "Locke",
+      "cost": 4,
+      "range": 2,
+      "role": "DA_Role_MagicAssassin",
+      "traits": [
+        "Rock",
+        "Swiftstriker"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2060,
+      "exclusive_group": "u59"
+    },
+    {
+      "id": "u60",
+      "name": "Mel",
+      "cost": 4,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "R&B",
+        "Arcanist"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2093,
+      "exclusive_group": "u60"
+    },
+    {
+      "id": "u61",
+      "name": "Shyvana",
+      "cost": 4,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Ionic Spark",
+        "Frontman"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2124,
+      "exclusive_group": "u61"
+    },
+    {
+      "id": "u62",
+      "name": "Thresh",
+      "cost": 4,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Classical",
+        "Frontman"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2156,
+      "exclusive_group": "u62"
+    },
+    {
+      "id": "u63",
+      "name": "Vayne",
+      "cost": 4,
+      "range": 4,
+      "role": "DA_Role_AttackMarksman",
+      "traits": [
+        "Rock",
+        "Trickshot"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2195,
+      "exclusive_group": "u63"
+    },
+    {
+      "id": "u64",
+      "name": "Wukong",
+      "cost": 4,
+      "range": 1,
+      "role": "DA_Role_AttackTank",
+      "traits": [
+        "Gu Feng"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2236,
+      "exclusive_group": "u64"
+    },
+    {
+      "id": "u65",
+      "name": "Xayah",
+      "cost": 4,
+      "range": 4,
+      "role": "DA_Role_AttackCaster",
+      "traits": [
+        "Gu Feng",
+        "Hitmaker"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2268,
+      "exclusive_group": "u65"
+    },
+    {
+      "id": "u66",
+      "name": "Yasuo",
+      "cost": 4,
+      "range": 1,
+      "role": "DA_Role_AttackFighter",
+      "traits": [
+        "True Damage",
+        "Slayer"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2299,
+      "exclusive_group": "u66"
+    },
+    {
+      "id": "u67",
+      "name": "Yone",
+      "cost": 4,
+      "range": 1,
+      "role": "DA_Role_AttackFighter",
+      "traits": [
+        "Heartsteel",
+        "Slayer"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2338,
+      "exclusive_group": "u67"
+    },
+    {
+      "id": "u68",
+      "name": "Yorick",
+      "cost": 4,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Pentakill",
+        "Juggernaut"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2372,
+      "exclusive_group": "u68"
+    },
+    {
+      "id": "u69",
+      "name": "Yuumi",
+      "cost": 4,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Illbeats",
+        "Encore"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2403,
+      "exclusive_group": "u69"
+    },
+    {
+      "id": "u70",
+      "name": "Zac",
+      "cost": 4,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Beach Pop",
+        "Juggernaut"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2434,
+      "exclusive_group": "u70"
+    },
+    {
+      "id": "u71",
+      "name": "Akali (K|DA)",
+      "cost": 5,
+      "range": 1,
+      "role": "DA_Role_AttackAssassin",
+      "traits": [
+        "K|DA"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2472,
+      "exclusive_group": "Akali"
+    },
+    {
+      "id": "u72",
+      "name": "Akali (True Damage)",
+      "cost": 5,
+      "range": 1,
+      "role": "DA_Role_MagicFighter",
+      "traits": [
+        "True Damage",
+        "Freestyle"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2505,
+      "exclusive_group": "Akali"
+    },
+    {
+      "id": "u73",
+      "name": "Aphelios",
+      "cost": 5,
+      "range": 4,
+      "role": "DA_Role_AttackMarksman",
+      "traits": [
+        "Heartsteel"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2543,
+      "exclusive_group": "u73"
+    },
+    {
+      "id": "u74",
+      "name": "Dr. Mundo",
+      "cost": 5,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "Record Mogul",
+        "Manager"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2579,
+      "exclusive_group": "u74"
+    },
+    {
+      "id": "u75",
+      "name": "Gwen",
+      "cost": 5,
+      "range": 1,
+      "role": "DA_Role_MagicFighter",
+      "traits": [
+        "Ionic Spark",
+        "Melodic Heart"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2612,
+      "exclusive_group": "u75"
+    },
+    {
+      "id": "u76",
+      "name": "Janna",
+      "cost": 5,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Gu Feng",
+        "Windblessed",
+        "Prodigy"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2650,
+      "exclusive_group": "u76"
+    },
+    {
+      "id": "u77",
+      "name": "Lee Sin",
+      "cost": 5,
+      "range": 1,
+      "role": "DA_Role_AttackFighter",
+      "traits": [
+        "Gu Feng"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2691,
+      "exclusive_group": "u77"
+    },
+    {
+      "id": "u78",
+      "name": "Miss Fortune",
+      "cost": 5,
+      "range": 5,
+      "role": "DA_Role_AttackCaster",
+      "traits": [
+        "8-Bit",
+        "Hitmaker"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2722,
+      "exclusive_group": "u78"
+    },
+    {
+      "id": "u79",
+      "name": "Mordekaiser",
+      "cost": 5,
+      "range": 1,
+      "role": "DA_Role_MagicFighter",
+      "traits": [
+        "Pentakill"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2753,
+      "exclusive_group": "u79"
+    },
+    {
+      "id": "u80",
+      "name": "Nidalee",
+      "cost": 5,
+      "range": 2,
+      "role": "DA_Role_MagicFighter",
+      "traits": [
+        "Mariachi",
+        "Choreographer"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2786,
+      "exclusive_group": "u80"
+    },
+    {
+      "id": "u81",
+      "name": "Nunu & Willump",
+      "cost": 5,
+      "range": 1,
+      "role": "DA_Role_MagicSpecialist",
+      "traits": [
+        "Disco",
+        "Frontman"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2816,
+      "exclusive_group": "u81"
+    },
+    {
+      "id": "u82",
+      "name": "Pyke",
+      "cost": 5,
+      "range": 1,
+      "role": "DA_Role_AttackFighter",
+      "traits": [
+        "Rock",
+        "Renegade"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2849,
+      "exclusive_group": "u82"
+    },
+    {
+      "id": "u83",
+      "name": "Rell",
+      "cost": 5,
+      "range": 1,
+      "role": "DA_Role_MagicTank",
+      "traits": [
+        "R&B",
+        "Beat Master"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2890,
+      "exclusive_group": "u83"
+    },
+    {
+      "id": "u84",
+      "name": "Taliyah",
+      "cost": 5,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Beach Pop",
+        "Encore"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2921,
+      "exclusive_group": "u84"
+    },
+    {
+      "id": "u85",
+      "name": "Teemo",
+      "cost": 5,
+      "range": 4,
+      "role": "DA_Role_MagicCaster",
+      "traits": [
+        "Hyperpop",
+        "Hype Man"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 2957,
+      "exclusive_group": "u85"
+    },
+    {
+      "id": "u86",
+      "name": "Twisted Fate",
+      "cost": 5,
+      "range": 4,
+      "role": "DA_Role_MagicMarksman",
+      "traits": [
+        "Tango",
+        "Trickshot"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 2996,
+      "exclusive_group": "u86"
+    },
+    {
+      "id": "u87",
+      "name": "Vi",
+      "cost": 5,
+      "range": 1,
+      "role": "DA_Role_AttackFighter",
+      "traits": [
+        "EDM",
+        "Juggernaut"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 3028,
+      "exclusive_group": "u87"
+    },
+    {
+      "id": "u88",
+      "name": "Vladimir",
+      "cost": 5,
+      "range": 2,
+      "role": "DA_Role_MagicFighter",
+      "traits": [
+        "Classical",
+        "Arcanist"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 3061,
+      "exclusive_group": "u88"
+    },
+    {
+      "id": "u89",
+      "name": "Zeri",
+      "cost": 5,
+      "range": 4,
+      "role": "DA_Role_AttackCaster",
+      "traits": [
+        "Goth",
+        "Swiftstriker"
+      ],
+      "slots": 1,
+      "unlock": false,
+      "source_line": 3101,
+      "exclusive_group": "u89"
+    },
+    {
+      "id": "u90",
+      "name": "Baron Nashor",
+      "cost": 7,
+      "range": 1,
+      "role": "DA_Role_AttackFighter",
+      "traits": [
+        "One Monster Band"
+      ],
+      "slots": 2,
+      "unlock": true,
+      "source_line": 3132,
+      "exclusive_group": "u90"
+    },
+    {
+      "id": "u91",
+      "name": "Rakan",
+      "cost": 7,
+      "range": 1,
+      "role": "DA_Role_MagicAssassin",
+      "traits": [
+        "Boy Band"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 3166,
+      "exclusive_group": "u91"
+    },
+    {
+      "id": "u92",
+      "name": "Smeech",
+      "cost": 7,
+      "range": 1,
+      "role": "DA_Role_AttackSpecialist_Ammo",
+      "traits": [
+        "Jazz",
+        "Slayer"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 3199,
+      "exclusive_group": "u92"
+    },
+    {
+      "id": "u93",
+      "name": "Sona",
+      "cost": 7,
+      "range": 0,
+      "role": "DA_Role_MagicSpecialist",
+      "traits": [
+        "Producer",
+        "Collab"
+      ],
+      "slots": 1,
+      "unlock": true,
+      "source_line": 3239,
+      "exclusive_group": "u93"
+    }
+  ],
+  "traits": [
+    {
+      "name": "Ionic Spark",
+      "breakpoints": [
+        3,
+        5,
+        7,
+        10
+      ],
+      "members": 10
+    },
+    {
+      "name": "Frontman",
+      "breakpoints": [
+        2,
+        4,
+        6
+      ],
+      "members": 10
+    },
+    {
+      "name": "Pentakill",
+      "breakpoints": [
+        3,
+        5,
+        7
+      ],
+      "members": 7
+    },
+    {
+      "name": "Trickshot",
+      "breakpoints": [
+        2,
+        3,
+        4
+      ],
+      "members": 6
+    },
+    {
+      "name": "Classical",
+      "breakpoints": [
+        2,
+        4,
+        6
+      ],
+      "members": 7
+    },
+    {
+      "name": "Slayer",
+      "breakpoints": [
+        2,
+        4,
+        6
+      ],
+      "members": 8
+    },
+    {
+      "name": "Heartsteel",
+      "breakpoints": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "members": 7
+    },
+    {
+      "name": "True Damage",
+      "breakpoints": [
+        3,
+        5
+      ],
+      "members": 6
+    },
+    {
+      "name": "Bodyguard",
+      "breakpoints": [
+        2,
+        4,
+        6
+      ],
+      "members": 7
+    },
+    {
+      "name": "Hyperpop",
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "members": 5
+    },
+    {
+      "name": "K|DA",
+      "breakpoints": [
+        3,
+        5,
+        7,
+        10,
+        13,
+        15,
+        21
+      ],
+      "members": 8
+    },
+    {
+      "name": "Encore",
+      "breakpoints": [
+        2,
+        4
+      ],
+      "members": 7
+    },
+    {
+      "name": "Prodigy",
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "members": 6
+    },
+    {
+      "name": "Rock",
+      "breakpoints": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "members": 7
+    },
+    {
+      "name": "Juggernaut",
+      "breakpoints": [
+        2,
+        4,
+        6
+      ],
+      "members": 9
+    },
+    {
+      "name": "Beach Pop",
+      "breakpoints": [
+        3,
+        5,
+        7
+      ],
+      "members": 8
+    },
+    {
+      "name": "Swiftstriker",
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "members": 8
+    },
+    {
+      "name": "Arcanist",
+      "breakpoints": [
+        2,
+        4,
+        6
+      ],
+      "members": 7
+    },
+    {
+      "name": "Illbeats",
+      "breakpoints": [
+        2,
+        3,
+        4
+      ],
+      "members": 4
+    },
+    {
+      "name": "EDM",
+      "breakpoints": [
+        2
+      ],
+      "members": 2
+    },
+    {
+      "name": "Jazz",
+      "breakpoints": [
+        2,
+        3,
+        4
+      ],
+      "members": 4
+    },
+    {
+      "name": "Hitmaker",
+      "breakpoints": [
+        2,
+        4
+      ],
+      "members": 6
+    },
+    {
+      "name": "Choreographer",
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "members": 7
+    },
+    {
+      "name": "Renegade",
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "members": 6
+    },
+    {
+      "name": "Indie",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Emo",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Composer",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Country",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Manager",
+      "breakpoints": [
+        2,
+        3,
+        4
+      ],
+      "members": 3
+    },
+    {
+      "name": "Synthwave",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "R&B",
+      "breakpoints": [
+        1,
+        2
+      ],
+      "members": 2
+    },
+    {
+      "name": "Gu Feng",
+      "breakpoints": [
+        2,
+        3,
+        4
+      ],
+      "members": 4
+    },
+    {
+      "name": "Freestyle",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Record Mogul",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Melodic Heart",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Windblessed",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "8-Bit",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Mariachi",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Disco",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Beat Master",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Hype Man",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Tango",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Goth",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "One Monster Band",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Boy Band",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Producer",
+      "breakpoints": [
+        1
+      ],
+      "members": 1
+    },
+    {
+      "name": "Collab",
+      "breakpoints": [
+        3,
+        5
+      ],
+      "members": 1
+    }
+  ]
+}
