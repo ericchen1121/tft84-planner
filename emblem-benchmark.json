@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "matches": 440613,
+  "elapsed_seconds": 42.226,
+  "nodes": 2832945572,
+  "trait_bonuses": {
+    "Frontman": 1
+  },
+  "checks": "Every emitted emblem lineup independently validated; no duplicates",
+  "workers": 4
+}

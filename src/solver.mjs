@@ -4,7 +4,7 @@ export const DEFAULTS = Object.freeze({
   min_frontline:5,frontline_max_range:2,min_backline_four_cost:2,
   include_unique_traits:true,include_seven_cost:true,score_mode:'active_members',
   backline_role_keywords:['Marksman','Caster','AttackSpecialist_Ammo'],
-  exclude_unit_ids:[],extra_traits:{},sona_feature_trait:null,max_seconds:590,threads:4
+  exclude_unit_ids:[],extra_traits:{},trait_bonuses:{},sona_feature_trait:null,max_seconds:590,threads:4
 });
 
 export function effectiveTraits(u,c) {
@@ -18,19 +18,23 @@ export function prepare(data, settings={}) {
   if(c.population<1||c.population>16||c.max_seconds<1||c.threads<1||c.threads>16)throw Error('Population: 1–16; time limit: at least 1 second; workers: 1–16.');
   if(!['active_members','breakpoint','all_members'].includes(c.score_mode))throw Error('Unknown scoring method.');
   const tids=new Map(data.traits.map((t,i)=>[t.name,i]));
+  if(!c.trait_bonuses||typeof c.trait_bonuses!=='object'||Array.isArray(c.trait_bonuses))throw Error('Trait bonuses must be a trait-to-count object.');
+  for(const [trait,n]of Object.entries(c.trait_bonuses))
+    if(!tids.has(trait)||!Number.isInteger(n)||n<0||n>16)throw Error('Choose a known trait and a bonus from 0 to 16.');
   const excluded=new Set(c.exclude_unit_ids);
   const ids=new Set(data.units.map(u=>u.id));
   if([...excluded].some(id=>!ids.has(id))||Object.keys(c.extra_traits).some(id=>!ids.has(id)))throw Error('Unknown champion in settings.');
   const allTraits=data.units.map(u=>effectiveTraits(u,c));
   if(allTraits.some(ts=>ts.some(t=>!tids.has(t))))throw Error('Unknown extra trait.');
   const membership=data.traits.map(t=>allTraits.filter(ts=>ts.includes(t.name)).length);
-  const stride=c.population+1;
+  const bonuses=new Uint8Array(data.traits.map(t=>c.trait_bonuses[t.name]||0));
+  const stride=c.population+Math.max(0,...bonuses)+1;
   const points=new Uint16Array(data.traits.length*stride);
   const thresholds=new Uint8Array(data.traits.length);
   data.traits.forEach((t,i)=>{
     const enabled=c.include_unique_traits||membership[i]>1;
     const first=Math.min(...t.breakpoints);thresholds[i]=enabled?first:0;
-    for(let n=0;n<=c.population;n++)points[i*stride+n]=!enabled?0:c.score_mode==='all_members'?n:n<first?0:c.score_mode==='active_members'?n:Math.max(0,...t.breakpoints.filter(x=>x<=n));
+    for(let n=0;n<stride;n++)points[i*stride+n]=!enabled?0:c.score_mode==='all_members'?n:n<first?0:c.score_mode==='active_members'?n:Math.max(0,...t.breakpoints.filter(x=>x<=n));
   });
   const groupIds=new Map();
   const pool=data.units.map((u,index)=>{
@@ -42,17 +46,20 @@ export function prepare(data, settings={}) {
       ts:allTraits[index].map(t=>tids.get(t)).filter(t=>thresholds[t]>0)};
   }).filter(u=>!excluded.has(u.id)&&(c.include_seven_cost||u.cost!==7))
     .sort((a,b)=>b.back4-a.back4||(b.four*b.front)-(a.four*a.front)||b.front-a.front||b.ts.length-a.ts.length||a.index-b.index);
+  const initialScore=data.traits.reduce((s,_,i)=>s+points[i*stride+bonuses[i]],0);
+  const initialMass=data.traits.reduce((s,_,i)=>s+(thresholds[i]?bonuses[i]:0),0);
+  if(initialMass+c.population*Math.max(0,...pool.map(u=>u.ts.length))>255)throw Error('Combined trait bonuses exceed the supported score range. Reduce bonus counts.');
   const N=pool.length,front=new Uint16Array(N+1),four=new Uint16Array(N+1),back=new Uint16Array(N+1),mass=new Uint16Array((N+1)*stride);
   for(let i=N-1;i>=0;i--){
     front[i]=front[i+1]+pool[i].front;four[i]=four[i+1]+pool[i].four;back[i]=back[i+1]+pool[i].back4;
     for(let s=1;s<=c.population;s++)mass[i*stride+s]=Math.max(mass[(i+1)*stride+s],s>=pool[i].slots?pool[i].ts.length+mass[(i+1)*stride+s-pool[i].slots]:0);
   }
-  return {c,pool,points,thresholds,stride,front,four,back,mass};
+  return {c,pool,points,thresholds,stride,front,four,back,mass,bonuses,initialScore,initialMass};
 }
 
 export function solve(data,settings={},options={}) {
-  const p=prepare(data,settings),{c,pool:U,points,stride,front:SF,four:S4,back:SB,mass:M}=p;
-  const counts=new Uint8Array(data.traits.length),chosen=new Uint8Array(c.population),groups=new Uint8Array(data.units.length);
+  const p=prepare(data,settings),{c,pool:U,points,stride,front:SF,four:S4,back:SB,mass:M,bonuses,initialScore,initialMass}=p;
+  const counts=new Uint8Array(bonuses),chosen=new Uint8Array(c.population),groups=new Uint8Array(data.units.length);
   const recordSize=c.population+1,chunkRows=4096;
   let output=new Uint8Array(recordSize*chunkRows),pos=0,matches=0,nodes=0,finished=0,stopped=false;
   const started=Date.now(),deadline=options.deadline||started+c.max_seconds*1000;
@@ -95,8 +102,8 @@ export function solve(data,settings={},options={}) {
     if(Date.now()>=deadline){stopped=true;break;}
     const u=U[first];
     if(u&&u.slots<=c.population&&u.five<=c.max_five_cost){
-      chosen[0]=u.index;groups[u.group]=1;const score=add(u);
-      visit(first+1,c.population-u.slots,1,u.four,u.five,u.front,u.back4,score,u.ts.length);
+      chosen[0]=u.index;groups[u.group]=1;const score=initialScore+add(u);
+      visit(first+1,c.population-u.slots,1,u.four,u.five,u.front,u.back4,score,initialMass+u.ts.length);
       remove(u);groups[u.group]=0;
     }
     if(stopped)break;finished++;

@@ -8,6 +8,7 @@ A simple English web app for visualizing every TFT lineup that fits your rules. 
 - Adjustable population, four-cost minimum, five-cost maximum, synergy score, frontline count and four-cost backline count.
 - Unique traits included by default; minimum score **16**.
 - Champion-pool exclusions, match-specific extra traits, and Sona's featured trait.
+- **Emblems / Trait +1:** select a trait and add +1, +2 or more board-wide trait counts; multiple different traits can be boosted.
 - Exact search in background workers, with progress, stop and explicit partial-result status.
 - Search/filter/sort all results and export the filtered results as UTF-8 CSV.
 - Illustrative hex-board view for each lineup.
@@ -27,6 +28,16 @@ All scripts, the source data and the verified preset are embedded in that file. 
 Default conditions are exactly 8 population, at least 3 four-cost champions, no more than 1 five-cost champion, synergy score at least 16, at least 5 champions with attack range ≤2, and at least 2 four-cost ranged marksmen/casters. Jhin's ranged ammo-specialist role is included. Seven-cost units are allowed; unlock history and shop access are not simulated. Baron Nashor takes 2 population. The Akali variants are mutually exclusive.
 
 The default score adds the **member counts of active traits**, including one-champion unique traits. A 3-member trait with a 2/4/6 threshold contributes 3; a unique trait activated at 1 contributes 1; an inactive trait contributes 0. Other scoring methods are available under Advanced options.
+
+### Emblems / Trait +1
+
+Under **Search criteria**, choose a trait and click **+1**. Repeat to increase that trait or add a different trait. Use the row's minus button to reduce a bonus; a zero bonus removes the row. **Reset** removes every bonus.
+
+Bonuses are added to each board's trait counts **before activation and scoring**. For example, 2 champions in a trait that needs 3 plus a +1 bonus activate a count of 3, contributing 3 points in the default scoring method. The bonus consumes no population and does not change frontline or four-cost counts. Active-trait badges show the resulting count and a separate `+1` bonus tag; the tooltip explains the split. CSV output includes a `trait_bonuses` column and the adjusted active-trait counts.
+
+These are board-wide count bonuses, not assigned emblem carriers. Specify bonuses actually available in your game; the app does not validate whether a selected trait has an obtainable emblem, carrier item slots, or carrier eligibility. For an explicit champion assignment, use Advanced options → Extra trait assignments instead. Do not enter the same emblem in both places.
+
+Solver settings use `trait_bonuses`, for example `{"Frontman":1,"Arcanist":2}`. Counts must be integers from 0 through 16. Unique-trait bonuses follow the Count unique traits toggle. Any positive bonus triggers a fresh complete search rather than incorrectly reusing the unmodified preset.
 
 Frontline is a range-based rule, not a judgment of tank strength. Aurora has source range 2 and Sona source range 0, so they count as frontline under the default rule. Board placement is illustrative and not optimized. Lineup order is not a combat-strength ranking.
 
@@ -51,7 +62,9 @@ npm test
 npm run benchmark
 ```
 
-The test suite compares **25 independent brute-force cases** with the optimized solver, including unique-trait switches, all scoring methods, weighted population, mutually exclusive units, match-specific traits and timeout behavior. It also independently checks every default preset lineup and its score, all DOM ID references, embedded artwork mappings and main/worker script syntax.
+The test suite compares **58 independent brute-force cases** with the optimized solver, including unique-trait switches, all scoring methods, weighted population, mutually exclusive units, match-specific traits, trait bonuses and timeout behavior. Bonus cases cover activation across a threshold, multiple different bonuses, scores above population, preactivated bonuses, and zero/invalid values. It also independently checks every default preset lineup and its score, all DOM ID references, embedded artwork mappings and main/worker script syntax.
+
+Run `node tools/benchmark.mjs --emblem` for a full-card-pool Frontman +1 search, including independent validation of every emitted lineup and its adjusted score.
 
 The full four-worker JavaScript search produced 68,766 lineups in **27.398 seconds** in the test runtime. Every lineup and score matched the independently checked C# results exactly. This measures the JavaScript engine and worker protocol in Node, not a browser UI benchmark; hardware and browser speed will vary. The default preset appears immediately, without rerunning search.
 
