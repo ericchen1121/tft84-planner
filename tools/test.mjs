@@ -3,6 +3,8 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import zlib from 'node:zlib';
 import {prepare,solve,DEFAULTS,effectiveTraits} from '../src/solver.mjs';
+import {TRAIT_ZH,t,traitLabel,traitSearchText,setLanguage,getLanguage,localizedStaticText} from '../src/i18n.mjs';
+setLanguage('en');
 const data=JSON.parse(fs.readFileSync(new URL('../dist/units.json',import.meta.url)));
 const root=new URL('../',import.meta.url);
 const get=p=>fs.readFileSync(new URL(p,root),'utf8');
@@ -81,10 +83,29 @@ const displayed=analyze([0,1],bonusConfig);assert.equal(displayed.score,3);asser
 let exported;
 const controls=new Map();const exportState={config:bonusConfig,running:false,status:'COMPLETE',filtered:[{score:3,four:2}]};
 const exportStart=app.indexOf('async function exportCsv('),exportEnd=app.indexOf('\nfunction bindEvents(',exportStart);
-const exportFn=new vm.Script('('+app.slice(exportStart,exportEnd)+')').runInNewContext({state:exportState,DATA:focused,effectiveTraits,recordIds:()=>[0,1],fmt:String,notify:()=>{},$:id=>{if(!controls.has(id))controls.set(id,{});return controls.get(id);},Blob,setTimeout,download:(blob,name)=>{exported={blob,name};}});
+const exportFn=new vm.Script('('+app.slice(exportStart,exportEnd)+')').runInNewContext({state:exportState,DATA:focused,effectiveTraits,recordIds:()=>[0,1],fmt:String,t,traitLabel,getLanguage,notify:()=>{},$:id=>{if(!controls.has(id))controls.set(id,{});return controls.get(id);},Blob,setTimeout,download:(blob,name)=>{exported={blob,name};}});
 await exportFn();const csvText=await exported.blob.text();const csvLines=csvText.trim().split('\r\n'),headers=csvLines[0].replace(/^\uFEFF/,'').split(','),cells=csvLines[1].split(',');
 assert.equal(cells[headers.indexOf('trait_score')],'3');assert.equal(cells[headers.indexOf('population')],'2');assert.equal(cells[headers.indexOf('active_traits')],'"A:3"');assert.equal(cells[headers.indexOf('trait_bonuses')],'"A:+1"');assert.equal(exportState.exporting,false);
+const expectedTranslations={'Heartsteel':'心鋼之聲','Frontman':'主唱','Classical':'古典樂','Collab':'合作','Swiftstriker':'迅捷先鋒','Hitmaker':'金曲製造機','Encore':'要不要來首安可曲','Juggernaut':'重裝戰士','Beach Pop':'海灘流行樂','Pentakill':'殺五社','Slayer':'殺戮者','Rock':'搖滾樂','Manager':'經紀人','EDM':'電子舞曲','Choreographer':'編舞者','Jazz':'爵士樂','Gu Feng':'國風','Hyperpop':'超能流行','Ionic Spark':'離子火花','Prodigy':'不世之才'};
+assert.deepEqual(TRAIT_ZH,expectedTranslations);
+const canonicalBefore=JSON.stringify(data);
+setLanguage('zh-Hant');assert.equal(getLanguage(),'zh-Hant');
+for(const trait of data.traits){assert.equal(traitLabel(trait.name),expectedTranslations[trait.name]||trait.name);assert(traitSearchText([trait.name]).includes(trait.name));if(expectedTranslations[trait.name])assert(traitSearchText([trait.name]).includes(expectedTranslations[trait.name]));}
+assert.equal(t('Search criteria'),'搜尋條件');assert.equal(t('Unknown label'),'Unknown label');assert.equal(t('{n} results',{n:12}),'12 組');assert.equal(localizedStaticText(' 3 Choreographer '),' 3 編舞者 ');
+const zhData={traits:[{name:'Frontman',breakpoints:[2]}],units:[{id:'a',name:'A',cost:4,range:1,slots:1,traits:['Frontman'],role:'Tank'},{id:'b',name:'B',cost:4,range:4,slots:1,traits:[],role:'Caster'}]};
+const zhConfig={...bonusConfig,trait_bonuses:{Frontman:1}};let zhExport;
+const zhFn=new vm.Script('('+app.slice(exportStart,exportEnd)+')').runInNewContext({state:{...exportState,config:zhConfig,filtered:[{score:2,four:2}]},DATA:zhData,effectiveTraits,recordIds:()=>[0,1],fmt:String,t,traitLabel,getLanguage,notify:()=>{},$:()=>({}),Blob,setTimeout,download:(blob,name)=>{zhExport={blob,name};}});
+await zhFn();const zhCsv=await zhExport.blob.text();assert(zhCsv.includes('羈絆分數'));assert(zhCsv.includes('"主唱:2"'));assert(zhCsv.includes('"主唱:+1"'));assert(zhCsv.includes('完整'));assert(zhExport.name.includes('zh-Hant'));
+assert.equal(JSON.stringify(data),canonicalBefore,'Translations must not mutate solver data');
+setLanguage('en');assert.equal(traitLabel('Frontman'),'Frontman');assert.equal(t('Search criteria'),'Search criteria');assert(ids.includes('language'));
+// Check that changing the labels never changes canonical option values or selections.
+class SelectStub{constructor(){this.options=[];this.value='';}replaceChildren(){this.options=[];this.value='';}append(option){this.options.push(option);if(this.options.length===1)this.value=option.value;}}
+const selectNodes=new Map(['champion-filter','extra-unit','sona_feature_trait','extra-trait','emblem-trait','score-filter'].map(id=>[id,new SelectStub()]));
+const populate=appFunction('populateSelects','portrait',{DATA:data,ART:{units:{}},state:{records:[]},t,traitLabel,getLanguage,Option:class{constructor(text,value){this.text=text;this.value=value;}},document:{querySelectorAll:()=>[]},$:id=>selectNodes.get(id)});
+populate();selectNodes.get('emblem-trait').value='Gu Feng';selectNodes.get('extra-trait').value='Prodigy';
+setLanguage('zh-Hant');populate();assert.equal(selectNodes.get('emblem-trait').value,'Gu Feng');assert.equal(selectNodes.get('extra-trait').value,'Prodigy');assert.equal(selectNodes.get('emblem-trait').options.find(o=>o.value==='Gu Feng').text,'國風');assert.equal(selectNodes.get('extra-trait').options.find(o=>o.value==='Prodigy').text,'不世之才');
+setLanguage('en');populate();assert.equal(selectNodes.get('emblem-trait').value,'Gu Feng');assert.equal(selectNodes.get('emblem-trait').options.find(o=>o.value==='Gu Feng').text,'Gu Feng');
 const scripts=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);new vm.Script(scripts.at(-1));
 new vm.Script(capture('solver-source').replace(/^export /gm,'')+'\nself.onmessage=e=>{const {data,c}=e.data;const r=solve(data,c);self.postMessage(r)}');
 assert(!html.includes('/*__'));assert(!html.includes('localhost'));
-console.log(JSON.stringify({status:'PASS',reference_cases:cases,preset_rows:seen.size,histogram:hist,artwork_urls:91,checks:'Independent brute-force sets and scores; unique traits on/off; weighted slots; extras; mutual exclusion; timed-out state; every preset record; embedded data; all DOM selectors; main and worker script syntax'},null,2));
+console.log(JSON.stringify({status:'PASS',reference_cases:cases,preset_rows:seen.size,histogram:hist,artwork_urls:91,translated_traits:Object.keys(TRAIT_ZH).length,locales:['zh-Hant','en'],checks:'Independent brute-force sets and scores; emblem bonuses; every preset record; DOM selectors; script syntax; exact supplied translations; bilingual lookup; localized CSV; canonical data and selections preserved across language switches'},null,2));

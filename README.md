@@ -1,6 +1,35 @@
 # Eightfold — TFT Lineup Explorer
 
-A simple English web app for visualizing every TFT lineup that fits your rules. Open the website at **https://ericchen1121.github.io/tft84-planner/**, download **[index.html](index.html)**, or serve `dist/` with any static host. The complete application is a single HTML file; no account, backend, npm installation, or API key is required to use it.
+A simple Traditional Chinese / English web app for visualizing every TFT lineup that fits your rules. Open the website at **https://ericchen1121.github.io/tft84-planner/**, download **[index.html](index.html)**, or serve `dist/` with any static host. The complete application is a single HTML file; no account, backend, npm installation, or API key is required to use it.
+
+## 繁體中文 / English
+
+新訪客預設使用繁體中文，右上角可切換 English；瀏覽器會記住語言偏好。介面、羈絆選單、轉職加成、卡片、棋盤詳情與 CSV 都支援語言切換。搜尋同時接受中英文羈絆名稱，且切換語言不會重設搜尋條件或修改計算用的原始名稱。
+
+以下 20 個羈絆譯名來自使用者提供的 TFT PBE 截圖與補充。**未提供譯名的羈絆及棋子名稱保留英文**；不自行補上推測譯名。對照集中在 `src/i18n.mjs`，方便後續補充。
+
+| English | 繁體中文 |
+|---|---|
+| Heartsteel | 心鋼之聲 |
+| Frontman | 主唱 |
+| Classical | 古典樂 |
+| Collab | 合作 |
+| Swiftstriker | 迅捷先鋒 |
+| Hitmaker | 金曲製造機 |
+| Encore | 要不要來首安可曲 |
+| Juggernaut | 重裝戰士 |
+| Beach Pop | 海灘流行樂 |
+| Pentakill | 殺五社 |
+| Slayer | 殺戮者 |
+| Rock | 搖滾樂 |
+| Manager | 經紀人 |
+| EDM | 電子舞曲 |
+| Choreographer | 編舞者 |
+| Jazz | 爵士樂 |
+| Gu Feng | 國風 |
+| Hyperpop | 超能流行 |
+| Ionic Spark | 離子火花 |
+| Prodigy | 不世之才 |
 
 ## Features
 
