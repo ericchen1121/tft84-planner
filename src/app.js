@@ -99,7 +99,7 @@ function renderResults(){
   const top=el('div','card-top');top.append(el('span','card-rank',t('LINEUP {n}',{n:String(start+i+1).padStart(3,'0')})));
   const badge=el('div','score-badge');badge.append(el('span','','✦'),el('strong','',r.score),el('span','',t('SYNERGY')));top.append(badge);card.append(top);
   const units=el('div','unit-row');units.style.gridTemplateColumns=`repeat(${Math.min(8,Math.max(a.team.length,1))},minmax(0,1fr))`;
-  const ordered=[...a.team].sort((x,y)=>+(y.range<=state.config.frontline_max_range)-+(x.range<=state.config.frontline_max_range)||y.cost-x.cost||x.name.localeCompare(y.name));
+  const ordered=[...a.team].sort((x,y)=>y.cost-x.cost||x.name.localeCompare(y.name));
   for(const u of ordered)units.append(portrait(u));
   if(a.team.length<8&&state.config.population===8)for(let k=a.team.length;k<8;k++){const blank=el('div','unit-placeholder','◈');blank.title=t('Baron Nashor uses an additional population slot');units.append(blank);}
   card.append(units);const traits=el('div','trait-chips');for(const t of a.traits)traits.append(traitChip(t));card.append(traits);
