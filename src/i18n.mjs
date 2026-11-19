@@ -111,7 +111,22 @@ export const UI_ZH=Object.freeze({
   'Trait bonuses must be a trait-to-count object.':'羈絆加成的設定格式無效。',
   'Choose a known trait and a bonus from 0 to 16.':'請選擇已知羈絆，加成需介於 0 到 16。',
   'Combined trait bonuses exceed the supported score range. Reduce bonus counts.':'羈絆加成超過支援的分數範圍，請減少加成數量。',
-  'Unknown champion in settings.':'設定中含有未知棋子。','Unknown extra trait.':'設定中含有未知額外羈絆。'
+  'Unknown champion in settings.':'設定中含有未知棋子。','Unknown extra trait.':'設定中含有未知額外羈絆。',
+  'Solver':'求解器','Info':'Info','App sections':'功能頁籤','MEET THE LINEUP':'認識每一位棋子',
+  'Champion Info':'棋子圖鑑','CHAMPION INFO':'棋子介紹','CHAMPIONS':'棋子',
+  'Explore every champion, their traits and their abilities.':'瀏覽所有棋子的羈絆、定位與技能，找到你的陣容核心。',
+  'Search champions, traits or abilities':'搜尋中文或英文棋名、羈絆、技能','Search champion info':'搜尋棋子介紹',
+  'Champion cost':'棋子費用','Champion trait':'棋子羈絆','Champion availability':'棋子取得方式',
+  'All costs':'所有費用','All traits':'所有羈絆','All champions':'所有棋子','No unlock required':'無須解鎖',
+  'Unlock required':'需要解鎖','Clear filters':'清除篩選','Cost: high to low · Click a card for details':'費用由高到低 · 點擊卡片查看介紹',
+  'No champions match':'沒有符合條件的棋子','Try another name or clear the filters.':'試試其他名稱，或清除篩選條件。',
+  'Skill summaries · Chinese where available, English otherwise · Snapshot Nov 19, 2026':'技能摘要 · 有中文則顯示中文，其餘保留英文 · 資料快照：2026/11/19',
+  'References:':'參考來源：','View {name} details':'查看 {name} 的介紹','View details →':'查看完整介紹 →',
+  '{n} / {total} champions':'{n} / {total} 位棋子','Range {range}':'攻擊距離 {range}','{n} slots':'{n} 人口',
+  'Cost':'費用','Attack range':'攻擊距離','Mana':'魔力','Unlock condition':'解鎖條件',
+  'Close champion info':'關閉棋子介紹',
+  'Ability summaries omit star-level scaling. Some source values are not yet available.':'此處為技能機制摘要，省略各星等倍率；部分來源數值尚未公開。',
+  '7-cost':'7 費','5-cost':'5 費','4-cost':'4 費','3-cost':'3 費','2-cost':'2 費','1-cost':'1 費'
 });
 let currentLanguage='zh-Hant';
 export function setLanguage(value){currentLanguage=value==='en'?'en':'zh-Hant';return currentLanguage;}

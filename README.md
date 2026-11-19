@@ -116,3 +116,12 @@ Alternatively, select **GitHub Actions** as the Pages source and manually run **
 ## Data and artwork
 
 Source: [tactics.tools Set Update](https://tactics.tools/info/set-update). Champion artwork belongs to Riot Games. Artwork URLs are exact links observed in the reference page; three champions have no image link in that page. No Riot or tactics.tools credentials or private API endpoints are used.
+
+
+## Champion Info / 棋子圖鑑
+
+The header tabs separate the existing **Solver / 求解器** from **Info**. Info includes all 94 roster entries, sorted by cost descending, with cost/trait/unlock filters and bilingual name search. Click a card to read ability mechanics, mana, role, range, population and unlock requirements. Switching tabs preserves solver inputs and results; `#info` links directly to the library.
+
+`dist/info.json` contains display-only metadata. On 2026-11-19, MetaTFT's Taiwan locale supplied 78 localized names and 59 ability descriptions with Chinese text. Chinese ability summaries paraphrase those descriptions; unavailable translations retain English. Variant suffixes distinguish Akali's forms. English mechanics, mana and unlock conditions retain the existing tactics.tools snapshot; this change does not alter solver balance data or its verified preset. Skill summaries intentionally omit star-level scaling and unpublished numeric placeholders. Sixteen unlock conditions also have Chinese summaries; other unlock conditions retain English.
+
+Sources: https://www.metatft.com/new-set and https://tactics.tools/info/set-update . Info is embedded in the standalone build and requires no runtime data fetch.

@@ -1,6 +1,7 @@
 'use strict';
 const DATA=JSON.parse(document.getElementById('app-data').textContent);
 const ART=JSON.parse(document.getElementById('art-data').textContent);
+const INFO=JSON.parse(document.getElementById('info-data').textContent);
 const $=id=>document.getElementById(id);
 const fmt=n=>new Intl.NumberFormat(getLanguage()==='zh-Hant'?'zh-TW':'en-US').format(n);
 const rarity={1:'#8594aa',2:'#6fd6a6',3:'#78a7ff',4:'#b49aff',5:'#e4c17f',7:'#ef92a2'};
@@ -30,7 +31,7 @@ function populateSelects(){
  for(const id of ['champion-filter','extra-unit','sona_feature_trait','extra-trait','emblem-trait','score-filter'])$(id).replaceChildren();
  $('champion-filter').append(new Option(t('Any champion'),''));$('sona_feature_trait').append(new Option(t('None specified'),''));$('score-filter').append(new Option(t('Any score'),'0'));
  const sorted=[...DATA.units].sort((a,b)=>a.name.localeCompare(b.name));
- for(const id of ['champion-filter','extra-unit'])for(const u of sorted)$(id).append(new Option(t('{name} · {cost}g',{name:u.name,cost:u.cost}),u.id));
+ for(const id of ['champion-filter','extra-unit'])for(const u of sorted)$(id).append(new Option(t('{name} · {cost}g',{name:unitLabel(u),cost:u.cost}),u.id));
  const traits=[...DATA.traits].sort((a,b)=>traitLabel(a.name).localeCompare(traitLabel(b.name),getLanguage()));
  for(const id of ['sona_feature_trait','extra-trait','emblem-trait'])for(const trait of traits){
   if(id==='emblem-trait'&&!EMBLEM_TRAITS.includes(trait.name))continue;
@@ -42,13 +43,13 @@ function populateSelects(){
  for(const img of document.querySelectorAll('[data-hero]')){const a=ART.units[img.dataset.hero];if(a?.url)img.src=a.url;img.addEventListener('error',()=>img.hidden=true);}
 }
 function portrait(u,{name=true,lazy=true}={}){
- const wrap=el('div',name?'champion':'');wrap.title=t('{name} · {cost}-cost · Range {range}{slots}\n{traits}{unlock}',{name:u.name,cost:u.cost,range:u.range,slots:u.slots>1?t(' · {n} slots',{n:u.slots}):'',traits:u.traits.map(name=>traitLabel(name)).join(' / '),unlock:u.unlock?t('\nUnlock required'):''});
+ const wrap=el('div',name?'champion':'');wrap.title=t('{name} · {cost}-cost · Range {range}{slots}\n{traits}{unlock}',{name:unitLabel(u),cost:u.cost,range:u.range,slots:u.slots>1?t(' · {n} slots',{n:u.slots}):'',traits:u.traits.map(name=>traitLabel(name)).join(' / '),unlock:u.unlock?t('\nUnlock required'):''});
  const p=el('div','portrait');p.style.setProperty('--rarity',rarity[u.cost]||rarity[1]);
  const fallback=el('span','fallback',u.name.replace(/\(.*\)/,'').trim().split(/\s+/).map(s=>s[0]).slice(0,2).join(''));
  p.append(fallback);
  const url=ART.units[u.id]?.url;
- if(url){const img=new Image();img.alt=u.name;img.loading=lazy?'lazy':'eager';img.referrerPolicy='no-referrer';img.src=url;img.addEventListener('load',()=>{fallback.hidden=true;});img.addEventListener('error',()=>{img.remove();fallback.hidden=false;});p.append(img);}
- p.append(el('span','cost-label',u.cost));wrap.append(p);if(name)wrap.append(el('div','champion-name',u.name.replace(/ \(.*\)/,'')));return wrap;
+ if(url){const img=new Image();img.alt=unitLabel(u);img.loading=lazy?'lazy':'eager';img.referrerPolicy='no-referrer';img.src=url;img.addEventListener('load',()=>{fallback.hidden=true;});img.addEventListener('error',()=>{img.remove();fallback.hidden=false;});p.append(img);}
+ p.append(el('span','cost-label',u.cost));wrap.append(p);if(name)wrap.append(el('div','champion-name',unitLabel(u).replace(/ \(.*\)/,'')));return wrap;
 }
 function analyze(ids,c=state.config){
  const team=ids.map(i=>DATA.units[i]),counts=new Map(Object.entries(c.trait_bonuses||{}));
@@ -88,7 +89,7 @@ function filterResults(reset=true){
  state.filtered=state.records.filter(r=>{
   if(r.score<minScore)return false;
   const ids=recordIds(r);if(unitIndex>=0&&!ids.includes(unitIndex))return false;
-  if(q){const haystack=(ids.map(i=>DATA.units[i].name+' '+traitSearchText(effectiveTraits(DATA.units[i],state.config))).join(' ')+' '+traitSearchText(Object.keys(state.config.trait_bonuses||{}))).toLowerCase();if(!q.split(/\s+/).every(word=>haystack.includes(word)))return false;}
+  if(q){const haystack=(ids.map(i=>unitSearchText(DATA.units[i])+' '+traitSearchText(effectiveTraits(DATA.units[i],state.config))).join(' ')+' '+traitSearchText(Object.keys(state.config.trait_bonuses||{}))).toLowerCase();if(!q.split(/\s+/).every(word=>haystack.includes(word)))return false;}
   return true;
  });
  state.filtered.sort((a,b)=>sort==='four'?b.four-a.four||b.score-a.score:sort==='unlocks'?a.unlocks-b.unlocks||b.score-a.score:b.score-a.score||b.four-a.four);
@@ -129,15 +130,15 @@ function showBoard(r){
   const cell=el('div','hex-cell'),u=positions.get(i);
   if(u){
    const p=portrait(u,{name:false,lazy:false}),image=p.querySelector('img');
-   if(image){image.addEventListener('error',()=>cell.append(el('span','hex-fallback',u.name.slice(0,2))));cell.append(image);}
-   else cell.append(el('span','hex-fallback',u.name.slice(0,2)));
-   cell.append(el('span','hex-name',u.name.replace(/ \(.*\)/,'')));
-   cell.title=t('{name} · {cost}-cost · Population {slots}',{name:u.name,cost:u.cost,slots:u.slots});
+   if(image){image.addEventListener('error',()=>cell.append(el('span','hex-fallback',unitLabel(u).slice(0,2))));cell.append(image);}
+   else cell.append(el('span','hex-fallback',unitLabel(u).slice(0,2)));
+   cell.append(el('span','hex-name',unitLabel(u).replace(/ \(.*\)/,'')));
+   cell.title=t('{name} · {cost}-cost · Population {slots}',{name:unitLabel(u),cost:u.cost,slots:u.slots});
   }
   $('hex-board').append(cell);
  }
  $('board-traits').replaceChildren(...a.traits.map(traitChip));
- const unlocked=a.team.filter(u=>u.unlock);$('unlock-note').textContent=unlocked.length?t('Unlock required: {names}. Unlock history is not simulated.',{names:unlocked.map(u=>u.name).join(', ')}):t('No unlock-tagged champions in this lineup.');
+ const unlocked=a.team.filter(u=>u.unlock);$('unlock-note').textContent=unlocked.length?t('Unlock required: {names}. Unlock history is not simulated.',{names:unlocked.map(u=>unitLabel(u)).join(', ')}):t('No unlock-tagged champions in this lineup.');
  if(!$('board-dialog').open)$('board-dialog').showModal();
 }
 function setRunning(on){state.running=on;$('search').disabled=on;$('stop').hidden=!on;$('progress').hidden=!on;$('export').disabled=on||!state.records.length;}
@@ -178,11 +179,11 @@ async function runSearch(event){
 }
 function renderPool(){
  const q=$('pool-query').value.toLowerCase().trim(),fragment=document.createDocumentFragment();
- for(const u of DATA.units.filter(u=>(u.name+' '+traitSearchText(u.traits)).toLowerCase().includes(q))){const label=el('label','pool-item'+(state.excluded.has(u.id)?' disabled':''));label.append(portrait(u,{name:false}));const info=el('div','pool-info');info.append(el('strong','',u.name),el('small','',u.traits.map(name=>traitLabel(name)).join(' · ')),el('small','',t('{cost}-cost · Range {range}{slots}{unlock}',{cost:u.cost,range:u.range,slots:u.slots>1?t(' · {n} slots',{n:u.slots}):'',unlock:u.unlock?t(' · Unlock'):''})));const check=el('input');check.type='checkbox';check.checked=!state.excluded.has(u.id);check.setAttribute('aria-label',t('Include {name}',{name:u.name}));check.addEventListener('change',()=>{if(check.checked)state.excluded.delete(u.id);else state.excluded.add(u.id);label.classList.toggle('disabled',!check.checked);$('pool-selected').textContent=t('{n} selected',{n:DATA.units.length-state.excluded.size});markDirty();});label.append(info,check);fragment.append(label);}
+ for(const u of DATA.units.filter(u=>(unitSearchText(u)+' '+traitSearchText(u.traits)).toLowerCase().includes(q))){const label=el('label','pool-item'+(state.excluded.has(u.id)?' disabled':''));label.append(portrait(u,{name:false}));const info=el('div','pool-info');info.append(el('strong','',unitLabel(u)),el('small','',u.traits.map(name=>traitLabel(name)).join(' · ')),el('small','',t('{cost}-cost · Range {range}{slots}{unlock}',{cost:u.cost,range:u.range,slots:u.slots>1?t(' · {n} slots',{n:u.slots}):'',unlock:u.unlock?t(' · Unlock'):''})));const check=el('input');check.type='checkbox';check.checked=!state.excluded.has(u.id);check.setAttribute('aria-label',t('Include {name}',{name:unitLabel(u)}));check.addEventListener('change',()=>{if(check.checked)state.excluded.delete(u.id);else state.excluded.add(u.id);label.classList.toggle('disabled',!check.checked);$('pool-selected').textContent=t('{n} selected',{n:DATA.units.length-state.excluded.size});markDirty();});label.append(info,check);fragment.append(label);}
  $('pool-grid').replaceChildren(fragment);$('pool-selected').textContent=t('{n} selected',{n:DATA.units.length-state.excluded.size});
 }
 function renderExtras(){
- $('extra-list').replaceChildren();for(const [id,traits]of Object.entries(state.extras))for(const trait of traits){const name=DATA.units.find(u=>u.id===id).name;const chip=el('span','extra-chip',name+' · '+traitLabel(trait));const button=el('button','','×');button.type='button';button.setAttribute('aria-label',t('Remove {trait} from {name}',{trait:traitLabel(trait),name}));button.addEventListener('click',()=>{state.extras[id]=state.extras[id].filter(t=>t!==trait);if(!state.extras[id].length)delete state.extras[id];renderExtras();markDirty();});chip.append(button);$('extra-list').append(chip);}
+ $('extra-list').replaceChildren();for(const [id,traits]of Object.entries(state.extras))for(const trait of traits){const name=unitLabel(DATA.units.find(u=>u.id===id));const chip=el('span','extra-chip',name+' · '+traitLabel(trait));const button=el('button','','×');button.type='button';button.setAttribute('aria-label',t('Remove {trait} from {name}',{trait:traitLabel(trait),name}));button.addEventListener('click',()=>{state.extras[id]=state.extras[id].filter(t=>t!==trait);if(!state.extras[id].length)delete state.extras[id];renderExtras();markDirty();});chip.append(button);$('extra-list').append(chip);}
 }
 function renderBonuses(){
  const list=$('emblem-list');list.replaceChildren();
@@ -222,7 +223,7 @@ async function exportCsv(){
     const r=exportRows[i],team=recordIds(r).map(index=>DATA.units[index]),counts=new Map(Object.entries(c.trait_bonuses||{}));
     for(const u of team)for(const t of effectiveTraits(u,c))counts.set(t,(counts.get(t)||0)+1);
     const active=DATA.traits.filter(trait=>(c.include_unique_traits||membership.get(trait.name)>1)&&(counts.get(trait.name)||0)>=Math.min(...trait.breakpoints)).map(trait=>traitLabel(trait.name)+':'+counts.get(trait.name)).join('; ');
-    text+=[i+1,r.score,team.reduce((s,u)=>s+u.slots,0),r.four,team.filter(u=>u.cost===5).length,team.filter(u=>u.range<=c.frontline_max_range).length,team.filter(u=>u.cost===4&&u.range>c.frontline_max_range&&c.backline_role_keywords.some(k=>u.role.includes(k))).length,quote(team.map(u=>u.name).join(' | ')),quote(active),quote(Object.entries(c.trait_bonuses||{}).map(([name,n])=>traitLabel(name)+':+'+n).join('; ')),quote(team.filter(u=>u.unlock).map(u=>u.name).join(' | ')),t(state.status)].join(',')+'\r\n';
+    text+=[i+1,r.score,team.reduce((s,u)=>s+u.slots,0),r.four,team.filter(u=>u.cost===5).length,team.filter(u=>u.range<=c.frontline_max_range).length,team.filter(u=>u.cost===4&&u.range>c.frontline_max_range&&c.backline_role_keywords.some(k=>u.role.includes(k))).length,quote(team.map(u=>unitLabel(u)).join(' | ')),quote(active),quote(Object.entries(c.trait_bonuses||{}).map(([name,n])=>traitLabel(name)+':+'+n).join('; ')),quote(team.filter(u=>u.unlock).map(u=>unitLabel(u)).join(' | ')),t(state.status)].join(',')+'\r\n';
    }parts.push(text);await new Promise(resolve=>setTimeout(resolve,0));
   }
   download(new Blob(parts,{type:'text/csv;charset=utf-8'}),`eightfold-${getLanguage()}-${state.status==='COMPLETE'?'complete':'PARTIAL'}-${exportRows.length}.csv`);notify(t('Exported {n} lineups.',{n:fmt(exportRows.length)}));
@@ -257,14 +258,14 @@ function applyLanguage(language,initial=false){
  try{localStorage.setItem('eightfold-language',getLanguage());}catch{}
  for(const entry of staticTranslations){if(!entry.node.isConnected)continue;const value=localizedStaticText(entry.source);if(entry.attr)entry.node.setAttribute(entry.attr,value);else entry.node.textContent=value;}
  if(initial)return;
- populateSelects();renderExtras();renderBonuses();updateStats();filterResults(false);
+ populateSelects();renderExtras();renderBonuses();updateStats();filterResults(false);populateInfoTraits();if(state.view==='info')renderInfo();if($('info-dialog').open&&state.infoUnit)showInfo(state.infoUnit);
  if(state.statusBuilder)$('status-text').textContent=state.statusBuilder();
  if($('pool-dialog').open)renderPool();if($('board-dialog').open&&state.boardRecord)showBoard(state.boardRecord);
  if(state.status==='COMPLETE'&&isPreset(state.config))$('elapsed').textContent=t('Ready instantly');
 }
 async function init(){
  captureStaticTranslations();let preferred='zh-Hant';try{preferred=localStorage.getItem('eightfold-language')||preferred;}catch{}
- applyLanguage(preferred,true);populateSelects();bindEvents();syncLabels();renderBonuses();
+ applyLanguage(preferred,true);populateSelects();bindEvents();bindInfo();syncLabels();renderBonuses();
  try{
   const encoded=$('preset-data').textContent.trim(),compressed=Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));
   if(typeof DecompressionStream==='undefined')throw Error(t('Preset decompression is not supported in this browser.'));

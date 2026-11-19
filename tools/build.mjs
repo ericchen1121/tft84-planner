@@ -8,7 +8,7 @@ const artwork={source:rawArt.source,snapshot_date:rawArt.snapshot_date,units:Obj
 let html=read('src/index.html');
 const solver=read('src/solver.mjs');
 const i18n=read('src/i18n.mjs').replace(/^export /gm,'');
-const payloads={STYLES:read('src/styles.css'),DATA:JSON.stringify(data),ART:JSON.stringify(artwork),PRESET:zlib.gzipSync(fs.readFileSync(new URL('dist/preset.bin',root))).toString('base64'),SOLVER:solver,APP:solver.replace(/^export /gm,'')+'\n'+i18n+'\n'+read('src/app.js')};
+const payloads={STYLES:read('src/styles.css'),DATA:JSON.stringify(data),INFO:JSON.stringify(JSON.parse(read('dist/info.json'))),ART:JSON.stringify(artwork),PRESET:zlib.gzipSync(fs.readFileSync(new URL('dist/preset.bin',root))).toString('base64'),SOLVER:solver,APP:solver.replace(/^export /gm,'')+'\n'+i18n+'\n'+read('src/info.js')+'\n'+read('src/app.js')};
 for(const [name,content]of Object.entries(payloads))html=html.replace(`/*__${name}__*/`,()=>content.replace(/<\/script/gi,'<\\/script'));
 if(/\/\*__[A-Z]+__\*\//.test(html))throw Error('Unresolved template token');
 fs.writeFileSync(new URL('dist/index.html',root),html);
