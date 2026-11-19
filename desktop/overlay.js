@@ -3,23 +3,44 @@ document.querySelector('#collapse')?.addEventListener('click',()=>api.collapse()
 document.querySelector('#quit')?.addEventListener('click',()=>api.quit());
 const bubble=document.querySelector('#bubble');
 if(bubble){
-  let start=null,moved=false;
+  let start=null,suppressClick=false;
+  function finishGesture(cancelled=false){
+    const gesture=start;start=null;
+    if(!gesture)return;
+    suppressClick=cancelled||gesture.moved;
+    // Release native capture before a click can hide the transparent window.
+    if(bubble.hasPointerCapture(gesture.id))bubble.releasePointerCapture(gesture.id);
+    api.dragEnd(gesture.dx,gesture.dy);
+  }
+  function resetInput(){finishGesture(true);suppressClick=false;}
   bubble.addEventListener('pointerdown',e=>{
     if(e.button!==0)return;
-    start={x:e.screenX,y:e.screenY};moved=false;
-    bubble.setPointerCapture(e.pointerId);api.dragStart();
+    resetInput();
+    start={id:e.pointerId,x:e.screenX,y:e.screenY,dx:0,dy:0,moved:false};
+    api.dragStart();
   });
   bubble.addEventListener('pointermove',e=>{
-    if(!start)return;
+    if(!start||e.pointerId!==start.id)return;
     const dx=e.screenX-start.x,dy=e.screenY-start.y;
-    if(Math.hypot(dx,dy)>5)moved=true;
-    if(moved)api.dragMove(dx,dy);
+    if(Math.hypot(dx,dy)>5&&!start.moved){
+      start.moved=true;
+      bubble.setPointerCapture(e.pointerId);
+    }
+    if(start?.moved){start.dx=dx;start.dy=dy;api.dragMove(dx,dy);}
   });
   bubble.addEventListener('pointerup',e=>{
-    if(!start)return;
-    api.dragEnd(moved?e.screenX-start.x:0,moved?e.screenY-start.y:0,!moved);
-    start=null;
+    if(!start||e.pointerId!==start.id)return;
+    if(start.moved){start.dx=e.screenX-start.x;start.dy=e.screenY-start.y;}
+    finishGesture();
   });
-  bubble.addEventListener('pointercancel',()=>{if(start)api.dragEnd(0,0,false);start=null;});
-  bubble.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();api.expand();}});
+  bubble.addEventListener('pointercancel',()=>finishGesture(true));
+  bubble.addEventListener('lostpointercapture',()=>{if(start)finishGesture(true);});
+  bubble.addEventListener('click',()=>{
+    if(suppressClick){suppressClick=false;return;}
+    resetInput();api.expand();
+  });
+  bubble.addEventListener('contextmenu',resetInput);
+  window.addEventListener('blur',()=>finishGesture(true));
+  document.addEventListener('visibilitychange',resetInput);
+  api.onResetInput(resetInput);
 }

@@ -5,5 +5,9 @@ contextBridge.exposeInMainWorld('eightfold', Object.freeze({
   quit: () => ipcRenderer.send('overlay:quit'),
   dragStart: () => ipcRenderer.send('overlay:drag-start'),
   dragMove: (dx,dy) => ipcRenderer.send('overlay:drag-move',dx,dy),
-  dragEnd: (dx,dy,open) => ipcRenderer.send('overlay:drag-end',dx,dy,open)
+  dragEnd: (dx,dy) => ipcRenderer.send('overlay:drag-end',dx,dy),
+  onResetInput: callback => {
+    if(typeof callback!=='function')return;
+    ipcRenderer.on('overlay:reset-input',()=>callback());
+  }
 }));

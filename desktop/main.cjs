@@ -21,6 +21,7 @@ function persist() {
 function scheduleSave(){clearTimeout(saveTimer);saveTimer=setTimeout(persist,300);}
 function collapse() {
   if(!panel || !bubble)return;
+  dragStart=null;bubble.webContents.send('overlay:reset-input');
   panel.hide();
   bubble.setBounds(fitBounds(bubble.getBounds(),areaFor(bubble.getBounds()),true));
   bubble.showInactive();
@@ -28,6 +29,7 @@ function collapse() {
 }
 function expand() {
   if(!panel || !bubble)return;
+  dragStart=null;bubble.webContents.send('overlay:reset-input');
   bubble.hide();
   panel.setBounds(fitBounds(panel.getBounds(),areaFor(panel.getBounds())));
   panel.show();panel.focus();
@@ -65,7 +67,7 @@ function createWindows() {
     title:'Eightfold TFT Overlay',show:false,frame:false,backgroundColor:'#0b111e',fullscreenable:false,
     autoHideMenuBar:true,webPreferences:prefs});
   bubble=new BrowserWindow({...bubbleBounds,show:false,frame:false,transparent:true,resizable:false,
-    maximizable:false,minimizable:false,fullscreenable:false,skipTaskbar:true,focusable:false,
+    maximizable:false,minimizable:false,fullscreenable:false,skipTaskbar:true,focusable:true,
     hasShadow:false,title:'Eightfold icon',webPreferences:prefs});
   secureWindow(panel);secureWindow(bubble);
   panel.on('close',e=>{if(!quitting){e.preventDefault();collapse();}});
@@ -93,9 +95,9 @@ ipcMain.on('overlay:collapse',e=>{if(trusted(e))collapse();});
 ipcMain.on('overlay:quit',e=>{if(trusted(e))app.quit();});
 ipcMain.on('overlay:drag-start',e=>{if(trusted(e)&&e.sender===bubble.webContents)dragStart=bubble.getBounds();});
 ipcMain.on('overlay:drag-move',(e,dx,dy)=>{if(trusted(e)&&e.sender===bubble.webContents)moveBubble(dx,dy);});
-ipcMain.on('overlay:drag-end',(e,dx,dy,open)=>{
+ipcMain.on('overlay:drag-end',(e,dx,dy)=>{
   if(!trusted(e)||e.sender!==bubble.webContents)return;
-  moveBubble(dx,dy);dragStart=null;persist();if(open===true)expand();
+  moveBubble(dx,dy);dragStart=null;persist();
 });
 async function runSmoke() {
   try {
@@ -113,9 +115,26 @@ async function runSmoke() {
     collapse();await visible(panel,false,'Solver hidden while collapsed');await visible(bubble,true,'Collapsed icon visible');
     assert.equal(panel.isAlwaysOnTop(),true);assert.equal(bubble.isAlwaysOnTop(),true);
     expand();await visible(panel,true,'Restored solver visible');assert.equal(findSolver(),solver);
+    const tick=()=>new Promise(r=>setTimeout(r,60));
+    const input=(type,x=32,y=32)=>bubble.webContents.sendInputEvent({type,x,y,button:'left',clickCount:1});
+    // Exercise Chromium pointer/click events, preload IPC and native hide/show together.
+    for(let cycle=0;cycle<20;cycle++){
+      collapse();await visible(bubble,true,'Icon shown for click cycle '+cycle);
+      bubble.focus();await tick();
+      input('mouseDown');await tick();input('mouseUp');
+      await visible(panel,true,'Left click restores solver, cycle '+cycle);
+      await visible(bubble,false,'Icon hides after left click, cycle '+cycle);
+      assert.equal(findSolver(),solver,'Solver frame retained through repeated clicks');
+    }
+    collapse();await visible(bubble,true,'Icon shown for drag regression');bubble.focus();await tick();
+    input('mouseDown');await tick();input('mouseMove',46,32);await tick();input('mouseUp',46,32);await tick();
+    await visible(panel,false,'Dragging must not open solver');
+    assert.equal(bubble.isVisible(),true,'Icon remains after dragging');
+    input('mouseDown');await tick();input('mouseUp');
+    await visible(panel,true,'Left click still works after dragging');
     assert.equal(panel.webContents.getLastWebPreferences().nodeIntegration,false);
     assert.equal(panel.webContents.getLastWebPreferences().sandbox,true);
-    console.log('OVERLAY SMOKE PASS: load, always-on-top, icon collapse, restore, retained solver frame, sandbox');
+    console.log('OVERLAY SMOKE PASS: load, always-on-top, 20 native left-click restore cycles, drag then click, retained solver frame, sandbox');
     app.quit();
   }catch(err){console.error('OVERLAY SMOKE FAIL',err);app.exit(1);}
 }
