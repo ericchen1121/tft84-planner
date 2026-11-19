@@ -45,13 +45,13 @@ function populateSelects(){
  for(const img of document.querySelectorAll('[data-hero]')){const a=ART.units[img.dataset.hero];if(a?.url)img.src=a.url;img.addEventListener('error',()=>img.hidden=true);}
 }
 function portrait(u,{name=true,lazy=true,interactive=false}={}){
- const wrap=el(interactive?'button':'div',name?'champion':'');if(interactive){wrap.type='button';wrap.classList.add('champion-info-button');wrap.setAttribute('aria-label',t('View {name} details',{name:unitLabel(u)}));wrap.setAttribute('aria-haspopup','dialog');wrap.setAttribute('aria-controls','info-dialog');wrap.addEventListener('click',()=>showInfo(u.id));}wrap.title=t('{name} · {cost}-cost · Range {range}{slots}\n{traits}{unlock}',{name:unitLabel(u),cost:u.cost,range:u.range,slots:u.slots>1?t(' · {n} slots',{n:u.slots}):'',traits:u.traits.map(name=>traitLabel(name)).join(' / '),unlock:u.unlock?t('\nUnlock required'):''});
+ const wrap=el(interactive?'button':'div',name?'champion':'');if(interactive){wrap.type='button';wrap.classList.add('champion-info-button');wrap.setAttribute('aria-label',t('View {name} details',{name:unitLabel(u)}));wrap.setAttribute('aria-haspopup','dialog');wrap.setAttribute('aria-controls','info-dialog');wrap.addEventListener('click',()=>showInfo(u.id));}wrap.title=t('{name} · {cost}-cost · Range {range}{slots}\n{traits}{unlock}',{name:unitLabel(u),cost:u.cost,range:u.range,slots:u.slots>1?t(' · {n} slots',{n:u.slots}):'',traits:u.traits.map(name=>traitLabel(name)).join(' / '),unlock:hasInfoUnlock(u)?t('\nUnlock required'):''});
  const p=el('div','portrait');p.style.setProperty('--rarity',rarity[u.cost]||rarity[1]);
  const fallback=el('span','fallback',u.name.replace(/\(.*\)/,'').trim().split(/\s+/).map(s=>s[0]).slice(0,2).join(''));
  p.append(fallback);
  const url=ART.units[u.id]?.url||INFO.units[u.id]?.image;
  if(url){const img=new Image();img.alt=unitLabel(u);img.loading=lazy?'lazy':'eager';img.referrerPolicy='no-referrer';img.src=url;img.addEventListener('load',()=>{fallback.hidden=true;});img.addEventListener('error',()=>{img.remove();fallback.hidden=false;});p.append(img);}
- p.append(el('span','cost-label',u.cost));wrap.append(p);if(name)wrap.append(el('div','champion-name',unitLabel(u).replace(/ \(.*\)/,'')));return wrap;
+ p.append(el('span','cost-label',u.cost));const frame=el('div','portrait-frame');frame.append(p);if(hasInfoUnlock(u)){const badge=el('span','unlock-badge');badge.setAttribute('role','img');badge.setAttribute('aria-label',t('Unlock required'));badge.title=t('Unlock required');frame.append(badge);}wrap.append(frame);if(name)wrap.append(el('div','champion-name',unitLabel(u).replace(/ \(.*\)/,'')));return wrap;
 }
 function analyze(ids,c=state.config){
  const team=ids.map(i=>DATA.units[i]),counts=new Map(Object.entries(c.trait_bonuses||{}));
