@@ -6,7 +6,7 @@
   "version": "02",
   "suffix": "None",
   "slots": 10,
-  "notes": "None suffix is preserved from the user-provided PBE client export. Codes verified against all eight champions in that export. Conflicting source IDs are withheld rather than guessed. This exports the champion list only, without positioning, items, stars or emblem bonuses.",
+  "notes": "None suffix is preserved from the user-provided PBE client export. Codes verified against all eight champions in that export. Conflicting source IDs are omitted from exports rather than guessed. Buttons are red whenever any such champion is present, and the omitted names are reported. This exports the champion list only, without positioning, items, stars or emblem bonuses.",
   "units": {
     "u0": {
       "name": "Elise",
