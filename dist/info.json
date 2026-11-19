@@ -924,7 +924,8 @@
       "description": "Dash to a nearby group of enemies, then fling feathers split among enemies within 1 hex, dealing magic damage. Rakan hits enemies within 2 hexes and briefly knocks them up.",
       "description_zh": "衝向一群敵軍，將羽毛分散攻擊附近目標。主要的銳空能命中更廣範圍並短暫擊飛敵軍。",
       "unlock": "At Level 8+, win or lose the required number of consecutive combats.",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=256,height=152,format=auto/https://cdn.metatft.com/file/metatft/championsplashes/da_rakan19.png"
     },
     "u92": {
       "name_zh": null,
@@ -934,7 +935,8 @@
       "description": "Passive: Gain Beats per attack and cast periodically.\n\nActive: Gain a shield and deal physical damage to all enemies within 2 hexes, then strike the current target multiple times, dealing physical damage plus additional damage per Beat. After unleashing a set number of Beats, gain an emblem for a trait you don’t have active; the number of Beats required increases.",
       "description_zh": "普攻累積節奏，定期獲得護盾並攻擊周圍敵軍，再多次打擊目標。釋放足夠節奏後可獲得尚未啟動羈絆的徽章。",
       "unlock": "Have at least the required number of non-unique traits active.\nLevel 9",
-      "unlock_zh": "等級9，且啟動至少8項非唯一羈絆。"
+      "unlock_zh": "等級9，且啟動至少8項非唯一羈絆。",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=256,height=152,format=auto/https://cdn.metatft.com/file/metatft/championsplashes/da_smeech19.png"
     },
     "u93": {
       "name_zh": "索娜",
@@ -944,7 +946,8 @@
       "description": "Passive: Cannot attack. Every few seconds, gains Mana, deals magic damage to nearby enemies, and grants allies a Shield for a duration.\n\nActive: Sends a sonic wave across the battlefield, dealing magic damage split among all enemies and Stunning them for a duration. Allies gain a Shield split among them for a duration.",
       "description_zh": null,
       "unlock": "Inspire Collab champions the required number of times.\nLevel 10",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=256,height=152,format=auto/https://cdn.metatft.com/file/metatft/championsplashes/da_sona19.png"
     }
   }
 }

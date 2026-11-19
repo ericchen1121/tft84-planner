@@ -125,3 +125,5 @@ The header tabs separate the existing **Solver / 求解器** from **Info**. Info
 `dist/info.json` contains display-only metadata. On 2026-11-19, MetaTFT's Taiwan locale supplied 78 localized names and 59 ability descriptions with Chinese text. Chinese ability summaries paraphrase those descriptions; unavailable translations retain English. Variant suffixes distinguish Akali's forms. English mechanics, mana and unlock conditions retain the existing tactics.tools snapshot; this change does not alter solver balance data or its verified preset. Skill summaries intentionally omit star-level scaling and unpublished numeric placeholders. Sixteen unlock conditions also have Chinese summaries; other unlock conditions retain English.
 
 Sources: https://www.metatft.com/new-set and https://tactics.tools/info/set-update . Info is embedded in the standalone build and requires no runtime data fetch.
+
+MetaTFT supplies the three additional portrait URLs for Rakan, Smeech and Sona; the other 91 retain the existing artwork mapping.

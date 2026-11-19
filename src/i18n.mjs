@@ -123,7 +123,7 @@ export const UI_ZH=Object.freeze({
   'Skill summaries · Chinese where available, English otherwise · Snapshot Nov 19, 2026':'技能摘要 · 有中文則顯示中文，其餘保留英文 · 資料快照：2026/11/19',
   'References:':'參考來源：','View {name} details':'查看 {name} 的介紹','View details →':'查看完整介紹 →',
   '{n} / {total} champions':'{n} / {total} 位棋子','Range {range}':'攻擊距離 {range}','{n} slots':'{n} 人口',
-  'Cost':'費用','Attack range':'攻擊距離','Mana':'魔力','Unlock condition':'解鎖條件',
+  'Cost':'費用','Attack range':'攻擊距離','Population':'人口','Mana':'魔力','Unlock condition':'解鎖條件',
   'Close champion info':'關閉棋子介紹',
   'Ability summaries omit star-level scaling. Some source values are not yet available.':'此處為技能機制摘要，省略各星等倍率；部分來源數值尚未公開。',
   '7-cost':'7 費','5-cost':'5 費','4-cost':'4 費','3-cost':'3 費','2-cost':'2 費','1-cost':'1 費'
