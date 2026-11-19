@@ -45,7 +45,7 @@ function renderInfo(){
  const units=infoUnits(),fragment=document.createDocumentFragment();
  for(const u of units){
   const card=el('button','info-card');card.type='button';card.style.setProperty('--rarity',rarity[u.cost]||rarity[1]);card.setAttribute('aria-label',t('View {name} details',{name:unitLabel(u)}));
-  const top=el('div','info-card-top');top.append(infoPortrait(u,{name:false}));const title=el('div','info-card-title');title.append(el('strong','',unitLabel(u)),el('small','',roleLabel(u)));top.append(title,el('span','info-cost',u.cost+'g'));card.append(top,infoTraits(u));
+  const top=el('div','info-card-top');top.append(infoPortrait(u,{name:false}));const title=el('div','info-card-title');title.append(el('strong','',unitLabel(u)),el('small','info-role',roleLabel(u)));top.append(title,el('span','info-cost',u.cost+'g'));card.append(top,infoTraits(u));
   const a=INFO.units[u.id],metadata=el('div','info-meta');metadata.append(el('span','',t('Range {range}',{range:u.range})),el('span','',t('Mana')+' '+(a.full_mana||a.mana||'—')));card.append(metadata);
   const ability=el('div','info-ability');ability.append(el('strong','',abilityLabel(u)),el('small','star-scaling',t('Values: 1★ / 2★ / 3★')),numericDescription(u,''));if(a.source_missing_values)ability.append(el('small','source-missing',t('Some values depend on the board or are missing from the source.')));
   card.append(ability,infoUnlockBlock(u),recommendedEquipment(u),el('span','info-card-more',t('View details →')));card.addEventListener('click',()=>showInfo(u.id));fragment.append(card);

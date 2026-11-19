@@ -44,8 +44,8 @@ function populateSelects(){
  for(const [id,value]of Object.entries(saved))if([...$(id).options].some(option=>option.value===value))$(id).value=value;
  for(const img of document.querySelectorAll('[data-hero]')){const a=ART.units[img.dataset.hero];if(a?.url)img.src=a.url;img.addEventListener('error',()=>img.hidden=true);}
 }
-function portrait(u,{name=true,lazy=true}={}){
- const wrap=el('div',name?'champion':'');wrap.title=t('{name} · {cost}-cost · Range {range}{slots}\n{traits}{unlock}',{name:unitLabel(u),cost:u.cost,range:u.range,slots:u.slots>1?t(' · {n} slots',{n:u.slots}):'',traits:u.traits.map(name=>traitLabel(name)).join(' / '),unlock:u.unlock?t('\nUnlock required'):''});
+function portrait(u,{name=true,lazy=true,interactive=false}={}){
+ const wrap=el(interactive?'button':'div',name?'champion':'');if(interactive){wrap.type='button';wrap.classList.add('champion-info-button');wrap.setAttribute('aria-label',t('View {name} details',{name:unitLabel(u)}));wrap.setAttribute('aria-haspopup','dialog');wrap.setAttribute('aria-controls','info-dialog');wrap.addEventListener('click',()=>showInfo(u.id));}wrap.title=t('{name} · {cost}-cost · Range {range}{slots}\n{traits}{unlock}',{name:unitLabel(u),cost:u.cost,range:u.range,slots:u.slots>1?t(' · {n} slots',{n:u.slots}):'',traits:u.traits.map(name=>traitLabel(name)).join(' / '),unlock:u.unlock?t('\nUnlock required'):''});
  const p=el('div','portrait');p.style.setProperty('--rarity',rarity[u.cost]||rarity[1]);
  const fallback=el('span','fallback',u.name.replace(/\(.*\)/,'').trim().split(/\s+/).map(s=>s[0]).slice(0,2).join(''));
  p.append(fallback);
@@ -106,7 +106,7 @@ function renderResults(){
   const badge=el('div','score-badge');badge.append(el('span','','✦'),el('strong','',r.score),el('span','',t('SYNERGY')));top.append(badge);card.append(top);
   const units=el('div','unit-row');units.style.gridTemplateColumns=`repeat(${Math.min(8,Math.max(a.team.length,1))},minmax(0,1fr))`;
   const ordered=[...a.team].sort((x,y)=>y.cost-x.cost||x.name.localeCompare(y.name));
-  for(const u of ordered)units.append(portrait(u));
+  for(const u of ordered)units.append(portrait(u,{interactive:true}));
   if(a.team.length<8&&state.config.population===8)for(let k=a.team.length;k<8;k++){const blank=el('div','unit-placeholder','◈');blank.title=t('Baron Nashor uses an additional population slot');units.append(blank);}
   card.append(units);const traits=el('div','trait-chips');for(const t of a.traits)traits.append(traitChip(t));card.append(traits);
   const bottom=el('div','card-bottom'),metrics=el('div');
