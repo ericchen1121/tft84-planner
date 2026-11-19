@@ -148,7 +148,7 @@ Required traits use a searchable checkbox list, sharing the same 28 allowed trai
 
 ## Windows in-game floating overlay
 
-The `desktop-layout` branch includes a Windows desktop application, with the existing solver inside an always-on-top window. Collapse it to a draggable floating icon, click the icon to restore, or use Alt+Shift+T. Collapsing hides the same window without reloading the solver, preserving inputs, results and running workers. Drag the title bar to move the panel, resize its edges, and use × to quit. Right-click the icon to quit. Window positions persist across launches.
+The `desktop-layout` branch includes a Windows desktop application, with the existing solver inside an always-on-top window. Collapse it to a draggable floating icon, click the icon to restore, or use Alt+Shift+T. Collapsing resizes the same visible native window to a 64×64 icon without reloading the solver, preserving inputs, results and running workers. Drag the title bar to move the panel, resize its edges, and use × to quit. Right-click the icon to quit. Window positions persist across launches.
 
 Use borderless/windowed game mode. Exclusive fullscreen is not supported. This is an ordinary desktop window, without game memory access, hooks or input automation. Game/anti-cheat compatibility has not been established. The program is unsigned.
 
@@ -163,3 +163,8 @@ This branch adapts the existing solver to desktop browsers. The top navigation i
 Trait settings are grouped in a collapsible section so the default screen can show results sooner. Its summary shows the number of required traits and emblem bonuses. All criteria can also be collapsed into a compact toolbar without losing inputs, results or an ongoing search. The Info / 資訊 view and all solver rules remain available.
 
 Build and verify with `npm run build` and `npm test`. For desktop use, download this branch's root `index.html` and open it in a recent Chrome or Edge; the standalone file embeds data, workers and the verified preset. Portraits and item images require internet. For local preview run `npm run dev`. Browser-local search does not require a server backend. This branch is kept separate from the main GitHub Pages source.
+
+
+### Overlay 1.0.4
+
+Collapse and restore now reuse one opaque, resizable native window, instead of transferring from the solver to a transparent secondary window. The native window remains visible while compact. Its topmost level is refreshed without focusing it when a borderless foreground window activates. The system tray provides Open, Collapse and Quit as recovery paths. The regression suite clicks the actual titlebar minus button and icon through 20 foreground-switch cycles, checks the same visible HWND and solver frame, and checks dragging and the tray. Actual TFT compatibility still requires testing on the player’s computer.

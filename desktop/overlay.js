@@ -43,4 +43,5 @@ if(bubble){
   window.addEventListener('blur',()=>finishGesture(true));
   document.addEventListener('visibilitychange',resetInput);
   api.onResetInput(resetInput);
+  api.onModeChanged(mode=>{resetInput();document.body.className=mode==='compact'?'compact':'panel';});
 }
