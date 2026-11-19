@@ -138,8 +138,8 @@ assert.equal(JSON.stringify(data),canonicalBefore);assert.equal(fs.readFileSync(
 console.log(JSON.stringify({info:'PASS',champions:all.length,translated_names:Object.values(info.units).filter(a=>a.name_zh).length,translated_summaries:Object.values(info.units).filter(a=>a.description_zh).length,bilingual_search:true,combined_filters:true,cost_descending:true}));
 
 const itemData=JSON.parse(capture('item-data'));
-assert.equal(itemData.mode,'PBE');assert.equal(itemData.patch,'19.1');assert.equal(itemData.set,'TFTSet19');assert.equal(itemData.items.length,143);
-const itemIds=new Set(itemData.items.map(item=>item.id));assert.equal(itemIds.size,143);
+assert.equal(itemData.mode,'PBE');assert.equal(itemData.patch,'19.1');assert.equal(itemData.set,'TFTSet19');assert.equal(itemData.items.length,144);
+const itemIds=new Set(itemData.items.map(item=>item.id));assert.equal(itemIds.size,144);
 for(const item of itemData.items){assert(item.source.endsWith('?set=TFTSet19'));assert(item.image.endsWith(item.id.toLowerCase()+'.png'));assert(!/18_Emblem|Potion18/.test(item.id));}
 assert(itemIds.has('DA_IonicSpark19_Emblem'));assert(itemIds.has('DA_TrueDamage19_Emblem'));assert(!itemIds.has('DA_18_EmblemCoven'));
 let missing=0,unlocks=0;

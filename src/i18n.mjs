@@ -9,6 +9,7 @@ export const TRAIT_ZH=Object.freeze({
   'Gu Feng':'國風','Hyperpop':'超能流行','Ionic Spark':'離子火花','Prodigy':'不世之才'
 });
 export const UI_ZH=Object.freeze({
+  'No PBE item data available':'尚無 PBE 推薦裝備資料',
   'Eightfold home':'Eightfold 首頁','TFT LINEUP EXPLORER':'聯盟戰棋陣容搜尋器',
   'SET 19 · PRISMATIC TOUR':'第 19 賽季 · PRISMATIC TOUR',
   'Champion pool':'棋子清單','How scoring works':'計分方式',
