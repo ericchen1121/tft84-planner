@@ -100,6 +100,12 @@ html[lang="zh-Hant"] .eyebrow,html[lang="zh-Hant"] .stat-card small{letter-spaci
 @media(max-width:760px){.criteria{padding:18px}.criteria-traits{grid-template-columns:1fr}.required-options{grid-template-columns:repeat(3,minmax(0,1fr));max-height:210px}.required-toolbar{flex-wrap:wrap}.required-toolbar input{flex-basis:100%}.required-toolbar select{flex:1;max-width:none}.criteria-switches{gap:20px}.criteria-actions{flex-wrap:wrap}.criteria-actions .privacy-note{flex-basis:100%;justify-content:flex-start}.criteria .criteria-actions .primary-button{flex:1}.results-area .lineup-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.criteria-basic{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.criteria-basic>div:first-child{grid-column:1/-1}.required-options{grid-template-columns:repeat(2,minmax(0,1fr))}.criteria-switches{display:grid;grid-template-columns:1fr}.criteria-switches .toggle-line{justify-content:space-between}.required-heading{gap:8px}.required-heading h3{font-size:12px}}
 
+/* Champion roles stay visible on the preview; lineup portraits open the same dialog. */
+.info-card-title .info-role{display:block;visibility:visible;opacity:1;color:#c3d0e5;font-size:13px;line-height:1.6;margin-top:5px;white-space:normal}
+.champion-info-button{display:block;width:100%;min-width:0;padding:0;border:0;border-radius:6px;background:transparent;color:inherit;text-align:inherit;font:inherit;cursor:pointer}
+.champion-info-button:hover .portrait{box-shadow:0 0 0 2px var(--gold)}
+.champion-info-button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
 /* Desktop workspace: same solver, larger controls, compact top criteria. */
 .desktop-panel-actions{display:flex;gap:12px;align-items:center}
 .desktop-toggle{min-height:38px;padding:8px 14px;font-size:14px}
@@ -784,7 +790,7 @@ function renderInfo(){
  const units=infoUnits(),fragment=document.createDocumentFragment();
  for(const u of units){
   const card=el('button','info-card');card.type='button';card.style.setProperty('--rarity',rarity[u.cost]||rarity[1]);card.setAttribute('aria-label',t('View {name} details',{name:unitLabel(u)}));
-  const top=el('div','info-card-top');top.append(infoPortrait(u,{name:false}));const title=el('div','info-card-title');title.append(el('strong','',unitLabel(u)),el('small','',roleLabel(u)));top.append(title,el('span','info-cost',u.cost+'g'));card.append(top,infoTraits(u));
+  const top=el('div','info-card-top');top.append(infoPortrait(u,{name:false}));const title=el('div','info-card-title');title.append(el('strong','',unitLabel(u)),el('small','info-role',roleLabel(u)));top.append(title,el('span','info-cost',u.cost+'g'));card.append(top,infoTraits(u));
   const a=INFO.units[u.id],metadata=el('div','info-meta');metadata.append(el('span','',t('Range {range}',{range:u.range})),el('span','',t('Mana')+' '+(a.full_mana||a.mana||'—')));card.append(metadata);
   const ability=el('div','info-ability');ability.append(el('strong','',abilityLabel(u)),el('small','star-scaling',t('Values: 1★ / 2★ / 3★')),numericDescription(u,''));if(a.source_missing_values)ability.append(el('small','source-missing',t('Some values depend on the board or are missing from the source.')));
   card.append(ability,infoUnlockBlock(u),recommendedEquipment(u),el('span','info-card-more',t('View details →')));card.addEventListener('click',()=>showInfo(u.id));fragment.append(card);
@@ -905,8 +911,8 @@ function populateSelects(){
  for(const [id,value]of Object.entries(saved))if([...$(id).options].some(option=>option.value===value))$(id).value=value;
  for(const img of document.querySelectorAll('[data-hero]')){const a=ART.units[img.dataset.hero];if(a?.url)img.src=a.url;img.addEventListener('error',()=>img.hidden=true);}
 }
-function portrait(u,{name=true,lazy=true}={}){
- const wrap=el('div',name?'champion':'');wrap.title=t('{name} · {cost}-cost · Range {range}{slots}\n{traits}{unlock}',{name:unitLabel(u),cost:u.cost,range:u.range,slots:u.slots>1?t(' · {n} slots',{n:u.slots}):'',traits:u.traits.map(name=>traitLabel(name)).join(' / '),unlock:u.unlock?t('\nUnlock required'):''});
+function portrait(u,{name=true,lazy=true,interactive=false}={}){
+ const wrap=el(interactive?'button':'div',name?'champion':'');if(interactive){wrap.type='button';wrap.classList.add('champion-info-button');wrap.setAttribute('aria-label',t('View {name} details',{name:unitLabel(u)}));wrap.setAttribute('aria-haspopup','dialog');wrap.setAttribute('aria-controls','info-dialog');wrap.addEventListener('click',()=>showInfo(u.id));}wrap.title=t('{name} · {cost}-cost · Range {range}{slots}\n{traits}{unlock}',{name:unitLabel(u),cost:u.cost,range:u.range,slots:u.slots>1?t(' · {n} slots',{n:u.slots}):'',traits:u.traits.map(name=>traitLabel(name)).join(' / '),unlock:u.unlock?t('\nUnlock required'):''});
  const p=el('div','portrait');p.style.setProperty('--rarity',rarity[u.cost]||rarity[1]);
  const fallback=el('span','fallback',u.name.replace(/\(.*\)/,'').trim().split(/\s+/).map(s=>s[0]).slice(0,2).join(''));
  p.append(fallback);
@@ -967,7 +973,7 @@ function renderResults(){
   const badge=el('div','score-badge');badge.append(el('span','','✦'),el('strong','',r.score),el('span','',t('SYNERGY')));top.append(badge);card.append(top);
   const units=el('div','unit-row');units.style.gridTemplateColumns=`repeat(${Math.min(8,Math.max(a.team.length,1))},minmax(0,1fr))`;
   const ordered=[...a.team].sort((x,y)=>y.cost-x.cost||x.name.localeCompare(y.name));
-  for(const u of ordered)units.append(portrait(u));
+  for(const u of ordered)units.append(portrait(u,{interactive:true}));
   if(a.team.length<8&&state.config.population===8)for(let k=a.team.length;k<8;k++){const blank=el('div','unit-placeholder','◈');blank.title=t('Baron Nashor uses an additional population slot');units.append(blank);}
   card.append(units);const traits=el('div','trait-chips');for(const t of a.traits)traits.append(traitChip(t));card.append(traits);
   const bottom=el('div','card-bottom'),metrics=el('div');

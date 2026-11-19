@@ -49,3 +49,9 @@
 @media(max-width:1100px){.criteria-basic{grid-template-columns:repeat(3,minmax(0,1fr))}.criteria-traits{grid-template-columns:minmax(210px,1fr) minmax(0,2fr)}.required-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.criteria{padding:18px}.criteria-traits{grid-template-columns:1fr}.required-options{grid-template-columns:repeat(3,minmax(0,1fr));max-height:210px}.required-toolbar{flex-wrap:wrap}.required-toolbar input{flex-basis:100%}.required-toolbar select{flex:1;max-width:none}.criteria-switches{gap:20px}.criteria-actions{flex-wrap:wrap}.criteria-actions .privacy-note{flex-basis:100%;justify-content:flex-start}.criteria .criteria-actions .primary-button{flex:1}.results-area .lineup-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.criteria-basic{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.criteria-basic>div:first-child{grid-column:1/-1}.required-options{grid-template-columns:repeat(2,minmax(0,1fr))}.criteria-switches{display:grid;grid-template-columns:1fr}.criteria-switches .toggle-line{justify-content:space-between}.required-heading{gap:8px}.required-heading h3{font-size:12px}}
+
+/* Champion roles stay visible on the preview; lineup portraits open the same dialog. */
+.info-card-title .info-role{display:block;visibility:visible;opacity:1;color:#c3d0e5;font-size:13px;line-height:1.6;margin-top:5px;white-space:normal}
+.champion-info-button{display:block;width:100%;min-width:0;padding:0;border:0;border-radius:6px;background:transparent;color:inherit;text-align:inherit;font:inherit;cursor:pointer}
+.champion-info-button:hover .portrait{box-shadow:0 0 0 2px var(--gold)}
+.champion-info-button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
