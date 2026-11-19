@@ -139,3 +139,9 @@ All display data is embedded in the standalone build; the website makes no runti
 In Solver, choose a trait and an actual activation breakpoint (for example Classical 4), then Add. All added requirements must be satisfied. At least this tier accepts higher tiers; Exactly this active tier permits extra members below the next breakpoint (Classical 4 accepts counts 4–5, and rejects 6). The mode applies to every required trait. Emblem bonuses, champion extra-trait assignments and Sona's featured trait contribute to the requirement. Disabling unique-trait scoring does not disable required-trait checks.
 
 Default rules plus trait requirements instantly filter the complete verified preset. Custom rules use the exact worker search, with suffix membership bounds and upper-tier pruning. Required tiers never contribute extra score by themselves. Removing a requirement or Reset restores unrestricted searching after pressing Find lineups. The executed requirements are shown with the result context.
+
+### Criteria layout and multiple selection
+
+All search criteria now span the page above the results, with a responsive grid for numeric inputs and grouped panels for emblem bonuses and required traits. Advanced options and the search action remain in the same top panel. No left sidebar is used.
+
+Required traits use a searchable checkbox list. Every selected trait has its own tier selector. Selecting another trait or changing its tier preserves the other selections. Searching only changes visible choices; all checked requirements remain active. Selected chips and a count show the full selection. Clear selected traits clears only required traits, while Reset clears all criteria.

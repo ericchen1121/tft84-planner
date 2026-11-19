@@ -235,7 +235,7 @@ async function exportCsv(){
 function bindEvents(){
  $('criteria-form').addEventListener('submit',runSearch);$('criteria-form').addEventListener('input',markDirty);
  for(const button of document.querySelectorAll('[data-step]'))button.addEventListener('click',()=>{const [id,delta]=button.dataset.step.split(':'),input=$(id);input.value=Math.max(Number(input.min),Math.min(Number(input.max),Number(input.value)+Number(delta)));markDirty();});
- $('reset').addEventListener('click',()=>{$('criteria-form').reset();state.excluded.clear();state.extras={};state.bonuses={};state.required={};state.requiredMode='at_least';renderRequirements();populateRequiredLevels();renderExtras();renderBonuses();syncLabels();markDirty();notify(t('Default criteria restored.'));});
+ $('reset').addEventListener('click',()=>{$('criteria-form').reset();state.excluded.clear();state.extras={};state.bonuses={};state.required={};state.requiredMode='at_least';renderRequirements();populateRequiredTraits();renderExtras();renderBonuses();syncLabels();markDirty();notify(t('Default criteria restored.'));});
  $('language').addEventListener('change',()=>applyLanguage($('language').value));
  $('add-emblem').addEventListener('click',()=>{const trait=$('emblem-trait').value;setBonus(trait,(state.bonuses[trait]||0)+1);});
  $('stop').addEventListener('click',()=>finish('INCOMPLETE','Stopped by you'));

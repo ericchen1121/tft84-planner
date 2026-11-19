@@ -140,7 +140,12 @@ export const UI_ZH=Object.freeze({
   'All added requirements must be met. Emblems count. At least 4 Classical also accepts 6 Classical; exact tier 4 accepts 4–5 members.':'所有加入的條件都必須符合，轉職 +1 也會計入。例如：至少 4 古典樂可包含 6 古典樂；恰好 4 古典樂則接受 4–5 個計數。',
   'tier {n}':'{n} 階','Remove required {trait}':'移除必要羈絆 {trait}',
   'Required traits must be a trait-to-breakpoint object.':'必要羈絆設定格式無效。','Unknown required trait mode.':'未知的羈絆符合方式。',
-  'Choose a known trait and one of its activation breakpoints.':'請選擇已知羈絆與其實際啟動門檻。'
+  'Choose a known trait and one of its activation breakpoints.':'請選擇已知羈絆與其實際啟動門檻。',
+  'Clear selected traits':'清除已選羈絆','Search traits to select':'搜尋要勾選的羈絆','Search required traits':'搜尋必要羈絆',
+  'Select multiple required traits':'勾選多個必要羈絆','No traits match your search.':'找不到符合搜尋的羈絆。',
+  'Check multiple traits and set a tier for each. All checked traits must be met; emblems count.':'可勾選多個羈絆，並分別設定等級。所有勾選條件都必須符合，轉職 +1 也會計入。',
+  'At least 4 Classical also accepts 6 Classical; exact tier 4 accepts 4–5 members.':'至少 4 古典樂可包含 6 古典樂；恰好 4 古典樂則接受 4–5 個計數。',
+  'Require {trait}':'必須包含 {trait}','Required tier for {trait}':'{trait} 的必要等級'
 });
 let currentLanguage='zh-Hant';
 export function setLanguage(value){currentLanguage=value==='en'?'en':'zh-Hant';return currentLanguage;}

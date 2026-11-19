@@ -47,6 +47,53 @@ html[lang="zh-Hant"] .eyebrow,html[lang="zh-Hant"] .stat-card small{letter-spaci
 @media(max-width:600px){.info-detail-stats{grid-template-columns:repeat(3,minmax(0,1fr));padding:13px}.info-detail-stats strong{font-size:16px}.equipment-slot{width:38px;height:38px}}
 
 .required-section{border:1px solid #42516b;border-radius:10px;padding:14px;margin:18px 0;background:#17213766}.required-picker{display:grid;grid-template-columns:minmax(0,1fr) 58px auto;gap:7px;margin:10px 0 16px}.required-picker select{width:100%;min-width:0}.required-picker button{padding:8px 11px}.required-row{display:flex;align-items:center;gap:9px;padding:9px 0;border-bottom:1px solid #2b3950;font-size:12px}.required-row>span{flex:1}.required-row strong{color:#e1c586;font-size:11px}.required-row button{font-size:19px;padding:0 5px}.required-section .field-hint{margin:12px 0 0;line-height:1.8}.required-section select{font-size:12px}
+
+/* Full-width criteria above the results; checkbox trait multiselect. */
+.workspace{display:flex;flex-direction:column;gap:28px}
+.workspace>.criteria,.workspace>.results-area{width:100%;min-width:0}
+.criteria{position:static;top:auto;padding:22px 24px}
+.criteria .panel-heading{margin-bottom:22px}
+.criteria-basic{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+.criteria-basic>div{min-width:0}.criteria-basic>.field-pair{display:contents}
+.criteria-basic .stepper{min-height:46px}.criteria-basic .stepper input{width:34px;font-size:22px}
+.criteria-basic input[type=number]{height:46px}.criteria-basic .field-title{min-height:18px}
+.criteria-basic .field-title>span{display:none}.criteria-basic .field-title output{font-size:16px}
+.criteria-traits{display:grid;grid-template-columns:minmax(220px,1fr) minmax(0,2.5fr);gap:20px;margin-top:22px;align-items:start}
+.criteria-traits .emblem-section,.criteria-traits .required-section{margin:0;padding:15px;min-width:0}
+.criteria-traits #emblem-list{max-height:175px;overflow:auto}
+.criteria-traits .required-section{border-color:#344660}
+.required-heading{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:12px}
+.required-heading h3{font-size:13px;color:#d7e0f0;margin:0}
+.required-heading>span{font-size:10px;color:#dfc58f}
+.required-heading>button{margin-left:auto;font-size:10px;padding:3px 0}
+.required-toolbar{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.required-toolbar input{flex:1;min-width:100px;font-size:11px;padding:9px 10px}
+.required-toolbar label{font-size:10px;color:#94a7c3;white-space:nowrap}
+.required-toolbar select{width:auto;max-width:185px;padding:9px;font-size:11px}
+.required-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;max-height:185px;overflow:auto;padding:2px 7px 5px 2px;scrollbar-color:#435673 #111a29;scrollbar-width:thin}
+.required-choice{display:flex;align-items:center;gap:6px;border:1px solid #2d3c54;background:#0e1726;border-radius:7px;padding:7px;min-width:0}
+.required-choice.selected{border-color:#b49b64;background:#352e224d}
+.required-choice label{display:flex;gap:7px;align-items:center;min-width:0;flex:1;cursor:pointer;font-size:11px;color:#b7c7de}
+.required-choice label>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.required-choice input[type=checkbox]{accent-color:#dfc185;flex:none;width:14px;height:14px;padding:0;margin:0}
+.required-choice select{width:45px;padding:5px 2px;font-size:11px;flex:none}
+.required-choice select:disabled{opacity:.4;cursor:default}
+#required-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.required-section .required-row{display:flex;gap:7px;border:1px solid #695a3e;border-radius:5px;padding:3px 7px;background:#29251b88;font-size:10px}
+.required-row>span{flex:initial}.required-row button{font-size:15px;padding:0 3px}
+.required-section .field-hint{margin-top:8px}
+.criteria-switches{display:flex;flex-wrap:wrap;gap:18px 40px;margin-top:22px}
+.criteria-switches .toggle-line{gap:24px;margin:0}
+.criteria .advanced{margin-top:20px}.criteria .advanced-body{max-width:920px}
+.criteria-actions{border-top:1px solid #263047;margin-top:6px;padding-top:16px;display:flex;gap:14px;align-items:center;justify-content:flex-end}
+.criteria-actions .privacy-note{margin:0 auto 0 0;font-size:10px}
+.criteria .criteria-actions .primary-button{width:205px;margin:0}
+.criteria-actions .stop-button{width:150px;margin:0}
+.results-area .lineup-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:1500px){.required-options{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:1100px){.criteria-basic{grid-template-columns:repeat(3,minmax(0,1fr))}.criteria-traits{grid-template-columns:minmax(210px,1fr) minmax(0,2fr)}.required-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.criteria{padding:18px}.criteria-traits{grid-template-columns:1fr}.required-options{grid-template-columns:repeat(3,minmax(0,1fr));max-height:210px}.required-toolbar{flex-wrap:wrap}.required-toolbar input{flex-basis:100%}.required-toolbar select{flex:1;max-width:none}.criteria-switches{gap:20px}.criteria-actions{flex-wrap:wrap}.criteria-actions .privacy-note{flex-basis:100%;justify-content:flex-start}.criteria .criteria-actions .primary-button{flex:1}.results-area .lineup-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.criteria-basic{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.required-options{grid-template-columns:repeat(2,minmax(0,1fr))}.criteria-switches{display:grid;grid-template-columns:1fr}.criteria-switches .toggle-line{justify-content:space-between}.required-heading{gap:8px}.required-heading h3{font-size:12px}}
 </style>
 </head>
 <body>
@@ -62,19 +109,22 @@ html[lang="zh-Hant"] .eyebrow,html[lang="zh-Hant"] .stat-card small{letter-spaci
     <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-card hero-leona"><img data-hero="u58" alt=""><span>LEONA<small>4-COST · FRONTLINE</small></span></div><div class="hero-card hero-ahri"><img data-hero="u49" alt=""><span>AHRI<small>4-COST · CASTER</small></span></div><div class="hero-card hero-jinx"><img data-hero="u56" alt=""><span>JINX<small>4-COST · MARKSMAN</small></span></div><div class="art-caption"><span>8</span> SLOTS. ENDLESS POSSIBILITIES.</div></div>
   </section>
   <div class="workspace">
-    <aside class="criteria panel">
-      <div class="panel-heading"><div><span class="eyebrow">MAKE IT YOURS</span><h2>Search criteria</h2></div><button id="reset" class="text-button muted">Reset</button></div>
-      <form id="criteria-form">
-        <label class="field-title" for="population">Team population <span>Total slots</span></label><div class="stepper large-stepper"><button type="button" data-step="population:-1" aria-label="Decrease population">−</button><input id="population" name="population" type="number" min="1" max="16" value="8"><span>slots</span><button type="button" data-step="population:1" aria-label="Increase population">+</button></div>
-        <div class="field-pair cost-fields"><div><label class="field-title" for="min_four_cost"><i class="cost-dot cost-4"></i>4-cost minimum</label><input id="min_four_cost" name="min_four_cost" type="number" min="0" max="16" value="3"></div><div><label class="field-title" for="max_five_cost"><i class="cost-dot cost-5"></i>5-cost maximum</label><input id="max_five_cost" name="max_five_cost" type="number" min="0" max="16" value="1"></div></div>
-        <div class="rule-divider"></div>
-        <label class="field-title" for="min_trait_score">Minimum synergy score <output id="score-output">16</output></label><input id="min_trait_score" name="min_trait_score" type="range" min="0" max="30" value="16"><div class="range-labels"><span>0</span><span>30</span></div><p class="field-hint">Add the member counts of active traits.</p>
-        <div class="field-pair"><div><label class="field-title" for="min_frontline">Frontline minimum</label><input id="min_frontline" name="min_frontline" type="number" min="0" max="16" value="5"><p class="field-hint">Attack range ≤ <span id="range-label">2</span></p></div><div><label class="field-title" for="min_backline_four_cost">4-cost backline</label><input id="min_backline_four_cost" name="min_backline_four_cost" type="number" min="0" max="16" value="2"><p class="field-hint">Ranged carries & casters</p></div></div>
-        <section class="emblem-section" aria-label="Trait bonuses from emblems"><label class="field-title" for="emblem-trait">Emblems / Trait +1 <span id="emblem-total">+0 total</span></label><div class="emblem-picker"><select id="emblem-trait" aria-label="Trait to increase"></select><button id="add-emblem" type="button" class="outline-button">+1</button></div><div id="emblem-list" aria-live="polite"></div><p class="field-hint">Each +1 adds one trait count without using population. Use bonuses available in your game; no carrier is assigned.</p></section>
-        <section class="required-section" aria-label="Required trait tiers"><label class="field-title" for="required-trait">Required trait tiers</label><div class="required-picker"><select id="required-trait" aria-label="Required trait"></select><select id="required-level" aria-label="Required trait tier"></select><button id="add-required" type="button" class="outline-button">Add</button></div><label class="field-title" for="required-mode">Match mode</label><select id="required-mode"><option value="at_least">At least this tier</option><option value="exact_tier">Exactly this active tier</option></select><div id="required-list" aria-live="polite"></div><p class="field-hint">All added requirements must be met. Emblems count. At least 4 Classical also accepts 6 Classical; exact tier 4 accepts 4–5 members.</p></section>
-        <label class="toggle-line"><span>Count unique traits<small>Include one-champion traits</small></span><input name="include_unique_traits" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
+    <section class="criteria panel" aria-labelledby="criteria-title">
+      <div class="panel-heading"><div><span class="eyebrow">MAKE IT YOURS</span><h2 id="criteria-title">Search criteria</h2></div><button id="reset" class="text-button muted">Reset</button></div>
+      <form id="criteria-form"><div class="criteria-basic"><div><label class="field-title" for="population">Team population <span>Total slots</span></label><div class="stepper large-stepper"><button type="button" data-step="population:-1" aria-label="Decrease population">−</button><input id="population" name="population" type="number" min="1" max="16" value="8"><span>slots</span><button type="button" data-step="population:1" aria-label="Increase population">+</button></div>
+        </div><div class="field-pair cost-fields"><div><label class="field-title" for="min_four_cost"><i class="cost-dot cost-4"></i>4-cost minimum</label><input id="min_four_cost" name="min_four_cost" type="number" min="0" max="16" value="3"></div><div><label class="field-title" for="max_five_cost"><i class="cost-dot cost-5"></i>5-cost maximum</label><input id="max_five_cost" name="max_five_cost" type="number" min="0" max="16" value="1"></div></div>
+        
+        <div><label class="field-title" for="min_trait_score">Minimum synergy score <output id="score-output">16</output></label><input id="min_trait_score" name="min_trait_score" type="range" min="0" max="30" value="16"><div class="range-labels"><span>0</span><span>30</span></div><p class="field-hint">Add the member counts of active traits.</p>
+        </div><div class="field-pair"><div><label class="field-title" for="min_frontline">Frontline minimum</label><input id="min_frontline" name="min_frontline" type="number" min="0" max="16" value="5"><p class="field-hint">Attack range ≤ <span id="range-label">2</span></p></div><div><label class="field-title" for="min_backline_four_cost">4-cost backline</label><input id="min_backline_four_cost" name="min_backline_four_cost" type="number" min="0" max="16" value="2"><p class="field-hint">Ranged carries & casters</p></div></div>
+        </div><div class="criteria-traits"><section class="emblem-section" aria-label="Trait bonuses from emblems"><label class="field-title" for="emblem-trait">Emblems / Trait +1 <span id="emblem-total">+0 total</span></label><div class="emblem-picker"><select id="emblem-trait" aria-label="Trait to increase"></select><button id="add-emblem" type="button" class="outline-button">+1</button></div><div id="emblem-list" aria-live="polite"></div><p class="field-hint">Each +1 adds one trait count without using population. Use bonuses available in your game; no carrier is assigned.</p></section>
+        <section class="required-section" aria-labelledby="required-heading">
+ <div class="required-heading"><h3 id="required-heading">Required trait tiers</h3><span id="required-selected"></span><button id="clear-required" class="text-button" type="button">Clear selected traits</button></div>
+ <div class="required-toolbar"><input id="required-query" type="search" placeholder="Search traits to select" aria-label="Search required traits"><label for="required-mode">Match mode</label><select id="required-mode"><option value="at_least">At least this tier</option><option value="exact_tier">Exactly this active tier</option></select></div>
+ <div id="required-options" class="required-options" role="group" aria-label="Select multiple required traits"></div><p id="required-options-empty" class="field-hint" hidden>No traits match your search.</p>
+ <div id="required-list" aria-live="polite"></div><p class="field-hint">Check multiple traits and set a tier for each. All checked traits must be met; emblems count.</p><p class="field-hint">At least 4 Classical also accepts 6 Classical; exact tier 4 accepts 4–5 members.</p>
+</section></div><div class="criteria-switches"><label class="toggle-line"><span>Count unique traits<small>Include one-champion traits</small></span><input name="include_unique_traits" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
         <label class="toggle-line"><span>Include 7-cost champions<small>Unlock requirements are not checked</small></span><input name="include_seven_cost" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
-        <details class="advanced"><summary>Advanced options <span>⌄</span></summary><div class="advanced-body">
+        </div><details class="advanced"><summary>Advanced options <span>⌄</span></summary><div class="advanced-body">
           <label class="field-title" for="score_mode">Scoring method</label><select id="score_mode" name="score_mode"><option value="active_members">Active trait members</option><option value="breakpoint">Highest reached breakpoint</option><option value="all_members">All trait members</option></select>
           <div class="field-pair"><div><label class="field-title" for="frontline_max_range">Frontline range ≤</label><input id="frontline_max_range" name="frontline_max_range" type="number" min="0" max="6" value="2"></div><div><label class="field-title" for="max_seconds">Search limit (sec)</label><input id="max_seconds" name="max_seconds" type="number" min="1" max="3600" value="590"></div></div>
           <label class="field-title" for="sona_feature_trait">Sona featured trait</label><select id="sona_feature_trait" name="sona_feature_trait"><option value="">None specified</option></select>
@@ -82,12 +132,8 @@ html[lang="zh-Hant"] .eyebrow,html[lang="zh-Hant"] .stat-card small{letter-spaci
           <div class="field-title">Extra trait assignments</div><div class="extra-picker"><select id="extra-unit" aria-label="Champion for extra trait"></select><select id="extra-trait" aria-label="Extra trait"></select><button class="icon-button" type="button" id="add-extra" aria-label="Add extra trait">+</button></div><div id="extra-list"></div>
           <p class="field-hint">Set match-specific Collab or emblem traits.</p>
         </div></details>
-        <div id="form-error" class="error-message" role="alert" hidden></div>
-        <button class="primary-button" id="search" type="submit"><span aria-hidden="true">⌕</span> Find lineups <span class="button-arrow">→</span></button>
-        <button class="stop-button" id="stop" type="button" hidden>■ Stop search</button>
-        <p class="privacy-note"><span aria-hidden="true">◉</span> Searches run on your device.</p>
-      </form>
-    </aside>
+        
+ <div id="form-error" class="error-message" role="alert" hidden></div><div class="criteria-actions"><p class="privacy-note"><span aria-hidden="true">◉</span> Searches run on your device.</p><button class="stop-button" id="stop" type="button" hidden>■ Stop search</button><button class="primary-button" id="search" type="submit"><span aria-hidden="true">⌕</span> Find lineups <span class="button-arrow">→</span></button></div></form></section>
     <section class="results-area" aria-label="Lineup search results">
       <div class="stats-row"><div class="stat-card"><span class="stat-icon blue">▦</span><div><small>LINEUPS FOUND</small><strong id="stat-count">—</strong></div></div><div class="stat-card"><span class="stat-icon gold">✦</span><div><small>BEST SYNERGY</small><strong id="stat-score">—<span>pts</span></strong></div></div><div class="stat-card"><span class="stat-icon violet">◈</span><div><small>CHAMPION POOL</small><strong id="stat-pool">94<span>units</span></strong></div></div></div>
       <div class="status-strip" id="status-strip" role="status"><span class="status-dot"></span><span id="status-text">Loading the verified preset…</span><span id="settings-changed" class="changed-tag" hidden>Settings changed</span><span id="elapsed"></span></div>
@@ -576,7 +622,12 @@ const UI_ZH=Object.freeze({
   'All added requirements must be met. Emblems count. At least 4 Classical also accepts 6 Classical; exact tier 4 accepts 4–5 members.':'所有加入的條件都必須符合，轉職 +1 也會計入。例如：至少 4 古典樂可包含 6 古典樂；恰好 4 古典樂則接受 4–5 個計數。',
   'tier {n}':'{n} 階','Remove required {trait}':'移除必要羈絆 {trait}',
   'Required traits must be a trait-to-breakpoint object.':'必要羈絆設定格式無效。','Unknown required trait mode.':'未知的羈絆符合方式。',
-  'Choose a known trait and one of its activation breakpoints.':'請選擇已知羈絆與其實際啟動門檻。'
+  'Choose a known trait and one of its activation breakpoints.':'請選擇已知羈絆與其實際啟動門檻。',
+  'Clear selected traits':'清除已選羈絆','Search traits to select':'搜尋要勾選的羈絆','Search required traits':'搜尋必要羈絆',
+  'Select multiple required traits':'勾選多個必要羈絆','No traits match your search.':'找不到符合搜尋的羈絆。',
+  'Check multiple traits and set a tier for each. All checked traits must be met; emblems count.':'可勾選多個羈絆，並分別設定等級。所有勾選條件都必須符合，轉職 +1 也會計入。',
+  'At least 4 Classical also accepts 6 Classical; exact tier 4 accepts 4–5 members.':'至少 4 古典樂可包含 6 古典樂；恰好 4 古典樂則接受 4–5 個計數。',
+  'Require {trait}':'必須包含 {trait}','Required tier for {trait}':'{trait} 的必要等級'
 });
 let currentLanguage='zh-Hant';
 function setLanguage(value){currentLanguage=value==='en'?'en':'zh-Hant';return currentLanguage;}
@@ -673,31 +724,34 @@ function bindInfo(){
 }
 
 function populateRequiredTraits(){
- const select=$('required-trait'),saved=select.value,level=$('required-level').value;select.replaceChildren();
- for(const trait of [...DATA.traits].sort((a,b)=>traitLabel(a.name).localeCompare(traitLabel(b.name),getLanguage())))select.append(new Option(traitLabel(trait.name),trait.name));
- if([...select.options].some(o=>o.value===saved))select.value=saved;
- populateRequiredLevels(level);
-}
-function populateRequiredLevels(saved=''){
- const trait=DATA.traits.find(t=>t.name===$('required-trait').value),select=$('required-level');select.replaceChildren();
- for(const level of [...(trait?.breakpoints||[])].sort((a,b)=>a-b))select.append(new Option(String(level),String(level)));
- if([...select.options].some(o=>o.value===saved))select.value=saved;
+ const words=$('required-query').value.trim().toLowerCase().split(/\s+/).filter(Boolean),grid=$('required-options');grid.replaceChildren();
+ for(const trait of [...DATA.traits].sort((a,b)=>traitLabel(a.name).localeCompare(traitLabel(b.name),getLanguage()))){
+  if(!words.every(word=>traitSearchText([trait.name]).toLowerCase().includes(word)))continue;
+  const row=el('div','required-choice'),label=el('label'),check=el('input'),level=el('select');
+  check.type='checkbox';check.checked=Object.hasOwn(state.required,trait.name);check.dataset.requiredTrait=trait.name;check.setAttribute('aria-label',t('Require {trait}',{trait:traitLabel(trait.name)}));
+  label.append(check,el('span','',traitLabel(trait.name)));row.classList.toggle('selected',check.checked);
+  for(const n of [...trait.breakpoints].sort((a,b)=>a-b))level.append(new Option(String(n),String(n)));
+  level.value=String(state.required[trait.name]||Math.min(...trait.breakpoints));level.disabled=!check.checked;level.setAttribute('aria-label',t('Required tier for {trait}',{trait:traitLabel(trait.name)}));
+  check.addEventListener('change',()=>{if(check.checked)state.required[trait.name]=Number(level.value);else delete state.required[trait.name];row.classList.toggle('selected',check.checked);level.disabled=!check.checked;renderRequirements();markDirty();});
+  level.addEventListener('change',()=>{if(check.checked){state.required[trait.name]=Number(level.value);renderRequirements();markDirty();}});
+  row.append(label,level);grid.append(row);
+ }
+ $('required-options-empty').hidden=grid.children.length>0;
 }
 function renderRequirements(){
  const list=$('required-list');list.replaceChildren();
  for(const [name,n]of Object.entries(state.required)){
   const row=el('div','required-row');row.append(el('span','',traitLabel(name)),el('strong','',state.requiredMode==='exact_tier'?t('tier {n}',{n}):'≥ '+n));
-  const remove=el('button','text-button','×');remove.type='button';remove.setAttribute('aria-label',t('Remove required {trait}',{trait:traitLabel(name)}));remove.addEventListener('click',()=>{delete state.required[name];renderRequirements();markDirty();});row.append(remove);list.append(row);
+  const remove=el('button','text-button','×');remove.type='button';remove.setAttribute('aria-label',t('Remove required {trait}',{trait:traitLabel(name)}));remove.addEventListener('click',()=>{delete state.required[name];populateRequiredTraits();renderRequirements();markDirty();});row.append(remove);list.append(row);
  }
+ const n=Object.keys(state.required).length;$('required-selected').textContent=t('{n} selected',{n});$('clear-required').disabled=n===0;
 }
 function requiredSummary(c){return Object.entries(c.required_traits||{}).map(([name,n])=>traitLabel(name)+' '+(c.required_trait_mode==='exact_tier'?t('tier {n}',{n}):'≥ '+n)).join(' · ');}
 function bindRequirements(){
- $('required-trait').addEventListener('change',()=>populateRequiredLevels());
+ $('required-query').addEventListener('input',populateRequiredTraits);
  $('required-mode').addEventListener('change',()=>{state.requiredMode=$('required-mode').value;renderRequirements();markDirty();});
- $('add-required').addEventListener('click',()=>{
-  const name=$('required-trait').value,n=Number($('required-level').value);if(!name||!n)return;
-  state.required[name]=n;renderRequirements();markDirty();
- });
+ $('clear-required').addEventListener('click',()=>{state.required={};populateRequiredTraits();renderRequirements();markDirty();});
+ renderRequirements();
 }
 
 'use strict';
@@ -937,7 +991,7 @@ async function exportCsv(){
 function bindEvents(){
  $('criteria-form').addEventListener('submit',runSearch);$('criteria-form').addEventListener('input',markDirty);
  for(const button of document.querySelectorAll('[data-step]'))button.addEventListener('click',()=>{const [id,delta]=button.dataset.step.split(':'),input=$(id);input.value=Math.max(Number(input.min),Math.min(Number(input.max),Number(input.value)+Number(delta)));markDirty();});
- $('reset').addEventListener('click',()=>{$('criteria-form').reset();state.excluded.clear();state.extras={};state.bonuses={};state.required={};state.requiredMode='at_least';renderRequirements();populateRequiredLevels();renderExtras();renderBonuses();syncLabels();markDirty();notify(t('Default criteria restored.'));});
+ $('reset').addEventListener('click',()=>{$('criteria-form').reset();state.excluded.clear();state.extras={};state.bonuses={};state.required={};state.requiredMode='at_least';renderRequirements();populateRequiredTraits();renderExtras();renderBonuses();syncLabels();markDirty();notify(t('Default criteria restored.'));});
  $('language').addEventListener('change',()=>applyLanguage($('language').value));
  $('add-emblem').addEventListener('click',()=>{const trait=$('emblem-trait').value;setBonus(trait,(state.bonuses[trait]||0)+1);});
  $('stop').addEventListener('click',()=>finish('INCOMPLETE','Stopped by you'));
