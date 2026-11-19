@@ -60,3 +60,6 @@
 .numeric-value.value-ap{color:#78b7ff}.numeric-value.value-ad{color:#ff8b91}.numeric-value.value-hp{color:#73d89a}
 .numeric-value.value-ad-ap{color:#be9eff}.numeric-value.value-ap-hp{color:#69d7df}.numeric-value.value-ad-hp{color:#d5cf7c}
 .numeric-value.value-ad-ap-hp{color:#d2b4e8}
+
+/* Keep copy and board actions usable at narrow overlay widths. */
+.card-bottom{flex-wrap:wrap;gap:10px}.card-bottom>.lineup-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:12px;margin-left:auto}.copy-team-code{color:var(--gold)}.copy-team-code:disabled{cursor:not-allowed}.team-code-value{width:100%;font-family:monospace;font-size:14px}#board-copy{margin:14px 0}#team-code-dialog{max-width:min(540px,94vw)}

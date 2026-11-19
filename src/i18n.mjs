@@ -9,6 +9,13 @@ export const TRAIT_ZH=Object.freeze({
   'Gu Feng':'國風','Hyperpop':'超能流行','Ionic Spark':'離子火花','Prodigy':'不世之才'
 });
 export const UI_ZH=Object.freeze({
+  'Copy team code':'複製陣容碼','Team code':'陣容碼','Close team code':'關閉陣容碼',
+  'Exports champions only; positioning, items and trait bonuses are not included.':'僅匯出棋子名單，不包含站位、裝備及轉職／羈絆加成。',
+  'Team codes support at most 10 champions.':'陣容碼最多支援 10 位棋子。',
+  'Import IDs are not yet verified for: {names}':'以下棋子的匯入碼尚未確認：{names}',
+  'This lineup cannot be exported yet.':'此陣容目前無法匯出。',
+  'Team code copied. Paste it into the in-game Team Planner.':'已複製陣容碼，可貼至遊戲內隊伍規劃器。',
+  'Automatic copy was unavailable. Press Ctrl+C to copy the selected code.':'無法自動複製，請按 Ctrl+C 複製已選取的陣容碼。',
   'No PBE item data available':'尚無 PBE 推薦裝備資料',
   'Eightfold home':'Eightfold 首頁','TFT LINEUP EXPLORER':'聯盟戰棋陣容搜尋器',
   'SET 19 · PRISMATIC TOUR':'第 19 賽季 · PRISMATIC TOUR',
