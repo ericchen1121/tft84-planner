@@ -26,7 +26,7 @@ function recommendedEquipment(u){
  }
  box.append(row);if(!recommended.length)box.append(el('small','equipment-pending',t('Reserved · Recommendations not set')));return box;
 }
-function roleLabel(u){const role=u.role.replace('DA_Role_','').replace('_Manaless','');const labels={MagicTank:['Magic tank','魔攻坦克'],AttackTank:['Attack tank','物攻坦克'],MagicCaster:['Magic caster','魔攻法師'],AttackCaster:['Attack caster','物攻法師'],MagicFighter:['Magic fighter','魔攻鬥士'],AttackFighter:['Attack fighter','物攻鬥士'],MagicAssassin:['Magic assassin','魔攻刺客'],AttackAssassin:['Attack assassin','物攻刺客'],AttackMarksman:['Attack marksman','物攻射手'],MagicMarksman:['Magic marksman','魔攻射手'],AttackSpecialist_Ammo:['Attack specialist','物攻專家'],MagicSpecialist:['Magic specialist','魔攻專家']};return labels[role]?.[getLanguage()==='zh-Hant'?1:0]||role.replace(/_/g,' ');}
+function roleLabel(u){const role=u.role.replace('DA_Role_','').replace('_Manaless','');const labels={MagicTank:['Magic tank','魔法坦克'],AttackTank:['Attack tank','物理坦克'],MagicCaster:['Magic caster','魔法法師'],AttackCaster:['Attack caster','物理法師'],MagicFighter:['Magic fighter','魔法鬥士'],AttackFighter:['Attack fighter','物理鬥士'],MagicAssassin:['Magic assassin','魔法刺客'],AttackAssassin:['Attack assassin','物理刺客'],AttackMarksman:['Attack marksman','物理射手'],MagicMarksman:['Magic marksman','魔法射手'],AttackSpecialist_Ammo:['Attack specialist','物理專家'],MagicSpecialist:['Magic specialist','魔法專家']};return labels[role]?.[getLanguage()==='zh-Hant'?1:0]||role.replace(/_/g,' ');}
 function infoUnits(){
  const words=$('info-query').value.trim().toLowerCase().split(/\s+/).filter(Boolean),cost=Number($('info-cost').value),trait=$('info-trait').value,unlock=$('info-unlock').value;
  return DATA.units.filter(u=>{
@@ -45,7 +45,7 @@ function renderInfo(){
  const units=infoUnits(),fragment=document.createDocumentFragment();
  for(const u of units){
   const card=el('button','info-card');card.type='button';card.style.setProperty('--rarity',rarity[u.cost]||rarity[1]);card.setAttribute('aria-label',t('View {name} details',{name:unitLabel(u)}));
-  const top=el('div','info-card-top');top.append(infoPortrait(u,{name:false}));const title=el('div','info-card-title');title.append(el('strong','',unitLabel(u)),el('small','',u.name===unitLabel(u)?roleLabel(u):u.name));top.append(title,el('span','info-cost',u.cost+'g'));card.append(top,infoTraits(u));
+  const top=el('div','info-card-top');top.append(infoPortrait(u,{name:false}));const title=el('div','info-card-title');title.append(el('strong','',unitLabel(u)),el('small','',roleLabel(u)));top.append(title,el('span','info-cost',u.cost+'g'));card.append(top,infoTraits(u));
   const a=INFO.units[u.id],metadata=el('div','info-meta');metadata.append(el('span','',t('Range {range}',{range:u.range})),el('span','',t('Mana')+' '+(a.full_mana||a.mana||'—')));card.append(metadata);
   const ability=el('div','info-ability');ability.append(el('strong','',abilityLabel(u)),el('small','star-scaling',t('Values: 1★ / 2★ / 3★')),numericDescription(u,''));if(a.source_missing_values)ability.append(el('small','source-missing',t('Some values depend on the board or are missing from the source.')));
   card.append(ability,infoUnlockBlock(u),recommendedEquipment(u),el('span','info-card-more',t('View details →')));card.addEventListener('click',()=>showInfo(u.id));fragment.append(card);
@@ -54,7 +54,7 @@ function renderInfo(){
 }
 function showInfo(id){
  const u=DATA.units.find(u=>u.id===id);if(!u)return;state.infoUnit=id;const a=INFO.units[id],content=el('div');
- const header=el('div','info-detail-header');header.append(infoPortrait(u,{name:false,lazy:false}));const title=el('div');title.append(el('span','eyebrow',t('CHAMPION INFO')));const name=el('h2','',unitLabel(u));name.id='info-title';title.append(name,el('p','',u.name+' · '+roleLabel(u)));header.append(title);content.append(header,infoTraits(u));
+ const header=el('div','info-detail-header');header.append(infoPortrait(u,{name:false,lazy:false}));const title=el('div');title.append(el('span','eyebrow',t('CHAMPION INFO')));const name=el('h2','',unitLabel(u));name.id='info-title';title.append(name,el('p','',roleLabel(u)));header.append(title);content.append(header,infoTraits(u));
  const stats=el('div','info-detail-stats');for(const [label,value]of [['Cost',u.cost+'g'],['Attack range',u.range],['Mana',a.full_mana||a.mana||'—']]){const item=el('div');item.append(el('small','',t(label)),el('strong','',value));stats.append(item);}content.append(stats);
  content.append(el('h3','',abilityLabel(u)),el('small','star-scaling',t('Values: 1★ / 2★ / 3★')),numericDescription(u,'info-description'));
  if(a.source_missing_values)content.append(el('p','source-missing',t('Some values depend on the board or are missing from the source.')));
