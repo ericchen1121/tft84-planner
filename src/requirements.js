@@ -1,6 +1,6 @@
 function populateRequiredTraits(){
  const words=$('required-query').value.trim().toLowerCase().split(/\s+/).filter(Boolean),grid=$('required-options');grid.replaceChildren();
- for(const trait of [...DATA.traits].sort((a,b)=>traitLabel(a.name).localeCompare(traitLabel(b.name),getLanguage()))){
+ for(const trait of DATA.traits.filter(trait=>EMBLEM_TRAITS.includes(trait.name)).sort((a,b)=>traitLabel(a.name).localeCompare(traitLabel(b.name),getLanguage()))){
   if(!words.every(word=>traitSearchText([trait.name]).toLowerCase().includes(word)))continue;
   const row=el('div','required-choice'),label=el('label'),check=el('input'),level=el('select');
   check.type='checkbox';check.checked=Object.hasOwn(state.required,trait.name);check.dataset.requiredTrait=trait.name;check.setAttribute('aria-label',t('Require {trait}',{trait:traitLabel(trait.name)}));

@@ -594,7 +594,7 @@ const UI_ZH=Object.freeze({
   'Choose a known trait and a bonus from 0 to 16.':'請選擇已知羈絆，加成需介於 0 到 16。',
   'Combined trait bonuses exceed the supported score range. Reduce bonus counts.':'羈絆加成超過支援的分數範圍，請減少加成數量。',
   'Unknown champion in settings.':'設定中含有未知棋子。','Unknown extra trait.':'設定中含有未知額外羈絆。',
-  'Solver':'求解器','Info':'Info','App sections':'功能頁籤','MEET THE LINEUP':'認識每一位棋子',
+  'Solver':'求解器','Info':'資訊','App sections':'功能頁籤','MEET THE LINEUP':'認識每一位棋子',
   'Champion Info':'棋子圖鑑','CHAMPION INFO':'棋子介紹','CHAMPIONS':'棋子',
   'Explore every champion, their traits and their abilities.':'瀏覽所有棋子的羈絆、定位與技能，找到你的陣容核心。',
   'Search champions, traits or abilities':'搜尋中文或英文棋名、羈絆、技能','Search champion info':'搜尋棋子介紹',
@@ -725,7 +725,7 @@ function bindInfo(){
 
 function populateRequiredTraits(){
  const words=$('required-query').value.trim().toLowerCase().split(/\s+/).filter(Boolean),grid=$('required-options');grid.replaceChildren();
- for(const trait of [...DATA.traits].sort((a,b)=>traitLabel(a.name).localeCompare(traitLabel(b.name),getLanguage()))){
+ for(const trait of DATA.traits.filter(trait=>EMBLEM_TRAITS.includes(trait.name)).sort((a,b)=>traitLabel(a.name).localeCompare(traitLabel(b.name),getLanguage()))){
   if(!words.every(word=>traitSearchText([trait.name]).toLowerCase().includes(word)))continue;
   const row=el('div','required-choice'),label=el('label'),check=el('input'),level=el('select');
   check.type='checkbox';check.checked=Object.hasOwn(state.required,trait.name);check.dataset.requiredTrait=trait.name;check.setAttribute('aria-label',t('Require {trait}',{trait:traitLabel(trait.name)}));
