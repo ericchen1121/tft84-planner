@@ -1,0 +1,8 @@
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:'Segoe UI','Microsoft JhengHei',sans-serif}button{font:inherit;cursor:pointer}
+.panel{display:flex;flex-direction:column;background:#0b111e;color:#dce4f3;border:1px solid #52627c}
+.titlebar{height:42px;min-height:42px;display:flex;align-items:center;gap:12px;padding-left:14px;background:#151e30;border-bottom:1px solid #35415a;user-select:none;-webkit-app-region:drag}
+.brand{font-size:27px;color:#f1cd87;line-height:1}.brand span{font-size:13px;vertical-align:top}.titlebar strong{font-size:14px;letter-spacing:1px}.hint{font-size:12px;color:#a5b2c8}.window-actions{display:flex;margin-left:auto;height:100%;-webkit-app-region:no-drag}
+.window-actions button{width:48px;background:transparent;border:0;color:#d5dfed;font-size:24px}.window-actions button:hover{background:#354562}.window-actions #quit:hover{background:#b33e51}iframe{width:100%;flex:1;border:0;min-height:0;background:#0b111e}
+.compact{background:transparent;user-select:none;padding:3px}.bubble{width:58px;height:58px;border:2px solid #e8c780;border-radius:50%;color:#f2d38f;background:radial-gradient(circle at 30% 25%,#293958,#0b111e 80%);box-shadow:0 2px 5px #0008;display:flex;align-items:center;justify-content:center;gap:2px;padding:0;touch-action:none;user-select:none}
+.bubble span{font-size:35px;line-height:1;font-weight:700}.bubble b{font-size:17px;align-self:flex-start;margin-top:10px}.bubble:hover{border-color:#fff0c2;background:#273650}.bubble:focus-visible{outline:2px solid white;outline-offset:-5px}
+@media(max-width:800px){.hint{font-size:11px}}

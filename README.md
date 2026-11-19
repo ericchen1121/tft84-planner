@@ -146,7 +146,17 @@ All search criteria now span the page above the results, with a responsive grid 
 
 Required traits use a searchable checkbox list, sharing the same 28 allowed traits as the emblem bonus picker. Every selected trait has its own tier selector. Selecting another trait or changing its tier preserves the other selections. Searching only changes visible choices; all checked requirements remain active. Selected chips and a count show the full selection. Clear selected traits clears only required traits, while Reset clears all criteria. The Info tab is labeled 資訊 in Traditional Chinese and Info in English.
 
-## Desktop layout branch
+## Windows in-game floating overlay
+
+The `desktop-layout` branch includes a Windows desktop application, with the existing solver inside an always-on-top window. Collapse it to a draggable floating icon, click the icon to restore, or use Alt+Shift+T. Collapsing hides the same window without reloading the solver, preserving inputs, results and running workers. Drag the title bar to move the panel, resize its edges, and use × to quit. Right-click the icon to quit. Window positions persist across launches.
+
+Use borderless/windowed game mode. Exclusive fullscreen is not supported. This is an ordinary desktop window, without game memory access, hooks or input automation. Game/anti-cheat compatibility has not been established. The program is unsigned.
+
+For a ready-to-run Windows x64 download, open this branch's **Build Windows Overlay** GitHub Actions run and download the `Eightfold-TFT-Overlay-win-x64` artifact. Extract both ZIP layers if needed, then launch `Eightfold.exe`; keep all files beside it. The workflow packages official Electron binaries after SHA-256 verification and runs a native window smoke test. [繁體中文使用說明](desktop/README.zh-TW.md).
+
+Development: Node.js 24, `npm install`, `npm run build`, `npm start`. Tests: `npm test`, `npm run test:overlay`, `npm run smoke:overlay`. Windows packaging: `npm run package:win`. A browser opening `index.html` alone does not provide the floating window or icon.
+
+## Desktop web layout
 
 This branch adapts the existing solver to desktop browsers. The top navigation is compact, task text and controls are larger, and wide monitors show three lineup cards per row (four on ultrawide screens). At narrower laptop widths, the result grid uses two columns. The criteria panel remains above the results.
 

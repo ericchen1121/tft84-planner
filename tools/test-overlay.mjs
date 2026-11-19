@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
+const {fitBounds,dragBounds}=require('../desktop/window-state.cjs');
+const area={x:0,y:0,width:1920,height:1040};
+assert.deepEqual(fitBounds({x:5000,y:-80,width:1120,height:780},area),{x:800,y:0,width:1120,height:780});
+assert.deepEqual(fitBounds({x:2000,y:1000},area,true),{x:1856,y:976,width:64,height:64});
+const left={x:-1920,y:-200,width:1920,height:1080};
+assert.deepEqual(dragBounds({x:10,y:20},-3000,-500,left),{x:-1920,y:-200,width:64,height:64});
+assert.deepEqual(fitBounds({width:9999,height:9999},{x:0,y:0,width:640,height:480}),{x:0,y:0,width:640,height:480});
+const restored=fitBounds({x:-1900,y:-180,width:1120,height:780},left);
+assert.equal(restored.x,-1900);assert.equal(restored.y,-180);
+console.log('Overlay bounds pass: off-screen restore, taskbar, negative monitor coordinates, dragging, small displays');

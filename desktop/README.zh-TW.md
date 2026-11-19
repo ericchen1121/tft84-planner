@@ -1,0 +1,19 @@
+# Eightfold 遊戲懸浮求解器（Windows）
+
+下載 GitHub Actions 的 `Eightfold-TFT-Overlay-win-x64` artifact，解壓縮後，如果裡面還有同名 zip，請再解壓縮一次。進入資料夾，開啟 `Eightfold.exe`。請保留同資料夾的所有檔案，不要只移動 exe。
+
+- 視窗保持在其他一般視窗上方。請將遊戲設為「無邊框視窗」或「視窗」模式；不支援獨佔全螢幕覆蓋。
+- 拖曳上方標題列移動視窗；拖曳邊框調整大小。
+- 點右上角 `−` 或關閉視窗，會縮成可拖曳的小圖示。點圖示重新展開，先前條件與陣容會保留，正在執行的搜尋也會繼續。
+- `Alt + Shift + T` 可快速收合／展開；若快捷鍵已被其他程式使用，請用圖示操作。
+- 點右上角 `×` 或右鍵小圖示選「離開」結束程式。
+- 第一次啟動會展開求解器；視窗和圖示的位置會自動保存。
+- 棋子與裝備圖片需要網路；求解器資料與計算在本機執行。
+
+此程式以一般 Windows 置頂視窗顯示，不讀取遊戲記憶體、不注入遊戲、不自動操作遊戲。未做數位簽章，也未驗證所有遊戲／反作弊環境的相容性；Windows 或安全軟體可能顯示發行者未知。不要為此關閉防護或以系統管理員啟動。
+
+## 開發者
+
+安裝 Node.js 24，執行 `npm install`、`npm run build`、`npm start`。
+
+`npm run test:overlay` 檢查多螢幕座標與邊界。`npm run smoke:overlay` 在實際 Electron 檢查載入、置頂、收放及保留同一個求解器 frame。Windows 打包：`npm run package:win`。輸出在 `release/`，GitHub Actions 也會自動打包並提供下載。

@@ -1,0 +1,44 @@
+name: Build Windows Overlay
+on:
+  push:
+    branches: [desktop-layout]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows-overlay:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - run: npm run build
+      - run: npm test
+      - run: npm run test:overlay
+      - name: Package portable Windows application
+        shell: pwsh
+        run: ./tools/package-windows.ps1
+      - name: Smoke test the packaged application
+        shell: pwsh
+        run: |
+          $exe = Resolve-Path 'release/Eightfold-TFT-Overlay-win-x64/Eightfold.exe'
+          $process = Start-Process -FilePath $exe -ArgumentList '--smoke-test' -WindowStyle Hidden -PassThru -RedirectStandardOutput overlay-smoke.log -RedirectStandardError overlay-smoke-error.log
+          if (-not $process.WaitForExit(60000)) { $process.Kill(); throw 'Overlay smoke test timed out' }
+          Get-Content overlay-smoke.log
+          Get-Content overlay-smoke-error.log
+          if ($process.ExitCode -ne 0) { throw "Overlay smoke test failed: $($process.ExitCode)" }
+          if (-not (Select-String -Path overlay-smoke.log -Pattern 'OVERLAY SMOKE PASS' -Quiet)) { throw 'Smoke success marker missing' }
+      - name: Upload Windows download
+        uses: actions/upload-artifact@v6
+        with:
+          name: Eightfold-TFT-Overlay-win-x64
+          path: release/Eightfold-TFT-Overlay-win-x64.zip
+          retention-days: 30
+      - name: Upload smoke log
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: overlay-smoke-log
+          path: overlay-smoke*.log
+          if-no-files-found: ignore
