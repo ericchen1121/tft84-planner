@@ -9,11 +9,13 @@ $appDirectory = Join-Path $outputRoot 'Eightfold-TFT-Overlay-win-x64'
 if (Test-Path -LiteralPath $appDirectory) { throw 'Output directory already exists. Choose a clean checkout for packaging.' }
 $baseUrl = "https://github.com/electron/electron/releases/download/v$electronVersion"
 Invoke-WebRequest -Uri "$baseUrl/electron-v$electronVersion-win32-x64.zip" -OutFile $downloadPath
-$checksums = (Invoke-WebRequest -Uri "$baseUrl/SHASUMS256.txt").Content
+$checksumPath = Join-Path $outputRoot 'SHASUMS256.txt'
+Invoke-WebRequest -Uri "$baseUrl/SHASUMS256.txt" -OutFile $checksumPath
 $assetName = "electron-v$electronVersion-win32-x64.zip"
-$hashLine = ($checksums -split "`n" | Where-Object { $_.Trim().EndsWith(" $assetName") })
-if (-not $hashLine) { throw 'Electron checksum entry missing' }
-$expectedHash = ($hashLine.Trim() -split '\s+')[0]
+$entryPattern = '^[0-9a-fA-F]{64}\s+\*?' + [regex]::Escape($assetName) + '$'
+$hashLines = @(Get-Content -LiteralPath $checksumPath -Encoding utf8 | Where-Object { $_.Trim() -match $entryPattern })
+if ($hashLines.Count -ne 1) { throw 'Electron checksum entry missing or ambiguous' }
+$expectedHash = ($hashLines[0].Trim() -split '\s+')[0]
 if ((Get-FileHash -Algorithm SHA256 -LiteralPath $downloadPath).Hash.ToLowerInvariant() -ne $expectedHash.ToLowerInvariant()) { throw 'Electron checksum mismatch' }
 Expand-Archive -LiteralPath $downloadPath -DestinationPath $appDirectory
 $appResources = Join-Path $appDirectory 'resources/app'
