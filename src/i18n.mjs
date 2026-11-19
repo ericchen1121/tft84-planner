@@ -134,7 +134,13 @@ export const UI_ZH=Object.freeze({
   'PBE source values; damage and healing scale with stats. Skills follow the source language.':'數值依 PBE 資料；實際傷害與治療會隨屬性變動。技能沿用來源語言，翻譯缺漏或不一致時採英文原文。',
   'Recommended items':'推薦裝備','Five reserved recommended item slots':'五個推薦裝備預留位置',
   'Recommendation slot {n} · Not set':'推薦裝備位置 {n} · 尚未設定',
-  'Reserved · Recommendations not set':'預留位置 · 推薦裝備待補'
+  'Reserved · Recommendations not set':'預留位置 · 推薦裝備待補',
+  'Required trait tiers':'必要羈絆等級','Required trait':'指定羈絆','Required trait tier':'指定羈絆階級','Add':'加入',
+  'Match mode':'符合方式','At least this tier':'至少達到該階','Exactly this active tier':'恰好維持該階',
+  'All added requirements must be met. Emblems count. At least 4 Classical also accepts 6 Classical; exact tier 4 accepts 4–5 members.':'所有加入的條件都必須符合，轉職 +1 也會計入。例如：至少 4 古典樂可包含 6 古典樂；恰好 4 古典樂則接受 4–5 個計數。',
+  'tier {n}':'{n} 階','Remove required {trait}':'移除必要羈絆 {trait}',
+  'Required traits must be a trait-to-breakpoint object.':'必要羈絆設定格式無效。','Unknown required trait mode.':'未知的羈絆符合方式。',
+  'Choose a known trait and one of its activation breakpoints.':'請選擇已知羈絆與其實際啟動門檻。'
 });
 let currentLanguage='zh-Hant';
 export function setLanguage(value){currentLanguage=value==='en'?'en':'zh-Hant';return currentLanguage;}

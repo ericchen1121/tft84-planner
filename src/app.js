@@ -6,7 +6,7 @@ const ITEMS=JSON.parse(document.getElementById('item-data').textContent);
 const $=id=>document.getElementById(id);
 const fmt=n=>new Intl.NumberFormat(getLanguage()==='zh-Hant'?'zh-TW':'en-US').format(n);
 const rarity={1:'#8594aa',2:'#6fd6a6',3:'#78a7ff',4:'#b49aff',5:'#e4c17f',7:'#ef92a2'};
-const state={chunks:[],records:[],filtered:[],page:0,pageSize:12,config:{...DEFAULTS},excluded:new Set(),extras:{},bonuses:{},workers:[],running:false,status:'LOADING',started:0,progress:[],searchId:0,preset:null,dirty:false,filterTimer:null};
+const state={chunks:[],records:[],filtered:[],page:0,pageSize:12,config:{...DEFAULTS},excluded:new Set(),extras:{},bonuses:{},required:{},requiredMode:'at_least',workers:[],running:false,status:'LOADING',started:0,progress:[],searchId:0,preset:null,dirty:false,filterTimer:null};
 const baseMembership=DATA.traits.map(t=>DATA.units.filter(u=>u.traits.includes(t.name)).length);
 const traitByName=new Map(DATA.traits.map((t,i)=>[t.name,{...t,index:i,unique:baseMembership[i]===1}]));
 function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
@@ -21,6 +21,7 @@ function readConfig(){
  c.include_seven_cost=form.elements.namedItem('include_seven_cost').checked;
  c.score_mode=$('score_mode').value;c.sona_feature_trait=$('sona_feature_trait').value||null;
  c.exclude_unit_ids=[...state.excluded];c.extra_traits=JSON.parse(JSON.stringify(state.extras));c.trait_bonuses={...state.bonuses};
+ c.required_traits={...state.required};c.required_trait_mode=state.requiredMode;
  c.threads=Math.max(1,Math.min(4,(navigator.hardwareConcurrency||4)-1));
  prepare(DATA,c);return c;
 }
@@ -118,6 +119,7 @@ function renderResults(){
  $('page-label').textContent=t('{start}–{end} of {n}',{start:state.filtered.length?fmt(start+1):0,end:fmt(Math.min(start+state.pageSize,state.filtered.length)),n:fmt(state.filtered.length)});
  $('prev').disabled=state.page===0;$('next').disabled=state.page>=maxPage-1;
  const c=state.config,bonusTotal=Object.values(c.trait_bonuses||{}).reduce((s,n)=>s+n,0);$('results-context').textContent=t('{population} population · {four}+ four-costs · {unique}{bonus}',{population:c.population,four:c.min_four_cost,unique:t(c.include_unique_traits?'Unique traits included':'Unique traits excluded'),bonus:bonusTotal?t(' · +{n} trait bonuses',{n:bonusTotal}):''});
+ const required=requiredSummary(c);if(required)$('results-context').textContent+=' · '+required;
 }
 function showBoard(r){
  state.boardRecord=r;
@@ -155,7 +157,7 @@ async function runSearch(event){
  let c;try{if(!$('criteria-form').reportValidity())return;c=readConfig();}catch(e){$('form-error').textContent=t(e.message);$('form-error').hidden=false;return;}
  state.searchId++;const id=state.searchId;clearResults(c);state.started=performance.now();
  if(isPreset(c)&&state.preset){
-  ingest(state.preset);state.status='COMPLETE';updateStats();filterResults();setStatus(()=>t('Complete preset · {n} verified lineups',{n:fmt(state.records.length)}));$('elapsed').textContent=t('Ready instantly');return;
+  ingest(filterRequiredRecords(DATA,state.preset,c));state.status='COMPLETE';updateStats();filterResults();setStatus(()=>t('Complete preset · {n} verified lineups',{n:fmt(state.records.length)}));$('elapsed').textContent=t('Ready instantly');return;
  }
  if(typeof Worker==='undefined'){$('form-error').textContent=t('This browser does not support background workers. Use a recent Chrome, Edge, Firefox or Safari.');$('form-error').hidden=false;return;}
  setRunning(true);setStatus(()=>t('Searching all eligible combinations…'),'running');$('empty-state').hidden=true;
@@ -233,7 +235,7 @@ async function exportCsv(){
 function bindEvents(){
  $('criteria-form').addEventListener('submit',runSearch);$('criteria-form').addEventListener('input',markDirty);
  for(const button of document.querySelectorAll('[data-step]'))button.addEventListener('click',()=>{const [id,delta]=button.dataset.step.split(':'),input=$(id);input.value=Math.max(Number(input.min),Math.min(Number(input.max),Number(input.value)+Number(delta)));markDirty();});
- $('reset').addEventListener('click',()=>{$('criteria-form').reset();state.excluded.clear();state.extras={};state.bonuses={};renderExtras();renderBonuses();syncLabels();markDirty();notify(t('Default criteria restored.'));});
+ $('reset').addEventListener('click',()=>{$('criteria-form').reset();state.excluded.clear();state.extras={};state.bonuses={};state.required={};state.requiredMode='at_least';renderRequirements();populateRequiredLevels();renderExtras();renderBonuses();syncLabels();markDirty();notify(t('Default criteria restored.'));});
  $('language').addEventListener('change',()=>applyLanguage($('language').value));
  $('add-emblem').addEventListener('click',()=>{const trait=$('emblem-trait').value;setBonus(trait,(state.bonuses[trait]||0)+1);});
  $('stop').addEventListener('click',()=>finish('INCOMPLETE','Stopped by you'));
@@ -259,14 +261,14 @@ function applyLanguage(language,initial=false){
  try{localStorage.setItem('eightfold-language',getLanguage());}catch{}
  for(const entry of staticTranslations){if(!entry.node.isConnected)continue;const value=localizedStaticText(entry.source);if(entry.attr)entry.node.setAttribute(entry.attr,value);else entry.node.textContent=value;}
  if(initial)return;
- populateSelects();renderExtras();renderBonuses();updateStats();filterResults(false);populateInfoTraits();if(state.view==='info')renderInfo();if($('info-dialog').open&&state.infoUnit)showInfo(state.infoUnit);
+ populateSelects();populateRequiredTraits();renderRequirements();renderExtras();renderBonuses();updateStats();filterResults(false);populateInfoTraits();if(state.view==='info')renderInfo();if($('info-dialog').open&&state.infoUnit)showInfo(state.infoUnit);
  if(state.statusBuilder)$('status-text').textContent=state.statusBuilder();
  if($('pool-dialog').open)renderPool();if($('board-dialog').open&&state.boardRecord)showBoard(state.boardRecord);
  if(state.status==='COMPLETE'&&isPreset(state.config))$('elapsed').textContent=t('Ready instantly');
 }
 async function init(){
  captureStaticTranslations();let preferred='zh-Hant';try{preferred=localStorage.getItem('eightfold-language')||preferred;}catch{}
- applyLanguage(preferred,true);populateSelects();bindEvents();bindInfo();syncLabels();renderBonuses();
+ applyLanguage(preferred,true);populateSelects();populateRequiredTraits();bindEvents();bindRequirements();bindInfo();syncLabels();renderBonuses();
  try{
   const encoded=$('preset-data').textContent.trim(),compressed=Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));
   if(typeof DecompressionStream==='undefined')throw Error(t('Preset decompression is not supported in this browser.'));

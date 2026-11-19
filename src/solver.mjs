@@ -4,7 +4,7 @@ export const DEFAULTS = Object.freeze({
   min_frontline:5,frontline_max_range:2,min_backline_four_cost:2,
   include_unique_traits:true,include_seven_cost:true,score_mode:'active_members',
   backline_role_keywords:['Marksman','Caster','AttackSpecialist_Ammo'],
-  exclude_unit_ids:[],extra_traits:{},trait_bonuses:{},sona_feature_trait:null,max_seconds:590,threads:4
+  exclude_unit_ids:[],extra_traits:{},trait_bonuses:{},required_traits:{},required_trait_mode:'at_least',sona_feature_trait:null,max_seconds:590,threads:4
 });
 // Emblem availability follows the trait-filter screenshot supplied by the user.
 export const EMBLEM_TRAITS=Object.freeze([
@@ -18,6 +18,34 @@ export function effectiveTraits(u,c) {
   return [...new Set([...u.traits,...(c.extra_traits?.[u.id]||[]),...(u.name==='Sona'&&c.sona_feature_trait?[c.sona_feature_trait]:[])])];
 }
 
+function traitRequirements(data,c){
+  if(!c.required_traits||typeof c.required_traits!=='object'||Array.isArray(c.required_traits))throw Error('Required traits must be a trait-to-breakpoint object.');
+  if(!['at_least','exact_tier'].includes(c.required_trait_mode))throw Error('Unknown required trait mode.');
+  return Object.entries(c.required_traits).map(([name,min])=>{
+    const index=data.traits.findIndex(t=>t.name===name),trait=data.traits[index];
+    if(!trait||!Number.isInteger(min)||!trait.breakpoints.includes(min)||min<=0)throw Error('Choose a known trait and one of its activation breakpoints.');
+    const next=Math.min(Infinity,...trait.breakpoints.filter(n=>n>min));
+    return {name,index,min,max:c.required_trait_mode==='exact_tier'?next-1:Infinity};
+  });
+}
+
+// A requirement can only narrow the complete default preset, so no fresh DFS
+// is needed when all other rules still match the verified preset.
+export function filterRequiredRecords(data,bytes,settings={}){
+  const c={...DEFAULTS,...settings},rules=traitRequirements(data,c);if(!rules.length)return bytes;
+  const stride=c.population+1,out=new Uint8Array(bytes.length);let length=0;
+  const membership=data.units.map(u=>new Set(effectiveTraits(u,c)));
+  for(let offset=0;offset<bytes.length;offset+=stride){
+    const ok=rules.every(rule=>{
+      let n=c.trait_bonuses[rule.name]||0;
+      for(let j=0;j<c.population;j++){const index=bytes[offset+j];if(index!==255&&membership[index].has(rule.name))n++;}
+      return n>=rule.min&&n<=rule.max;
+    });
+    if(ok){out.set(bytes.subarray(offset,offset+stride),length);length+=stride;}
+  }
+  return out.subarray(0,length);
+}
+
 export function prepare(data, settings={}) {
   const c={...DEFAULTS,...settings};
   for(const k of ['population','min_four_cost','max_five_cost','min_trait_score','min_frontline','frontline_max_range','min_backline_four_cost','max_seconds','threads'])
@@ -25,6 +53,7 @@ export function prepare(data, settings={}) {
   if(c.population<1||c.population>16||c.max_seconds<1||c.threads<1||c.threads>16)throw Error('Population: 1–16; time limit: at least 1 second; workers: 1–16.');
   if(!['active_members','breakpoint','all_members'].includes(c.score_mode))throw Error('Unknown scoring method.');
   const tids=new Map(data.traits.map((t,i)=>[t.name,i]));
+  const requirements=traitRequirements(data,c),requiredIds=new Set(requirements.map(r=>r.index));
   if(!c.trait_bonuses||typeof c.trait_bonuses!=='object'||Array.isArray(c.trait_bonuses))throw Error('Trait bonuses must be a trait-to-count object.');
   for(const [trait,n]of Object.entries(c.trait_bonuses))
     if(!tids.has(trait)||!Number.isInteger(n)||n<0||n>16)throw Error('Choose a known trait and a bonus from 0 to 16.');
@@ -50,7 +79,7 @@ export function prepare(data, settings={}) {
     const front=+(u.range<=c.frontline_max_range),four=+(u.cost===4);
     return {...u,index,group:groupIds.get(group),front,four,five:+(u.cost===5),
       back4:+(u.cost===4&&!front&&c.backline_role_keywords.some(k=>u.role.includes(k))),
-      ts:allTraits[index].map(t=>tids.get(t)).filter(t=>thresholds[t]>0)};
+      ts:allTraits[index].map(t=>tids.get(t)).filter(t=>thresholds[t]>0||requiredIds.has(t))};
   }).filter(u=>!excluded.has(u.id)&&(c.include_seven_cost||u.cost!==7))
     .sort((a,b)=>b.back4-a.back4||(b.four*b.front)-(a.four*a.front)||b.front-a.front||b.ts.length-a.ts.length||a.index-b.index);
   const initialScore=data.traits.reduce((s,_,i)=>s+points[i*stride+bonuses[i]],0);
@@ -61,11 +90,12 @@ export function prepare(data, settings={}) {
     front[i]=front[i+1]+pool[i].front;four[i]=four[i+1]+pool[i].four;back[i]=back[i+1]+pool[i].back4;
     for(let s=1;s<=c.population;s++)mass[i*stride+s]=Math.max(mass[(i+1)*stride+s],s>=pool[i].slots?pool[i].ts.length+mass[(i+1)*stride+s-pool[i].slots]:0);
   }
-  return {c,pool,points,thresholds,stride,front,four,back,mass,bonuses,initialScore,initialMass};
+  const requiredSuffix=requirements.map(r=>{const suffix=new Uint16Array(N+1);for(let i=N-1;i>=0;i--)suffix[i]=suffix[i+1]+Number(pool[i].ts.includes(r.index));return suffix;});
+  return {c,pool,points,thresholds,stride,front,four,back,mass,bonuses,initialScore,initialMass,requirements,requiredSuffix};
 }
 
 export function solve(data,settings={},options={}) {
-  const p=prepare(data,settings),{c,pool:U,points,stride,front:SF,four:S4,back:SB,mass:M,bonuses,initialScore,initialMass}=p;
+  const p=prepare(data,settings),{c,pool:U,points,stride,front:SF,four:S4,back:SB,mass:M,bonuses,initialScore,initialMass,requirements,requiredSuffix}=p;
   const counts=new Uint8Array(bonuses),chosen=new Uint8Array(c.population),groups=new Uint8Array(data.units.length);
   const recordSize=c.population+1,chunkRows=4096;
   let output=new Uint8Array(recordSize*chunkRows),pos=0,matches=0,nodes=0,finished=0,stopped=false;
@@ -91,6 +121,10 @@ export function solve(data,settings={},options={}) {
       if(now-lastReport>400){options.onProgress?.({nodes,matches,finished,total:partitions.length,elapsed:(now-started)/1000});lastReport=now;}
     }
     if(stopped)return;
+    for(let k=0;k<requirements.length;k++){
+      const r=requirements[k],n=counts[r.index];
+      if(n>r.max||n+Math.min(left,requiredSuffix[k][start])<r.min)return;
+    }
     if(left===0){if(four>=c.min_four_cost&&front>=c.min_frontline&&back>=c.min_backline_four_cost&&score>=c.min_trait_score)save(depth,score);return;}
     const nf=Math.max(0,c.min_four_cost-four),nt=Math.max(0,c.min_frontline-front),nb=Math.max(0,c.min_backline_four_cost-back);
     if(left<Math.max(nf,nt+nb)||nf>S4[start]||nt>SF[start]||nb>SB[start]||U.length-start<Math.max(nf,nt+nb)||mass+M[start*stride+left]<c.min_trait_score)return;

@@ -133,3 +133,9 @@ Each card and dialog reserves **5 circular recommended-item positions**. Recomme
 The equipment catalog was captured only after explicitly switching https://www.metatft.com/items to **PBE / 19.1**. All 143 observed item links had `set=TFTSet19`; the catalog records mode, patch, set, exact item ID, label and image URL. This includes components, standard/radiant/artifact items, emblems and special items. The observed Prodigy item currently has the upstream ID `TFT_Emblem_CHANGEME`; it is kept with its actual source label rather than renamed or invented. The catalog does not expand the solver's user-approved emblem whitelist.
 
 All display data is embedded in the standalone build; the website makes no runtime metadata fetch.
+
+## Required trait tiers / 必要羈絆等級
+
+In Solver, choose a trait and an actual activation breakpoint (for example Classical 4), then Add. All added requirements must be satisfied. At least this tier accepts higher tiers; Exactly this active tier permits extra members below the next breakpoint (Classical 4 accepts counts 4–5, and rejects 6). The mode applies to every required trait. Emblem bonuses, champion extra-trait assignments and Sona's featured trait contribute to the requirement. Disabling unique-trait scoring does not disable required-trait checks.
+
+Default rules plus trait requirements instantly filter the complete verified preset. Custom rules use the exact worker search, with suffix membership bounds and upper-tier pruning. Required tiers never contribute extra score by themselves. Removing a requirement or Reset restores unrestricted searching after pressing Find lineups. The executed requirements are shown with the result context.

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import zlib from 'node:zlib';
-import {prepare,solve,DEFAULTS,effectiveTraits,EMBLEM_TRAITS} from '../src/solver.mjs';
+import {prepare,solve,DEFAULTS,effectiveTraits,EMBLEM_TRAITS,filterRequiredRecords} from '../src/solver.mjs';
 import {TRAIT_ZH,t,traitLabel,traitSearchText,setLanguage,getLanguage,localizedStaticText} from '../src/i18n.mjs';
 setLanguage('en');
 const data=JSON.parse(fs.readFileSync(new URL('../dist/units.json',import.meta.url)));
@@ -18,6 +18,11 @@ function brute(data,c){
   if(team.filter(u=>u.cost===4).length<c.min_four_cost||team.filter(u=>u.cost===5).length>c.max_five_cost)return;
   if(team.filter(u=>u.range<=c.frontline_max_range).length<c.min_frontline)return;
   if(team.filter(u=>u.cost===4&&u.range>c.frontline_max_range&&c.backline_role_keywords.some(k=>u.role.includes(k))).length<c.min_backline_four_cost)return;
+  for(const [name,min]of Object.entries(c.required_traits||{})){
+   const n=team.filter(u=>effectiveTraits(u,c).includes(name)).length+(c.trait_bonuses?.[name]||0);
+   const tier=Math.max(0,...data.traits.find(t=>t.name===name).breakpoints.filter(x=>x<=n));
+   if(c.required_trait_mode==='exact_tier'?tier!==min:tier<min)return;
+  }
   let score=0;
   for(const t of data.traits){if(!c.include_unique_traits&&members.get(t.name)<=1)continue;
    const n=team.filter(u=>effectiveTraits(u,c).includes(t.name)).length+(c.trait_bonuses?.[t.name]||0);
@@ -46,6 +51,8 @@ for(let i=0;i<18;i++){
  for(let j=0;j<12;j++)d.units.push({id:'x'+j,name:j===11?'Sona':'X'+j,cost:[4,4,4,5,5,1,2,3,7,4,4,7][j],range:[4,4,1,1,2,1,4,0,1,5,1,0][j],role:'DA_Role_MagicCaster',slots:j===8?2:1,traits:j===11?['Collab']:j===0?['Unique','A']:j%3===0?['A','B']:j%3===1?['B','C']:['A','C'],exclusive_group:j===3||j===4?'mutual':'x'+j});
  const c={...DEFAULTS,population:4+i%4,min_four_cost:1+i%3,max_five_cost:2,min_frontline:1+i%3,min_backline_four_cost:1,min_trait_score:i%10,score_mode:['active_members','breakpoint','all_members'][i%3],include_unique_traits:i%2===0,include_seven_cost:i%3!==1,extra_traits:i%2?{x1:['Collab'],x5:['Collab']}:{},sona_feature_trait:i%2?'A':null,exclude_unit_ids:i%2?['x9']:[]};compare(d,c);
  compare(d,{...c,trait_bonuses:{A:1,B:2,Unique:1,Collab:3}});
+ for(const required_trait_mode of ['at_least','exact_tier'])compare(d,{...c,trait_bonuses:{A:1,B:2},required_traits:{A:2,B:3},required_trait_mode});
+ compare(d,{...DEFAULTS,population:5,min_four_cost:0,max_five_cost:2,min_frontline:0,min_backline_four_cost:0,min_trait_score:0,include_unique_traits:false,required_traits:{Unique:1,A:2},sona_feature_trait:'A',extra_traits:{x1:['A']}});
 }
 // A bonus can cross a threshold, score above population, or activate a trait
 // before the first selected unit. This also catches unsafe mass-bound pruning.
@@ -140,3 +147,23 @@ for(const u of data.units){const a=info.units[u.id];assert(a.full_description.le
 assert.equal(missing,9);assert.equal(unlocks,32);assert(info.units.u0.full_description.includes('280/330/400'));assert(info.units.u49.full_description.includes('235/350/2000'));assert(info.units.u88.full_description.includes('30% Omnivamp'));
 assert(!get('src/info.js').includes("['Population',u.slots]"));assert(!get('src/info.js').includes("t('{n} slots'"));assert(get('src/info.js').includes('infoUnlockBlock(u),recommendedEquipment(u)'));assert(get('src/info.js').includes('slot<5'));
 console.log(JSON.stringify({full_skills:94,source_placeholders:missing,visible_unlock_conditions:unlocks,equipment_catalog:itemData.items.length,equipment_mode:itemData.mode,equipment_patch:itemData.patch,reserved_slots:5,population_labels_in_info:false}));
+
+// Requirements are independent of whether unique traits contribute to score.
+for(const required_trait_mode of ['at_least','exact_tier'])for(const include_unique_traits of [true,false])for(const n of [0,1,3,5]){
+ compare(focused,{...DEFAULTS,population:2,min_four_cost:0,min_frontline:0,min_backline_four_cost:0,min_trait_score:0,trait_bonuses:{A:n},required_traits:{A:3},required_trait_mode,include_unique_traits});
+}
+for(const required_traits of [{Unknown:2},{Classical:3},{Classical:-1},{Classical:4.5},[],null])assert.throws(()=>prepare(data,{required_traits}));
+assert.throws(()=>prepare(data,{required_trait_mode:'bad'}));
+assert.equal(filterRequiredRecords(data,preset,DEFAULTS),preset,'Unconstrained cache must be reused');
+const requiredCounts={};
+for(const required_trait_mode of ['at_least','exact_tier'])for(const required_traits of [{Classical:4},{Classical:4,Frontman:2}]){
+ const cfg={...DEFAULTS,required_traits,required_trait_mode},expected=[];
+ for(let offset=0;offset<preset.length;offset+=9){const team=[...preset.subarray(offset,offset+8)].filter(i=>i!==255).map(i=>data.units[i]);let accept=true;
+  for(const [name,min]of Object.entries(required_traits)){const count=team.filter(u=>u.traits.includes(name)).length;const active=Math.max(0,...data.traits.find(t=>t.name===name).breakpoints.filter(n=>n<=count));if(required_trait_mode==='exact_tier'?active!==min:active<min)accept=false;}
+  if(accept)expected.push(...preset.subarray(offset,offset+9));
+ }
+ const got=filterRequiredRecords(data,preset,cfg);assert.deepEqual([...got],expected);requiredCounts[required_trait_mode+JSON.stringify(required_traits)]=got.length/9;
+}
+assert(requiredCounts['at_least{"Classical":4}']>0);
+assert(presetMatch({...DEFAULTS,required_traits:{Classical:4}}),'Trait-only constraints can filter the complete cache');
+console.log(JSON.stringify({required_traits:'PASS',independent_cases:cases,preset_subsets:requiredCounts}));

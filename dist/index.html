@@ -45,6 +45,8 @@ html[lang="zh-Hant"] .eyebrow,html[lang="zh-Hant"] .stat-card small{letter-spaci
 /* Full PBE abilities, public unlock conditions and reserved equipment */
 .info-ability p{display:block;-webkit-line-clamp:unset;overflow:visible;white-space:pre-line;line-height:1.85;margin-bottom:12px}.skill-value{color:#e7c88b;font-weight:700;font-variant-numeric:tabular-nums}.star-scaling{display:block;color:#738cab;font-size:10px;letter-spacing:.3px;margin:8px 0 12px}.source-missing{display:block;color:#cba977;font-size:10px;line-height:1.8;margin:8px 0 16px}.info-unlock-block{border:1px solid #3d3b32;border-radius:8px;background:#c9a95d07;padding:12px;margin:4px 0 16px;color:#adbbcf;width:100%;font-size:11px;line-height:1.8}.info-unlock-block>strong{color:#d6bd8b;font-size:11px}.info-unlock-block ul{padding-left:16px;margin:7px 0 0}.info-unlock-block li+li{margin-top:5px}.info-card-more{margin-top:15px}.recommended-equipment{width:100%;border-top:1px solid #27344a;padding-top:15px;margin-top:auto}.equipment-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.equipment-heading strong{font-size:11px;color:#b9c8dc}.equipment-heading small{font-size:9px;color:#7d8faa;white-space:nowrap}.equipment-slots{display:flex;gap:9px;flex-wrap:wrap}.equipment-slot{width:35px;height:35px;border-radius:50%;display:inline-grid;place-items:center;border:1px solid #53627b;overflow:hidden;flex:none;background:#0c1320}.equipment-slot.empty{border:1px dashed #3d4c64;color:#4c607e;font-size:13px;background:#101725}.equipment-slot img{width:100%;height:100%;object-fit:cover}.equipment-pending{display:block;color:#697c99;font-size:10px;margin-top:9px}.info-dialog .recommended-equipment{margin-top:24px}.info-detail-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.info-card .info-ability{width:100%}.info-card{cursor:pointer}.info-dialog .source-missing{font-size:12px}.info-dialog .info-unlock-block{font-size:13px}
 @media(max-width:600px){.info-detail-stats{grid-template-columns:repeat(3,minmax(0,1fr));padding:13px}.info-detail-stats strong{font-size:16px}.equipment-slot{width:38px;height:38px}}
+
+.required-section{border:1px solid #42516b;border-radius:10px;padding:14px;margin:18px 0;background:#17213766}.required-picker{display:grid;grid-template-columns:minmax(0,1fr) 58px auto;gap:7px;margin:10px 0 16px}.required-picker select{width:100%;min-width:0}.required-picker button{padding:8px 11px}.required-row{display:flex;align-items:center;gap:9px;padding:9px 0;border-bottom:1px solid #2b3950;font-size:12px}.required-row>span{flex:1}.required-row strong{color:#e1c586;font-size:11px}.required-row button{font-size:19px;padding:0 5px}.required-section .field-hint{margin:12px 0 0;line-height:1.8}.required-section select{font-size:12px}
 </style>
 </head>
 <body>
@@ -69,6 +71,7 @@ html[lang="zh-Hant"] .eyebrow,html[lang="zh-Hant"] .stat-card small{letter-spaci
         <label class="field-title" for="min_trait_score">Minimum synergy score <output id="score-output">16</output></label><input id="min_trait_score" name="min_trait_score" type="range" min="0" max="30" value="16"><div class="range-labels"><span>0</span><span>30</span></div><p class="field-hint">Add the member counts of active traits.</p>
         <div class="field-pair"><div><label class="field-title" for="min_frontline">Frontline minimum</label><input id="min_frontline" name="min_frontline" type="number" min="0" max="16" value="5"><p class="field-hint">Attack range ≤ <span id="range-label">2</span></p></div><div><label class="field-title" for="min_backline_four_cost">4-cost backline</label><input id="min_backline_four_cost" name="min_backline_four_cost" type="number" min="0" max="16" value="2"><p class="field-hint">Ranged carries & casters</p></div></div>
         <section class="emblem-section" aria-label="Trait bonuses from emblems"><label class="field-title" for="emblem-trait">Emblems / Trait +1 <span id="emblem-total">+0 total</span></label><div class="emblem-picker"><select id="emblem-trait" aria-label="Trait to increase"></select><button id="add-emblem" type="button" class="outline-button">+1</button></div><div id="emblem-list" aria-live="polite"></div><p class="field-hint">Each +1 adds one trait count without using population. Use bonuses available in your game; no carrier is assigned.</p></section>
+        <section class="required-section" aria-label="Required trait tiers"><label class="field-title" for="required-trait">Required trait tiers</label><div class="required-picker"><select id="required-trait" aria-label="Required trait"></select><select id="required-level" aria-label="Required trait tier"></select><button id="add-required" type="button" class="outline-button">Add</button></div><label class="field-title" for="required-mode">Match mode</label><select id="required-mode"><option value="at_least">At least this tier</option><option value="exact_tier">Exactly this active tier</option></select><div id="required-list" aria-live="polite"></div><p class="field-hint">All added requirements must be met. Emblems count. At least 4 Classical also accepts 6 Classical; exact tier 4 accepts 4–5 members.</p></section>
         <label class="toggle-line"><span>Count unique traits<small>Include one-champion traits</small></span><input name="include_unique_traits" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
         <label class="toggle-line"><span>Include 7-cost champions<small>Unlock requirements are not checked</small></span><input name="include_seven_cost" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
         <details class="advanced"><summary>Advanced options <span>⌄</span></summary><div class="advanced-body">
@@ -125,7 +128,7 @@ export const DEFAULTS = Object.freeze({
   min_frontline:5,frontline_max_range:2,min_backline_four_cost:2,
   include_unique_traits:true,include_seven_cost:true,score_mode:'active_members',
   backline_role_keywords:['Marksman','Caster','AttackSpecialist_Ammo'],
-  exclude_unit_ids:[],extra_traits:{},trait_bonuses:{},sona_feature_trait:null,max_seconds:590,threads:4
+  exclude_unit_ids:[],extra_traits:{},trait_bonuses:{},required_traits:{},required_trait_mode:'at_least',sona_feature_trait:null,max_seconds:590,threads:4
 });
 // Emblem availability follows the trait-filter screenshot supplied by the user.
 export const EMBLEM_TRAITS=Object.freeze([
@@ -139,6 +142,34 @@ export function effectiveTraits(u,c) {
   return [...new Set([...u.traits,...(c.extra_traits?.[u.id]||[]),...(u.name==='Sona'&&c.sona_feature_trait?[c.sona_feature_trait]:[])])];
 }
 
+function traitRequirements(data,c){
+  if(!c.required_traits||typeof c.required_traits!=='object'||Array.isArray(c.required_traits))throw Error('Required traits must be a trait-to-breakpoint object.');
+  if(!['at_least','exact_tier'].includes(c.required_trait_mode))throw Error('Unknown required trait mode.');
+  return Object.entries(c.required_traits).map(([name,min])=>{
+    const index=data.traits.findIndex(t=>t.name===name),trait=data.traits[index];
+    if(!trait||!Number.isInteger(min)||!trait.breakpoints.includes(min)||min<=0)throw Error('Choose a known trait and one of its activation breakpoints.');
+    const next=Math.min(Infinity,...trait.breakpoints.filter(n=>n>min));
+    return {name,index,min,max:c.required_trait_mode==='exact_tier'?next-1:Infinity};
+  });
+}
+
+// A requirement can only narrow the complete default preset, so no fresh DFS
+// is needed when all other rules still match the verified preset.
+export function filterRequiredRecords(data,bytes,settings={}){
+  const c={...DEFAULTS,...settings},rules=traitRequirements(data,c);if(!rules.length)return bytes;
+  const stride=c.population+1,out=new Uint8Array(bytes.length);let length=0;
+  const membership=data.units.map(u=>new Set(effectiveTraits(u,c)));
+  for(let offset=0;offset<bytes.length;offset+=stride){
+    const ok=rules.every(rule=>{
+      let n=c.trait_bonuses[rule.name]||0;
+      for(let j=0;j<c.population;j++){const index=bytes[offset+j];if(index!==255&&membership[index].has(rule.name))n++;}
+      return n>=rule.min&&n<=rule.max;
+    });
+    if(ok){out.set(bytes.subarray(offset,offset+stride),length);length+=stride;}
+  }
+  return out.subarray(0,length);
+}
+
 export function prepare(data, settings={}) {
   const c={...DEFAULTS,...settings};
   for(const k of ['population','min_four_cost','max_five_cost','min_trait_score','min_frontline','frontline_max_range','min_backline_four_cost','max_seconds','threads'])
@@ -146,6 +177,7 @@ export function prepare(data, settings={}) {
   if(c.population<1||c.population>16||c.max_seconds<1||c.threads<1||c.threads>16)throw Error('Population: 1–16; time limit: at least 1 second; workers: 1–16.');
   if(!['active_members','breakpoint','all_members'].includes(c.score_mode))throw Error('Unknown scoring method.');
   const tids=new Map(data.traits.map((t,i)=>[t.name,i]));
+  const requirements=traitRequirements(data,c),requiredIds=new Set(requirements.map(r=>r.index));
   if(!c.trait_bonuses||typeof c.trait_bonuses!=='object'||Array.isArray(c.trait_bonuses))throw Error('Trait bonuses must be a trait-to-count object.');
   for(const [trait,n]of Object.entries(c.trait_bonuses))
     if(!tids.has(trait)||!Number.isInteger(n)||n<0||n>16)throw Error('Choose a known trait and a bonus from 0 to 16.');
@@ -171,7 +203,7 @@ export function prepare(data, settings={}) {
     const front=+(u.range<=c.frontline_max_range),four=+(u.cost===4);
     return {...u,index,group:groupIds.get(group),front,four,five:+(u.cost===5),
       back4:+(u.cost===4&&!front&&c.backline_role_keywords.some(k=>u.role.includes(k))),
-      ts:allTraits[index].map(t=>tids.get(t)).filter(t=>thresholds[t]>0)};
+      ts:allTraits[index].map(t=>tids.get(t)).filter(t=>thresholds[t]>0||requiredIds.has(t))};
   }).filter(u=>!excluded.has(u.id)&&(c.include_seven_cost||u.cost!==7))
     .sort((a,b)=>b.back4-a.back4||(b.four*b.front)-(a.four*a.front)||b.front-a.front||b.ts.length-a.ts.length||a.index-b.index);
   const initialScore=data.traits.reduce((s,_,i)=>s+points[i*stride+bonuses[i]],0);
@@ -182,11 +214,12 @@ export function prepare(data, settings={}) {
     front[i]=front[i+1]+pool[i].front;four[i]=four[i+1]+pool[i].four;back[i]=back[i+1]+pool[i].back4;
     for(let s=1;s<=c.population;s++)mass[i*stride+s]=Math.max(mass[(i+1)*stride+s],s>=pool[i].slots?pool[i].ts.length+mass[(i+1)*stride+s-pool[i].slots]:0);
   }
-  return {c,pool,points,thresholds,stride,front,four,back,mass,bonuses,initialScore,initialMass};
+  const requiredSuffix=requirements.map(r=>{const suffix=new Uint16Array(N+1);for(let i=N-1;i>=0;i--)suffix[i]=suffix[i+1]+Number(pool[i].ts.includes(r.index));return suffix;});
+  return {c,pool,points,thresholds,stride,front,four,back,mass,bonuses,initialScore,initialMass,requirements,requiredSuffix};
 }
 
 export function solve(data,settings={},options={}) {
-  const p=prepare(data,settings),{c,pool:U,points,stride,front:SF,four:S4,back:SB,mass:M,bonuses,initialScore,initialMass}=p;
+  const p=prepare(data,settings),{c,pool:U,points,stride,front:SF,four:S4,back:SB,mass:M,bonuses,initialScore,initialMass,requirements,requiredSuffix}=p;
   const counts=new Uint8Array(bonuses),chosen=new Uint8Array(c.population),groups=new Uint8Array(data.units.length);
   const recordSize=c.population+1,chunkRows=4096;
   let output=new Uint8Array(recordSize*chunkRows),pos=0,matches=0,nodes=0,finished=0,stopped=false;
@@ -212,6 +245,10 @@ export function solve(data,settings={},options={}) {
       if(now-lastReport>400){options.onProgress?.({nodes,matches,finished,total:partitions.length,elapsed:(now-started)/1000});lastReport=now;}
     }
     if(stopped)return;
+    for(let k=0;k<requirements.length;k++){
+      const r=requirements[k],n=counts[r.index];
+      if(n>r.max||n+Math.min(left,requiredSuffix[k][start])<r.min)return;
+    }
     if(left===0){if(four>=c.min_four_cost&&front>=c.min_frontline&&back>=c.min_backline_four_cost&&score>=c.min_trait_score)save(depth,score);return;}
     const nf=Math.max(0,c.min_four_cost-four),nt=Math.max(0,c.min_frontline-front),nb=Math.max(0,c.min_backline_four_cost-back);
     if(left<Math.max(nf,nt+nb)||nf>S4[start]||nt>SF[start]||nb>SB[start]||U.length-start<Math.max(nf,nt+nb)||mass+M[start*stride+left]<c.min_trait_score)return;
@@ -247,7 +284,7 @@ const DEFAULTS = Object.freeze({
   min_frontline:5,frontline_max_range:2,min_backline_four_cost:2,
   include_unique_traits:true,include_seven_cost:true,score_mode:'active_members',
   backline_role_keywords:['Marksman','Caster','AttackSpecialist_Ammo'],
-  exclude_unit_ids:[],extra_traits:{},trait_bonuses:{},sona_feature_trait:null,max_seconds:590,threads:4
+  exclude_unit_ids:[],extra_traits:{},trait_bonuses:{},required_traits:{},required_trait_mode:'at_least',sona_feature_trait:null,max_seconds:590,threads:4
 });
 // Emblem availability follows the trait-filter screenshot supplied by the user.
 const EMBLEM_TRAITS=Object.freeze([
@@ -261,6 +298,34 @@ function effectiveTraits(u,c) {
   return [...new Set([...u.traits,...(c.extra_traits?.[u.id]||[]),...(u.name==='Sona'&&c.sona_feature_trait?[c.sona_feature_trait]:[])])];
 }
 
+function traitRequirements(data,c){
+  if(!c.required_traits||typeof c.required_traits!=='object'||Array.isArray(c.required_traits))throw Error('Required traits must be a trait-to-breakpoint object.');
+  if(!['at_least','exact_tier'].includes(c.required_trait_mode))throw Error('Unknown required trait mode.');
+  return Object.entries(c.required_traits).map(([name,min])=>{
+    const index=data.traits.findIndex(t=>t.name===name),trait=data.traits[index];
+    if(!trait||!Number.isInteger(min)||!trait.breakpoints.includes(min)||min<=0)throw Error('Choose a known trait and one of its activation breakpoints.');
+    const next=Math.min(Infinity,...trait.breakpoints.filter(n=>n>min));
+    return {name,index,min,max:c.required_trait_mode==='exact_tier'?next-1:Infinity};
+  });
+}
+
+// A requirement can only narrow the complete default preset, so no fresh DFS
+// is needed when all other rules still match the verified preset.
+function filterRequiredRecords(data,bytes,settings={}){
+  const c={...DEFAULTS,...settings},rules=traitRequirements(data,c);if(!rules.length)return bytes;
+  const stride=c.population+1,out=new Uint8Array(bytes.length);let length=0;
+  const membership=data.units.map(u=>new Set(effectiveTraits(u,c)));
+  for(let offset=0;offset<bytes.length;offset+=stride){
+    const ok=rules.every(rule=>{
+      let n=c.trait_bonuses[rule.name]||0;
+      for(let j=0;j<c.population;j++){const index=bytes[offset+j];if(index!==255&&membership[index].has(rule.name))n++;}
+      return n>=rule.min&&n<=rule.max;
+    });
+    if(ok){out.set(bytes.subarray(offset,offset+stride),length);length+=stride;}
+  }
+  return out.subarray(0,length);
+}
+
 function prepare(data, settings={}) {
   const c={...DEFAULTS,...settings};
   for(const k of ['population','min_four_cost','max_five_cost','min_trait_score','min_frontline','frontline_max_range','min_backline_four_cost','max_seconds','threads'])
@@ -268,6 +333,7 @@ function prepare(data, settings={}) {
   if(c.population<1||c.population>16||c.max_seconds<1||c.threads<1||c.threads>16)throw Error('Population: 1–16; time limit: at least 1 second; workers: 1–16.');
   if(!['active_members','breakpoint','all_members'].includes(c.score_mode))throw Error('Unknown scoring method.');
   const tids=new Map(data.traits.map((t,i)=>[t.name,i]));
+  const requirements=traitRequirements(data,c),requiredIds=new Set(requirements.map(r=>r.index));
   if(!c.trait_bonuses||typeof c.trait_bonuses!=='object'||Array.isArray(c.trait_bonuses))throw Error('Trait bonuses must be a trait-to-count object.');
   for(const [trait,n]of Object.entries(c.trait_bonuses))
     if(!tids.has(trait)||!Number.isInteger(n)||n<0||n>16)throw Error('Choose a known trait and a bonus from 0 to 16.');
@@ -293,7 +359,7 @@ function prepare(data, settings={}) {
     const front=+(u.range<=c.frontline_max_range),four=+(u.cost===4);
     return {...u,index,group:groupIds.get(group),front,four,five:+(u.cost===5),
       back4:+(u.cost===4&&!front&&c.backline_role_keywords.some(k=>u.role.includes(k))),
-      ts:allTraits[index].map(t=>tids.get(t)).filter(t=>thresholds[t]>0)};
+      ts:allTraits[index].map(t=>tids.get(t)).filter(t=>thresholds[t]>0||requiredIds.has(t))};
   }).filter(u=>!excluded.has(u.id)&&(c.include_seven_cost||u.cost!==7))
     .sort((a,b)=>b.back4-a.back4||(b.four*b.front)-(a.four*a.front)||b.front-a.front||b.ts.length-a.ts.length||a.index-b.index);
   const initialScore=data.traits.reduce((s,_,i)=>s+points[i*stride+bonuses[i]],0);
@@ -304,11 +370,12 @@ function prepare(data, settings={}) {
     front[i]=front[i+1]+pool[i].front;four[i]=four[i+1]+pool[i].four;back[i]=back[i+1]+pool[i].back4;
     for(let s=1;s<=c.population;s++)mass[i*stride+s]=Math.max(mass[(i+1)*stride+s],s>=pool[i].slots?pool[i].ts.length+mass[(i+1)*stride+s-pool[i].slots]:0);
   }
-  return {c,pool,points,thresholds,stride,front,four,back,mass,bonuses,initialScore,initialMass};
+  const requiredSuffix=requirements.map(r=>{const suffix=new Uint16Array(N+1);for(let i=N-1;i>=0;i--)suffix[i]=suffix[i+1]+Number(pool[i].ts.includes(r.index));return suffix;});
+  return {c,pool,points,thresholds,stride,front,four,back,mass,bonuses,initialScore,initialMass,requirements,requiredSuffix};
 }
 
 function solve(data,settings={},options={}) {
-  const p=prepare(data,settings),{c,pool:U,points,stride,front:SF,four:S4,back:SB,mass:M,bonuses,initialScore,initialMass}=p;
+  const p=prepare(data,settings),{c,pool:U,points,stride,front:SF,four:S4,back:SB,mass:M,bonuses,initialScore,initialMass,requirements,requiredSuffix}=p;
   const counts=new Uint8Array(bonuses),chosen=new Uint8Array(c.population),groups=new Uint8Array(data.units.length);
   const recordSize=c.population+1,chunkRows=4096;
   let output=new Uint8Array(recordSize*chunkRows),pos=0,matches=0,nodes=0,finished=0,stopped=false;
@@ -334,6 +401,10 @@ function solve(data,settings={},options={}) {
       if(now-lastReport>400){options.onProgress?.({nodes,matches,finished,total:partitions.length,elapsed:(now-started)/1000});lastReport=now;}
     }
     if(stopped)return;
+    for(let k=0;k<requirements.length;k++){
+      const r=requirements[k],n=counts[r.index];
+      if(n>r.max||n+Math.min(left,requiredSuffix[k][start])<r.min)return;
+    }
     if(left===0){if(four>=c.min_four_cost&&front>=c.min_frontline&&back>=c.min_backline_four_cost&&score>=c.min_trait_score)save(depth,score);return;}
     const nf=Math.max(0,c.min_four_cost-four),nt=Math.max(0,c.min_frontline-front),nb=Math.max(0,c.min_backline_four_cost-back);
     if(left<Math.max(nf,nt+nb)||nf>S4[start]||nt>SF[start]||nb>SB[start]||U.length-start<Math.max(nf,nt+nb)||mass+M[start*stride+left]<c.min_trait_score)return;
@@ -499,7 +570,13 @@ const UI_ZH=Object.freeze({
   'PBE source values; damage and healing scale with stats. Skills follow the source language.':'數值依 PBE 資料；實際傷害與治療會隨屬性變動。技能沿用來源語言，翻譯缺漏或不一致時採英文原文。',
   'Recommended items':'推薦裝備','Five reserved recommended item slots':'五個推薦裝備預留位置',
   'Recommendation slot {n} · Not set':'推薦裝備位置 {n} · 尚未設定',
-  'Reserved · Recommendations not set':'預留位置 · 推薦裝備待補'
+  'Reserved · Recommendations not set':'預留位置 · 推薦裝備待補',
+  'Required trait tiers':'必要羈絆等級','Required trait':'指定羈絆','Required trait tier':'指定羈絆階級','Add':'加入',
+  'Match mode':'符合方式','At least this tier':'至少達到該階','Exactly this active tier':'恰好維持該階',
+  'All added requirements must be met. Emblems count. At least 4 Classical also accepts 6 Classical; exact tier 4 accepts 4–5 members.':'所有加入的條件都必須符合，轉職 +1 也會計入。例如：至少 4 古典樂可包含 6 古典樂；恰好 4 古典樂則接受 4–5 個計數。',
+  'tier {n}':'{n} 階','Remove required {trait}':'移除必要羈絆 {trait}',
+  'Required traits must be a trait-to-breakpoint object.':'必要羈絆設定格式無效。','Unknown required trait mode.':'未知的羈絆符合方式。',
+  'Choose a known trait and one of its activation breakpoints.':'請選擇已知羈絆與其實際啟動門檻。'
 });
 let currentLanguage='zh-Hant';
 function setLanguage(value){currentLanguage=value==='en'?'en':'zh-Hant';return currentLanguage;}
@@ -595,6 +672,34 @@ function bindInfo(){
  window.addEventListener('hashchange',()=>switchView(location.hash==='#info'?'info':'solver'));populateInfoTraits();switchView(location.hash==='#info'?'info':'solver');
 }
 
+function populateRequiredTraits(){
+ const select=$('required-trait'),saved=select.value,level=$('required-level').value;select.replaceChildren();
+ for(const trait of [...DATA.traits].sort((a,b)=>traitLabel(a.name).localeCompare(traitLabel(b.name),getLanguage())))select.append(new Option(traitLabel(trait.name),trait.name));
+ if([...select.options].some(o=>o.value===saved))select.value=saved;
+ populateRequiredLevels(level);
+}
+function populateRequiredLevels(saved=''){
+ const trait=DATA.traits.find(t=>t.name===$('required-trait').value),select=$('required-level');select.replaceChildren();
+ for(const level of [...(trait?.breakpoints||[])].sort((a,b)=>a-b))select.append(new Option(String(level),String(level)));
+ if([...select.options].some(o=>o.value===saved))select.value=saved;
+}
+function renderRequirements(){
+ const list=$('required-list');list.replaceChildren();
+ for(const [name,n]of Object.entries(state.required)){
+  const row=el('div','required-row');row.append(el('span','',traitLabel(name)),el('strong','',state.requiredMode==='exact_tier'?t('tier {n}',{n}):'≥ '+n));
+  const remove=el('button','text-button','×');remove.type='button';remove.setAttribute('aria-label',t('Remove required {trait}',{trait:traitLabel(name)}));remove.addEventListener('click',()=>{delete state.required[name];renderRequirements();markDirty();});row.append(remove);list.append(row);
+ }
+}
+function requiredSummary(c){return Object.entries(c.required_traits||{}).map(([name,n])=>traitLabel(name)+' '+(c.required_trait_mode==='exact_tier'?t('tier {n}',{n}):'≥ '+n)).join(' · ');}
+function bindRequirements(){
+ $('required-trait').addEventListener('change',()=>populateRequiredLevels());
+ $('required-mode').addEventListener('change',()=>{state.requiredMode=$('required-mode').value;renderRequirements();markDirty();});
+ $('add-required').addEventListener('click',()=>{
+  const name=$('required-trait').value,n=Number($('required-level').value);if(!name||!n)return;
+  state.required[name]=n;renderRequirements();markDirty();
+ });
+}
+
 'use strict';
 const DATA=JSON.parse(document.getElementById('app-data').textContent);
 const ART=JSON.parse(document.getElementById('art-data').textContent);
@@ -603,7 +708,7 @@ const ITEMS=JSON.parse(document.getElementById('item-data').textContent);
 const $=id=>document.getElementById(id);
 const fmt=n=>new Intl.NumberFormat(getLanguage()==='zh-Hant'?'zh-TW':'en-US').format(n);
 const rarity={1:'#8594aa',2:'#6fd6a6',3:'#78a7ff',4:'#b49aff',5:'#e4c17f',7:'#ef92a2'};
-const state={chunks:[],records:[],filtered:[],page:0,pageSize:12,config:{...DEFAULTS},excluded:new Set(),extras:{},bonuses:{},workers:[],running:false,status:'LOADING',started:0,progress:[],searchId:0,preset:null,dirty:false,filterTimer:null};
+const state={chunks:[],records:[],filtered:[],page:0,pageSize:12,config:{...DEFAULTS},excluded:new Set(),extras:{},bonuses:{},required:{},requiredMode:'at_least',workers:[],running:false,status:'LOADING',started:0,progress:[],searchId:0,preset:null,dirty:false,filterTimer:null};
 const baseMembership=DATA.traits.map(t=>DATA.units.filter(u=>u.traits.includes(t.name)).length);
 const traitByName=new Map(DATA.traits.map((t,i)=>[t.name,{...t,index:i,unique:baseMembership[i]===1}]));
 function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
@@ -618,6 +723,7 @@ function readConfig(){
  c.include_seven_cost=form.elements.namedItem('include_seven_cost').checked;
  c.score_mode=$('score_mode').value;c.sona_feature_trait=$('sona_feature_trait').value||null;
  c.exclude_unit_ids=[...state.excluded];c.extra_traits=JSON.parse(JSON.stringify(state.extras));c.trait_bonuses={...state.bonuses};
+ c.required_traits={...state.required};c.required_trait_mode=state.requiredMode;
  c.threads=Math.max(1,Math.min(4,(navigator.hardwareConcurrency||4)-1));
  prepare(DATA,c);return c;
 }
@@ -715,6 +821,7 @@ function renderResults(){
  $('page-label').textContent=t('{start}–{end} of {n}',{start:state.filtered.length?fmt(start+1):0,end:fmt(Math.min(start+state.pageSize,state.filtered.length)),n:fmt(state.filtered.length)});
  $('prev').disabled=state.page===0;$('next').disabled=state.page>=maxPage-1;
  const c=state.config,bonusTotal=Object.values(c.trait_bonuses||{}).reduce((s,n)=>s+n,0);$('results-context').textContent=t('{population} population · {four}+ four-costs · {unique}{bonus}',{population:c.population,four:c.min_four_cost,unique:t(c.include_unique_traits?'Unique traits included':'Unique traits excluded'),bonus:bonusTotal?t(' · +{n} trait bonuses',{n:bonusTotal}):''});
+ const required=requiredSummary(c);if(required)$('results-context').textContent+=' · '+required;
 }
 function showBoard(r){
  state.boardRecord=r;
@@ -752,7 +859,7 @@ async function runSearch(event){
  let c;try{if(!$('criteria-form').reportValidity())return;c=readConfig();}catch(e){$('form-error').textContent=t(e.message);$('form-error').hidden=false;return;}
  state.searchId++;const id=state.searchId;clearResults(c);state.started=performance.now();
  if(isPreset(c)&&state.preset){
-  ingest(state.preset);state.status='COMPLETE';updateStats();filterResults();setStatus(()=>t('Complete preset · {n} verified lineups',{n:fmt(state.records.length)}));$('elapsed').textContent=t('Ready instantly');return;
+  ingest(filterRequiredRecords(DATA,state.preset,c));state.status='COMPLETE';updateStats();filterResults();setStatus(()=>t('Complete preset · {n} verified lineups',{n:fmt(state.records.length)}));$('elapsed').textContent=t('Ready instantly');return;
  }
  if(typeof Worker==='undefined'){$('form-error').textContent=t('This browser does not support background workers. Use a recent Chrome, Edge, Firefox or Safari.');$('form-error').hidden=false;return;}
  setRunning(true);setStatus(()=>t('Searching all eligible combinations…'),'running');$('empty-state').hidden=true;
@@ -830,7 +937,7 @@ async function exportCsv(){
 function bindEvents(){
  $('criteria-form').addEventListener('submit',runSearch);$('criteria-form').addEventListener('input',markDirty);
  for(const button of document.querySelectorAll('[data-step]'))button.addEventListener('click',()=>{const [id,delta]=button.dataset.step.split(':'),input=$(id);input.value=Math.max(Number(input.min),Math.min(Number(input.max),Number(input.value)+Number(delta)));markDirty();});
- $('reset').addEventListener('click',()=>{$('criteria-form').reset();state.excluded.clear();state.extras={};state.bonuses={};renderExtras();renderBonuses();syncLabels();markDirty();notify(t('Default criteria restored.'));});
+ $('reset').addEventListener('click',()=>{$('criteria-form').reset();state.excluded.clear();state.extras={};state.bonuses={};state.required={};state.requiredMode='at_least';renderRequirements();populateRequiredLevels();renderExtras();renderBonuses();syncLabels();markDirty();notify(t('Default criteria restored.'));});
  $('language').addEventListener('change',()=>applyLanguage($('language').value));
  $('add-emblem').addEventListener('click',()=>{const trait=$('emblem-trait').value;setBonus(trait,(state.bonuses[trait]||0)+1);});
  $('stop').addEventListener('click',()=>finish('INCOMPLETE','Stopped by you'));
@@ -856,14 +963,14 @@ function applyLanguage(language,initial=false){
  try{localStorage.setItem('eightfold-language',getLanguage());}catch{}
  for(const entry of staticTranslations){if(!entry.node.isConnected)continue;const value=localizedStaticText(entry.source);if(entry.attr)entry.node.setAttribute(entry.attr,value);else entry.node.textContent=value;}
  if(initial)return;
- populateSelects();renderExtras();renderBonuses();updateStats();filterResults(false);populateInfoTraits();if(state.view==='info')renderInfo();if($('info-dialog').open&&state.infoUnit)showInfo(state.infoUnit);
+ populateSelects();populateRequiredTraits();renderRequirements();renderExtras();renderBonuses();updateStats();filterResults(false);populateInfoTraits();if(state.view==='info')renderInfo();if($('info-dialog').open&&state.infoUnit)showInfo(state.infoUnit);
  if(state.statusBuilder)$('status-text').textContent=state.statusBuilder();
  if($('pool-dialog').open)renderPool();if($('board-dialog').open&&state.boardRecord)showBoard(state.boardRecord);
  if(state.status==='COMPLETE'&&isPreset(state.config))$('elapsed').textContent=t('Ready instantly');
 }
 async function init(){
  captureStaticTranslations();let preferred='zh-Hant';try{preferred=localStorage.getItem('eightfold-language')||preferred;}catch{}
- applyLanguage(preferred,true);populateSelects();bindEvents();bindInfo();syncLabels();renderBonuses();
+ applyLanguage(preferred,true);populateSelects();populateRequiredTraits();bindEvents();bindRequirements();bindInfo();syncLabels();renderBonuses();
  try{
   const encoded=$('preset-data').textContent.trim(),compressed=Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));
   if(typeof DecompressionStream==='undefined')throw Error(t('Preset decompression is not supported in this browser.'));
