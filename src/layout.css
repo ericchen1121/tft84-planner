@@ -63,3 +63,6 @@
 
 /* Keep copy and board actions usable at narrow overlay widths. */
 .card-bottom{flex-wrap:wrap;gap:10px}.card-bottom>.lineup-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:12px;margin-left:auto}.copy-team-code{color:var(--gold)}.copy-team-code:disabled{cursor:not-allowed}.team-code-value{width:100%;font-family:monospace;font-size:14px}#board-copy{margin:14px 0}#team-code-dialog{max-width:min(540px,94vw)}
+
+/* Red labels identify partial team-code exports before the user copies. */
+.copy-team-code.has-skipped-units{color:#ff8b91}
