@@ -19,7 +19,7 @@ function renderRequirements(){
   const row=el('div','required-row');row.append(el('span','',traitLabel(name)),el('strong','',state.requiredMode==='exact_tier'?t('tier {n}',{n}):'≥ '+n));
   const remove=el('button','text-button','×');remove.type='button';remove.setAttribute('aria-label',t('Remove required {trait}',{trait:traitLabel(name)}));remove.addEventListener('click',()=>{delete state.required[name];populateRequiredTraits();renderRequirements();markDirty();});row.append(remove);list.append(row);
  }
- const n=Object.keys(state.required).length;$('required-selected').textContent=t('{n} selected',{n});$('clear-required').disabled=n===0;
+ const n=Object.keys(state.required).length;$('required-selected').textContent=t('{n} traits selected',{n});$('clear-required').disabled=n===0;
 }
 function requiredSummary(c){return Object.entries(c.required_traits||{}).map(([name,n])=>traitLabel(name)+' '+(c.required_trait_mode==='exact_tier'?t('tier {n}',{n}):'≥ '+n)).join(' · ');}
 function bindRequirements(){

@@ -627,7 +627,7 @@ const UI_ZH=Object.freeze({
   'Select multiple required traits':'勾選多個必要羈絆','No traits match your search.':'找不到符合搜尋的羈絆。',
   'Check multiple traits and set a tier for each. All checked traits must be met; emblems count.':'可勾選多個羈絆，並分別設定等級。所有勾選條件都必須符合，轉職 +1 也會計入。',
   'At least 4 Classical also accepts 6 Classical; exact tier 4 accepts 4–5 members.':'至少 4 古典樂可包含 6 古典樂；恰好 4 古典樂則接受 4–5 個計數。',
-  'Require {trait}':'必須包含 {trait}','Required tier for {trait}':'{trait} 的必要等級'
+  'Require {trait}':'必須包含 {trait}','Required tier for {trait}':'{trait} 的必要等級','{n} traits selected':'已選取 {n} 項'
 });
 let currentLanguage='zh-Hant';
 function setLanguage(value){currentLanguage=value==='en'?'en':'zh-Hant';return currentLanguage;}
@@ -744,7 +744,7 @@ function renderRequirements(){
   const row=el('div','required-row');row.append(el('span','',traitLabel(name)),el('strong','',state.requiredMode==='exact_tier'?t('tier {n}',{n}):'≥ '+n));
   const remove=el('button','text-button','×');remove.type='button';remove.setAttribute('aria-label',t('Remove required {trait}',{trait:traitLabel(name)}));remove.addEventListener('click',()=>{delete state.required[name];populateRequiredTraits();renderRequirements();markDirty();});row.append(remove);list.append(row);
  }
- const n=Object.keys(state.required).length;$('required-selected').textContent=t('{n} selected',{n});$('clear-required').disabled=n===0;
+ const n=Object.keys(state.required).length;$('required-selected').textContent=t('{n} traits selected',{n});$('clear-required').disabled=n===0;
 }
 function requiredSummary(c){return Object.entries(c.required_traits||{}).map(([name,n])=>traitLabel(name)+' '+(c.required_trait_mode==='exact_tier'?t('tier {n}',{n}):'≥ '+n)).join(' · ');}
 function bindRequirements(){
