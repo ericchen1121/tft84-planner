@@ -12,6 +12,8 @@ const payloads={STYLES:read('src/styles.css'),DATA:JSON.stringify(data),INFO:JSO
 payloads.ITEMS=JSON.stringify(JSON.parse(read('dist/items.json')));
 payloads.STYLES+='\n'+read('src/layout.css');
 payloads.APP=solver.replace(/^export /gm,'')+'\n'+i18n+'\n'+read('src/info.js')+'\n'+read('src/requirements.js')+'\n'+read('src/app.js');
+payloads.TEAMCODE=JSON.stringify(JSON.parse(read('dist/team-codes.json')));
+payloads.APP=read('src/team-code.mjs').replace(/^export /gm,'')+'\n'+read('src/team-code-ui.js')+'\n'+payloads.APP;
 for(const [name,content]of Object.entries(payloads))html=html.replace(`/*__${name}__*/`,()=>content.replace(/<\/script/gi,'<\\/script'));
 if(/\/\*__[A-Z]+__\*\//.test(html))throw Error('Unresolved template token');
 fs.writeFileSync(new URL('dist/index.html',root),html);

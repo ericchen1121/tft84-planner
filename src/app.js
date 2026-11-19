@@ -111,7 +111,7 @@ function renderResults(){
   card.append(units);const traits=el('div','trait-chips');for(const t of a.traits)traits.append(traitChip(t));card.append(traits);
   const bottom=el('div','card-bottom'),metrics=el('div');
   for(const [value,label]of [[a.front,'front'],[a.four,'4-cost'],[a.five,'5-cost']]){const span=el('span');span.append(el('b','',value),document.createTextNode(' '+t(label)));metrics.append(span);}
-  const btn=el('button','board-link');btn.append(document.createTextNode(t('View board')),el('span','','↗'));btn.addEventListener('click',()=>showBoard(r));bottom.append(metrics,btn);card.append(bottom);fragment.append(card);
+  const btn=el('button','board-link');btn.append(document.createTextNode(t('View board')),el('span','','↗'));btn.addEventListener('click',()=>showBoard(r));const actions=el('div','lineup-actions');actions.append(teamCodeButton(ordered),btn);bottom.append(metrics,actions);card.append(bottom);fragment.append(card);
  }
  $('lineup-grid').replaceChildren(fragment);$('empty-state').hidden=rows.length>0||state.running;
  $('empty-message').textContent=t(state.records.length?'Clear the result filters to see more lineups.':'Try a lower synergy score or fewer frontline units.');
@@ -141,6 +141,7 @@ function showBoard(r){
   $('hex-board').append(cell);
  }
  $('board-traits').replaceChildren(...a.traits.map(traitChip));
+ $('board-copy').replaceChildren(teamCodeButton([...a.team].sort((x,y)=>y.cost-x.cost||x.name.localeCompare(y.name))));
  const unlocked=a.team.filter(u=>u.unlock);$('unlock-note').textContent=unlocked.length?t('Unlock required: {names}. Unlock history is not simulated.',{names:unlocked.map(u=>unitLabel(u)).join(', ')}):t('No unlock-tagged champions in this lineup.');
  if(!$('board-dialog').open)$('board-dialog').showModal();
 }
