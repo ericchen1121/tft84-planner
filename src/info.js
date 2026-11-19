@@ -24,14 +24,14 @@ function infoUnlockBlock(u){
 }
 function recommendedEquipment(u){
  const box=el('div','recommended-equipment'),heading=el('div','equipment-heading');heading.append(el('strong','',t('Recommended items')),el('small','','PBE / 19.1'));box.append(heading);
- const row=el('div','equipment-slots');row.setAttribute('aria-label',t('Five reserved recommended item slots'));
+ const row=el('div','equipment-slots');row.setAttribute('aria-label',t('Recommended items'));
  const recommended=INFO.units[u.id]?.recommended_items||[];
  for(let slot=0;slot<5;slot++){
   const item=ITEMS.items.find(item=>item.id===recommended[slot]),circle=el('span','equipment-slot'+(item?'':' empty'));circle.dataset.slot=String(slot+1);
   if(item){const label=getLanguage()==='zh-Hant'?(item.name_zh||item.name):item.name;circle.title=label;const img=new Image();img.src=item.image;img.alt=label;img.loading='lazy';img.addEventListener('error',()=>{img.remove();circle.classList.add('empty');circle.textContent='◇';});circle.append(img);}else{circle.textContent='◇';circle.title=t('Recommendation slot {n} · Not set',{n:slot+1});}
   row.append(circle);
  }
- box.append(row);if(!recommended.length)box.append(el('small','equipment-pending',t('Reserved · Recommendations not set')));return box;
+ box.append(row);if(!recommended.length)box.append(el('small','equipment-pending',t('No PBE item data available')));return box;
 }
 function roleLabel(u){const role=u.role.replace('DA_Role_','').replace('_Manaless','');const labels={MagicTank:['Magic tank','魔法坦克'],AttackTank:['Attack tank','物理坦克'],MagicCaster:['Magic caster','魔法法師'],AttackCaster:['Attack caster','物理法師'],MagicFighter:['Magic fighter','魔法鬥士'],AttackFighter:['Attack fighter','物理鬥士'],MagicAssassin:['Magic assassin','魔法刺客'],AttackAssassin:['Attack assassin','物理刺客'],AttackMarksman:['Attack marksman','物理射手'],MagicMarksman:['Magic marksman','魔法射手'],AttackSpecialist_Ammo:['Attack specialist','物理專家'],MagicSpecialist:['Magic specialist','魔法專家']};return labels[role]?.[getLanguage()==='zh-Hant'?1:0]||role.replace(/_/g,' ');}
 function infoUnits(){

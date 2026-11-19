@@ -1,0 +1,1716 @@
+{
+  "source": "https://www.metatft.com/units",
+  "item_source": "https://www.metatft.com/items",
+  "mode": "PBE",
+  "patch": "19.1",
+  "set": "TFTSet19",
+  "snapshot_date": "2026-11-19",
+  "window": "Last 3 Days",
+  "notes": "Popular Items order plus unique items from the five Recommended Builds, read from visible PBE / 19.1 unit detail pages. Non-normal items remain in source rows for audit but are never selected. Missing units have no substitute recommendations. Five displayed items are alternatives, not a five-item build.",
+  "craftable_items": [
+    "DA_GargoyleStoneplate",
+    "DA_JeweledGauntlet",
+    "DA_ThiefsGloves",
+    "DA_WarmogsArmor",
+    "DA_GuinsoosRageblade",
+    "DA_SpearOfShojin",
+    "DA_SpiritVisage",
+    "DA_VoidStaff",
+    "DA_GiantSlayer",
+    "DA_InfinityEdge",
+    "DA_SunfireCape",
+    "DA_RedBuff",
+    "DA_HandOfJustice",
+    "DA_HextechGunblade",
+    "DA_RabadonsDeathcap",
+    "DA_AdaptiveHelm",
+    "DA_Morellonomicon",
+    "DA_BlueBuff",
+    "DA_StrikersFlail",
+    "DA_EdgeOfNight",
+    "DA_Bloodthirster",
+    "DA_ArchangelsStaff",
+    "DA_ProtectorsVow",
+    "DA_Crownguard",
+    "DA_IonicSpark",
+    "DA_LastWhisper",
+    "DA_SteadfastHeart",
+    "DA_DragonsClaw",
+    "DA_SteraksGage",
+    "DA_NashorsTooth",
+    "DA_TitansResolve",
+    "DA_Deathblade",
+    "DA_Evenshroud",
+    "DA_BrambleVest",
+    "DA_KrakensFury",
+    "DA_Quicksilver"
+  ],
+  "units": {
+    "Teemo19": {
+      "popular_items": [
+        "DA_VoidStaff",
+        "DA_RedBuff",
+        "DA_Morellonomicon",
+        "DA_AdaptiveHelm",
+        "DA_RabadonsDeathcap"
+      ],
+      "build_items": [
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_RabadonsDeathcap",
+        "DA_BlueBuff",
+        "DA_Morellonomicon",
+        "DA_JeweledGauntlet",
+        "DA_NashorsTooth",
+        "DA_StrikersFlail"
+      ]
+    },
+    "Rakan19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_AdaptiveHelm",
+        "DA_ProtectorsVow",
+        "DA_Crownguard",
+        "DA_Morellonomicon"
+      ],
+      "build_items": [
+        "DA_HandOfJustice",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_EdgeOfNight",
+        "DA_AdaptiveHelm",
+        "DA_IonicSpark",
+        "DA_ProtectorsVow",
+        "DA_Morellonomicon",
+        "DA_GargoyleStoneplate",
+        "DA_SunfireCape",
+        "DA_WarmogsArmor"
+      ]
+    },
+    "BaronNashor19": {
+      "popular_items": [
+        "TFT_Emblem_CHANGEME",
+        "DA_InfinityEdge",
+        "DA_Deathblade",
+        "DA_HandOfJustice",
+        "DA_RedBuff"
+      ],
+      "build_items": [
+        "DA_HandOfJustice",
+        "DA_InfinityEdge",
+        "DA_StrikersFlail",
+        "DA_EdgeOfNight",
+        "DA_Bloodthirster",
+        "DA_SteraksGage",
+        "DA_TitansResolve",
+        "DA_Deathblade",
+        "DA_GiantSlayer"
+      ]
+    },
+    "Sona19": {
+      "popular_items": [
+        "DA_AdaptiveHelm",
+        "DA_Morellonomicon",
+        "DA_BlueBuff",
+        "DA_RabadonsDeathcap",
+        "DA_ArchangelsStaff"
+      ],
+      "build_items": [
+        "DA_BlueBuff",
+        "DA_HextechGunblade",
+        "DA_JeweledGauntlet",
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "DA_AdaptiveHelm",
+        "DA_SpearOfShojin",
+        "DA_ArchangelsStaff"
+      ]
+    },
+    "AkaliKDA19": {
+      "popular_items": [
+        "DA_RedBuff",
+        "DA_SteraksGage",
+        "DA_Deathblade",
+        "DA_StrikersFlail",
+        "DA_HextechGunblade"
+      ],
+      "build_items": [
+        "DA_Bloodthirster",
+        "DA_EdgeOfNight",
+        "DA_RedBuff",
+        "DA_HandOfJustice",
+        "DA_InfinityEdge",
+        "DA_StrikersFlail",
+        "DA_GiantSlayer"
+      ]
+    },
+    "Tristana19": {
+      "popular_items": [
+        "DA_Swiftstriker19_Emblem",
+        "DA_Deathblade",
+        "DA_StrikersFlail",
+        "DA_KrakensFury",
+        "DA_GiantSlayer"
+      ],
+      "build_items": [
+        "DA_InfinityEdge",
+        "DA_SpearOfShojin",
+        "DA_StrikersFlail",
+        "DA_GiantSlayer",
+        "DA_LastWhisper",
+        "DA_Deathblade"
+      ]
+    },
+    "Lulu19": {
+      "popular_items": [
+        "DA_AdaptiveHelm",
+        "DA_Arcanist19_Emblem",
+        "DA_Swiftstriker19_Emblem",
+        "DA_BlueBuff",
+        "DA_ChaliceOfPower"
+      ],
+      "build_items": [
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_AdaptiveHelm",
+        "DA_Morellonomicon",
+        "DA_BlueBuff",
+        "DA_RabadonsDeathcap"
+      ]
+    },
+    "Kobuko19": {
+      "popular_items": [
+        "DA_GargoyleStoneplate",
+        "DA_GargoyleStoneplate",
+        "DA_Crownguard",
+        "DA_SpiritVisage",
+        "DA_WarmogsArmor"
+      ],
+      "build_items": [
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_Crownguard",
+        "DA_WarmogsArmor"
+      ]
+    },
+    "Smeech19": {
+      "popular_items": [
+        "DA_SteraksGage",
+        "DA_Deathblade",
+        "DA_EdgeOfNight",
+        "DA_GiantSlayer",
+        "DA_HandOfJustice"
+      ],
+      "build_items": [
+        "DA_Bloodthirster",
+        "DA_SteraksGage",
+        "DA_TitansResolve",
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice",
+        "DA_InfinityEdge",
+        "DA_Deathblade"
+      ]
+    },
+    "LeeSin19": {
+      "popular_items": [
+        "DA_SteraksGage",
+        "DA_EdgeOfNight",
+        "DA_Bloodthirster",
+        "DA_Quicksilver",
+        "DA_Heavenscale19_HeavenlyPrayer"
+      ],
+      "build_items": [
+        "DA_EdgeOfNight",
+        "heavenscale19_dangerousitem",
+        "DA_SteraksGage",
+        "DA_Bloodthirster",
+        "DA_TitansResolve"
+      ]
+    },
+    "Nidalee19": {
+      "popular_items": [
+        "DA_KDA19_Emblem",
+        "DA_VoidStaff",
+        "DA_AdaptiveHelm",
+        "DA_RabadonsDeathcap",
+        "DA_GiantSlayer"
+      ],
+      "build_items": [
+        "DA_GiantSlayer",
+        "DA_JeweledGauntlet",
+        "kda19_emblem",
+        "DA_StrikersFlail",
+        "DA_RabadonsDeathcap",
+        "DA_SpearOfShojin",
+        "DA_HandOfJustice"
+      ]
+    },
+    "Gwen19": {
+      "popular_items": [
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "DA_JeweledGauntlet",
+        "DA_IonicSpark",
+        "DA_StrikersFlail"
+      ],
+      "build_items": [
+        "DA_HandOfJustice",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_NashorsTooth",
+        "DA_IonicSpark",
+        "DA_EdgeOfNight",
+        "DA_VoidStaff"
+      ]
+    },
+    "Nunu19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_SunfireCape",
+        "DA_Morellonomicon",
+        "DA_AdaptiveHelm",
+        "DA_ProtectorsVow"
+      ],
+      "build_items": [
+        "DA_AdaptiveHelm",
+        "DA_IonicSpark",
+        "DA_SunfireCape",
+        "DA_Crownguard",
+        "DA_SpiritVisage",
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "DA_WarmogsArmor"
+      ]
+    },
+    "Garen19": {
+      "popular_items": [
+        "DA_Frontman19_Emblem",
+        "DA_IonicSpark",
+        "DA_KDA19_Emblem",
+        "DA_SteraksGage",
+        "DA_ProtectorsVow"
+      ],
+      "build_items": [
+        "DA_GargoyleStoneplate",
+        "kda19_emblem",
+        "DA_WarmogsArmor",
+        "frontman19_emblem",
+        "DA_ProtectorsVow",
+        "DA_SunfireCape",
+        "DA_IonicSpark",
+        "DA_SpiritVisage"
+      ]
+    },
+    "Ziggs19": {
+      "popular_items": [
+        "DA_GuinsoosRageblade",
+        "DA_HextechGunblade",
+        "DA_GiantSlayer",
+        "DA_RabadonsDeathcap",
+        "DA_JeweledGauntlet"
+      ],
+      "build_items": [
+        "DA_GuinsoosRageblade",
+        "DA_HextechGunblade",
+        "DA_RabadonsDeathcap",
+        "DA_RedBuff",
+        "DA_VoidStaff",
+        "DA_JeweledGauntlet",
+        "DA_GiantSlayer",
+        "DA_ArchangelsStaff"
+      ]
+    },
+    "Malzahar19": {
+      "popular_items": [
+        "DA_StrikersFlail",
+        "DA_JeweledGauntlet",
+        "DA_RabadonsDeathcap",
+        "DA_HextechGunblade",
+        "DA_GiantSlayer"
+      ],
+      "build_items": [
+        "DA_JeweledGauntlet",
+        "DA_RabadonsDeathcap",
+        "DA_StrikersFlail",
+        "DA_HextechGunblade",
+        "DA_ArchangelsStaff",
+        "DA_GiantSlayer"
+      ]
+    },
+    "Evelynn19": {
+      "popular_items": [
+        "DA_JeweledGauntlet",
+        "DA_NashorsTooth",
+        "DA_StrikersFlail",
+        "DA_VoidStaff",
+        "DA_RabadonsDeathcap"
+      ],
+      "build_items": [
+        "DA_HandOfJustice",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_NashorsTooth",
+        "DA_GiantSlayer",
+        "DA_RabadonsDeathcap",
+        "DA_Quicksilver"
+      ]
+    },
+    "Alistar19": {
+      "popular_items": [
+        "DA_Frontman19_Emblem",
+        "DA_IonicSpark",
+        "DA_SteadfastHeart",
+        "DA_ProtectorsVow",
+        "DA_AdaptiveHelm"
+      ],
+      "build_items": [
+        "DA_SteadfastHeart",
+        "DA_SunfireCape",
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage",
+        "DA_IonicSpark",
+        "DA_ProtectorsVow"
+      ]
+    },
+    "Mordekaiser19": {
+      "popular_items": [
+        "DA_GuinsoosRageblade",
+        "DA_EdgeOfNight",
+        "DA_Quicksilver",
+        "DA_Bloodthirster",
+        "DA_JeweledGauntlet"
+      ],
+      "build_items": [
+        "DA_Bloodthirster",
+        "DA_EdgeOfNight",
+        "DA_GuinsoosRageblade",
+        "DA_HandOfJustice",
+        "DA_JeweledGauntlet",
+        "DA_Quicksilver",
+        "DA_TitansResolve"
+      ]
+    },
+    "DrMundo19": {
+      "popular_items": [
+        "DA_SteadfastHeart",
+        "DA_IonicSpark",
+        "DA_Crownguard",
+        "DA_WarmogsArmor",
+        "DA_Frontman19_Emblem"
+      ],
+      "build_items": [
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_SteadfastHeart",
+        "DA_WarmogsArmor",
+        "DA_DragonsClaw",
+        "DA_Crownguard"
+      ]
+    },
+    "TwistedFate19": {
+      "popular_items": [
+        "DA_VoidStaff",
+        "DA_KDA19_Emblem",
+        "DA_Morellonomicon",
+        "DA_GiantSlayer",
+        "DA_RabadonsDeathcap"
+      ],
+      "build_items": [
+        "DA_GuinsoosRageblade",
+        "DA_HextechGunblade",
+        "DA_VoidStaff",
+        "kda19_emblem",
+        "DA_GiantSlayer",
+        "DA_RedBuff"
+      ]
+    },
+    "Vi19": {
+      "popular_items": [
+        "DA_SteraksGage",
+        "DA_Quicksilver",
+        "DA_GiantSlayer",
+        "DA_Evenshroud",
+        "DA_EdgeOfNight"
+      ],
+      "build_items": [
+        "DA_EdgeOfNight",
+        "DA_SteraksGage",
+        "DA_TitansResolve",
+        "DA_Bloodthirster",
+        "DA_Quicksilver",
+        "DA_HandOfJustice"
+      ]
+    },
+    "Zeri19": {
+      "popular_items": [
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_GiantSlayer",
+        "DA_StrikersFlail",
+        "DA_BlueBuff"
+      ],
+      "build_items": [
+        "DA_InfinityEdge",
+        "DA_SpearOfShojin",
+        "DA_StrikersFlail",
+        "DA_GiantSlayer",
+        "DA_LastWhisper",
+        "DA_RedBuff",
+        "DA_BlueBuff"
+      ]
+    },
+    "Tibbers19": {
+      "popular_items": [
+        "DA_Evenshroud",
+        "DA_SunfireCape",
+        "DA_IonicSpark",
+        "DA_Crownguard",
+        "DA_SpiritVisage"
+      ],
+      "build_items": [
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_SteadfastHeart",
+        "DA_IonicSpark",
+        "DA_SunfireCape",
+        "DA_Crownguard",
+        "DA_WarmogsArmor"
+      ]
+    },
+    "Neeko19": {
+      "popular_items": [
+        "DA_StrikersFlail",
+        "DA_JeweledGauntlet",
+        "DA_GiantSlayer",
+        "DA_SpearOfShojin",
+        "DA_VoidStaff"
+      ],
+      "build_items": [
+        "DA_JeweledGauntlet",
+        "DA_NashorsTooth",
+        "DA_StrikersFlail",
+        "DA_SpearOfShojin",
+        "DA_BlueBuff",
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "DA_GiantSlayer"
+      ]
+    },
+    "Leona19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_SunfireCape",
+        "DA_Crownguard",
+        "DA_WarmogsArmor",
+        "DA_SteadfastHeart"
+      ],
+      "build_items": [
+        "DA_GargoyleStoneplate",
+        "DA_IonicSpark",
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage",
+        "DA_Crownguard",
+        "DA_SunfireCape"
+      ]
+    },
+    "MissFortune19": {
+      "popular_items": [
+        "DA_IonicSpark19_Emblem",
+        "DA_RedBuff",
+        "DA_GiantSlayer",
+        "DA_LastWhisper",
+        "DA_Deathblade"
+      ],
+      "build_items": [
+        "DA_LastWhisper",
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_InfinityEdge",
+        "ionicspark19_emblem",
+        "DA_Deathblade",
+        "DA_StrikersFlail"
+      ]
+    },
+    "Shyvana19": {
+      "popular_items": [
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_IonicSpark",
+        "DA_ProtectorsVow",
+        "DA_Crownguard"
+      ],
+      "build_items": [
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_WarmogsArmor",
+        "DA_Evenshroud",
+        "DA_ProtectorsVow",
+        "DA_SunfireCape"
+      ]
+    },
+    "Kaisa19": {
+      "popular_items": [
+        "DA_RedBuff",
+        "DA_KrakensFury",
+        "DA_GiantSlayer",
+        "DA_Deathblade",
+        "DA_LastWhisper"
+      ],
+      "build_items": [
+        "DA_GuinsoosRageblade",
+        "DA_KrakensFury",
+        "DA_RedBuff",
+        "DA_Deathblade",
+        "DA_LastWhisper",
+        "DA_GiantSlayer"
+      ]
+    },
+    "Aphelios19": {
+      "popular_items": [
+        "DA_RedBuff",
+        "DA_KrakensFury",
+        "DA_LastWhisper",
+        "DA_Deathblade",
+        "DA_GiantSlayer"
+      ],
+      "build_items": [
+        "DA_GiantSlayer",
+        "DA_GuinsoosRageblade",
+        "DA_KrakensFury",
+        "DA_InfinityEdge",
+        "DA_StrikersFlail",
+        "DA_RedBuff",
+        "DA_Deathblade"
+      ]
+    },
+    "Rell19": {
+      "popular_items": [
+        "DA_Crownguard",
+        "DA_Evenshroud",
+        "DA_IonicSpark",
+        "DA_ProtectorsVow",
+        "DA_SteadfastHeart"
+      ],
+      "build_items": [
+        "DA_Crownguard",
+        "DA_GargoyleStoneplate",
+        "DA_ProtectorsVow",
+        "DA_SpiritVisage",
+        "DA_WarmogsArmor",
+        "DA_Evenshroud"
+      ]
+    },
+    "Akali_TrueDamage19": {
+      "popular_items": [
+        "DA_HandOfJusticeRadiant",
+        "DA_JeweledGauntletRadiant",
+        "DA_RabadonsDeathcap_Radiant",
+        "DA_GiantSlayer",
+        "DA_HextechGunblade"
+      ],
+      "build_items": [
+        "DA_EdgeOfNight",
+        "handofjusticeradiant",
+        "t_item_frame_radiant",
+        "DA_JeweledGauntlet",
+        "DA_HandOfJustice",
+        "jeweledgauntletradiant",
+        "DA_Quicksilver",
+        "DA_NashorsTooth",
+        "DA_HextechGunblade"
+      ]
+    },
+    "Alune19": {
+      "popular_items": [
+        "DA_RedBuff",
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "DA_GiantSlayer",
+        "DA_AdaptiveHelm"
+      ],
+      "build_items": [
+        "DA_BlueBuff",
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "DA_JeweledGauntlet",
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_AdaptiveHelm",
+        "DA_ArchangelsStaff"
+      ]
+    },
+    "Gragas19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_Crownguard",
+        "DA_GargoyleStoneplate",
+        "DA_GargoyleStoneplate",
+        "DA_SunfireCape"
+      ],
+      "build_items": [
+        "DA_Crownguard",
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor",
+        "DA_IonicSpark",
+        "DA_SpiritVisage",
+        "DA_SunfireCape"
+      ]
+    },
+    "Janna19": {
+      "popular_items": [
+        "DA_Heavenscale19_DangerousItem",
+        "DA_Heavenscale19_HeavenlyPrayer",
+        "DA_RedBuff",
+        "DA_Morellonomicon",
+        "DA_AdaptiveHelm"
+      ],
+      "build_items": [
+        "heavenscale19_dangerousitem",
+        "DA_Morellonomicon",
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_JeweledGauntlet",
+        "DA_BlueBuff",
+        "DA_AdaptiveHelm"
+      ]
+    },
+    "Aurora19": {
+      "popular_items": [
+        "DA_Morellonomicon",
+        "DA_RedBuff",
+        "DA_VoidStaff",
+        "DA_AdaptiveHelm",
+        "DA_BlueBuff"
+      ],
+      "build_items": [
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_Morellonomicon",
+        "DA_BlueBuff",
+        "DA_AdaptiveHelm",
+        "DA_ArchangelsStaff"
+      ]
+    },
+    "Lillia19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_Crownguard",
+        "DA_TitansResolve",
+        "DA_Bloodthirster",
+        "DA_SunfireCape"
+      ],
+      "build_items": [
+        "DA_ArchangelsStaff",
+        "DA_Bloodthirster",
+        "DA_TitansResolve",
+        "DA_GargoyleStoneplate",
+        "DA_IonicSpark",
+        "DA_WarmogsArmor",
+        "DA_Crownguard",
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice",
+        "DA_JeweledGauntlet",
+        "DA_SpiritVisage"
+      ]
+    },
+    "Lux19": {
+      "popular_items": [
+        "DA_GiantSlayer",
+        "DA_HextechGunblade",
+        "DA_Morellonomicon",
+        "DA_AdaptiveHelm",
+        "DA_ArchangelsStaff"
+      ],
+      "build_items": [
+        "DA_JeweledGauntlet",
+        "DA_NashorsTooth",
+        "DA_RabadonsDeathcap",
+        "DA_HextechGunblade",
+        "DA_SpearOfShojin",
+        "DA_StrikersFlail",
+        "DA_ArchangelsStaff",
+        "DA_AdaptiveHelm",
+        "DA_GiantSlayer"
+      ]
+    },
+    "Pyke19": {
+      "popular_items": [
+        "DA_SteraksGage",
+        "DA_Deathblade",
+        "DA_EdgeOfNight",
+        "DA_GiantSlayer",
+        "DA_HandOfJustice"
+      ],
+      "build_items": [
+        "DA_Deathblade",
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice",
+        "DA_InfinityEdge",
+        "DA_SteraksGage",
+        "DA_Bloodthirster"
+      ]
+    },
+    "Vladimir19": {
+      "popular_items": [
+        "DA_AdaptiveHelm",
+        "DA_Morellonomicon",
+        "DA_BlueBuff",
+        "DA_VoidStaff",
+        "DA_RedBuff"
+      ],
+      "build_items": [
+        "DA_AdaptiveHelm",
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "DA_ArchangelsStaff",
+        "DA_RabadonsDeathcap",
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_JeweledGauntlet"
+      ]
+    },
+    "Jinx19": {
+      "popular_items": [
+        "DA_GuinsoosRageblade",
+        "DA_KrakensFury",
+        "DA_InfinityEdge",
+        "DA_LastWhisper",
+        "DA_GiantSlayer"
+      ],
+      "build_items": [
+        "DA_GuinsoosRageblade",
+        "DA_InfinityEdge",
+        "DA_LastWhisper",
+        "DA_KrakensFury",
+        "DA_Deathblade",
+        "DA_StrikersFlail",
+        "DA_GiantSlayer"
+      ]
+    },
+    "Swain19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_SunfireCape",
+        "DA_SteadfastHeart",
+        "DA_AdaptiveHelm",
+        "DA_Crownguard"
+      ],
+      "build_items": [
+        "DA_IonicSpark",
+        "DA_ProtectorsVow",
+        "DA_SunfireCape",
+        "DA_GargoyleStoneplate",
+        "DA_DragonsClaw",
+        "DA_AdaptiveHelm",
+        "DA_SpiritVisage"
+      ]
+    },
+    "Elise19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_ProtectorsVow",
+        "DA_SunfireCape",
+        "DA_DragonsClaw",
+        "DA_AdaptiveHelm"
+      ],
+      "build_items": [
+        "DA_HandOfJustice",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_GiantSlayer",
+        "DA_Bloodthirster",
+        "DA_EdgeOfNight",
+        "DA_IonicSpark",
+        "DA_SunfireCape",
+        "DA_WarmogsArmor"
+      ]
+    },
+    "Taliyah19": {
+      "popular_items": [
+        "DA_Morellonomicon",
+        "DA_ArchangelsStaff",
+        "DA_RabadonsDeathcap",
+        "DA_HextechGunblade",
+        "DA_VoidStaff"
+      ],
+      "build_items": [
+        "DA_BlueBuff",
+        "DA_JeweledGauntlet",
+        "DA_RabadonsDeathcap",
+        "DA_ArchangelsStaff",
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_Morellonomicon"
+      ]
+    },
+    "Yorick19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_SunfireCape",
+        "DA_Evenshroud",
+        "DA_Crownguard",
+        "DA_WarmogsArmor"
+      ],
+      "build_items": [
+        "DA_IonicSpark",
+        "DA_SunfireCape",
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage",
+        "DA_GargoyleStoneplate",
+        "DA_Crownguard"
+      ]
+    },
+    "Kayle19": {
+      "popular_items": [
+        "DA_StrikersFlail",
+        "DA_JeweledGauntlet",
+        "DA_RedBuff",
+        "DA_VoidStaff",
+        "DA_GiantSlayer"
+      ],
+      "build_items": [
+        "DA_GuinsoosRageblade",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_GiantSlayer",
+        "DA_VoidStaff",
+        "DA_RabadonsDeathcap",
+        "DA_ArchangelsStaff"
+      ]
+    },
+    "Mel19": {
+      "popular_items": [
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "DA_RedBuff",
+        "DA_AdaptiveHelm",
+        "DA_ArchangelsStaff"
+      ],
+      "build_items": [
+        "DA_BlueBuff",
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_ArchangelsStaff",
+        "DA_RabadonsDeathcap"
+      ]
+    },
+    "Ekko19": {
+      "popular_items": [
+        "DA_Crownguard",
+        "DA_AdaptiveHelm",
+        "DA_GargoyleStoneplate",
+        "DA_GargoyleStoneplate",
+        "DA_IonicSpark"
+      ],
+      "build_items": [
+        "DA_AdaptiveHelm",
+        "DA_Crownguard",
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage"
+      ]
+    },
+    "Locke19": {
+      "popular_items": [
+        "DA_Pentakill19_Emblem",
+        "DA_IonicSpark",
+        "DA_RabadonsDeathcap",
+        "DA_Morellonomicon",
+        "DA_HextechGunblade"
+      ],
+      "build_items": [
+        "DA_HandOfJustice",
+        "DA_JeweledGauntlet",
+        "DA_Quicksilver",
+        "DA_StrikersFlail",
+        "DA_EdgeOfNight",
+        "DA_HextechGunblade",
+        "pentakill19_emblem"
+      ]
+    },
+    "Vayne19": {
+      "popular_items": [
+        "DA_KrakensFury",
+        "DA_LastWhisper",
+        "DA_GuinsoosRageblade",
+        "DA_GiantSlayer",
+        "DA_RedBuff"
+      ],
+      "build_items": [
+        "DA_GuinsoosRageblade",
+        "DA_KrakensFury",
+        "DA_LastWhisper",
+        "DA_Deathblade",
+        "DA_GiantSlayer",
+        "DA_InfinityEdge"
+      ]
+    },
+    "Yuumi19": {
+      "popular_items": [
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "TFT_Emblem_CHANGEME",
+        "DA_RedBuff",
+        "DA_KDA19_Emblem"
+      ],
+      "build_items": [
+        "DA_Morellonomicon",
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_ArchangelsStaff",
+        "DA_BlueBuff",
+        "DA_RedBuff",
+        "DA_HextechGunblade"
+      ]
+    },
+    "Annie19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_Crownguard",
+        "DA_ProtectorsVow",
+        "DA_SpiritVisage",
+        "DA_SunfireCape"
+      ],
+      "build_items": [
+        "DA_JeweledGauntlet",
+        "DA_SpearOfShojin",
+        "DA_StrikersFlail",
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_WarmogsArmor",
+        "DA_BlueBuff",
+        "DA_SunfireCape"
+      ]
+    },
+    "Wukong19": {
+      "popular_items": [
+        "DA_SpiritVisage",
+        "DA_ProtectorsVow",
+        "DA_Crownguard",
+        "DA_WarmogsArmor",
+        "DA_Evenshroud"
+      ],
+      "build_items": [
+        "DA_Crownguard",
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_WarmogsArmor",
+        "DA_ProtectorsVow"
+      ]
+    },
+    "Yone19": {
+      "popular_items": [
+        "DA_SteraksGage",
+        "DA_EdgeOfNight",
+        "DA_GiantSlayer",
+        "DA_HandOfJustice",
+        "DA_LastWhisper"
+      ],
+      "build_items": [
+        "DA_EdgeOfNight",
+        "DA_SteraksGage",
+        "DA_TitansResolve",
+        "DA_Bloodthirster",
+        "DA_Quicksilver",
+        "DA_HandOfJustice"
+      ]
+    },
+    "Braum19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "TFT_Emblem_CHANGEME",
+        "DA_Crownguard",
+        "DA_ProtectorsVow",
+        "DA_DragonsClaw"
+      ],
+      "build_items": [
+        "DA_Crownguard",
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage",
+        "DA_IonicSpark",
+        "DA_ProtectorsVow",
+        "DA_SunfireCape",
+        "DA_DragonsClaw"
+      ]
+    },
+    "Zac19": {
+      "popular_items": [
+        "DA_GargoyleStoneplate",
+        "DA_Crownguard",
+        "DA_SunfireCape",
+        "DA_IonicSpark",
+        "DA_ProtectorsVow"
+      ],
+      "build_items": [
+        "DA_GargoyleStoneplate",
+        "DA_SteadfastHeart",
+        "DA_WarmogsArmor",
+        "DA_Crownguard",
+        "DA_SpiritVisage",
+        "DA_SunfireCape"
+      ]
+    },
+    "Briar19": {
+      "popular_items": [
+        "DA_SteraksGage",
+        "DA_InfinityEdge",
+        "DA_TitansResolve",
+        "DA_Deathblade",
+        "DA_GiantSlayer"
+      ],
+      "build_items": [
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice",
+        "DA_InfinityEdge",
+        "DA_TitansResolve",
+        "DA_Bloodthirster",
+        "DA_SteraksGage",
+        "DA_Deathblade"
+      ]
+    },
+    "Viego19": {
+      "popular_items": [
+        "DA_GiantSlayer",
+        "DA_InfinityEdge",
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice",
+        "DA_TitansResolve"
+      ],
+      "build_items": [
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice",
+        "DA_InfinityEdge",
+        "DA_Bloodthirster",
+        "DA_TitansResolve",
+        "DA_GiantSlayer"
+      ]
+    },
+    "Graves19": {
+      "popular_items": [
+        "DA_SteraksGage",
+        "DA_LastWhisper",
+        "DA_StrikersFlail",
+        "DA_Deathblade",
+        "DA_GiantSlayer"
+      ],
+      "build_items": [
+        "DA_HandOfJustice",
+        "DA_SteraksGage",
+        "DA_TitansResolve",
+        "DA_Quicksilver",
+        "DA_EdgeOfNight",
+        "DA_StrikersFlail",
+        "DA_Bloodthirster",
+        "DA_Deathblade",
+        "DA_InfinityEdge"
+      ]
+    },
+    "Thresh19": {
+      "popular_items": [
+        "DA_GargoyleStoneplate",
+        "DA_ProtectorsVow",
+        "DA_SpiritVisage",
+        "DA_Crownguard",
+        "DA_Bodyguard19_Emblem"
+      ],
+      "build_items": [
+        "DA_GargoyleStoneplate",
+        "DA_ProtectorsVow",
+        "DA_SpiritVisage",
+        "DA_WarmogsArmor",
+        "DA_Crownguard"
+      ]
+    },
+    "Xayah19": {
+      "popular_items": [
+        "DA_Heavenscale19_DangerousItem",
+        "DA_Heavenscale19_HeavenlyPrayer",
+        "DA_StrikersFlail",
+        "DA_GiantSlayer",
+        "DA_BlueBuff"
+      ],
+      "build_items": [
+        "heavenscale19_dangerousitem",
+        "DA_InfinityEdge",
+        "DA_LastWhisper",
+        "DA_GuinsoosRageblade",
+        "DA_SpearOfShojin",
+        "DA_StrikersFlail",
+        "heavenscale19_heavenlyprayer"
+      ]
+    },
+    "KSante19": {
+      "popular_items": [
+        "DA_Evenshroud",
+        "DA_ProtectorsVow",
+        "DA_Crownguard",
+        "DA_SunfireCape",
+        "DA_SpiritVisage"
+      ],
+      "build_items": [
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_WarmogsArmor",
+        "DA_Evenshroud",
+        "DA_ProtectorsVow",
+        "DA_SunfireCape",
+        "DA_BrambleVest"
+      ]
+    },
+    "Olaf19": {
+      "popular_items": [
+        "DA_Evenshroud",
+        "DA_SunfireCape",
+        "DA_KrakensFury",
+        "DA_InfinityEdge",
+        "DA_GuinsoosRageblade"
+      ],
+      "build_items": [
+        "DA_GuinsoosRageblade",
+        "DA_InfinityEdge",
+        "DA_KrakensFury",
+        "DA_GiantSlayer",
+        "DA_Deathblade",
+        "DA_GargoyleStoneplate",
+        "DA_SunfireCape",
+        "DA_WarmogsArmor",
+        "DA_HextechGunblade"
+      ]
+    },
+    "Karthus19": {
+      "popular_items": [
+        "DA_BlueBuff",
+        "DA_RabadonsDeathcap",
+        "DA_GiantSlayer",
+        "DA_StrikersFlail",
+        "DA_VoidStaff"
+      ],
+      "build_items": [
+        "DA_JeweledGauntlet",
+        "DA_NashorsTooth",
+        "DA_StrikersFlail",
+        "DA_RabadonsDeathcap",
+        "DA_SpearOfShojin",
+        "DA_BlueBuff",
+        "artifact_ludenstempest",
+        "t_item_frame_artifact",
+        "DA_HextechGunblade"
+      ]
+    },
+    "Jhin19": {
+      "popular_items": [
+        "DA_LastWhisper",
+        "DA_StrikersFlail",
+        "DA_Deathblade",
+        "DA_InfinityEdge",
+        "DA_RedBuff"
+      ],
+      "build_items": [
+        "DA_Deathblade",
+        "DA_InfinityEdge",
+        "DA_LastWhisper",
+        "DA_GiantSlayer",
+        "DA_GuinsoosRageblade",
+        "DA_StrikersFlail"
+      ]
+    },
+    "Galio19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_SunfireCape",
+        "DA_Crownguard",
+        "DA_Evenshroud",
+        "DA_ProtectorsVow"
+      ],
+      "build_items": [
+        "DA_Crownguard",
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage",
+        "DA_Evenshroud",
+        "DA_SunfireCape",
+        "DA_DragonsClaw",
+        "DA_IonicSpark"
+      ]
+    },
+    "Jax19": {
+      "popular_items": [
+        "DA_SpearOfShojin",
+        "DA_TitansResolve",
+        "DA_Bloodthirster",
+        "DA_JeweledGauntlet",
+        "DA_EdgeOfNight"
+      ],
+      "build_items": [
+        "DA_Bloodthirster",
+        "DA_SpearOfShojin",
+        "DA_TitansResolve",
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice",
+        "DA_JeweledGauntlet",
+        "artifact_navoriflickerblade",
+        "t_item_frame_artifact"
+      ]
+    },
+    "Camille19": {
+      "popular_items": [
+        "DA_InfinityEdge",
+        "DA_Deathblade",
+        "DA_GiantSlayer",
+        "DA_HandOfJustice",
+        "DA_Quicksilver"
+      ],
+      "build_items": [
+        "DA_HandOfJustice",
+        "DA_InfinityEdge",
+        "DA_Quicksilver",
+        "DA_TitansResolve",
+        "DA_Bloodthirster",
+        "DA_SteraksGage"
+      ]
+    },
+    "Gnar19": {
+      "popular_items": [
+        "DA_LastWhisper",
+        "DA_Deathblade",
+        "DA_KrakensFury",
+        "DA_InfinityEdge",
+        "DA_GuinsoosRageblade"
+      ],
+      "build_items": [
+        "DA_Deathblade",
+        "DA_GiantSlayer",
+        "DA_GuinsoosRageblade",
+        "DA_HextechGunblade",
+        "DA_LastWhisper",
+        "DA_InfinityEdge",
+        "DA_KrakensFury"
+      ]
+    },
+    "Amumu19": {
+      "popular_items": [
+        "TFT_Emblem_CHANGEME",
+        "DA_GargoyleStoneplate",
+        "DA_Crownguard",
+        "DA_SpiritVisage",
+        "DA_SteadfastHeart"
+      ],
+      "build_items": [
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor",
+        "tft_emblem_changeme",
+        "DA_SpiritVisage",
+        "DA_DragonsClaw",
+        "DA_Crownguard"
+      ]
+    },
+    "Yasuo19": {
+      "popular_items": [
+        "DA_SteraksGage",
+        "DA_Deathblade",
+        "DA_GiantSlayer",
+        "DA_Quicksilver",
+        "DA_EdgeOfNight"
+      ],
+      "build_items": [
+        "DA_HandOfJustice",
+        "DA_Quicksilver",
+        "steraksgageradiant",
+        "t_item_frame_radiant",
+        "DA_EdgeOfNight",
+        "DA_GiantSlayer",
+        "DA_Bloodthirster",
+        "DA_SteraksGage",
+        "DA_TitansResolve",
+        "DA_InfinityEdge"
+      ]
+    },
+    "Samira19": {
+      "popular_items": [
+        "DA_KDA19_Emblem",
+        "DA_RedBuff",
+        "DA_LastWhisper",
+        "DA_GiantSlayer",
+        "DA_HextechGunblade"
+      ],
+      "build_items": [
+        "DA_InfinityEdge",
+        "kda19_emblem",
+        "DA_LastWhisper",
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_GuinsoosRageblade"
+      ]
+    },
+    "Yunara19": {
+      "popular_items": [
+        "DA_GuinsoosRageblade",
+        "DA_KrakensFury",
+        "DA_GlitterBomb19_Emblem",
+        "DA_Deathblade",
+        "DA_GiantSlayer"
+      ],
+      "build_items": [
+        "DA_Deathblade",
+        "DA_GuinsoosRageblade",
+        "DA_InfinityEdge",
+        "DA_KrakensFury",
+        "DA_RedBuff",
+        "DA_LastWhisper"
+      ]
+    },
+    "Syndra19": {
+      "popular_items": [
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "DA_RedBuff",
+        "DA_RabadonsDeathcap",
+        "DA_ArchangelsStaff"
+      ],
+      "build_items": [
+        "DA_Morellonomicon",
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_JeweledGauntlet",
+        "DA_NashorsTooth",
+        "DA_RabadonsDeathcap",
+        "DA_BlueBuff",
+        "DA_ArchangelsStaff",
+        "DA_HextechGunblade"
+      ]
+    },
+    "Lucian19": {
+      "popular_items": [
+        "DA_GiantSlayer",
+        "DA_LastWhisper",
+        "DA_StrikersFlail",
+        "DA_Deathblade",
+        "DA_RedBuff"
+      ],
+      "build_items": [
+        "DA_InfinityEdge",
+        "DA_LastWhisper",
+        "DA_SpearOfShojin",
+        "DA_StrikersFlail",
+        "DA_Deathblade",
+        "DA_BlueBuff",
+        "DA_GiantSlayer"
+      ]
+    },
+    "Kayn19": {
+      "popular_items": [
+        "DA_InfinityEdge",
+        "DA_SteraksGage",
+        "DA_HandOfJustice",
+        "DA_TitansResolve",
+        "DA_EdgeOfNight"
+      ],
+      "build_items": [
+        "DA_HandOfJustice",
+        "DA_InfinityEdge",
+        "DA_TitansResolve",
+        "DA_EdgeOfNight",
+        "DA_SteraksGage",
+        "DA_Deathblade"
+      ]
+    },
+    "Varus19": {
+      "popular_items": [
+        "DA_KDA19_Emblem",
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_BlueBuff",
+        "DA_LastWhisper"
+      ],
+      "build_items": [
+        "DA_BlueBuff",
+        "DA_InfinityEdge",
+        "DA_LastWhisper",
+        "DA_GiantSlayer",
+        "DA_SpearOfShojin",
+        "DA_Deathblade",
+        "DA_RedBuff",
+        "DA_GuinsoosRageblade"
+      ]
+    },
+    "Bard19": {
+      "popular_items": [
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "DA_RedBuff",
+        "DA_ArchangelsStaff",
+        "DA_Arcanist19_Emblem"
+      ],
+      "build_items": [
+        "DA_Morellonomicon",
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_RedBuff",
+        "DA_GuinsoosRageblade",
+        "DA_RabadonsDeathcap",
+        "DA_ArchangelsStaff",
+        "DA_JeweledGauntlet"
+      ]
+    },
+    "Sett19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_SunfireCape",
+        "DA_GlitterBomb19_Emblem",
+        "DA_ProtectorsVow",
+        "DA_Evenshroud"
+      ],
+      "build_items": [
+        "DA_SpiritVisage",
+        "DA_SunfireCape",
+        "DA_WarmogsArmor",
+        "DA_IonicSpark",
+        "DA_GargoyleStoneplate",
+        "DA_Crownguard"
+      ]
+    },
+    "Nasus19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_TitansResolve",
+        "DA_ArchangelsStaff",
+        "DA_AdaptiveHelm",
+        "DA_Crownguard"
+      ],
+      "build_items": [
+        "DA_AdaptiveHelm",
+        "DA_ArchangelsStaff",
+        "DA_TitansResolve",
+        "DA_IonicSpark",
+        "DA_SpiritVisage",
+        "DA_SunfireCape",
+        "DA_Crownguard",
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor"
+      ]
+    },
+    "Ezreal19": {
+      "popular_items": [
+        "DA_SpearOfShojin",
+        "DA_BlueBuff",
+        "DA_InfinityEdge",
+        "DA_RedBuff",
+        "DA_StrikersFlail"
+      ],
+      "build_items": [
+        "DA_BlueBuff",
+        "DA_InfinityEdge",
+        "DA_StrikersFlail",
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_Deathblade"
+      ]
+    },
+    "RenataGlasc19": {
+      "popular_items": [
+        "DA_HextechGunblade",
+        "DA_ArchangelsStaff",
+        "DA_SpearOfShojin",
+        "DA_RedBuff",
+        "DA_VoidStaff"
+      ],
+      "build_items": [
+        "DA_ArchangelsStaff",
+        "DA_HextechGunblade",
+        "DA_SpearOfShojin",
+        "DA_BlueBuff",
+        "DA_AdaptiveHelm",
+        "DA_Morellonomicon",
+        "DA_VoidStaff"
+      ]
+    },
+    "Ashe19": {
+      "popular_items": [
+        "DA_KrakensFury",
+        "DA_LastWhisper",
+        "DA_GuinsoosRageblade",
+        "DA_HextechGunblade",
+        "DA_Deathblade"
+      ],
+      "build_items": [
+        "DA_GuinsoosRageblade",
+        "DA_KrakensFury",
+        "DA_LastWhisper",
+        "DA_InfinityEdge",
+        "DA_RedBuff"
+      ]
+    },
+    "Renekton19": {
+      "popular_items": [
+        "DA_SteraksGage",
+        "DA_InfinityEdge",
+        "DA_SunfireCape",
+        "DA_TitansResolve",
+        "DA_Bloodthirster"
+      ],
+      "build_items": [
+        "DA_Bloodthirster",
+        "DA_SteraksGage",
+        "DA_TitansResolve",
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_SunfireCape",
+        "DA_HandOfJustice",
+        "DA_WarmogsArmor",
+        "DA_InfinityEdge"
+      ]
+    },
+    "Illaoi19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_SunfireCape",
+        "DA_GlitterBomb19_Emblem",
+        "DA_DragonsClaw",
+        "DA_Crownguard"
+      ],
+      "build_items": [
+        "DA_BrambleVest",
+        "DA_DragonsClaw",
+        "DA_SunfireCape",
+        "DA_Crownguard",
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_AdaptiveHelm",
+        "DA_SteadfastHeart"
+      ]
+    },
+    "Taric19": {
+      "popular_items": [
+        "DA_IonicSpark",
+        "DA_Crownguard",
+        "DA_SunfireCape",
+        "DA_Evenshroud",
+        "DA_ProtectorsVow"
+      ],
+      "build_items": [
+        "DA_GargoyleStoneplate",
+        "DA_ProtectorsVow",
+        "DA_SpiritVisage",
+        "DA_Crownguard",
+        "DA_DragonsClaw",
+        "DA_SteadfastHeart",
+        "DA_WarmogsArmor",
+        "DA_Evenshroud",
+        "DA_SunfireCape"
+      ]
+    },
+    "Draven19": {
+      "popular_items": [
+        "DA_SpearOfShojin",
+        "DA_LastWhisper",
+        "DA_Deathblade",
+        "DA_InfinityEdge",
+        "DA_StrikersFlail"
+      ],
+      "build_items": [
+        "DA_Deathblade",
+        "DA_InfinityEdge",
+        "DA_SpearOfShojin",
+        "DA_BlueBuff",
+        "DA_LastWhisper",
+        "DA_RedBuff",
+        "DA_StrikersFlail",
+        "artifact_goldcollector",
+        "t_item_frame_artifact"
+      ]
+    },
+    "Zoe19": {
+      "popular_items": [
+        "DA_GiantSlayer",
+        "DA_BlueBuff",
+        "DA_AdaptiveHelm",
+        "DA_SpearOfShojin",
+        "DA_RabadonsDeathcap"
+      ],
+      "build_items": [
+        "DA_BlueBuff",
+        "DA_JeweledGauntlet",
+        "DA_RabadonsDeathcap",
+        "DA_AdaptiveHelm",
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_RedBuff"
+      ]
+    },
+    "Katarina19": {
+      "popular_items": [
+        "DA_JeweledGauntlet",
+        "DA_EdgeOfNight",
+        "DA_IonicSpark",
+        "DA_HandOfJustice",
+        "DA_StrikersFlail"
+      ],
+      "build_items": [
+        "DA_HandOfJustice",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_EdgeOfNight",
+        "DA_IonicSpark"
+      ]
+    },
+    "Senna19": {
+      "popular_items": [
+        "DA_Deathblade",
+        "DA_LastWhisper",
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_GiantSlayer"
+      ],
+      "build_items": [
+        "DA_GiantSlayer",
+        "DA_InfinityEdge",
+        "DA_SpearOfShojin",
+        "DA_Deathblade",
+        "DA_LastWhisper",
+        "DA_StrikersFlail",
+        "DA_RedBuff"
+      ]
+    },
+    "Kennen19": {
+      "popular_items": [
+        "DA_JeweledGauntlet",
+        "DA_HandOfJustice",
+        "DA_EdgeOfNight",
+        "DA_Bloodthirster",
+        "DA_HextechGunblade"
+      ],
+      "build_items": [
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_RabadonsDeathcap",
+        "DA_NashorsTooth",
+        "DA_HextechGunblade"
+      ]
+    },
+    "Qiyana19": {
+      "popular_items": [
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice",
+        "DA_StrikersFlail",
+        "DA_SteraksGage",
+        "DA_Deathblade"
+      ],
+      "build_items": [
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice",
+        "DA_StrikersFlail",
+        "DA_SteraksGage",
+        "DA_TitansResolve",
+        "DA_Quicksilver"
+      ]
+    }
+  }
+}

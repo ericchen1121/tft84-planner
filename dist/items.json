@@ -1005,6 +1005,13 @@
       "name": "Quicksilver Radiant",
       "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_quicksilverradiant.png",
       "source": "https://www.metatft.com/items/DA_QuicksilverRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_AdaptiveHelm",
+      "name_zh": "適性神盔",
+      "name": "Adaptive Helm",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_adaptivehelm.png",
+      "source": "https://www.metatft.com/items/DA_AdaptiveHelm?set=TFTSet19"
     }
   ]
 }
