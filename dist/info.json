@@ -4,7 +4,7 @@
     "https://www.metatft.com/new-set",
     "https://tactics.tools/info/set-update"
   ],
-  "notes": "Chinese names and ability titles follow MetaTFT zh-TW, including deliberate English fallbacks. Chinese ability descriptions are concise paraphrases of translated source text; English summaries and unlock conditions use the existing tactics.tools snapshot. Numeric ability scaling is intentionally omitted.",
+  "notes": "Full ability text and all available numeric values from MetaTFT Set 19 zh-TW. Slash-separated values follow source star-level ordering. Missing source fields stay explicitly unavailable. Whitespace and repeated tooltip echoes are normalized. Recommendation slots are reserved, with no invented recommendations. Solver roster and verified preset are unchanged. English source takes precedence for incomplete/stale translations (notably Vladimir and Rakan unlock conditions). Info unlock labels reflect current MetaTFT; solver unlock flags remain the existing snapshot.",
   "units": {
     "u0": {
       "name_zh": "伊莉絲",
@@ -14,7 +14,12 @@
       "description": "Transform into Spider Form, gaining Health. Fire webbing at the enemy that dealt the most damage this round, stunning the first enemy hit and dealing magic damage. Subsequent casts heal, then fire webbing.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Transform into Spider Form, gaining 280/330/400 Health. Then, fire webbing at the enemy that dealt the most damage this round, Stunning the first enemy hit for 1.5 seconds and dealing 90/135/200 magic damage.\n\nSubsequent casts heal 230/300/350, then fire webbing.",
+      "full_mana": "60/120",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u1": {
       "name_zh": "吶兒",
@@ -24,7 +29,12 @@
       "description": "Passive: Every 3rd attack is replaced with a rock that deals physical damage and grants Gnar Attack Speed.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: Every 3rd attack is replaced with a rock that deals 120/180/270 physical damage and grants Gnar 1.09 Attack Speed.",
+      "full_mana": "0/3",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u2": {
       "name_zh": "卡特蓮娜",
@@ -34,7 +44,12 @@
       "description": "Twirl, slashing adjacent enemies for magic damage, then eviscerate the current target for magic damage. Enemies hit are Captivated, and Captivated enemies grant bonuses to Classical champions.",
       "description_zh": "旋轉斬擊鄰近敵軍，接著對目前目標造成較高魔法傷害。被命中的敵軍會進入迷倒狀態。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "旋轉並斬擊相鄰敵軍，造成120/180/285魔法傷害。接著，將當前目標開膛破肚，造成240/360/575魔法傷害。被命中的敵軍進入迷倒狀態，持續5秒。\n\n被迷倒的敵軍會賦予古典樂英雄加成效果。",
+      "full_mana": "0/40",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u3": {
       "name_zh": "慨影",
@@ -44,7 +59,12 @@
       "description": "Dash and swipe, dealing physical damage to enemies in a 2-hex line. With the Heartsteel upgrade, transform into the Shadow Assassin at a health threshold, briefly becoming untargetable and dealing bonus magic damage for the rest of combat.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Dash and swipe, dealing 130/200/315 physical damage to enemies in a 2 hex line.\n\nHeartsteel Upgrade: At 70% Health, turn into the Shadow Assassin, briefly becoming untargetable and dealing 35% bonus magic damage for the rest of combat.",
+      "full_mana": "0/30",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u4": {
       "name_zh": "凱能",
@@ -54,7 +74,12 @@
       "description": "Passive: Reduce all incoming damage. Every second, zap adjacent enemies, dealing magic damage.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: Reduce all incoming damage by 12/15/19. Every second, zap adjacent enemies, dealing 12/18/30 magic damage.",
+      "full_mana": "0/0",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u5": {
       "name_zh": "柯布柯",
@@ -64,7 +89,14 @@
       "description": "Passive: Your strongest Kobuko gains bonus Health based on Hyperpop Hype.\n\nActive: Amp Up, healing each second for the duration.",
       "description_zh": "最強大的柯布柯依超能流行熱潮獲得額外生命。主動進入嗨起來狀態並持續回復生命；來源尚有未公開數值。",
       "unlock": "Reach the required star level on Ziggs and equip the required number of items to him.",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: Your strongest Kobuko gains bonus Health equal to [unavailable] of your Hyperpop Hype. (Current Health: –)\n\nActive: Amp Up for [unavailable] seconds, healing ? each second.",
+      "full_mana": "40/90",
+      "source_missing_values": true,
+      "recommended_items": [],
+      "full_unlock": [
+        "2-star Ziggs with 1 item"
+      ]
     },
     "u6": {
       "name_zh": "莉莉亞",
@@ -74,7 +106,12 @@
       "description": "Heals and strikes the target, dealing magic damage to nearby enemies and weakening them for a duration. Weakening reduces damage dealt.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Heal 280/350/550 Health and strike the target, dealing 120/180/270 magic damage to enemies in a 1 Hex circle and 10% Weakening them for 5 seconds.\n\nWeaken: Reduce Damage Dealt",
+      "full_mana": "40/100",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u7": {
       "name_zh": "妮可",
@@ -84,7 +121,12 @@
       "description": "Convene the K/DA fan club and throw confetti streams at the target, each dealing magic damage. If a stream kills, permanently gain Ability Power.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Convene the K/DA fan club, throwing 3 confetti streams at target that each deal 75/115/175 magic damage. If they kill, permanently gain 1% Ability Power.\n\nCurrent Bonus: – Ability Power",
+      "full_mana": "0/40",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u8": {
       "name_zh": "歐拉夫",
@@ -94,7 +136,12 @@
       "description": "Passive: On attack, heal. On death, instead heal to full and gain Attack Speed, but lose a percentage of maximum Health each second.",
       "description_zh": "普攻會治療自己。首次死亡時改為回滿生命並提高攻速，但之後會持續損失生命。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "被動：普攻時回復18.5/22.5/31.5生命。\n\n死亡時，改為回復至滿血並增加攻速，但每秒持續損失最大生命。",
+      "full_mana": "0/0",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u9": {
       "name_zh": "賽特",
@@ -104,7 +151,12 @@
       "description": "Passive: Gain more maximum Health from all sources.\n\nActive: Heal, then strike the target twice, dealing physical damage with each hit.\n\nHeartsteel Upgrade: Periodically heal a portion of maximum Health, increased based on missing Health.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: Gain 30% more max Health from all sources.\n\nActive: Heal 228/238/248. Strike the target twice, dealing 49 physical damage on each hit.\n\nHeartsteel Upgrade: Every 4 seconds, heal 4% max Health, increased by up to 100% based on missing Health.",
+      "full_mana": "30/90",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u10": {
       "name_zh": "塔里克",
@@ -114,7 +166,12 @@
       "description": "Grant a shield to Taric and a nearby damaged ally for a duration.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Grant 275/350/500 Shield to Taric and a nearby damaged ally for 4 seconds.",
+      "full_mana": "30/90",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u11": {
       "name_zh": "法洛士",
@@ -124,7 +181,12 @@
       "description": "Fire a hail of arrows, dealing physical damage to the target and damage to adjacent enemies. Slow them, reducing their Attack Speed.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Fire a hail of arrows, dealing 260/390/590 physical damage to the target and 130/195/295 damage to adjacent enemies. 20% Slow them for 4 seconds.\n\nSlow: Reduce Attack Speed",
+      "full_mana": "30/70",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u12": {
       "name_zh": "尤娜拉",
@@ -134,7 +196,12 @@
       "description": "For the rest of combat, attacks fire an additional orb that deals physical damage.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "For the rest of combat, attacks fire an additional orb that deals 16/25/37 physical damage.",
+      "full_mana": "50/80",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u13": {
       "name_zh": "希格斯",
@@ -144,7 +211,12 @@
       "description": "Passive: Attacks deal bonus magic damage.\n\nActive: Throw a bomb at the target, dealing magic damage to them and adjacent enemies.",
       "description_zh": "普攻附帶額外魔法傷害。主動向目標投擲炸彈，傷害目標及相鄰敵軍；來源尚有未公開數值。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "被動：普攻造成?額外魔法傷害。\n\n主動：向目標投擲炸彈，對其造成?魔法傷害，並對相鄰敵軍造成?魔法傷害。",
+      "full_mana": "0/50",
+      "source_missing_values": true,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u14": {
       "name_zh": "柔依",
@@ -154,7 +226,12 @@
       "description": "Fires a paddle ball backwards, then redirects it toward the farthest enemy, dealing magic damage to the first enemy hit. If that enemy dies, the ball ricochets to the next enemy hit and deals excess damage.",
       "description_zh": "向後發射彈力球，再導向最遠敵軍，傷害沿途第一個目標。若目標死亡，溢出傷害轉移至下一名敵軍。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "向後發射一顆彈力球，將其導向距離最遠的敵軍，對命中的第一個敵軍造成450/675/1000魔法傷害。若目標死亡，彈力球會彈跳至下一名敵軍，將溢出的傷害轉移給該敵軍。",
+      "full_mana": "15/90",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u15": {
       "name_zh": "安妮",
@@ -164,7 +241,12 @@
       "description": "Gain a shield, then unleash a cone of fire that deals magic damage to enemies and Burns and Wounds them for 4 seconds.",
       "description_zh": "獲得護盾，噴出扇形火焰造成魔法傷害，並施加燃燒與重創。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "獲得350/425/600護盾，持續4秒。朝扇形範圍噴射火焰，對敵軍造成80/120/180魔法傷害、1%燃燒和重創，持續4秒。",
+      "full_mana": "20/80",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u16": {
       "name_zh": "艾希",
@@ -174,7 +256,14 @@
       "description": "Her next attacks gain Attack Speed and become flurries of arrows. Each arrow deals physical damage.",
       "description_zh": "強化接下來數次普攻，提高攻速並使每次攻擊連射三支箭。",
       "unlock": "Equip the required number of items to a Beach Pop champion.",
-      "unlock_zh": "海灘流行樂英雄裝備2件道具。"
+      "unlock_zh": "海灘流行樂英雄裝備2件道具。",
+      "full_description": "接下來6次普攻會提升50%攻速，且每次都會連射3支箭。每支箭矢造成33/50/75物理傷害。",
+      "full_mana": "20/60",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "A Beach Pop Champion with 2 items."
+      ]
     },
     "u17": {
       "name_zh": null,
@@ -184,7 +273,12 @@
       "description": "Passive: When the target dies, hookshot to the next target and deal physical damage to them.\n\nActive: Sweep-kick in a cone, dealing physical damage.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: When the target dies, hookshot to the next one and deal 90/135/210 physical damage to them.\n\nActive: Do a sweeping kick, dealing 260/390/600 physical damage in a cone.",
+      "full_mana": "0/40",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u18": {
       "name_zh": "伊澤瑞爾",
@@ -194,7 +288,12 @@
       "description": "Fire a missile that marks the target, then launch a second blast that detonates the mark, dealing physical damage to the target and units within 1 Hex.\n\nHeartsteel Upgrade: The detonation deals increased damage. Every 3rd cast hits enemies within a 2 Hex radius instead.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Fire a missile that marks the target, then fire a second blast that detonates it. The explosion deals 220/330/500 physical damage to the target and 72.6/108.9/165 physical damage to enemies within 1 hex.\n\nHeartsteel Upgrade: Detonation deals 25% more damage. Every 3rd cast hits enemies in a 2 hex radius instead.",
+      "full_mana": "0/35",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u19": {
       "name_zh": "古拉格斯",
@@ -204,7 +303,12 @@
       "description": "Become boisterous, restoring Health each second and dealing bonus magic damage on attack. For each 3-star K/DA ally, both effects increase.",
       "description_zh": "短暫進入喧鬧狀態，持續回復生命並讓普攻附帶魔法傷害。三星K/DA友軍會提高這兩種效果。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "變得喧鬧5秒，每秒回復75/80/87生命，且普攻時會造成117/137/157額外魔法傷害。\n\n每擁有1位3星K/DA友軍，這兩個效果就會提升15%。(總提升：?)",
+      "full_mana": "30/80",
+      "source_missing_values": true,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u20": {
       "name_zh": "伊羅旖",
@@ -214,7 +318,12 @@
       "description": "Active: Heal and deal magic damage in a 2-hex line.\n\nQuest: On cast during player combat, gain Fame, with bonus Fame for every 10g you have up to a gold cap. At the Fame threshold, go Platinum, gaining Durability and dropping gold on cast instead.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Active: Heal 275/325/475 and deal 120/180/270 magic damage in a 2 hex line.\n\nQuest: On cast during player combat, Illaoi gains 2 Fame + 1 more for every 10g you have, up to 70g. At 200 Fame, Illaoi goes Platinum, gaining 15% Durability and dropping 1 gold on cast instead.\n\n(Current Fame: –/200) Illaoi has gone Platinum! (Gold Generated: –)",
+      "full_mana": "30/90",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u21": {
       "name_zh": "賈克斯",
@@ -224,7 +333,12 @@
       "description": "Bash the current target, dealing magic damage and healing for a percentage of damage dealt. Gain Attack Speed for the rest of combat.\n\nEDM Upgrade: Fire beams at nearby enemies, dealing magic damage reduced for each enemy the beams pass through.",
       "description_zh": "盾擊目標造成魔法傷害並依傷害治療自己，同時提高整場戰鬥的攻速。電子舞曲升級可向附近敵軍發射穿透光束。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "盾擊當前目標，造成200/300/480魔法傷害，並回復所造成傷害20%的生命。提升15%攻速，持續到戰鬥結束。\n\n電子舞曲升級：向2名最靠近的敵軍發射光束，造成50/75/115魔法傷害，光束每穿透一名敵軍，傷害減少40%。",
+      "full_mana": "0/30",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u22": {
       "name_zh": "卡爾瑟斯",
@@ -234,7 +348,12 @@
       "description": "After a brief delay, deal magic damage to the current target. If they die, recast this ability at reduced effectiveness.",
       "description_zh": "短暫延遲後對目標造成魔法傷害。若目標死亡，以較低效果再次施放。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "短暫延遲後，對當前目標造成440/660/930魔法傷害。如果該目標死亡，會以70%的效果重新施放此技能。",
+      "full_mana": "10/50",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u23": {
       "name_zh": null,
@@ -244,7 +363,12 @@
       "description": "Dash to a nearby hex, then fire 2 shots at the target, each dealing physical damage.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Dash to a nearby hex, then fire 2 shots at target that each deal 88/132/198 physical damage.",
+      "full_mana": "0/20",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u24": {
       "name_zh": "露璐",
@@ -254,7 +378,14 @@
       "description": "Rotate between two effects: Whimsy! grants an ally decaying Attack Speed and deals magic damage on hit. Wild Growth increases an ally’s Health; while active, adjacent enemies take magic damage each second.",
       "description_zh": null,
       "unlock": "Have your Hyperpop champions cast the required number of times with the trait active.",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Rotate between 2 effects:\n\nWhimsy!: Grant an ally 80%/90%/100% decaying Attack Speed and 20/30/45 magic damage on hit for 5 seconds.\n\nWild Growth: Increase an ally's Health by 175/260/395 for 5 seconds. While active, adjacent enemies take 20/30/45 magic damage each second.",
+      "full_mana": "0/40",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Have your Hyperpop Champions cast 10 times with the trait active."
+      ]
     },
     "u25": {
       "name_zh": null,
@@ -264,7 +395,12 @@
       "description": "Toss a prism into the air and blast it with a beam of light. The beam splits, dealing magic damage to the target and another nearby enemy. Gain Mana for each enemy killed.",
       "description_zh": "以光束轟擊空中的稜鏡，分裂後攻擊目標與另一名鄰近敵軍。目標死亡時返還魔力。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "將稜鏡拋向空中，再以光束轟擊。光束會分裂，對目標造成300/450/675魔法傷害，並對另一名鄰近敵軍造成160/240/360魔法傷害。每有一名目標死亡，都可獲得8魔力。",
+      "full_mana": "0/40",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u26": {
       "name_zh": "納瑟斯",
@@ -274,7 +410,12 @@
       "description": "Create a magnificent hex field that lasts several seconds. While active, heal each second, and allies within the field heal. Enemies take magic damage and are Captivated if they have less maximum Health than Nasus. Captivated enemies grant bonuses to Classical champions.",
       "description_zh": "創造魔能領域，持續治療自己與領域內友軍。最大生命低於納瑟斯的敵軍會受到魔法傷害並被迷倒。",
       "unlock": "Equip the required number of items to a Classical champion.",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "創造一個壯麗的2格魔能領域，持續5秒。啟動時，每秒回復100/150/250，範圍內的友軍也會回復25/35/60。敵軍若擁有比納瑟斯更低的最大生命，會受到30/45/70魔法傷害並被迷倒。\n\n被迷倒的敵人會為經典英雄帶來增益效果。",
+      "full_mana": "25/75",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u27": {
       "name_zh": null,
@@ -284,7 +425,12 @@
       "description": "Passive: Qiyana’s ring changes color periodically, granting her ability different bonus effects.\n\nActive: Dash through enemies in a line, dealing physical damage to the target and other enemies hit. Red deals bonus damage; Green heals based on damage dealt; Blue refunds mana; Gold grants gold and randomly applies one of the other effects.",
       "description_zh": "環刃定期變色。主動沿直線衝刺傷害敵軍；紅色強化傷害、綠色提供治療、藍色返還魔力，金色提供金錢並附加另一種效果。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "被動：姬亞娜的環刃會定期變色，讓技能獲得不同的額外效果。\n\n主動：衝刺攻擊直線上的敵軍，對目標造成225/335/510物理傷害，並對命中的其他敵軍造成112.5/167.5/255物理傷害。\n\n紅色：造成20%額外傷害\n\n綠色：回復相當於所造成傷害20%的生命\n\n藍色：回復10魔力\n\n金色：獲得1金錢，並隨機附加其中一個其他效果。(獲得金錢：–)",
+      "full_mana": "0/40",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u28": {
       "name_zh": "睿娜妲．格萊斯克",
@@ -294,7 +440,12 @@
       "description": "Fires a musical bar at the target, applying Toxin stacks that deal magic damage over time. Also applies Toxin to nearby enemies, prioritizing unpoisoned enemies. Enemies are Captivated when Toxin is applied; the effect lasts longer if their star level is less than or equal to Renata’s. Captivated enemies grant bonuses to Classical champions.",
       "description_zh": "向目標與附近敵軍施加持續造成魔法傷害的毒素，優先選擇未中毒敵軍。毒素也會迷倒敵軍，目標星級不高於睿娜妲時持續較久。",
       "unlock": "Equip the required number of items to a Classical or Choreographer champion.",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "向目標射出一個音樂小節，施加2層毒素。毒素層數會在15秒內造成160/240/580魔法傷害。此外，對2名鄰近敵軍施加1層毒素，優先選擇未中毒的敵軍。\n\n敵軍被施加毒素後會被迷倒3秒，如果他們的星級小於或等於睿娜妲，則時間增加至9秒。\n\n被迷倒的敵軍會賦予古典樂英雄增益。",
+      "full_mana": "0/45",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u29": {
       "name_zh": "雷尼克頓",
@@ -304,7 +455,12 @@
       "description": "Grow larger, gaining max Health for the rest of combat. Then spin, dealing physical damage to adjacent enemies.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Grow larger, gaining 180/230/325 max Health for the rest of combat. Then spin, dealing 176/221/316 physical damage to adjacent enemies.",
+      "full_mana": "60/110",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u30": {
       "name_zh": "煞蜜拉",
@@ -314,7 +470,14 @@
       "description": "Passive: When Samira critically strikes an enemy, they become Captivated.\n\nActive: Fire bullets at the current target, each dealing physical damage. Captivated enemies grant bonuses to Classical champions.",
       "description_zh": "暴擊可讓敵軍進入迷倒狀態。主動朝目標連續發射多顆子彈；迷倒敵軍會觸發古典樂效果。",
       "unlock": "Equip the required number of items to a Classical, Renegade, or Trickshot champion.",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "被動：煞蜜拉暴擊敵軍時，使其進入迷倒狀態，持續3秒。\n\n主動：對當前目標發射10顆子彈，每顆造成39/59/89傷害。\n\n被迷倒的敵軍會賦予古典樂英雄加成效果。",
+      "full_mana": "0/60",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "2 items on a Classical, Renegade, or Trickshot Champion."
+      ]
     },
     "u31": {
       "name_zh": null,
@@ -324,7 +487,14 @@
       "description": "Indie: Release a stream of notes at the target while posing for the fans, dealing magic damage over 2.5 seconds.\n\nRising Star: Release bonus notes at nearby enemies.\n\nSuperstar: Toss high notes at every enemy.",
       "description_zh": null,
       "unlock": "Reroll the required number of times before the Stage 2 Carousel.",
-      "unlock_zh": "在階段2聯合徵召前重抽4次。"
+      "unlock_zh": "在階段2聯合徵召前重抽4次。",
+      "full_description": "Indie: Release a stream of notes at the target while posing for the fans, dealing 570/855/1280 magic damage over 2.5 seconds.\n\nRising Star: Release bonus notes at nearby enemies.\n\nSuperstar: Toss high notes at every enemy.",
+      "full_mana": "0/50",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Reroll 4 times before Stage 2 Carousel."
+      ]
     },
     "u32": {
       "name_zh": "崔絲塔娜",
@@ -334,7 +504,14 @@
       "description": "Throw bombs at nearby enemies and detonate them, dealing physical damage. The final blast deals different physical damage.",
       "description_zh": null,
       "unlock": "Get the required number of kills with Hyperpop active.",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Throw bombs at 3 nearby enemies and detonate them, each dealing 140/210/315 physical damage. The final blast deals 280/420/630 damage instead.",
+      "full_mana": "0/55",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Get 5 kills with Hyperpop Active"
+      ]
     },
     "u33": {
       "name_zh": "阿姆姆",
@@ -344,7 +521,12 @@
       "description": "Heal and toss bandages at the nearest enemies, dealing magic damage and stunning them.",
       "description_zh": "治療自己，並向附近多名敵軍投擲繃帶，造成魔法傷害與暈眩。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "治療475/625/750。對最靠近的4名敵軍扔出繃帶，造成100/150/240魔法傷害，並使其暈眩1.25秒。",
+      "full_mana": "60/120",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u34": {
       "name_zh": "巴德",
@@ -354,7 +536,12 @@
       "description": "Passive: Gain the Horn of the Traveler. While equipped, casts generate XP and attacks grant bonus Mana.\n\nActive: Summon a wave of meeps that deals magic damage to enemies hit, with damage reduced for each enemy it passes through.",
       "description_zh": "獲得旅者之角，裝備後可在施放時取得經驗值，普攻額外回復魔力。主動發出小精靈波，造成會隨穿透次數降低的魔法傷害。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "被動：獲得旅者之角。裝備時，施放技能會獲得經驗值，攻擊會額外獲得魔力。\n\n主動：召喚一波小精靈，對命中的敵人造成210/315/505魔法傷害，每穿過一個敵人傷害會降低30%。",
+      "full_mana": "20/80",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u35": {
       "name_zh": "布郎姆",
@@ -364,7 +551,12 @@
       "description": "Gain a shield, then slam the ground, dealing magic damage to adjacent enemies and stunning them.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Gain 385/435/485 Shield for 4 seconds. Then slam the ground, dealing 120/180/300 magic damage to adjacent enemies and Stunning them for 1.5 seconds.",
+      "full_mana": "75/135",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u36": {
       "name_zh": "布蕾爾",
@@ -374,7 +566,12 @@
       "description": "Heals and kicks a snack at the furthest enemy within range. Dashes toward it, dealing physical damage in an area. Then chow downs, gaining Attack Speed for the next several attacks and replacing them with slashes that deal physical damage.",
       "description_zh": "治療自己並向遠處敵軍踢出點心，接著衝向目標造成範圍傷害。隨後數次攻擊獲得高攻速並轉為揮砍。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "回復100/150/200並向3格內最遠的敵人踢出一個點心。衝向目標，在1格範圍內造成100/150/240物理傷害。接著大快朵頤，獲得200%攻速，持續3次攻擊，並將這些攻擊替換為揮砍，造成100/150/240物理傷害。",
+      "full_mana": "0/30",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u37": {
       "name_zh": "達瑞文",
@@ -384,7 +581,12 @@
       "description": "Throws a massive spinning record at the target, dealing physical damage. It leaves behind a vortex that deals physical damage per second, split among enemies within 1 hex.",
       "description_zh": "向目標投擲旋轉唱片，造成物理傷害。唱片留下漩渦，持續對附近敵軍造成分攤傷害。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "朝目標投擲一張巨大的旋轉唱片，造成140/210/340物理傷害。唱片會留下持續3秒的漩渦，對1格範圍內的敵軍每秒造成115/175/285物理傷害，傷害由敵軍均分。",
+      "full_mana": "0/60",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u38": {
       "name_zh": "艾克",
@@ -394,7 +596,12 @@
       "description": "Passive: Rewinds a portion of damage taken over time.\n\nActive: Instantly heals all damage being rewound and restores bonus Health, then deals magic damage to the current target.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: Rewind 30% of damage taken over 4 seconds.\n\nActive: Instantly heal all damage being rewinded + 150/180/250 Health. Then whack the current target for 230/345/675 magic damage.",
+      "full_mana": "30/120",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u39": {
       "name_zh": "伊芙琳",
@@ -404,7 +611,14 @@
       "description": "Passive: At combat start, teleport behind the current target and become enshrouded for a duration. While enshrouded, become untargetable to attacks and gain Durability if enough other allies are alive.\n\nActive: Deal magic damage to the current target and other enemies in a semi-circle, ignoring a portion of their Magic Resist.",
       "description_zh": "開戰時傳送至目標背後並進入迷霧。其他友軍足夠時，迷霧可讓她避開普攻鎖定並提高續戰力。主動攻擊目標與半圓範圍敵軍，無視部分魔防。",
       "unlock": "Field the required number of K|DA or Renegade champions.",
-      "unlock_zh": "派出3名K/DA或Renegade英雄。"
+      "unlock_zh": "派出3名K/DA或Renegade英雄。",
+      "full_description": "被動：戰鬥開始時，傳送到當前目標的背後，隨後進入迷霧籠罩狀態，持續15秒。迷霧籠罩期間，若至少有3名其他友軍存活，則無法被普攻指定，並可獲得50%續戰力。\n\n主動：對當前目標造成280/420/700魔法傷害，並對半圓範圍內的其他敵軍造成120/180/300魔法傷害。無視敵軍40%的魔防。",
+      "full_mana": "0/40",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "3 unique K/DA or Renegade Champions."
+      ]
     },
     "u40": {
       "name_zh": "加里歐",
@@ -414,7 +628,12 @@
       "description": "Gain a shield for a duration. Fire wind at the enemy who dealt the most damage this fight, dealing magic damage and stunning them for a duration.",
       "description_zh": null,
       "unlock": "Have the required number of Bodyguard, Juggernaut, or Frontman traits active.\nLevel 7",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Gain 435/510/610 Shield for 4 seconds. Stun for 1 second and deal 120/180/300 magic damage to the enemy that's dealt the most damage this combat.",
+      "full_mana": "50/120",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u41": {
       "name_zh": "卡桑帝",
@@ -424,7 +643,12 @@
       "description": "Gain a shield, then charge and push the target, stunning them and other enemies hit before slamming them for physical damage. After charging, taunt nearby enemies.\n\nHeartsteel Upgrade: Gain Armor and Magic Resist and deal bonus physical damage on attack.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Gain 550/650/800 Shield for 4 seconds. Charge and push the target, Stunning them and other enemies hit for 1.25 seconds. Then slam them, dealing 150/225/360 physical damage. After charging, Taunt nearby enemies.\n\nHeartsteel Upgrade: Gain 25 Armor and Magic Resist and deal 50/75/120 bonus physical damage on attack.",
+      "full_mana": "70/140",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u42": {
       "name_zh": "凱莎",
@@ -434,7 +658,12 @@
       "description": "Passive: Every few attacks, fire missiles that deal physical damage.\n\nActive: Gain Attack Speed for the rest of combat.",
       "description_zh": "每第三次普攻發射額外飛彈，造成物理傷害。主動提高攻速，持續到戰鬥結束。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "被動：每3次普攻，發射3枚飛彈，造成39/59/95物理傷害。\n\n主動：增加15%攻速，持續到戰鬥結束。",
+      "full_mana": "0/30",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u43": {
       "name_zh": "馬爾札哈",
@@ -444,7 +673,12 @@
       "description": "Fire a beam at the target, dealing magic damage over time. The energy rhythmically explodes 4 times, reducing the Magic Resist of enemies in an area and dealing magic damage with each explosion.",
       "description_zh": "以持續光束傷害目標，期間多次爆炸，傷害附近敵軍並降低魔防。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "對目標發射一道光束，持續2秒，造成355/530/850魔法傷害。能量會有規律地爆炸4次，對1格範圍內的敵軍造成30%削抗，持續4秒，且每次爆炸造成40/60/110魔法傷害。\n\n削抗：降低魔防。",
+      "full_mana": "0/50",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u44": {
       "name_zh": "姍娜",
@@ -454,7 +688,12 @@
       "description": "Blast the target, dealing physical damage and marking them. If they’re already marked, detonate the mark instead, dealing damage. Detonating the mark or killing a marked enemy grants Damage Amp until the end of combat.",
       "description_zh": "轟擊並標記目標。再次命中已標記敵軍時引爆標記；引爆或擊殺帶有標記的敵軍，會永久提高該場戰鬥的傷害增幅。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "轟擊目標，造成165/245/400物理傷害並標記目標。若目標已有標記，則引爆標記，造成247.5/367.5/600傷害。\n\n引爆或擊殺被標記的敵軍時，獲得8%傷害增幅，持續到戰鬥結束。",
+      "full_mana": "0/20",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u45": {
       "name_zh": null,
@@ -464,7 +703,12 @@
       "description": "Enter Demon Form, gaining max Health and dealing magic damage to adjacent enemies every second. Subsequent casts heal and increase the damage.",
       "description_zh": "轉化為惡魔，增加最大生命並持續傷害鄰近敵軍。再次施放會治療自己並強化持續傷害。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "進入惡魔形態，獲得220/275/400最大生命，並每秒對相鄰敵軍造成20/30/48魔法傷害。後續施放會回復275/350/475生命並使傷害增加5/8/12。",
+      "full_mana": "70/120",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u46": {
       "name_zh": "星朵拉",
@@ -474,7 +718,12 @@
       "description": "Spike a volleyball at the target, dealing magic damage. It bounces to the enemy behind them with the fewest items, dealing magic damage.",
       "description_zh": null,
       "unlock": "Field the required number of unique star levels of Beach Pop or Choreographer.",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Spike a volleyball at target, dealing 300/450/720 magic damage. It bounces to an enemy behind them with the least items, dealing 110/165/265 magic damage.",
+      "full_mana": "0/30",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u47": {
       "name_zh": null,
@@ -484,7 +733,14 @@
       "description": "Passive: At low health or when your strongest Annie dies, become enraged, gaining max Health, Attack Damage, and Attack Speed that decays over time.\n\nActive: Gain a shield for a fixed duration. If enraged, refresh the decaying Attack Speed.",
       "description_zh": "低生命或最強大的安妮陣亡時進入暴怒，增加最大生命、物攻與會衰減的攻速。主動獲得護盾，暴怒期間也會重設攻速衰減。",
       "unlock": "Reach the required star level on Annie and equip the required number of items to her.",
-      "unlock_zh": "擁有裝備1件道具的2星安妮。"
+      "unlock_zh": "擁有裝備1件道具的2星安妮。",
+      "full_description": "被動：生命降至30%或我方最強大的安妮陣亡時，進入暴怒狀態，獲得300最大生命、100%物攻和200%攻速，攻速效果會在6秒內逐漸衰減。\n\n主動：獲得500/600/750護盾，持續4秒。若進入暴怒狀態，會重置逐漸衰減的攻速。",
+      "full_mana": "40/100",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "2-star Annie with 1 item"
+      ]
     },
     "u48": {
       "name_zh": "維爾戈",
@@ -494,7 +750,12 @@
       "description": "Summon swords around the target, then impale them after a brief delay, dealing physical damage per sword. Gain a permanent sword every set number of takedowns.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Summon ? swords around the target. After a brief delay, impale them, dealing 37/56/89 physical damage per sword.\n\nEvery 8 takedowns, gain a permanent sword. (Current Takedowns: –)",
+      "full_mana": "0/40",
+      "source_missing_values": true,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u49": {
       "name_zh": "阿璃",
@@ -504,7 +765,12 @@
       "description": "Passive: Start combat with fox-fires and gain more after casting, up to a limit. Then enter a flow state, moving faster and empowering subsequent casts.\n\nActive: Launch all fox-fires at the target, each dealing magic damage. While in the flow state, launch a heart at the target that deals magic damage and split the fox-fires among enemies near the target.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: Start combat with 6 fox-fires and gain 2 after casting, up to 14. Then enter a flow state, moving faster and empowering subsequent casts.\n\nActive: Launch all fox-fires at the target, each dealing 28/42/400 magic damage. If in the flow, instead launch a heart at the target that deals 235/350/2000 magic damage and split the fox-fires among all enemies within 2 hexes of them.",
+      "full_mana": "0/30",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u50": {
       "name_zh": "亞歷斯塔",
@@ -514,7 +780,15 @@
       "description": "Heal, with the amount increased based on missing Health. Then slam the target, knocking up nearby enemies and dealing magic damage to all enemies hit.",
       "description_zh": "依已損失生命提高自身治療量，然後猛擊目標，擊飛並傷害目標附近敵軍。",
       "unlock": "A Chain Vest equipped to a Caster or Marksman.\nLevel 7",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "治療265/300/2000，並根據已損失生命最多提升100%。接著猛擊目標，將目標3格範圍內的敵軍擊飛1.5秒，並對所有命中的敵軍造成100/150/2500魔法傷害。",
+      "full_mana": "70/155",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Level 7",
+        "A Chain Vest equipped to a Caster or Marksman."
+      ]
     },
     "u51": {
       "name_zh": "亞盧妮",
@@ -524,7 +798,15 @@
       "description": "Call down a spotlight on the target, dealing magic damage. Nearby enemies split magic damage. If the target dies, excess damage is split among the nearest enemies.\n\nHeartsteel Upgrade: Fire blasts at the target that deal magic damage.",
       "description_zh": null,
       "unlock": "Field the required number of unique Heartsteel or Prodigy champions.\nLevel 7",
-      "unlock_zh": "等級7，派出4名不重複的心鋼之聲或不世之才英雄。"
+      "unlock_zh": "等級7，派出4名不重複的心鋼之聲或不世之才英雄。",
+      "full_description": "Call down a spotlight on the target, dealing 315/475/2250 magic damage. All enemies within 2 hexes of them split 340/510/2500 magic damage. If the target dies, split excess damage between the 2 nearest enemies.\n\nHeartsteel Upgrade: Fire 5 blasts at target that deal 30/45/72 magic damage.",
+      "full_mana": "20/65",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Level 7",
+        "4 unique Heartsteel or Prodigy Champions."
+      ]
     },
     "u52": {
       "name_zh": "歐羅拉",
@@ -534,7 +816,12 @@
       "description": "Blink away and fire a blast through the best line, dealing magic damage to the two highest-Health enemies and less magic damage to the rest. Then blink back.",
       "description_zh": "閃現離場並朝最佳路線釋放衝擊，對生命最高的敵軍造成較高魔法傷害，波及其他敵軍後返回。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "閃現離開，並沿著最佳路線釋放一發蒼炎衝擊。爆炸會對生命最高的兩名敵人造成275/415/2000魔法傷害，並對其餘敵人造成90/135/1500魔法傷害。然後閃現回去。",
+      "full_mana": "0/60",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u53": {
       "name_zh": "蓋倫",
@@ -544,7 +831,12 @@
       "description": "Heal, then fire a wave toward the current target, dealing physical damage to enemies hit and weakening them, reducing their damage dealt.",
       "description_zh": "治療自己，隨後向目標發射能量波，造成物理傷害並降低敵軍造成的傷害。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "治療456/506/2556，隨後向當前目標發射一道能量波，對命中的敵軍造成70/105/3000物理傷害和10%虛弱效果，持續4秒。\n\n虛弱：降低造成的傷害。",
+      "full_mana": "30/100",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u54": {
       "name_zh": "葛雷夫",
@@ -554,7 +846,12 @@
       "description": "For the next attacks, gain Attack Speed, dash to targets, and fire a cone of bullets that each deal physical damage. On a kill, empower an additional attack.",
       "description_zh": "強化接下來的普攻，提高攻速並衝向目標，以扇形散彈造成物理傷害。擊殺可追加強化普攻。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "接下來2次普攻獲得125%攻速，衝刺至目標身邊，並將普攻替換為朝扇形範圍散射的5發子彈，每發造成45/67/360物理傷害。擊殺單位時，額外強化1次普攻。",
+      "full_mana": "0/30",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u55": {
       "name_zh": "燼",
@@ -564,7 +861,12 @@
       "description": "Passive: Convert bonus Attack Speed into Attack Damage. Attacks summon violins that strike in unison, dealing physical damage and captivating the target. Every fourth attack deals empowered physical damage and resets the violins. From the fourth sequence onward, all violins remain out, Jhin gains infinite range, and his attacks pierce targets, dealing reduced damage with each target hit.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: Convert 1% bonus Attack Speed into 0.8% Attack Damage.\n\nAttacks summon violins that attack in unison, dealing 25/38/124 physical damage and Captivating the target for 4 seconds. Every 4th attack is empowered, dealing 94/141/848 physical damage and resetting the violins.\n\nOn the 4th sequence onwards, all violins remain out, Jhin gains infinite range, and attacks pierce, dealing 60% reduced damage for each target hit.",
+      "full_mana": "4/4",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u56": {
       "name_zh": "吉茵珂絲",
@@ -574,7 +876,15 @@
       "description": "Rapidly fire missiles at nearby enemies, each dealing physical damage.",
       "description_zh": null,
       "unlock": "Equip the required number of items to an Ionic Spark or Hitmaker champion.\nLevel 7",
-      "unlock_zh": "等級7，Ionic Spark或金曲製造機英雄裝備3件道具。"
+      "unlock_zh": "等級7，Ionic Spark或金曲製造機英雄裝備3件道具。",
+      "full_description": "Rapidly fire ? missiles at nearby enemies, each dealing 49/74/330 physical damage.",
+      "full_mana": "30/90",
+      "source_missing_values": true,
+      "recommended_items": [],
+      "full_unlock": [
+        "Level 7",
+        "3 items on an Ionic Spark or Hitmaker Champion."
+      ]
     },
     "u57": {
       "name_zh": null,
@@ -584,7 +894,15 @@
       "description": "Passive: Attacks deal bonus magic damage.\n\nActive: Gain Attack Speed and infinite range for a duration, summoning a sword with each attack. Afterwards, rain swords on the target, dealing magic damage to nearby enemies and additional magic damage to the target for each sword.",
       "description_zh": "普攻附帶魔法傷害。主動短暫獲得攻速與無限射程，普攻累積劍刃，最後降下劍雨，對目標及周圍敵軍造成傷害。",
       "unlock": "Field the required number of unique Pentakill or Swiftstriker champions.\nLevel 7",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "被動：普攻會造成40/60/500額外魔法傷害。\n\n主動：在4秒內，獲得80%攻速、無限射程，且每次普攻都會召喚一把劍。接著，對目標降下劍雨，對2格內的所有敵軍造成180/270/2000傷害，且每把劍會對目標額外造成37/55/400魔法傷害。",
+      "full_mana": "0/50",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Level 7",
+        "4 unique Pentakill or Swiftstriker Champions."
+      ]
     },
     "u58": {
       "name_zh": null,
@@ -594,7 +912,12 @@
       "description": "Gain a shield for a duration. Call down beams of light on nearby enemies; each deals magic damage and reduces its target’s Magic Resist.",
       "description_zh": "獲得護盾並召喚多道光束，攻擊附近敵軍，同時降低目標魔防。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "獲得600/750/2000護盾，持續4秒。召喚7道輝芒光束轟擊附近敵人，每道造成50/75/2000魔法傷害，並使目標的魔法防禦降低4。",
+      "full_mana": "60/115",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u59": {
       "name_zh": "洛克",
@@ -604,7 +927,12 @@
       "description": "Passive: Attacks deal bonus magic damage. All damage Locke deals to an enemy increases for each mark he has applied to them.\n\nActive: Hurl 3 Soul Nails at the furthest enemy within range, dealing magic damage to and marking all enemies hit. Then teleport to that enemy and deal magic damage.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: Attacks deal 45/68/500 bonus magic damage. All damage Locke deals to enemies is increased by 10% for each mark he has applied to them.\n\nActive: Hurl 3 Soul Nails at the furthest enemy within 4 hexes, each dealing 15/22/400 magic damage and marking all enemies hit. Then, teleport to the enemy and deal 150/225/2000 magic damage.",
+      "full_mana": "0/30",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u60": {
       "name_zh": "梅爾",
@@ -614,7 +942,12 @@
       "description": "Fire missiles split between the closest enemies, dealing magic damage and applying a stack of Blues to each. For every required stack threshold of Blues, enemies take increased damage from this ability.",
       "description_zh": "向附近敵軍分散發射多枚射彈，造成魔法傷害並疊加藍調。藍調層數提高後續技能傷害。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "發射30枚射彈，分散攻擊最靠近的3名敵軍，各造成18/28/200魔法傷害，並附加一層藍調。每有3層藍調，此技能額外對敵軍造成5%傷害。",
+      "full_mana": "0/40",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u61": {
       "name_zh": "希瓦娜",
@@ -624,7 +957,12 @@
       "description": "Passive: At a health threshold, transform into Dragon Form. While transformed, gain max Health and Attack Speed, and every third attack deals bonus magic damage in a 1-hex area.\n\nActive: Gain a Shield for a duration.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: At 70% Health, transform into Dragon Form. While transformed, gain 300 max Health, 150% Attack Speed, and every 3rd attacks deals 150/225/3000 bonus magic damage in a 1 hex area.\n\nActive: Gain ? Shield for 4 seconds.",
+      "full_mana": "40/100",
+      "source_missing_values": true,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u62": {
       "name_zh": "瑟雷西",
@@ -634,7 +972,14 @@
       "description": "Passive: Periodically Captivate the farthest enemy who isn’t already Captivated.\n\nActive: Heal, then drain max Health from nearby enemies over time. While draining, gain Durability. Captivated enemies grant bonuses to Classical champions.",
       "description_zh": "生命低於瑟雷西的敵軍對其造成傷害時，會被迷倒。主動治療自己，並從附近敵軍汲取最大生命。",
       "unlock": "Have enemies spend the required number of seconds Captivated by Classical.",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "被動：敵軍對瑟雷西造成傷害時，若其當前生命低於瑟雷西，則遭到迷倒，持續12秒。\n\n主動：回復350/450/2000生命。接著，在3秒內從最多3位鄰近敵軍汲取80/100/1200最大生命。\n\n古典樂單位會迷倒敵軍，造成額外效果。",
+      "full_mana": "40/100",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Have enemies spend 300 seconds Captivated by Classical."
+      ]
     },
     "u63": {
       "name_zh": "汎",
@@ -644,7 +989,15 @@
       "description": "Passive: On cast or when hit, tumble and gain Durability for a duration (cooldown applies).\n\nActive: Gain demonic power, enhancing the next attacks to deal physical damage based on Attack Damage and the target’s max Health.",
       "description_zh": null,
       "unlock": "Field Rock for the required number of combats.\nLevel 7",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: On cast or when hit, tumble and gain 25% Durability for 2 seconds. (4 second cooldown)\n\nActive: Gain demonic power, enhancing the next 3 attacks to deal 175/265/2000 + 2% of the target's max Health as physical damage.",
+      "full_mana": "0/50",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Level 7",
+        "Field Rock for 3 combats."
+      ]
     },
     "u64": {
       "name_zh": "悟空",
@@ -654,7 +1007,14 @@
       "description": "Heals Wukong and sends out clones in a 2-Hex circle that quickly return. Clones steal Armor and Magic Resist from enemies they pass through and deal physical damage. When they return, Wukong gains the stolen defenses.",
       "description_zh": "治療自己並派出多個分身。分身穿透敵軍時造成物理傷害並竊取雙防，返回後將雙防交給悟空。",
       "unlock": "Have allies deal the required damage while fielding Xayah.",
-      "unlock_zh": "派出剎雅時，友軍造成25000傷害。"
+      "unlock_zh": "派出剎雅時，友軍造成25000傷害。",
+      "full_description": "回復508/608/2108生命並在2格範圍內派出6個分身，分身會迅速返回。分身穿透敵軍時會竊取5雙防，並造成30/45/3000物理傷害。分身返回時，悟空會獲得偷取來的雙防。",
+      "full_mana": "40/100",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Allies deal 25000 damage while fielding Xayah."
+      ]
     },
     "u65": {
       "name_zh": "剎雅",
@@ -664,7 +1024,12 @@
       "description": "Summon feathers that strike the target, each dealing physical damage and reducing its Armor.",
       "description_zh": "召喚大量羽毛攻擊目標，每根造成物理傷害並降低物防。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "召喚30根羽毛攻擊目標，每根羽毛造成23/35/166物理傷害並使物防降低1。",
+      "full_mana": "0/60",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u66": {
       "name_zh": null,
@@ -674,7 +1039,15 @@
       "description": "Dash and thrust forward, dealing physical damage to enemies in a line. Every third cast, knock up the target and deal physical damage, then slam them down, dealing physical damage to nearby enemies.",
       "description_zh": "衝刺並突刺直線敵軍。每第三次施放擊飛目標，隨後摔落目標，對附近敵軍造成物理傷害。",
       "unlock": "Field the required number of star levels of True Damage and Slayer champions.\nLevel 7",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "衝刺並向前突刺，對一條直線上的敵人造成165/250/1400物理傷害。每第3次施放時，擊飛目標並造成400/600/2500物理傷害。\n\n然後將他們猛力摔下，對1格內的敵人造成210/315/1700物理傷害。",
+      "full_mana": "0/30",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Level 7",
+        "7 unique star levels of True Damage or Slayer Champions."
+      ]
     },
     "u67": {
       "name_zh": null,
@@ -684,7 +1057,12 @@
       "description": "Passive: This ability scales with whichever is higher, Attack Damage or Ability Power. Attacks deal physical damage.\n\nActive: Rapidly strike the target and nearby enemies multiple times, dealing physical damage with each strike, then unleash a massive slash that deals physical damage to the target.\n\nHeartsteel Upgrade: Strike additional times and ignore some of the target’s Armor.",
       "description_zh": "技能依物攻或魔攻中較高者調整。主動快速連擊目標與附近敵軍，最後施展強力斬擊；心鋼之聲升級增加斬擊並無視部分物防。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "被動：此技能會根據物攻或魔攻進行調整(取較高者)。普攻造成55/82/123物理傷害。\n\n主動：快速攻擊目標及最多2名鄰近敵軍共計10次，每次造成35/55/400物理傷害。突襲後，施放一次強力斬擊，對目標造成175/265/1500物理傷害。\n\n心鋼之聲升級：再施放2次斬擊，且無視25%的物防。",
+      "full_mana": "0/50",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u68": {
       "name_zh": "約瑞科",
@@ -694,7 +1072,12 @@
       "description": "Play an epic solo to restore Health and create a Hex zone that deals magic damage each second to enemies within. The final note deals magic damage to enemies in the zone and Slows them for a duration, reducing their Attack Speed.",
       "description_zh": "演奏獨奏並治療自己，在周圍形成持續造成魔法傷害的區域。最後的音符追加傷害並降低敵軍攻速。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "演奏一段史詩獨奏，回復544/629/2104生命，並創造一個2格區域，每秒對範圍內的敵軍造成25/40/1250魔法傷害。最後一個音符對區域內的敵軍造成100/150/2400魔法傷害，並使其緩速20%，持續4秒。\n\n緩速：降低攻速。",
+      "full_mana": "50/100",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u69": {
       "name_zh": "悠咪",
@@ -704,7 +1087,12 @@
       "description": "Throws a spinning disc that deals magic damage and stacks on the target, reducing their Magic Resist every second. When the stack reaches its required number of discs, it topples, dealing a portion of the stacked discs’ total damage to the target and splitting additional damage among nearby enemies. If an enemy dies with a disc, it passes to another enemy.",
       "description_zh": "投擲唱片造成魔法傷害，並持續降低目標魔防。累積五張後唱片倒落，傷害目標及附近敵軍；目標死亡時，剩餘唱片轉移。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "投擲一枚旋轉唱片，造成175/265/1400魔法傷害，並在目標頭上堆疊，每秒降低目標1魔防。\n\n當目標頭上有5張唱片，唱片堆會倒下，對目標造成40%的堆疊唱片總傷害，並對4名鄰近敵軍造成合計40%的額外傷害。\n\n如果有敵軍死亡時頭上仍有唱片，唱片會轉移給另一名敵軍。",
+      "full_mana": "0/20",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u70": {
       "name_zh": "札克",
@@ -714,7 +1102,15 @@
       "description": "Charge up, gaining Durability and healing. Then leap and crash onto the target, dealing magic damage to adjacent enemies and briefly knocking them up.",
       "description_zh": "蓄力時提高續戰力並治療自己，隨後躍向目標，造成範圍魔法傷害與短暫擊飛。",
       "unlock": "Field the required number of unique Beach Pop or Juggernaut champions.\nLevel 7",
-      "unlock_zh": "等級7，派出5名不重複的海灘流行樂或重裝戰士英雄。"
+      "unlock_zh": "等級7，派出5名不重複的海灘流行樂或重裝戰士英雄。",
+      "full_description": "蓄力2秒，獲得15%續戰力並回復631/681/2656生命。隨後飛躍並撞擊目標，對相鄰敵軍造成250/375/3500魔法傷害，並將其短暫擊飛。",
+      "full_mana": "60/110",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Level 7",
+        "5 unique Beach Pop or Juggernaut Champions."
+      ]
     },
     "u71": {
       "name_zh": "阿卡莉 (K|DA)",
@@ -724,7 +1120,14 @@
       "description": "Skateboard through the longest line of unpainted enemies, dealing physical damage to enemies hit and painting them and the hexes along the path. Painted enemies and enemies standing in painted hexes are Vulnerable, increasing damage taken. After every 3rd cast, ignite the paint to deal physical damage to all painted enemies and enemies standing in painted hexes.",
       "description_zh": "沿最長的未上色敵軍直線滑行，造成物理傷害並噴漆。被噴漆或站在上色格上的敵軍受到易傷；每第三次施放點燃油漆，造成額外傷害。",
       "unlock": "Field the required number of unique star levels of K|DA without True Damage Akali unlocked.",
-      "unlock_zh": "K/DA合計12個不重複星等，且尚未解鎖True Damage阿卡莉。"
+      "unlock_zh": "K/DA合計12個不重複星等，且尚未解鎖True Damage阿卡莉。",
+      "full_description": "踩著滑板穿越最長的一列未上色敵軍，對命中的敵軍造成80/120/5999物理傷害，並將他們及路徑上的所有格子噴上油漆。身上有油漆或站在上色格子上的敵軍會被施加10%易傷。\n\n每第3次施放時會點燃油漆，對所有身上有油漆或站在上色格子上的敵軍造成260/390/19496.75物理傷害。\n\n易傷：提升承受傷害。",
+      "full_mana": "0/45",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "12 unique star levels of K/DA without True Damage Akali unlocked."
+      ]
     },
     "u72": {
       "name_zh": "阿卡莉 (True Damage)",
@@ -734,7 +1137,14 @@
       "description": "B-Side Passive: After every set number of takedowns, gain Player Health.\n\nActive: Rapidly slash through the current target, dealing magic damage, increased against Tanks. While casting, gain Durability and become untargetable by attacks. Then blink over the target and throw a bomb that deals magic damage split among nearby enemies.",
       "description_zh": "B面被動會在累積參與擊殺後回復玩家生命。主動斬擊目前目標，對坦克傷害較高，施放時獲得續戰力並避開普攻鎖定；最後投擲範圍炸彈。",
       "unlock": "Earn the required True Damage Bling without K|DA Akali unlocked.",
-      "unlock_zh": "尚未解鎖K/DA阿卡莉時，獲得375 True Damage閃光。"
+      "unlock_zh": "尚未解鎖K/DA阿卡莉時，獲得375 True Damage閃光。",
+      "full_description": "B面被動：每參與擊殺4次，獲得1玩家生命。(–/4)\n\n主動：迅速斬擊目前目標，造成550/825/9999魔法傷害，對坦克額外造成50%傷害。施放技能時，獲得25%續戰力，且不會成為普攻的目標。\n\n接著，瞬移到目標上方，投擲一顆炸彈，造成620/930/9999魔法傷害(由2格內所有敵軍分攤)。",
+      "full_mana": "0/50",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Earn 375 True Damage Bling without K/DA Akali unlocked."
+      ]
     },
     "u73": {
       "name_zh": "亞菲利歐",
@@ -744,7 +1154,14 @@
       "description": "Passive: Gain a Chakram every set number of attacks, up to a maximum. Attacks deal bonus physical damage for each equipped Chakram. After reaching the maximum, gain bonus Attack Damage and infinite range.\n\nActive: Fire bolts at the nearest enemies, dealing physical damage, then split into bolts that damage enemies they pass through. Gain Attack Speed for a duration.\n\nHeartsteel Upgrade: Start combat with Chakrams equipped.",
       "description_zh": "普攻累積環型飛刃並提高普攻傷害，集滿後獲得物攻與無限射程。主動魔彈能分裂、穿透敵軍，並短暫提高攻速。心鋼之聲升級可提供起始飛刃。",
       "unlock": "Reach the required star level on Alune or Yone.",
-      "unlock_zh": "擁有2星亞盧妮或犽凝。"
+      "unlock_zh": "擁有2星亞盧妮或犽凝。",
+      "full_description": "被動：每4次普攻獲得1枚環型飛刃，最多獲得15個。每裝備1枚環型飛刃，普攻便會造成額外7/10/200物理傷害。收集15枚後會增加30%物攻和無限射程。\n\n主動：向3個最靠近的敵軍射出魔彈，造成340/510/3300物理傷害，然後分裂成16發魔彈，對沿途穿透的敵軍造成51/76.5/3300物理傷害。提升75%攻速，持續4秒。\n\n心鋼之聲升級：戰鬥開始時裝備5枚環型飛刃。",
+      "full_mana": "40/180",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "2-star Alune or Yone."
+      ]
     },
     "u74": {
       "name_zh": "蒙多醫生",
@@ -754,7 +1171,12 @@
       "description": "Passive: While Dr. Mundo has the required amount of max Health, he becomes Pumped Up, gaining max Health and causing attacks to deal bonus magic damage.\n\nActive: Restore Health over time and deal magic damage each second to all nearby enemies.",
       "description_zh": "最大生命達到門檻後獲得額外最大生命與普攻魔法傷害。主動持續回復生命，並傷害周圍敵軍。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "被動：當蒙多醫生擁有3000上限生命或更多時，會進入嗨翻全場狀態，獲得20%上限生命，並使攻擊額外造成89/114/2300魔法傷害。\n\n主動：在5秒內回復480/530/4300生命，並對2格內的所有敵人每秒造成25/29/102魔法傷害。",
+      "full_mana": "20/80",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u75": {
       "name_zh": "關",
@@ -764,7 +1186,14 @@
       "description": "Passive: Attacks deal bonus magic damage to the target and other enemies in a cone. Dash to new targets.\n\nActive: After a short delay, summon a massive pair of scissors to snip a horizontal line on the target, dealing magic damage to all enemies hit, plus damage split between them. If only a limited number of enemies are hit, refund Mana.",
       "description_zh": "普攻對目標及扇形範圍內敵軍造成額外魔法傷害。主動召喚巨型剪刀，造成範圍與分攤傷害；命中敵軍較少時返還魔力。",
       "unlock": "Have Ionic Spark fans cheer the required number of times.",
-      "unlock_zh": "Ionic Spark粉絲應援250次。"
+      "unlock_zh": "Ionic Spark粉絲應援250次。",
+      "full_description": "被動：普攻會對目標造成60/90/1000額外魔法傷害，並對扇形範圍內的其他敵軍造成22/35/500魔法傷害。衝向新目標。\n\n主動：在戰場上召喚一把巨大的剪刀。短暫延遲後，對目標進行橫向剪擊，對所有被命中的敵軍造成90/135/4000魔法傷害，並外加830/1300/8000點傷害由他們分攤。若命中1個或更少敵軍，則返還50點魔力。",
+      "full_mana": "0/100",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Ionic Spark fans cheer 250 times."
+      ]
     },
     "u76": {
       "name_zh": "珍娜",
@@ -774,7 +1203,14 @@
       "description": "Fire celestial dragons at nearby enemies, dealing magic damage. After several casts, envelop the arena in Heaven’s Gale, dealing magic damage to every enemy over time.",
       "description_zh": "向附近敵軍發射天界龍族。施放四次後，天界疾風籠罩競技場，持續傷害全體敵軍。",
       "unlock": "Earn the required interest while fielding Xayah.",
-      "unlock_zh": "派出剎雅時，獲得20利息。"
+      "unlock_zh": "派出剎雅時，獲得20利息。",
+      "full_description": "向最多3名鄰近敵軍釋放天界龍族，各造成155/250/9999魔法傷害。\n\n在4次施放後，競技場將被「天界疾風」籠罩，於45秒內對每名敵軍造成1800/2700/9000魔法傷害。",
+      "full_mana": "0/45",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Earn 20 interest while fielding Xayah."
+      ]
     },
     "u77": {
       "name_zh": "李星",
@@ -784,7 +1220,14 @@
       "description": "Unleash a combo attack beginning with Dragon Slam; subsequent casts add moves to the sequence. Dragon Slam deals physical damage to the target and reduced physical damage to nearby enemies. Tempest Spin deals physical damage to the target, knocks them up, and deals reduced physical damage to nearby enemies. Celestial Punch deals physical damage and marks the target; if they are already marked, it strikes their core for bonus true damage.",
       "description_zh": "依序施展神龍猛擊、狂風旋擊與星界重拳，後續施放延長連招。招式包含範圍傷害、擊飛與標記；再次命中已標記目標時造成額外真實傷害。",
       "unlock": "Deal the required player damage while fielding Xayah.",
-      "unlock_zh": "派出剎雅時，對玩家造成40傷害。"
+      "unlock_zh": "派出剎雅時，對玩家造成40傷害。",
+      "full_description": "釋放毀滅性的2/2/99連招攻擊，從「神龍猛擊」開始，依序施展招式。後續施放會延長連招長度。\n\n神龍猛擊：對目標造成190/300/10560物理傷害。2格範圍內的其他敵軍會受到40%傷害。\n\n狂風旋擊：對目標造成256.5/405/14256物理傷害，並將其擊飛1秒。1格範圍內的其他敵軍會受到50%傷害。\n\n星界重拳：對目標造成475/750/26400物理傷害並標記目標。若目標已被標記，這一拳會擊中其核心，造成400%額外真實傷害。",
+      "full_mana": "0/50",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Deal 40 player damage while fielding Xayah."
+      ]
     },
     "u78": {
       "name_zh": null,
@@ -794,7 +1237,12 @@
       "description": "Fire a pinball toward the target, dealing physical damage. It bounces after hitting an enemy, damaging nearby enemies with reduced damage on each hit until it expires. Damage cannot fall below a minimum.",
       "description_zh": "朝目標發射會反覆彈跳的彈珠。每次彈跳降低傷害，直到達到最低傷害或命中次數上限。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "對目標發射一顆彈珠，造成145/225/2245物理傷害。命中敵軍後，彈珠會持續彈跳，直到對敵軍造成12次傷害，傷害逐次降低30%。(最低傷害：20%)",
+      "full_mana": "0/50",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u79": {
       "name_zh": null,
@@ -804,7 +1252,14 @@
       "description": "Briefly gain Durability and summon a claw that deals magic damage in a massive line. The closest enemies take more damage and are pulled toward Mordekaiser. For the rest of combat, gain Omnivamp and Attack Range, and replace attacks with a slam that deals magic damage to the target and nearby enemies.",
       "description_zh": "施放時短暫提高續戰力，以巨爪傷害並拉近前方敵軍；之後獲得全能吸血、攻擊距離及範圍猛擊。",
       "unlock": "Field the required number of unique star levels of Pentakill.",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "短暫獲得40%續戰力。召喚一隻巨爪，在一條寬廣直線範圍內造成100/150/800魔法傷害。距離最近的4位敵軍會受到額外25%傷害並被拉向魔鬥凱薩。\n\n獲得20%全能吸血、+1攻擊距離，並將普攻替換為猛擊，對目標造成300/480/3000魔法傷害，並對2格內的其他敵軍造成70/105/1500傷害，持續到戰鬥結束。",
+      "full_mana": "0/60",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "10 unique star levels of Pentakill"
+      ]
     },
     "u80": {
       "name_zh": null,
@@ -814,7 +1269,12 @@
       "description": "In Cougar Form, Pounce Party pounces on enemies, dealing magic damage that increases with each pounce. In Human Form, Dance of Life heals, then hurls a javelin at the target for magic damage and scatters flowers around them; after a brief delay, the flowers deal magic damage to enemies nearby.",
       "description_zh": "美洲獅形態會連續猛撲，逐次提高傷害；人類形態會治療自己、投擲標槍，並以落花傷害附近敵軍。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "撲擊派對：朝敵軍猛撲4次，造成135/200/1500魔法傷害，傷害逐次+40%。\n\n生命之舞：回復325/500/2000生命。朝目標投擲標槍，造成380/570/3000魔法傷害，並在目標周圍撒落3朵花。片刻後，花朵對1格範圍內的敵軍造成80/120/500魔法傷害。\n\n處於美洲獅形態時施放「撲擊派對」，處於人類形態時施放「生命之舞」。",
+      "full_mana": "20/45",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u81": {
       "name_zh": "努努和威朗普",
@@ -824,7 +1284,12 @@
       "description": "Passive: Gain Mana Regen. Slowly roll a Disco Ball, dealing magic damage to all enemies it passes through.\n\nActive: For the rest of combat, move faster and increase the Disco Ball’s size and damage.",
       "description_zh": "滾動迪斯可球傷害沿途敵軍。主動技能提高移動速度，並使迪斯可球變大、提高傷害。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: Gain 10 Mana Regen. Slowly roll around a Disco Ball, dealing ? magic damage to all enemies it passes through.\n\nActive: For the rest of combat, move faster and increase the size and damage of the Disco Ball by 30%.",
+      "full_mana": "20/75",
+      "source_missing_values": true,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u82": {
       "name_zh": "派克",
@@ -834,7 +1299,15 @@
       "description": "Passive: When an enemy drops below the health threshold, instantly cast on them, then dash back to the current target.\n\nActive: Deal physical damage to the target and to other enemies in an X shape. Execute enemies below the health threshold.",
       "description_zh": "生命低於處決門檻的敵軍會觸發派克施放技能。主動攻擊目標與X形範圍內敵軍，並處決低生命目標。",
       "unlock": "Have at least the required amount of gold at the end of combat.\nLevel 7",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "被動：每當敵軍生命低於最大生命的10%/10%/93%，立即對其施放技能，然後衝刺回目前目標。\n\n主動：對目標造成300/470/4000物理傷害，並對X形範圍內所有其他敵軍造成130/215/800物理傷害。處決任何生命低於10%/10%/93%的敵軍。",
+      "full_mana": "0/30",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Level 7",
+        "Have 85 or more Gold at the end of combat."
+      ]
     },
     "u83": {
       "name_zh": "銳兒",
@@ -844,7 +1317,12 @@
       "description": "While unmounted, Rhythm Blaster grants a shield and summons 3 speakers for a duration. Each second, they blast a wave that deals magic damage to enemies hit. While mounted, Metal Pony Club slams into a crowd, dealing magic damage to the center enemy and damage split among enemies within 2 hexes.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Rhythm Blaster: For 4 seconds, gain 600/725/2000 Shield and summon 3 speakers. Each second, they blast a wave of sound, dealing 104/156/1950 magic damage to enemies hit.\n\nMetal Pony Club: Slam into a crowd of enemies, dealing 124.8/187.2/39000 magic damage to the center enemy and 156/234/39000 damage split among enemies within 2 hexes.\n\nCasts Rhythm Blaster while unmounted and Metal Pony Club while mounted.",
+      "full_mana": "30/100",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u84": {
       "name_zh": null,
@@ -854,7 +1332,14 @@
       "description": "Throws rocks at the target, each dealing magic damage. Every few casts, quickly repositions and surfs in a line, dealing magic damage based on enemies’ max Health and briefly knocking up enemies hit.",
       "description_zh": "投擲多塊岩石攻擊目標。每第三次施放改為沿直線滑行，造成魔法傷害與最大生命傷害，並短暫擊飛敵軍。",
       "unlock": "Start a champion of each cost in a Beach Pop hex.",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "向目標投擲3塊飛岩，每塊造成185/280/2000魔法傷害。\n\n每第3次施放，改為迅速位移並沿直線滑行。遭命中的敵軍受到160/240/2000 + 2%/3%/50%最大生命的魔法傷害，且被短暫擊飛。",
+      "full_mana": "0/40",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "A Champion of each cost starts in a Beach Pop hex."
+      ]
     },
     "u85": {
       "name_zh": "提摩",
@@ -864,7 +1349,14 @@
       "description": "Passive: Attacks apply Viral, dealing magic damage over time. Infected enemies become zombies on death, seeking unaffected enemies and exploding to damage adjacent enemies and apply Viral.\n\nActive: Launch a mushroom that applies Viral to enemies within 3 hexes and deals magic damage, reduced for each hex from the center.",
       "description_zh": "普攻感染敵軍，造成持續魔法傷害。感染目標死亡後會追擊並感染其他敵軍；主動蘑菇可造成範圍傷害與感染。來源尚有未公開數值。",
       "unlock": "Collect the required amount of Hyperpop Hype.",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: Attacks apply Viral, dealing ? magic damage over [unavailable] seconds. Infected enemies become zombies on death, seeking out unaffected enemies and exploding, dealing ? damage to adjacent enemies and applying Viral.\n\nActive: Launch a mushroom that applies Viral to enemies in a 3 hex radius and deals ? magic damage, reduced by [unavailable] per hex away from the center.",
+      "full_mana": "0/100",
+      "source_missing_values": true,
+      "recommended_items": [],
+      "full_unlock": [
+        "Collect 900 Hyperpop Hype."
+      ]
     },
     "u86": {
       "name_zh": "逆命",
@@ -874,7 +1366,12 @@
       "description": "Passive: At combat start, draw a card for each champion in the shop. If the shop has refreshed this round, gain loot based on the cards drawn: 1 or 2 of a kind grants gold, 3 of a kind grants a random champion, 4 of a kind grants an item component, and 5 of a kind grants a mystery box.\n\nActive: The next 5 attacks gain Attack Speed and are replaced with cards that deal magic damage to the target and 2 nearby enemies.",
       "description_zh": null,
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: At Combat Start, draw a card for each champion in the shop. If your shop has refreshed this round, gain loot based on the cards drawn!\n\n1 or 2 of a Kind: 1 Gold\n\n3 of a Kind: Random champion\n\n4 of a Kind: Item Component\n\n5 of a Kind: Mystery Box!\n\nActive: The next 5 attacks gain 100% Attack Speed and are replaced with cards that deal 100/150/2000 magic damage to the target and 30/45/1000 magic damage to 2 nearby enemies.",
+      "full_mana": "0/50",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u87": {
       "name_zh": "菲艾",
@@ -884,7 +1381,12 @@
       "description": "Summon giant hologram fists, gain a shield for a duration, and shield nearby allies. Slam the target repeatedly, dealing physical damage to them and damage to other enemies within 2 hexes.\n\nEDM Upgrade: Slam one additional time and heal for a portion of the damage dealt by this ability.",
       "description_zh": "召喚全像拳頭，為自己及鄰近友軍提供護盾，再連續猛擊目標並波及周圍敵軍。電子舞曲升級增加打擊次數與治療。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "召喚2個巨型全像投影拳頭。獲得300/400/500護盾，持續2秒，並賦予125/165/215護盾給2名鄰近友軍。猛擊目標5次，每次造成130/200/1000物理傷害，並對2格內其他所有敵軍造成35/55/400傷害。\n\n電子舞曲升級：額外猛擊一次，並回復相當於此技能所造成傷害的15%生命。",
+      "full_mana": "0/50",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u88": {
       "name_zh": "弗拉迪米爾",
@@ -894,7 +1396,15 @@
       "description": "Passive: Gain Omnivamp. Debuffed enemies are Captivated.\n\nActive: Deal magic damage to the nearest enemies and Captivate them for a duration. Every few casts, drop a chandelier that deals magic damage to all enemies, reduced for each hex they are from the epicenter. Debuffs include Burn, Wound, Shred, Sunder, Mana Reave, Weaken, Slow, and Vulnerable.",
       "description_zh": "敵軍進入削抗狀態時會被迷倒。主動傷害並削抗附近敵軍，同時治療自身；每第五次施放會掉落吊燈，傷害全場敵軍，中心附近傷害較高。",
       "unlock": "Field only the specified number of champions in the two front rows of the battlefield.\nLevel 8",
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "Passive: Gain 30% Omnivamp. Debuffed enemies are Captivated.\n\nActive: Deal 100/150/999 magic damage to the 3 nearest enemies and Captivate them for 3 seconds.\n\nEvery 5th cast, drop a chandelier on the board. It deals 380/600/9999 magic damage to all enemies, reduced by 10% per hex they are away from the epicenter.\n\nDebuffs: Burn, Wound, Shred, Sunder, Mana Reave, Weaken, Slow, Vulnerable",
+      "full_mana": "0/40",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Level 8",
+        "Only 1 Champion in the two front rows of the battlefield."
+      ]
     },
     "u89": {
       "name_zh": "婕莉",
@@ -904,7 +1414,12 @@
       "description": "Quickly dashes around the arena, firing lasers in rapid succession at the current target. Each laser deals physical damage to enemies hit and ignores a portion of their Armor.",
       "description_zh": "四處衝刺，快速向目前目標發射多道雷射，造成物理傷害並無視部分物防。",
       "unlock": null,
-      "unlock_zh": null
+      "unlock_zh": null,
+      "full_description": "在競技場中四處衝刺，瞄準目前目標發射6道雷射。雷射會快速連續發射，每道雷射對命中的敵軍造成165/250/1500物理傷害，並無視其40%物防。",
+      "full_mana": "0/150",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": []
     },
     "u90": {
       "name_zh": "巴龍納什",
@@ -914,7 +1429,15 @@
       "description": "Summon an 8-member orchestra and a Riff Herald, knocking up all enemies. Deal physical and magic damage split among all enemies. Each minion attacks multiple times, dealing physical damage with each attack.",
       "description_zh": null,
       "unlock": "Collect all members of Baron's ensemble.\nDeal the required damage with your strongest Malzahar.",
-      "unlock_zh": "收集巴龍樂團全部5名成員，並用最強大的馬爾札哈造成60000傷害。"
+      "unlock_zh": "收集巴龍樂團全部5名成員，並用最強大的馬爾札哈造成60000傷害。",
+      "full_description": "Summon an 8-man orchestra and a Riff Herald, knocking up all enemies for 1 seconds. Deal 550/825/2475 physical damage and 650/1000/3000 magic damage split among all enemies.\n\nEach minion attacks 4 times, with each attack dealing 33/50/250 physical damage.",
+      "full_mana": "80/120",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Collect all 5 members of Baron's ensemble.",
+        "Deal 60000 damage with your strongest Malzahar."
+      ]
     },
     "u91": {
       "name_zh": "銳空",
@@ -925,7 +1448,15 @@
       "description_zh": "衝向一群敵軍，將羽毛分散攻擊附近目標。主要的銳空能命中更廣範圍並短暫擊飛敵軍。",
       "unlock": "At Level 8+, win or lose the required number of consecutive combats.",
       "unlock_zh": null,
-      "image": "https://cdn.metatft.com/cdn-cgi/image/width=256,height=152,format=auto/https://cdn.metatft.com/file/metatft/championsplashes/da_rakan19.png"
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=256,height=152,format=auto/https://cdn.metatft.com/file/metatft/championsplashes/da_rakan19.png",
+      "full_description": "衝向附近的小組敵人，然後將8羽毛分散給1格內的敵人，每根羽毛造成100/180/2400魔法傷害。主要的銳空會擊中2格內的敵人並短暫擊飛他們。",
+      "full_mana": "0/55",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Win 4 combats in a row at Level 8+",
+        "Lose 3 combats in a row at Level 8+"
+      ]
     },
     "u92": {
       "name_zh": null,
@@ -936,7 +1467,15 @@
       "description_zh": "普攻累積節奏，定期獲得護盾並攻擊周圍敵軍，再多次打擊目標。釋放足夠節奏後可獲得尚未啟動羈絆的徽章。",
       "unlock": "Have at least the required number of non-unique traits active.\nLevel 9",
       "unlock_zh": "等級9，且啟動至少8項非唯一羈絆。",
-      "image": "https://cdn.metatft.com/cdn-cgi/image/width=256,height=152,format=auto/https://cdn.metatft.com/file/metatft/championsplashes/da_smeech19.png"
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=256,height=152,format=auto/https://cdn.metatft.com/file/metatft/championsplashes/da_smeech19.png",
+      "full_description": "被動：每次普攻獲得1至4節奏。每4秒施放。\n\n主動：獲得250/375/40000護盾，持續3秒，並對2格內所有敵軍造成100/150/4000物理傷害。然後攻擊當前目標4次，每次造成240/360/2600物理傷害 + 每層節奏額外造成12/18/350傷害。\n\n每當釋放15層節奏後，獲得一個你尚未啟動的特性徽章，並提高所需節奏層數。\n\n(已釋放節奏：–/15)",
+      "full_mana": "0/4",
+      "source_missing_values": false,
+      "recommended_items": [],
+      "full_unlock": [
+        "Level 9",
+        "Have 8 or more non-unique traits active"
+      ]
     },
     "u93": {
       "name_zh": "索娜",
@@ -947,7 +1486,24 @@
       "description_zh": null,
       "unlock": "Inspire Collab champions the required number of times.\nLevel 10",
       "unlock_zh": null,
-      "image": "https://cdn.metatft.com/cdn-cgi/image/width=256,height=152,format=auto/https://cdn.metatft.com/file/metatft/championsplashes/da_sona19.png"
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=256,height=152,format=auto/https://cdn.metatft.com/file/metatft/championsplashes/da_sona19.png",
+      "full_description": "Passive: Cannot attack, instead every [unavailable] seconds, gain ? Mana, deal ? magic damage to the [unavailable] nearest enemies, and 3 allies gain ? Shield for 15 seconds. Sona is Unstoppable.\n\nActive: Unleash a sonic wave across the battlefield, dealing ? magic damage split between all enemies and Stunning them for [unavailable] seconds. Allies gain ? Shield split amongst allies for [unavailable] seconds.",
+      "full_mana": "0/220",
+      "source_missing_values": true,
+      "recommended_items": [],
+      "full_unlock": [
+        "Level 10",
+        "Collab Champions are inspired 15 times during player combat."
+      ]
     }
+  },
+  "patch": "PBE / 19.1",
+  "numeric_source": "https://www.metatft.com/new-set",
+  "equipment_source": {
+    "mode": "PBE",
+    "patch": "19.1",
+    "set": "TFTSet19",
+    "url": "https://www.metatft.com/items",
+    "reserved_slots": 5
   }
 }

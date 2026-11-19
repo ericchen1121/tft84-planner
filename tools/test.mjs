@@ -124,8 +124,19 @@ setLanguage('zh-Hant');assert.equal(helpers.unitLabel(data.units[0]),'伊莉絲'
 assert(helpers.unitSearchText(data.units[0]).includes('Elise'));assert(helpers.unitSearchText(data.units[0]).includes('伊莉絲'));
 assert.equal(helpers.infoUnits().length,94);infoControls.get('info-query').value='伊莉絲';assert.equal(helpers.infoUnits()[0].id,'u0');infoControls.get('info-query').value='Elise';assert.equal(helpers.infoUnits()[0].id,'u0');
 infoControls.get('info-query').value='';infoControls.get('info-cost').value='4';infoControls.get('info-trait').value='K|DA';const subset=helpers.infoUnits();assert(subset.length);assert(subset.every(u=>u.cost===4&&u.traits.includes('K|DA')));
-infoControls.get('info-unlock').value='locked';assert(helpers.infoUnits().every(u=>u.unlock));
+infoControls.get('info-unlock').value='locked';assert(helpers.infoUnits().every(u=>info.units[u.id].full_unlock.length>0));
 infoControls.get('info-cost').value='';infoControls.get('info-trait').value='';infoControls.get('info-unlock').value='';const all=helpers.infoUnits();assert(all.every((u,i)=>!i||all[i-1].cost>=u.cost));
-setLanguage('en');assert.equal(helpers.unitLabel(data.units[0]),'Elise');assert.equal(helpers.abilitySummary(data.units[0]),info.units.u0.description);
+setLanguage('en');assert.equal(helpers.unitLabel(data.units[0]),'Elise');assert.equal(helpers.abilitySummary(data.units[0]),info.units.u0.full_description);
 assert.equal(JSON.stringify(data),canonicalBefore);assert.equal(fs.readFileSync(new URL('index.html',root),'utf8'),html);
 console.log(JSON.stringify({info:'PASS',champions:all.length,translated_names:Object.values(info.units).filter(a=>a.name_zh).length,translated_summaries:Object.values(info.units).filter(a=>a.description_zh).length,bilingual_search:true,combined_filters:true,cost_descending:true}));
+
+const itemData=JSON.parse(capture('item-data'));
+assert.equal(itemData.mode,'PBE');assert.equal(itemData.patch,'19.1');assert.equal(itemData.set,'TFTSet19');assert.equal(itemData.items.length,143);
+const itemIds=new Set(itemData.items.map(item=>item.id));assert.equal(itemIds.size,143);
+for(const item of itemData.items){assert(item.source.endsWith('?set=TFTSet19'));assert(item.image.endsWith(item.id.toLowerCase()+'.png'));assert(!/18_Emblem|Potion18/.test(item.id));}
+assert(itemIds.has('DA_IonicSpark19_Emblem'));assert(itemIds.has('DA_TrueDamage19_Emblem'));assert(!itemIds.has('DA_18_EmblemCoven'));
+let missing=0,unlocks=0;
+for(const u of data.units){const a=info.units[u.id];assert(a.full_description.length>30);assert(/^\d+\/\d+$/.test(a.full_mana));assert.equal(a.source_missing_values,/\?|\[unavailable\]/.test(a.full_description));assert(Array.isArray(a.full_unlock));assert(Array.isArray(a.recommended_items));assert(a.recommended_items.length<=5);for(const id of a.recommended_items)assert(itemIds.has(id));missing+=+a.source_missing_values;unlocks+=+(a.full_unlock.length>0);}
+assert.equal(missing,9);assert.equal(unlocks,32);assert(info.units.u0.full_description.includes('280/330/400'));assert(info.units.u49.full_description.includes('235/350/2000'));assert(info.units.u88.full_description.includes('30% Omnivamp'));
+assert(!get('src/info.js').includes("['Population',u.slots]"));assert(!get('src/info.js').includes("t('{n} slots'"));assert(get('src/info.js').includes('infoUnlockBlock(u),recommendedEquipment(u)'));assert(get('src/info.js').includes('slot<5'));
+console.log(JSON.stringify({full_skills:94,source_placeholders:missing,visible_unlock_conditions:unlocks,equipment_catalog:itemData.items.length,equipment_mode:itemData.mode,equipment_patch:itemData.patch,reserved_slots:5,population_labels_in_info:false}));

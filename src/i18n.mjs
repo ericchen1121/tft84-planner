@@ -126,7 +126,15 @@ export const UI_ZH=Object.freeze({
   'Cost':'費用','Attack range':'攻擊距離','Population':'人口','Mana':'魔力','Unlock condition':'解鎖條件',
   'Close champion info':'關閉棋子介紹',
   'Ability summaries omit star-level scaling. Some source values are not yet available.':'此處為技能機制摘要，省略各星等倍率；部分來源數值尚未公開。',
-  '7-cost':'7 費','5-cost':'5 費','4-cost':'4 費','3-cost':'3 費','2-cost':'2 費','1-cost':'1 費'
+  '7-cost':'7 費','5-cost':'5 費','4-cost':'4 費','3-cost':'3 費','2-cost':'2 費','1-cost':'1 費',
+  'PBE / 19.1 · Full ability values · Snapshot Nov 19, 2026':'PBE / 19.1 · 完整技能數值 · 資料快照：2026/11/19',
+  'Values: 1★ / 2★ / 3★':'數值順序：1★ / 2★ / 3★',
+  '[unavailable]':'［來源未提供］',
+  'Some values depend on the board or are missing from the source.':'部分數值依場上狀況而變動，或來源尚未提供。',
+  'PBE source values; damage and healing scale with stats. Skills follow the source language.':'數值依 PBE 資料；實際傷害與治療會隨屬性變動。技能沿用來源語言，翻譯缺漏或不一致時採英文原文。',
+  'Recommended items':'推薦裝備','Five reserved recommended item slots':'五個推薦裝備預留位置',
+  'Recommendation slot {n} · Not set':'推薦裝備位置 {n} · 尚未設定',
+  'Reserved · Recommendations not set':'預留位置 · 推薦裝備待補'
 });
 let currentLanguage='zh-Hant';
 export function setLanguage(value){currentLanguage=value==='en'?'en':'zh-Hant';return currentLanguage;}

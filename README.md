@@ -120,10 +120,16 @@ Source: [tactics.tools Set Update](https://tactics.tools/info/set-update). Champ
 
 ## Champion Info / 棋子圖鑑
 
-The header tabs separate the existing **Solver / 求解器** from **Info**. Info includes all 94 roster entries, sorted by cost descending, with cost/trait/unlock filters and bilingual name search. Click a card to read ability mechanics, mana, role, range, population and unlock requirements. Switching tabs preserves solver inputs and results; `#info` links directly to the library.
+The existing Solver and Info tabs preserve solver settings and results when switching. Info contains all 94 champions sorted by cost descending, bilingual name search, and cost/trait/unlock filters. Names follow MetaTFT's Taiwan locale: 78 translated names, remaining names unchanged. Portraits include 91 original mappings and 3 additional MetaTFT images.
 
-`dist/info.json` contains display-only metadata. On 2026-11-19, MetaTFT's Taiwan locale supplied 78 localized names and 59 ability descriptions with Chinese text. Chinese ability summaries paraphrase those descriptions; unavailable translations retain English. Variant suffixes distinguish Akali's forms. English mechanics, mana and unlock conditions retain the existing tactics.tools snapshot; this change does not alter solver balance data or its verified preset. Skill summaries intentionally omit star-level scaling and unpublished numeric placeholders. Sixteen unlock conditions also have Chinese summaries; other unlock conditions retain English.
+Info now displays full ability text with numeric values, mana, star-level ordering and highlighted numeric sequences. Population labels are omitted throughout Info. Unlock conditions are visible directly on the cards. Click a card for the same full description in a dialog. Content follows the source language, with English taking precedence when a translation is incomplete or materially different (notably Vladimir and Rakan's loss streak).
 
-Sources: https://www.metatft.com/new-set and https://tactics.tools/info/set-update . Info is embedded in the standalone build and requires no runtime data fetch.
+Source: https://www.metatft.com/new-set, captured 2026-11-19. Every champion has full text; 9 entries still contain source placeholders or dynamic counters: Kobuko, Ziggs, Gragas, Viego, Jinx, Shyvana, Nunu & Willump, Teemo and Sona. They are explicitly marked unavailable / dependent on the current board. No missing numeric values are guessed. Repeated tooltip echoes are normalized. Damage/healing displayed by the source is not a simulator for arbitrary item or stat configurations.
 
-MetaTFT supplies the three additional portrait URLs for Rakan, Smeech and Sona; the other 91 retain the existing artwork mapping.
+The current MetaTFT Info snapshot lists 32 unlockable entries. Info filters use that display snapshot. Solver data, its unlock flags, and all 68,766 verified preset lineups remain unchanged.
+
+Each card and dialog reserves **5 circular recommended-item positions**. Recommendations are intentionally empty, as requested. Future recommendations can be set as item IDs in each unit's `recommended_items` array in `dist/info.json`; the renderer resolves images from `dist/items.json`. This is a list of suggested alternatives, not five equipped items, and does not affect solving.
+
+The equipment catalog was captured only after explicitly switching https://www.metatft.com/items to **PBE / 19.1**. All 143 observed item links had `set=TFTSet19`; the catalog records mode, patch, set, exact item ID, label and image URL. This includes components, standard/radiant/artifact items, emblems and special items. The observed Prodigy item currently has the upstream ID `TFT_Emblem_CHANGEME`; it is kept with its actual source label rather than renamed or invented. The catalog does not expand the solver's user-approved emblem whitelist.
+
+All display data is embedded in the standalone build; the website makes no runtime metadata fetch.

@@ -1,0 +1,1010 @@
+{
+  "source": "https://www.metatft.com/items",
+  "mode": "PBE",
+  "patch": "19.1",
+  "set": "TFTSet19",
+  "snapshot_date": "2026-11-19",
+  "items": [
+    {
+      "id": "DA_IonicSparkRadiant",
+      "name_zh": "聖光離子星火",
+      "name": "Ionic Spark Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_ionicsparkradiant.png",
+      "source": "https://www.metatft.com/items/DA_IonicSparkRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_RabadonsDeathcap_Radiant",
+      "name_zh": "聖光死亡之帽",
+      "name": "Rabadons Deathcap Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_rabadonsdeathcap_radiant.png",
+      "source": "https://www.metatft.com/items/DA_RabadonsDeathcap_Radiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_JeweledGauntletRadiant",
+      "name_zh": "聖光寶石手套",
+      "name": "Jeweled Gauntlet Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_jeweledgauntletradiant.png",
+      "source": "https://www.metatft.com/items/DA_JeweledGauntletRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_ArchangelsStaffRadiant",
+      "name_zh": "聖光大天使之杖",
+      "name": "Archangels Staff Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_archangelsstaffradiant.png",
+      "source": "https://www.metatft.com/items/DA_ArchangelsStaffRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_EternalPact",
+      "name_zh": "永恆契約",
+      "name": "Artifact Eternal Pact",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_eternalpact.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_EternalPact?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_LichBane",
+      "name_zh": "巫妖之禍",
+      "name": "Artifact Lich Bane",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_lichbane.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_LichBane?set=TFTSet19"
+    },
+    {
+      "id": "DA_HextechGunbladeRadiant",
+      "name_zh": "聖光海克斯科技槍刃",
+      "name": "Hextech Gunblade Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_hextechgunbladeradiant.png",
+      "source": "https://www.metatft.com/items/DA_HextechGunbladeRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_BlightingJewel",
+      "name_zh": "枯萎寶石",
+      "name": "Artifact Blighting Jewel",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_blightingjewel.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_BlightingJewel?set=TFTSet19"
+    },
+    {
+      "id": "DA_ThiefsGlovesRadiant",
+      "name_zh": "聖光竊賊手套",
+      "name": "Thiefs Gloves Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_thiefsglovesradiant.png",
+      "source": "https://www.metatft.com/items/DA_ThiefsGlovesRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_ZhonyasParadox",
+      "name_zh": "中婭悖論之鐘",
+      "name": "Artifact Zhonyas Paradox",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_zhonyasparadox.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_ZhonyasParadox?set=TFTSet19"
+    },
+    {
+      "id": "DA_SteraksGageRadiant",
+      "name_zh": "聖光史特拉克手套",
+      "name": "Steraks Gage Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_steraksgageradiant.png",
+      "source": "https://www.metatft.com/items/DA_SteraksGageRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_StrikersFlailRadiant",
+      "name_zh": "聖光打手連枷",
+      "name": "Strikers Flail Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_strikersflailradiant.png",
+      "source": "https://www.metatft.com/items/DA_StrikersFlailRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_VoidStaffRadiant",
+      "name_zh": "聖光虛空之杖",
+      "name": "Void Staff Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_voidstaffradiant.png",
+      "source": "https://www.metatft.com/items/DA_VoidStaffRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_BlueBuffRadiant",
+      "name_zh": "聖光藍Buff",
+      "name": "Blue Buff Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_bluebuffradiant.png",
+      "source": "https://www.metatft.com/items/DA_BlueBuffRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_BrambleVestRadiant",
+      "name_zh": "聖光刺藤胸甲",
+      "name": "Bramble Vest Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_bramblevestradiant.png",
+      "source": "https://www.metatft.com/items/DA_BrambleVestRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_MorellonomiconRadiant",
+      "name_zh": "聖光黑魔禁書",
+      "name": "Morellonomicon Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_morellonomiconradiant.png",
+      "source": "https://www.metatft.com/items/DA_MorellonomiconRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_HandOfJusticeRadiant",
+      "name_zh": "聖光正義手套",
+      "name": "Hand Of Justice Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_handofjusticeradiant.png",
+      "source": "https://www.metatft.com/items/DA_HandOfJusticeRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_GargoyleStoneplate_Radiant",
+      "name_zh": "聖光石像鬼磐核",
+      "name": "Gargoyle Stoneplate Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_gargoylestoneplate_radiant.png",
+      "source": "https://www.metatft.com/items/DA_GargoyleStoneplate_Radiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_GargoyleStoneplate",
+      "name_zh": "石像鬼磐核",
+      "name": "Gargoyle Stoneplate",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_gargoylestoneplate.png",
+      "source": "https://www.metatft.com/items/DA_GargoyleStoneplate?set=TFTSet19"
+    },
+    {
+      "id": "DA_Choreographer19_Emblem",
+      "name_zh": "Choreographer Emblem",
+      "name": "Choreographer19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_choreographer19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Choreographer19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_StatikkShiv",
+      "name_zh": "史提克彈簧刀",
+      "name": "Artifact Statikk Shiv",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_statikkshiv.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_StatikkShiv?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_LightshieldCrest",
+      "name_zh": "光盾之紋",
+      "name": "Artifact Lightshield Crest",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_lightshieldcrest.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_LightshieldCrest?set=TFTSet19"
+    },
+    {
+      "id": "DA_JeweledGauntlet",
+      "name_zh": "寶石手套",
+      "name": "Jeweled Gauntlet",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_jeweledgauntlet.png",
+      "source": "https://www.metatft.com/items/DA_JeweledGauntlet?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_InfinityForce",
+      "name_zh": "無盡之力",
+      "name": "Artifact Infinity Force",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_infinityforce.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_InfinityForce?set=TFTSet19"
+    },
+    {
+      "id": "DA_KDA19_Emblem",
+      "name_zh": "K/DA徽章",
+      "name": "KDA19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_kda19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_KDA19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_MogulsMail",
+      "name_zh": "權貴之甲",
+      "name": "Artifact Moguls Mail",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_mogulsmail.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_MogulsMail?set=TFTSet19"
+    },
+    {
+      "id": "DA_SpiritVisage_Radiant",
+      "name_zh": "聖光振奮盔甲",
+      "name": "Spirit Visage Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_spiritvisage_radiant.png",
+      "source": "https://www.metatft.com/items/DA_SpiritVisage_Radiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_Frontman19_Emblem",
+      "name_zh": "Frontman Emblem",
+      "name": "Frontman19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_frontman19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Frontman19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_ThiefsGloves",
+      "name_zh": "竊賊手套",
+      "name": "Thiefs Gloves",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_thiefsgloves.png",
+      "source": "https://www.metatft.com/items/DA_ThiefsGloves?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_TheIndomitable",
+      "name_zh": "不屈鬥魂",
+      "name": "Artifact The Indomitable",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_theindomitable.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_TheIndomitable?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_VoidGauntlet",
+      "name_zh": "虛空武鬥場",
+      "name": "Artifact Void Gauntlet",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_voidgauntlet.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_VoidGauntlet?set=TFTSet19"
+    },
+    {
+      "id": "DA_DragonsClawRadiant",
+      "name_zh": "聖光龍之爪",
+      "name": "Dragons Claw Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_dragonsclawradiant.png",
+      "source": "https://www.metatft.com/items/DA_DragonsClawRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_SteadfastHeartRadiant",
+      "name_zh": "聖光堅定之心",
+      "name": "Steadfast Heart Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_steadfastheartradiant.png",
+      "source": "https://www.metatft.com/items/DA_SteadfastHeartRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_GiantSlayer_Radiant",
+      "name_zh": "聖光巨人殺手",
+      "name": "Giant Slayer Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_giantslayer_radiant.png",
+      "source": "https://www.metatft.com/items/DA_GiantSlayer_Radiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_SunfireCape_Radiant",
+      "name_zh": "聖光日炎斗篷",
+      "name": "Sunfire Cape Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_sunfirecape_radiant.png",
+      "source": "https://www.metatft.com/items/DA_SunfireCape_Radiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_WitsEnd",
+      "name_zh": "智慧末刃",
+      "name": "Artifact Wits End",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_witsend.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_WitsEnd?set=TFTSet19"
+    },
+    {
+      "id": "TFT_Emblem_CHANGEME",
+      "name_zh": "不世之才徽章",
+      "name": "Emblem CHANGEME",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/tft_emblem_changeme.png",
+      "source": "https://www.metatft.com/items/TFT_Emblem_CHANGEME?set=TFTSet19"
+    },
+    {
+      "id": "DA_Item_Artifact_TalismanOfAscension",
+      "name_zh": "昇華護符",
+      "name": "Item Artifact Talisman Of Ascension",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_item_artifact_talismanofascension.png",
+      "source": "https://www.metatft.com/items/DA_Item_Artifact_TalismanOfAscension?set=TFTSet19"
+    },
+    {
+      "id": "DA_Arcanist19_Emblem",
+      "name_zh": "奧術大師徽章",
+      "name": "Arcanist19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_arcanist19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Arcanist19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_Swiftstriker19_Emblem",
+      "name_zh": "Swiftstriker Emblem",
+      "name": "Swiftstriker19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_swiftstriker19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Swiftstriker19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_LudensTempest",
+      "name_zh": "盧登驟雨",
+      "name": "Artifact Ludens Tempest",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_ludenstempest.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_LudensTempest?set=TFTSet19"
+    },
+    {
+      "id": "DA_WarmogsArmorRadiant",
+      "name_zh": "聖光好戰者鎧甲",
+      "name": "Warmogs Armor Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_warmogsarmorradiant.png",
+      "source": "https://www.metatft.com/items/DA_WarmogsArmorRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_WarmogsArmor",
+      "name_zh": "好戰者鎧甲",
+      "name": "Warmogs Armor",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_warmogsarmor.png",
+      "source": "https://www.metatft.com/items/DA_WarmogsArmor?set=TFTSet19"
+    },
+    {
+      "id": "DA_CrownguardRadiant",
+      "name_zh": "Prismatic Crownguard",
+      "name": "Crownguard Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_crownguardradiant.png",
+      "source": "https://www.metatft.com/items/DA_CrownguardRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_GlitterBomb19_Emblem",
+      "name_zh": "超流行徽章",
+      "name": "Glitter Bomb19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_glitterbomb19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_GlitterBomb19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_GuinsoosRagebladeRadiant",
+      "name_zh": "聖光鬼索的狂暴之刃",
+      "name": "Guinsoos Rageblade Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_guinsoosragebladeradiant.png",
+      "source": "https://www.metatft.com/items/DA_GuinsoosRagebladeRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_Dawncore",
+      "name_zh": "破曉之核",
+      "name": "Artifact Dawncore",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_dawncore.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_Dawncore?set=TFTSet19"
+    },
+    {
+      "id": "DA_GuinsoosRageblade",
+      "name_zh": "鬼索的狂暴之刃",
+      "name": "Guinsoos Rageblade",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_guinsoosrageblade.png",
+      "source": "https://www.metatft.com/items/DA_GuinsoosRageblade?set=TFTSet19"
+    },
+    {
+      "id": "DA_EdgeOfNightRadiant",
+      "name_zh": "聖光夜色緣界",
+      "name": "Edge Of Night Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_edgeofnightradiant.png",
+      "source": "https://www.metatft.com/items/DA_EdgeOfNightRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_SpearOfShojin",
+      "name_zh": "精進之矛",
+      "name": "Spear Of Shojin",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_spearofshojin.png",
+      "source": "https://www.metatft.com/items/DA_SpearOfShojin?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_CappaJuice",
+      "name_zh": "帽帽果汁",
+      "name": "Artifact Cappa Juice",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_cappajuice.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_CappaJuice?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_Manazane",
+      "name_zh": "魔力之蘊",
+      "name": "Artifact Manazane",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_manazane.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_Manazane?set=TFTSet19"
+    },
+    {
+      "id": "DA_SpiritVisage",
+      "name_zh": "振奮盔甲",
+      "name": "Spirit Visage",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_spiritvisage.png",
+      "source": "https://www.metatft.com/items/DA_SpiritVisage?set=TFTSet19"
+    },
+    {
+      "id": "DA_Bodyguard19_Emblem",
+      "name_zh": "保鑣徽章",
+      "name": "Bodyguard19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_bodyguard19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Bodyguard19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_SeekersArmguard",
+      "name_zh": "探索者護腕",
+      "name": "Artifact Seekers Armguard",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_seekersarmguard.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_SeekersArmguard?set=TFTSet19"
+    },
+    {
+      "id": "DA_VoidStaff",
+      "name_zh": "虛空之杖",
+      "name": "Void Staff",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_voidstaff.png",
+      "source": "https://www.metatft.com/items/DA_VoidStaff?set=TFTSet19"
+    },
+    {
+      "id": "DA_ProtectorsVowRadiant",
+      "name_zh": "聖光保衛者之誓",
+      "name": "Protectors Vow Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_protectorsvowradiant.png",
+      "source": "https://www.metatft.com/items/DA_ProtectorsVowRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_NashorsToothRadiant",
+      "name_zh": "聖光納什之牙",
+      "name": "Nashors Tooth Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_nashorstoothradiant.png",
+      "source": "https://www.metatft.com/items/DA_NashorsToothRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_KrakensFury_Radiant",
+      "name_zh": "聖光海妖之怒",
+      "name": "Krakens Fury Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_krakensfury_radiant.png",
+      "source": "https://www.metatft.com/items/DA_KrakensFury_Radiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_AegisOfDusk",
+      "name_zh": "黃昏聖盾",
+      "name": "Artifact Aegis Of Dusk",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_aegisofdusk.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_AegisOfDusk?set=TFTSet19"
+    },
+    {
+      "id": "DA_IonicSpark19_Emblem",
+      "name_zh": "Ionic Spark徽章",
+      "name": "Ionic Spark19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_ionicspark19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_IonicSpark19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_Hullcrusher",
+      "name_zh": "碎船戰斧",
+      "name": "Artifact Hullcrusher",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_hullcrusher.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_Hullcrusher?set=TFTSet19"
+    },
+    {
+      "id": "DA_Hitmaker19_Emblem",
+      "name_zh": "金曲製造機徽章",
+      "name": "Hitmaker19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_hitmaker19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Hitmaker19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_GiantSlayer",
+      "name_zh": "巨人殺手",
+      "name": "Giant Slayer",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_giantslayer.png",
+      "source": "https://www.metatft.com/items/DA_GiantSlayer?set=TFTSet19"
+    },
+    {
+      "id": "DA_Juggernaut19_Emblem",
+      "name_zh": "重裝戰士徽章",
+      "name": "Juggernaut19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_juggernaut19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Juggernaut19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_InfinityEdge",
+      "name_zh": "無盡之刃",
+      "name": "Infinity Edge",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_infinityedge.png",
+      "source": "https://www.metatft.com/items/DA_InfinityEdge?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_AegisOfDawn",
+      "name_zh": "黎明聖盾",
+      "name": "Artifact Aegis Of Dawn",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_aegisofdawn.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_AegisOfDawn?set=TFTSet19"
+    },
+    {
+      "id": "DA_SunfireCape",
+      "name_zh": "日炎斗篷",
+      "name": "Sunfire Cape",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_sunfirecape.png",
+      "source": "https://www.metatft.com/items/DA_SunfireCape?set=TFTSet19"
+    },
+    {
+      "id": "DA_RedBuffRadiant",
+      "name_zh": "聖光紅Buff",
+      "name": "Red Buff Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_redbuffradiant.png",
+      "source": "https://www.metatft.com/items/DA_RedBuffRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_GamblersBlade",
+      "name_zh": "賭徒之刀",
+      "name": "Artifact Gamblers Blade",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_gamblersblade.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_GamblersBlade?set=TFTSet19"
+    },
+    {
+      "id": "DA_InfinityEdgeRadiant",
+      "name_zh": "聖光無盡之刃",
+      "name": "Infinity Edge Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_infinityedgeradiant.png",
+      "source": "https://www.metatft.com/items/DA_InfinityEdgeRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_HandOfJustice",
+      "name_zh": "正義手套",
+      "name": "Hand Of Justice",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_handofjustice.png",
+      "source": "https://www.metatft.com/items/DA_HandOfJustice?set=TFTSet19"
+    },
+    {
+      "id": "DA_RedBuff",
+      "name_zh": "紅Buff",
+      "name": "Red Buff",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_redbuff.png",
+      "source": "https://www.metatft.com/items/DA_RedBuff?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_NavoriFlickerblade",
+      "name_zh": "閃刃",
+      "name": "Artifact Navori Flickerblade",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_navoriflickerblade.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_NavoriFlickerblade?set=TFTSet19"
+    },
+    {
+      "id": "DA_HextechGunblade",
+      "name_zh": "海克斯科技槍刃",
+      "name": "Hextech Gunblade",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_hextechgunblade.png",
+      "source": "https://www.metatft.com/items/DA_HextechGunblade?set=TFTSet19"
+    },
+    {
+      "id": "DA_RabadonsDeathcap",
+      "name_zh": "死亡之帽",
+      "name": "Rabadons Deathcap",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_rabadonsdeathcap.png",
+      "source": "https://www.metatft.com/items/DA_RabadonsDeathcap?set=TFTSet19"
+    },
+    {
+      "id": "DA_Renegade19_Emblem",
+      "name_zh": "叛徒徽章",
+      "name": "Renegade19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_renegade19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Renegade19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_Mittens",
+      "name_zh": "小手套",
+      "name": "Artifact Mittens",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_mittens.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_Mittens?set=TFTSet19"
+    },
+    {
+      "id": "DA_Mosher19_Emblem",
+      "name_zh": "殺戮者徽章",
+      "name": "Mosher19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_mosher19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Mosher19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_BlueBuff",
+      "name_zh": "藍Buff",
+      "name": "Blue Buff",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_bluebuff.png",
+      "source": "https://www.metatft.com/items/DA_BlueBuff?set=TFTSet19"
+    },
+    {
+      "id": "DA_Morellonomicon",
+      "name_zh": "黑魔禁書",
+      "name": "Morellonomicon",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_morellonomicon.png",
+      "source": "https://www.metatft.com/items/DA_Morellonomicon?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_HorizonFocus",
+      "name_zh": "視界專注",
+      "name": "Artifact Horizon Focus",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_horizonfocus.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_HorizonFocus?set=TFTSet19"
+    },
+    {
+      "id": "DA_Manager19_Emblem",
+      "name_zh": "經紀人徽章",
+      "name": "Manager19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_manager19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Manager19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_StrikersFlail",
+      "name_zh": "打手連枷",
+      "name": "Strikers Flail",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_strikersflail.png",
+      "source": "https://www.metatft.com/items/DA_StrikersFlail?set=TFTSet19"
+    },
+    {
+      "id": "DA_EdgeOfNight",
+      "name_zh": "夜色緣界",
+      "name": "Edge Of Night",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_edgeofnight.png",
+      "source": "https://www.metatft.com/items/DA_EdgeOfNight?set=TFTSet19"
+    },
+    {
+      "id": "DA_Bloodthirster",
+      "name_zh": "嗜血者",
+      "name": "Bloodthirster",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_bloodthirster.png",
+      "source": "https://www.metatft.com/items/DA_Bloodthirster?set=TFTSet19"
+    },
+    {
+      "id": "DA_BloodthirsterRadiant",
+      "name_zh": "聖光嗜血者",
+      "name": "Bloodthirster Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_bloodthirsterradiant.png",
+      "source": "https://www.metatft.com/items/DA_BloodthirsterRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_Pentakill19_Emblem",
+      "name_zh": "Pentakill Emblem",
+      "name": "Pentakill19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_pentakill19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Pentakill19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_ArchangelsStaff",
+      "name_zh": "大天使之杖",
+      "name": "Archangels Staff",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_archangelsstaff.png",
+      "source": "https://www.metatft.com/items/DA_ArchangelsStaff?set=TFTSet19"
+    },
+    {
+      "id": "DA_ProtectorsVow",
+      "name_zh": "保衛者之誓",
+      "name": "Protectors Vow",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_protectorsvow.png",
+      "source": "https://www.metatft.com/items/DA_ProtectorsVow?set=TFTSet19"
+    },
+    {
+      "id": "DA_Crownguard",
+      "name_zh": "皇冠守衛",
+      "name": "Crownguard",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_crownguard.png",
+      "source": "https://www.metatft.com/items/DA_Crownguard?set=TFTSet19"
+    },
+    {
+      "id": "DA_IonicSpark",
+      "name_zh": "離子星火",
+      "name": "Ionic Spark",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_ionicspark.png",
+      "source": "https://www.metatft.com/items/DA_IonicSpark?set=TFTSet19"
+    },
+    {
+      "id": "DA_LastWhisperRadiant",
+      "name_zh": "聖光最後耳語",
+      "name": "Last Whisper Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_lastwhisperradiant.png",
+      "source": "https://www.metatft.com/items/DA_LastWhisperRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_LastWhisper",
+      "name_zh": "最後耳語",
+      "name": "Last Whisper",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_lastwhisper.png",
+      "source": "https://www.metatft.com/items/DA_LastWhisper?set=TFTSet19"
+    },
+    {
+      "id": "DA_SteadfastHeart",
+      "name_zh": "堅定之心",
+      "name": "Steadfast Heart",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_steadfastheart.png",
+      "source": "https://www.metatft.com/items/DA_SteadfastHeart?set=TFTSet19"
+    },
+    {
+      "id": "DA_DragonsClaw",
+      "name_zh": "龍之爪",
+      "name": "Dragons Claw",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_dragonsclaw.png",
+      "source": "https://www.metatft.com/items/DA_DragonsClaw?set=TFTSet19"
+    },
+    {
+      "id": "DA_NashorsTooth",
+      "name_zh": "納什之牙",
+      "name": "Nashors Tooth",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_nashorstooth.png",
+      "source": "https://www.metatft.com/items/DA_NashorsTooth?set=TFTSet19"
+    },
+    {
+      "id": "DA_SteraksGage",
+      "name_zh": "史特拉克手套",
+      "name": "Steraks Gage",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_steraksgage.png",
+      "source": "https://www.metatft.com/items/DA_SteraksGage?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_GoldCollector",
+      "name_zh": "金幣蒐集者",
+      "name": "Artifact Gold Collector",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_goldcollector.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_GoldCollector?set=TFTSet19"
+    },
+    {
+      "id": "DA_TitansResolve",
+      "name_zh": "泰坦的決意",
+      "name": "Titans Resolve",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_titansresolve.png",
+      "source": "https://www.metatft.com/items/DA_TitansResolve?set=TFTSet19"
+    },
+    {
+      "id": "DA_Heartsteel19_Emblem",
+      "name_zh": "Heartsteel Emblem",
+      "name": "Heartsteel19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_heartsteel19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Heartsteel19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_Deathblade",
+      "name_zh": "死神之刃",
+      "name": "Deathblade",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_deathblade.png",
+      "source": "https://www.metatft.com/items/DA_Deathblade?set=TFTSet19"
+    },
+    {
+      "id": "DA_Evenshroud",
+      "name_zh": "均等法衣",
+      "name": "Evenshroud",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_evenshroud.png",
+      "source": "https://www.metatft.com/items/DA_Evenshroud?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_TitanicHydra",
+      "name_zh": "泰坦九頭蛇",
+      "name": "Artifact Titanic Hydra",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_titanichydra.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_TitanicHydra?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_HellfireHatchet",
+      "name_zh": "獄火手斧",
+      "name": "Artifact Hellfire Hatchet",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_hellfirehatchet.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_HellfireHatchet?set=TFTSet19"
+    },
+    {
+      "id": "DA_DemonVision19_Emblem",
+      "name_zh": "Rock Emblem",
+      "name": "Demon Vision19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_demonvision19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_DemonVision19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_BrambleVest",
+      "name_zh": "刺藤胸甲",
+      "name": "Bramble Vest",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_bramblevest.png",
+      "source": "https://www.metatft.com/items/DA_BrambleVest?set=TFTSet19"
+    },
+    {
+      "id": "DA_KrakensFury",
+      "name_zh": "海妖之怒",
+      "name": "Krakens Fury",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_krakensfury.png",
+      "source": "https://www.metatft.com/items/DA_KrakensFury?set=TFTSet19"
+    },
+    {
+      "id": "DA_IllBeats19_Emblem",
+      "name_zh": "IllBeats Emblem",
+      "name": "Ill Beats19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_illbeats19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_IllBeats19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_SpearOfShojinRadiant",
+      "name_zh": "聖光精進之矛",
+      "name": "Spear Of Shojin Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_spearofshojinradiant.png",
+      "source": "https://www.metatft.com/items/DA_SpearOfShojinRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_Quicksilver",
+      "name_zh": "水銀兜帽",
+      "name": "Quicksilver",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_quicksilver.png",
+      "source": "https://www.metatft.com/items/DA_Quicksilver?set=TFTSet19"
+    },
+    {
+      "id": "DA_Virtuosos19_Emblem",
+      "name_zh": "古典樂徽章",
+      "name": "Virtuosos19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_virtuosos19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Virtuosos19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_EvenshroudRadiant",
+      "name_zh": "聖光均等法衣",
+      "name": "Evenshroud Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_evenshroudradiant.png",
+      "source": "https://www.metatft.com/items/DA_EvenshroudRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_Jazz19_Emblem",
+      "name_zh": "爵士樂徽章",
+      "name": "Jazz19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_jazz19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Jazz19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_Oceansong19_Emblem",
+      "name_zh": "海灘流行樂徽章",
+      "name": "Oceansong19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_oceansong19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_Oceansong19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_SilvermereDawn",
+      "name_zh": "銀織黎明",
+      "name": "Artifact Silvermere Dawn",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_silvermeredawn.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_SilvermereDawn?set=TFTSet19"
+    },
+    {
+      "id": "DA_DeathbladeRadiant",
+      "name_zh": "聖光死神之刃",
+      "name": "Deathblade Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_deathbladeradiant.png",
+      "source": "https://www.metatft.com/items/DA_DeathbladeRadiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_DeathsDefiance",
+      "name_zh": "死亡之蔑",
+      "name": "Artifact Deaths Defiance",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_deathsdefiance.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_DeathsDefiance?set=TFTSet19"
+    },
+    {
+      "id": "DA_Heavenscale19_DangerousItem",
+      "name_zh": "饕餮之卷",
+      "name": "Heavenscale19 Dangerous Item",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_heavenscale19_dangerousitem.png",
+      "source": "https://www.metatft.com/items/DA_Heavenscale19_DangerousItem?set=TFTSet19"
+    },
+    {
+      "id": "DA_TacticiansCrown",
+      "name_zh": "棋手皇冠",
+      "name": "Tacticians Crown",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_tacticianscrown.png",
+      "source": "https://www.metatft.com/items/DA_TacticiansCrown?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_Fishbones",
+      "name_zh": "惡鯊火箭",
+      "name": "Artifact Fishbones",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_fishbones.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_Fishbones?set=TFTSet19"
+    },
+    {
+      "id": "DA_ChaliceOfPower",
+      "name_zh": "力量聖杯",
+      "name": "Chalice Of Power",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_chaliceofpower.png",
+      "source": "https://www.metatft.com/items/DA_ChaliceOfPower?set=TFTSet19"
+    },
+    {
+      "id": "DA_Heavenscale19_HeavenlyPrayer",
+      "name_zh": "天祈之卷",
+      "name": "Heavenscale19 Heavenly Prayer",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_heavenscale19_heavenlyprayer.png",
+      "source": "https://www.metatft.com/items/DA_Heavenscale19_HeavenlyPrayer?set=TFTSet19"
+    },
+    {
+      "id": "DA_TacticiansCape",
+      "name_zh": "聯盟棋手披風",
+      "name": "Tacticians Cape",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_tacticianscape.png",
+      "source": "https://www.metatft.com/items/DA_TacticiansCape?set=TFTSet19"
+    },
+    {
+      "id": "DA_Component_TearOfTheGoddess",
+      "name_zh": "女神之淚",
+      "name": "Component Tear Of The Goddess",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_component_tearofthegoddess.png",
+      "source": "https://www.metatft.com/items/DA_Component_TearOfTheGoddess?set=TFTSet19"
+    },
+    {
+      "id": "DA_ZekesHerald",
+      "name_zh": "錫柯的號角",
+      "name": "Zekes Herald",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_zekesherald.png",
+      "source": "https://www.metatft.com/items/DA_ZekesHerald?set=TFTSet19"
+    },
+    {
+      "id": "DA_Component_ChainVest",
+      "name_zh": "鎖子甲",
+      "name": "Component Chain Vest",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_component_chainvest.png",
+      "source": "https://www.metatft.com/items/DA_Component_ChainVest?set=TFTSet19"
+    },
+    {
+      "id": "DA_Component_NeedlesslyLargeRod",
+      "name_zh": "巨型魔棒",
+      "name": "Component Needlessly Large Rod",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_component_needlesslylargerod.png",
+      "source": "https://www.metatft.com/items/DA_Component_NeedlesslyLargeRod?set=TFTSet19"
+    },
+    {
+      "id": "DA_Component_RecurveBow",
+      "name_zh": "反曲弓",
+      "name": "Component Recurve Bow",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_component_recurvebow.png",
+      "source": "https://www.metatft.com/items/DA_Component_RecurveBow?set=TFTSet19"
+    },
+    {
+      "id": "DA_TacticiansShield",
+      "name_zh": "棋手之盾",
+      "name": "Tacticians Shield",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_tacticiansshield.png",
+      "source": "https://www.metatft.com/items/DA_TacticiansShield?set=TFTSet19"
+    },
+    {
+      "id": "DA_RanduinsOmen",
+      "name_zh": "蘭頓之兆",
+      "name": "Randuins Omen",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_randuinsomen.png",
+      "source": "https://www.metatft.com/items/DA_RanduinsOmen?set=TFTSet19"
+    },
+    {
+      "id": "DA_Component_NegatronCloak",
+      "name_zh": "負極斗篷",
+      "name": "Component Negatron Cloak",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_component_negatroncloak.png",
+      "source": "https://www.metatft.com/items/DA_Component_NegatronCloak?set=TFTSet19"
+    },
+    {
+      "id": "DA_Component_BFSword",
+      "name_zh": "暴風之劍",
+      "name": "Component BFSword",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_component_bfsword.png",
+      "source": "https://www.metatft.com/items/DA_Component_BFSword?set=TFTSet19"
+    },
+    {
+      "id": "DA_Component_SparringGloves",
+      "name_zh": "格鬥手套",
+      "name": "Component Sparring Gloves",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_component_sparringgloves.png",
+      "source": "https://www.metatft.com/items/DA_Component_SparringGloves?set=TFTSet19"
+    },
+    {
+      "id": "DA_Component_FryingPan",
+      "name_zh": "平底鍋",
+      "name": "Component Frying Pan",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_component_fryingpan.png",
+      "source": "https://www.metatft.com/items/DA_Component_FryingPan?set=TFTSet19"
+    },
+    {
+      "id": "DA_Component_Spatula",
+      "name_zh": "鍋鏟",
+      "name": "Component Spatula",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_component_spatula.png",
+      "source": "https://www.metatft.com/items/DA_Component_Spatula?set=TFTSet19"
+    },
+    {
+      "id": "DA_Component_GiantsBelt",
+      "name_zh": "巨人腰帶",
+      "name": "Component Giants Belt",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_component_giantsbelt.png",
+      "source": "https://www.metatft.com/items/DA_Component_GiantsBelt?set=TFTSet19"
+    },
+    {
+      "id": "DA_TitansResolve_Radiant",
+      "name_zh": "聖光泰坦的決意",
+      "name": "Titans Resolve Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_titansresolve_radiant.png",
+      "source": "https://www.metatft.com/items/DA_TitansResolve_Radiant?set=TFTSet19"
+    },
+    {
+      "id": "DA_TrueDamage19_Emblem",
+      "name_zh": "True Damage徽章",
+      "name": "True Damage19 Emblem",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_truedamage19_emblem.png",
+      "source": "https://www.metatft.com/items/DA_TrueDamage19_Emblem?set=TFTSet19"
+    },
+    {
+      "id": "DA_Bard19_UniqueItem",
+      "name_zh": "巴德的漂泊旅人號角",
+      "name": "Bard19 Unique Item",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_bard19_uniqueitem.png",
+      "source": "https://www.metatft.com/items/DA_Bard19_UniqueItem?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_ForbiddenIdol",
+      "name_zh": "禁忌之像",
+      "name": "Artifact Forbidden Idol",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_forbiddenidol.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_ForbiddenIdol?set=TFTSet19"
+    },
+    {
+      "id": "DA_Artifact_RapidFireCannon",
+      "name_zh": "衝擊火炮",
+      "name": "Artifact Rapid Fire Cannon",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_artifact_rapidfirecannon.png",
+      "source": "https://www.metatft.com/items/DA_Artifact_RapidFireCannon?set=TFTSet19"
+    },
+    {
+      "id": "DA_QuicksilverRadiant",
+      "name_zh": "聖光水銀兜帽",
+      "name": "Quicksilver Radiant",
+      "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_quicksilverradiant.png",
+      "source": "https://www.metatft.com/items/DA_QuicksilverRadiant?set=TFTSet19"
+    }
+  ]
+}
