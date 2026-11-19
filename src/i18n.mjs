@@ -9,6 +9,9 @@ export const TRAIT_ZH=Object.freeze({
   'Gu Feng':'國風','Hyperpop':'超能流行','Ionic Spark':'離子火花','Prodigy':'不世之才'
 });
 export const UI_ZH=Object.freeze({
+  'Skipped from team code: {names}':'複製時略過：{names}',
+  'Team code copied. Skipped: {names}':'已複製陣容碼；已略過：{names}',
+  'No exportable champions remain after skipping unverified IDs.':'略過未確認匯入碼的棋子後，已無可複製的棋子。',
   'Copy team code':'複製陣容碼','Team code':'陣容碼','Close team code':'關閉陣容碼',
   'Exports champions only; positioning, items and trait bonuses are not included.':'僅匯出棋子名單，不包含站位、裝備及轉職／羈絆加成。',
   'Team codes support at most 10 champions.':'陣容碼最多支援 10 位棋子。',
