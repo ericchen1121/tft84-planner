@@ -55,3 +55,8 @@
 .champion-info-button{display:block;width:100%;min-width:0;padding:0;border:0;border-radius:6px;background:transparent;color:inherit;text-align:inherit;font:inherit;cursor:pointer}
 .champion-info-button:hover .portrait{box-shadow:0 0 0 2px var(--gold)}
 .champion-info-button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* Attribute colors affect only explicitly classified skill values. */
+.numeric-value.value-ap{color:#78b7ff}.numeric-value.value-ad{color:#ff8b91}.numeric-value.value-hp{color:#73d89a}
+.numeric-value.value-ad-ap{color:#be9eff}.numeric-value.value-ap-hp{color:#69d7df}.numeric-value.value-ad-hp{color:#d5cf7c}
+.numeric-value.value-ad-ap-hp{color:#d2b4e8}
