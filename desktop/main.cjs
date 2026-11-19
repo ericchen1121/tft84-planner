@@ -116,7 +116,12 @@ async function runSmoke() {
     assert.equal(panel.isAlwaysOnTop(),true);assert.equal(bubble.isAlwaysOnTop(),true);
     expand();await visible(panel,true,'Restored solver visible');assert.equal(findSolver(),solver);
     const tick=()=>new Promise(r=>setTimeout(r,60));
-    const input=(type,x=32,y=32)=>bubble.webContents.sendInputEvent({type,x,y,button:'left',clickCount:1});
+    const input=(type,x=32,y=32,globalPoint)=>{
+      const bounds=bubble.getBounds();
+      bubble.webContents.sendInputEvent({type,x,y,button:'left',clickCount:1,
+        globalX:globalPoint?.x??bounds.x+x,globalY:globalPoint?.y??bounds.y+y,
+        modifiers:type==='mouseMove'?['leftButtonDown']:[]});
+    };
     // Exercise Chromium pointer/click events, preload IPC and native hide/show together.
     for(let cycle=0;cycle<20;cycle++){
       collapse();await visible(bubble,true,'Icon shown for click cycle '+cycle);
@@ -127,7 +132,10 @@ async function runSmoke() {
       assert.equal(findSolver(),solver,'Solver frame retained through repeated clicks');
     }
     collapse();await visible(bubble,true,'Icon shown for drag regression');bubble.focus();await tick();
-    input('mouseDown');await tick();input('mouseMove',46,32);await tick();input('mouseUp',46,32);await tick();
+    const dragOrigin=bubble.getBounds();
+    const dragPoint={x:dragOrigin.x+46,y:dragOrigin.y+32};
+    input('mouseDown');await tick();input('mouseMove',46,32,dragPoint);await tick();
+    input('mouseUp',32,32,dragPoint);await tick();
     await visible(panel,false,'Dragging must not open solver');
     assert.equal(bubble.isVisible(),true,'Icon remains after dragging');
     input('mouseDown');await tick();input('mouseUp');
