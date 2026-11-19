@@ -35,7 +35,7 @@ function expand() {
 function toggle(){panel.isVisible()?collapse():expand();}
 function secureWindow(win) {
   if(smoke){
-    win.webContents.on('console-message',(_e,details)=>console.log('RENDERER:',details));
+    win.webContents.on('console-message',e=>console.log('RENDERER:',e.level,e.message));
     win.webContents.on('did-fail-load',(_e,code,description,url)=>console.error('LOAD FAILED:',code,description,url));
   }
   win.setAlwaysOnTop(true,'floating');
@@ -101,12 +101,13 @@ async function runSmoke() {
   try {
     const assert=require('node:assert/strict');
     const solverURL=pathToFileURL(path.join(__dirname,'../dist/index.html')).href;
-    const solver=panel.webContents.mainFrame.frames.find(f=>f.url===solverURL);
+    const findSolver=()=>panel.webContents.mainFrame.frames.find(f=>f.url.split('#')[0]===solverURL);
+    const solver=findSolver();
     assert.ok(solver,'Bundled solver iframe loaded. Actual frames: '+panel.webContents.mainFrame.frames.map(f=>f.url).join(', ')+'; expected: '+solverURL);
     expand();assert.equal(panel.isVisible(),true);assert.equal(bubble.isVisible(),false);
     collapse();assert.equal(panel.isVisible(),false);assert.equal(bubble.isVisible(),true);
     assert.equal(panel.isAlwaysOnTop(),true);assert.equal(bubble.isAlwaysOnTop(),true);
-    expand();assert.equal(panel.webContents.mainFrame.frames.find(f=>f.url===solverURL),solver);
+    expand();assert.equal(findSolver(),solver);
     assert.equal(panel.webContents.getLastWebPreferences().nodeIntegration,false);
     assert.equal(panel.webContents.getLastWebPreferences().sandbox,true);
     console.log('OVERLAY SMOKE PASS: load, always-on-top, icon collapse, restore, retained solver frame, sandbox');
