@@ -8,7 +8,14 @@ function infoUnlockLines(u){const a=INFO.units[u.id];if(!hasInfoUnlock(u))return
 function infoPortrait(u,options){const p=portrait(u,options);p.title=unitLabel(u)+' · '+u.cost+'g · '+t('Range {range}',{range:u.range});return p;}
 function numericDescription(u,cls){
  const paragraph=el('p',cls),text=abilitySummary(u).replaceAll('[unavailable]',t('[unavailable]')).replaceAll('?',t('[unavailable]'));
- for(const part of text.split(/(\d+(?:\.\d+)?%?(?:\/\d+(?:\.\d+)?%?)+)/g)){if(/^\d+(?:\.\d+)?%?\//.test(part))paragraph.append(el('span','skill-value',part));else paragraph.append(document.createTextNode(part));}
+ for(const segment of numericSegments(text,u.id)){
+  if(segment.scaled||segment.types.length){
+   const classes=[segment.scaled?'skill-value':'',segment.types.length?'numeric-value value-'+segment.types.join('-'):''].filter(Boolean).join(' ');
+   const span=el('span',classes,segment.text);
+   if(segment.types.length)span.title=segment.types.map(type=>getLanguage()==='zh-Hant'?({ap:'魔法／AP',ad:'物理／AD',hp:'生命值'}[type]):({ap:'Magic / AP',ad:'Physical / AD',hp:'Health'}[type])).join(' + ');
+   paragraph.append(span);
+  }else paragraph.append(document.createTextNode(segment.text));
+ }
  return paragraph;
 }
 function infoUnlockBlock(u){
