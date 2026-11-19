@@ -100,14 +100,19 @@ ipcMain.on('overlay:drag-end',(e,dx,dy,open)=>{
 async function runSmoke() {
   try {
     const assert=require('node:assert/strict');
+    const visible=async(win,expected,label)=>{
+      const deadline=Date.now()+3000;
+      while(win.isVisible()!==expected&&Date.now()<deadline)await new Promise(r=>setTimeout(r,40));
+      assert.equal(win.isVisible(),expected,label);
+    };
     const solverURL=pathToFileURL(path.join(__dirname,'../dist/index.html')).href;
     const findSolver=()=>panel.webContents.mainFrame.frames.find(f=>f.url.split('#')[0]===solverURL);
     const solver=findSolver();
     assert.ok(solver,'Bundled solver iframe loaded. Actual frames: '+panel.webContents.mainFrame.frames.map(f=>f.url).join(', ')+'; expected: '+solverURL);
-    expand();assert.equal(panel.isVisible(),true);assert.equal(bubble.isVisible(),false);
-    collapse();assert.equal(panel.isVisible(),false);assert.equal(bubble.isVisible(),true);
+    expand();await visible(panel,true,'Expanded solver visible');await visible(bubble,false,'Icon hidden while expanded');
+    collapse();await visible(panel,false,'Solver hidden while collapsed');await visible(bubble,true,'Collapsed icon visible');
     assert.equal(panel.isAlwaysOnTop(),true);assert.equal(bubble.isAlwaysOnTop(),true);
-    expand();assert.equal(findSolver(),solver);
+    expand();await visible(panel,true,'Restored solver visible');assert.equal(findSolver(),solver);
     assert.equal(panel.webContents.getLastWebPreferences().nodeIntegration,false);
     assert.equal(panel.webContents.getLastWebPreferences().sandbox,true);
     console.log('OVERLAY SMOKE PASS: load, always-on-top, icon collapse, restore, retained solver frame, sandbox');

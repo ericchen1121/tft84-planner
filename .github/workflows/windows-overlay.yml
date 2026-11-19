@@ -23,7 +23,8 @@ jobs:
         shell: pwsh
         run: |
           $exe = Resolve-Path 'release/Eightfold-TFT-Overlay-win-x64/Eightfold.exe'
-          $process = Start-Process -FilePath $exe -ArgumentList '--smoke-test' -WindowStyle Hidden -PassThru -RedirectStandardOutput overlay-smoke.log -RedirectStandardError overlay-smoke-error.log
+          # This is a visible-window test: SW_HIDE suppresses the first native ShowWindow call.
+          $process = Start-Process -FilePath $exe -ArgumentList '--smoke-test' -WindowStyle Normal -PassThru -RedirectStandardOutput overlay-smoke.log -RedirectStandardError overlay-smoke-error.log
           if (-not $process.WaitForExit(60000)) { $process.Kill(); throw 'Overlay smoke test timed out' }
           Get-Content overlay-smoke.log
           Get-Content overlay-smoke-error.log
