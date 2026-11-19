@@ -145,3 +145,11 @@ Default rules plus trait requirements instantly filter the complete verified pre
 All search criteria now span the page above the results, with a responsive grid for numeric inputs and grouped panels for emblem bonuses and required traits. Advanced options and the search action remain in the same top panel. No left sidebar is used.
 
 Required traits use a searchable checkbox list, sharing the same 28 allowed traits as the emblem bonus picker. Every selected trait has its own tier selector. Selecting another trait or changing its tier preserves the other selections. Searching only changes visible choices; all checked requirements remain active. Selected chips and a count show the full selection. Clear selected traits clears only required traits, while Reset clears all criteria. The Info tab is labeled 資訊 in Traditional Chinese and Info in English.
+
+## Desktop layout branch
+
+This branch adapts the existing solver to desktop browsers. The top navigation is compact, task text and controls are larger, and wide monitors show three lineup cards per row (four on ultrawide screens). At narrower laptop widths, the result grid uses two columns. The criteria panel remains above the results.
+
+Trait settings are grouped in a collapsible section so the default screen can show results sooner. Its summary shows the number of required traits and emblem bonuses. All criteria can also be collapsed into a compact toolbar without losing inputs, results or an ongoing search. The Info / 資訊 view and all solver rules remain available.
+
+Build and verify with `npm run build` and `npm test`. For desktop use, download this branch's root `index.html` and open it in a recent Chrome or Edge; the standalone file embeds data, workers and the verified preset. Portraits and item images require internet. For local preview run `npm run dev`. Browser-local search does not require a server backend. This branch is kept separate from the main GitHub Pages source.

@@ -12,7 +12,7 @@ const traitByName=new Map(DATA.traits.map((t,i)=>[t.name,{...t,index:i,unique:ba
 function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
 function notify(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(notify.timer);notify.timer=setTimeout(()=>$('toast').hidden=true,4000);}
 function setStatus(text,kind=''){state.statusBuilder=typeof text==='function'?text:()=>text;$('status-text').textContent=state.statusBuilder();$('status-strip').className='status-strip '+kind;}
-function markDirty(){state.dirty=true;$('settings-changed').hidden=false;syncLabels();}
+function markDirty(){renderDesktopLayout();state.dirty=true;$('settings-changed').hidden=false;syncLabels();}
 function syncLabels(){$('score-output').value=$('min_trait_score').value;$('range-label').textContent=$('frontline_max_range').value;}
 function readConfig(){
  const form=$('criteria-form'),c={...DEFAULTS};
@@ -260,7 +260,7 @@ function applyLanguage(language,initial=false){
  setLanguage(language);document.documentElement.lang=getLanguage();document.title=t('Eightfold — TFT Lineup Explorer');$('language').value=getLanguage();
  try{localStorage.setItem('eightfold-language',getLanguage());}catch{}
  for(const entry of staticTranslations){if(!entry.node.isConnected)continue;const value=localizedStaticText(entry.source);if(entry.attr)entry.node.setAttribute(entry.attr,value);else entry.node.textContent=value;}
- if(initial)return;
+ renderDesktopLayout();if(initial)return;
  populateSelects();populateRequiredTraits();renderRequirements();renderExtras();renderBonuses();updateStats();filterResults(false);populateInfoTraits();if(state.view==='info')renderInfo();if($('info-dialog').open&&state.infoUnit)showInfo(state.infoUnit);
  if(state.statusBuilder)$('status-text').textContent=state.statusBuilder();
  if($('pool-dialog').open)renderPool();if($('board-dialog').open&&state.boardRecord)showBoard(state.boardRecord);
@@ -268,7 +268,7 @@ function applyLanguage(language,initial=false){
 }
 async function init(){
  captureStaticTranslations();let preferred='zh-Hant';try{preferred=localStorage.getItem('eightfold-language')||preferred;}catch{}
- applyLanguage(preferred,true);populateSelects();populateRequiredTraits();bindEvents();bindRequirements();bindInfo();syncLabels();renderBonuses();
+ applyLanguage(preferred,true);populateSelects();populateRequiredTraits();bindEvents();bindRequirements();bindInfo();bindDesktopLayout();syncLabels();renderBonuses();
  try{
   const encoded=$('preset-data').textContent.trim(),compressed=Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));
   if(typeof DecompressionStream==='undefined')throw Error(t('Preset decompression is not supported in this browser.'));

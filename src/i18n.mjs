@@ -112,7 +112,7 @@ export const UI_ZH=Object.freeze({
   'Choose a known trait and a bonus from 0 to 16.':'請選擇已知羈絆，加成需介於 0 到 16。',
   'Combined trait bonuses exceed the supported score range. Reduce bonus counts.':'羈絆加成超過支援的分數範圍，請減少加成數量。',
   'Unknown champion in settings.':'設定中含有未知棋子。','Unknown extra trait.':'設定中含有未知額外羈絆。',
-  'Solver':'求解器','Info':'資訊','App sections':'功能頁籤','MEET THE LINEUP':'認識每一位棋子',
+  'Solver':'求解器','Hide criteria':'收合條件','Show criteria':'展開條件','Trait settings':'轉職與必要羈絆設定','{required} required · +{bonuses} bonuses':'{required} 項必要羈絆 · 轉職 +{bonuses}','Info':'資訊','App sections':'功能頁籤','MEET THE LINEUP':'認識每一位棋子',
   'Champion Info':'棋子圖鑑','CHAMPION INFO':'棋子介紹','CHAMPIONS':'棋子',
   'Explore every champion, their traits and their abilities.':'瀏覽所有棋子的羈絆、定位與技能，找到你的陣容核心。',
   'Search champions, traits or abilities':'搜尋中文或英文棋名、羈絆、技能','Search champion info':'搜尋棋子介紹',

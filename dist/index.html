@@ -94,6 +94,93 @@ html[lang="zh-Hant"] .eyebrow,html[lang="zh-Hant"] .stat-card small{letter-spaci
 @media(max-width:1100px){.criteria-basic{grid-template-columns:repeat(3,minmax(0,1fr))}.criteria-traits{grid-template-columns:minmax(210px,1fr) minmax(0,2fr)}.required-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.criteria{padding:18px}.criteria-traits{grid-template-columns:1fr}.required-options{grid-template-columns:repeat(3,minmax(0,1fr));max-height:210px}.required-toolbar{flex-wrap:wrap}.required-toolbar input{flex-basis:100%}.required-toolbar select{flex:1;max-width:none}.criteria-switches{gap:20px}.criteria-actions{flex-wrap:wrap}.criteria-actions .privacy-note{flex-basis:100%;justify-content:flex-start}.criteria .criteria-actions .primary-button{flex:1}.results-area .lineup-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.criteria-basic{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.required-options{grid-template-columns:repeat(2,minmax(0,1fr))}.criteria-switches{display:grid;grid-template-columns:1fr}.criteria-switches .toggle-line{justify-content:space-between}.required-heading{gap:8px}.required-heading h3{font-size:12px}}
+
+/* Desktop workspace: same solver, larger controls, compact top criteria. */
+.desktop-panel-actions{display:flex;gap:12px;align-items:center}
+.desktop-toggle{min-height:38px;padding:8px 14px;font-size:14px}
+.desktop-trait-settings{margin-top:16px;border:1px solid #33445e;border-radius:10px;background:#111b2a}
+.desktop-trait-settings>summary{display:flex;align-items:center;gap:16px;cursor:pointer;list-style:none;padding:13px 16px;color:#c3d0e5;font-size:14px}
+.desktop-trait-settings>summary::-webkit-details-marker{display:none}
+.desktop-trait-settings>summary:before{content:'+';font-size:20px;color:#dfc185;width:16px;flex:none}
+.desktop-trait-settings[open]>summary:before{content:'−'}
+.desktop-trait-settings>summary>span{font-size:12px;color:#9cacc5;margin-left:auto}
+.desktop-trait-settings>.criteria-traits{margin:0;padding:0 14px 14px}
+.desktop-panel-actions #reset{font-size:14px}
+@media(min-width:1024px){
+ body{font-size:16px}
+ main{max-width:1920px;padding:0 28px}
+ .topbar{height:68px;padding:0 28px;position:sticky;top:0;z-index:30;background:#0b111eed;backdrop-filter:blur(14px)}
+ .brand{font-size:18px}.brand small{font-size:11px;letter-spacing:1.2px}
+ .header-right{gap:18px}.header-right select{font-size:14px;padding:8px 12px}
+ .header-right .text-button{font-size:14px}.set-tag{font-size:12px;letter-spacing:1px}
+ .app-tabs{padding-top:8px;margin-bottom:0}.app-tabs button{font-size:16px;padding:12px 24px}
+ .app-tabs>span{font-size:12px}
+ #solver-panel .hero{min-height:108px;padding:18px 0;gap:20px;overflow:visible}
+ #solver-panel .hero h1{font-size:28px;letter-spacing:-.6px;line-height:1.3;margin:0 0 5px}
+ #solver-panel .hero h1 br{display:none}#solver-panel .hero h1 em{margin-left:7px}
+ #solver-panel .hero p{font-size:14px;margin:0;color:#aab9d0}
+ #solver-panel .hero .eyebrow,#solver-panel .hero-tags{display:none}
+ #solver-panel .hero-art{width:218px;height:68px;align-self:center;margin:0;display:flex;gap:8px}
+ #solver-panel .hero-card{position:relative;top:auto;left:auto;width:66px;height:66px;transform:none;opacity:1;box-shadow:none;flex:none;border-radius:9px}
+ #solver-panel .hero-card>span,#solver-panel .orbit,#solver-panel .art-caption{display:none}
+ #solver-panel .hero-card:after{background:linear-gradient(transparent 70%,#0b111e55)}
+ .workspace{gap:22px}
+ .criteria{padding:16px 20px;border-color:#3a4c68;box-shadow:0 12px 35px #0002}
+ .criteria .panel-heading{margin-bottom:14px;gap:20px}.panel-heading .eyebrow{font-size:11px;letter-spacing:1px}
+ .panel-heading h2{font-size:22px;margin-top:3px}
+ .criteria.is-collapsed{position:sticky;top:78px;z-index:20;background:#111a29f5;backdrop-filter:blur(14px)}
+ .criteria.is-collapsed .panel-heading{margin-bottom:0}
+ .criteria-basic{gap:18px}.criteria-basic .field-title{font-size:14px;min-height:22px;margin-bottom:8px}
+ .criteria-basic input[type=number]{height:44px;font-size:18px;padding:8px 12px}
+ .criteria-basic .stepper{min-height:44px;padding:4px}.criteria-basic .stepper input{font-size:24px}
+ .criteria-basic .stepper>span{font-size:14px}.criteria-basic .stepper button{width:32px;height:32px}
+ .criteria-basic .field-title output{font-size:20px}.criteria-basic .field-hint{font-size:12px;line-height:1.6}
+ .criteria-basic .range-labels{font-size:11px}.criteria-basic input[type=range]{height:5px;margin:12px 0 7px}
+ .criteria-traits{grid-template-columns:minmax(260px,1fr) minmax(0,2.6fr);gap:16px}
+ .criteria-traits .field-title,.required-heading h3{font-size:14px}
+ .criteria-traits .field-hint{font-size:12px;line-height:1.7}
+ .criteria-traits .emblem-section,.criteria-traits .required-section{padding:13px}
+ .emblem-picker select{font-size:14px;padding:9px 10px}.emblem-picker button{font-size:14px;min-width:44px}
+ .emblem-row,.emblem-row .emblem-name{font-size:14px}.emblem-value{font-size:15px}
+ .required-heading{margin-bottom:10px}.required-heading>span,.required-heading>button{font-size:12px}
+ .required-toolbar{gap:10px;margin-bottom:10px}.required-toolbar input,.required-toolbar select{font-size:14px}
+ .required-toolbar select{max-width:220px}.required-toolbar label{font-size:14px}
+ .required-options{grid-template-columns:repeat(3,minmax(0,1fr));max-height:156px;gap:7px}
+ .required-choice{padding:7px 8px}.required-choice label{font-size:14px;gap:8px}
+ .required-choice input[type=checkbox]{width:17px;height:17px}
+ .required-choice select{width:48px;font-size:14px;padding:4px}
+ .required-section .required-row{font-size:13px}.required-row strong{font-size:13px}
+ .criteria-switches{margin-top:14px;gap:30px}.criteria-switches .toggle-line{font-size:14px}
+ .toggle-line small{font-size:12px}.switch{width:34px;height:20px}.switch:after{width:14px;height:14px}
+ .toggle-line input:checked+.switch:after{left:17px}
+ .criteria .advanced{margin-top:12px}.advanced summary{font-size:14px;padding:11px 0}
+ .advanced .field-title{font-size:14px}.advanced input,.advanced select{font-size:16px}
+ .advanced .field-hint{font-size:12px}.advanced-body{padding-bottom:12px}
+ .criteria-actions{margin-top:0;padding-top:12px}.criteria-actions .privacy-note{font-size:12px}
+ .criteria .criteria-actions .primary-button{font-size:16px;min-height:46px;width:220px}
+ .criteria-actions .stop-button{font-size:14px;min-height:44px}.error-message{font-size:14px}
+ .stats-row{gap:16px}.stat-card{min-height:82px;padding:14px 20px}.stat-card small{font-size:12px;letter-spacing:.5px}
+ .stat-card strong{font-size:32px}.stat-card strong span{font-size:14px}.stat-icon{width:40px;height:40px;font-size:22px}
+ .status-strip{font-size:14px;margin:12px 0 20px;gap:10px}.changed-tag{font-size:12px}
+ .results-heading h2{font-size:26px}.results-heading h2>span{font-size:14px}.results-heading .eyebrow{font-size:12px;letter-spacing:1px}
+ .results-heading .outline-button{font-size:14px;padding:10px 14px}
+ .filter-bar{grid-template-columns:minmax(240px,2fr) minmax(150px,1fr) minmax(125px,.7fr) minmax(150px,1fr);gap:12px;margin-top:18px}
+ .filter-bar select,.filter-bar input{font-size:14px;min-height:44px}
+ .results-note{font-size:12px;line-height:1.7;margin-bottom:16px;flex-wrap:wrap}
+ .results-area .lineup-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+ .lineup-card{padding:18px 16px 14px}.card-top{margin-bottom:14px}.card-rank{font-size:13px}
+ .score-badge{font-size:12px;gap:7px}.score-badge strong{font-size:24px}.score-badge>span:first-child{font-size:16px}
+ .unit-row{gap:6px;margin-bottom:16px}.champion-name{font-size:12px;margin-top:6px}.cost-label{font-size:11px;line-height:17px;min-width:17px}
+ .trait-chips{gap:6px;min-height:70px}.trait-chip{font-size:14px;line-height:18px;padding:4px 6px;gap:5px}
+ .trait-chip img{width:15px;height:15px}.trait-chip b{font-size:14px}.bonus-tag{font-size:11px}
+ .card-bottom{font-size:13px;margin-top:14px;padding-top:12px}.card-bottom>div{gap:12px}.board-link{font-size:14px}
+ .pagination{padding:24px 0;gap:24px}.pagination>span{font-size:14px}.pagination .outline-button{font-size:14px;padding:10px 15px}
+ footer{margin-top:24px}footer span,footer p{font-size:12px}
+}
+@media(min-width:1680px){.required-options{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(min-width:2300px){main{max-width:2400px}.results-area .lineup-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(min-width:1024px) and (max-width:1399px){.results-area .lineup-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.criteria-basic{grid-template-columns:repeat(3,minmax(0,1fr))}.required-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.desktop-panel-actions{gap:4px}.desktop-toggle{font-size:12px;padding:7px 10px}.desktop-trait-settings>summary{font-size:12px;gap:8px;padding:12px}.desktop-trait-settings>summary>span{font-size:10px}.desktop-trait-settings>.criteria-traits{padding:0 8px 8px}}
 </style>
 </head>
 <body>
@@ -109,20 +196,20 @@ html[lang="zh-Hant"] .eyebrow,html[lang="zh-Hant"] .stat-card small{letter-spaci
     <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-card hero-leona"><img data-hero="u58" alt=""><span>LEONA<small>4-COST · FRONTLINE</small></span></div><div class="hero-card hero-ahri"><img data-hero="u49" alt=""><span>AHRI<small>4-COST · CASTER</small></span></div><div class="hero-card hero-jinx"><img data-hero="u56" alt=""><span>JINX<small>4-COST · MARKSMAN</small></span></div><div class="art-caption"><span>8</span> SLOTS. ENDLESS POSSIBILITIES.</div></div>
   </section>
   <div class="workspace">
-    <section class="criteria panel" aria-labelledby="criteria-title">
-      <div class="panel-heading"><div><span class="eyebrow">MAKE IT YOURS</span><h2 id="criteria-title">Search criteria</h2></div><button id="reset" class="text-button muted">Reset</button></div>
+    <section id="desktop-criteria" class="criteria panel" aria-labelledby="criteria-title">
+      <div class="panel-heading"><div><span class="eyebrow">MAKE IT YOURS</span><h2 id="criteria-title">Search criteria</h2></div><div class="desktop-panel-actions"><button id="reset" class="text-button muted">Reset</button><button id="desktop-toggle-criteria" type="button" class="outline-button desktop-toggle" aria-controls="criteria-form" aria-expanded="true">Hide criteria</button></div></div>
       <form id="criteria-form"><div class="criteria-basic"><div><label class="field-title" for="population">Team population <span>Total slots</span></label><div class="stepper large-stepper"><button type="button" data-step="population:-1" aria-label="Decrease population">−</button><input id="population" name="population" type="number" min="1" max="16" value="8"><span>slots</span><button type="button" data-step="population:1" aria-label="Increase population">+</button></div>
         </div><div class="field-pair cost-fields"><div><label class="field-title" for="min_four_cost"><i class="cost-dot cost-4"></i>4-cost minimum</label><input id="min_four_cost" name="min_four_cost" type="number" min="0" max="16" value="3"></div><div><label class="field-title" for="max_five_cost"><i class="cost-dot cost-5"></i>5-cost maximum</label><input id="max_five_cost" name="max_five_cost" type="number" min="0" max="16" value="1"></div></div>
         
         <div><label class="field-title" for="min_trait_score">Minimum synergy score <output id="score-output">16</output></label><input id="min_trait_score" name="min_trait_score" type="range" min="0" max="30" value="16"><div class="range-labels"><span>0</span><span>30</span></div><p class="field-hint">Add the member counts of active traits.</p>
         </div><div class="field-pair"><div><label class="field-title" for="min_frontline">Frontline minimum</label><input id="min_frontline" name="min_frontline" type="number" min="0" max="16" value="5"><p class="field-hint">Attack range ≤ <span id="range-label">2</span></p></div><div><label class="field-title" for="min_backline_four_cost">4-cost backline</label><input id="min_backline_four_cost" name="min_backline_four_cost" type="number" min="0" max="16" value="2"><p class="field-hint">Ranged carries & casters</p></div></div>
-        </div><div class="criteria-traits"><section class="emblem-section" aria-label="Trait bonuses from emblems"><label class="field-title" for="emblem-trait">Emblems / Trait +1 <span id="emblem-total">+0 total</span></label><div class="emblem-picker"><select id="emblem-trait" aria-label="Trait to increase"></select><button id="add-emblem" type="button" class="outline-button">+1</button></div><div id="emblem-list" aria-live="polite"></div><p class="field-hint">Each +1 adds one trait count without using population. Use bonuses available in your game; no carrier is assigned.</p></section>
+        </div><details id="desktop-trait-settings" class="desktop-trait-settings"><summary>Trait settings<span id="desktop-trait-count"></span></summary><div class="criteria-traits"><section class="emblem-section" aria-label="Trait bonuses from emblems"><label class="field-title" for="emblem-trait">Emblems / Trait +1 <span id="emblem-total">+0 total</span></label><div class="emblem-picker"><select id="emblem-trait" aria-label="Trait to increase"></select><button id="add-emblem" type="button" class="outline-button">+1</button></div><div id="emblem-list" aria-live="polite"></div><p class="field-hint">Each +1 adds one trait count without using population. Use bonuses available in your game; no carrier is assigned.</p></section>
         <section class="required-section" aria-labelledby="required-heading">
  <div class="required-heading"><h3 id="required-heading">Required trait tiers</h3><span id="required-selected"></span><button id="clear-required" class="text-button" type="button">Clear selected traits</button></div>
  <div class="required-toolbar"><input id="required-query" type="search" placeholder="Search traits to select" aria-label="Search required traits"><label for="required-mode">Match mode</label><select id="required-mode"><option value="at_least">At least this tier</option><option value="exact_tier">Exactly this active tier</option></select></div>
  <div id="required-options" class="required-options" role="group" aria-label="Select multiple required traits"></div><p id="required-options-empty" class="field-hint" hidden>No traits match your search.</p>
  <div id="required-list" aria-live="polite"></div><p class="field-hint">Check multiple traits and set a tier for each. All checked traits must be met; emblems count.</p><p class="field-hint">At least 4 Classical also accepts 6 Classical; exact tier 4 accepts 4–5 members.</p>
-</section></div><div class="criteria-switches"><label class="toggle-line"><span>Count unique traits<small>Include one-champion traits</small></span><input name="include_unique_traits" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
+</section></div></details><div class="criteria-switches"><label class="toggle-line"><span>Count unique traits<small>Include one-champion traits</small></span><input name="include_unique_traits" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
         <label class="toggle-line"><span>Include 7-cost champions<small>Unlock requirements are not checked</small></span><input name="include_seven_cost" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
         </div><details class="advanced"><summary>Advanced options <span>⌄</span></summary><div class="advanced-body">
           <label class="field-title" for="score_mode">Scoring method</label><select id="score_mode" name="score_mode"><option value="active_members">Active trait members</option><option value="breakpoint">Highest reached breakpoint</option><option value="all_members">All trait members</option></select>
@@ -594,7 +681,7 @@ const UI_ZH=Object.freeze({
   'Choose a known trait and a bonus from 0 to 16.':'請選擇已知羈絆，加成需介於 0 到 16。',
   'Combined trait bonuses exceed the supported score range. Reduce bonus counts.':'羈絆加成超過支援的分數範圍，請減少加成數量。',
   'Unknown champion in settings.':'設定中含有未知棋子。','Unknown extra trait.':'設定中含有未知額外羈絆。',
-  'Solver':'求解器','Info':'資訊','App sections':'功能頁籤','MEET THE LINEUP':'認識每一位棋子',
+  'Solver':'求解器','Hide criteria':'收合條件','Show criteria':'展開條件','Trait settings':'轉職與必要羈絆設定','{required} required · +{bonuses} bonuses':'{required} 項必要羈絆 · 轉職 +{bonuses}','Info':'資訊','App sections':'功能頁籤','MEET THE LINEUP':'認識每一位棋子',
   'Champion Info':'棋子圖鑑','CHAMPION INFO':'棋子介紹','CHAMPIONS':'棋子',
   'Explore every champion, their traits and their abilities.':'瀏覽所有棋子的羈絆、定位與技能，找到你的陣容核心。',
   'Search champions, traits or abilities':'搜尋中文或英文棋名、羈絆、技能','Search champion info':'搜尋棋子介紹',
@@ -754,6 +841,19 @@ function bindRequirements(){
  renderRequirements();
 }
 
+function renderDesktopLayout(){
+ const form=$('criteria-form'),button=$('desktop-toggle-criteria');if(!button)return;
+ button.textContent=t(form.hidden?'Show criteria':'Hide criteria');button.setAttribute('aria-expanded',String(!form.hidden));
+ const required=Object.keys(state.required).length,bonuses=Object.values(state.bonuses).reduce((sum,n)=>sum+n,0);
+ $('desktop-trait-count').textContent=t('{required} required · +{bonuses} bonuses',{required,bonuses});
+}
+function bindDesktopLayout(){
+ $('desktop-toggle-criteria').addEventListener('click',()=>{
+  const form=$('criteria-form');form.hidden=!form.hidden;$('desktop-criteria').classList.toggle('is-collapsed',form.hidden);renderDesktopLayout();
+ });
+ renderDesktopLayout();
+}
+
 'use strict';
 const DATA=JSON.parse(document.getElementById('app-data').textContent);
 const ART=JSON.parse(document.getElementById('art-data').textContent);
@@ -768,7 +868,7 @@ const traitByName=new Map(DATA.traits.map((t,i)=>[t.name,{...t,index:i,unique:ba
 function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
 function notify(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(notify.timer);notify.timer=setTimeout(()=>$('toast').hidden=true,4000);}
 function setStatus(text,kind=''){state.statusBuilder=typeof text==='function'?text:()=>text;$('status-text').textContent=state.statusBuilder();$('status-strip').className='status-strip '+kind;}
-function markDirty(){state.dirty=true;$('settings-changed').hidden=false;syncLabels();}
+function markDirty(){renderDesktopLayout();state.dirty=true;$('settings-changed').hidden=false;syncLabels();}
 function syncLabels(){$('score-output').value=$('min_trait_score').value;$('range-label').textContent=$('frontline_max_range').value;}
 function readConfig(){
  const form=$('criteria-form'),c={...DEFAULTS};
@@ -1016,7 +1116,7 @@ function applyLanguage(language,initial=false){
  setLanguage(language);document.documentElement.lang=getLanguage();document.title=t('Eightfold — TFT Lineup Explorer');$('language').value=getLanguage();
  try{localStorage.setItem('eightfold-language',getLanguage());}catch{}
  for(const entry of staticTranslations){if(!entry.node.isConnected)continue;const value=localizedStaticText(entry.source);if(entry.attr)entry.node.setAttribute(entry.attr,value);else entry.node.textContent=value;}
- if(initial)return;
+ renderDesktopLayout();if(initial)return;
  populateSelects();populateRequiredTraits();renderRequirements();renderExtras();renderBonuses();updateStats();filterResults(false);populateInfoTraits();if(state.view==='info')renderInfo();if($('info-dialog').open&&state.infoUnit)showInfo(state.infoUnit);
  if(state.statusBuilder)$('status-text').textContent=state.statusBuilder();
  if($('pool-dialog').open)renderPool();if($('board-dialog').open&&state.boardRecord)showBoard(state.boardRecord);
@@ -1024,7 +1124,7 @@ function applyLanguage(language,initial=false){
 }
 async function init(){
  captureStaticTranslations();let preferred='zh-Hant';try{preferred=localStorage.getItem('eightfold-language')||preferred;}catch{}
- applyLanguage(preferred,true);populateSelects();populateRequiredTraits();bindEvents();bindRequirements();bindInfo();syncLabels();renderBonuses();
+ applyLanguage(preferred,true);populateSelects();populateRequiredTraits();bindEvents();bindRequirements();bindInfo();bindDesktopLayout();syncLabels();renderBonuses();
  try{
   const encoded=$('preset-data').textContent.trim(),compressed=Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));
   if(typeof DecompressionStream==='undefined')throw Error(t('Preset decompression is not supported in this browser.'));
