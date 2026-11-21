@@ -1,13 +1,14 @@
 import fs from 'node:fs';
+import {unitKey} from './metatft-recommendations.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
 const snapshot=read('dist/item-recommendations.json'),info=read('dist/info.json'),data=read('dist/units.json');
 const allowed=new Set(snapshot.craftable_items),mana=['DA_SpearOfShojin','DA_BlueBuff','DA_AdaptiveHelm'];
-const key=u=>({"Kai'Sa":'Kaisa19','Akali (K|DA)':'AkaliKDA19','Akali (True Damage)':'Akali_TrueDamage19','Nunu & Willump':'Nunu19'}[u.name]||u.name.replace(/[^a-z0-9]/gi,'')+'19');
+const key=unitKey;
 for(const u of data.units){
  const source=snapshot.units[key(u)],a=info.units[u.id];
  a.recommendation_source=source?'https://www.metatft.com/units/'+key(u)+'?set=TFTSet19':null;
- a.recommendation_status=source?'available':'no-pbe-data';
- if(!source){a.recommended_items=[];continue;}
+ a.recommendation_status=source?.popular_items.length?'available':'no-pbe-data';
+ if(!source?.popular_items.length){a.recommended_items=[];continue;}
  const pool=[...new Set([...source.popular_items,...source.build_items])].filter(id=>allowed.has(id));
  const caster=/Caster/.test(u.role)||u.name==='Sona',ranged=u.range>2;
  // Reserve a mana engine for casters; bow / burn cores lead ranged attackers.
@@ -18,6 +19,6 @@ for(const u of data.units){
 }
 info.recommendations={source:snapshot.source,mode:snapshot.mode,patch:snapshot.patch,set:snapshot.set,snapshot_date:snapshot.snapshot_date,window:snapshot.window};
 if(!info.sources.includes(snapshot.source))info.sources.push(snapshot.source);
-info.notes=info.notes.replace(/Recommendation slots are reserved,[^.]*\./,'').replace(/ Recommended items use the PBE[^]*$/,'')+' Recommended items use the PBE / 19.1 snapshot; only normal craftable items, with role-specific core items promoted. One source-listed mana engine is shown per caster to leave room for damage alternatives. Missing units stay empty.';
+info.notes=info.notes.replace(/Recommendation slots are reserved,[^.]*\./,'').replace(/ Recommended items use the PBE[^]*$/,'')+` Recommended items use the PBE / ${snapshot.patch} snapshot dated ${snapshot.snapshot_date}; only normal craftable items, with source-listed role-specific core items promoted. One source-listed mana engine is shown per caster. Missing units stay empty.`;
 fs.writeFileSync(new URL('../dist/info.json',import.meta.url),JSON.stringify(info,null,2)+'\n');
 console.log('Recommendations:',data.units.filter(u=>info.units[u.id].recommended_items.length).length,'/',data.units.length);
