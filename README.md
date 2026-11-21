@@ -176,3 +176,11 @@ Recommendations cover all 94 solver units using MetaTFT PBE / 19.1, last three d
 The Taiwan PBE lookup adds eight champion translations and eighteen trait translations, and corrects Hyperpop to 超流行 and Gu Feng to 古風. Both Akali variants retain their suffixes. Still-untranslated source names retain their existing labels. Only display metadata changes; unit IDs, canonical trait keys, preset results, abilities and solver rules remain intact.
 
 Team-code audit: all 91 mapped IDs still agree with the current lookup and the original eight-unit client sample remains exact. Graves, Nasus and Mordekaiser still share 449 in MetaTFT. The checked CommunityDragon PBE planner file contains sets 17 and 18, with no set-19 mapping. These three remain explicitly omitted with the existing red copy label and named warning. No guessed replacement IDs are introduced. See `dist/team-code-audit.json`.
+
+## Augment library / 海克斯圖鑑
+
+The third tab lists all 371 augment entries in the MetaTFT Set 19 PBE / 19.1 lookup snapshot dated 2026-11-21 (101 Silver, 147 Gold, 123 Prismatic). Search names/effects/traits in either language; combine tier, stage and general/trait filters; browse 24 cards per page and open full descriptions in a dialog. Keyboard tab navigation, direct #augments links and language switching preserve the solver and filters.
+
+348 names and 349 descriptions have official Traditional Chinese text in the source. Each missing field independently falls back to English. Values resolve curve-table placeholders including percentages and stage-range columns. Nine entries have conflicting source curve values, one has a missing source value, and four have dynamic game fields; unconfirmed values are explicit rather than guessed. Round metadata is copied from the source; entries without listed rounds remain visible. Distinct tiers/stages/curves can share an API name, so composite identities retain every variant.
+
+Run npm run refresh:augments to fetch and rebuild this dataset. dist/augments.json retains raw text and curve data for audit; the standalone HTML only embeds display fields. This is a reference library and does not apply augment effects to the solver.

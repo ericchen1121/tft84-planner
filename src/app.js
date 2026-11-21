@@ -262,7 +262,7 @@ function applyLanguage(language,initial=false){
  try{localStorage.setItem('eightfold-language',getLanguage());}catch{}
  for(const entry of staticTranslations){if(!entry.node.isConnected)continue;const value=localizedStaticText(entry.source);if(entry.attr)entry.node.setAttribute(entry.attr,value);else entry.node.textContent=value;}
  renderDesktopLayout();if(initial)return;
- populateSelects();populateRequiredTraits();renderRequirements();renderExtras();renderBonuses();updateStats();filterResults(false);populateInfoTraits();if(state.view==='info')renderInfo();if($('info-dialog').open&&state.infoUnit)showInfo(state.infoUnit);
+ populateSelects();populateRequiredTraits();renderRequirements();renderExtras();renderBonuses();updateStats();filterResults(false);populateInfoTraits();if(state.view==='info')renderInfo();if(state.view==='augments')renderAugments();if($('augment-dialog').open&&augmentUI.selected)showAugment(augmentUI.selected);if($('info-dialog').open&&state.infoUnit)showInfo(state.infoUnit);
  if(state.statusBuilder)$('status-text').textContent=state.statusBuilder();
  if($('pool-dialog').open)renderPool();if($('board-dialog').open&&state.boardRecord)showBoard(state.boardRecord);
  if(state.status==='COMPLETE'&&isPreset(state.config))$('elapsed').textContent=t('Ready instantly');
