@@ -120,7 +120,7 @@ Source: [tactics.tools Set Update](https://tactics.tools/info/set-update). Champ
 
 ## Champion Info / 棋子圖鑑
 
-The existing Solver and Info tabs preserve solver settings and results when switching. Info contains all 94 champions sorted by cost descending, bilingual name search, and cost/trait/unlock filters. Names follow MetaTFT's Taiwan locale: 78 translated names, remaining names unchanged. Portraits include 91 original mappings and 3 additional MetaTFT images.
+The existing Solver and Info tabs preserve solver settings and results when switching. Info contains all 94 champions sorted by cost descending, bilingual name search, and cost/trait/unlock filters. Names follow MetaTFT's Taiwan locale: 86 translated names, remaining names unchanged. Portraits include 91 original mappings and 3 additional MetaTFT images.
 
 Info now displays full ability text with numeric values, mana, star-level ordering and highlighted numeric sequences. Population labels are omitted throughout Info. Unlock conditions are visible directly on the cards. Click a card for the same full description in a dialog. Content follows the source language, with English taking precedence when a translation is incomplete or materially different (notably Vladimir and Rakan's loss streak).
 
@@ -145,3 +145,19 @@ Default rules plus trait requirements instantly filter the complete verified pre
 All search criteria now span the page above the results, with a responsive grid for numeric inputs and grouped panels for emblem bonuses and required traits. Advanced options and the search action remain in the same top panel. No left sidebar is used.
 
 Required traits use a searchable checkbox list, sharing the same 28 allowed traits as the emblem bonus picker. Every selected trait has its own tier selector. Selecting another trait or changing its tier preserves the other selections. Searching only changes visible choices; all checked requirements remain active. Selected chips and a count show the full selection. Clear selected traits clears only required traits, while Reset clears all criteria. The Info tab is labeled 資訊 in Traditional Chinese and Info in English.
+
+## PBE data refresh — 2026-11-21
+
+Recommendations cover all 94 solver units using MetaTFT PBE / 19.1, last three days, with artifacts excluded. Ranking follows MetaTFT unit-detail scores before filtering to normal craftable items. The five displayed items are alternatives. Ahri uses the exact `DA_19_Ahri` identity and Seraphine uses `DA_Seraphine19_Indie`; both now have recommendations. Source request parameters, ranked rows and counts are retained in `dist/item-recommendations.json`. Run `npm run refresh:pbe` to fetch and rebuild; failed source validation stops the refresh.
+
+The Taiwan PBE lookup adds eight champion translations and eighteen trait translations, and corrects Hyperpop to 超流行 and Gu Feng to 古風. Both Akali variants retain their suffixes. Still-untranslated source names retain their existing labels. Only display metadata changes; unit IDs, canonical trait keys, preset results, abilities and solver rules remain intact.
+
+Team-code audit: all 91 mapped IDs still agree with the current lookup and the original eight-unit client sample remains exact. Graves, Nasus and Mordekaiser still share 449 in MetaTFT. The checked CommunityDragon PBE planner file contains sets 17 and 18, with no set-19 mapping. These three remain explicitly omitted with the existing red copy label and named warning. No guessed replacement IDs are introduced. See `dist/team-code-audit.json`.
+
+## Augment library / 海克斯圖鑑
+
+The third tab lists all 371 augment entries in the MetaTFT Set 19 PBE / 19.1 lookup snapshot dated 2026-11-21 (101 Silver, 147 Gold, 123 Prismatic). Search names/effects/traits in either language; combine tier, stage and general/trait filters; browse 24 cards per page and open full descriptions in a dialog. Keyboard tab navigation, direct #augments links and language switching preserve the solver and filters.
+
+348 names and 349 descriptions have official Traditional Chinese text in the source. Each missing field independently falls back to English. Values resolve curve-table placeholders including percentages and stage-range columns. Nine entries have conflicting source curve values, one has a missing source value, and four have dynamic game fields; unconfirmed values are explicit rather than guessed. Round metadata is copied from the source; entries without listed rounds remain visible. Distinct tiers/stages/curves can share an API name, so composite identities retain every variant.
+
+Run npm run refresh:augments to fetch and rebuild this dataset. dist/augments.json retains raw text and curve data for audit; the standalone HTML only embeds display fields. This is a reference library and does not apply augment effects to the solver.

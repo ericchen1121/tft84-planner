@@ -5,7 +5,7 @@
     "https://tactics.tools/info/set-update",
     "https://www.metatft.com/units"
   ],
-  "notes": "Full ability text and all available numeric values from MetaTFT Set 19 zh-TW. Slash-separated values follow source star-level ordering. Missing source fields stay explicitly unavailable. Whitespace and repeated tooltip echoes are normalized.  English source takes precedence for incomplete/stale translations (notably Vladimir and Rakan unlock conditions). Info unlock labels reflect current MetaTFT; solver unlock flags remain the existing snapshot. Recommended items use the PBE / 19.1 snapshot; only normal craftable items, with role-specific core items promoted. One source-listed mana engine is shown per caster to leave room for damage alternatives. Missing units stay empty.",
+  "notes": "Full ability text and all available numeric values from MetaTFT Set 19 zh-TW. Slash-separated values follow source star-level ordering. Missing source fields stay explicitly unavailable. Whitespace and repeated tooltip echoes are normalized.  English source takes precedence for incomplete/stale translations (notably Vladimir and Rakan unlock conditions). Info unlock labels reflect current MetaTFT; solver unlock flags remain the existing snapshot. Recommended items use the PBE / 19.1 snapshot dated 2026-11-21; only normal craftable items, with source-listed role-specific core items promoted. One source-listed mana engine is shown per caster. Missing units stay empty.",
   "units": {
     "u0": {
       "name_zh": "伊莉絲",
@@ -20,11 +20,11 @@
       "full_mana": "60/120",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_IonicSpark",
-        "DA_ProtectorsVow",
         "DA_SunfireCape",
-        "DA_DragonsClaw",
-        "DA_AdaptiveHelm"
+        "DA_ProtectorsVow",
+        "DA_JeweledGauntlet"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Elise19?set=TFTSet19",
@@ -44,10 +44,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_LastWhisper",
-        "DA_Deathblade",
         "DA_KrakensFury",
-        "DA_InfinityEdge",
-        "DA_GuinsoosRageblade"
+        "DA_Deathblade",
+        "DA_RedBuff",
+        "DA_GiantSlayer"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Gnar19?set=TFTSet19",
@@ -67,10 +67,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_JeweledGauntlet",
-        "DA_EdgeOfNight",
-        "DA_IonicSpark",
         "DA_HandOfJustice",
-        "DA_StrikersFlail"
+        "DA_EdgeOfNight",
+        "DA_RabadonsDeathcap",
+        "DA_ThiefsGloves"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Katarina19?set=TFTSet19",
@@ -89,11 +89,11 @@
       "full_mana": "0/30",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_InfinityEdge",
-        "DA_SteraksGage",
         "DA_HandOfJustice",
-        "DA_TitansResolve",
-        "DA_EdgeOfNight"
+        "DA_SteraksGage",
+        "DA_TitansResolve"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Kayn19?set=TFTSet19",
@@ -115,8 +115,8 @@
         "DA_JeweledGauntlet",
         "DA_HandOfJustice",
         "DA_EdgeOfNight",
-        "DA_Bloodthirster",
-        "DA_HextechGunblade"
+        "DA_ThiefsGloves",
+        "DA_Bloodthirster"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Kennen19?set=TFTSet19",
@@ -136,9 +136,10 @@
       "source_missing_values": true,
       "recommended_items": [
         "DA_GargoyleStoneplate",
-        "DA_Crownguard",
+        "DA_WarmogsArmor",
         "DA_SpiritVisage",
-        "DA_WarmogsArmor"
+        "DA_Crownguard",
+        "DA_DragonsClaw"
       ],
       "full_unlock": [
         "2-star Ziggs with 1 item"
@@ -159,11 +160,11 @@
       "full_mana": "40/100",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_IonicSpark",
-        "DA_Crownguard",
-        "DA_TitansResolve",
-        "DA_Bloodthirster",
-        "DA_SunfireCape"
+        "DA_SunfireCape",
+        "DA_WarmogsArmor",
+        "DA_Crownguard"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Lillia19?set=TFTSet19",
@@ -183,10 +184,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_SpearOfShojin",
-        "DA_StrikersFlail",
         "DA_JeweledGauntlet",
-        "DA_GiantSlayer",
-        "DA_VoidStaff"
+        "DA_StrikersFlail",
+        "DA_VoidStaff",
+        "DA_RabadonsDeathcap"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Neeko19?set=TFTSet19",
@@ -205,11 +206,11 @@
       "full_mana": "0/0",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_Evenshroud",
+        "DA_ThiefsGloves",
         "DA_SunfireCape",
-        "DA_KrakensFury",
-        "DA_InfinityEdge",
-        "DA_GuinsoosRageblade"
+        "DA_Evenshroud",
+        "DA_IonicSpark",
+        "DA_BrambleVest"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Olaf19?set=TFTSet19",
@@ -228,11 +229,11 @@
       "full_mana": "30/90",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_IonicSpark",
+        "DA_ThiefsGloves",
         "DA_SunfireCape",
-        "DA_ProtectorsVow",
+        "DA_IonicSpark",
         "DA_Evenshroud",
-        "DA_SpiritVisage"
+        "DA_SteraksGage"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Sett19?set=TFTSet19",
@@ -251,11 +252,11 @@
       "full_mana": "30/90",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_IonicSpark",
-        "DA_Crownguard",
         "DA_SunfireCape",
         "DA_Evenshroud",
-        "DA_ProtectorsVow"
+        "DA_Crownguard"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Taric19?set=TFTSet19",
@@ -275,10 +276,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_SpearOfShojin",
-        "DA_GuinsoosRageblade",
         "DA_RedBuff",
         "DA_LastWhisper",
-        "DA_InfinityEdge"
+        "DA_Deathblade",
+        "DA_ThiefsGloves"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Varus19?set=TFTSet19",
@@ -298,10 +299,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_GuinsoosRageblade",
-        "DA_RedBuff",
+        "DA_ThiefsGloves",
         "DA_KrakensFury",
         "DA_Deathblade",
-        "DA_GiantSlayer"
+        "DA_LastWhisper"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Yunara19?set=TFTSet19",
@@ -321,10 +322,10 @@
       "source_missing_values": true,
       "recommended_items": [
         "DA_GuinsoosRageblade",
-        "DA_RedBuff",
+        "DA_JeweledGauntlet",
         "DA_HextechGunblade",
-        "DA_GiantSlayer",
-        "DA_RabadonsDeathcap"
+        "DA_RabadonsDeathcap",
+        "DA_GiantSlayer"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Ziggs19?set=TFTSet19",
@@ -343,11 +344,11 @@
       "full_mana": "15/90",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_BlueBuff",
-        "DA_GiantSlayer",
-        "DA_RabadonsDeathcap",
-        "DA_JeweledGauntlet",
-        "DA_VoidStaff"
+        "DA_SpearOfShojin",
+        "DA_ThiefsGloves",
+        "DA_VoidStaff",
+        "DA_Morellonomicon",
+        "DA_RedBuff"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Zoe19?set=TFTSet19",
@@ -366,11 +367,11 @@
       "full_mana": "20/80",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_IonicSpark",
+        "DA_SunfireCape",
         "DA_Crownguard",
-        "DA_ProtectorsVow",
-        "DA_SpiritVisage",
-        "DA_SunfireCape"
+        "DA_SpiritVisage"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Annie19?set=TFTSet19",
@@ -390,10 +391,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_GuinsoosRageblade",
-        "DA_RedBuff",
         "DA_KrakensFury",
         "DA_LastWhisper",
-        "DA_HextechGunblade"
+        "DA_Deathblade",
+        "DA_InfinityEdge"
       ],
       "full_unlock": [
         "A Beach Pop Champion with 2 items."
@@ -402,7 +403,7 @@
       "recommendation_status": "available"
     },
     "u17": {
-      "name_zh": null,
+      "name_zh": "卡蜜兒",
       "ability": "Hookshot Through the Heart",
       "ability_zh": "穿心鋼鐵鉤射",
       "mana": "0/40",
@@ -414,11 +415,11 @@
       "full_mana": "0/40",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
+        "DA_Evenshroud",
         "DA_InfinityEdge",
         "DA_Deathblade",
-        "DA_GiantSlayer",
-        "DA_HandOfJustice",
-        "DA_Quicksilver"
+        "DA_GiantSlayer"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Camille19?set=TFTSet19",
@@ -437,11 +438,11 @@
       "full_mana": "0/35",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_SpearOfShojin",
+        "DA_BlueBuff",
         "DA_RedBuff",
-        "DA_InfinityEdge",
-        "DA_StrikersFlail",
-        "DA_Deathblade"
+        "DA_LastWhisper",
+        "DA_ThiefsGloves",
+        "DA_VoidStaff"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Ezreal19?set=TFTSet19",
@@ -460,11 +461,11 @@
       "full_mana": "30/80",
       "source_missing_values": true,
       "recommended_items": [
-        "DA_IonicSpark",
-        "DA_Crownguard",
         "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage",
         "DA_SunfireCape",
-        "DA_WarmogsArmor"
+        "DA_IonicSpark"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Gragas19?set=TFTSet19",
@@ -483,11 +484,11 @@
       "full_mana": "30/90",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_IonicSpark",
+        "DA_ThiefsGloves",
         "DA_SunfireCape",
-        "DA_DragonsClaw",
-        "DA_Crownguard",
-        "DA_BrambleVest"
+        "DA_SpiritVisage",
+        "DA_Evenshroud",
+        "DA_ProtectorsVow"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Illaoi19?set=TFTSet19",
@@ -506,11 +507,11 @@
       "full_mana": "0/30",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_SpearOfShojin",
         "DA_TitansResolve",
         "DA_Bloodthirster",
-        "DA_JeweledGauntlet",
-        "DA_EdgeOfNight"
+        "DA_SpearOfShojin",
+        "DA_ThiefsGloves",
+        "DA_JeweledGauntlet"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Jax19?set=TFTSet19",
@@ -530,17 +531,17 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_BlueBuff",
-        "DA_RabadonsDeathcap",
-        "DA_GiantSlayer",
-        "DA_StrikersFlail",
-        "DA_VoidStaff"
+        "DA_VoidStaff",
+        "DA_JeweledGauntlet",
+        "DA_Morellonomicon",
+        "DA_ArchangelsStaff"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Karthus19?set=TFTSet19",
       "recommendation_status": "available"
     },
     "u23": {
-      "name_zh": null,
+      "name_zh": "路西恩",
       "ability": "Relentless Pursuit",
       "ability_zh": "冷酷進擊",
       "mana": "0/20",
@@ -554,9 +555,9 @@
       "recommended_items": [
         "DA_SpearOfShojin",
         "DA_RedBuff",
-        "DA_GiantSlayer",
+        "DA_ThiefsGloves",
         "DA_LastWhisper",
-        "DA_StrikersFlail"
+        "DA_KrakensFury"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Lucian19?set=TFTSet19",
@@ -576,10 +577,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_AdaptiveHelm",
-        "DA_RedBuff",
+        "DA_ThiefsGloves",
+        "DA_ArchangelsStaff",
         "DA_VoidStaff",
-        "DA_Morellonomicon",
-        "DA_RabadonsDeathcap"
+        "DA_Morellonomicon"
       ],
       "full_unlock": [
         "Have your Hyperpop Champions cast 10 times with the trait active."
@@ -588,7 +589,7 @@
       "recommendation_status": "available"
     },
     "u25": {
-      "name_zh": null,
+      "name_zh": "拉克絲",
       "ability": "Lux Lux Beam!",
       "ability_zh": "拉克絲光束！",
       "mana": "0/40",
@@ -600,11 +601,11 @@
       "full_mana": "0/40",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_AdaptiveHelm",
+        "DA_BlueBuff",
+        "DA_ThiefsGloves",
         "DA_GiantSlayer",
-        "DA_HextechGunblade",
         "DA_Morellonomicon",
-        "DA_ArchangelsStaff"
+        "DA_VoidStaff"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Lux19?set=TFTSet19",
@@ -624,10 +625,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_IonicSpark",
-        "DA_TitansResolve",
-        "DA_ArchangelsStaff",
-        "DA_AdaptiveHelm",
-        "DA_Crownguard"
+        "DA_SpiritVisage",
+        "DA_SunfireCape",
+        "DA_WarmogsArmor",
+        "DA_TitansResolve"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Nasus19?set=TFTSet19",
@@ -646,11 +647,11 @@
       "full_mana": "0/40",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_EdgeOfNight",
         "DA_HandOfJustice",
-        "DA_StrikersFlail",
+        "DA_EdgeOfNight",
+        "DA_ThiefsGloves",
         "DA_SteraksGage",
-        "DA_Deathblade"
+        "DA_Bloodthirster"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Qiyana19?set=TFTSet19",
@@ -672,7 +673,6 @@
         "DA_SpearOfShojin",
         "DA_HextechGunblade",
         "DA_ArchangelsStaff",
-        "DA_RedBuff",
         "DA_VoidStaff"
       ],
       "full_unlock": [],
@@ -693,10 +693,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_SteraksGage",
-        "DA_InfinityEdge",
-        "DA_SunfireCape",
         "DA_TitansResolve",
-        "DA_Bloodthirster"
+        "DA_Bloodthirster",
+        "DA_ThiefsGloves",
+        "DA_HandOfJustice"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Renekton19?set=TFTSet19",
@@ -719,7 +719,7 @@
         "DA_GuinsoosRageblade",
         "DA_RedBuff",
         "DA_LastWhisper",
-        "DA_GiantSlayer"
+        "DA_ThiefsGloves"
       ],
       "full_unlock": [
         "2 items on a Classical, Renegade, or Trickshot Champion."
@@ -728,7 +728,7 @@
       "recommendation_status": "available"
     },
     "u31": {
-      "name_zh": null,
+      "name_zh": "瑟菈紛",
       "ability": "Livestream of Note",
       "ability_zh": "值得關注的直播",
       "mana": "0/50",
@@ -739,12 +739,18 @@
       "full_description": "Indie: Release a stream of notes at the target while posing for the fans, dealing 570/855/1280 magic damage over 2.5 seconds.\n\nRising Star: Release bonus notes at nearby enemies.\n\nSuperstar: Toss high notes at every enemy.",
       "full_mana": "0/50",
       "source_missing_values": false,
-      "recommended_items": [],
+      "recommended_items": [
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_Morellonomicon",
+        "DA_JeweledGauntlet",
+        "DA_RabadonsDeathcap"
+      ],
       "full_unlock": [
         "Reroll 4 times before Stage 2 Carousel."
       ],
-      "recommendation_source": null,
-      "recommendation_status": "no-pbe-data"
+      "recommendation_source": "https://www.metatft.com/units/Seraphine19?set=TFTSet19",
+      "recommendation_status": "available"
     },
     "u32": {
       "name_zh": "崔絲塔娜",
@@ -760,9 +766,9 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_SpearOfShojin",
+        "DA_ThiefsGloves",
         "DA_Deathblade",
-        "DA_StrikersFlail",
-        "DA_KrakensFury",
+        "DA_LastWhisper",
         "DA_GiantSlayer"
       ],
       "full_unlock": [
@@ -785,10 +791,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_GargoyleStoneplate",
-        "DA_Crownguard",
         "DA_SpiritVisage",
-        "DA_SteadfastHeart",
-        "DA_WarmogsArmor"
+        "DA_WarmogsArmor",
+        "DA_Crownguard",
+        "DA_SteadfastHeart"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Amumu19?set=TFTSet19",
@@ -809,9 +815,9 @@
       "recommended_items": [
         "DA_GuinsoosRageblade",
         "DA_RedBuff",
+        "DA_ThiefsGloves",
         "DA_Morellonomicon",
-        "DA_VoidStaff",
-        "DA_ArchangelsStaff"
+        "DA_VoidStaff"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Bard19?set=TFTSet19",
@@ -830,11 +836,11 @@
       "full_mana": "75/135",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_IonicSpark",
-        "DA_Crownguard",
-        "DA_ProtectorsVow",
-        "DA_DragonsClaw",
-        "DA_GargoyleStoneplate"
+        "DA_SunfireCape",
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage",
+        "DA_ThiefsGloves",
+        "DA_ProtectorsVow"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Braum19?set=TFTSet19",
@@ -853,11 +859,11 @@
       "full_mana": "0/30",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_SteraksGage",
-        "DA_InfinityEdge",
         "DA_TitansResolve",
-        "DA_Deathblade",
-        "DA_GiantSlayer"
+        "DA_SteraksGage",
+        "DA_Bloodthirster",
+        "DA_ThiefsGloves",
+        "DA_InfinityEdge"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Briar19?set=TFTSet19",
@@ -877,10 +883,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_SpearOfShojin",
-        "DA_RedBuff",
         "DA_LastWhisper",
         "DA_Deathblade",
-        "DA_InfinityEdge"
+        "DA_InfinityEdge",
+        "DA_StrikersFlail"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Draven19?set=TFTSet19",
@@ -900,10 +906,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_Crownguard",
-        "DA_AdaptiveHelm",
         "DA_GargoyleStoneplate",
-        "DA_IonicSpark",
-        "DA_WarmogsArmor"
+        "DA_AdaptiveHelm",
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Ekko19?set=TFTSet19",
@@ -922,11 +928,11 @@
       "full_mana": "0/40",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_JeweledGauntlet",
-        "DA_NashorsTooth",
-        "DA_StrikersFlail",
-        "DA_VoidStaff",
-        "DA_RabadonsDeathcap"
+        "DA_HandOfJustice",
+        "DA_RabadonsDeathcap",
+        "DA_GiantSlayer"
       ],
       "full_unlock": [
         "3 unique K/DA or Renegade Champions."
@@ -947,11 +953,11 @@
       "full_mana": "50/120",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_IonicSpark",
+        "DA_ThiefsGloves",
         "DA_SunfireCape",
-        "DA_Crownguard",
         "DA_Evenshroud",
-        "DA_ProtectorsVow"
+        "DA_IonicSpark",
+        "DA_Crownguard"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Galio19?set=TFTSet19",
@@ -970,11 +976,11 @@
       "full_mana": "70/140",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_Evenshroud",
-        "DA_ProtectorsVow",
-        "DA_Crownguard",
+        "DA_ThiefsGloves",
         "DA_SunfireCape",
-        "DA_SpiritVisage"
+        "DA_Evenshroud",
+        "DA_SpiritVisage",
+        "DA_ProtectorsVow"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/KSante19?set=TFTSet19",
@@ -996,7 +1002,7 @@
         "DA_GuinsoosRageblade",
         "DA_RedBuff",
         "DA_KrakensFury",
-        "DA_GiantSlayer",
+        "DA_LastWhisper",
         "DA_Deathblade"
       ],
       "full_unlock": [],
@@ -1016,8 +1022,8 @@
       "full_mana": "0/50",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_StrikersFlail",
         "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
         "DA_RabadonsDeathcap",
         "DA_HextechGunblade",
         "DA_GiantSlayer"
@@ -1041,9 +1047,9 @@
       "recommended_items": [
         "DA_SpearOfShojin",
         "DA_RedBuff",
-        "DA_Deathblade",
         "DA_LastWhisper",
-        "DA_GiantSlayer"
+        "DA_Deathblade",
+        "DA_InfinityEdge"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Senna19?set=TFTSet19",
@@ -1062,10 +1068,10 @@
       "full_mana": "70/120",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_IonicSpark",
+        "DA_ThiefsGloves",
         "DA_SunfireCape",
-        "DA_SteadfastHeart",
-        "DA_AdaptiveHelm",
+        "DA_IonicSpark",
+        "DA_ProtectorsVow",
         "DA_Crownguard"
       ],
       "full_unlock": [],
@@ -1085,18 +1091,18 @@
       "full_mana": "0/30",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_SpearOfShojin",
-        "DA_Morellonomicon",
+        "DA_BlueBuff",
         "DA_VoidStaff",
-        "DA_RedBuff",
-        "DA_RabadonsDeathcap"
+        "DA_Morellonomicon",
+        "DA_ThiefsGloves",
+        "DA_HextechGunblade"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Syndra19?set=TFTSet19",
       "recommendation_status": "available"
     },
     "u47": {
-      "name_zh": null,
+      "name_zh": "泰貝爾",
       "ability": "Girl's Best Friend",
       "ability_zh": null,
       "mana": "40/100",
@@ -1108,10 +1114,10 @@
       "full_mana": "40/100",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_Evenshroud",
         "DA_SunfireCape",
         "DA_IonicSpark",
-        "DA_Crownguard",
         "DA_SpiritVisage"
       ],
       "full_unlock": [
@@ -1133,10 +1139,10 @@
       "full_mana": "0/40",
       "source_missing_values": true,
       "recommended_items": [
-        "DA_GiantSlayer",
         "DA_InfinityEdge",
-        "DA_EdgeOfNight",
         "DA_HandOfJustice",
+        "DA_EdgeOfNight",
+        "DA_ThiefsGloves",
         "DA_TitansResolve"
       ],
       "full_unlock": [],
@@ -1155,10 +1161,16 @@
       "full_description": "Passive: Start combat with 6 fox-fires and gain 2 after casting, up to 14. Then enter a flow state, moving faster and empowering subsequent casts.\n\nActive: Launch all fox-fires at the target, each dealing 28/42/400 magic damage. If in the flow, instead launch a heart at the target that deals 235/350/2000 magic damage and split the fox-fires among all enemies within 2 hexes of them.",
       "full_mana": "0/30",
       "source_missing_values": false,
-      "recommended_items": [],
+      "recommended_items": [
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_JeweledGauntlet",
+        "DA_RabadonsDeathcap",
+        "DA_StrikersFlail"
+      ],
       "full_unlock": [],
-      "recommendation_source": null,
-      "recommendation_status": "no-pbe-data"
+      "recommendation_source": "https://www.metatft.com/units/Ahri19?set=TFTSet19",
+      "recommendation_status": "available"
     },
     "u50": {
       "name_zh": "亞歷斯塔",
@@ -1173,11 +1185,11 @@
       "full_mana": "70/155",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_IonicSpark",
         "DA_SteadfastHeart",
         "DA_ProtectorsVow",
-        "DA_AdaptiveHelm",
-        "DA_SunfireCape"
+        "DA_DragonsClaw"
       ],
       "full_unlock": [
         "Level 7",
@@ -1225,11 +1237,11 @@
       "full_mana": "0/60",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_AdaptiveHelm",
+        "DA_BlueBuff",
         "DA_Morellonomicon",
-        "DA_RedBuff",
         "DA_VoidStaff",
-        "DA_ArchangelsStaff"
+        "DA_ThiefsGloves",
+        "DA_RedBuff"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Aurora19?set=TFTSet19",
@@ -1248,11 +1260,11 @@
       "full_mana": "30/100",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
+        "DA_SunfireCape",
         "DA_IonicSpark",
-        "DA_SteraksGage",
         "DA_ProtectorsVow",
-        "DA_GargoyleStoneplate",
-        "DA_WarmogsArmor"
+        "DA_SteadfastHeart"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Garen19?set=TFTSet19",
@@ -1271,10 +1283,10 @@
       "full_mana": "0/30",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_SteraksGage",
         "DA_LastWhisper",
-        "DA_StrikersFlail",
         "DA_Deathblade",
+        "DA_SteraksGage",
+        "DA_ThiefsGloves",
         "DA_GiantSlayer"
       ],
       "full_unlock": [],
@@ -1295,10 +1307,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_GuinsoosRageblade",
-        "DA_RedBuff",
         "DA_LastWhisper",
         "DA_StrikersFlail",
-        "DA_Deathblade"
+        "DA_Deathblade",
+        "DA_InfinityEdge"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Jhin19?set=TFTSet19",
@@ -1318,10 +1330,10 @@
       "source_missing_values": true,
       "recommended_items": [
         "DA_GuinsoosRageblade",
-        "DA_KrakensFury",
         "DA_InfinityEdge",
+        "DA_KrakensFury",
         "DA_LastWhisper",
-        "DA_GiantSlayer"
+        "DA_Deathblade"
       ],
       "full_unlock": [
         "Level 7",
@@ -1357,7 +1369,7 @@
       "recommendation_status": "available"
     },
     "u58": {
-      "name_zh": null,
+      "name_zh": "雷歐娜",
       "ability": "Coordinated Light Show",
       "ability_zh": "協調燈光秀",
       "mana": "40/100",
@@ -1369,11 +1381,11 @@
       "full_mana": "60/115",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_IonicSpark",
         "DA_SunfireCape",
-        "DA_Crownguard",
         "DA_WarmogsArmor",
-        "DA_SteadfastHeart"
+        "DA_ProtectorsVow"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Leona19?set=TFTSet19",
@@ -1392,10 +1404,10 @@
       "full_mana": "0/30",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_IonicSpark",
+        "DA_ThiefsGloves",
         "DA_RabadonsDeathcap",
-        "DA_Morellonomicon",
-        "DA_HextechGunblade",
+        "DA_EdgeOfNight",
+        "DA_IonicSpark",
         "DA_HandOfJustice"
       ],
       "full_unlock": [],
@@ -1415,11 +1427,11 @@
       "full_mana": "0/40",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_AdaptiveHelm",
+        "DA_BlueBuff",
         "DA_Morellonomicon",
         "DA_VoidStaff",
-        "DA_RedBuff",
-        "DA_ArchangelsStaff"
+        "DA_ThiefsGloves",
+        "DA_RedBuff"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Mel19?set=TFTSet19",
@@ -1440,9 +1452,9 @@
       "recommended_items": [
         "DA_GargoyleStoneplate",
         "DA_SpiritVisage",
-        "DA_IonicSpark",
-        "DA_ProtectorsVow",
-        "DA_Crownguard"
+        "DA_WarmogsArmor",
+        "DA_ThiefsGloves",
+        "DA_ProtectorsVow"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Shyvana19?set=TFTSet19",
@@ -1461,10 +1473,10 @@
       "full_mana": "40/100",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_GargoyleStoneplate",
         "DA_ProtectorsVow",
-        "DA_SpiritVisage",
         "DA_Crownguard",
+        "DA_SpiritVisage",
+        "DA_GargoyleStoneplate",
         "DA_WarmogsArmor"
       ],
       "full_unlock": [
@@ -1487,10 +1499,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_GuinsoosRageblade",
-        "DA_RedBuff",
         "DA_KrakensFury",
         "DA_LastWhisper",
-        "DA_GiantSlayer"
+        "DA_GiantSlayer",
+        "DA_Deathblade"
       ],
       "full_unlock": [
         "Level 7",
@@ -1512,11 +1524,11 @@
       "full_mana": "40/100",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_SpiritVisage",
         "DA_ProtectorsVow",
-        "DA_Crownguard",
+        "DA_SpiritVisage",
+        "DA_GargoyleStoneplate",
         "DA_WarmogsArmor",
-        "DA_Evenshroud"
+        "DA_Crownguard"
       ],
       "full_unlock": [
         "Allies deal 25000 damage while fielding Xayah."
@@ -1537,11 +1549,11 @@
       "full_mana": "0/60",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_BlueBuff",
+        "DA_SpearOfShojin",
         "DA_GuinsoosRageblade",
-        "DA_StrikersFlail",
         "DA_GiantSlayer",
-        "DA_InfinityEdge"
+        "DA_Deathblade",
+        "DA_ThiefsGloves"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Xayah19?set=TFTSet19",
@@ -1560,11 +1572,11 @@
       "full_mana": "0/30",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_SteraksGage",
-        "DA_Deathblade",
-        "DA_GiantSlayer",
-        "DA_Quicksilver",
-        "DA_EdgeOfNight"
+        "DA_EdgeOfNight",
+        "DA_InfinityEdge",
+        "DA_Deathblade"
       ],
       "full_unlock": [
         "Level 7",
@@ -1574,7 +1586,7 @@
       "recommendation_status": "available"
     },
     "u67": {
-      "name_zh": null,
+      "name_zh": "犽凝",
       "ability": "Two Sides",
       "ability_zh": "雙重面貌",
       "mana": "0/50",
@@ -1586,11 +1598,11 @@
       "full_mana": "0/50",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_SteraksGage",
         "DA_EdgeOfNight",
-        "DA_GiantSlayer",
         "DA_HandOfJustice",
-        "DA_LastWhisper"
+        "DA_Quicksilver"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Yone19?set=TFTSet19",
@@ -1609,11 +1621,11 @@
       "full_mana": "50/100",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_IonicSpark",
         "DA_SunfireCape",
-        "DA_Evenshroud",
-        "DA_Crownguard",
-        "DA_WarmogsArmor"
+        "DA_SpiritVisage",
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor",
+        "DA_Evenshroud"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Yorick19?set=TFTSet19",
@@ -1633,10 +1645,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_SpearOfShojin",
-        "DA_Morellonomicon",
         "DA_VoidStaff",
+        "DA_Morellonomicon",
         "DA_RedBuff",
-        "DA_ArchangelsStaff"
+        "DA_ThiefsGloves"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Yuumi19?set=TFTSet19",
@@ -1655,11 +1667,11 @@
       "full_mana": "60/110",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_GargoyleStoneplate",
         "DA_Crownguard",
         "DA_SunfireCape",
-        "DA_IonicSpark",
-        "DA_ProtectorsVow"
+        "DA_ProtectorsVow",
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage"
       ],
       "full_unlock": [
         "Level 7",
@@ -1681,11 +1693,11 @@
       "full_mana": "0/45",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_RedBuff",
         "DA_SteraksGage",
         "DA_Deathblade",
-        "DA_StrikersFlail",
-        "DA_HextechGunblade"
+        "DA_EdgeOfNight"
       ],
       "full_unlock": [
         "12 unique star levels of K/DA without True Damage Akali unlocked."
@@ -1706,11 +1718,11 @@
       "full_mana": "0/50",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_GiantSlayer",
-        "DA_HextechGunblade",
-        "DA_EdgeOfNight",
+        "DA_ThiefsGloves",
+        "DA_HandOfJustice",
         "DA_JeweledGauntlet",
-        "DA_HandOfJustice"
+        "DA_EdgeOfNight",
+        "DA_HextechGunblade"
       ],
       "full_unlock": [
         "Earn 375 True Damage Bling without K/DA Akali unlocked."
@@ -1735,7 +1747,7 @@
         "DA_RedBuff",
         "DA_KrakensFury",
         "DA_LastWhisper",
-        "DA_Deathblade"
+        "DA_GiantSlayer"
       ],
       "full_unlock": [
         "2-star Alune or Yone."
@@ -1756,11 +1768,11 @@
       "full_mana": "20/80",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_SteadfastHeart",
-        "DA_IonicSpark",
-        "DA_Crownguard",
+        "DA_ThiefsGloves",
         "DA_WarmogsArmor",
-        "DA_GargoyleStoneplate"
+        "DA_SpiritVisage",
+        "DA_GargoyleStoneplate",
+        "DA_SunfireCape"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/DrMundo19?set=TFTSet19",
@@ -1779,11 +1791,11 @@
       "full_mana": "0/100",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_Morellonomicon",
-        "DA_VoidStaff",
         "DA_JeweledGauntlet",
-        "DA_IonicSpark",
-        "DA_StrikersFlail"
+        "DA_ThiefsGloves",
+        "DA_RabadonsDeathcap",
+        "DA_VoidStaff",
+        "DA_HandOfJustice"
       ],
       "full_unlock": [
         "Ionic Spark fans cheer 250 times."
@@ -1808,7 +1820,7 @@
         "DA_RedBuff",
         "DA_Morellonomicon",
         "DA_VoidStaff",
-        "DA_JeweledGauntlet"
+        "DA_RabadonsDeathcap"
       ],
       "full_unlock": [
         "Earn 20 interest while fielding Xayah."
@@ -1829,11 +1841,11 @@
       "full_mana": "0/50",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_SteraksGage",
-        "DA_EdgeOfNight",
         "DA_Bloodthirster",
-        "DA_Quicksilver",
-        "DA_TitansResolve"
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice"
       ],
       "full_unlock": [
         "Deal 40 player damage while fielding Xayah."
@@ -1856,7 +1868,7 @@
       "recommended_items": [
         "DA_SpearOfShojin",
         "DA_RedBuff",
-        "DA_GiantSlayer",
+        "DA_ThiefsGloves",
         "DA_LastWhisper",
         "DA_Deathblade"
       ],
@@ -1880,8 +1892,8 @@
         "DA_GuinsoosRageblade",
         "DA_EdgeOfNight",
         "DA_Quicksilver",
-        "DA_Bloodthirster",
-        "DA_JeweledGauntlet"
+        "DA_JeweledGauntlet",
+        "DA_Bloodthirster"
       ],
       "full_unlock": [
         "10 unique star levels of Pentakill"
@@ -1902,11 +1914,11 @@
       "full_mana": "20/45",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_VoidStaff",
-        "DA_AdaptiveHelm",
         "DA_RabadonsDeathcap",
         "DA_GiantSlayer",
-        "DA_JeweledGauntlet"
+        "DA_HextechGunblade"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Nidalee19?set=TFTSet19",
@@ -1925,11 +1937,11 @@
       "full_mana": "20/75",
       "source_missing_values": true,
       "recommended_items": [
-        "DA_IonicSpark",
+        "DA_ThiefsGloves",
         "DA_SunfireCape",
-        "DA_Morellonomicon",
+        "DA_IonicSpark",
         "DA_AdaptiveHelm",
-        "DA_ProtectorsVow"
+        "DA_Morellonomicon"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Nunu19?set=TFTSet19",
@@ -1948,11 +1960,11 @@
       "full_mana": "0/30",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_SteraksGage",
-        "DA_Deathblade",
         "DA_EdgeOfNight",
-        "DA_GiantSlayer",
-        "DA_HandOfJustice"
+        "DA_HandOfJustice",
+        "DA_Deathblade"
       ],
       "full_unlock": [
         "Level 7",
@@ -1974,11 +1986,11 @@
       "full_mana": "30/100",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_Crownguard",
-        "DA_Evenshroud",
-        "DA_IonicSpark",
+        "DA_ThiefsGloves",
         "DA_ProtectorsVow",
-        "DA_SteadfastHeart"
+        "DA_Crownguard",
+        "DA_SunfireCape",
+        "DA_Evenshroud"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Rell19?set=TFTSet19",
@@ -1997,11 +2009,11 @@
       "full_mana": "0/40",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_BlueBuff",
+        "DA_SpearOfShojin",
+        "DA_RabadonsDeathcap",
         "DA_Morellonomicon",
         "DA_ArchangelsStaff",
-        "DA_RabadonsDeathcap",
-        "DA_HextechGunblade"
+        "DA_JeweledGauntlet"
       ],
       "full_unlock": [
         "A Champion of each cost starts in a Beach Pop hex."
@@ -2022,11 +2034,11 @@
       "full_mana": "0/100",
       "source_missing_values": true,
       "recommended_items": [
-        "DA_AdaptiveHelm",
+        "DA_SpearOfShojin",
+        "DA_JeweledGauntlet",
         "DA_VoidStaff",
-        "DA_RedBuff",
-        "DA_Morellonomicon",
-        "DA_RabadonsDeathcap"
+        "DA_RabadonsDeathcap",
+        "DA_ArchangelsStaff"
       ],
       "full_unlock": [
         "Collect 900 Hyperpop Hype."
@@ -2048,10 +2060,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_GuinsoosRageblade",
-        "DA_RedBuff",
         "DA_VoidStaff",
-        "DA_Morellonomicon",
-        "DA_GiantSlayer"
+        "DA_ThiefsGloves",
+        "DA_GiantSlayer",
+        "DA_HextechGunblade"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/TwistedFate19?set=TFTSet19",
@@ -2070,11 +2082,11 @@
       "full_mana": "0/50",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_SteraksGage",
-        "DA_Quicksilver",
-        "DA_GiantSlayer",
-        "DA_Evenshroud",
-        "DA_EdgeOfNight"
+        "DA_TitansResolve",
+        "DA_Bloodthirster",
+        "DA_HandOfJustice"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Vi19?set=TFTSet19",
@@ -2093,11 +2105,11 @@
       "full_mana": "0/40",
       "source_missing_values": false,
       "recommended_items": [
+        "DA_ThiefsGloves",
         "DA_AdaptiveHelm",
         "DA_Morellonomicon",
         "DA_BlueBuff",
-        "DA_VoidStaff",
-        "DA_RedBuff"
+        "DA_SpearOfShojin"
       ],
       "full_unlock": [
         "Level 8",
@@ -2121,9 +2133,9 @@
       "recommended_items": [
         "DA_SpearOfShojin",
         "DA_RedBuff",
+        "DA_ThiefsGloves",
         "DA_GiantSlayer",
-        "DA_StrikersFlail",
-        "DA_InfinityEdge"
+        "DA_StrikersFlail"
       ],
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Zeri19?set=TFTSet19",
@@ -2143,10 +2155,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_InfinityEdge",
-        "DA_Deathblade",
         "DA_HandOfJustice",
-        "DA_RedBuff",
-        "DA_StrikersFlail"
+        "DA_SteraksGage",
+        "DA_Deathblade",
+        "DA_RedBuff"
       ],
       "full_unlock": [
         "Collect all 5 members of Baron's ensemble.",
@@ -2169,11 +2181,11 @@
       "full_mana": "0/55",
       "source_missing_values": false,
       "recommended_items": [
-        "DA_IonicSpark",
+        "DA_ThiefsGloves",
+        "DA_JeweledGauntlet",
         "DA_AdaptiveHelm",
         "DA_ProtectorsVow",
-        "DA_Crownguard",
-        "DA_Morellonomicon"
+        "DA_HandOfJustice"
       ],
       "full_unlock": [
         "Win 4 combats in a row at Level 8+",
@@ -2183,7 +2195,7 @@
       "recommendation_status": "available"
     },
     "u92": {
-      "name_zh": null,
+      "name_zh": "斯米奇",
       "ability": "Upswing",
       "ability_zh": null,
       "mana": "0/4",
@@ -2197,10 +2209,10 @@
       "source_missing_values": false,
       "recommended_items": [
         "DA_SteraksGage",
-        "DA_Deathblade",
+        "DA_ThiefsGloves",
         "DA_EdgeOfNight",
-        "DA_GiantSlayer",
-        "DA_HandOfJustice"
+        "DA_Deathblade",
+        "DA_TitansResolve"
       ],
       "full_unlock": [
         "Level 9",
@@ -2224,10 +2236,10 @@
       "source_missing_values": true,
       "recommended_items": [
         "DA_AdaptiveHelm",
-        "DA_Morellonomicon",
-        "DA_RabadonsDeathcap",
+        "DA_VoidStaff",
         "DA_ArchangelsStaff",
-        "DA_HextechGunblade"
+        "DA_Morellonomicon",
+        "DA_JeweledGauntlet"
       ],
       "full_unlock": [
         "Level 10",
@@ -2251,7 +2263,11 @@
     "mode": "PBE",
     "patch": "19.1",
     "set": "TFTSet19",
-    "snapshot_date": "2026-11-19",
+    "snapshot_date": "2026-11-21",
     "window": "Last 3 Days"
+  },
+  "localization": {
+    "source": "https://data.metatft.com/lookups/TFTSet19_pbe_zh_tw.json",
+    "snapshot_date": "2026-11-21"
   }
 }

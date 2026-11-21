@@ -93,8 +93,10 @@ const exportStart=app.indexOf('async function exportCsv('),exportEnd=app.indexOf
 const exportFn=new vm.Script('('+app.slice(exportStart,exportEnd)+')').runInNewContext({state:exportState,DATA:focused,effectiveTraits,recordIds:()=>[0,1],fmt:String,t,traitLabel,getLanguage,unitLabel:u=>u.name,notify:()=>{},$:id=>{if(!controls.has(id))controls.set(id,{});return controls.get(id);},Blob,setTimeout,download:(blob,name)=>{exported={blob,name};}});
 await exportFn();const csvText=await exported.blob.text();const csvLines=csvText.trim().split('\r\n'),headers=csvLines[0].replace(/^\uFEFF/,'').split(','),cells=csvLines[1].split(',');
 assert.equal(cells[headers.indexOf('trait_score')],'3');assert.equal(cells[headers.indexOf('population')],'2');assert.equal(cells[headers.indexOf('active_traits')],'"A:3"');assert.equal(cells[headers.indexOf('trait_bonuses')],'"A:+1"');assert.equal(exportState.exporting,false);
-const expectedTranslations={'Heartsteel':'心鋼之聲','Frontman':'主唱','Classical':'古典樂','Collab':'合作','Swiftstriker':'迅捷先鋒','Hitmaker':'金曲製造機','Encore':'要不要來首安可曲','Juggernaut':'重裝戰士','Beach Pop':'海灘流行樂','Pentakill':'殺五社','Slayer':'殺戮者','Rock':'搖滾樂','Manager':'經紀人','EDM':'電子舞曲','Choreographer':'編舞者','Jazz':'爵士樂','Gu Feng':'國風','Hyperpop':'超能流行','Ionic Spark':'離子火花','Prodigy':'不世之才'};
-assert.deepEqual(TRAIT_ZH,expectedTranslations);
+const expectedTranslations={'Heartsteel':'心鋼之聲','Frontman':'主唱','Classical':'古典樂','Collab':'合作','Swiftstriker':'迅捷先鋒','Hitmaker':'金曲製造機','Encore':'要不要來首安可曲','Juggernaut':'重裝戰士','Beach Pop':'海灘流行樂','Pentakill':'殺五社','Slayer':'殺戮者','Rock':'搖滾樂','Manager':'經紀人','EDM':'電子舞曲','Choreographer':'編舞者','Jazz':'爵士樂','Gu Feng':'古風','Hyperpop':'超流行','Ionic Spark':'離子火花','Prodigy':'不世之才'};
+for(const [name,label]of Object.entries(expectedTranslations))assert.equal(TRAIT_ZH[name],label);
+const localization=JSON.parse(fs.readFileSync(new URL('../dist/localization-source.json',import.meta.url),'utf8'));
+for(const [name,a]of Object.entries(localization.traits))if(/[\u3400-\u9fff]/.test(a.name_zh||''))expectedTranslations[name]=a.name_zh;
 const canonicalBefore=JSON.stringify(data);
 setLanguage('zh-Hant');assert.equal(getLanguage(),'zh-Hant');
 for(const trait of data.traits){assert.equal(traitLabel(trait.name),expectedTranslations[trait.name]||trait.name);assert(traitSearchText([trait.name]).includes(trait.name));if(expectedTranslations[trait.name])assert(traitSearchText([trait.name]).includes(expectedTranslations[trait.name]));}
@@ -114,7 +116,7 @@ assert.equal(selectNodes.get('emblem-trait').options.length,28);
 assert.deepEqual(selectNodes.get('emblem-trait').options.map(o=>o.value).sort(),[...EMBLEM_TRAITS].sort());
 assert.equal(selectNodes.get('extra-trait').options.length,47);
 assert(!selectNodes.get('emblem-trait').options.some(o=>['Synthwave','Country','Producer'].includes(o.value)));
-setLanguage('zh-Hant');populate();assert.equal(selectNodes.get('emblem-trait').value,'Gu Feng');assert.equal(selectNodes.get('extra-trait').value,'Prodigy');assert.equal(selectNodes.get('emblem-trait').options.find(o=>o.value==='Gu Feng').text,'國風');assert.equal(selectNodes.get('extra-trait').options.find(o=>o.value==='Prodigy').text,'不世之才');
+setLanguage('zh-Hant');populate();assert.equal(selectNodes.get('emblem-trait').value,'Gu Feng');assert.equal(selectNodes.get('extra-trait').value,'Prodigy');assert.equal(selectNodes.get('emblem-trait').options.find(o=>o.value==='Gu Feng').text,'古風');assert.equal(selectNodes.get('extra-trait').options.find(o=>o.value==='Prodigy').text,'不世之才');
 setLanguage('en');populate();assert.equal(selectNodes.get('emblem-trait').value,'Gu Feng');assert.equal(selectNodes.get('emblem-trait').options.find(o=>o.value==='Gu Feng').text,'Gu Feng');
 const scripts=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);new vm.Script(scripts.at(-1));
 new vm.Script(capture('solver-source').replace(/^export /gm,'')+'\nself.onmessage=e=>{const {data,c}=e.data;const r=solve(data,c);self.postMessage(r)}');
@@ -127,7 +129,7 @@ assert.equal(Object.keys(info.units).length,data.units.length);
 for(const u of data.units){const a=info.units[u.id];assert(a);assert(a.ability);assert(a.description);assert(!/DA_Role_|Image:|†/.test(a.description));assert(a.mana===null||/^\d+\/\d+$/.test(a.mana),'Invalid mana for '+u.name);if(u.unlock)assert(a.unlock,'Missing unlock for '+u.name);}
 const infoControls=new Map(['info-query','info-cost','info-trait','info-unlock'].map(id=>[id,{value:''}]));
 const helpers=new vm.Script(get('src/info.js')+';({unitLabel,unitSearchText,abilitySummary,infoUnits})').runInNewContext({DATA:data,INFO:info,getLanguage,traitSearchText,$:id=>infoControls.get(id)});
-setLanguage('zh-Hant');assert.equal(helpers.unitLabel(data.units[0]),'伊莉絲');assert.equal(helpers.unitLabel(data.units.find(u=>u.name==='Leona')),'Leona');
+setLanguage('zh-Hant');assert.equal(helpers.unitLabel(data.units[0]),'伊莉絲');assert.equal(helpers.unitLabel(data.units.find(u=>u.name==='Leona')),'雷歐娜');
 assert(helpers.unitSearchText(data.units[0]).includes('Elise'));assert(helpers.unitSearchText(data.units[0]).includes('伊莉絲'));
 assert.equal(helpers.infoUnits().length,94);infoControls.get('info-query').value='伊莉絲';assert.equal(helpers.infoUnits()[0].id,'u0');infoControls.get('info-query').value='Elise';assert.equal(helpers.infoUnits()[0].id,'u0');
 infoControls.get('info-query').value='';infoControls.get('info-cost').value='4';infoControls.get('info-trait').value='K|DA';const subset=helpers.infoUnits();assert(subset.length);assert(subset.every(u=>u.cost===4&&u.traits.includes('K|DA')));

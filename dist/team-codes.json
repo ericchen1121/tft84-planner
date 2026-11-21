@@ -675,5 +675,7 @@
       ],
       "reason": "conflicting-source-code"
     }
-  ]
+  ],
+  "last_verified": "2026-11-21",
+  "audit": "dist/team-code-audit.json"
 }
