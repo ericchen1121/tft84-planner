@@ -17,7 +17,10 @@ payloads.APP=read('src/team-code.mjs').replace(/^export /gm,'')+'\n'+read('src/t
 payloads.AUGMENTS=JSON.stringify((()=>{const a=JSON.parse(read('dist/augments.json'));return {...a,augments:a.augments.map(({source_data,...visible})=>visible)};})());
 payloads.STYLES+='\n'+read('src/augments.css');
 payloads.APP=read('src/augment-model.mjs').replace(/^export /gm,'')+'\n'+read('src/augments.js')+'\n'+payloads.APP;
-for(const [name,content]of Object.entries(payloads))html=html.replace(`/*__${name}__*/`,()=>content.replace(/<\/script/gi,'<\\/script'));
+payloads.EQUIPMENT=JSON.stringify((()=>{const a=JSON.parse(read('dist/equipment.json'));return {...a,items:a.items.map(({source_data,...visible})=>visible)};})());
+ payloads.STYLES+='\n'+read('src/equipment.css');
+ payloads.APP=read('src/equipment-model.mjs').replace(/^export /gm,'')+'\n'+read('src/equipment.js')+'\n'+payloads.APP;
+ for(const [name,content]of Object.entries(payloads))html=html.replace(`/*__${name}__*/`,()=>content.replace(/<\/script/gi,'<\\/script'));
 if(/\/\*__[A-Z]+__\*\//.test(html))throw Error('Unresolved template token');
 fs.writeFileSync(new URL('dist/index.html',root),html);
 // Branch-based GitHub Pages supports only / or /docs. Keep a root entry point

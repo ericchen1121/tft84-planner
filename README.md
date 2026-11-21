@@ -184,3 +184,9 @@ The third tab lists all 371 augment entries in the MetaTFT Set 19 PBE / 19.1 loo
 348 names and 349 descriptions have official Traditional Chinese text in the source. Each missing field independently falls back to English. Values resolve curve-table placeholders including percentages and stage-range columns. Nine entries have conflicting source curve values, one has a missing source value, and four have dynamic game fields; unconfirmed values are explicit rather than guessed. Round metadata is copied from the source; entries without listed rounds remain visible. Distinct tiers/stages/curves can share an API name, so composite identities retain every variant.
 
 Run npm run refresh:augments to fetch and rebuild this dataset. dist/augments.json retains raw text and curve data for audit; the standalone HTML only embeds display fields. This is a reference library and does not apply augment effects to the solver.
+
+## Equipment library and augment tier icons
+
+The Equipment tab retains all 159 source entries: 36 normal, 36 radiant, 22 emblem, 33 artifact, 10 component, 4 support and 18 special entries. It has bilingual effect/name/component search, category/craftability/component filters, 24-card pages and detail dialogs. All 55 explicit recipes show ingredient icons plus a result icon; repeated ingredients remain duplicated. Radiant from/upgrade links are navigation only, never inferred component recipes. Source text, tags, stats and curves remain auditable in dist/equipment.json; run npm run refresh:equipment to update.
+
+Actual augment artwork is tinted by rarity in cards and dialogs: grayscale silver, warm gold, and the original saturated prismatic colors. The tier name and border remain visible as additional cues.
