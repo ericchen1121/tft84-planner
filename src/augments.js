@@ -3,7 +3,7 @@ const augmentUI={page:0,pageSize:24,selected:null};
 const augmentColors={Silver:'#b8c7db',Gold:'#e4c17f',Prismatic:'#c2a4ff'};
 function augmentDescription(a){return augmentText(a,getLanguage()).replaceAll('[unavailable]',t('[unavailable]')).replaceAll('[current game value]',t('Current game value')).replaceAll('[source values differ]',t('Unconfirmed value'));}
 function augmentIcon(a){
- const wrap=el('span','augment-icon'),fallback=el('span','augment-icon-fallback','✦');wrap.append(fallback);
+ const wrap=el('span','augment-icon'),fallback=el('span','augment-icon-fallback','✦');wrap.dataset.tier=a.tier;wrap.title=t(a.tier);wrap.append(fallback);
  if(a.image){const image=new Image();image.alt='';image.loading='lazy';image.src=a.image;image.addEventListener('load',()=>{fallback.hidden=true;});image.addEventListener('error',()=>image.remove());wrap.append(image);}return wrap;
 }
 function augmentTags(a){const tags=el('div','augment-tags');tags.append(el('span','augment-tier',t(a.tier)),el('span','augment-type',t(a.type==='trait'?'Trait augment':'General augment')));for(const round of a.rounds)tags.append(el('span','augment-round',round));if(!a.rounds.length)tags.append(el('span','augment-round',t('Stage not listed')));for(const trait of a.traits)tags.append(el('span','augment-trait',getLanguage()==='zh-Hant'?(trait.name_zh||traitLabel(trait.name)):trait.name));return tags;}

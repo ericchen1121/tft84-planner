@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {filterEquipment,equipmentName,equipmentText} from '../src/equipment-model.mjs';
+import {buildEquipmentSnapshot,equipmentCategory,resolveEquipmentText} from './equipment-source.mjs';
+const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'),snapshot=JSON.parse(read('dist/equipment.json')),items=snapshot.items,byId=new Map(items.map(a=>[a.id,a]));
+assert.equal(snapshot.set,'TFTSet19');assert.equal(items.length,159);assert.equal(byId.size,159);
+assert.deepEqual(Object.fromEntries(['normal','radiant','emblem','artifact','component','support','other'].map(c=>[c,items.filter(a=>a.category===c).length])),{normal:36,radiant:36,emblem:22,artifact:33,component:10,support:4,other:18});
+assert.equal(items.filter(a=>a.recipe.length).length,55);
+for(const a of items){assert(a.name&&a.description);assert(!/<TFT|\{(?:Augment|ItemTags|Set19)\./i.test(a.description+(a.description_zh||'')));assert.equal(new URL(a.image).hostname,'cdn.metatft.com');if(a.recipe.length){assert.equal(a.recipe.length,2);assert(a.recipe.every(id=>byId.get(id)?.category==='component'));}if(['artifact','radiant'].includes(a.category))assert.equal(a.recipe.length,0);}
+const rage=byId.get('DA_GuinsoosRageblade');assert.equal(equipmentName(rage,'zh-Hant'),'鬼索的狂暴之刃');assert.equal(equipmentName(rage,'en'),"Guinsoo's Rageblade");assert.deepEqual(rage.recipe,['DA_Component_RecurveBow','DA_Component_NeedlesslyLargeRod']);assert(equipmentText(rage,'en').includes('Attack Speed'));
+assert.deepEqual(byId.get('DA_BlueBuff').recipe,['DA_Component_TearOfTheGoddess','DA_Component_TearOfTheGoddess']);
+const radiant=byId.get('DA_AdaptiveHelm_Radiant');assert.equal(radiant.from,'DA_AdaptiveHelm');assert.equal(radiant.recipe.length,0,'Radiant upgrade must not be presented as component crafting');
+const emblem=byId.get('TFT_Emblem_CHANGEME');assert.equal(emblem.name,'Prodigy Emblem');assert.deepEqual(emblem.recipe,['DA_Component_FryingPan','DA_Component_TearOfTheGoddess']);
+assert.equal(filterEquipment(items,{category:'normal',craftable:'yes'}).length,36);
+assert(filterEquipment(items,{query:'鬼索',component:'DA_Component_RecurveBow',category:'normal'}).some(a=>a.id===rage.id));
+assert(filterEquipment(items,{query:'Guinsoo',component:'DA_Component_RecurveBow'}).some(a=>a.id===rage.id));
+assert.equal(filterEquipment(items,{category:'radiant',craftable:'yes'}).length,0);
+assert.equal(filterEquipment(items,{query:'no item 987654321'}).length,0);
+assert.equal(filterEquipment(items,{component:'DA_Component_Spatula',category:'emblem'}).length,8);
+assert.equal(equipmentCategory({tags:['Item.Equippable.Item.Radiant']}),'radiant');
+assert.equal(resolveEquipmentText('<TFTAttribute attributeID="value"/>',{attributeValues:{value:[3,3,3]}}).text,'3');
+assert.equal(resolveEquipmentText('<TFTAttribute attributeID="value" fallbackRow="bonus"/>',{curveValues:{bonus:[[1,4]]}}).text,'4');
+assert.equal(resolveEquipmentText('{ItemTags.Foo.Current}',{}).text,'[current game value]');
+const before=JSON.stringify(items);filterEquipment(items,{category:'artifact'},'en');assert.equal(JSON.stringify(items),before);
+assert.throws(()=>buildEquipmentSnapshot({_metadata:{set:'TFTSet18'}},{_metadata:{set:'TFTSet19'}},'2026-11-21'),/mismatch/);
+const css=read('src/equipment.css');assert(css.includes('.augment-icon[data-tier="Silver"] img{filter:grayscale(1)'));assert(css.includes('.augment-icon[data-tier="Gold"] img{filter:grayscale(1)'));assert(css.includes('sepia(1)'));assert(read('src/augments.js').includes('wrap.dataset.tier=a.tier'));
+const html=read('index.html');assert(html.includes('id="tab-equipment"'));assert(html.includes('id="equipment-dialog"'));assert(!html.includes('/*__EQUIPMENT__*/'));
+console.log(JSON.stringify({equipment:'PASS',items:159,recipes:55,recipe_ingredients_valid:true,repeated_components_preserved:true,radiant_upgrade_not_crafting:true,bilingual_filters:true,augment_art_tinted_by_tier:true}));
