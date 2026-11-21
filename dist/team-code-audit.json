@@ -1,0 +1,887 @@
+{
+  "source": "https://data.metatft.com/lookups/TFTSet19_pbe_en_us.json",
+  "snapshot_date": "2026-11-21",
+  "metadata": {
+    "set": "TFTSet19",
+    "setName": "Set 19",
+    "patch": "pbe",
+    "generated": "2026-11-21T00:38:30.278Z",
+    "coreHash": "cc5d992ec0dd8502685c86a480f93398ef4dbcca",
+    "release": "rls-19.1.0.6005555.Set19.Shipping.pbe",
+    "manifest": "577129E866661C1E",
+    "tooltips": "curvetable"
+  },
+  "units": {
+    "u0": {
+      "name": "Elise",
+      "candidates": [
+        {
+          "apiName": "TFT19_Elise",
+          "code": "3fd"
+        },
+        {
+          "apiName": "DA_Elise19",
+          "code": "3fd"
+        }
+      ]
+    },
+    "u1": {
+      "name": "Gnar",
+      "candidates": [
+        {
+          "apiName": "DA_Gnar19",
+          "code": "402"
+        }
+      ]
+    },
+    "u2": {
+      "name": "Katarina",
+      "candidates": [
+        {
+          "apiName": "DA_Katarina19",
+          "code": "40c"
+        }
+      ]
+    },
+    "u3": {
+      "name": "Kayn",
+      "candidates": [
+        {
+          "apiName": "DA_Kayn19",
+          "code": "40e"
+        }
+      ]
+    },
+    "u4": {
+      "name": "Kennen",
+      "candidates": [
+        {
+          "apiName": "DA_Kennen19",
+          "code": "40f"
+        }
+      ]
+    },
+    "u5": {
+      "name": "Kobuko",
+      "candidates": [
+        {
+          "apiName": "DA_Kobuko19",
+          "code": "410"
+        }
+      ]
+    },
+    "u6": {
+      "name": "Lillia",
+      "candidates": [
+        {
+          "apiName": "DA_Lillia19",
+          "code": "413"
+        }
+      ]
+    },
+    "u7": {
+      "name": "Neeko",
+      "candidates": [
+        {
+          "apiName": "DA_Neeko19",
+          "code": "41c"
+        }
+      ]
+    },
+    "u8": {
+      "name": "Olaf",
+      "candidates": [
+        {
+          "apiName": "DA_Olaf19",
+          "code": "447"
+        }
+      ]
+    },
+    "u9": {
+      "name": "Sett",
+      "candidates": [
+        {
+          "apiName": "DA_Sett19",
+          "code": "428"
+        }
+      ]
+    },
+    "u10": {
+      "name": "Taric",
+      "candidates": [
+        {
+          "apiName": "DA_Taric19",
+          "code": "430"
+        }
+      ]
+    },
+    "u11": {
+      "name": "Varus",
+      "candidates": [
+        {
+          "apiName": "DA_Varus19",
+          "code": "436"
+        }
+      ]
+    },
+    "u12": {
+      "name": "Yunara",
+      "candidates": [
+        {
+          "apiName": "DA_Yunara19",
+          "code": "440"
+        }
+      ]
+    },
+    "u13": {
+      "name": "Ziggs",
+      "candidates": [
+        {
+          "apiName": "DA_Ziggs19",
+          "code": "444"
+        }
+      ]
+    },
+    "u14": {
+      "name": "Zoe",
+      "candidates": [
+        {
+          "apiName": "DA_Zoe19",
+          "code": "445"
+        }
+      ]
+    },
+    "u15": {
+      "name": "Annie",
+      "candidates": [
+        {
+          "apiName": "DA_Annie19",
+          "code": "3f0"
+        }
+      ]
+    },
+    "u16": {
+      "name": "Ashe",
+      "candidates": [
+        {
+          "apiName": "DA_Ashe19",
+          "code": "3f2"
+        }
+      ]
+    },
+    "u17": {
+      "name": "Camille",
+      "candidates": [
+        {
+          "apiName": "DA_Camille19",
+          "code": "3f8"
+        }
+      ]
+    },
+    "u18": {
+      "name": "Ezreal",
+      "candidates": [
+        {
+          "apiName": "DA_Ezreal19",
+          "code": "3ff"
+        }
+      ]
+    },
+    "u19": {
+      "name": "Gragas",
+      "candidates": [
+        {
+          "apiName": "DA_Gragas19",
+          "code": "403"
+        }
+      ]
+    },
+    "u20": {
+      "name": "Illaoi",
+      "candidates": [
+        {
+          "apiName": "DA_Illaoi19",
+          "code": "405"
+        }
+      ]
+    },
+    "u21": {
+      "name": "Jax",
+      "candidates": [
+        {
+          "apiName": "DA_Jax19",
+          "code": "407"
+        }
+      ]
+    },
+    "u22": {
+      "name": "Karthus",
+      "candidates": [
+        {
+          "apiName": "DA_Karthus19",
+          "code": "40b"
+        }
+      ]
+    },
+    "u23": {
+      "name": "Lucian",
+      "candidates": [
+        {
+          "apiName": "DA_Lucian19",
+          "code": "415"
+        }
+      ]
+    },
+    "u24": {
+      "name": "Lulu",
+      "candidates": [
+        {
+          "apiName": "DA_Lulu19",
+          "code": "416"
+        }
+      ]
+    },
+    "u25": {
+      "name": "Lux",
+      "candidates": [
+        {
+          "apiName": "DA_Lux19",
+          "code": "417"
+        }
+      ]
+    },
+    "u26": {
+      "name": "Nasus",
+      "candidates": [
+        {
+          "apiName": "DA_Nasus19",
+          "code": "449"
+        }
+      ]
+    },
+    "u27": {
+      "name": "Qiyana",
+      "candidates": [
+        {
+          "apiName": "DA_Qiyana19",
+          "code": "421"
+        }
+      ]
+    },
+    "u28": {
+      "name": "Renata Glasc",
+      "candidates": [
+        {
+          "apiName": "DA_RenataGlasc19",
+          "code": "423"
+        }
+      ]
+    },
+    "u29": {
+      "name": "Renekton",
+      "candidates": [
+        {
+          "apiName": "DA_Renekton19",
+          "code": "424"
+        }
+      ]
+    },
+    "u30": {
+      "name": "Samira",
+      "candidates": [
+        {
+          "apiName": "DA_Samira19",
+          "code": "425"
+        }
+      ]
+    },
+    "u31": {
+      "name": "Seraphine",
+      "candidates": [
+        {
+          "apiName": "DA_Seraphine19_Indie",
+          "code": "427"
+        }
+      ]
+    },
+    "u32": {
+      "name": "Tristana",
+      "candidates": [
+        {
+          "apiName": "DA_Tristana19",
+          "code": "434"
+        }
+      ]
+    },
+    "u33": {
+      "name": "Amumu",
+      "candidates": [
+        {
+          "apiName": "DA_Amumu19",
+          "code": "3ef"
+        }
+      ]
+    },
+    "u34": {
+      "name": "Bard",
+      "candidates": [
+        {
+          "apiName": "DA_Bard19",
+          "code": "3f4"
+        }
+      ]
+    },
+    "u35": {
+      "name": "Braum",
+      "candidates": [
+        {
+          "apiName": "DA_Braum19",
+          "code": "3f6"
+        }
+      ]
+    },
+    "u36": {
+      "name": "Briar",
+      "candidates": [
+        {
+          "apiName": "DA_Briar19",
+          "code": "3f7"
+        }
+      ]
+    },
+    "u37": {
+      "name": "Draven",
+      "candidates": [
+        {
+          "apiName": "DA_Draven19",
+          "code": "3fa"
+        }
+      ]
+    },
+    "u38": {
+      "name": "Ekko",
+      "candidates": [
+        {
+          "apiName": "DA_Ekko19",
+          "code": "3fc"
+        }
+      ]
+    },
+    "u39": {
+      "name": "Evelynn",
+      "candidates": [
+        {
+          "apiName": "DA_Evelynn19",
+          "code": "3fe"
+        }
+      ]
+    },
+    "u40": {
+      "name": "Galio",
+      "candidates": [
+        {
+          "apiName": "DA_Galio19",
+          "code": "400"
+        }
+      ]
+    },
+    "u41": {
+      "name": "K'Sante",
+      "candidates": [
+        {
+          "apiName": "DA_KSante19",
+          "code": "411"
+        }
+      ]
+    },
+    "u42": {
+      "name": "Kai'Sa",
+      "candidates": [
+        {
+          "apiName": "DA_Kaisa19",
+          "code": "40a"
+        }
+      ]
+    },
+    "u43": {
+      "name": "Malzahar",
+      "candidates": [
+        {
+          "apiName": "DA_Malzahar19",
+          "code": "418"
+        }
+      ]
+    },
+    "u44": {
+      "name": "Senna",
+      "candidates": [
+        {
+          "apiName": "DA_Senna19",
+          "code": "426"
+        }
+      ]
+    },
+    "u45": {
+      "name": "Swain",
+      "candidates": [
+        {
+          "apiName": "DA_Swain19",
+          "code": "42d"
+        }
+      ]
+    },
+    "u46": {
+      "name": "Syndra",
+      "candidates": [
+        {
+          "apiName": "DA_Syndra19",
+          "code": "42e"
+        }
+      ]
+    },
+    "u47": {
+      "name": "Tibbers",
+      "candidates": [
+        {
+          "apiName": "DA_Tibbers19",
+          "code": "433"
+        }
+      ]
+    },
+    "u48": {
+      "name": "Viego",
+      "candidates": [
+        {
+          "apiName": "DA_Viego19",
+          "code": "439"
+        }
+      ]
+    },
+    "u49": {
+      "name": "Ahri",
+      "candidates": [
+        {
+          "apiName": "DA_19_Ahri",
+          "code": "3e9"
+        }
+      ]
+    },
+    "u50": {
+      "name": "Alistar",
+      "candidates": [
+        {
+          "apiName": "DA_Alistar19",
+          "code": "3ed"
+        }
+      ]
+    },
+    "u51": {
+      "name": "Alune",
+      "candidates": [
+        {
+          "apiName": "DA_Alune19",
+          "code": "3ee"
+        }
+      ]
+    },
+    "u52": {
+      "name": "Aurora",
+      "candidates": [
+        {
+          "apiName": "DA_Aurora19",
+          "code": "3f3"
+        }
+      ]
+    },
+    "u53": {
+      "name": "Garen",
+      "candidates": [
+        {
+          "apiName": "DA_Garen19",
+          "code": "401"
+        }
+      ]
+    },
+    "u54": {
+      "name": "Graves",
+      "candidates": [
+        {
+          "apiName": "DA_Graves19",
+          "code": "449"
+        }
+      ]
+    },
+    "u55": {
+      "name": "Jhin",
+      "candidates": [
+        {
+          "apiName": "DA_Jhin19",
+          "code": "408"
+        }
+      ]
+    },
+    "u56": {
+      "name": "Jinx",
+      "candidates": [
+        {
+          "apiName": "DA_Jinx19",
+          "code": "409"
+        }
+      ]
+    },
+    "u57": {
+      "name": "Kayle",
+      "candidates": [
+        {
+          "apiName": "DA_Kayle19",
+          "code": "40d"
+        }
+      ]
+    },
+    "u58": {
+      "name": "Leona",
+      "candidates": [
+        {
+          "apiName": "DA_Leona19",
+          "code": "412"
+        }
+      ]
+    },
+    "u59": {
+      "name": "Locke",
+      "candidates": [
+        {
+          "apiName": "DA_Locke19",
+          "code": "414"
+        }
+      ]
+    },
+    "u60": {
+      "name": "Mel",
+      "candidates": [
+        {
+          "apiName": "DA_Mel19",
+          "code": "419"
+        }
+      ]
+    },
+    "u61": {
+      "name": "Shyvana",
+      "candidates": [
+        {
+          "apiName": "DA_Shyvana19",
+          "code": "429"
+        }
+      ]
+    },
+    "u62": {
+      "name": "Thresh",
+      "candidates": [
+        {
+          "apiName": "DA_Thresh19",
+          "code": "432"
+        }
+      ]
+    },
+    "u63": {
+      "name": "Vayne",
+      "candidates": [
+        {
+          "apiName": "DA_Vayne19",
+          "code": "437"
+        }
+      ]
+    },
+    "u64": {
+      "name": "Wukong",
+      "candidates": [
+        {
+          "apiName": "DA_Wukong19",
+          "code": "43b"
+        }
+      ]
+    },
+    "u65": {
+      "name": "Xayah",
+      "candidates": [
+        {
+          "apiName": "DA_Xayah19",
+          "code": "43c"
+        }
+      ]
+    },
+    "u66": {
+      "name": "Yasuo",
+      "candidates": [
+        {
+          "apiName": "DA_Yasuo19",
+          "code": "43d"
+        }
+      ]
+    },
+    "u67": {
+      "name": "Yone",
+      "candidates": [
+        {
+          "apiName": "DA_Yone19",
+          "code": "43e"
+        }
+      ]
+    },
+    "u68": {
+      "name": "Yorick",
+      "candidates": [
+        {
+          "apiName": "DA_Yorick19",
+          "code": "43f"
+        }
+      ]
+    },
+    "u69": {
+      "name": "Yuumi",
+      "candidates": [
+        {
+          "apiName": "DA_Yuumi19",
+          "code": "441"
+        }
+      ]
+    },
+    "u70": {
+      "name": "Zac",
+      "candidates": [
+        {
+          "apiName": "DA_Zac19",
+          "code": "442"
+        }
+      ]
+    },
+    "u71": {
+      "name": "Akali (K|DA)",
+      "candidates": [
+        {
+          "apiName": "DA_AkaliKDA19",
+          "code": "3ec"
+        }
+      ]
+    },
+    "u72": {
+      "name": "Akali (True Damage)",
+      "candidates": [
+        {
+          "apiName": "DA_Akali_TrueDamage19",
+          "code": "3ea"
+        }
+      ]
+    },
+    "u73": {
+      "name": "Aphelios",
+      "candidates": [
+        {
+          "apiName": "DA_Aphelios19",
+          "code": "3f1"
+        }
+      ]
+    },
+    "u74": {
+      "name": "Dr. Mundo",
+      "candidates": [
+        {
+          "apiName": "DA_DrMundo19",
+          "code": "3fb"
+        }
+      ]
+    },
+    "u75": {
+      "name": "Gwen",
+      "candidates": [
+        {
+          "apiName": "DA_Gwen19",
+          "code": "404"
+        }
+      ]
+    },
+    "u76": {
+      "name": "Janna",
+      "candidates": [
+        {
+          "apiName": "DA_Janna19",
+          "code": "406"
+        }
+      ]
+    },
+    "u77": {
+      "name": "Lee Sin",
+      "candidates": [
+        {
+          "apiName": "DA_LeeSin19",
+          "code": "44f"
+        }
+      ]
+    },
+    "u78": {
+      "name": "Miss Fortune",
+      "candidates": [
+        {
+          "apiName": "DA_MissFortune19",
+          "code": "41a"
+        }
+      ]
+    },
+    "u79": {
+      "name": "Mordekaiser",
+      "candidates": [
+        {
+          "apiName": "DA_Mordekaiser19",
+          "code": "449"
+        }
+      ]
+    },
+    "u80": {
+      "name": "Nidalee",
+      "candidates": [
+        {
+          "apiName": "DA_Nidalee19",
+          "code": "41d"
+        }
+      ]
+    },
+    "u81": {
+      "name": "Nunu & Willump",
+      "candidates": [
+        {
+          "apiName": "DA_Nunu19",
+          "code": "41e"
+        }
+      ]
+    },
+    "u82": {
+      "name": "Pyke",
+      "candidates": [
+        {
+          "apiName": "DA_Pyke19",
+          "code": "420"
+        }
+      ]
+    },
+    "u83": {
+      "name": "Rell",
+      "candidates": [
+        {
+          "apiName": "DA_Rell19",
+          "code": "422"
+        }
+      ]
+    },
+    "u84": {
+      "name": "Taliyah",
+      "candidates": [
+        {
+          "apiName": "DA_Taliyah19",
+          "code": "42f"
+        }
+      ]
+    },
+    "u85": {
+      "name": "Teemo",
+      "candidates": [
+        {
+          "apiName": "DA_Teemo19",
+          "code": "431"
+        }
+      ]
+    },
+    "u86": {
+      "name": "Twisted Fate",
+      "candidates": [
+        {
+          "apiName": "DA_TwistedFate19",
+          "code": "435"
+        }
+      ]
+    },
+    "u87": {
+      "name": "Vi",
+      "candidates": [
+        {
+          "apiName": "DA_Vi19",
+          "code": "438"
+        }
+      ]
+    },
+    "u88": {
+      "name": "Vladimir",
+      "candidates": [
+        {
+          "apiName": "DA_Vladimir19",
+          "code": "43a"
+        }
+      ]
+    },
+    "u89": {
+      "name": "Zeri",
+      "candidates": [
+        {
+          "apiName": "DA_Zeri19",
+          "code": "443"
+        }
+      ]
+    },
+    "u90": {
+      "name": "Baron Nashor",
+      "candidates": [
+        {
+          "apiName": "DA_BaronNashor19",
+          "code": "3f5"
+        }
+      ]
+    },
+    "u91": {
+      "name": "Rakan",
+      "candidates": [
+        {
+          "apiName": "DA_Rakan19",
+          "code": "448"
+        }
+      ]
+    },
+    "u92": {
+      "name": "Smeech",
+      "candidates": [
+        {
+          "apiName": "DA_Smeech19",
+          "code": "42a"
+        }
+      ]
+    },
+    "u93": {
+      "name": "Sona",
+      "candidates": [
+        {
+          "apiName": "DA_Sona19",
+          "code": "42c"
+        }
+      ]
+    }
+  },
+  "conflicts": [
+    {
+      "code": "449",
+      "ids": [
+        "u26",
+        "u54",
+        "u79"
+      ],
+      "names": [
+        "Nasus",
+        "Graves",
+        "Mordekaiser"
+      ]
+    }
+  ],
+  "secondary_source": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/tftchampions-teamplanner.json",
+  "secondary_sets": [
+    "TFTSet17",
+    "TFTSet18"
+  ],
+  "secondary_result": "No TFTSet19 mapping was available in the checked PBE planner dataset."
+}

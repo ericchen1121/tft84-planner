@@ -120,7 +120,7 @@ Source: [tactics.tools Set Update](https://tactics.tools/info/set-update). Champ
 
 ## Champion Info / 棋子圖鑑
 
-The existing Solver and Info tabs preserve solver settings and results when switching. Info contains all 94 champions sorted by cost descending, bilingual name search, and cost/trait/unlock filters. Names follow MetaTFT's Taiwan locale: 78 translated names, remaining names unchanged. Portraits include 91 original mappings and 3 additional MetaTFT images.
+The existing Solver and Info tabs preserve solver settings and results when switching. Info contains all 94 champions sorted by cost descending, bilingual name search, and cost/trait/unlock filters. Names follow MetaTFT's Taiwan locale: 86 translated names, remaining names unchanged. Portraits include 91 original mappings and 3 additional MetaTFT images.
 
 Info now displays full ability text with numeric values, mana, star-level ordering and highlighted numeric sequences. Population labels are omitted throughout Info. Unlock conditions are visible directly on the cards. Click a card for the same full description in a dialog. Content follows the source language, with English taking precedence when a translation is incomplete or materially different (notably Vladimir and Rakan's loss streak).
 
@@ -168,3 +168,11 @@ Build and verify with `npm run build` and `npm test`. For desktop use, download 
 ### Overlay 1.0.4
 
 Collapse and restore now reuse one opaque, resizable native window, instead of transferring from the solver to a transparent secondary window. The native window remains visible while compact. Its topmost level is refreshed without focusing it when a borderless foreground window activates. The system tray provides Open, Collapse and Quit as recovery paths. The regression suite clicks the actual titlebar minus button and icon through 20 foreground-switch cycles, checks the same visible HWND and solver frame, and checks dragging and the tray. Actual TFT compatibility still requires testing on the player’s computer.
+
+## PBE data refresh — 2026-11-21
+
+Recommendations cover all 94 solver units using MetaTFT PBE / 19.1, last three days, with artifacts excluded. Ranking follows MetaTFT unit-detail scores before filtering to normal craftable items. The five displayed items are alternatives. Ahri uses the exact `DA_19_Ahri` identity and Seraphine uses `DA_Seraphine19_Indie`; both now have recommendations. Source request parameters, ranked rows and counts are retained in `dist/item-recommendations.json`. Run `npm run refresh:pbe` to fetch and rebuild; failed source validation stops the refresh.
+
+The Taiwan PBE lookup adds eight champion translations and eighteen trait translations, and corrects Hyperpop to 超流行 and Gu Feng to 古風. Both Akali variants retain their suffixes. Still-untranslated source names retain their existing labels. Only display metadata changes; unit IDs, canonical trait keys, preset results, abilities and solver rules remain intact.
+
+Team-code audit: all 91 mapped IDs still agree with the current lookup and the original eight-unit client sample remains exact. Graves, Nasus and Mordekaiser still share 449 in MetaTFT. The checked CommunityDragon PBE planner file contains sets 17 and 18, with no set-19 mapping. These three remain explicitly omitted with the existing red copy label and named warning. No guessed replacement IDs are introduced. See `dist/team-code-audit.json`.

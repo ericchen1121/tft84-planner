@@ -1,0 +1,676 @@
+{
+  "source": "https://data.metatft.com/lookups/TFTSet19_pbe_zh_tw.json",
+  "snapshot_date": "2026-11-21",
+  "metadata": {
+    "set": "TFTSet19",
+    "setName": "Set 19",
+    "patch": "pbe",
+    "generated": "2026-11-21T00:38:30.278Z",
+    "coreHash": "cc5d992ec0dd8502685c86a480f93398ef4dbcca",
+    "release": "rls-19.1.0.6005555.Set19.Shipping.pbe",
+    "manifest": "577129E866661C1E",
+    "tooltips": "curvetable"
+  },
+  "units": {
+    "u0": {
+      "apiName": "DA_Elise19",
+      "name": "Elise",
+      "name_zh": "伊莉絲"
+    },
+    "u1": {
+      "apiName": "DA_Gnar19",
+      "name": "Gnar",
+      "name_zh": "吶兒"
+    },
+    "u2": {
+      "apiName": "DA_Katarina19",
+      "name": "Katarina",
+      "name_zh": "卡特蓮娜"
+    },
+    "u3": {
+      "apiName": "DA_Kayn19",
+      "name": "Kayn",
+      "name_zh": "慨影"
+    },
+    "u4": {
+      "apiName": "DA_Kennen19",
+      "name": "Kennen",
+      "name_zh": "凱能"
+    },
+    "u5": {
+      "apiName": "DA_Kobuko19",
+      "name": "Kobuko",
+      "name_zh": "柯布柯"
+    },
+    "u6": {
+      "apiName": "DA_Lillia19",
+      "name": "Lillia",
+      "name_zh": "莉莉亞"
+    },
+    "u7": {
+      "apiName": "DA_Neeko19",
+      "name": "Neeko",
+      "name_zh": "妮可"
+    },
+    "u8": {
+      "apiName": "DA_Olaf19",
+      "name": "Olaf",
+      "name_zh": "歐拉夫"
+    },
+    "u9": {
+      "apiName": "DA_Sett19",
+      "name": "Sett",
+      "name_zh": "賽特"
+    },
+    "u10": {
+      "apiName": "DA_Taric19",
+      "name": "Taric",
+      "name_zh": "塔里克"
+    },
+    "u11": {
+      "apiName": "DA_Varus19",
+      "name": "Varus",
+      "name_zh": "法洛士"
+    },
+    "u12": {
+      "apiName": "DA_Yunara19",
+      "name": "Yunara",
+      "name_zh": "尤娜拉"
+    },
+    "u13": {
+      "apiName": "DA_Ziggs19",
+      "name": "Ziggs",
+      "name_zh": "希格斯"
+    },
+    "u14": {
+      "apiName": "DA_Zoe19",
+      "name": "Zoe",
+      "name_zh": "柔依"
+    },
+    "u15": {
+      "apiName": "DA_Annie19",
+      "name": "Annie",
+      "name_zh": "安妮"
+    },
+    "u16": {
+      "apiName": "DA_Ashe19",
+      "name": "Ashe",
+      "name_zh": "艾希"
+    },
+    "u17": {
+      "apiName": "DA_Camille19",
+      "name": "Camille",
+      "name_zh": "卡蜜兒"
+    },
+    "u18": {
+      "apiName": "DA_Ezreal19",
+      "name": "Ezreal",
+      "name_zh": "伊澤瑞爾"
+    },
+    "u19": {
+      "apiName": "DA_Gragas19",
+      "name": "Gragas",
+      "name_zh": "古拉格斯"
+    },
+    "u20": {
+      "apiName": "DA_Illaoi19",
+      "name": "Illaoi",
+      "name_zh": "伊羅旖"
+    },
+    "u21": {
+      "apiName": "DA_Jax19",
+      "name": "Jax",
+      "name_zh": "賈克斯"
+    },
+    "u22": {
+      "apiName": "DA_Karthus19",
+      "name": "Karthus",
+      "name_zh": "卡爾瑟斯"
+    },
+    "u23": {
+      "apiName": "DA_Lucian19",
+      "name": "Lucian",
+      "name_zh": "路西恩"
+    },
+    "u24": {
+      "apiName": "DA_Lulu19",
+      "name": "Lulu",
+      "name_zh": "露璐"
+    },
+    "u25": {
+      "apiName": "DA_Lux19",
+      "name": "Lux",
+      "name_zh": "拉克絲"
+    },
+    "u26": {
+      "apiName": "DA_Nasus19",
+      "name": "Nasus",
+      "name_zh": "納瑟斯"
+    },
+    "u27": {
+      "apiName": "DA_Qiyana19",
+      "name": "Qiyana",
+      "name_zh": "Qiyana"
+    },
+    "u28": {
+      "apiName": "DA_RenataGlasc19",
+      "name": "Renata Glasc",
+      "name_zh": "睿娜妲．格萊斯克"
+    },
+    "u29": {
+      "apiName": "DA_Renekton19",
+      "name": "Renekton",
+      "name_zh": "雷尼克頓"
+    },
+    "u30": {
+      "apiName": "DA_Samira19",
+      "name": "Samira",
+      "name_zh": "煞蜜拉"
+    },
+    "u31": {
+      "apiName": "DA_Seraphine19_Indie",
+      "name": "Seraphine",
+      "name_zh": "瑟菈紛"
+    },
+    "u32": {
+      "apiName": "DA_Tristana19",
+      "name": "Tristana",
+      "name_zh": "崔絲塔娜"
+    },
+    "u33": {
+      "apiName": "DA_Amumu19",
+      "name": "Amumu",
+      "name_zh": "阿姆姆"
+    },
+    "u34": {
+      "apiName": "DA_Bard19",
+      "name": "Bard",
+      "name_zh": "巴德"
+    },
+    "u35": {
+      "apiName": "DA_Braum19",
+      "name": "Braum",
+      "name_zh": "布郎姆"
+    },
+    "u36": {
+      "apiName": "DA_Briar19",
+      "name": "Briar",
+      "name_zh": "布蕾爾"
+    },
+    "u37": {
+      "apiName": "DA_Draven19",
+      "name": "Draven",
+      "name_zh": "達瑞文"
+    },
+    "u38": {
+      "apiName": "DA_Ekko19",
+      "name": "Ekko",
+      "name_zh": "艾克"
+    },
+    "u39": {
+      "apiName": "DA_Evelynn19",
+      "name": "Evelynn",
+      "name_zh": "伊芙琳"
+    },
+    "u40": {
+      "apiName": "DA_Galio19",
+      "name": "Galio",
+      "name_zh": "加里歐"
+    },
+    "u41": {
+      "apiName": "DA_KSante19",
+      "name": "K'Sante",
+      "name_zh": "卡桑帝"
+    },
+    "u42": {
+      "apiName": "DA_Kaisa19",
+      "name": "Kai'Sa",
+      "name_zh": "凱莎"
+    },
+    "u43": {
+      "apiName": "DA_Malzahar19",
+      "name": "Malzahar",
+      "name_zh": "馬爾札哈"
+    },
+    "u44": {
+      "apiName": "DA_Senna19",
+      "name": "Senna",
+      "name_zh": "姍娜"
+    },
+    "u45": {
+      "apiName": "DA_Swain19",
+      "name": "Swain",
+      "name_zh": "Swain"
+    },
+    "u46": {
+      "apiName": "DA_Syndra19",
+      "name": "Syndra",
+      "name_zh": "星朵拉"
+    },
+    "u47": {
+      "apiName": "DA_Tibbers19",
+      "name": "Tibbers",
+      "name_zh": "泰貝爾"
+    },
+    "u48": {
+      "apiName": "DA_Viego19",
+      "name": "Viego",
+      "name_zh": "維爾戈"
+    },
+    "u49": {
+      "apiName": "DA_19_Ahri",
+      "name": "Ahri",
+      "name_zh": "阿璃"
+    },
+    "u50": {
+      "apiName": "DA_Alistar19",
+      "name": "Alistar",
+      "name_zh": "亞歷斯塔"
+    },
+    "u51": {
+      "apiName": "DA_Alune19",
+      "name": "Alune",
+      "name_zh": "亞盧妮"
+    },
+    "u52": {
+      "apiName": "DA_Aurora19",
+      "name": "Aurora",
+      "name_zh": "歐羅拉"
+    },
+    "u53": {
+      "apiName": "DA_Garen19",
+      "name": "Garen",
+      "name_zh": "蓋倫"
+    },
+    "u54": {
+      "apiName": "DA_Graves19",
+      "name": "Graves",
+      "name_zh": "葛雷夫"
+    },
+    "u55": {
+      "apiName": "DA_Jhin19",
+      "name": "Jhin",
+      "name_zh": "燼"
+    },
+    "u56": {
+      "apiName": "DA_Jinx19",
+      "name": "Jinx",
+      "name_zh": "吉茵珂絲"
+    },
+    "u57": {
+      "apiName": "DA_Kayle19",
+      "name": "Kayle",
+      "name_zh": "Kayle"
+    },
+    "u58": {
+      "apiName": "DA_Leona19",
+      "name": "Leona",
+      "name_zh": "雷歐娜"
+    },
+    "u59": {
+      "apiName": "DA_Locke19",
+      "name": "Locke",
+      "name_zh": "洛克"
+    },
+    "u60": {
+      "apiName": "DA_Mel19",
+      "name": "Mel",
+      "name_zh": "梅爾"
+    },
+    "u61": {
+      "apiName": "DA_Shyvana19",
+      "name": "Shyvana",
+      "name_zh": "希瓦娜"
+    },
+    "u62": {
+      "apiName": "DA_Thresh19",
+      "name": "Thresh",
+      "name_zh": "瑟雷西"
+    },
+    "u63": {
+      "apiName": "DA_Vayne19",
+      "name": "Vayne",
+      "name_zh": "汎"
+    },
+    "u64": {
+      "apiName": "DA_Wukong19",
+      "name": "Wukong",
+      "name_zh": "悟空"
+    },
+    "u65": {
+      "apiName": "DA_Xayah19",
+      "name": "Xayah",
+      "name_zh": "剎雅"
+    },
+    "u66": {
+      "apiName": "DA_Yasuo19",
+      "name": "Yasuo",
+      "name_zh": "Yasuo"
+    },
+    "u67": {
+      "apiName": "DA_Yone19",
+      "name": "Yone",
+      "name_zh": "犽凝"
+    },
+    "u68": {
+      "apiName": "DA_Yorick19",
+      "name": "Yorick",
+      "name_zh": "約瑞科"
+    },
+    "u69": {
+      "apiName": "DA_Yuumi19",
+      "name": "Yuumi",
+      "name_zh": "悠咪"
+    },
+    "u70": {
+      "apiName": "DA_Zac19",
+      "name": "Zac",
+      "name_zh": "札克"
+    },
+    "u71": {
+      "apiName": "DA_AkaliKDA19",
+      "name": "Akali",
+      "name_zh": "阿卡莉"
+    },
+    "u72": {
+      "apiName": "DA_Akali_TrueDamage19",
+      "name": "Akali",
+      "name_zh": "阿卡莉"
+    },
+    "u73": {
+      "apiName": "DA_Aphelios19",
+      "name": "Aphelios",
+      "name_zh": "亞菲利歐"
+    },
+    "u74": {
+      "apiName": "DA_DrMundo19",
+      "name": "Dr. Mundo",
+      "name_zh": "蒙多醫生"
+    },
+    "u75": {
+      "apiName": "DA_Gwen19",
+      "name": "Gwen",
+      "name_zh": "關"
+    },
+    "u76": {
+      "apiName": "DA_Janna19",
+      "name": "Janna",
+      "name_zh": "珍娜"
+    },
+    "u77": {
+      "apiName": "DA_LeeSin19",
+      "name": "Lee Sin",
+      "name_zh": "李星"
+    },
+    "u78": {
+      "apiName": "DA_MissFortune19",
+      "name": "Miss Fortune",
+      "name_zh": "Miss Fortune"
+    },
+    "u79": {
+      "apiName": "DA_Mordekaiser19",
+      "name": "Mordekaiser",
+      "name_zh": "Mordekaiser"
+    },
+    "u80": {
+      "apiName": "DA_Nidalee19",
+      "name": "Nidalee",
+      "name_zh": "Nidalee"
+    },
+    "u81": {
+      "apiName": "DA_Nunu19",
+      "name": "Nunu & Willump",
+      "name_zh": "努努和威朗普"
+    },
+    "u82": {
+      "apiName": "DA_Pyke19",
+      "name": "Pyke",
+      "name_zh": "派克"
+    },
+    "u83": {
+      "apiName": "DA_Rell19",
+      "name": "Rell",
+      "name_zh": "銳兒"
+    },
+    "u84": {
+      "apiName": "DA_Taliyah19",
+      "name": "Taliyah",
+      "name_zh": "Taliyah"
+    },
+    "u85": {
+      "apiName": "DA_Teemo19",
+      "name": "Teemo",
+      "name_zh": "提摩"
+    },
+    "u86": {
+      "apiName": "DA_TwistedFate19",
+      "name": "Twisted Fate",
+      "name_zh": "逆命"
+    },
+    "u87": {
+      "apiName": "DA_Vi19",
+      "name": "Vi",
+      "name_zh": "菲艾"
+    },
+    "u88": {
+      "apiName": "DA_Vladimir19",
+      "name": "Vladimir",
+      "name_zh": "弗拉迪米爾"
+    },
+    "u89": {
+      "apiName": "DA_Zeri19",
+      "name": "Zeri",
+      "name_zh": "婕莉"
+    },
+    "u90": {
+      "apiName": "DA_BaronNashor19",
+      "name": "Baron Nashor",
+      "name_zh": "巴龍納什"
+    },
+    "u91": {
+      "apiName": "DA_Rakan19",
+      "name": "Rakan",
+      "name_zh": "銳空"
+    },
+    "u92": {
+      "apiName": "DA_Smeech19",
+      "name": "Smeech",
+      "name_zh": "斯米奇"
+    },
+    "u93": {
+      "apiName": "DA_Sona19",
+      "name": "Sona",
+      "name_zh": "索娜"
+    }
+  },
+  "traits": {
+    "Ionic Spark": {
+      "apiName": "DA_IonicSpark19",
+      "name_zh": "Ionic Spark"
+    },
+    "Frontman": {
+      "apiName": "DA_Frontman19",
+      "name_zh": "主唱"
+    },
+    "Pentakill": {
+      "apiName": "DA_Pentakill19",
+      "name_zh": "殺五社"
+    },
+    "Trickshot": {
+      "apiName": "DA_Trickshot19",
+      "name_zh": "Trickshot"
+    },
+    "Classical": {
+      "apiName": "DA_Virtuosos19",
+      "name_zh": "古典樂"
+    },
+    "Slayer": {
+      "apiName": "DA_Mosher19",
+      "name_zh": "殺戮者"
+    },
+    "Heartsteel": {
+      "apiName": "DA_Heartsteel19",
+      "name_zh": "心鋼之聲"
+    },
+    "True Damage": {
+      "apiName": "DA_TrueDamage19",
+      "name_zh": "True Damage"
+    },
+    "Bodyguard": {
+      "apiName": "DA_Bodyguard19",
+      "name_zh": "保鑣"
+    },
+    "Hyperpop": {
+      "apiName": "DA_GlitterBomb19",
+      "name_zh": "超流行"
+    },
+    "K|DA": {
+      "apiName": "DA_KDA19",
+      "name_zh": "K/DA"
+    },
+    "Encore": {
+      "apiName": "DA_Encore19",
+      "name_zh": "要不要來首安可曲"
+    },
+    "Prodigy": {
+      "apiName": "DA_Prodigy19",
+      "name_zh": "不世之才"
+    },
+    "Rock": {
+      "apiName": "DA_DemonVision19",
+      "name_zh": "搖滾樂"
+    },
+    "Juggernaut": {
+      "apiName": "DA_Juggernaut19",
+      "name_zh": "重裝戰士"
+    },
+    "Beach Pop": {
+      "apiName": "DA_OceanSong19",
+      "name_zh": "海灘流行樂"
+    },
+    "Swiftstriker": {
+      "apiName": "DA_Swiftstriker19",
+      "name_zh": "迅捷先鋒"
+    },
+    "Arcanist": {
+      "apiName": "DA_Arcanist19",
+      "name_zh": "奧術大師"
+    },
+    "Illbeats": {
+      "apiName": "DA_Illbeats19",
+      "name_zh": "Illbeats"
+    },
+    "EDM": {
+      "apiName": "DA_EDM19",
+      "name_zh": "電子舞曲"
+    },
+    "Jazz": {
+      "apiName": "DA_Jazz19",
+      "name_zh": "爵士樂"
+    },
+    "Hitmaker": {
+      "apiName": "DA_Hitmaker19",
+      "name_zh": "金曲製造機"
+    },
+    "Choreographer": {
+      "apiName": "DA_Choreographer19",
+      "name_zh": "編舞者"
+    },
+    "Renegade": {
+      "apiName": "DA_Renegade19",
+      "name_zh": "叛徒"
+    },
+    "Indie": {
+      "apiName": "DA_Seraphine19_IndieTrait",
+      "name_zh": "獨立音樂"
+    },
+    "Emo": {
+      "apiName": "DA_Amumu19_UniqueTrait",
+      "name_zh": "情緒搖滾"
+    },
+    "Composer": {
+      "apiName": "DA_Malzahar19_UniqueTrait",
+      "name_zh": "Composer"
+    },
+    "Country": {
+      "apiName": "DA_Alistar19_UniqueTrait",
+      "name_zh": "Country"
+    },
+    "Manager": {
+      "apiName": "DA_Manager19",
+      "name_zh": "經紀人"
+    },
+    "Synthwave": {
+      "apiName": "DA_Garen19_UniqueTrait",
+      "name_zh": "合成波"
+    },
+    "R&B": {
+      "apiName": "DA_RnB19",
+      "name_zh": "R&B"
+    },
+    "Gu Feng": {
+      "apiName": "DA_Heavenscale19",
+      "name_zh": "古風"
+    },
+    "Freestyle": {
+      "apiName": "DA_Akali_TrueDamage19_UniqueTrait",
+      "name_zh": "自由發揮"
+    },
+    "Record Mogul": {
+      "apiName": "DA_DrMundo19_UniqueTrait",
+      "name_zh": "音樂界巨頭"
+    },
+    "Melodic Heart": {
+      "apiName": "DA_Gwen19_UniqueTrait",
+      "name_zh": "旋律之心"
+    },
+    "Windblessed": {
+      "apiName": "DA_Janna19_UniqueTrait",
+      "name_zh": "風之女神"
+    },
+    "8-Bit": {
+      "apiName": "DA_MissFortune19_UniqueTrait",
+      "name_zh": "8-Bit"
+    },
+    "Mariachi": {
+      "apiName": "DA_Nidalee19_UniqueTrait",
+      "name_zh": "流浪樂手"
+    },
+    "Disco": {
+      "apiName": "DA_Nunu19_UniqueTrait",
+      "name_zh": "迪斯可"
+    },
+    "Beat Master": {
+      "apiName": "DA_Rell19_UniqueTrait",
+      "name_zh": "節奏大師"
+    },
+    "Hype Man": {
+      "apiName": "DA_Teemo19_UniqueTrait",
+      "name_zh": "熱潮製造者"
+    },
+    "Tango": {
+      "apiName": "DA_TwistedFate19_UniqueTrait",
+      "name_zh": "探戈"
+    },
+    "Goth": {
+      "apiName": "DA_Zeri19_UniqueTrait",
+      "name_zh": "哥特"
+    },
+    "One Monster Band": {
+      "apiName": "DA_BaronNashor19_UniqueTrait",
+      "name_zh": "One Monster Band"
+    },
+    "Boy Band": {
+      "apiName": "DA_Rakan19_UniqueTrait",
+      "name_zh": "男團"
+    },
+    "Producer": {
+      "apiName": "DA_Sona19_UniqueTrait",
+      "name_zh": "製作人"
+    },
+    "Collab": {
+      "apiName": "DA_Collab19",
+      "name_zh": "合作"
+    }
+  }
+}

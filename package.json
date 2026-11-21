@@ -1,6 +1,6 @@
 {
   "name": "eightfold-tft-planner",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "private": true,
   "type": "module",
   "main": "desktop/main.cjs",
@@ -10,9 +10,10 @@
     "smoke:overlay": "electron . --smoke-test",
     "package:win": "npm run build && powershell -NoProfile -File tools/package-windows.ps1",
     "build": "node tools/build.mjs",
-    "test": "node tools/test.mjs && node tools/test-numeric-values.mjs && node tools/test-recommendations.mjs && node tools/test-team-code.mjs",
+    "test": "node tools/test.mjs && node tools/test-numeric-values.mjs && node tools/test-recommendations.mjs && node tools/test-team-code.mjs && node tools/test-refresh.mjs",
     "benchmark": "node tools/benchmark.mjs",
-    "dev": "node tools/serve.mjs"
+    "dev": "node tools/serve.mjs",
+    "refresh:pbe": "node tools/fetch-metatft-snapshot.mjs && node tools/update-recommendations.mjs && node tools/update-localization.mjs && node tools/build.mjs"
   },
   "engines": {
     "node": ">=22.12"
