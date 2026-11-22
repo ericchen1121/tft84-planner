@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import zlib from 'node:zlib';
+import {applyAugmentTags} from './augment-tagging.mjs';
 const root=new URL('../',import.meta.url);
 const read=p=>fs.readFileSync(new URL(p,root),'utf8');
 const data=JSON.parse(read('dist/units.json'));
@@ -14,7 +15,7 @@ payloads.STYLES+='\n'+read('src/layout.css');
 payloads.APP=solver.replace(/^export /gm,'')+'\n'+i18n+'\n'+read('src/info.js')+'\n'+read('src/requirements.js')+'\n'+read('src/app.js');
 payloads.TEAMCODE=JSON.stringify(JSON.parse(read('dist/team-codes.json')));
 payloads.APP=read('src/team-code.mjs').replace(/^export /gm,'')+'\n'+read('src/team-code-ui.js')+'\n'+payloads.APP;
-payloads.AUGMENTS=JSON.stringify((()=>{const a=JSON.parse(read('dist/augments.json'));return {...a,augments:a.augments.map(({source_data,...visible})=>visible)};})());
+payloads.AUGMENTS=JSON.stringify((()=>{const a=applyAugmentTags(JSON.parse(read('dist/augments.json')),JSON.parse(read('dist/augment-tags.json')));return {...a,augments:a.augments.map(({source_data,...visible})=>visible)};})());
 payloads.STYLES+='\n'+read('src/augments.css');
 payloads.APP=read('src/augment-model.mjs').replace(/^export /gm,'')+'\n'+read('src/augments.js')+'\n'+payloads.APP;
 payloads.EQUIPMENT=JSON.stringify((()=>{const a=JSON.parse(read('dist/equipment.json'));return {...a,items:a.items.map(({source_data,...visible})=>visible)};})());
