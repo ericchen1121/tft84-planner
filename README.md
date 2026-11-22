@@ -194,3 +194,11 @@ Actual augment artwork is tinted by rarity in cards and dialogs: grayscale silve
 ## Augment effect tags
 
 All 371 variants now have reviewed multi-label categories, shared with the web UI: ten colors, any/all tag filters, and equipment subtypes. Champion resource grants and Tactician health are separate categories. Prismatic trait quests are separate from augment rarity; hero upgrades require champion ability/role changes. `dist/augment-tags.json` records variant identities, reviewed description hashes, and MetaTFT reference categories. New or changed effects require review before building. These are editorial classifications based on the source effects, not official Riot labels.
+
+## Lineup simulator
+
+The Simulator tab adds a 4 × 7 hex board with 94 champions, 1–4 stars, position swaps, and three augment slots. Click champions to add them, or drag them onto a hex. Select a placed champion to change stars or click an empty hex to move. Drag a champion or equipped item to the lower palette to remove it. Pointer-based dragging supports edge scrolling and cleans up capture/ghosts on cancel, lost capture, or window blur; click and keyboard controls remain available.
+
+Equipment can be clicked onto the selected champion or dragged onto any placed champion. The board enforces three item slots, three-slot Thief’s Gloves, unique equipment and redundant emblem restrictions. Matching components combine from the source recipe table; equipment transfers are atomic. Emblems update trait counts. Traits count distinct champion identities, with K/DA using the highest star level for each identity. Sona’s featured band and per-game Collab assignments are editable. Population includes Baron’s two slots. This is a lineup planner: augment rewards are placed manually and combat/quest completion is not simulated.
+
+Augment selection supports bilingual name/effect/category search plus effect-label and rarity filters. Selections persist independently in all three slots, and the same exact augment cannot be selected twice. Local storage preserves the board and selections; an in-memory 40-step undo history covers edits and clearing. Saved state is validated against the current roster and equipment catalog before restoring.
