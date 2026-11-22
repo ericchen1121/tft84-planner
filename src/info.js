@@ -70,16 +70,16 @@ function showInfo(id){
  const source=el('p','field-hint',t('References:')+' ');for(const [label,url]of [['MetaTFT','https://www.metatft.com/new-set'],['tactics.tools','https://tactics.tools/info/set-update']]){const link=el('a','',label+' ↗');link.href=url;link.target='_blank';link.rel='noopener noreferrer';source.append(link,document.createTextNode(' '));}content.append(source);
  $('info-detail').replaceChildren(content);if(!$('info-dialog').open)$('info-dialog').showModal();
 }
-const APP_VIEWS=['solver','info','augments','equipment'];
+const APP_VIEWS=['solver','info','augments','equipment','simulator'];
 function switchView(view,focus=false){
  state.view=APP_VIEWS.includes(view)?view:'solver';
  for(const name of APP_VIEWS){$(''+name+'-panel').hidden=name!==state.view;const tab=$('tab-'+name),active=name===state.view;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;}
- if(state.view==='info')renderInfo();if(state.view==='augments')renderAugments();if(state.view==='equipment')renderEquipment();if(focus)$('tab-'+state.view).focus();
+ if(state.view==='info')renderInfo();if(state.view==='augments')renderAugments();if(state.view==='equipment')renderEquipment();if(state.view==='simulator')renderSimulator();if(focus)$('tab-'+state.view).focus();
  const hash='#'+state.view;if(location.hash!==hash)history.replaceState(null,'',hash);
 }
 function bindInfo(){
  for(const name of APP_VIEWS){const tab=$('tab-'+name);tab.addEventListener('click',()=>switchView(name));tab.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const index=APP_VIEWS.indexOf(name),next=e.key==='Home'?0:e.key==='End'?APP_VIEWS.length-1:(index+(e.key==='ArrowRight'?1:-1)+APP_VIEWS.length)%APP_VIEWS.length;switchView(APP_VIEWS[next],true);}});}
  $('info-query').addEventListener('input',renderInfo);for(const id of ['info-cost','info-trait','info-unlock'])$(id).addEventListener('change',renderInfo);
  $('info-reset').addEventListener('click',()=>{for(const id of ['info-query','info-cost','info-trait','info-unlock'])$(id).value='';renderInfo();});
- bindAugments();bindEquipment();window.addEventListener('hashchange',()=>switchView(location.hash.slice(1)));populateInfoTraits();switchView(location.hash.slice(1));
+ bindAugments();bindEquipment();bindSimulator();window.addEventListener('hashchange',()=>switchView(location.hash.slice(1)));populateInfoTraits();switchView(location.hash.slice(1));
 }
