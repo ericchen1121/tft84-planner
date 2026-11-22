@@ -1,0 +1,6489 @@
+{
+  "set": "TFTSet19",
+  "reviewed_at": "2026-11-22",
+  "source": "https://www.metatft.com/new-set",
+  "notes": "Editorial multi-label classification reviewed against the MetaTFT effects and visible categories. Reference tags are retained as provenance, not blindly treated as effect labels. Growth means later-round rewards or permanent scaling, not a timed trigger within combat. Prismatic-cap means an explicit Prismatic trait quest, not augment rarity. Equipment subtypes describe possible grants, including conditional or temporary grants; normal item stats do not automatically add Combat. Generic unknown loot is not guessed into equipment subtypes. Labels are maintained by full variant identity and reviewed description hash.",
+  "entries": {
+    "DA_AdvancedLoan|CT_AdvancedLoan|Gold|2-1": {
+      "name": "Advanced Loan",
+      "description_hash": "80e631e14ab43e82fa8ed0d5776e91657d86cde357ba70ac48018dcaacfb21f4",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_AdvancedLoanPlus|CT_AdvancedLoan|Gold|3-2": {
+      "name": "Advanced Loan+",
+      "description_hash": "80e7028218a5314236f03b76c782cfee0be141795033dac062c1e1addad249c9",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_19_AimHigh|CT_19_AimHigh|Gold|4-2": {
+      "name": "Aim High",
+      "description_hash": "dce8d892cb7af55a36d264305e5a64b825fb589f67160d7fd0f3a6d348b38506",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_AllThatShimmers||Gold|2-1": {
+      "name": "All That Shimmers",
+      "description_hash": "db494c2cc9c84ac08af526d740602cd130bd07dfcdbf163554907f3f9c6ee915",
+      "tags": [
+        "equipment",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "artifact",
+          "utility"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_AllThatShimmers+|CT_AllThatShimmers+|Gold|3-2": {
+      "name": "All That Shimmers+",
+      "description_hash": "8d5461179812c2a4e38e33ba66b4732c106999dc37231d43f62a933943ffb4a1",
+      "tags": [
+        "equipment",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "artifact",
+          "utility"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ArcaneViktory|CT_ArcaneViktory|Gold|3-2,4-2": {
+      "name": "Arcane Viktor-y",
+      "description_hash": "3ebc7852b70e844e693fc3c58b787b74efd2cf50a9ae1934257efa3ac1f2d935",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ArmedAndGenerous|CT_ArmedAndGenerous|Gold|2-1,3-2,4-2": {
+      "name": "Armed and Generous",
+      "description_hash": "1eb273b6b2e998993e5bccacfca1503f729769110acd8b0b965d8755144eae1b",
+      "tags": [
+        "equipment",
+        "combat"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_ArmorStand||Gold|2-1,3-2": {
+      "name": "Armor Stand",
+      "description_hash": "21f3ed7a5bb4f9a2dc1d4de2b33ab6aa4cc1e6a1a957a03b692a8bbe43d2013d",
+      "tags": [
+        "combat",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Ascension|CT_Ascension|Gold|3-2,4-2": {
+      "name": "Ascension",
+      "description_hash": "dc5457bf1ba741d57be5e2d1f122847226dce90104faa29481b5fdbe0c551e5d",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_PartialAscension|CT_PartialAscension|Silver|3-2,4-2": {
+      "name": "Partial Ascension",
+      "description_hash": "7fb0d590ce2e15d95342163151c968432cfc85d3826967583832416682d20ba8",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_AugmentedPower||Silver|3-2": {
+      "name": "Augmented Power",
+      "description_hash": "b84bbd82dc4115d2c7f764591bc1d733be333bff4501011a629a50c395a85669",
+      "tags": [
+        "strategy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_BacklineBlueprint||Gold|2-1": {
+      "name": "Backline Blueprint",
+      "description_hash": "02380d7974779947bc2d46fd7e537947680f7b8fb0b2c0e99fe61f23eb4986e3",
+      "tags": [
+        "equipment",
+        "trait",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_BattleOfTheBands|CT_BattleOfTheBands|Gold|3-2,4-2": {
+      "name": "Battle of the Bands",
+      "description_hash": "77185c9e9664c650583525053d5faea646f45d2399008847a4b67dcf3cd2d618",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_BirthdayPresent|CT_BirthdayPresent|Prismatic|2-1": {
+      "name": "Birthday Present",
+      "description_hash": "cbf42d2a90513fe57874777dd90d2512d179ccb3a2108d0efe8c9f33991987f7",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_VIPAccess|CT_BlindBox|Silver|2-1": {
+      "name": "Blind Box",
+      "description_hash": "80abd3538e23a1e8b6b451f2384be58f05eaa6fcff497d844c84108f8cdc804b",
+      "tags": [
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_VIPAccessII|CT_BlindBoxII|Gold|2-1": {
+      "name": "Blind Box II",
+      "description_hash": "4a44dafcc72b0c09f1761da3e3f9c2a6ccab9b71d1dc228794ba1a422680bd48",
+      "tags": [
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_VIPAccessIIPlus|CT_BlindBoxIIPlus|Gold|3-2": {
+      "name": "Blind Box II",
+      "description_hash": "bda7520dee5ed87f2115906f36ce53ab75784c5fd314f01c6ede114de2105b62",
+      "tags": [
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_VIPAccessPlus|CT_BlindBoxPlus|Silver|3-2": {
+      "name": "Blind Box",
+      "description_hash": "3ec4954c9545bcf18ee2d4c0fbfc6bb4ef8822c2c5604cc9ace24e6f17551445",
+      "tags": [
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_VIPAccessPlusPlus|CT_BlindBoxPlusPlus|Silver|4-2": {
+      "name": "Blind Box",
+      "description_hash": "63edea6d2a07371413840463d5696aab7786c8580bd08a61c70f9e480f37ecd7",
+      "tags": [
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_BodyguardTraining|CT_BodyguardTraining|Gold|2-1": {
+      "name": "Bodyguard Training",
+      "description_hash": "4bb990b76f4d7abdd91350aa210780f97adc636854b9654419091a916e3d62ef",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_BonusGift|CT_BonusGift|Gold|2-1": {
+      "name": "Bonus Gifts",
+      "description_hash": "f677888a951b86a692a0124f3794b5b168befd4ce36470321c5970a0948c9aef",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_BonusGiftPlus|CT_BonusGiftPlus|Gold|3-2": {
+      "name": "Bonus Gifts+",
+      "description_hash": "aa73b235703ca0eeb938fe93b571b65f19ea1f78278f94b0153c8e6d242f675b",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_BoosterBox|CT_BoosterBox|Prismatic|2-1": {
+      "name": "Booster Box",
+      "description_hash": "c2e4904408a4daef64549fccb6b46289ad9e9029c17f3b90b1ef1319e62f2a28",
+      "tags": [
+        "growth",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_BoosterPack|CT_BoosterPack|Gold|2-1": {
+      "name": "Booster Pack",
+      "description_hash": "10414ee5b45a2a676af20607a39150db54769f10ff0d01da44895dd360d187f5",
+      "tags": [
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_BoosterPackPlus|CT_BoosterPack|Gold|3-2": {
+      "name": "Booster Pack+",
+      "description_hash": "289d1b248acef0f18c22459925d6466505bd2958169bcf385210619adb208ce0",
+      "tags": [
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_BoosterPackPlusPlus|CT_BoosterPack|Gold|4-2": {
+      "name": "Booster Pack++",
+      "description_hash": "04b84a869194eb2c72e235c5efcc93b45a72db86f00fd9caae16d1f3cbe333f4",
+      "tags": [
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_BoxingLessons|CT_BoxingLessons|Silver|3-2,4-2": {
+      "name": "Boxing Lessons",
+      "description_hash": "c9e53ff8d7a41a5530c2da276a55025f3b6ad099b7ef87535aeba4f3ba6a4e09",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_BranchingOut||Silver|2-1": {
+      "name": "Branching Out",
+      "description_hash": "bd57fd4411fbd8628d1ce28acf7a7e37d946f45768a7569e6d6c8bf902940937",
+      "tags": [
+        "equipment",
+        "trait"
+      ],
+      "details": {
+        "equipment": [
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items",
+        "Traits"
+      ]
+    },
+    "DA_BranchingOutPlus||Silver|3-2": {
+      "name": "Branching Out+",
+      "description_hash": "e42cf1bc206567660b34daa06fd768b915c0a42df534e8eabe03da2184dbb0e9",
+      "tags": [
+        "equipment",
+        "trait"
+      ],
+      "details": {
+        "equipment": [
+          "emblem",
+          "utility"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items",
+        "Traits"
+      ]
+    },
+    "DA_BronzeForLifeI|CT_BronzeForLifeI|Gold|3-2,4-2": {
+      "name": "Bronze For Life",
+      "description_hash": "66ea1385f56e96a88acb2b2a71c0baf4f1f57f2d82f7efaba2a9cc8e322a94c0",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_BronzeForLifeII|CT_BronzeForLife|Prismatic|3-2,4-2": {
+      "name": "Bronze For Life II",
+      "description_hash": "399004b71a48f2a71a6cdd17f80014d82bbe727a519a54dfed538a496039ca25",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_BuildABud|CT_BuildABud|Prismatic|2-1": {
+      "name": "Build A Bud",
+      "description_hash": "5cdaa1cdb735f300d89590404ca3012f8a9ab2342bfff22ca51898d697c047a3",
+      "tags": [
+        "economy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_BundleOShrooms|CT_BundleOShroomsGold|Gold|2-1": {
+      "name": "Bundle o' Shrooms II",
+      "description_hash": "4c1ebfc762458ecc6eb3e6327f981820f3348f168fadb46792b82ea8c9fd2b7b",
+      "tags": [
+        "economy",
+        "health"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls",
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_BundleOShrooms|CT_BundleOShrooms|Silver|2-1": {
+      "name": "Bundle o' Shrooms",
+      "description_hash": "81263c87e2fb65be492abb453728c23f7a2ac409de3c624caa3826df9c000148",
+      "tags": [
+        "economy",
+        "health"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls",
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_CalculatedLoss|CT_CalculatedLoss|Gold|2-1": {
+      "name": "Calculated Loss",
+      "description_hash": "311235159db7e209d804edeb1170d1d3516e8bac60a00d042c26272c5fc3811b",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_CalledShot|CT_CalledShot|Silver|2-1": {
+      "name": "Called Shot",
+      "description_hash": "498f17947ad713b68eaac2554d161c2e80ce098c8d505f90b6d27fcbd87c57c1",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_CapitalGainsI|CT_CapitalGainsI|Silver|2-1": {
+      "name": "Capital Gains",
+      "description_hash": "7ac24565835b60d8e105ffc19648b7683376c674ac48c693e00951c3827df05a",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_CapitalGainsII|CT_CapitalGainsII|Gold|2-1": {
+      "name": "Capital Gains II",
+      "description_hash": "9881bcf44622a31ab61f96ad61653be09550d8f107b5fb4162a28c73b9ae4360",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_CaretakersAlly||Silver|2-1": {
+      "name": "Caretaker's Ally",
+      "description_hash": "0b78d158601992ee11aba7a3cc7ba8e4c15e5fa96db4515457e2442f2e0a6c6b",
+      "tags": [
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_CasterApprentice|CT_CasterApprentice|Silver|3-2": {
+      "name": "Caster Apprentice",
+      "description_hash": "ac6af936448c9ef9c2e1fa712f1a9bc22c0d82ac47e224bf14f5c40bd8879388",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_BeltSmith1|CT_BeltSmith1|Silver|4-2": {
+      "name": "Beltsmith",
+      "description_hash": "79417c7c2ff4fb026441579909666909a96c17e49360d9cf040a7dff7a2e5c74",
+      "tags": [
+        "equipment"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_BeltSmith2|CT_BeltSmith2_Delayed|Gold|4-2": {
+      "name": "Beltsmith II",
+      "description_hash": "8300ac2cdc049ed76b9782c37ccb765358cdc96a4e514561c778e756ea725cdc",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_StaffSmith1|CT_StaffSmith1|Silver|4-2": {
+      "name": "Staffsmith",
+      "description_hash": "e1bef5e6ac616a3f3089dcaa6037bdc5014b91077e48dce6bea448137513a929",
+      "tags": [
+        "equipment"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_SwordSmith1|CT_SwordSmith1|Silver|4-2": {
+      "name": "Swordsmith",
+      "description_hash": "be793aee4b6aa6819621723a168d4f41ceebd64d8f4f8bfac1247f4dbb246e95",
+      "tags": [
+        "equipment"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_CelestialBlessingI|CT_CelestialBlessing|Silver|3-2,4-2": {
+      "name": "Celestial Blessing",
+      "description_hash": "19361a8d739364839d947f619e2c33c87c0648b4b5704249460d67ff55f0c7b0",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_CelestialBlessingII|CT_CelestialBlessing|Gold|3-2,4-2": {
+      "name": "Celestial Blessing II",
+      "description_hash": "5c76f5ee0f58cf90713c1206b454ce2adf93baa90a2912b68ab5c867dd29e79c",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_CelestialBlessingIII|CT_CelestialBlessing|Prismatic|3-2,4-2": {
+      "name": "Celestial Blessing III",
+      "description_hash": "2517e11d5b7114bf9ba144a156eab8154f5f4a46a922d39765db38f9d57ff1cc",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ChallengersGrace|CT_ChallengersGrace|Gold|3-2,4-2": {
+      "name": "Challenger's Grace",
+      "description_hash": "f6106c99ab0de61a6b48e1ecf2974a114d59790df70be48440376dbfaeefff36",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ChampDelivery|CT_ChampDelivery|Silver|2-1": {
+      "name": "Champ Delivery",
+      "description_hash": "fcb52ffe605076b1d409389f76ce11f8c8b6a1e3b8593cb32cc217f18e2f7b42",
+      "tags": [
+        "growth",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_ChampDeliveryPlus|CT_ChampDeliveryPlus|Silver|3-2": {
+      "name": "Champ Delivery+",
+      "description_hash": "df64e3228b9830afebe5ac6edcd9b4fb3f103f908d06bb88a21878a14acb9928",
+      "tags": [
+        "growth",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_ChampDeliveryPlusPlus|CT_ChampDeliveryPlusPlus|Silver|4-2": {
+      "name": "Champ Delivery++",
+      "description_hash": "1b1d070cab028bfae5ab5e0c010ac2ff87ee7e4deec286eb82b43fa109ecfb78",
+      "tags": [
+        "growth",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_ChampionAirdrop|CT_ChampionAirdrop|Gold|2-1": {
+      "name": "Champion Airdrop",
+      "description_hash": "6415cc158487898687d390314f23ac4cfce968de7b3a40c3de37310b62a5e2c2",
+      "tags": [
+        "growth",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_CheatCode||Silver|2-1": {
+      "name": "Cheat Code",
+      "description_hash": "f34afc76659d90030f69b1a76e8ff85d649916ed0ec1f63d076f4eb99d2e54b6",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_CheatCodeGold||Gold|2-1": {
+      "name": "Cheat Code II",
+      "description_hash": "f34afc76659d90030f69b1a76e8ff85d649916ed0ec1f63d076f4eb99d2e54b6",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_CheatCodePrismatic||Prismatic|2-1": {
+      "name": "Cheat Code III",
+      "description_hash": "f34afc76659d90030f69b1a76e8ff85d649916ed0ec1f63d076f4eb99d2e54b6",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ClearMind|CT_ClearMind|Gold|2-1": {
+      "name": "Clear Mind",
+      "description_hash": "66dfbb05169513c06d6baa0e68afaeca05d17833ecf560ec29b447bb4505f76a",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_ClockworkAccelerator|CT_ClockworkAccelerator|Gold|3-2,4-2": {
+      "name": "Clockwork Accelerator",
+      "description_hash": "6e9defb2ad0b77bb0201c1d417ca22759ad9d3607af13989424242940ced77f5",
+      "tags": [
+        "combat",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Cloning|CT_Cloning1|Prismatic|2-1": {
+      "name": "Cloning",
+      "description_hash": "2255d87e17cc4371f40770115631cc7ac3cf79793aedc4f1303245e35459abb6",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ClutteredMind|CT_ClutteredMind|Gold|2-1": {
+      "name": "Cluttered Mind",
+      "description_hash": "d26e0e802b779b2005dbe71ccc2d138b2cbd257c975c250af62e153df1ca4b67",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_CognitiveTax|CT_CognitiveTax|Silver|2-1": {
+      "name": "Cognitive Tax",
+      "description_hash": "9d7889f528ad438933ae07532ca01f1fa2b844183d3398805e44f9e34443cf18",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_CognitiveTaxPlus|CT_CognitiveTax|Silver|3-2": {
+      "name": "Cognitive Tax+",
+      "description_hash": "d3f569ae231484621734f7aec6b54c479266135f288a8bf208769dd2b97eafc9",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_ComebackStory|CT_ComebackStory|Prismatic|2-1": {
+      "name": "Comeback Story",
+      "description_hash": "14c5c9390fe9da8036f897c9dd2e0dd0278862ae278e67c5e6719fe120b301df",
+      "tags": [
+        "combat",
+        "strategy",
+        "health"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_CommerceCore|CT_CommerceCore|Prismatic|4-2": {
+      "name": "Commerce Core",
+      "description_hash": "7aa819e3772aa29506ba7f69ab7cc7da07e90332683faa430745a68014349d2a",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_ConstructACompanion|CT_ConstructACompanion|Gold|3-2": {
+      "name": "Construct a Companion",
+      "description_hash": "78b8997dff8743491d2be4ace940d934809903deda40d278dd6a7b9d2f4a66d7",
+      "tags": [
+        "economy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ForgeAFriend|CT_ForgeAFriend|Silver|4-2": {
+      "name": "Forge A Friend",
+      "description_hash": "7158d3932884d8584e64c06200a5b2df0829db570977137e33bf56c270a3353b",
+      "tags": [
+        "economy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Corrosion|CT_Corrosion|Silver|3-2,4-2": {
+      "name": "Corrosion",
+      "description_hash": "47bfc0e3d3ecd3639ba0efde814490dd301a0a8ebf517a885c8b61194833b4fa",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_CountingStars|CT_CountingStars|Gold|2-1": {
+      "name": "Counting Stars",
+      "description_hash": "a0341c9b4df0d190c22e479628e9ec1b589eaec190549a4d4d25f8d4d4f3abe9",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": []
+    },
+    "DA_CritQuintessence|CT_CritQuintessence|Silver|2-1": {
+      "name": "Crit Rune",
+      "description_hash": "9b790c88aad3807c08d4e730ead46574a47ba79a3df14397037db2d7ad43fe4b",
+      "tags": [
+        "combat",
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_CritQuintessence|CT_CritQuintessencePlus|Silver|3-2": {
+      "name": "Crit Rune+",
+      "description_hash": "d4b5b8e77365dbf8049f68f993ec20765ef1a5e0a79a9ff72c0600a6945a4074",
+      "tags": [
+        "combat",
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_CursedCrown|CT_CursedCrown|Prismatic|2-1,3-2": {
+      "name": "Cursed Crown",
+      "description_hash": "66ee6ec76ef219986bc22b5c2faff6d92584a3293ee7cc70a9c93420bcdf5ced",
+      "tags": [
+        "equipment",
+        "combat",
+        "strategy",
+        "health"
+      ],
+      "details": {
+        "equipment": [
+          "tactician"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items",
+        "Strategic"
+      ]
+    },
+    "DA_GoldDestiny|CT_GoldDestiny|Gold|2-1": {
+      "name": "Gold Destiny",
+      "description_hash": "8bd148a4789e02d9f42c0744255f92e7b4b6aae62ca828309c15ba62513a3143",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_GoldDestinyPlus|CT_GoldDestinyPlus|Gold|3-2": {
+      "name": "Gold Destiny+",
+      "description_hash": "21bb21b0f681ce92dd6fb4084be213a91349eec347eaa31be8f2051919cafd9b",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_PrismaticDestiny|CT_PrismaticDestiny|Prismatic|2-1": {
+      "name": "Prismatic Destiny",
+      "description_hash": "96bc24477930ba0482ab95f5d4be2a1fe6c87d20f80e4c9e84336107c23c92e0",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_PrismaticDestinyPlus|CT_PrismaticDestinyPlus|Prismatic|3-2": {
+      "name": "Prismatic Destiny+",
+      "description_hash": "c35e2423a7488eedd1c5a3269417044660651894fc7d3b4df66797022ffa5f73",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_SilverDestiny|CT_SilverDestiny|Silver|2-1": {
+      "name": "Silver Destiny",
+      "description_hash": "075ab813b330bc6473e797b8bd74a62c855cf3865ab184e85ff2e05c481cee30",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_SilverDestinyPlus|CT_SilverDestinyPlus|Silver|3-2": {
+      "name": "Silver Destiny+",
+      "description_hash": "45bbf417d1c3947d25ed959fd3836cfd4847a7fca7b6761e7e5ca8ffa475e59d",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_SilverDestinyPlusPlus|CT_SilverDestinyPlusPlus|Silver|4-2": {
+      "name": "Silver Destiny++",
+      "description_hash": "79f4b05d26a99bd584374a7032a27822f6a57e15eff240d72685708f6434fba0",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_DoubleTrouble|CT_DoubleTrouble|Gold|2-1,3-2": {
+      "name": "Double Trouble",
+      "description_hash": "ef3b269beabde4c10d1c146267bf1f0ae8fd2d1c28b21496fbede63856d80615",
+      "tags": [
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic",
+        "Econ"
+      ]
+    },
+    "DA_DuoQueue||Gold|4-2": {
+      "name": "Duo Queue",
+      "description_hash": "c47019be3fb776e64e994bcbe9a95ec597beb7fa0c569e35d12ddc8ca484a71c",
+      "tags": [
+        "equipment",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_DuplicatorDeal|CT_DuplicatorDeal|Prismatic|4-2": {
+      "name": "Duplicator Deal",
+      "description_hash": "21d401bedeb2dcd32aa897ff15ec427cc69bf80422b8ae9cd86d9361d69a0522",
+      "tags": [
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_EarlyLearnings|CT_EarlyLearnings|Gold|2-1": {
+      "name": "Early Learnings",
+      "description_hash": "90eaec5e161bc580fd6d32cba199f9d4671795a893746db730238c7cce34b5bf",
+      "tags": [
+        "combat",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_ElectrochargeI|CT_Electrocharge|Silver|2-1,3-2,4-2": {
+      "name": "Electrocharge",
+      "description_hash": "bc20fc1aa811226758a30cee684bf0040effed1cc1b99f079addddff05c8ee81",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ElectrochargeII|CT_Electrocharge|Gold|2-1,3-2,4-2": {
+      "name": "Electrocharge II",
+      "description_hash": "27862fb2de48e1b83d04a634ce0084fb340ade8831ce0f81912b7b2b1503d688",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_EpicRolldown|CT_EpicRolldown|Gold|3-2": {
+      "name": "Epic Rolldown",
+      "description_hash": "77ace81add0698aff56f5aba78224b49e23cc5945ad4123193c1f7f34518afb7",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_Epoch|CT_Epoch|Gold|2-1": {
+      "name": "Epoch",
+      "description_hash": "55926dc1bfe840683c7e4dd805f031b9307bc4478c53f5678f60bef5b8b79aae",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls",
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_EpochPlus|CT_Epoch|Gold|3-2": {
+      "name": "Epoch+",
+      "description_hash": "1cf0a03c45a29429a469a8e2f81e4922c165191dd1d2f7d2791eb3018f9adaed",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls",
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_ExplosiveGrowth|CT_ExplosiveGrowth|Gold|3-2": {
+      "name": "Explosive Growth",
+      "description_hash": "72138d04599fa13384bafb779bb740a61a733243a0ded9612767349671f17a1e",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_ExplosiveGrowthPlus|CT_ExplosiveGrowth|Gold|4-2": {
+      "name": "Explosive Growth+",
+      "description_hash": "2df9fac76e617e8ac186da689f3112568830edc09a0dc4a68e40d113940138b6",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_FeelingLucky|CT_FeelingLucky|Silver|3-2": {
+      "name": "Feeling Lucky",
+      "description_hash": "d3c5aeaf742831fe3be4b3c03f598c02ad80165fb26de4d0dbd07e95b4a259fd",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_FeelingLucky|CT_FeelingLuckyPlus|Silver|4-2": {
+      "name": "Feeling Lucky+",
+      "description_hash": "00b1f4e1622b9375dca8c1d31201b36cd4154394ee8c1f167ca85e64a34d591d",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_FighterApprentice|CT_FighterApprentice|Silver|3-2": {
+      "name": "Fighter Apprentice",
+      "description_hash": "7abf0f32660e09e446d0f68dc7df4faa709dbecef1f8d253d7dcb263fd655036",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_FighterFlightII|CT_FighterFlightII|Gold|3-2,4-2": {
+      "name": "Fighter Flight II",
+      "description_hash": "a65270eeb34f7e5f4a193c26c5dea620910985ee066f99ba1994f5b03b3b8a73",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_FighterFlight|CT_FighterFlight|Silver|3-2,4-2": {
+      "name": "Fighter Flight",
+      "description_hash": "5d177f267b460eff4b345b947a24fa519186696b36f92d363036baac5dcc7b7e",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_FindYourCenter|CT_FindYourCenter|Silver|3-2,4-2": {
+      "name": "Find Your Center",
+      "description_hash": "d83eebbec544368047144efcaaeb0508b1d1ac25baaac3df2da222f3b55929a4",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_FocusedFire|CT_FocusedFire|Silver|3-2,4-2": {
+      "name": "Focused Fire",
+      "description_hash": "92b6e8253df150532993e51e1ac8d4282767a68b01a9ba87fb98fd26bd59e707",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_18_FOURcing|CT_18_FOURcing|Gold|3-2": {
+      "name": "FOURcing",
+      "description_hash": "648c26d32de2c4b42ccdc508cc22e64eed41c977f3c885398cb32ca7c08ae443",
+      "tags": [
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_FourFourTime|CT_FourFourTime|Silver|3-2": {
+      "name": "4/4 Time",
+      "description_hash": "a37d11a66da0fc4a437404c0f37fb8932c14e056bf2f358718c0854b960ee568",
+      "tags": [
+        "economy",
+        "growth",
+        "units",
+        "health"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ThreeFourTime|CT_ThreeFourTime|Silver|2-1": {
+      "name": "3/4 Time",
+      "description_hash": "0c9584d81938a5a059dc8f14fbf589bcc888cbb0e992814cbedea47510911564",
+      "tags": [
+        "economy",
+        "growth",
+        "units",
+        "health"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_FrontlineFoundation||Gold|2-1": {
+      "name": "Frontline Foundation",
+      "description_hash": "68cd096ca36cbe4b9f7d8acf7e1a726896f7ee59486985d2302a7a961708ba0b",
+      "tags": [
+        "equipment",
+        "trait",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_FutureFocused|CT_FutureFocused|Silver|2-1": {
+      "name": "Future Focused",
+      "description_hash": "5fe6e40681edfa66bb52789ad9c126f9a1aa371ca6f96014bf4f6d95eeb5822d",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy",
+        "units",
+        "health"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_GainGold|CT_GainGold|Gold|3-2": {
+      "name": "Gain 21 Gold",
+      "description_hash": "eef810b052961f3558d34a3640f1c9294019e8e187c2fd91d4c7f3c7bdbd1c58",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_GainGold|CT_GainGoldPlus|Gold|4-2": {
+      "name": "Gain 32 Gold",
+      "description_hash": "5b8cab1e09790785959f4825f5516da5db4db60e60b1e5f0234a6cb2353d7243",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_GiantAndMighty|CT_GiantAndMighty|Prismatic|3-2,4-2": {
+      "name": "Giant and Mighty",
+      "description_hash": "1dc7d8cb5b52973c5f7997c4e2c4e8f0f777b5b08b7b3de5eb09c89b3555a41d",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_GildedSteel|CT_GildedSteel|Gold|4-2": {
+      "name": "Gilded Steel",
+      "description_hash": "3915dc7d80e721866803de36ed7cee5504fb793a28bb01c418c665c0b663720a",
+      "tags": [
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_GlassCannon_Silver|CT_GlassCannon|Silver|3-2,4-2": {
+      "name": "Glass Cannon",
+      "description_hash": "b51f720290e20bbaf891250602c31e3e15900d69e7a8e6f0789f27e7e0fde094",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_GlassCannon_Gold|CT_GlassCannon|Gold|3-2,4-2": {
+      "name": "Glass Cannon II",
+      "description_hash": "e62ce9f730a9fa0f247a57d23369495803d24c89ad7997f56485601ede521e28",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_GoingLong|CT_GoingLong|Prismatic|2-1": {
+      "name": "Going Long",
+      "description_hash": "f5c855959e4ea294cbbfc5e0848423aa879896520616dab788aaa06b3b48a486",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ",
+        "Strategic"
+      ]
+    },
+    "DA_GoodForSomethingI|CT_GoodForSomethingI|Silver|2-1": {
+      "name": "Good For Something",
+      "description_hash": "5f4e0cc2ee22ffe38d12558c807032903688c9b86263515816d3d5d9b7ecc27e",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_GoodFOURtune|CT_GoodFOURtune|Gold|4-2": {
+      "name": "Good FOURtune",
+      "description_hash": "9bb79df990d7b7d38916e69fb0ba9e8fc97c7c9467f83c09c3eab60e5cfa2dd0",
+      "tags": [
+        "economy",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_GroupHugI|CT_GroupHug|Silver|3-2,4-2": {
+      "name": "Group Hug",
+      "description_hash": "997b975cd11c0015481dab8b6266a15b6c099e507c6c82051de13001f4fa8f40",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_GroupHugII|CT_GroupHug|Gold|3-2,4-2": {
+      "name": "Group Hug II",
+      "description_hash": "add8d0f2ace0ac8569982e015df7ad53527c9149c8976f434499c390f1b74c7b",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_HardBargain|CT_HardBargain|Gold|2-1": {
+      "name": "Hard Bargain",
+      "description_hash": "bc86ae4b2248e9829149c90008a6a9ebdd1ed2c340b5cda73aa7eb15a4c11a60",
+      "tags": [
+        "equipment",
+        "economy",
+        "growth",
+        "strategy",
+        "health",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_HealingOrbsI|CT_HealingOrbs|Silver|3-2,4-2": {
+      "name": "Healing Orbs",
+      "description_hash": "70f1d5f30579a462d6cb9204294f6e406bc0d309550fe249f846683cb58e5941",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_HealingOrbsII|CT_HealingOrbs|Gold|3-2,4-2": {
+      "name": "Healing Orbs II",
+      "description_hash": "f76039007a939799e69bd3d44272b47bc04a4a1b5053154fdf1b44d25dda220d",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_HedgeFund|CT_HedgeFund|Prismatic|2-1": {
+      "name": "Hedge Fund",
+      "description_hash": "ffd913cd7d45e3e3b9c3a5d438f9f7fcc23f38b60acf7927506c41534ba379df",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_HoldTheLine|CT_HoldTheLine|Prismatic|3-2,4-2": {
+      "name": "Hold the Line",
+      "description_hash": "aa30bae157797af0f7510fe3c73136b08503c889adefd3c32ca833a9c972e19e",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Hustler|CT_Hustler|Gold|2-1": {
+      "name": "Hustler",
+      "description_hash": "70a15ad4aaac1a38a3852ec64e99cd7525182fceabdd9bd8d4f5dcc036731a07",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ",
+        "Strategic"
+      ]
+    },
+    "DA_InvestmentStrategyI|CT_InvestmentStrategyI|Gold|2-1": {
+      "name": "Investment Strategy",
+      "description_hash": "18d50822a1fedab14e2784f2eb1c02b8564cc99689a2e87ade49f117062f1503",
+      "tags": [
+        "combat",
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_InvestmentStrategy|CT_InvestmentStrategy|Prismatic|2-1": {
+      "name": "Investment Strategy II",
+      "description_hash": "54a9ac322b18d681c38194d8584d93ae6e935bf9b0417f99fecf30aa7aebf79a",
+      "tags": [
+        "combat",
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_ItsMeBaby|CT_ItsMeBaby|Gold|3-2,4-2": {
+      "name": "It's Me, Baby",
+      "description_hash": "1b370562807cf9b9268124de405c280f1b19af0c8c61c38a6f920ef88e81710f",
+      "tags": [
+        "combat",
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_JeweledLotus_I|CT_JeweledLotus|Gold|3-2,4-2": {
+      "name": "Jeweled Lotus",
+      "description_hash": "33b25859d6a479431a20965cf5cc3171d867f6abd6d71f7489b496b29dafe31a",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_JeweledLotus_II|CT_JeweledLotus|Prismatic|3-2,4-2": {
+      "name": "Jeweled Lotus II",
+      "description_hash": "28f432966dcce424e4305b246d00e2eb9683ed7e15bd78edb38016b680d368d6",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Steamroll|CT_KeepingTempo|Silver|2-1": {
+      "name": "Keeping Tempo",
+      "description_hash": "54dcbf20f1ce3879962dcd04feed83fd65fc8ad89e16ded5c1d0ade0130810a9",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_KickStart|CT_KickStart|Silver|2-1": {
+      "name": "Kick Start",
+      "description_hash": "03145b85879045432dd0ea6c288df89d24fe741db048cc7be11f20b4cebb5769",
+      "tags": [
+        "economy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_Kingslayer|CT_Kingslayer|Silver|2-1,3-2": {
+      "name": "Kingslayer",
+      "description_hash": "ac99b378f19ff3b34af953a960eedc063f32ef9c555612369ab999e732bde413",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_KnowledgeDownload|CT_KnowledgeDownloadI|Silver|4-2": {
+      "name": "Knowledge Download",
+      "description_hash": "804f9510f911b28bba09214d5dc7498a46bcfe6f0ecdcbbe2dc503277f79e878",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_GainGold|CT_KnowledgeDownloadII|Gold|4-2": {
+      "name": "Knowledge Download II",
+      "description_hash": "afde59ad686f387ae32df46a470359cae44a534acd00eac36f979bbfb2656601",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_KnowYourEnemy|CT_KnowYourEnemy|Gold|": {
+      "name": "Know Your Enemy",
+      "description_hash": "46a37a1822278ad42cf6f4aa0f95e3c2c45fbcd4e743a41a5d6c3ba8224e7aaf",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_LateGameScaling|CT_LateGameScaling|Gold|2-1": {
+      "name": "Late Game Scaling",
+      "description_hash": "eee2eefc9ae1b895da059ab83bd7c9f3439836d37da7be677ed85a9b93fd84bd",
+      "tags": [
+        "combat",
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_LateGameSpecialist|CT_LateGameSpecialist|Silver|3-2": {
+      "name": "Late Game Specialist",
+      "description_hash": "ed0c2f7b1c8db17e0803fe70c3e8fd2707c2ba43315ba8b1bcfca3e3680f28d1",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_LevelUp|CT_LevelUp|Prismatic|2-1": {
+      "name": "Level Up!",
+      "description_hash": "a23fac7b2bb1407e56164a62a4a1d9b6c664cbd3b9fd544707146b0a0716b5bb",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_LoadedDice|CT_LoadedDice|Silver|2-1": {
+      "name": "Loaded Dice",
+      "description_hash": "2b762c004d2a146a91cc8c1ceabe1b16d7960d861a484c09df473e9c01f85bd8",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_MadScience|CT_MadScience1|Prismatic|3-2,4-2": {
+      "name": "Mad Science",
+      "description_hash": "c6e4b1ede9e5b02b642d06a1edb8b20b3bef96c01ba62d13fccf58a2d71d6e4c",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_MakeshiftArmorI|CT_MakeshiftArmor|Silver|3-2": {
+      "name": "Makeshift Armor",
+      "description_hash": "5c1d344b87db47814ac75540c3521b87f651acddcbdb06009d2e13c47a62976e",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_MakeshiftArmorII|CT_MakeshiftArmor|Gold|3-2": {
+      "name": "Makeshift Armor II",
+      "description_hash": "b9a920c13fbcc49e2876ac998b771c47b6ae967763fa50fc64ef74019a1367f0",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_MaliciousMonetization|CT_MaliciousMonetization|Gold|4-2": {
+      "name": "Malicious Monetization",
+      "description_hash": "f76751a454a36095ce08aea8e1b9820ed7b3ef348a27c07bc39b5ee3956e0783",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_MarksmanApprentice|CT_MarksmanApprentice|Silver|3-2": {
+      "name": "Marksman Apprentice",
+      "description_hash": "a6725cefb137d94c147521528862b6f5915bffb9be757cc19f815751803c0beb",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_MissedConnections||Silver|3-2,4-2": {
+      "name": "Missed Connections",
+      "description_hash": "3ecb3f35bf33f0cc4169a3adff26b435e886e8fbae1f26fe18ccc42dff063a9b",
+      "tags": [
+        "growth",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_MoneyHungry_NotBroken|CT_MoneyHungry|Gold|2-1": {
+      "name": "Money Hungry",
+      "description_hash": "47ec8e0ec7dd5bfec2aab0bbd2f862d53e636b0c06c8e362870c6685a70ea811",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_MoneyHungryPlus|CT_MoneyHungry|Gold|3-2": {
+      "name": "Money Hungry+",
+      "description_hash": "fe55ce6c2bb02440630fe78ac07a0668d1a22af8e6a1c191bb06b1796146b429",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_MoneyMonsoon|CT_MoneyHungry|Prismatic|4-2": {
+      "name": "Money Monsoon",
+      "description_hash": "42e285708562664de517cf35de03932a827b0bad59b25ae1013b7404e7b91436",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_NoScoutNoPivot|CT_NoScoutNoPivot|Gold|2-1": {
+      "name": "NO SCOUT NO PIVOT",
+      "description_hash": "d57fcf95e6fb03be5f3f2f88a49555e980de2fe2b36ab49b25308b62a2416077",
+      "tags": [
+        "combat",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic",
+        "Econ"
+      ]
+    },
+    "DA_OneTwoFive|CT_OneTwoFive|Silver|4-2": {
+      "name": "One, Two, Five!",
+      "description_hash": "f9682f8fdda5510b36ebb90d3f2db9998ca4f87daed5f549c6969b2ccc69979d",
+      "tags": [
+        "equipment",
+        "economy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_OneTwosThree||Silver|2-1": {
+      "name": "One Twos Three",
+      "description_hash": "e0acfa254a71c227d780690cd97e24e885fd7502f67074987770d2bb0ee7fdb2",
+      "tags": [
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_PandorasBench|CT_PandorasBench|Silver|2-1,3-2": {
+      "name": "Pandora's Bench",
+      "description_hash": "8f6ddc98268a2f1c6357c25481864935ad6bc64c4b088d12f9ae8dd7d12b48ce",
+      "tags": [
+        "economy",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_PandorasBox||Prismatic|3-2": {
+      "name": "Pandora's Box",
+      "description_hash": "18b161c4027f6070d6ea6d4bfba7f9ed0225af2079fc639a1e89148f5dbecb25",
+      "tags": [
+        "equipment",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "utility"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_PatienceIsAVirtue|CT_PatienceIsAVirtue|Silver|2-1": {
+      "name": "Patience Is A Virtue",
+      "description_hash": "a9c8babc0841fe684b07f73d325421a6f610dab2c9b68798ee628240656b1a22",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_PatientStudy|CT_PatientStudy|Gold|2-1": {
+      "name": "Patient Study",
+      "description_hash": "96b275add50b77f9cf65fd6746f106de1cd4b4377db08150c7c43da636dcc5e8",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_Pinata|CT_Pinata|Gold|2-1,3-2": {
+      "name": "Piñata",
+      "description_hash": "7ffeb54bc6e6252164fb90c4b9849ad01bb306f841a730be6a17b9cb51825f45",
+      "tags": [
+        "combat",
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_PlotArmor|CT_PlotArmor|Gold|3-2,4-2": {
+      "name": "Plot Armor",
+      "description_hash": "8e75c804fa491167aa7bf909310c6693d41047c5b4165bbd388b4e0b70f04479",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_PrismaticTicket|CT_PrismaticTicket|Prismatic|2-1,3-2": {
+      "name": "Prismatic Ticket",
+      "description_hash": "8adc9d6eddc646fc5b5dbabef268afde84f1458db9c9e28525144084b613284b",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_19_PyramidScheme|CT_PyramidScheme|Prismatic|4-2": {
+      "name": "Pyramid Scheme",
+      "description_hash": "13221ef6225d64a52ae95fff2318ed4df59022570c1ed13a1d08c0e1a0068895",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ",
+        "Strategic"
+      ]
+    },
+    "DA_19_PyramidScheme_Level2|CT_PyramidScheme_Level2|Silver|": {
+      "name": "Pyramid Scheme, Level 2",
+      "description_hash": "e4890f20a8deedd1a46a80da2cedff38e92944b1585ae5c8a858479cf84ec00c",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_19_PyramidScheme_Level3|CT_PyramidScheme_Level3|Silver|": {
+      "name": "Pyramid Scheme, Level 3",
+      "description_hash": "f03af49f62407361e7fef9eae64dad9c36e91f7e6fb3dc34d1f31057fa5a3f7d",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_19_PyramidScheme_Level4|CT_PyramidScheme_Level3|Silver|": {
+      "name": "Pyramid Scheme, Level 4",
+      "description_hash": "f03af49f62407361e7fef9eae64dad9c36e91f7e6fb3dc34d1f31057fa5a3f7d",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_19_PyramidScheme_Level5|CT_PyramidScheme_Level3|Silver|": {
+      "name": "Pyramid Scheme, Level 5",
+      "description_hash": "f03af49f62407361e7fef9eae64dad9c36e91f7e6fb3dc34d1f31057fa5a3f7d",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_19_PyramidScheme_Level6|CT_PyramidScheme_Level3|Silver|": {
+      "name": "Pyramid Scheme, Level 6",
+      "description_hash": "f03af49f62407361e7fef9eae64dad9c36e91f7e6fb3dc34d1f31057fa5a3f7d",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_19_PyramidScheme_Level7|CT_PyramidScheme_Level3|Silver|": {
+      "name": "Pyramid Scheme, Level 7",
+      "description_hash": "5483bac1c0af470c79e09752258b4a281c6e373f4a62e9a20026c0cc928da908",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_19_PyramidScheme_Level8|CT_PyramidScheme_Level3|Silver|": {
+      "name": "Pyramid Scheme, Level 8",
+      "description_hash": "f03af49f62407361e7fef9eae64dad9c36e91f7e6fb3dc34d1f31057fa5a3f7d",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_QuickStreaks|CT_QuickStreaks|Silver|2-1": {
+      "name": "Quick Streaks",
+      "description_hash": "f2b4eabb10d07f30d9d0716602553eb6031a802d997041cf3f00fe0b8b5b285d",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_19_RareCollection|CT_RareCollection|Gold|3-2,4-2": {
+      "name": "Rare Collection",
+      "description_hash": "63d9e8431508ecd6e230b83bcce6681c72a9b2cd1764f584bb17ef0eddb10764",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_ReunionShowI|CT_ReunionShowI|Silver|3-2": {
+      "name": "Reunion Show",
+      "description_hash": "9e1e7c11b0c8659a08814e144c8319e9607a6f59b56fd23de714e02ecd4f5bc1",
+      "tags": [
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ReunionShowII|CT_ReunionShowII|Gold|3-2": {
+      "name": "Reunion Show II",
+      "description_hash": "3a32cdcc4ed2b84f4378730c1df9eead2eae2655c26d3382b86fe39850b13403",
+      "tags": [
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_RollingForDays|CT_RollingForDays|Silver|3-2,4-2": {
+      "name": "Rolling For Days",
+      "description_hash": "61fd53dadc222bd0079ccf9837eb3504294d3d10a1dde036c9a2e2b9945c8aad",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_Royalties|CT_Royalties|Prismatic|4-2": {
+      "name": "Royalties",
+      "description_hash": "80d90c63a5934365504314db9664436e19337f9a0e37d08a2eb2b00f2074f7a8",
+      "tags": [
+        "equipment",
+        "combat",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "tactician"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Omelas|CT_Omelas|Gold|2-1,3-2,4-2": {
+      "name": "Sacrificial Dummy",
+      "description_hash": "37592184f910695858e15ca614f79a726b1d34f8e76da5c35b3dbbf6be6728e5",
+      "tags": [
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ShoppingSpree|CT_ShoppingSpree|Prismatic|2-1": {
+      "name": "Shopping Spree",
+      "description_hash": "1c221747767500f0aa9ceab8f85b46ebaa4772cebd0449464ebf482cc3562d8f",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_SilverSpoon|CT_SilverSpoon|Silver|2-1": {
+      "name": "Silver Spoon",
+      "description_hash": "04a74be94d577838ff17e40619460b79bd5dcb0eb6c2f4b9c6de0030be05c6d9",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_SliceOfLife|CT_SliceOfLife|Silver|2-1": {
+      "name": "Slice of Life",
+      "description_hash": "99d1caf33fed571354b91e0cc979029deece9aa0488bef5a2fc1fdeb69ca2982",
+      "tags": [
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_SoulAwakening|CT_SoulAwakening|Prismatic|3-2,4-2": {
+      "name": "Soul Awakening",
+      "description_hash": "e3f063fa3658354b6d655db627479423f886d6b35d9495319eda5664b9dd9d2f",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_StandUnited|CT_StandUnited|Silver|3-2,4-2": {
+      "name": "Stand United",
+      "description_hash": "d032d5f713b4914ea1a70cf27b962784c2735d6d216da47db09cec14ebeb9848",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_StarOfTheShow|CT_StarOfTheShow|Prismatic|2-1": {
+      "name": "Star of the Show",
+      "description_hash": "3abb7d947e4731a193d8a7dc0f382e394fe0fad20a37d1692b8b174f460532ab",
+      "tags": [
+        "equipment",
+        "trait",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items",
+        "Traits"
+      ]
+    },
+    "DA_StatsOnStats|CT_StatsOnStats|Silver|2-1": {
+      "name": "Stats On Stats",
+      "description_hash": "184bba259190ab3ccc52cc13d7d109e07cb6c88f00a6744a42608610df9af424",
+      "tags": [
+        "combat",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_StatsOnStatsII|CT_StatsOnStatsII|Gold|2-1": {
+      "name": "Stats On Stats II",
+      "description_hash": "5058eaff629bc56161ac3d57fe1a07e8565bc47253ed78c3717c80d989ec1c96",
+      "tags": [
+        "combat",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_DangerousDuetII|CT_BestFriends|Gold|3-2,4-2": {
+      "name": "Strange Duet II",
+      "description_hash": "97ee2f81044c380c0764e6949205a840b42f34f9637ab33b5b7ef21e772ca2d2",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_DangerousDuetIII|CT_BestFriends|Prismatic|3-2,4-2": {
+      "name": "Strange Duet III",
+      "description_hash": "322eb1e202d8ab479637f509ac8dfb3db2b5fe232f739cabd0f634b1eead7bd1",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_DangerousDuet|CT_BestFriends|Silver|3-2,4-2": {
+      "name": "Strange Duet",
+      "description_hash": "c41d6e7e82dcd47d8477518cf3721940949e20062879fa3db4e1965d690709b3",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_SubmitToThePit|CT_SubmitToThePit|Gold|3-2,4-2": {
+      "name": "Submit to the Pit",
+      "description_hash": "92a9732d8ed81dce5cefc7e9e6b6f222d5e68be55262b86b7f570514970e15db",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ChaliceOfPowerAugment|CT_ChaliceOfPower|Gold|3-2,4-2": {
+      "name": "Chalice of Power",
+      "description_hash": "a5c34cb4e16c9c1f67f96f801f36037835825cd69d06ddbf01aecbba4bbe59a1",
+      "tags": [
+        "equipment",
+        "combat"
+      ],
+      "details": {
+        "equipment": [
+          "support"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_RanduinsOmenAugment|CT_RanduinsOmen|Gold|3-2,4-2": {
+      "name": "Randuin's Omen",
+      "description_hash": "2820bb91f09399f37d010cd380c9a2b8cc2fc9ea9b0c16426b25a0196df54581",
+      "tags": [
+        "equipment",
+        "combat"
+      ],
+      "details": {
+        "equipment": [
+          "support"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ZekesHeraldAugment|CT_ZekesHerald|Gold|3-2,4-2": {
+      "name": "Zeke's Herald",
+      "description_hash": "48cbdbd68dc5af8023c5f184228548267f38cd642c1f0174aab17200379f2f98",
+      "tags": [
+        "equipment",
+        "combat"
+      ],
+      "details": {
+        "equipment": [
+          "support"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ZZRotAugment|CT_ZZRot|Gold|2-1,3-2,4-2": {
+      "name": "Zz'Rot Portal",
+      "description_hash": "050df73a9b220e1ca90d2ef5d8f0ec9fc21c16e7e8adc26c7d513213f972d3ec",
+      "tags": [
+        "equipment",
+        "combat",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "support"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_TankApprentice|CT_TankApprentice|Silver|3-2": {
+      "name": "Tank Apprentice",
+      "description_hash": "b1664f4051b88208dfbd1081391091496b2dc4d0cc8b368e6cd136a148210210",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_ThatsThatEspresso|CT_ThatsThatEspresso|Gold|2-1,3-2,4-2": {
+      "name": "Espresso",
+      "description_hash": "d25023aa2de5c5e749cc643e45d14dfa858303e4ecced27c42426c742bb0e17b",
+      "tags": [
+        "equipment",
+        "combat"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_TheDropGold|CT_TheDropGold|Gold|3-2,4-2": {
+      "name": "The Drop II",
+      "description_hash": "71bc1b9860dab3cba96a0514bd6f6da0cf5ee3125e91eb8301833226c4b9114c",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_TheDrop|CT_TheDrop|Silver|3-2,4-2": {
+      "name": "The Drop",
+      "description_hash": "a7c4f4b4afe1f3766907ac13f901ed8c0abf704d09071a53af37de05f992cc9a",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ThreeStepsAhead|CT_ThreeStepsAhead|Prismatic|4-2": {
+      "name": "Three Steps Ahead",
+      "description_hash": "f78b31e6e7e8be5bccaf01b5d8fc8759f34b3ed17bf90cf4015d4e9b1357a8d0",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_TimeSkip|CT_TimeSkip|Gold|2-1": {
+      "name": "Time Skip",
+      "description_hash": "f5eb468792a6a65f6111cbf662cbad3f816d6441ac207058d6df752f8556861a",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_TonsOfStatsI|CT_TonsOfStatsI|Gold|3-2,4-2": {
+      "name": "Tons of Stats!",
+      "description_hash": "5a8ef2eb47c68b23b0b0359d1b8fd3756dd0fac74a856e9460efc9cbf3484f73",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_TonsOfStatsII|CT_TonsOfStatsII|Prismatic|3-2,4-2": {
+      "name": "TONS of Stats!",
+      "description_hash": "602193380c9bc68642a1a5703285a1e136c8d5437c109c8ebf9ecf94bf95a2a4",
+      "tags": [
+        "combat"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_TradeSector|CT_TradeSector|Gold|2-1": {
+      "name": "Trade Sector",
+      "description_hash": "4c06e55ce3fff13a41a922cfdad9d494f147ba90cef590547c2380faf4ef7d99",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_TradeSectorPlus|CT_TradeSector|Gold|3-2": {
+      "name": "Trade Sector+",
+      "description_hash": "a1529ee771dfff43c6d5a7a5566b1995682f121da99bacaf03e03597e834a420",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_TwinGuardians|CT_TwinGuardians|Silver|3-2,4-2": {
+      "name": "Twin Guardians",
+      "description_hash": "c754285ba7e69e127af0a249c6054598e52d8dc63142b1195fa40022091d7c82",
+      "tags": [
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_UpwardMobility|CT_UpwardMobility|Prismatic|2-1": {
+      "name": "Upward Mobility",
+      "description_hash": "1670b073016979852db8c5cf95237f2894c8003a338733f2695fe22ca72f7539",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy",
+        "health"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls",
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_VerticalityI|CT_VerticalityI|Silver|3-2,4-2": {
+      "name": "Verticality",
+      "description_hash": "15d72c201914f7a3a298e9751f7bf7a0545fb198076d2b0c622ec98dfc1dd802",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_VerticalityII|CT_VerticalityII|Gold|3-2,4-2": {
+      "name": "Verticality II",
+      "description_hash": "c159e3ee9c380ad6cced6bc4b2542767e6b1ac5abebfb7ea1898f02e21cdbc92",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_VerticalityIII|CT_VerticalityIII|Prismatic|3-2,4-2": {
+      "name": "Verticality III",
+      "description_hash": "c23efe75934e97430a34d514f50182f864866b296ca19791f8e9fbd182ed90f3",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_18_WeightTheWorth|CT_18_WeightTheWorth|Gold|3-2": {
+      "name": "Weight The Worth",
+      "description_hash": "119bb0d235bb4872ce88d8df8490c050018060c55f437b0179ba06212eb84fe6",
+      "tags": [
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic",
+        "Econ"
+      ]
+    },
+    "DA_WorldTour|CT_WorldTour|Silver|2-1": {
+      "name": "World Tour",
+      "description_hash": "e8dabf061e9f4c5eb66c26282416ac38a7a1a7310e3eeb8e82e2f7e87d932e8f",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_WorththeWait|CT_WorththeWait|Gold|2-1": {
+      "name": "Worth the Wait",
+      "description_hash": "2a08b9e2fd4bbc8e50484ccc6cff5ba298f31ebcdc83aea765982e4f9ac74170",
+      "tags": [
+        "growth",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_WorththeWaitII|CT_WorththeWaitII|Prismatic|2-1": {
+      "name": "Worth the Wait II",
+      "description_hash": "d9606394292fe4a83d7f657225e7c9b0e5c68a2a16caad21cdd0b5fdf5d8ce95",
+      "tags": [
+        "growth",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_YoungAndWildAndFree|CT_YoungAndWildAndFree|Silver|2-1": {
+      "name": "Young and Wild and Free",
+      "description_hash": "af49ac056e260bc3e24c3ad8c01f731ad49efd47784308949905649234eb4812",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_BackupBows|CT_BackupBows|Silver|2-1": {
+      "name": "Backup Bows",
+      "description_hash": "e0c76025906a6a5f20bbacd5cba5de7d1c2e0a36cd897a2848c6910bc23c32d6",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_BandOfThieves|CT_BandOfThieves|Silver|2-1,3-2,4-2": {
+      "name": "Band of Thieves",
+      "description_hash": "7ff43a0b5ee866b6e53aced6bbead3650ecadd0cd89b9ed84e620a4a71ce77dc",
+      "tags": [
+        "equipment"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_BandOfThievesII|CT_BandOfThieves|Prismatic|2-1": {
+      "name": "Band of Thieves II",
+      "description_hash": "6115f55dedfd14bd02ce8eb186ec5fec4d06540bd37ab4735dfca12b465955a2",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_BandOfThievesIIPlus|CT_BandOfThieves|Prismatic|3-2": {
+      "name": "Band of Thieves II+",
+      "description_hash": "6115f55dedfd14bd02ce8eb186ec5fec4d06540bd37ab4735dfca12b465955a2",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_BandOfThievesIIPlusPlus|CT_BandOfThieves|Prismatic|4-2": {
+      "name": "Band of Thieves II++",
+      "description_hash": "a110a28e737c8fd7fe012bb85999a906441ef397737b5df20edcf44bc7ef38ae",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_BaronsLair|CT_BaronsLair|Prismatic|3-2,4-2": {
+      "name": "Baron's Lair",
+      "description_hash": "4b836e762fab7df29a0b7aa0fcadfc37fdce083c587a16ef69df415c8a65588f",
+      "tags": [
+        "equipment",
+        "combat"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_BeltOverflow|CT_BeltOverflow|Prismatic|3-2,4-2": {
+      "name": "Belt Overflow",
+      "description_hash": "1dff4870c6fd0ef690321085318c5eb9f5de262479f418af7c79d465845d4467",
+      "tags": [
+        "equipment",
+        "combat"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_BirthdayReunion|CT_BirthdayReunion|Gold|2-1": {
+      "name": "Birthday Reunion",
+      "description_hash": "18171c9659395c54593091261dc6596a15988b6baa95306239a637fa7727e1ed",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_BuriedTreasuresIII|CT_BuriedTreasuresIII|Prismatic|2-1": {
+      "name": "Buried Treasures III",
+      "description_hash": "9714c52598580e9e3b224ec19e3e8c19ca03d22fb350cb922ea82ec0f1a1aff8",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_CallToChaos|CT_CallToChaos|Prismatic|4-2": {
+      "name": "Call To Chaos",
+      "description_hash": "3a9289e78e457306a406a6c04770db586ef6d73b5bb9934c2863214a3757e6dc",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_CaretakersFavor||Gold|2-1": {
+      "name": "Caretaker's Favor",
+      "description_hash": "4751c91e543f8840c3d7e8a36dc2c5d85b5fde063ff1620503c1abb2ae8d6206",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_CarveAPath|CT_CarveAPath|Silver|2-1": {
+      "name": "Carve a Path",
+      "description_hash": "2669104ef9c1f0167cdc2be8369689cf0ce425152e797ddd1bfb93513664b80d",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_Staffsmith|CT_Staffsmith|Gold|4-2": {
+      "name": "Staffsmith II",
+      "description_hash": "ac1de6db937c3f19a3e393f75a077fb63db24036bda02f659f54c4762697fd47",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_Swordsmith|CT_Swordsmith|Gold|4-2": {
+      "name": "Swordsmith II",
+      "description_hash": "115d87d3fd80eaf4b38e546f8505c03ce03bc79add5ad4912af110a405c4327e",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_CognitiveOverload|CT_CognitiveOverload|Gold|3-2": {
+      "name": "Cognitive Overload",
+      "description_hash": "1a28045f723306e30655282ee4ae344d5f7495b03aa09bed82408e86da099437",
+      "tags": [
+        "economy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "rerolls",
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_ComponentBuffet|CT_ComponentBuffet|Silver|": {
+      "name": "Component Buffet",
+      "description_hash": "85cb6f7ced341645d575f3b2a6c854d092ea79d74d2489c92263f8e29825940e",
+      "tags": [
+        "equipment"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_ComponentQuest|CT_ComponentQuest|Prismatic|2-1": {
+      "name": "Component Quest",
+      "description_hash": "320a59508e1033a098311198f485eaca727ccbfa952ac93e33be69cbbfd74988",
+      "tags": [
+        "equipment",
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_CookingPot|CT_CookingPot|Gold|2-1": {
+      "name": "Cooking Pot",
+      "description_hash": "7b24f7e096c0122e622307eab467f4e6c6f7f7ea46f4196d083310815ae01d6c",
+      "tags": [
+        "equipment",
+        "trait",
+        "combat",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_CraftedCrafting|CT_CraftedCrafting|Silver|2-1": {
+      "name": "Crafted Crafting",
+      "description_hash": "4cd161918ce414a1d26c1edcd7ac90a8295490e9b29858d9e0212dc53f0f8f64",
+      "tags": [
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_CryMeARiver|CT_CryMeARiver|Gold|2-1,3-2": {
+      "name": "Cry Me A River",
+      "description_hash": "fc80854b1574dd306e7d10b4b76bb7461204767f273e4bfff56fb016442e7925",
+      "tags": [
+        "equipment",
+        "combat"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_CyberneticImplants_Gold|CT_CyberneticImplants|Gold|3-2,4-2": {
+      "name": "Cybernetic Implants",
+      "description_hash": "5dad5fc2558925989af40c6efdf1ef1721dfb8955fac48ff436ad6cb42a6e936",
+      "tags": [
+        "equipment",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_CyberneticUplink_Gold|CT_CyberneticUplink|Gold|3-2,4-2": {
+      "name": "Cybernetic Uplink",
+      "description_hash": "7610e365ceed0bdfb3ca499266a01df7d2167c322f70e8fd2284f392fef91f7f",
+      "tags": [
+        "equipment",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_DeadlierBlades|CT_DeadlierBlades|Prismatic|2-1": {
+      "name": "Deadlier Blades",
+      "description_hash": "e39b06cf6e65d6bcb7748acb339660ba9dd4f3ea7e4876b5ed59094af4456a5d",
+      "tags": [
+        "equipment",
+        "combat",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_DeadlierCaps|CT_DeadlierCaps|Prismatic|2-1": {
+      "name": "Deadlier Caps",
+      "description_hash": "3dbb7b33f8762f8667f7eb58128fe0031818e0be846cbb019ab54d559f5413cf",
+      "tags": [
+        "equipment",
+        "combat",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_Dummify|CT_Dummify|Silver|3-2": {
+      "name": "Dummify",
+      "description_hash": "0c3e700e54ef734dc84e4f114df9dabf88421e7e58fbebec6bb45d120fb2f02d",
+      "tags": [
+        "combat",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_ExclusiveCustomization|CT_ExclusiveCustomization|Gold|3-2,4-2": {
+      "name": "Exclusive Customization",
+      "description_hash": "8eaed81e3cb3ce2819aec8c2cd6febf4e975e28f60e57825ddaa10fd24d9f731",
+      "tags": [
+        "equipment",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "utility"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_Expedition|CT_Expedition|Silver|2-1": {
+      "name": "Expedition",
+      "description_hash": "463137d4f2849fefff36573c934f5b10f95ac76e11a2cf7edaaf1593c3ee2709",
+      "tags": [
+        "growth",
+        "strategy",
+        "units",
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_ExtraBuckles|CT_ExtraBuckles|Silver|2-1": {
+      "name": "Extra Buckles",
+      "description_hash": "99583d3fab9b224c4fd62aa01ada278059e2d66b7d5ba133ccc1689f7cb5bdf7",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_Flexible|CT_Flexible|Prismatic|2-1": {
+      "name": "Flexible",
+      "description_hash": "d1d65f7bbc0421b3d6752809dbfae092469ef8faf616eb1e51a1125da8aada03",
+      "tags": [
+        "equipment",
+        "trait",
+        "combat",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items",
+        "Traits"
+      ]
+    },
+    "DA_FlowingTears|CT_FlowingTears|Silver|2-1": {
+      "name": "Flowing Tears",
+      "description_hash": "fdf5c6c25aba27a39a7c7c092d4cbb8b3081bdc6d9398971de4d1da4dcde7632",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_ForgedInStrength|CT_ForgedInStrength|Prismatic|2-1": {
+      "name": "Forged In Strength",
+      "description_hash": "207c153e6a355dda23e303fd3bf30f9d0213e211cade81c5cd5649fabc2daabf",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "completed",
+          "artifact"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_GoldenEgg|CT_GoldenEgg|Prismatic|4-2": {
+      "name": "The Golden Egg",
+      "description_hash": "d1828046ffa475369154d90e1359718e1449f11cff7324b6e6014b8b6037e622",
+      "tags": [
+        "growth",
+        "strategy",
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_GoldenGamble|CT_GoldenGamble|Prismatic|2-1": {
+      "name": "Golden Gamble",
+      "description_hash": "dfb571910e987a753d5455995faf33c8c5848e8715494e043e91cad6290a7d67",
+      "tags": [
+        "equipment",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "radiant"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_GoldenGamblePlus|CT_GoldenGamblePlus|Prismatic|3-2": {
+      "name": "Golden Gamble+",
+      "description_hash": "a031dd54eb0bf95ae2a2e3c7eb96a92ffdc6f6d52b889d47f9c48df67888dbcf",
+      "tags": [
+        "equipment",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "radiant"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_GoldenGamblePlusPlus|CT_GoldenGamblePlusPlus|Prismatic|4-2": {
+      "name": "Golden Gamble++",
+      "description_hash": "496bfbf52923045bd50b731d21e46cfbcbde8fb99621fde0ca71883a3cf664f1",
+      "tags": [
+        "equipment",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "radiant"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_HardCommit||Prismatic|2-1": {
+      "name": "Hard Commit",
+      "description_hash": "7275be5a84ef567222ed5aa23c9be68741c620b6b2a7fac9ca3efd78c827bd6b",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "emblem"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_HeartOfSteel|CT_HeartOfSteel|Gold|2-1": {
+      "name": "Heart of Steel",
+      "description_hash": "b461288c516c61766855b2d8e8ca02217acfa9e3c288e240732e25b9bbc63d56",
+      "tags": [
+        "equipment",
+        "combat",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_HeroicGrabBag|CT_HeroicGrabBag|Gold|2-1": {
+      "name": "Heroic Grab Bag",
+      "description_hash": "fa86108bcbc311e07fedac1fc5afce22406cf32e7d2bbe3606af6af371e03c62",
+      "tags": [
+        "economy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_HeroicGrabBagPlus|CT_HeroicGrabBagPlus|Gold|3-2": {
+      "name": "Heroic Grab Bag+",
+      "description_hash": "b0d3b0877b9ca91c81165f28b2e308c2c978330dfcd6b43d92c5bb7b618d311c",
+      "tags": [
+        "economy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_HeroicGrabBagPlusPlus|CT_HeroicGrabBagPlusPlus|Gold|4-2": {
+      "name": "Heroic Grab Bag++",
+      "description_hash": "13e0a8ae16b6dcaff9e85e25569e81b7338910975865ddce9b5d15f596486580",
+      "tags": [
+        "economy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_InfinityProtection|CT_InfinityProtection|Gold|2-1": {
+      "name": "Infinity Protection",
+      "description_hash": "018c6f076c74972965424186916104225e553e9c841c6d2d471a7c7d92e466cf",
+      "tags": [
+        "equipment",
+        "combat",
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "artifact"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_InvestedPlus|CT_Invested|Prismatic|3-2": {
+      "name": "Invested+",
+      "description_hash": "bb09c6da549a42a2cba5868ff808243ff24ae0062ecf28f5a1249d76c2a12341",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_InvestedPlusPlus|CT_InvestedPlusPlus|Prismatic|4-2": {
+      "name": "Invested++",
+      "description_hash": "6c833cf8873162d6af31b417482fb375fc4a7738fb1d0ceb19f425d78619c0b7",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_IronAssets|CT_IronAssets|Silver|2-1": {
+      "name": "Iron Assets",
+      "description_hash": "189ea154b45cccc95d1903f9898a5bfda685f413c2b2f07291972ba05f333da6",
+      "tags": [
+        "equipment",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_ItemGrabBag||Silver|2-1": {
+      "name": "Item Grab Bag",
+      "description_hash": "284b1f86c066f5431a841504df3dc7d5677e267d06535aab86a328b7723c5bf5",
+      "tags": [
+        "equipment"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_LatentForge|CT_LatentForge|Silver|2-1": {
+      "name": "Latent Forge",
+      "description_hash": "aa4c586c8240b0e1814cfbaecb81e969781717ca1a6989101e50796bd31502c4",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "artifact"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_LegionOfThrees|CT_LegionOfThrees|Gold|2-1": {
+      "name": "Legion Of Threes",
+      "description_hash": "049cb30d2ef636b2c5d33e5401dd68ce17f54687b5ae1503f2bcbfb9e5f6a40b",
+      "tags": [
+        "equipment",
+        "trait",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_LivingForge|CT_LivingForge|Prismatic|2-1": {
+      "name": "Living Forge",
+      "description_hash": "9b2cd12a3741dbff949fe9434b68f9a9b6be156f2d4e4f7ca2afa65f6e8662f9",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "artifact"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_LuckyGloves|CT_LuckyGloves|Prismatic|2-1": {
+      "name": "Lucky Gloves",
+      "description_hash": "e31b9553e9a639826cdb3e07d79c1c864d0f39182908a9a626a9e4a190df2815",
+      "tags": [
+        "equipment",
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_LuckyGlovesPlus|CT_LuckyGloves|Prismatic|3-2,4-2": {
+      "name": "Lucky Gloves+",
+      "description_hash": "e169b6949f915679c1a4357386b7bd310d987798534f779fba478aeb5bc45e45",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_LuxurySubscription|CT_LuxurySubscription|Prismatic|3-2": {
+      "name": "Luxury Subscription",
+      "description_hash": "d7c5c329b81475c4730686e1eee1d011a2ab6ab6892f27944eb18d96f35d7b0a",
+      "tags": [
+        "economy",
+        "growth",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_ExpectedUnexpectedness|CT_ExpectedUnexpectedness|Prismatic|2-1": {
+      "name": "Expected Unexpectedness",
+      "description_hash": "46ec444df0cf537dbc69767cee51cb397043eec223bb52d43d9b52a7d1c7746e",
+      "tags": [
+        "economy",
+        "growth"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_MagicRoll|CT_MagicRoll|Gold|3-2": {
+      "name": "Magic Roll",
+      "description_hash": "f6990513262d090f47532e527bf2b586fa051f9eecd867c12c65301943568646",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_SlightlyMagicRoll|CT_SlightlyMagicRoll|Silver|2-1": {
+      "name": "Slightly Magic Roll",
+      "description_hash": "f0ccf85529e3dc142f4c17e6a512c2f53b3d46aacd0412215831a785ffb71bc3",
+      "tags": [
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_MaxBuild|CT_MaxBuild|Gold|4-2": {
+      "name": "Max Build",
+      "description_hash": "928dac8325f6539a0cf4c873159bc9f15e002dd3873feda2e1a7df4739b05af6",
+      "tags": [
+        "growth",
+        "strategy",
+        "units",
+        "economy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Min_Max|CT_Min_Max|Prismatic|3-2": {
+      "name": "Min-Max",
+      "description_hash": "d4952b30407968c9394b3609fb1351d1accb0ea6f522410dbc92ba51b3aeaa4d",
+      "tags": [
+        "equipment",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "utility"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_NestingAnvils|CT_NestingAnvils|Prismatic|3-2": {
+      "name": "Nesting Anvils",
+      "description_hash": "f2d3ae365f0bb12bb2f142f5412a9fd2417651e53b77ffd9ecc69cc1643b5277",
+      "tags": [
+        "equipment",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "artifact"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_NestingAnvilsPlus|CT_NestingAnvilsPlus|Prismatic|4-2": {
+      "name": "Nesting Anvils+",
+      "description_hash": "bc46c02be9e25742d6291b29dc39d985646c070873e65b75d53dc1ff12bdf580",
+      "tags": [
+        "equipment",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "artifact"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_OneBuffTwoBuff||Prismatic|3-2,4-2": {
+      "name": "One Buff Two Buff",
+      "description_hash": "144a684ee977bf3db75ef30d569985a2e0a91b4abb47a8735f2a4b3adbb5333e",
+      "tags": [
+        "equipment",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_PandorasItemsI|CT_PandorasItems|Silver|2-1,3-2,4-2": {
+      "name": "Pandora's Items",
+      "description_hash": "47308a85aa44e59ea4f6a4f28d8499d02ca077713c0d93cdec8d6c76da32b6ad",
+      "tags": [
+        "equipment",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_PandorasItemsIIPlus|CT_PandorasItems|Gold|3-2": {
+      "name": "Pandora's Items II+",
+      "description_hash": "60b19b952cec84ed2566c5192f1b8cae6c83723a0699dc4fa59ac8de87356d9c",
+      "tags": [
+        "equipment",
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_PandorasItemsIII|CT_PandorasItems|Prismatic|2-1,3-2": {
+      "name": "Pandora's Items III",
+      "description_hash": "dba942e89fef43bb7d561036f7932211685fd7e445c3df4bc5ebd9d72dfc6699",
+      "tags": [
+        "equipment",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "radiant"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_Pilfer|CT_Pilfer|Gold|3-2": {
+      "name": "Pilfer",
+      "description_hash": "0975ba4286a8ff7ca8bd02d6dc5a1416659cc734b5e2135a85b076f0344f0350",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_PortableForge||Gold|2-1,3-2,4-2": {
+      "name": "Portable Forge",
+      "description_hash": "997b83afb46d9a8354a120f3e90f5b7e1fff74cfe4f614f71443ca6d9c2c9705",
+      "tags": [
+        "equipment"
+      ],
+      "details": {
+        "equipment": [
+          "artifact"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_PromisedProtection|CT_PromisedProtection|Gold|2-1,3-2": {
+      "name": "Promised Protection",
+      "description_hash": "c4729165e670666976feab06daf08d804740fc9066249f38d2b0b242dd2ef50b",
+      "tags": [
+        "equipment",
+        "combat"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_RadiantRascal|CT_RadiantRascal|Prismatic|3-2,4-2": {
+      "name": "Radiant Rascal",
+      "description_hash": "d8d16011759e67a4719cc066c17ad65375695dce3bbbff1f48fcb3c859ccce5c",
+      "tags": [
+        "equipment"
+      ],
+      "details": {
+        "equipment": [
+          "radiant"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_RadiantRelic||Prismatic|2-1,3-2,4-2": {
+      "name": "Radiant Relics",
+      "description_hash": "48142a64a1954e0069f32c69c5dc0469085ed52fe76fcf1159891d7273b2a3bb",
+      "tags": [
+        "equipment"
+      ],
+      "details": {
+        "equipment": [
+          "radiant",
+          "utility"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_Recombobulator|CT_Recombobulator|Silver|3-2": {
+      "name": "Recombobulator",
+      "description_hash": "8ec43c06e919fb9a107c00b7f46cca164cee33852e7e7cad85d33a98167fdd17",
+      "tags": [
+        "economy",
+        "strategy",
+        "units",
+        "equipment"
+      ],
+      "details": {
+        "equipment": [
+          "utility"
+        ],
+        "economy": [
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_Replication|CT_Replication|Gold|2-1,3-2": {
+      "name": "Replication",
+      "description_hash": "b9eb254c5e3713d00482365ffeb8b96a87c9e417c2faf43baeaa58756182801a",
+      "tags": [
+        "equipment",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_Retribution|CT_Retribution|Prismatic|3-2,4-2": {
+      "name": "Retribution",
+      "description_hash": "f6411daf55ff4084c0abead7b05fc9527a2dee8d9e35ac6363d19e5e74f9dadb",
+      "tags": [
+        "equipment",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_SalvageBin|CT_SalvageBin|Gold|2-1": {
+      "name": "Salvage Bin",
+      "description_hash": "2332a5e3f49fee95bf91f96704aa25249b732908e3e2e55c7b4e90715a3820cc",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_SalvageBinPlus|CT_SalvageBin|Gold|3-2,4-2": {
+      "name": "Salvage Bin+",
+      "description_hash": "f5badfa4cea374b9b68cc8e728cad38f92739106be21e4ca49528bd3b20b0ede",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_SeraphimsStaff|CT_SeraphimsStaff|Gold|2-1,3-2": {
+      "name": "Seraphim's Staff",
+      "description_hash": "c33d43cbbc9264b84171a668d34334382ef4b7695affbfc5f89ab2f828fa76b3",
+      "tags": [
+        "equipment",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_ShimmerscaleEssence|CT_ShimmerscaleEssence|Prismatic|2-1": {
+      "name": "Shimmerscale Essence",
+      "description_hash": "d239b930b9c74f64ed29c66b247c5a7a15662e88a27a5920f6c6b50e801b51ad",
+      "tags": [
+        "equipment",
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "artifact"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_Slammin|CT_Slammin|Gold|2-1": {
+      "name": "Slammin'",
+      "description_hash": "6bf42b5ea9353894b39f8d6e0b2cfba9a2ebc5efe191bbd5b2070fa8936051c4",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Items",
+        "Econ"
+      ]
+    },
+    "DA_SlamminPlus|CT_Slammin|Gold|3-2": {
+      "name": "Slammin'+",
+      "description_hash": "57047b2a2473bfae0935d2bc9efcd4c85603dd796596a914b716d18918bad6bf",
+      "tags": [
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold",
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Items",
+        "Econ"
+      ]
+    },
+    "DA_SmallGrabBag|CT_SmallGrabBag|Silver|3-2,4-2": {
+      "name": "Small Grab Bag",
+      "description_hash": "a9782f11822b17ad71861c9f3ea7cd8e3c23df40089c44fa4e7a137e7c961619",
+      "tags": [
+        "equipment"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_SoloLeveling|CT_SoloLeveling|Gold|2-1": {
+      "name": "Solo Leveling",
+      "description_hash": "d6875be22df2d012e17448bf9e8218f4f0d4895afa22b26143d7b0c9486ff25f",
+      "tags": [
+        "equipment",
+        "combat",
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "xp"
+        ]
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_SoloPlate|CT_SoloPlate|Gold|2-1,3-2": {
+      "name": "Solo Plate",
+      "description_hash": "f37afed20a02f29dd79b14fa375d65c9f8ebd8ecf9ab16c51c0965210faef502",
+      "tags": [
+        "equipment",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_SpeedyDoubleKill|CT_SpeedyDoubleKill|Gold|2-1": {
+      "name": "Speedy Double Kill",
+      "description_hash": "4657da7fe9c3b2f004f0d84c25fda3ce018543925504ba2d5dd0b5fd4fc1dca4",
+      "tags": [
+        "equipment",
+        "economy",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_SpiritOfRedemption|CT_SpiritOfRedemption|Gold|2-1,3-2": {
+      "name": "Spirit Of Redemption",
+      "description_hash": "4dbc331fcdf36abf1489fdcaa0540513637dbdd8c8c6b3fb829a026f561add78",
+      "tags": [
+        "equipment",
+        "combat"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_SpreadingRoots|CT_SpreadingRoots|Gold|2-1": {
+      "name": "Spreading Roots",
+      "description_hash": "a4ad88e0cb2b36ca03625d52483919ee258c5b55e2b2f37149ead3d7993389d9",
+      "tags": [
+        "equipment",
+        "trait",
+        "growth"
+      ],
+      "details": {
+        "equipment": [
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items",
+        "Traits"
+      ]
+    },
+    "DA_SpreadingRootsPlus|CT_SpreadingRoots|Gold|3-2": {
+      "name": "Spreading Roots+",
+      "description_hash": "b12b7379a8679b2a1dd3d0160bd54295dc88b7a16bfa59c503105d5f7578e422",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "emblem"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items",
+        "Traits"
+      ]
+    },
+    "DA_SweetTreats|CT_SweetTreats|Prismatic|3-2,4-2": {
+      "name": "Sweet Treats",
+      "description_hash": "86b49a60bb6f16d1b677a7d31e5831e1aadd5726c30e93adf86065a9631701cb",
+      "tags": [
+        "equipment",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "artifact"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_SwordOverflow|CT_SwordOverflow|Prismatic|3-2,4-2": {
+      "name": "Sword Overflow",
+      "description_hash": "6a51481518f9745b4c5e8525a8586df79c437cdd4b298bfba4c6d25345ef87e2",
+      "tags": [
+        "equipment",
+        "combat"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_TacticiansKitchen|CT_TacticiansKitchen|Prismatic|2-1": {
+      "name": "Tactician's Kitchen",
+      "description_hash": "e06528efff8929064551c1aca67747c8f94077dff961d9068e4db83e26487eee",
+      "tags": [
+        "equipment",
+        "trait",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "emblem",
+          "tactician"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_TeamBuilding|CT_TeamBuilding|Silver|2-1,3-2": {
+      "name": "Team Building",
+      "description_hash": "58a23ad6625cc770d2449100f59a701616efb3e68498893f2f21943a1e586bc9",
+      "tags": [
+        "growth",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Econ"
+      ]
+    },
+    "DA_TheGoldenDragon|CT_TheGoldenDragon|Gold|3-2": {
+      "name": "The Golden Dragon",
+      "description_hash": "04b0aa91b763ed80d08e13b42cdf67915d890d556d4000591718715bf9db307c",
+      "tags": [
+        "equipment",
+        "combat",
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "artifact"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items",
+        "Strategic"
+      ]
+    },
+    "DA_TheTower|CT_TheTower|Silver|2-1,3-2,4-2": {
+      "name": "The Tower",
+      "description_hash": "64528db05a2aaea8507608b6b0e205066499b3b4b06beff79a1c32a2616f930e",
+      "tags": [
+        "combat",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_TheTraitTree|CT_TheTraitTree|Prismatic|2-1": {
+      "name": "The Trait Tree",
+      "description_hash": "5e4476dff8711f6519f4afbaa4a8b116714d8da1015d4caaaefbeefc668cce01",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "emblem"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_TheTraitTreePlus|CT_TheTraitTree|Prismatic|3-2": {
+      "name": "The Trait Tree+",
+      "description_hash": "dbc4a97d1cba07af7b99e4903e52bcf03f05a0f923ed2b80fe12df7a0f4ffdf6",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "emblem",
+          "utility"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_TraitLadder|CT_TraitLadder|Prismatic|2-1": {
+      "name": "Trait Ladder",
+      "description_hash": "12ea7a322c931912982eabb97fac7be713ccb694d1098598f5dcdb98f6682347",
+      "tags": [
+        "equipment",
+        "trait",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Strategic"
+      ]
+    },
+    "DA_URF|CT_URF|Gold|2-1,3-2,4-2": {
+      "name": "U.R.F",
+      "description_hash": "017d290415d2bccdccdb12ac61a38690ba898885ec1d4028fbfe27a2991b60c8",
+      "tags": [
+        "equipment",
+        "trait",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_UrfsGrabBag|CT_UrfsGrabBag|Prismatic|3-2,4-2": {
+      "name": "Urf's Grab Bag",
+      "description_hash": "7fd0266edb73dd2f2a2776441b3d1906c888ca4813af6eacb4176befa0a70967",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items",
+        "Traits"
+      ]
+    },
+    "DA_WandOverflow|CT_WandOverflow|Prismatic|3-2,4-2": {
+      "name": "Wand Overflow",
+      "description_hash": "361866a50d2967cf255a8690a49d86bf695144d6e412827d2a07121abd389b78",
+      "tags": [
+        "equipment",
+        "combat"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_Warpath|CT_Warpath|Gold|2-1": {
+      "name": "Warpath",
+      "description_hash": "10157ff0130579d41c2927cbade4355d87648f6a75db8c9019828949cda4f06c",
+      "tags": [
+        "equipment",
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_WeStickTogether|CT_WeStickTogether|Prismatic|2-1": {
+      "name": "We Stick Together",
+      "description_hash": "a7f3c1eabcf174b495da9cd7c8d3aa8e4d67f1b519d14c50d362c267b3965531",
+      "tags": [
+        "equipment",
+        "trait",
+        "combat",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_WovenMagic|CT_WovenMagic|Gold|2-1": {
+      "name": "Woven Magic",
+      "description_hash": "7c439a618f7d29b51217127024349365175b2b975be6ed3ab8fad78de12f0198",
+      "tags": [
+        "equipment",
+        "growth",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_Annie19_HeroAugment||Gold|2-1": {
+      "name": "Tibbers! I Can't See the Stage",
+      "description_hash": "9204c412b64a8a81a55f7c4d6e50db11970ceef1384f96c324c895f07d8d4fc5",
+      "tags": [
+        "combat",
+        "hero",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Elise19_HeroAugment||Silver|2-1": {
+      "name": "Bite Marks",
+      "description_hash": "95efada10a33b4f22d39d747fa0bc7c6f884768b840c9bc9b6c16925aa1200dd",
+      "tags": [
+        "combat",
+        "hero",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Kennen19_HeroAugment||Silver|2-1": {
+      "name": "He's Electric",
+      "description_hash": "98012461486255597cba06e5db5b25bab4805ff83eeb1ea53ac6386c6f722cab",
+      "tags": [
+        "combat",
+        "growth",
+        "hero",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Lillia19_HeroAugment||Silver|2-1": {
+      "name": "Dancin' n' Prancin'",
+      "description_hash": "4b2fdde4253df21b25f6ae441d7f75bd235fe5c569d42e32ab3c034368004af1",
+      "tags": [
+        "combat",
+        "hero",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Olaf19_HeroAugment||Silver|2-1": {
+      "name": "Axe Crescendo",
+      "description_hash": "8d1235f9accf3e86397b8a21818736288824686580093a5f2dbed1d18d12ff01",
+      "tags": [
+        "combat",
+        "hero",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Renekton19_HeroAugment||Gold|2-1": {
+      "name": "Lifeguard on Duty",
+      "description_hash": "d7294a58024d2b7fc63287f9a6a8c2198e13fe2c6c2b265fb4348393b822279f",
+      "tags": [
+        "combat",
+        "hero",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Sett19_HeroAugment||Silver|2-1": {
+      "name": "Punch Line",
+      "description_hash": "b8a9e41c67be925b8ba00fcabebcc3407fb4732db105aca8e94630b4157d8660",
+      "tags": [
+        "combat",
+        "hero",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_19_ArcanistCirclet||Prismatic|3-2,4-2": {
+      "name": "Arcanist Circlet",
+      "description_hash": "7cc21fa4a69749638f6c7555e02319178fa1d84d99e114ff9f5e1de85ef31240",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_ArcanistCrown||Prismatic|2-1": {
+      "name": "Arcanist Crown",
+      "description_hash": "7b98d2404b7bcf3fecba09f9909d81976864097af7568f560fe6b6c89e185158",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_ChoreographerCirclet||Prismatic|3-2,4-2": {
+      "name": "Choreographer Circlet",
+      "description_hash": "08135df031959ec4ad29b6257038de7b2100fb614b1c5d2e1043240052661302",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_ChoreographerCrown||Prismatic|2-1": {
+      "name": "Choreographer Crown",
+      "description_hash": "8cd6d148d46b8a093ef96f66662cd80c0a4bd633b2d5767ab7c329d10617223f",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Choreographer19_DanceParty|CT_Choreographer19_DanceParty|Gold|3-2": {
+      "name": "Dance Party",
+      "description_hash": "1a498678a15f067b415f0856c6feafef38e9af2748fe693d9ce9cd2caba39b31",
+      "tags": [
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_DemonVisionCirclet||Prismatic|3-2,4-2": {
+      "name": "Rock Circlet",
+      "description_hash": "9bdb010aac653cc81ed63180308082809ef70d0c521ef82b19ce5058897c11d5",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_DemonVisionCrown||Prismatic|2-1": {
+      "name": "Rock Crown",
+      "description_hash": "46923c5947c39930ca44bd05a54df45f8c25e094ae8cd341363e7d87fb7a4981",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_DemonVision19_Deathbringer|CT_DemonVision19_Deathbringer|Gold|2-1": {
+      "name": "Deathbringer",
+      "description_hash": "b3a110c6a2e97df4aef9640d4c38bd9410425355d1f28d9389761ae3fd47077f",
+      "tags": [
+        "trait",
+        "combat",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_DemonVision19_RockAllNite|CT_DemonVision19_RockAllNite|Gold|2-1,3-2,4-2": {
+      "name": "Rock All Nite",
+      "description_hash": "09859b9fea0a1b73ff2bdc90b880e93bbd771c8ae056530ff802759dc101d330",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Glitterbomb19_RerollExe|CT_Glitterbomb19_RerollExe|Gold|2-1": {
+      "name": "reroll.exe",
+      "description_hash": "31598fe9104d35db14bdb745009bf9ff64df38a78985107ad482e5df63c1b5b0",
+      "tags": [
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Augment19_Heartsteel_BigSolo|CT_Augment19_Heartsteel_BigSolo|Gold|2-1,3-2,4-2": {
+      "name": "Big Solo",
+      "description_hash": "0e0d728013b7da98d176850f39a4bda735f836aa5fef9573e3c95d8d5da2c2c9",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_HeartsteelCirclet||Prismatic|3-2,4-2": {
+      "name": "Heartsteel Circlet",
+      "description_hash": "37a88f118d2530a406798ab8b5d073a8872d9917b23e7255523d774673011a21",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_HeartsteelCrown||Prismatic|2-1": {
+      "name": "Heartsteel Crown",
+      "description_hash": "18780e33ea56f6bfdc8f66a681dcce42823cc0bfde444408f12f226a3735b7a2",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_HeartsteelPrismaticTour||Prismatic|2-1": {
+      "name": "Heartsteel Prismatic Tour",
+      "description_hash": "48730408a3c6854002b4e1430741f587cfe3d4ef0bc82c748f6230c8b9a464c5",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "strategy",
+        "prismatic-cap",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_HeartsteelPrismaticTourPlus||Prismatic|3-2,4-2": {
+      "name": "Heartsteel Prismatic Tour+",
+      "description_hash": "5326cd0ae1729d47e75772120f60650cd7498bfa4b1b40987ae73db4a0169650",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "strategy",
+        "prismatic-cap",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Augment19_Heartsteel_SmallSquad|CT_Augment19_Heartsteel_SmallSquad|Gold|2-1,3-2,4-2": {
+      "name": "Small Squad",
+      "description_hash": "0367b81208c425faf7b2527fe94ee8d93c6925354107fd5c87ec733b288ecdc3",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_Heavenscale19_TheImmortalJourney|CT_Heavenscale19_TheImmortalJourney|Prismatic|3-2": {
+      "name": "The Immortal Journey",
+      "description_hash": "f7f4cccf867a0cf007b8073b8b6e70fc4e5c9dd8790985a557393f0dfa8ba86b",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_HitmakerCirclet||Prismatic|3-2,4-2": {
+      "name": "Hitmaker Circlet",
+      "description_hash": "dca275230b10f11fec714862aadbdb89b020cd37ea108e23c1926c256ddd336b",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_HitmakerCrown||Prismatic|2-1": {
+      "name": "Hitmaker Crown",
+      "description_hash": "23ae2430e4b81e8ee111a854b9861bd4c7b5cd0103b27388bce5246f082b2f60",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_IllBeatsCirclet||Prismatic|3-2,4-2": {
+      "name": "Illbeats Circlet",
+      "description_hash": "bccd8e486385a277d8d35c7555f56c0a0cbce9c739fa36924be3cfd0a7b77d29",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_IllBeatsCrown||Prismatic|2-1": {
+      "name": "Illbeats Crown",
+      "description_hash": "1bf7027239c1969f0ffb07e3353a3f2ee23cd198b5ee56a83a54c24b992283f8",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_IonicSparkCirclet||Prismatic|3-2,4-2": {
+      "name": "Ionic Spark Circlet",
+      "description_hash": "3f4e7686a80a09ca7caf83269956badd4181e6d34f96b5592f43546ed436ad38",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_IonicSparkCrown||Prismatic|2-1": {
+      "name": "Ionic Spark Crown",
+      "description_hash": "8f9a47254ea453ff52bb724bbb22af0f83c0137dda5c4e3c44654bb31fe19121",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_IonicSpark19_ForeverBurningBrighter|CT_IonicSpark19_ForeverBurningBrighter|Gold|2-1": {
+      "name": "Forever Burning Brighter",
+      "description_hash": "c0e3e8395a7f8e2fc55f53e99695dac6d2cc30211495dfdb3ab6d1822a459600",
+      "tags": [
+        "trait",
+        "combat",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_IonicSparkPrismaticTour||Prismatic|2-1": {
+      "name": "Ionic Spark Prismatic Tour",
+      "description_hash": "dc03f811c4e0232842ef98a678d4f8c0d0b85694a08bd2c5a3c17b1849fa2d0a",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "prismatic-cap",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_IonicSparkPrismaticTourPlus||Prismatic|3-2,4-2": {
+      "name": "Ionic Spark Prismatic Tour+",
+      "description_hash": "fc45dd06764da3941a2c5ccaac5624fe48059d8ce1cfe7ac0256b445e6844bce",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "prismatic-cap",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_IonicSpark19_LightUpTheSky|CT_IonicSpark19_LightUpTheSky|Gold|2-1,3-2,4-2": {
+      "name": "Light up the Sky",
+      "description_hash": "018089f51f6438bb4242de3cafde965105c163e635b8f6926aea66b26ac54eec",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_IonicSpark19_OurHeartsAligned|CT_IonicSpark19_OurHeartsAligned|Gold|3-2,4-2": {
+      "name": "Our Hearts Aligned",
+      "description_hash": "e87ea1ea6a6e95f4788dcb3e4985716e2e37447960d4411f5ce473b761288169",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_JazzCirclet||Prismatic|3-2,4-2": {
+      "name": "Jazz Circlet",
+      "description_hash": "542a3599a8290ed7b3044c54890114c8c6ca767ff2f432ab3505971e78bb5a41",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_JazzCrown||Prismatic|2-1": {
+      "name": "Jazz Crown",
+      "description_hash": "5166d2dbb3fdc9a2322371fa63b83d33546f51005deeb086a4c0c608c3b77fc2",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Jazz19_DigOnThis|CT_Jazz19_DigOnThis|Gold|2-1,3-2": {
+      "name": "Dig on This",
+      "description_hash": "9f194288eed128736e7dea32d32af2dff390abc79961954eb18b4993840eec13",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_KDACirclet||Prismatic|3-2,4-2": {
+      "name": "K/DA Circlet",
+      "description_hash": "980c1d7e1d3d1c471f849e43b8e501c35ce2921d7c0131a1b9fd855b3710927b",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_KDACrown||Prismatic|2-1": {
+      "name": "K/DA Crown",
+      "description_hash": "d790bde7e92cd64330957b335a9d28dd52095a1e3f4740597505cb2105c2e636",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_KDAPrismaticTour|CT_KDA19_PrismaticQuest|Prismatic|2-1": {
+      "name": "K/DA Prismatic Tour",
+      "description_hash": "e3b465166171d8942111f87d714712c1040f8276b474e8a6f3710b3910ae0c8c",
+      "tags": [
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "prismatic-cap",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_KDAPrismaticTourPlus|CT_19_KDAPrismaticTourPlus|Prismatic|3-2": {
+      "name": "K/DA Prismatic Tour+",
+      "description_hash": "ac810e29f35a1e84cd8e9f20ac6084370b295908a1672550c8b46c40c1fd44db",
+      "tags": [
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "prismatic-cap",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "rerolls"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_KDA19_RunningWild|CT_KDA19_RunningWild|Gold|3-2,4-2": {
+      "name": "Running Wild",
+      "description_hash": "0756a1ada9573ec13882ef166da47869000691cb5de6cff136551bf93b569a91",
+      "tags": [
+        "equipment",
+        "trait",
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_KDA19_StarPower|CT_KDA19_StarPower|Gold|2-1": {
+      "name": "Star Power",
+      "description_hash": "82c4aeeb2186b480a15eb72c5ea064baebab676c0f4e62c0620ee0c127ef7120",
+      "tags": [
+        "trait",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Augment19_Manager_ManagementTrack|CT_Augment19_Manager_ManagementTrack|Prismatic|3-2": {
+      "name": "Management Track",
+      "description_hash": "3af7dbea5bccdda675a6f403a593c13a17805641d5a4242243e43c6deb97b1a3",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Augment19_Manager_ManagementTrackPlus|CT_Augment19_Manager_ManagementTrackPlus|Prismatic|4-2": {
+      "name": "Management Track+",
+      "description_hash": "abdf9ba25e50d2d286190e84946b98a5f8a88bc2233a406c104c831856165cad",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Augment19_Manager_StakeholderMeeting|CT_Augment19_Manager_StakeholderMeeting|Gold|3-2": {
+      "name": "Stakeholder Management",
+      "description_hash": "e7ac7c626b5642838e62d894535e65f03f9b575d988d68541d4b04250404b9f7",
+      "tags": [
+        "trait",
+        "combat",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Augment19_Manager_StakeholderMeetingLate|CT_Augment19_Manager_StakeholderMeeting|Gold|4-2": {
+      "name": "Stakeholder Management+",
+      "description_hash": "bd4cd8ac69de2c64b2b710afc65d99087757897b446a6dbea04438edb2120972",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Combat"
+      ]
+    },
+    "DA_19_MosherCirclet||Prismatic|3-2,4-2": {
+      "name": "Slayer Circlet",
+      "description_hash": "5b83b3454bd325361cc0f6c4d7043b4eec970ebe74eb0421ab3292675e8f4cf9",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_MosherCrown||Prismatic|2-1": {
+      "name": "Slayer Crown",
+      "description_hash": "06eaeec0932039258c8d525a4fdade269422affbadaa7a3e1e6fa7cee73e0340",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_OceanSongCirclet||Prismatic|3-2,4-2": {
+      "name": "Beach Pop Circlet",
+      "description_hash": "615a6668f5760a6769faf50e36213c7d3a4dda5dded475b147b445a51588212b",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_OceanSongCrown||Prismatic|2-1": {
+      "name": "Beach Pop Crown",
+      "description_hash": "41c997e5af8598b8c28834143290380a9215845842298e9a777747cf23bb6b35",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Oceansong19_EconAugment|CT_Oceansong19_EconAugment|Prismatic|2-1": {
+      "name": "Unearthed Treasure",
+      "description_hash": "c63811baf88091c252da43610df6f0bc1cc9c1954168b71000dd28859e40163c",
+      "tags": [
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_PentakillCirclet||Prismatic|3-2,4-2": {
+      "name": "Pentakill Circlet",
+      "description_hash": "06eda3767466098eb69a3a77673f4a2f2c69acc75a5bb6394dd77ff2e924e164",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_PentakillCrown||Prismatic|2-1": {
+      "name": "Pentakill Crown",
+      "description_hash": "c5d239df92963d8b26f06e2261dc776edb2c8bf3223bdb38f8af94a14a4a124b",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Pentakill19_GatheringStorm|CT_Pentakill19_GatheringStorm|Gold|2-1": {
+      "name": "Gathering Storm",
+      "description_hash": "8f78cea51524da82707cc9e8ed576a03011e91dde780a79db1c93e42814a219c",
+      "tags": [
+        "trait",
+        "combat",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_PentakillPrismaticTour||Prismatic|2-1": {
+      "name": "Pentakill Prismatic Tour",
+      "description_hash": "1aa21fde419970608b93ca0544af848ee5171081866cbd3164379f7f3ba044c0",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "prismatic-cap",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_PentakillPrismaticTourPlus||Prismatic|3-2,4-2": {
+      "name": "Pentakill Prismatic Tour+",
+      "description_hash": "72054338a05da7d53005859a9cfb5d7df5fdb822c0ab2a0cd0f242c68a9d2bcf",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "prismatic-cap",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_RenegadeCirclet||Prismatic|3-2,4-2": {
+      "name": "Renegade Circlet",
+      "description_hash": "771bbe5d51191af0696a876016ee93fcc662b38b4698c97b28fdd37d65cbf1a2",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_RenegadeCrown||Prismatic|2-1": {
+      "name": "Renegade Crown",
+      "description_hash": "65966dc9d982b9db93b4e261f9acc8ecae66e68a51d3e04c49da19b1cb7401bb",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Renegade19_HighRolling|CT_Renegade19_HighRolling|Gold|2-1,3-2": {
+      "name": "High Rolling",
+      "description_hash": "bac36a4f986c4a4c324e3e6c23f5d6d72c4f7755a2edf075a53fa0f4345f5417",
+      "tags": [
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_SwiftstrikerCirclet||Prismatic|3-2,4-2": {
+      "name": "Swiftstriker Circlet",
+      "description_hash": "f25d23ee4afeb7aa529add20171960cabf99d17b1f26101736ac3b97b47d2e71",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_SwiftstrikerCrown||Prismatic|2-1": {
+      "name": "Swiftstriker Crown",
+      "description_hash": "0ec2ee273eed1390f2f90f2f94e66061b41984e9639c3533c8011803f04cf924",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Swiftstriker19_DeathByAThousandCuts|CT_Swiftstriker19_DeathByAThousandCuts|Gold|2-1": {
+      "name": "Death by a Thousand Cuts",
+      "description_hash": "79a39c7f75db58ac86e4ad357cddac89ed5923a030e5ec23d14fe860cbabc3bf",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_TrueDamageCirclet||Prismatic|3-2,4-2": {
+      "name": "True Damage Circlet",
+      "description_hash": "ae8def98902cae47c844cf5b1aac21157c66255d65f128ba8af5901d40395e6c",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_TrueDamageCrown||Prismatic|2-1": {
+      "name": "True Damage Crown",
+      "description_hash": "ca9710c227709bf5e0f8050cbefb9364be69236db64b3cba2888add4ef982eb9",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_TrueDamage19_PainIntoPassion|CT_TrueDamage19_PainIntoPassion|Prismatic|2-1": {
+      "name": "Pain into Passion",
+      "description_hash": "eaee9e3c0d08259668263d69b42d4f22ddb680d51aaf5aa6ddb37496e816c52d",
+      "tags": [
+        "trait",
+        "combat",
+        "economy",
+        "growth",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_TrueDamagePrismaticTour||Prismatic|4-2": {
+      "name": "True Damage Prismatic Tour",
+      "description_hash": "9d60edb06ca83bb98c025d3474e5fcab80fb9bcecd002ea2979dbb6d61e66875",
+      "tags": [
+        "equipment",
+        "trait",
+        "economy",
+        "growth",
+        "strategy",
+        "prismatic-cap",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_Classical19_CombatAugment|CT_Classical19_CombatAugment|Gold|2-1,3-2,4-2": {
+      "name": "Immortalized in Theater",
+      "description_hash": "cd7ea72b6e64350fdc2b95d766977a69da87136ace84fde1c0bdc557f49c1ab8",
+      "tags": [
+        "trait",
+        "combat",
+        "strategy",
+        "units"
+      ],
+      "details": {
+        "equipment": [],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_VirtuososCirclet||Prismatic|3-2,4-2": {
+      "name": "Classical Circlet",
+      "description_hash": "e93405287013c1d59183ede08ab096c1158512c2614eccec9e1094a084d19bd8",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    },
+    "DA_19_VirtuososCrown||Prismatic|2-1": {
+      "name": "Classical Crown",
+      "description_hash": "b2c1a0931a8dceb75f8268a0a92753f06f17f36e5155babb93199232d5a18177",
+      "tags": [
+        "equipment",
+        "trait",
+        "units"
+      ],
+      "details": {
+        "equipment": [
+          "completed",
+          "emblem"
+        ],
+        "economy": []
+      },
+      "reference_tags": [
+        "Traits"
+      ]
+    }
+  }
+}
