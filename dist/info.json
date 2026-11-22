@@ -1467,8 +1467,8 @@
       "mana": "40/100",
       "description": "Passive: Periodically Captivate the farthest enemy who isn’t already Captivated.\n\nActive: Heal, then drain max Health from nearby enemies over time. While draining, gain Durability. Captivated enemies grant bonuses to Classical champions.",
       "description_zh": "生命低於瑟雷西的敵軍對其造成傷害時，會被迷倒。主動治療自己，並從附近敵軍汲取最大生命。",
-      "unlock": "Have enemies spend the required number of seconds Captivated by Classical.",
-      "unlock_zh": null,
+      "unlock": "Have enemies spend 275 seconds Captivated by Classical.",
+      "unlock_zh": "敵人受到古典樂迷倒的時間累計達 275 秒。",
       "full_description": "被動：敵軍對瑟雷西造成傷害時，若其當前生命低於瑟雷西，則遭到迷倒，持續12秒。\n\n主動：回復350/450/2000生命。接著，在3秒內從最多3位鄰近敵軍汲取80/100/1200最大生命。\n\n古典樂單位會迷倒敵軍，造成額外效果。",
       "full_mana": "40/100",
       "source_missing_values": false,
@@ -1480,7 +1480,7 @@
         "DA_WarmogsArmor"
       ],
       "full_unlock": [
-        "Have enemies spend 300 seconds Captivated by Classical."
+        "Have enemies spend 275 seconds Captivated by Classical."
       ],
       "recommendation_source": "https://www.metatft.com/units/Thresh19?set=TFTSet19",
       "recommendation_status": "available"
@@ -1566,8 +1566,8 @@
       "mana": "0/30",
       "description": "Dash and thrust forward, dealing physical damage to enemies in a line. Every third cast, knock up the target and deal physical damage, then slam them down, dealing physical damage to nearby enemies.",
       "description_zh": "衝刺並突刺直線敵軍。每第三次施放擊飛目標，隨後摔落目標，對附近敵軍造成物理傷害。",
-      "unlock": "Field the required number of star levels of True Damage and Slayer champions.\nLevel 7",
-      "unlock_zh": null,
+      "unlock": "Field 6 unique star levels of True Damage or Slayer champions.\nLevel 7",
+      "unlock_zh": "等級 7，派出 True Damage 或殺戮者棋子，不同棋子的星級合計達 6 星。",
       "full_description": "衝刺並向前突刺，對一條直線上的敵人造成165/250/1400物理傷害。每第3次施放時，擊飛目標並造成400/600/2500物理傷害。\n\n然後將他們猛力摔下，對1格內的敵人造成210/315/1700物理傷害。",
       "full_mana": "0/30",
       "source_missing_values": false,
@@ -1580,7 +1580,7 @@
       ],
       "full_unlock": [
         "Level 7",
-        "7 unique star levels of True Damage or Slayer Champions."
+        "6 unique star levels of True Damage or Slayer Champions."
       ],
       "recommendation_source": "https://www.metatft.com/units/Yasuo19?set=TFTSet19",
       "recommendation_status": "available"
