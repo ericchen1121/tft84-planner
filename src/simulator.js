@@ -1,5 +1,6 @@
 const SIMULATOR_RULES=JSON.parse(document.getElementById('simulator-rules').textContent);
 const simulatorUI={value:emptySimulator(),selected:null,history:[],palette:'units',pickerSlot:0,pickerPage:0,pickerPageSize:18};
+function simulatorCostColor(cost){return ({1:'#9ca3af',2:'#4ade80',3:'#60a5fa',4:'#c084fc',5:'#facc15'})[cost]||rarity[cost]||rarity[1];}
 function simulatorContext(){return {units:DATA.units,traits:DATA.traits,items:EQUIPMENT.items,augments:AUGMENTS.augments,rules:SIMULATOR_RULES};}
 function simulatorSave(){try{localStorage.setItem('eightfold-simulator-v1',JSON.stringify(simulatorUI.value));}catch{}}
 function simulatorApply(action){
@@ -52,7 +53,7 @@ function renderSimulatorBoard(){
  const value=simulatorUI.value,context=simulatorContext(),summary=simulatorTraits(value,context),fragment=document.createDocumentFragment();
  for(let cell=0;cell<SIMULATOR_CELLS;cell++){
   const row=Math.floor(cell/7),col=cell%7,placed=value.board[cell],unit=placed?DATA.units.find(u=>u.id===placed.unitId):null;
-  const hex=el('button','sim-cell'+(placed?' occupied':'')+(simulatorUI.selected===cell?' selected':''));hex.id='sim-cell-'+cell;hex.type='button';hex.dataset.row=String(row);hex.dataset.cell=String(cell);hex.style.gridColumn=(col*2+1+row%2)+' / span 2';hex.style.gridRow=String(row+1);hex.setAttribute('aria-pressed',String(simulatorUI.selected===cell));
+  const hex=el('button','sim-cell'+(placed?' occupied':'')+(simulatorUI.selected===cell?' selected':''));hex.id='sim-cell-'+cell;hex.type='button';hex.dataset.row=String(row);hex.dataset.cell=String(cell);hex.style.gridColumn=(col*2+1+row%2)+' / span 2';hex.style.gridRow=String(row+1);hex.setAttribute('aria-pressed',String(simulatorUI.selected===cell));if(unit){hex.dataset.cost=String(unit.cost);hex.style.setProperty('--sim-cost-color',simulatorCostColor(unit.cost));}
   hex.setAttribute('aria-label',placed?t('Row {row}, hex {col}: {name}, {stars} stars',{row:row+1,col:col+1,name:unitLabel(unit),stars:placed.stars}):t('Row {row}, hex {col}: empty',{row:row+1,col:col+1}));
   const inner=el('span','sim-hex-inner');hex.append(inner);
   if(unit){
@@ -95,7 +96,7 @@ function renderSimulatorPalette(){
  if(!equipment){
   const cost=Number($('sim-unit-cost').value),trait=$('sim-unit-trait').value;
   for(const unit of [...DATA.units].sort((a,b)=>a.cost-b.cost||a.name.localeCompare(b.name))){if(cost&&unit.cost!==cost||trait&&!unit.traits.includes(trait)||!query.every(word=>(unitSearchText(unit)+' '+traitSearchText(unit.traits)).toLowerCase().includes(word)))continue;count++;
-   const card=el('button','sim-palette-card');card.type='button';card.dataset.unitId=unit.id;card.setAttribute('aria-label',t('Add {name} to board',{name:unitLabel(unit)}));card.append(portrait(unit));card.addEventListener('click',()=>simulatorApply({type:'add',unitId:unit.id,cell:simulatorUI.selected!==null&&!simulatorUI.value.board[simulatorUI.selected]?simulatorUI.selected:undefined}));simulatorDrag(card,{kind:'unit-palette',unitId:unit.id});fragment.append(card);
+   const card=el('button','sim-palette-card');card.type='button';card.dataset.unitId=unit.id;card.dataset.cost=String(unit.cost);card.style.setProperty('--sim-cost-color',simulatorCostColor(unit.cost));card.setAttribute('aria-label',t('Add {name} to board',{name:unitLabel(unit)}));card.append(portrait(unit));card.addEventListener('click',()=>simulatorApply({type:'add',unitId:unit.id,cell:simulatorUI.selected!==null&&!simulatorUI.value.board[simulatorUI.selected]?simulatorUI.selected:undefined}));simulatorDrag(card,{kind:'unit-palette',unitId:unit.id});fragment.append(card);
   }
  }else{
   const rows=filterEquipment(EQUIPMENT.items,{query:$('sim-query').value,category:$('sim-item-category').value},getLanguage()).filter(i=>SIMULATOR_RULES.equipmentIds.includes(i.id));
