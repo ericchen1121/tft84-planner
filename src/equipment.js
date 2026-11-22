@@ -1,9 +1,9 @@
 const EQUIPMENT=JSON.parse(document.getElementById('equipment-data').textContent);
 const equipmentUI={page:0,pageSize:24,selected:null};
 const equipmentById=new Map(EQUIPMENT.items.map(a=>[a.id,a]));
-const equipmentColors={normal:'#8dbbff',radiant:'#f1d585',emblem:'#8ed7c4',artifact:'#d5a4f3',component:'#a6b6ce',support:'#76d3eb',other:'#c7b7a0'};
+const equipmentColors={normal:'#8dbbff',radiant:'#facc15',emblem:'#8ed7c4',artifact:'#f97316',component:'#a6b6ce',support:'#76d3eb',other:'#c7b7a0'};
 function itemDescription(a){return equipmentText(a,getLanguage()).replaceAll('[unavailable]',t('[unavailable]')).replaceAll('[current game value]',t('Current game value')).replaceAll('[source values differ]',t('Unconfirmed value'));}
-function equipmentIcon(a,recipe=false){const box=el('span','equipment-icon'+(recipe?' recipe-icon':'')),fallback=el('span','equipment-icon-fallback','◇');box.title=equipmentName(a,getLanguage());box.append(fallback);const image=new Image();image.alt=equipmentName(a,getLanguage());image.loading='lazy';image.src=a.image;image.addEventListener('load',()=>{fallback.hidden=true;});image.addEventListener('error',()=>image.remove());box.append(image);return box;}
+function equipmentIcon(a,recipe=false){const box=el('span','equipment-icon'+(recipe?' recipe-icon':'')),fallback=el('span','equipment-icon-fallback','◇');box.dataset.itemCategory=a.category;box.title=equipmentName(a,getLanguage());box.append(fallback);const image=new Image();image.alt=equipmentName(a,getLanguage());image.loading='lazy';image.src=a.image;image.addEventListener('load',()=>{fallback.hidden=true;});image.addEventListener('error',()=>image.remove());box.append(image);return box;}
 function equipmentRecipe(a){
  const row=el('div','equipment-recipe');
  if(!a.recipe.length){row.append(el('span','equipment-no-recipe',t(a.category==='component'?'Item component':'No component recipe')));return row;}
