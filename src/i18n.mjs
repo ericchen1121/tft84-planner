@@ -205,6 +205,7 @@ export const UI_ZH=Object.freeze({
   "{n} available":"共 {n} 項",
   "Select {name}":"選擇 {name}",
   'Champions':'棋子','Items':'裝備','All equipment':'全部裝備',
+  'Add champions to the board before copying.':'先將棋子放到棋盤，再複製陣容碼。','Repeated champions are exported once.':'重複棋子只匯出一次。',
   'Copy team code':'複製陣容碼','Team code':'陣容碼','Close team code':'關閉陣容碼',
   'Exports champions only; positioning, items and trait bonuses are not included.':'僅匯出棋子名單，不包含站位、裝備及轉職／羈絆加成。',
   'Team codes support at most 10 champions.':'陣容碼最多支援 10 位棋子。',
