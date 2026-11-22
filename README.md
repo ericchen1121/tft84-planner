@@ -190,3 +190,7 @@ Run npm run refresh:augments to fetch and rebuild this dataset. dist/augments.js
 The Equipment tab retains all 159 source entries: 36 normal, 36 radiant, 22 emblem, 33 artifact, 10 component, 4 support and 18 special entries. It has bilingual effect/name/component search, category/craftability/component filters, 24-card pages and detail dialogs. All 55 explicit recipes show ingredient icons plus a result icon; repeated ingredients remain duplicated. Radiant from/upgrade links are navigation only, never inferred component recipes. Source text, tags, stats and curves remain auditable in dist/equipment.json; run npm run refresh:equipment to update.
 
 Actual augment artwork is tinted by rarity in cards and dialogs: grayscale silver, warm gold, and the original saturated prismatic colors. The tier name and border remain visible as additional cues.
+
+## Augment effect tags
+
+All 371 variants now have reviewed multi-label categories, shared with the web UI: ten colors, any/all tag filters, and equipment subtypes. Champion resource grants and Tactician health are separate categories. Prismatic trait quests are separate from augment rarity; hero upgrades require champion ability/role changes. `dist/augment-tags.json` records variant identities, reviewed description hashes, and MetaTFT reference categories. New or changed effects require review before building. These are editorial classifications based on the source effects, not official Riot labels.
