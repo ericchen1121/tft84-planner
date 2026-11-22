@@ -66,6 +66,10 @@ function renderSimulatorBoard(){
   hex.addEventListener('keydown',event=>{if((event.key==='Delete'||event.key==='Backspace')&&placed){event.preventDefault();simulatorApply({type:'remove',cell});}});
   hex.addEventListener('dragover',event=>{if(simulatorCanDrop(event)){event.preventDefault();hex.classList.add('drag-over');}});hex.addEventListener('dragleave',()=>hex.classList.remove('drag-over'));hex.addEventListener('drop',event=>simulatorDropCell(event,cell));fragment.append(hex);
  }
+ const ids=[...new Set(value.board.filter(Boolean).map(placed=>placed.unitId))],team=ids.map(id=>DATA.units.find(unit=>unit.id===id)),copy=teamCodeButton(team);copy.id='sim-copy-code-button';copy.classList.add('outline-button');
+ if(!team.length)copy.title=t('Add champions to the board before copying.');
+ if(ids.length<summary.champions)copy.title+=' · '+t('Repeated champions are exported once.');
+ $('sim-copy-team-code').replaceChildren(copy);
  $('sim-board').replaceChildren(fragment);$('sim-board-count').textContent=t('{champions} champions · {population} population',{champions:summary.champions,population:summary.population});$('sim-undo').disabled=!simulatorUI.history.length;
  const traits=document.createDocumentFragment();for(const trait of summary.rows){const line=el('div','sim-trait'+(trait.tier?' active':''));const icon=el('span');if(ART.traits[trait.name]?.url){const image=new Image();image.src=ART.traits[trait.name].url;image.alt='';image.loading='lazy';image.addEventListener('error',()=>image.remove());icon.append(image);}const name=el('span','',traitLabel(trait.name));name.append(el('small','',trait.breakpoints.join(' / ')));line.append(icon,name,el('b','',String(trait.count)+(trait.name==='K|DA'?'★':'')));line.title=t('Active tier {tier} · Next {next}',{tier:trait.tier,next:trait.next||'—'});traits.append(line);}
  $('sim-trait-list').replaceChildren(traits);$('sim-trait-empty').hidden=summary.rows.length>0;renderSimulatorInspector();

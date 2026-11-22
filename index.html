@@ -243,6 +243,8 @@ html[lang="zh-Hant"] .eyebrow,html[lang="zh-Hant"] .stat-card small{letter-spaci
 @media(max-width:1100px){.sim-layout{grid-template-columns:155px minmax(0,1fr) 205px;gap:12px}.sim-sidebar .sim-traits,.sim-sidebar .sim-inspector,.sim-layout>.sim-augments{padding:12px}.sim-trait{grid-template-columns:22px minmax(0,1fr) auto;gap:5px;padding:6px}.sim-trait img{width:21px;height:21px}}
 @media(max-width:900px){.sim-layout{grid-template-columns:minmax(0,1fr) 205px}.sim-layout>.sim-board-shell{grid-column:1;grid-row:1}.sim-layout>.sim-augments{grid-column:2;grid-row:1}.sim-sidebar{grid-column:1/-1;grid-row:2;grid-template-columns:1fr 1fr;align-items:start}.sim-sidebar .sim-traits{max-height:260px}.sim-trait-list{grid-template-columns:1fr}}
 @media(max-width:600px){.sim-layout{grid-template-columns:1fr}.sim-layout>.sim-augments{grid-column:1;grid-row:2}.sim-layout>.sim-augments .sim-augment-slots{grid-template-columns:repeat(3,minmax(0,1fr))}.sim-layout>.sim-augments .sim-augment-choice{padding:10px 5px}.sim-sidebar{grid-row:3;grid-template-columns:1fr}.sim-sidebar .sim-traits{max-height:230px}.sim-trait-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.sim-actions .copy-team-code{padding:10px 14px;font:inherit;border:1px solid #5d513a;border-radius:7px}.sim-actions .copy-team-code:disabled{opacity:.45}
 </style>
 </head>
 <body>
@@ -322,7 +324,7 @@ html[lang="zh-Hant"] .eyebrow,html[lang="zh-Hant"] .stat-card small{letter-spaci
  </section>
 
 <section id="simulator-panel" role="tabpanel" aria-labelledby="tab-simulator" hidden>
- <div class="sim-heading"><div><span class="eyebrow">YOUR LINEUP, YOUR STAGE</span><h1>Lineup simulator</h1><p>Click or drag champions onto the board. Select a champion to set 1–4 stars.</p></div><div class="sim-actions"><button id="sim-undo" type="button" class="outline-button" disabled>Undo</button><button id="sim-clear" type="button" class="outline-button">Clear board</button></div></div>
+ <div class="sim-heading"><div><span class="eyebrow">YOUR LINEUP, YOUR STAGE</span><h1>Lineup simulator</h1><p>Click or drag champions onto the board. Select a champion to set 1–4 stars.</p></div><div class="sim-actions"><span id="sim-copy-team-code"></span><button id="sim-undo" type="button" class="outline-button" disabled>Undo</button><button id="sim-clear" type="button" class="outline-button">Clear board</button></div></div>
  <div class="sim-layout"><div class="sim-sidebar"><aside class="sim-traits"><h2>Board traits</h2><div id="sim-trait-list" class="sim-trait-list" aria-live="polite"></div><p id="sim-trait-empty" class="field-hint">Add champions to see their traits.</p><p class="field-hint">K/DA counts star levels. Duplicate champions count once per trait. Quest unlock conditions still apply.</p></aside><section id="sim-inspector" class="sim-inspector" aria-label="Selected champion"></section></div><div class="sim-board-shell"><div class="sim-board-heading"><strong>Planning board</strong><span id="sim-board-count" aria-live="polite"></span></div><div class="sim-board-scroll"><div id="sim-board" class="sim-board" role="group" aria-label="Four-row hex board"></div></div><p class="sim-board-help">Drag to move or swap. Select a champion, then click an empty hex to move. Drag back to the lower area to remove.</p></div><section class="sim-augments"><h2>Three augments</h2><div id="sim-augment-slots" class="sim-augment-slots"></div><p class="field-hint">Traits follow champions, stars and emblems. Place augment rewards on the board manually.</p></section></div>
  <section id="sim-palette" class="sim-palette"><div id="sim-delete-zone" class="sim-delete-zone">Drag board champions or equipped items back here to remove them</div><div class="sim-palette-toolbar"><div class="sim-palette-tabs" role="group" aria-label="Board catalog"><button type="button" id="sim-tab-units" aria-pressed="true">Champions</button><button type="button" id="sim-tab-items" aria-pressed="false">Items</button></div><input id="sim-query" type="search" aria-label="Search board catalog" placeholder="Search champions, traits or items"><select id="sim-unit-cost" aria-label="Champion cost"></select><select id="sim-unit-trait" aria-label="Champion trait"></select><select id="sim-item-category" aria-label="Equipment category" hidden></select></div><div id="sim-catalog" class="sim-catalog"></div><p id="sim-palette-empty" class="field-hint" hidden>No matching results.</p><p id="sim-palette-count" class="sim-status" aria-live="polite"></p><p class="field-hint">Click items to equip the selected champion, or drag them onto a champion. Matching components combine automatically. Up to 3 item slots.</p><p class="field-hint">Your board is saved automatically on this device.</p></section>
 </section>
@@ -662,6 +664,10 @@ function renderSimulatorBoard(){
   hex.addEventListener('keydown',event=>{if((event.key==='Delete'||event.key==='Backspace')&&placed){event.preventDefault();simulatorApply({type:'remove',cell});}});
   hex.addEventListener('dragover',event=>{if(simulatorCanDrop(event)){event.preventDefault();hex.classList.add('drag-over');}});hex.addEventListener('dragleave',()=>hex.classList.remove('drag-over'));hex.addEventListener('drop',event=>simulatorDropCell(event,cell));fragment.append(hex);
  }
+ const ids=[...new Set(value.board.filter(Boolean).map(placed=>placed.unitId))],team=ids.map(id=>DATA.units.find(unit=>unit.id===id)),copy=teamCodeButton(team);copy.id='sim-copy-code-button';copy.classList.add('outline-button');
+ if(!team.length)copy.title=t('Add champions to the board before copying.');
+ if(ids.length<summary.champions)copy.title+=' · '+t('Repeated champions are exported once.');
+ $('sim-copy-team-code').replaceChildren(copy);
  $('sim-board').replaceChildren(fragment);$('sim-board-count').textContent=t('{champions} champions · {population} population',{champions:summary.champions,population:summary.population});$('sim-undo').disabled=!simulatorUI.history.length;
  const traits=document.createDocumentFragment();for(const trait of summary.rows){const line=el('div','sim-trait'+(trait.tier?' active':''));const icon=el('span');if(ART.traits[trait.name]?.url){const image=new Image();image.src=ART.traits[trait.name].url;image.alt='';image.loading='lazy';image.addEventListener('error',()=>image.remove());icon.append(image);}const name=el('span','',traitLabel(trait.name));name.append(el('small','',trait.breakpoints.join(' / ')));line.append(icon,name,el('b','',String(trait.count)+(trait.name==='K|DA'?'★':'')));line.title=t('Active tier {tier} · Next {next}',{tier:trait.tier,next:trait.next||'—'});traits.append(line);}
  $('sim-trait-list').replaceChildren(traits);$('sim-trait-empty').hidden=summary.rows.length>0;renderSimulatorInspector();
@@ -1268,6 +1274,7 @@ const UI_ZH=Object.freeze({
   "{n} available":"共 {n} 項",
   "Select {name}":"選擇 {name}",
   'Champions':'棋子','Items':'裝備','All equipment':'全部裝備',
+  'Add champions to the board before copying.':'先將棋子放到棋盤，再複製陣容碼。','Repeated champions are exported once.':'重複棋子只匯出一次。',
   'Copy team code':'複製陣容碼','Team code':'陣容碼','Close team code':'關閉陣容碼',
   'Exports champions only; positioning, items and trait bonuses are not included.':'僅匯出棋子名單，不包含站位、裝備及轉職／羈絆加成。',
   'Team codes support at most 10 champions.':'陣容碼最多支援 10 位棋子。',
