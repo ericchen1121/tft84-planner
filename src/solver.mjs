@@ -22,7 +22,7 @@ export function solverTraitWeight(name){
   return name==='K|DA'?2:1;
 }
 
-const KDA_STAR_SCORES=[[15,10],[13,9],[10,8],[7,6],[5,4],[3,2]];
+const KDA_STAR_SCORES=[[15,7],[13,6],[10,5],[7,4],[5,3],[3,2]];
 
 export function solverTraitPoints(trait,count,mode){
   if(trait.name==='K|DA')return KDA_STAR_SCORES.find(([stars])=>count>=stars)?.[1]??0;

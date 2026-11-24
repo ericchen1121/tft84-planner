@@ -56,7 +56,7 @@ All scripts, the source data and the verified preset are embedded in that file. 
 
 Default conditions are exactly 8 population, at least 4 four-cost champions, no more than 1 five-cost champion, synergy score at least 16, at least 5 champions with attack range ≤2, and at least 2 four-cost ranged marksmen/casters. Jhin's ranged ammo-specialist role is included. Seven-cost units are allowed; unlock history and shop access are not simulated. Baron Nashor takes 2 population. The Akali variants are mutually exclusive.
 
-Default scoring uses the **highest reached breakpoint** of each trait. Three Arcanists reach the first 2/4/6 breakpoint and score 2. A unique trait activated at 1 contributes 1, and an inactive trait contributes 0. The solver assumes each K/DA champion is two-star. K/DA gives 2/4/6/8/9/10 points at 3/5/7/10/13/15 stars in every scoring mode, capped at 10. Two champions contribute four stars and score 2. A +1 K/DA bonus adds one star to the total. Other scoring methods are available under Advanced options.
+Default scoring uses the **highest reached breakpoint** of each trait. Three Arcanists reach the first 2/4/6 breakpoint and score 2. A unique trait activated at 1 contributes 1, and an inactive trait contributes 0. The solver assumes each K/DA champion is two-star. K/DA gives 2/3/4/5/6/7 points at 3/5/7/10/13/15 stars in every scoring mode, capped at 7. Two champions contribute four stars and score 2. A +1 K/DA bonus adds one star to the total. Other scoring methods are available under Advanced options.
 
 ### Emblems / Trait +1
 

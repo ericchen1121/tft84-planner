@@ -30,7 +30,7 @@ if(!isMainThread){
   for(let p=0;p<rows.length;p+=size){
    const row=rows.subarray(p,p+size),team=[...row.subarray(0,c.population)].filter(i=>i!==255).map(i=>data.units[i]);
    const counts=new Map(Object.entries(c.trait_bonuses));for(const u of team)for(const t of u.traits)counts.set(t,(counts.get(t)||0)+(t==='K|DA'?2:1));
-   const kdaScores={3:2,5:4,7:6,10:8,13:9,15:10};
+   const kdaScores={3:2,5:3,7:4,10:5,13:6,15:7};
    const score=data.traits.reduce((sum,trait)=>{
     const count=counts.get(trait.name)||0;
     const tier=Math.max(0,...trait.breakpoints.filter(point=>point<=count));
