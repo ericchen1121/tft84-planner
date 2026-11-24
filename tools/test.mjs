@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import zlib from 'node:zlib';
-import {prepare,solve,DEFAULTS,effectiveTraits,EMBLEM_TRAITS,filterRequiredRecords,solverTraitWeight,solverTraitPoints} from '../src/solver.mjs';
+import {prepare,solve,DEFAULTS,solverDefaults,effectiveTraits,EMBLEM_TRAITS,filterRequiredRecords,solverTraitWeight,solverTraitPoints,isBacklineCarry} from '../src/solver.mjs';
 import {TRAIT_ZH,t,traitLabel,traitSearchText,setLanguage,getLanguage,localizedStaticText} from '../src/i18n.mjs';
 setLanguage('en');
 const data=JSON.parse(fs.readFileSync(new URL('../dist/units.json',import.meta.url)));
@@ -22,9 +22,10 @@ function brute(data,c){
  function check(team){
   if(team.reduce((s,u)=>s+u.slots,0)!==c.population)return;
   if(new Set(team.map(u=>u.exclusive_group||u.id)).size!==team.length)return;
-  if(team.filter(u=>u.cost===4).length<c.min_four_cost||team.filter(u=>u.cost===5).length>c.max_five_cost)return;
+  const target=team.filter(u=>u.cost===c.target_cost);
+  if(target.length<(c.min_target_cost??c.min_four_cost)||team.filter(u=>u.cost===4).length>c.max_four_cost||team.filter(u=>u.cost===5).length>c.max_five_cost)return;
   if(team.filter(u=>u.range<=c.frontline_max_range).length<c.min_frontline)return;
-  if(team.filter(u=>u.cost===4&&u.range>c.frontline_max_range&&c.backline_role_keywords.some(k=>u.role.includes(k))).length<c.min_backline_four_cost)return;
+  if(target.filter(u=>u.range>c.frontline_max_range&&c.backline_role_keywords.some(k=>u.role.includes(k))).length<(c.min_backline_target_cost??c.min_backline_four_cost))return;
   for(const [name,min]of Object.entries(c.required_traits||{})){
    const n=team.filter(u=>effectiveTraits(u,c).includes(name)).length*(name==='K|DA'?2:1)+(c.trait_bonuses?.[name]||0);
    const tier=Math.max(0,...data.traits.find(t=>t.name===name).breakpoints.filter(x=>x<=n));
@@ -70,6 +71,15 @@ for(const mode of ['active_members','breakpoint','all_members']){
  compare(focused,{...c,trait_bonuses:{A:0}});
 }
 compare(sample,{...DEFAULTS,population:4,min_frontline:4,min_backline_four_cost:2,min_trait_score:0});
+for(const [cost,population,frontline] of [[3,8,3],[2,7,2],[1,6,2]]){
+ const profile=solverDefaults(cost);
+ assert.deepEqual([profile.population,profile.min_target_cost,profile.min_backline_target_cost,profile.min_frontline,profile.max_four_cost,profile.max_five_cost],[population,3,1,frontline,2,1]);
+ const units=[[cost,1,'Tank'],[cost,1,'Tank'],[cost,4,'Marksman'],[cost,4,'Tank'],[4,1,'Tank'],[4,1,'Tank'],[4,4,'Caster'],[5,1,'Tank'],[5,4,'Marksman'],[cost===1?2:1,4,'Caster']];
+ const fixture={traits:[{name:'A',breakpoints:[1]}],units:units.map(([cost,range,role],i)=>({id:'low'+i,name:'Low '+i,cost,range,role,slots:1,traits:['A']}))};
+ const criteria={...profile,min_trait_score:0};
+ assert(solve(fixture,criteria,{countOnly:true}).matches>0);
+ compare(fixture,criteria);
+}
 const tierData={
  traits:[{name:'Arcanist',breakpoints:[2,4,6]},{name:'K|DA',breakpoints:[3,5,7,10,13,15,21]}],
  units:Array.from({length:4},(_,i)=>({...focused.units[0],id:'tier'+i,name:'Tier '+i,traits:['Arcanist','K|DA']}))
@@ -96,25 +106,48 @@ assert.equal((html.match(/id="app-data"/g)||[]).length,1);
 const capture=id=>html.match(new RegExp('<script id="'+id+'"[^>]*>([\\s\\S]*?)<\\/script>'))?.[1];
 const embedded=JSON.parse(capture('app-data'));assert.equal(embedded.units.length,94);assert.equal(embedded.traits.length,47);
 const embeddedArt=JSON.parse(capture('art-data'));assert.equal(Object.keys(embeddedArt.units).length,94);assert.equal(Object.values(embeddedArt.units).filter(a=>a.url).length,91);
-const compressed=Buffer.from(capture('preset-data'),'base64');const preset=zlib.gunzipSync(compressed);
-const presetRecords=Number(html.match(/id="preset-data"[^>]*data-records="(\d+)"/)?.[1]);
-assert(presetRecords>0);assert.equal(preset.length,presetRecords*(DEFAULTS.population+1));
-assert.deepEqual(preset,fs.readFileSync(new URL('dist/preset.bin',root)));
-const seen=new Set(),hist={};
-for(let p=0;p<preset.length;p+=9){const row=preset.subarray(p,p+9);assert(row[8]>=16);const ids=[...row.subarray(0,8)].filter(i=>i!==255).sort((a,b)=>a-b);const key=ids.join(',');assert(!seen.has(key));seen.add(key);const team=ids.map(i=>data.units[i]);assert.equal(team.reduce((s,u)=>s+u.slots,0),8);assert(team.filter(u=>u.cost===4).length>=DEFAULTS.min_four_cost);assert(team.filter(u=>u.cost===5).length<=1);assert(team.filter(u=>u.range<=2).length>=5);assert(team.filter(u=>u.cost===4&&u.range>2&&DEFAULTS.backline_role_keywords.some(k=>u.role.includes(k))).length>=2);const counts=new Map();for(const u of team)for(const t of u.traits)counts.set(t,(counts.get(t)||0)+(t==='K|DA'?2:1));const score=data.traits.reduce((s,t)=>s+referenceTraitPoints(t,counts.get(t.name)||0,DEFAULTS.score_mode),0);assert.equal(score,row[8]);hist[score]=(hist[score]||0)+1;}
+function verifyPreset(cost){
+ const c=solverDefaults(cost),size=c.population+1,suffix=cost===4?'':'-'+cost,id='preset-data'+suffix;
+ const bytes=zlib.gunzipSync(Buffer.from(capture(id),'base64'));
+ const count=Number(html.match(new RegExp('id="'+id+'"[^>]*data-records="(\\d+)"'))?.[1]);
+ assert(count>0);assert.equal(bytes.length,count*size);
+ assert.deepEqual(bytes,fs.readFileSync(new URL('dist/preset'+suffix+'.bin',root)));
+ const seen=new Set(),hist={};
+ for(let p=0;p<bytes.length;p+=size){
+  const row=bytes.subarray(p,p+size),score=row[c.population];
+  assert(score>=c.min_trait_score);
+  const ids=[...row.subarray(0,c.population)].filter(i=>i!==255).sort((a,b)=>a-b),key=ids.join(',');
+  assert(!seen.has(key));seen.add(key);
+  const team=ids.map(i=>data.units[i]),target=team.filter(u=>u.cost===cost);
+  assert.equal(team.reduce((s,u)=>s+u.slots,0),c.population);
+  assert.equal(new Set(team.map(u=>u.exclusive_group||u.id)).size,team.length);
+  assert(target.length>=c.min_target_cost);
+  assert(team.filter(u=>u.cost===4).length<=c.max_four_cost);
+  assert(team.filter(u=>u.cost===5).length<=c.max_five_cost);
+  assert(team.filter(u=>u.range<=c.frontline_max_range).length>=c.min_frontline);
+  assert(target.filter(u=>u.range>c.frontline_max_range&&c.backline_role_keywords.some(k=>u.role.includes(k))).length>=c.min_backline_target_cost);
+  const counts=new Map();
+  for(const u of team)for(const trait of u.traits)counts.set(trait,(counts.get(trait)||0)+(trait==='K|DA'?2:1));
+  const reference=data.traits.reduce((sum,t)=>sum+referenceTraitPoints(t,counts.get(t.name)||0,c.score_mode),0);
+  assert.equal(score,reference);hist[score]=(hist[score]||0)+1;
+ }
+ return {bytes,count,hist};
+}
+const {bytes:preset,count:presetRows,hist}=verifyPreset(4);
+const lowCostRows=Object.fromEntries([3,2,1].map(cost=>[cost,verifyPreset(cost).count]));
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size,'Duplicate DOM ids');
 const app=get('src/app.js');for(const m of app.matchAll(/\$\('([^']+)'\)/g))assert(ids.includes(m[1]),'Missing element: '+m[1]);
 function appFunction(name,next,context){const start=app.indexOf('function '+name+'(');assert(start>=0);const end=app.indexOf('\nfunction '+next+'(',start);assert(end>start);return new vm.Script('('+app.slice(start,end)+')').runInNewContext(context);}
-const presetMatch=appFunction('isPreset','populateSelects',{DEFAULTS});
+const presetMatch=appFunction('isPreset','populateSelects',{solverDefaults});
 assert(presetMatch({...DEFAULTS}));assert(!presetMatch({...DEFAULTS,trait_bonuses:{Frontman:1}}));assert(presetMatch({...DEFAULTS,trait_bonuses:{Frontman:0}}));
 const bonusConfig={...DEFAULTS,population:2,min_four_cost:0,min_frontline:0,min_backline_four_cost:0,trait_bonuses:{A:1}};
-const analyze=appFunction('analyze','traitChip',{DATA:focused,effectiveTraits,solverTraitWeight,solverTraitPoints,traitByName:new Map(focused.traits.map((t,index)=>[t.name,{index}])),state:{config:bonusConfig}});
+const analyze=appFunction('analyze','traitChip',{DATA:focused,effectiveTraits,isBacklineCarry,solverTraitWeight,solverTraitPoints,traitByName:new Map(focused.traits.map((t,index)=>[t.name,{index}])),state:{config:bonusConfig}});
 const displayed=analyze([0,1],bonusConfig);assert.equal(displayed.score,3);assert.equal(displayed.traits[0].count,3);assert.equal(displayed.traits[0].bonus,1);assert.equal(displayed.slots,2);
 // Exercise the actual CSV exporter with an emblem-activated trait, without a browser.
 let exported;
 const controls=new Map();const exportState={config:bonusConfig,running:false,status:'COMPLETE',filtered:[{score:3,four:2}]};
 const exportStart=app.indexOf('async function exportCsv('),exportEnd=app.indexOf('\nfunction bindEvents(',exportStart);
-const exportFn=new vm.Script('('+app.slice(exportStart,exportEnd)+')').runInNewContext({state:exportState,DATA:focused,effectiveTraits,solverTraitWeight,recordIds:()=>[0,1],fmt:String,t,traitLabel,getLanguage,unitLabel:u=>u.name,notify:()=>{},$:id=>{if(!controls.has(id))controls.set(id,{});return controls.get(id);},Blob,setTimeout,download:(blob,name)=>{exported={blob,name};}});
+const exportFn=new vm.Script('('+app.slice(exportStart,exportEnd)+')').runInNewContext({state:exportState,DATA:focused,effectiveTraits,isBacklineCarry,solverTraitWeight,recordIds:()=>[0,1],fmt:String,t,traitLabel,getLanguage,unitLabel:u=>u.name,notify:()=>{},$:id=>{if(!controls.has(id))controls.set(id,{});return controls.get(id);},Blob,setTimeout,download:(blob,name)=>{exported={blob,name};}});
 await exportFn();const csvText=await exported.blob.text();const csvLines=csvText.trim().split('\r\n'),headers=csvLines[0].replace(/^\uFEFF/,'').split(','),cells=csvLines[1].split(',');
 assert.equal(cells[headers.indexOf('trait_score')],'3');assert.equal(cells[headers.indexOf('population')],'2');assert.equal(cells[headers.indexOf('active_traits')],'"A:3"');assert.equal(cells[headers.indexOf('trait_bonuses')],'"A:+1"');assert.equal(exportState.exporting,false);
 const expectedTranslations={'Heartsteel':'心鋼之聲','Frontman':'主唱','Classical':'古典樂','Collab':'合作','Swiftstriker':'迅捷先鋒','Hitmaker':'金曲製造機','Encore':'要不要來首安可曲','Juggernaut':'重裝戰士','Beach Pop':'海灘流行樂','Pentakill':'殺五社','Slayer':'殺戮者','Rock':'搖滾樂','Manager':'經紀人','EDM':'電子舞曲','Choreographer':'編舞者','Jazz':'爵士樂','Gu Feng':'古風','Hyperpop':'超流行','Ionic Spark':'離子火花','Prodigy':'不世之才'};
@@ -127,14 +160,14 @@ for(const trait of data.traits){assert.equal(traitLabel(trait.name),expectedTran
 assert.equal(t('Search criteria'),'搜尋條件');assert.equal(t('Unknown label'),'Unknown label');assert.equal(t('{n} results',{n:12}),'12 組');assert.equal(localizedStaticText(' 3 Choreographer '),' 3 編舞者 ');
 const zhData={traits:[{name:'Frontman',breakpoints:[2]}],units:[{id:'a',name:'A',cost:4,range:1,slots:1,traits:['Frontman'],role:'Tank'},{id:'b',name:'B',cost:4,range:4,slots:1,traits:[],role:'Caster'}]};
 const zhConfig={...bonusConfig,trait_bonuses:{Frontman:1}};let zhExport;
-const zhFn=new vm.Script('('+app.slice(exportStart,exportEnd)+')').runInNewContext({state:{...exportState,config:zhConfig,filtered:[{score:2,four:2}]},DATA:zhData,effectiveTraits,solverTraitWeight,recordIds:()=>[0,1],fmt:String,t,traitLabel,getLanguage,unitLabel:u=>u.name,notify:()=>{},$:()=>({}),Blob,setTimeout,download:(blob,name)=>{zhExport={blob,name};}});
+const zhFn=new vm.Script('('+app.slice(exportStart,exportEnd)+')').runInNewContext({state:{...exportState,config:zhConfig,filtered:[{score:2,four:2}]},DATA:zhData,effectiveTraits,isBacklineCarry,solverTraitWeight,recordIds:()=>[0,1],fmt:String,t,traitLabel,getLanguage,unitLabel:u=>u.name,notify:()=>{},$:()=>({}),Blob,setTimeout,download:(blob,name)=>{zhExport={blob,name};}});
 await zhFn();const zhCsv=await zhExport.blob.text();assert(zhCsv.includes('羈絆分數'));assert(zhCsv.includes('"主唱:2"'));assert(zhCsv.includes('"主唱:+1"'));assert(zhCsv.includes('完整'));assert(zhExport.name.includes('zh-Hant'));
 assert.equal(JSON.stringify(data),canonicalBefore,'Translations must not mutate solver data');
 setLanguage('en');assert.equal(traitLabel('Frontman'),'Frontman');assert.equal(t('Search criteria'),'Search criteria');assert(ids.includes('language'));
 // Check that changing the labels never changes canonical option values or selections.
 class SelectStub{constructor(){this.options=[];this.value='';}replaceChildren(){this.options=[];this.value='';}append(option){this.options.push(option);if(this.options.length===1)this.value=option.value;}}
 const selectNodes=new Map(['champion-filter','extra-unit','sona_feature_trait','extra-trait','emblem-trait','score-filter'].map(id=>[id,new SelectStub()]));
-const populate=appFunction('populateSelects','portrait',{DATA:data,ART:{units:{}},state:{records:[]},EMBLEM_TRAITS,t,traitLabel,getLanguage,unitLabel:u=>u.name,Option:class{constructor(text,value){this.text=text;this.value=value;}},document:{querySelectorAll:()=>[]},$:id=>selectNodes.get(id)});
+const populate=appFunction('populateSelects','applyCriteria',{DATA:data,ART:{units:{}},state:{records:[]},EMBLEM_TRAITS,t,traitLabel,getLanguage,unitLabel:u=>u.name,Option:class{constructor(text,value){this.text=text;this.value=value;}},document:{querySelectorAll:()=>[]},$:id=>selectNodes.get(id)});
 populate();selectNodes.get('emblem-trait').value='Gu Feng';selectNodes.get('extra-trait').value='Prodigy';
 assert.equal(selectNodes.get('emblem-trait').options.length,28);
 assert.deepEqual(selectNodes.get('emblem-trait').options.map(o=>o.value).sort(),[...EMBLEM_TRAITS].sort());
@@ -145,7 +178,7 @@ setLanguage('en');populate();assert.equal(selectNodes.get('emblem-trait').value,
 const scripts=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);new vm.Script(scripts.at(-1));
 new vm.Script(capture('solver-source').replace(/^export /gm,'')+'\nself.onmessage=e=>{const {data,c}=e.data;const r=solve(data,c);self.postMessage(r)}');
 assert(!html.includes('/*__'));assert(!html.includes('localhost'));
-console.log(JSON.stringify({status:'PASS',reference_cases:cases,preset_rows:seen.size,histogram:hist,artwork_urls:91,translated_traits:Object.keys(TRAIT_ZH).length,locales:['zh-Hant','en'],checks:'Independent brute-force sets and scores; emblem bonuses; every preset record; DOM selectors; script syntax; exact supplied translations; bilingual lookup; localized CSV; canonical data and selections preserved across language switches'},null,2));
+console.log(JSON.stringify({status:'PASS',reference_cases:cases,preset_rows:presetRows,low_cost_preset_rows:lowCostRows,histogram:hist,artwork_urls:91,translated_traits:Object.keys(TRAIT_ZH).length,locales:['zh-Hant','en'],checks:'Independent brute-force sets and scores; emblem bonuses; every preset record; DOM selectors; script syntax; exact supplied translations; bilingual lookup; localized CSV; canonical data and selections preserved across language switches'},null,2));
 
 // Info metadata and display-only localization must preserve the full solver roster.
 const info=JSON.parse(capture('info-data'));

@@ -60,7 +60,7 @@ function renderInfo(){
  $('info-grid').replaceChildren(fragment);$('info-count').textContent=t('{n} / {total} champions',{n:units.length,total:DATA.units.length});$('info-empty').hidden=units.length>0;
 }
 function showInfo(id){
- const u=DATA.units.find(u=>u.id===id);if(!u)return;state.infoUnit=id;const a=INFO.units[id],content=el('div');
+ const u=DATA.units.find(u=>u.id===id);if(!u)return;appUI.infoUnit=id;const a=INFO.units[id],content=el('div');
  const header=el('div','info-detail-header');header.append(infoPortrait(u,{name:false,lazy:false}));const title=el('div');title.append(el('span','eyebrow',t('CHAMPION INFO')));const name=el('h2','',unitLabel(u));name.id='info-title';title.append(name,el('p','',roleLabel(u)));header.append(title);content.append(header,infoTraits(u));
  const stats=el('div','info-detail-stats');for(const [label,value]of [['Cost',u.cost+'g'],['Attack range',u.range],['Mana',a.full_mana||a.mana||'—']]){const item=el('div');item.append(el('small','',t(label)),el('strong','',value));stats.append(item);}content.append(stats);
  content.append(el('h3','',abilityLabel(u)),el('small','star-scaling',t('Values: 1★ / 2★ / 3★')),numericDescription(u,'info-description'));
@@ -70,12 +70,20 @@ function showInfo(id){
  const source=el('p','field-hint',t('References:')+' ');for(const [label,url]of [['MetaTFT','https://www.metatft.com/new-set'],['tactics.tools','https://tactics.tools/info/set-update']]){const link=el('a','',label+' ↗');link.href=url;link.target='_blank';link.rel='noopener noreferrer';source.append(link,document.createTextNode(' '));}content.append(source);
  $('info-detail').replaceChildren(content);if(!$('info-dialog').open)$('info-dialog').showModal();
 }
-const APP_VIEWS=['solver','info','augments','equipment','simulator'];
+const SOLVER_VIEWS={solver:4,'solver-3':3,'solver-2':2,'solver-1':1};
+const COLLECTION_VIEWS=['info','augments','equipment','simulator'];
+const APP_VIEWS=[...Object.keys(SOLVER_VIEWS),...COLLECTION_VIEWS];
 function switchView(view,focus=false){
- state.view=APP_VIEWS.includes(view)?view:'solver';
- for(const name of APP_VIEWS){$(''+name+'-panel').hidden=name!==state.view;const tab=$('tab-'+name),active=name===state.view;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;}
- if(state.view==='info')renderInfo();if(state.view==='augments')renderAugments();if(state.view==='equipment')renderEquipment();if(state.view==='simulator')renderSimulator();if(focus)$('tab-'+state.view).focus();
- const hash='#'+state.view;if(location.hash!==hash)history.replaceState(null,'',hash);
+ let next=APP_VIEWS.includes(view)?view:'solver';
+ if(Object.hasOwn(SOLVER_VIEWS,next)&&!activateSolver(next))next=appUI.view;
+ appUI.view=next;
+ const isSolver=Object.hasOwn(SOLVER_VIEWS,next);
+ $('solver-panel').hidden=!isSolver;
+ if(isSolver)$('solver-panel').setAttribute('aria-labelledby','tab-'+next);
+ for(const name of COLLECTION_VIEWS)$(name+'-panel').hidden=name!==next;
+ for(const name of APP_VIEWS){const tab=$('tab-'+name),active=name===next;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;}
+ if(next==='info')renderInfo();if(next==='augments')renderAugments();if(next==='equipment')renderEquipment();if(next==='simulator')renderSimulator();if(focus)$('tab-'+next).focus();
+ const hash='#'+next;if(location.hash!==hash)history.replaceState(null,'',hash);
 }
 function bindInfo(){
  for(const name of APP_VIEWS){const tab=$('tab-'+name);tab.addEventListener('click',()=>switchView(name));tab.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const index=APP_VIEWS.indexOf(name),next=e.key==='Home'?0:e.key==='End'?APP_VIEWS.length-1:(index+(e.key==='ArrowRight'?1:-1)+APP_VIEWS.length)%APP_VIEWS.length;switchView(APP_VIEWS[next],true);}});}

@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import zlib from 'node:zlib';
-import {DEFAULTS} from '../src/solver.mjs';
+import {solverDefaults} from '../src/solver.mjs';
 import {applyAugmentTags} from './augment-tagging.mjs';
 const root=new URL('../',import.meta.url);
 const read=p=>fs.readFileSync(new URL(p,root),'utf8');
@@ -9,11 +9,17 @@ const rawArt=JSON.parse(read('dist/artwork.json'));
 const artwork={source:rawArt.source,snapshot_date:rawArt.snapshot_date,units:Object.fromEntries(Object.entries(rawArt.units).map(([id,a])=>[id,{url:a.url}])),traits:Object.fromEntries(Object.entries(rawArt.traits).map(([id,a])=>[id,{url:a.url}]))};
 let html=read('src/index.html');
 const solver=read('src/solver.mjs');
-const preset=fs.readFileSync(new URL('dist/preset.bin',root)),recordSize=DEFAULTS.population+1;
-if(preset.length%recordSize)throw Error('Invalid preset record length');
-html=html.replace('/*__PRESET_RECORDS__*/',String(preset.length/recordSize));
+const presetPayloads={};
+for(const cost of [4,3,2,1]){
+ const suffix=cost===4?'':'_'+cost;
+ const path=cost===4?'dist/preset.bin':'dist/preset-'+cost+'.bin';
+ const preset=fs.readFileSync(new URL(path,root)),recordSize=solverDefaults(cost).population+1;
+ if(preset.length%recordSize)throw Error('Invalid preset record length for '+path);
+ html=html.replace('/*__PRESET_RECORDS'+suffix+'__*/',String(preset.length/recordSize));
+ presetPayloads['PRESET'+suffix]=zlib.gzipSync(preset).toString('base64');
+}
 const i18n=read('src/i18n.mjs').replace(/^export /gm,'')+'\n'+read('src/numeric-values.mjs').replace(/^export /gm,'');
-const payloads={STYLES:read('src/styles.css'),DATA:JSON.stringify(data),INFO:JSON.stringify(JSON.parse(read('dist/info.json'))),ART:JSON.stringify(artwork),PRESET:zlib.gzipSync(preset).toString('base64'),SOLVER:solver,APP:solver.replace(/^export /gm,'')+'\n'+i18n+'\n'+read('src/info.js')+'\n'+read('src/app.js')};
+const payloads={STYLES:read('src/styles.css'),DATA:JSON.stringify(data),INFO:JSON.stringify(JSON.parse(read('dist/info.json'))),ART:JSON.stringify(artwork),...presetPayloads,SOLVER:solver,APP:solver.replace(/^export /gm,'')+'\n'+i18n+'\n'+read('src/info.js')+'\n'+read('src/app.js')};
 payloads.ITEMS=JSON.stringify(JSON.parse(read('dist/items.json')));
 payloads.STYLES+='\n'+read('src/layout.css')+'\n'+read('src/desktop.css');
 payloads.APP=solver.replace(/^export /gm,'')+'\n'+i18n+'\n'+read('src/info.js')+'\n'+read('src/requirements.js')+'\n'+read('src/desktop.js')+'\n'+read('src/app.js');
