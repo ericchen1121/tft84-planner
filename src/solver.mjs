@@ -9,8 +9,8 @@ export const DEFAULTS = Object.freeze({
 
 const LOW_COST_RULES={
   3:{population:8,min_frontline:3},
-  2:{population:7,min_frontline:2},
-  1:{population:6,min_frontline:2}
+  2:{population:7,min_frontline:2,max_five_cost:0},
+  1:{population:6,min_frontline:2,max_five_cost:0}
 };
 
 export function solverDefaults(cost=4){
