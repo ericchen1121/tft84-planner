@@ -1,8 +1,9 @@
 {
   "status": "PASS",
-  "matches": 68766,
-  "elapsed_seconds": 27.398,
-  "nodes": 2747858932,
-  "checks": "Every JS worker lineup and score exactly equals C# preset; no duplicate or missing lineups",
+  "matches": 333424,
+  "elapsed_seconds": 26.014,
+  "nodes": 1536138439,
+  "trait_bonuses": {},
+  "checks": "Every JS worker lineup and score matches the embedded preset; no duplicate or missing lineups",
   "workers": 4
 }

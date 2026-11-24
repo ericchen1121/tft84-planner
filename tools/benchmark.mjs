@@ -25,15 +25,15 @@ if(!isMainThread){
  if(results.some(r=>r.status!=='COMPLETE'))throw Error('Full search did not complete');
  if(!boosted){
   const want=keys(fs.readFileSync(new URL('../dist/preset.bin',import.meta.url)));
-  if(got.size!==want.size||[...got].some(k=>!want.has(k)))throw Error('Full browser solver differs from verified C# result');
+  if(got.size!==want.size||[...got].some(k=>!want.has(k)))throw Error('Full browser solver differs from the embedded preset');
  }else{
   for(let p=0;p<rows.length;p+=size){
    const row=rows.subarray(p,p+size),team=[...row.subarray(0,c.population)].filter(i=>i!==255).map(i=>data.units[i]);
-   const counts=new Map(Object.entries(c.trait_bonuses));for(const u of team)for(const t of u.traits)counts.set(t,(counts.get(t)||0)+1);
-   const score=data.traits.reduce((s,t)=>s+((counts.get(t.name)||0)>=Math.min(...t.breakpoints)?counts.get(t.name):0),0);
-   if(score!==row[c.population]||score<c.min_trait_score||team.reduce((s,u)=>s+u.slots,0)!==c.population||team.filter(u=>u.cost===4).length<3||team.filter(u=>u.cost===5).length>1||team.filter(u=>u.range<=2).length<5||team.filter(u=>u.cost===4&&u.range>2&&c.backline_role_keywords.some(k=>u.role.includes(k))).length<2)throw Error('Emblem search failed independent record validation');
+   const counts=new Map(Object.entries(c.trait_bonuses));for(const u of team)for(const t of u.traits)counts.set(t,(counts.get(t)||0)+(t==='K|DA'?2:1));
+   const score=data.traits.reduce((s,t)=>s+Math.max(0,...t.breakpoints.filter(point=>point<=(counts.get(t.name)||0))),0);
+   if(score!==row[c.population]||score<c.min_trait_score||team.reduce((s,u)=>s+u.slots,0)!==c.population||team.filter(u=>u.cost===4).length<c.min_four_cost||team.filter(u=>u.cost===5).length>1||team.filter(u=>u.range<=2).length<5||team.filter(u=>u.cost===4&&u.range>2&&c.backline_role_keywords.some(k=>u.role.includes(k))).length<2)throw Error('Emblem search failed independent record validation');
   }
  }
- const result={status:'PASS',matches:got.size,elapsed_seconds:(Date.now()-started)/1000,nodes:results.reduce((s,r)=>s+r.nodes,0),trait_bonuses:c.trait_bonuses,checks:boosted?'Every emitted emblem lineup independently validated; no duplicates':'Every JS worker lineup and score exactly equals C# preset; no duplicate or missing lineups',workers:n};
+ const result={status:'PASS',matches:got.size,elapsed_seconds:(Date.now()-started)/1000,nodes:results.reduce((s,r)=>s+r.nodes,0),trait_bonuses:c.trait_bonuses,checks:boosted?'Every emitted emblem lineup independently validated; no duplicates':'Every JS worker lineup and score matches the embedded preset; no duplicate or missing lineups',workers:n};
  fs.writeFileSync(new URL(boosted?'../emblem-benchmark.json':'../web-benchmark.json',import.meta.url),JSON.stringify(result,null,2));console.log(result);
 }
