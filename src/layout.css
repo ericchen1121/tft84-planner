@@ -13,6 +13,13 @@
 .criteria-basic .stepper>span{white-space:nowrap}
 .criteria-basic input[type=number]{height:46px}.criteria-basic .field-title{min-height:18px}
 .criteria-basic .field-title>span{display:none}.criteria-basic .field-title output{font-size:16px}
+.criteria-basic .field-title>#target-cost-min-label{display:inline}
+.low-cost-hero{padding:24px 0 20px}
+.low-cost-hero h1{color:#e8d4a6;font-size:clamp(24px,4vw,38px);margin:0}
+.app-tabs button{white-space:nowrap}
+@media(min-width:1320px){.criteria-basic:has(#max-four-field:not([hidden])){grid-template-columns:repeat(7,minmax(0,1fr))}}
+@media(min-width:521px) and (max-width:1319px){.criteria-basic:has(#max-four-field:not([hidden])){grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:760px){.app-tabs button{padding-inline:12px}}
 .criteria-traits{display:grid;grid-template-columns:minmax(220px,1fr) minmax(0,2.5fr);gap:20px;margin-top:22px;align-items:start}
 .criteria-traits .emblem-section,.criteria-traits .required-section{margin:0;padding:15px;min-width:0}
 .criteria-traits #emblem-list{max-height:175px;overflow:auto}

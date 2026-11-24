@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import {Worker,isMainThread,parentPort,workerData} from 'node:worker_threads';
-import {solve,prepare,DEFAULTS} from '../src/solver.mjs';
+import {solve,prepare,solverDefaults} from '../src/solver.mjs';
 if(!isMainThread){
  const {data,c,i,n}=workerData;
  const pool=prepare(data,c).pool;
@@ -11,7 +11,12 @@ if(!isMainThread){
 }else{
  const data=JSON.parse(fs.readFileSync(new URL('../dist/units.json',import.meta.url)));
  const boosted=process.argv.includes('--emblem');
- const c={...DEFAULTS,trait_bonuses:boosted?{Frontman:1}:{}},n=4,started=Date.now();let last=0;
+ const costArgument=process.argv.find(arg=>arg.startsWith('--cost='));
+ const cost=costArgument?Number(costArgument.slice(7)):4;
+ const generate=process.argv.includes('--write-preset');
+ if(![1,2,3,4].includes(cost)||((boosted||cost===4)&&generate)||(boosted&&cost!==4))throw Error('Choose --cost=1, 2 or 3 to build a low-cost preset.');
+ const c={...solverDefaults(cost),trait_bonuses:boosted?{Frontman:1}:{}},n=4,started=Date.now();let last=0;
+ const presetPath=new URL(cost===4?'../dist/preset.bin':`../dist/preset-${cost}.bin`,import.meta.url);
  const chunks=[];
  const results=await Promise.all(Array.from({length:n},(_,i)=>new Promise((resolve,reject)=>{
   const w=new Worker(new URL(import.meta.url),{workerData:{data,c,i,n}});
@@ -23,8 +28,13 @@ if(!isMainThread){
  const keys=b=>{const s=new Set();for(let p=0;p<b.length;p+=size){const row=b.subarray(p,p+size);const key=[...row.subarray(0,c.population)].filter(i=>i!==255).sort((a,b)=>a-b).join(',')+':'+row[c.population];if(s.has(key))throw Error('Duplicate lineup');s.add(key);}return s;};
  const got=keys(rows);
  if(results.some(r=>r.status!=='COMPLETE'))throw Error('Full search did not complete');
- if(!boosted){
-  const want=keys(fs.readFileSync(new URL('../dist/preset.bin',import.meta.url)));
+ if(generate){
+  const rowsByLineup=[];
+  for(let offset=0;offset<rows.length;offset+=size)rowsByLineup.push(rows.subarray(offset,offset+size));
+  rowsByLineup.sort(Buffer.compare);
+  fs.writeFileSync(presetPath,Buffer.concat(rowsByLineup));
+ }else if(!boosted){
+  const want=keys(fs.readFileSync(presetPath));
   if(got.size!==want.size||[...got].some(k=>!want.has(k)))throw Error('Full browser solver differs from the embedded preset');
  }else{
   for(let p=0;p<rows.length;p+=size){
@@ -39,6 +49,7 @@ if(!isMainThread){
    if(score!==row[c.population]||score<c.min_trait_score||team.reduce((s,u)=>s+u.slots,0)!==c.population||team.filter(u=>u.cost===4).length<c.min_four_cost||team.filter(u=>u.cost===5).length>1||team.filter(u=>u.range<=2).length<5||team.filter(u=>u.cost===4&&u.range>2&&c.backline_role_keywords.some(k=>u.role.includes(k))).length<2)throw Error('Emblem search failed independent record validation');
   }
  }
- const result={status:'PASS',matches:got.size,elapsed_seconds:(Date.now()-started)/1000,nodes:results.reduce((s,r)=>s+r.nodes,0),trait_bonuses:c.trait_bonuses,checks:boosted?'Every emitted emblem lineup independently validated; no duplicates':'Every JS worker lineup and score matches the embedded preset; no duplicate or missing lineups',workers:n};
- fs.writeFileSync(new URL(boosted?'../emblem-benchmark.json':'../web-benchmark.json',import.meta.url),JSON.stringify(result,null,2));console.log(result);
+ const checks=generate?'Complete worker search; no duplicate lineups':boosted?'Every emitted emblem lineup independently validated; no duplicates':'Every JS worker lineup and score matches the embedded preset; no duplicate or missing lineups';
+ const result={status:'PASS',matches:got.size,elapsed_seconds:(Date.now()-started)/1000,nodes:results.reduce((s,r)=>s+r.nodes,0),trait_bonuses:c.trait_bonuses,checks,workers:n};
+ if(cost===4)fs.writeFileSync(new URL(boosted?'../emblem-benchmark.json':'../web-benchmark.json',import.meta.url),JSON.stringify(result,null,2));console.log(result);
 }
