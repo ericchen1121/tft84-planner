@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "matches": 333424,
-  "elapsed_seconds": 26.014,
+  "matches": 89870,
+  "elapsed_seconds": 21.145,
   "nodes": 1536138439,
   "trait_bonuses": {},
   "checks": "Every JS worker lineup and score matches the embedded preset; no duplicate or missing lineups",
