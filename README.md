@@ -58,6 +58,16 @@ Default conditions are exactly 8 population, at least 4 four-cost champions, no 
 
 Default scoring uses the **highest reached breakpoint** of each trait. Three Arcanists reach the first 2/4/6 breakpoint and score 2. A unique trait activated at 1 contributes 1, and an inactive trait contributes 0. The solver assumes each K/DA champion is two-star. K/DA gives 2/3/4/5/6/7 points at 3/5/7/10/13/15 stars in every scoring mode, capped at 7. Two champions contribute four stars and score 2. A +1 K/DA bonus adds one star to the total. Other scoring methods are available under Advanced options.
 
+The 3-cost, 2-cost, and 1-cost solver tabs use the same controls, trait scoring, board views, and CSV export. Each tab retains its own settings and results while the app is open.
+
+| Solver | Population | Same-cost minimum | Same-cost backline carry minimum | Frontline minimum | 4-cost maximum | 5-cost maximum | Minimum synergy |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 3-cost | 8 | 3 | 1 | 3 | 2 | 1 | 16 |
+| 2-cost | 7 | 3 | 1 | 2 | 2 | 1 | 14 |
+| 1-cost | 6 | 3 | 1 | 2 | 2 | 1 | 12 |
+
+All four solvers load their default lineups from embedded presets. Regenerate a low-cost preset after changing the roster or scoring with `node tools/benchmark.mjs --cost=3 --write-preset`, using the corresponding cost for each tab, then rebuild the app.
+
 ### Emblems / Trait +1
 
 Under **Search criteria**, choose a trait and click **+1**. Repeat to increase that trait or add a different trait. Use the row's minus button to reduce a bonus; a zero bonus removes the row. **Reset** removes every bonus.
