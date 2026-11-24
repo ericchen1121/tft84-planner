@@ -30,7 +30,12 @@ if(!isMainThread){
   for(let p=0;p<rows.length;p+=size){
    const row=rows.subarray(p,p+size),team=[...row.subarray(0,c.population)].filter(i=>i!==255).map(i=>data.units[i]);
    const counts=new Map(Object.entries(c.trait_bonuses));for(const u of team)for(const t of u.traits)counts.set(t,(counts.get(t)||0)+(t==='K|DA'?2:1));
-   const score=data.traits.reduce((s,t)=>s+Math.max(0,...t.breakpoints.filter(point=>point<=(counts.get(t.name)||0))),0);
+   const kdaScores={3:2,5:4,7:6,10:8,13:9,15:10};
+   const score=data.traits.reduce((sum,trait)=>{
+    const count=counts.get(trait.name)||0;
+    const tier=Math.max(0,...trait.breakpoints.filter(point=>point<=count));
+    return sum+(trait.name==='K|DA'?(kdaScores[Math.min(tier,15)]||0):tier);
+   },0);
    if(score!==row[c.population]||score<c.min_trait_score||team.reduce((s,u)=>s+u.slots,0)!==c.population||team.filter(u=>u.cost===4).length<c.min_four_cost||team.filter(u=>u.cost===5).length>1||team.filter(u=>u.range<=2).length<5||team.filter(u=>u.cost===4&&u.range>2&&c.backline_role_keywords.some(k=>u.role.includes(k))).length<2)throw Error('Emblem search failed independent record validation');
   }
  }

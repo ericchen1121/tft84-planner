@@ -8,6 +8,13 @@ setLanguage('en');
 const data=JSON.parse(fs.readFileSync(new URL('../dist/units.json',import.meta.url)));
 const root=new URL('../',import.meta.url);
 const get=p=>fs.readFileSync(new URL(p,root),'utf8');
+const referenceKdaScores={3:2,5:4,7:6,10:8,13:9,15:10};
+function referenceTraitPoints(trait,count,mode){
+ const tier=Math.max(0,...trait.breakpoints.filter(point=>point<=count));
+ if(trait.name==='K|DA')return referenceKdaScores[Math.min(tier,15)]||0;
+ if(mode==='all_members'||(mode==='active_members'&&tier))return count;
+ return tier;
+}
 function brute(data,c){
  const pool=data.units.filter(u=>!c.exclude_unit_ids.includes(u.id)&&(c.include_seven_cost||u.cost!==7));
  const members=new Map(data.traits.map(t=>[t.name,data.units.filter(u=>effectiveTraits(u,c).includes(t.name)).length]));
@@ -26,8 +33,7 @@ function brute(data,c){
   let score=0;
   for(const t of data.traits){if(!c.include_unique_traits&&members.get(t.name)<=1)continue;
    const n=team.filter(u=>effectiveTraits(u,c).includes(t.name)).length*(t.name==='K|DA'?2:1)+(c.trait_bonuses?.[t.name]||0);
-   if(c.score_mode==='all_members')score+=n;
-   else if(n>=Math.min(...t.breakpoints))score+=c.score_mode==='active_members'?n:Math.max(...t.breakpoints.filter(p=>p<=n));
+   score+=referenceTraitPoints(t,n,c.score_mode);
   }
   if(score>=c.min_trait_score)found.set(team.map(u=>u.id).sort().join(','),score);
  }
@@ -65,14 +71,19 @@ for(const mode of ['active_members','breakpoint','all_members']){
 }
 compare(sample,{...DEFAULTS,population:4,min_frontline:4,min_backline_four_cost:2,min_trait_score:0});
 const tierData={
- traits:[{name:'Arcanist',breakpoints:[2,4,6]},{name:'K|DA',breakpoints:[3,5,7]}],
+ traits:[{name:'Arcanist',breakpoints:[2,4,6]},{name:'K|DA',breakpoints:[3,5,7,10,13,15,21]}],
  units:Array.from({length:4},(_,i)=>({...focused.units[0],id:'tier'+i,name:'Tier '+i,traits:['Arcanist','K|DA']}))
 };
-const tierConfig={...DEFAULTS,population:3,min_four_cost:0,min_frontline:0,min_backline_four_cost:0,min_trait_score:7};
+const tierConfig={...DEFAULTS,population:3,min_four_cost:0,min_frontline:0,min_backline_four_cost:0,min_trait_score:6};
+const starTotals=[0,2,3,4,5,6,7,9,10,12,13,14,15,20,21,30];
+const kdaPoints=[0,0,2,2,4,4,6,6,8,8,9,9,10,10,10,10];
+for(const mode of ['breakpoint','active_members','all_members']){
+ assert.deepEqual(starTotals.map(stars=>solverTraitPoints(tierData.traits[1],stars,mode)),kdaPoints);
+}
 const tierChunks=[];
-assert.equal(solve(tierData,tierConfig,{onChunk:bytes=>tierChunks.push(bytes)}).histogram[7],4);
-assert.equal(solve(tierData,{...tierConfig,population:2,min_trait_score:5,required_traits:{'K|DA':3},required_trait_mode:'exact_tier'}).histogram[5],6);
-assert.equal(solve(tierData,{...tierConfig,population:2,min_trait_score:7,trait_bonuses:{'K|DA':1},required_traits:{'K|DA':5}}).histogram[7],6);
+assert.equal(solve(tierData,tierConfig,{onChunk:bytes=>tierChunks.push(bytes)}).histogram[6],4);
+assert.equal(solve(tierData,{...tierConfig,population:2,min_trait_score:4,required_traits:{'K|DA':3},required_trait_mode:'exact_tier'}).histogram[4],6);
+assert.equal(solve(tierData,{...tierConfig,population:2,min_trait_score:6,trait_bonuses:{'K|DA':1},required_traits:{'K|DA':5}}).histogram[6],6);
 assert.deepEqual(filterRequiredRecords(tierData,tierChunks[0],{...tierConfig,required_traits:{'K|DA':5},required_trait_mode:'exact_tier'}),tierChunks[0]);
 assert.equal(filterRequiredRecords(tierData,tierChunks[0],{...tierConfig,required_traits:{'K|DA':3},required_trait_mode:'exact_tier'}).length,0);
 assert.throws(()=>prepare(data,{population:0}));assert.throws(()=>prepare(data,{extra_traits:{notAUnit:['A']}}));assert.throws(()=>prepare(data,{sona_feature_trait:'Fake'}));
@@ -90,7 +101,7 @@ const presetRecords=Number(html.match(/id="preset-data"[^>]*data-records="(\d+)"
 assert(presetRecords>0);assert.equal(preset.length,presetRecords*(DEFAULTS.population+1));
 assert.deepEqual(preset,fs.readFileSync(new URL('dist/preset.bin',root)));
 const seen=new Set(),hist={};
-for(let p=0;p<preset.length;p+=9){const row=preset.subarray(p,p+9);assert(row[8]>=16);const ids=[...row.subarray(0,8)].filter(i=>i!==255).sort((a,b)=>a-b);const key=ids.join(',');assert(!seen.has(key));seen.add(key);const team=ids.map(i=>data.units[i]);assert.equal(team.reduce((s,u)=>s+u.slots,0),8);assert(team.filter(u=>u.cost===4).length>=DEFAULTS.min_four_cost);assert(team.filter(u=>u.cost===5).length<=1);assert(team.filter(u=>u.range<=2).length>=5);assert(team.filter(u=>u.cost===4&&u.range>2&&DEFAULTS.backline_role_keywords.some(k=>u.role.includes(k))).length>=2);const counts=new Map();for(const u of team)for(const t of u.traits)counts.set(t,(counts.get(t)||0)+(t==='K|DA'?2:1));const score=data.traits.reduce((s,t)=>s+Math.max(0,...t.breakpoints.filter(point=>point<=(counts.get(t.name)||0))),0);assert.equal(score,row[8]);hist[score]=(hist[score]||0)+1;}
+for(let p=0;p<preset.length;p+=9){const row=preset.subarray(p,p+9);assert(row[8]>=16);const ids=[...row.subarray(0,8)].filter(i=>i!==255).sort((a,b)=>a-b);const key=ids.join(',');assert(!seen.has(key));seen.add(key);const team=ids.map(i=>data.units[i]);assert.equal(team.reduce((s,u)=>s+u.slots,0),8);assert(team.filter(u=>u.cost===4).length>=DEFAULTS.min_four_cost);assert(team.filter(u=>u.cost===5).length<=1);assert(team.filter(u=>u.range<=2).length>=5);assert(team.filter(u=>u.cost===4&&u.range>2&&DEFAULTS.backline_role_keywords.some(k=>u.role.includes(k))).length>=2);const counts=new Map();for(const u of team)for(const t of u.traits)counts.set(t,(counts.get(t)||0)+(t==='K|DA'?2:1));const score=data.traits.reduce((s,t)=>s+referenceTraitPoints(t,counts.get(t.name)||0,DEFAULTS.score_mode),0);assert.equal(score,row[8]);hist[score]=(hist[score]||0)+1;}
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size,'Duplicate DOM ids');
 const app=get('src/app.js');for(const m of app.matchAll(/\$\('([^']+)'\)/g))assert(ids.includes(m[1]),'Missing element: '+m[1]);
 function appFunction(name,next,context){const start=app.indexOf('function '+name+'(');assert(start>=0);const end=app.indexOf('\nfunction '+next+'(',start);assert(end>start);return new vm.Script('('+app.slice(start,end)+')').runInNewContext(context);}
