@@ -8,7 +8,7 @@ setLanguage('en');
 const data=JSON.parse(fs.readFileSync(new URL('../dist/units.json',import.meta.url)));
 const root=new URL('../',import.meta.url);
 const get=p=>fs.readFileSync(new URL(p,root),'utf8');
-const referenceKdaScores={3:2,5:4,7:6,10:8,13:9,15:10};
+const referenceKdaScores={3:2,5:3,7:4,10:5,13:6,15:7};
 function referenceTraitPoints(trait,count,mode){
  const tier=Math.max(0,...trait.breakpoints.filter(point=>point<=count));
  if(trait.name==='K|DA')return referenceKdaScores[Math.min(tier,15)]||0;
@@ -74,16 +74,16 @@ const tierData={
  traits:[{name:'Arcanist',breakpoints:[2,4,6]},{name:'K|DA',breakpoints:[3,5,7,10,13,15,21]}],
  units:Array.from({length:4},(_,i)=>({...focused.units[0],id:'tier'+i,name:'Tier '+i,traits:['Arcanist','K|DA']}))
 };
-const tierConfig={...DEFAULTS,population:3,min_four_cost:0,min_frontline:0,min_backline_four_cost:0,min_trait_score:6};
+const tierConfig={...DEFAULTS,population:3,min_four_cost:0,min_frontline:0,min_backline_four_cost:0,min_trait_score:5};
 const starTotals=[0,2,3,4,5,6,7,9,10,12,13,14,15,20,21,30];
-const kdaPoints=[0,0,2,2,4,4,6,6,8,8,9,9,10,10,10,10];
+const kdaPoints=[0,0,2,2,3,3,4,4,5,5,6,6,7,7,7,7];
 for(const mode of ['breakpoint','active_members','all_members']){
  assert.deepEqual(starTotals.map(stars=>solverTraitPoints(tierData.traits[1],stars,mode)),kdaPoints);
 }
 const tierChunks=[];
-assert.equal(solve(tierData,tierConfig,{onChunk:bytes=>tierChunks.push(bytes)}).histogram[6],4);
+assert.equal(solve(tierData,tierConfig,{onChunk:bytes=>tierChunks.push(bytes)}).histogram[5],4);
 assert.equal(solve(tierData,{...tierConfig,population:2,min_trait_score:4,required_traits:{'K|DA':3},required_trait_mode:'exact_tier'}).histogram[4],6);
-assert.equal(solve(tierData,{...tierConfig,population:2,min_trait_score:6,trait_bonuses:{'K|DA':1},required_traits:{'K|DA':5}}).histogram[6],6);
+assert.equal(solve(tierData,{...tierConfig,population:2,min_trait_score:5,trait_bonuses:{'K|DA':1},required_traits:{'K|DA':5}}).histogram[5],6);
 assert.deepEqual(filterRequiredRecords(tierData,tierChunks[0],{...tierConfig,required_traits:{'K|DA':5},required_trait_mode:'exact_tier'}),tierChunks[0]);
 assert.equal(filterRequiredRecords(tierData,tierChunks[0],{...tierConfig,required_traits:{'K|DA':3},required_trait_mode:'exact_tier'}).length,0);
 assert.throws(()=>prepare(data,{population:0}));assert.throws(()=>prepare(data,{extra_traits:{notAUnit:['A']}}));assert.throws(()=>prepare(data,{sona_feature_trait:'Fake'}));
