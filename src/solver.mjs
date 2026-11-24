@@ -3,7 +3,7 @@ export const DEFAULTS = Object.freeze({
   population:8,target_cost:4,min_four_cost:4,max_four_cost:16,max_five_cost:1,min_trait_score:16,
   min_frontline:5,frontline_max_range:2,min_backline_four_cost:2,
   include_unique_traits:true,include_seven_cost:true,score_mode:'breakpoint',
-  backline_role_keywords:['Marksman','Caster','AttackSpecialist_Ammo'],
+  backline_role_keywords:['Marksman','Caster','Specialist_Ammo'],
   exclude_unit_ids:[],extra_traits:{},trait_bonuses:{},required_traits:{},required_trait_mode:'at_least',sona_feature_trait:null,max_seconds:590,threads:4
 });
 

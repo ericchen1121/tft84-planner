@@ -14,7 +14,7 @@ if(!isMainThread){
  const costArgument=process.argv.find(arg=>arg.startsWith('--cost='));
  const cost=costArgument?Number(costArgument.slice(7)):4;
  const generate=process.argv.includes('--write-preset');
- if(![1,2,3,4].includes(cost)||((boosted||cost===4)&&generate)||(boosted&&cost!==4))throw Error('Choose --cost=1, 2 or 3 to build a low-cost preset.');
+ if(![1,2,3,4].includes(cost)||(boosted&&(generate||cost!==4)))throw Error('Choose --cost=1, 2, 3 or 4. Emblem checks require the 4-cost solver and do not write a preset.');
  const c={...solverDefaults(cost),trait_bonuses:boosted?{Frontman:1}:{}},n=4,started=Date.now();let last=0;
  const presetPath=new URL(cost===4?'../dist/preset.bin':`../dist/preset-${cost}.bin`,import.meta.url);
  const chunks=[];

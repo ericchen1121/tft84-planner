@@ -1,5 +1,15 @@
 export const SIMULATOR_CELLS=28;
+export const SIMULATOR_ROW_SIZE=7;
 export function emptySimulator(){return {version:1,board:Array(SIMULATOR_CELLS).fill(null),augments:[null,null,null],nextId:1};}
+function defaultSimulatorCell(board,unit){
+ const preferred=unit.range>=4?3:unit.range===2?1:0;
+ const rows=[0,1,2,3].sort((a,b)=>Math.abs(a-preferred)-Math.abs(b-preferred));
+ for(const row of rows){
+  const first=row*SIMULATOR_ROW_SIZE;
+  for(let cell=first;cell<first+SIMULATOR_ROW_SIZE;cell++)if(!board[cell])return cell;
+ }
+ return -1;
+}
 export function simulatorItemSlots(ids,context){return ids.reduce((n,id)=>n+(context.rules.threeSlotItems.includes(id)?3:1),0);}
 function simulatorEquipped(items,id,unit,context){
  const item=context.items.find(i=>i.id===id);
@@ -28,7 +38,7 @@ export function simulatorTransition(current,action,context){
   case 'add':{
    const unit=context.units.find(u=>u.id===action.unitId);if(!unit)throw Error('Unknown champion.');
    if(cell!==undefined){requireCell(cell);if(state.board[cell])throw Error('This hex is occupied.');}
-   const target=validCell(cell)&&!state.board[cell]?cell:state.board.findIndex(u=>!u);if(target<0)throw Error('The board is full.');
+   const target=cell??defaultSimulatorCell(state.board,unit);if(target<0)throw Error('The board is full.');
    state.board[target]={uid:state.nextId++,unitId:unit.id,stars:1,items:[],collab:false,sonaBand:''};break;
   }
   case 'move':{requireCell(cell);requireUnit(action.from);if(cell===action.from)return current;[state.board[cell],state.board[action.from]]=[state.board[action.from],state.board[cell]];break;}
@@ -67,7 +77,10 @@ export function restoreSimulator(value,context){
   if(JSON.stringify(items)!==JSON.stringify(placed.items))throw Error('Invalid saved simulator.');
   fresh.board[cell]={uid:placed.uid,unitId:unit.id,stars:placed.stars,items,collab:placed.collab,sonaBand:placed.sonaBand};
  }
- for(let slot=0;slot<3;slot++)fresh.augments=simulatorTransition(fresh,{type:'augment',slot,id:value.augments[slot]},context).augments;
+ for(let slot=0;slot<3;slot++){
+  const id=value.augments[slot];
+  if(!context.rules.retiredAugmentIds?.includes(id))fresh.augments=simulatorTransition(fresh,{type:'augment',slot,id},context).augments;
+ }
  if(maxId>=Number.MAX_SAFE_INTEGER-1)throw Error('Invalid saved simulator.');fresh.nextId=maxId+1;return fresh;
 }
 export function simulatorTraits(state,context){

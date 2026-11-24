@@ -66,7 +66,7 @@ The 3-cost, 2-cost, and 1-cost solver tabs use the same controls, trait scoring,
 | 2-cost | 7 | 3 | 1 | 2 | 2 | 0 | 14 |
 | 1-cost | 6 | 3 | 1 | 2 | 2 | 0 | 12 |
 
-All four solvers load their default lineups from embedded presets. Regenerate a low-cost preset after changing the roster or scoring with `node tools/benchmark.mjs --cost=3 --write-preset`, using the corresponding cost for each tab, then rebuild the app.
+All four solvers load their default lineups from embedded presets. Regenerate a preset after changing the roster or scoring with `node tools/benchmark.mjs --cost=3 --write-preset`, using the corresponding cost from 1 through 4, then rebuild the app.
 
 ### Emblems / Trait +1
 
@@ -130,11 +130,11 @@ Source: [tactics.tools Set Update](https://tactics.tools/info/set-update). Champ
 
 ## Champion Info / 棋子圖鑑
 
-The existing Solver and Info tabs preserve solver settings and results when switching. Info contains all 94 champions sorted by cost descending, bilingual name search, and cost/trait/unlock filters. Names follow MetaTFT's Taiwan locale: 86 translated names, remaining names unchanged. Portraits include 91 original mappings and 3 additional MetaTFT images.
+Champion Data contains all 94 champions with bilingual search and cost, trait, and unlock filters. The Taiwan lookup supplies 89 Traditional Chinese names and 72 complete Traditional Chinese ability descriptions.
 
 Info now displays full ability text with numeric values, mana, star-level ordering and highlighted numeric sequences. Population labels are omitted throughout Info. Unlock conditions are visible directly on the cards. Click a card for the same full description in a dialog. Content follows the source language, with English taking precedence when a translation is incomplete or materially different (notably Vladimir and Rakan's loss streak).
 
-Source: https://www.metatft.com/new-set, captured 2026-11-19. Every champion has full text; 9 entries still contain source placeholders or dynamic counters: Kobuko, Ziggs, Gragas, Viego, Jinx, Shyvana, Nunu & Willump, Teemo and Sona. They are explicitly marked unavailable / dependent on the current board. No missing numeric values are guessed. Repeated tooltip echoes are normalized. Damage/healing displayed by the source is not a simulator for arbitrary item or stat configurations.
+The 2026-11-25 snapshot uses the MetaTFT Set 19 PBE lookup release rls-19.1.0.6018196.Set19.Shipping.pbe. It updates solver roles, ranges and trait membership, plus unit tooltips and mana. Four presets were regenerated. Missing values are explicit, and incomplete or outdated skill translations fall back to English.
 
 The current MetaTFT Info snapshot lists 32 unlockable entries. Info filters use that display snapshot. Solver data supplies the unlock flags shown in lineup results.
 
@@ -189,9 +189,9 @@ Team-code audit: all 91 mapped IDs still agree with the current lookup and the o
 
 ## Augment library / 海克斯圖鑑
 
-The third tab lists all 371 augment entries in the MetaTFT Set 19 PBE / 19.1 lookup snapshot dated 2026-11-21 (101 Silver, 147 Gold, 123 Prismatic). Search names/effects/traits in either language; combine tier, stage and general/trait filters; browse 24 cards per page and open full descriptions in a dialog. Keyboard tab navigation, direct #augments links and language switching preserve the solver and filters.
+The Augments tab lists all 369 entries in the 2026-11-25 MetaTFT Set 19 PBE snapshot (101 Silver, 146 Gold, 122 Prismatic). Search names/effects/traits in either language; combine tier, stage and general/trait filters; browse 24 cards per page and open full descriptions in a dialog. Keyboard tab navigation, direct #augments links and language switching preserve the solver and filters.
 
-348 names and 349 descriptions have official Traditional Chinese text in the source. Each missing field independently falls back to English. Values resolve curve-table placeholders including percentages and stage-range columns. Nine entries have conflicting source curve values, one has a missing source value, and four have dynamic game fields; unconfirmed values are explicit rather than guessed. Round metadata is copied from the source; entries without listed rounds remain visible. Distinct tiers/stages/curves can share an API name, so composite identities retain every variant.
+346 names and 347 descriptions have official Traditional Chinese text in the source. Each missing field independently falls back to English. Values resolve curve-table placeholders including percentages and stage-range columns. One entry has a missing source value and four have dynamic game fields. Unresolved values are marked in the description. Round metadata is copied from the source; entries without listed rounds remain visible. Distinct tiers/stages/curves can share an API name, so composite identities retain every variant.
 
 Run npm run refresh:augments to fetch and rebuild this dataset. dist/augments.json retains raw text and curve data for audit; the standalone HTML only embeds display fields. This is a reference library and does not apply augment effects to the solver.
 
@@ -207,7 +207,7 @@ All 371 variants now have reviewed multi-label categories, shared with the web U
 
 ## Lineup simulator
 
-The Simulator tab adds a 4 × 7 hex board with 94 champions, 1–4 stars, position swaps, and three augment slots. Click champions to add them, or drag them onto a hex. Select a placed champion to change stars or click an empty hex to move. Drag a champion or equipped item to the lower palette to remove it. Pointer-based dragging supports edge scrolling and cleans up capture/ghosts on cancel, lost capture, or window blur; click and keyboard controls remain available.
+The Simulator tab adds a 4 × 7 hex board with 94 champions, 1–4 stars, position swaps, and three augment slots. Click a champion to place it in the leftmost available hex of its default row. One-hex melee champions go in row 1, two-hex champions go in row 2, and champions with range 4 or higher go in row 4. A full row falls back to the closest open row. Drag a champion to choose a specific hex. Select a placed champion to change stars or click an empty hex to move. Drag a champion or equipped item to the lower palette to remove it. Pointer-based dragging supports edge scrolling and cleans up capture/ghosts on cancel, lost capture, or window blur; click and keyboard controls remain available.
 
 Equipment can be clicked onto the selected champion or dragged onto any placed champion. The board enforces three item slots, three-slot Thief’s Gloves, unique equipment and redundant emblem restrictions. Matching components combine from the source recipe table; equipment transfers are atomic. Emblems update trait counts. Traits count distinct champion identities, with K/DA using the highest star level for each identity. Sona’s featured band and per-game Collab assignments are editable. Population includes Baron’s two slots. This is a lineup planner: augment rewards are placed manually and combat/quest completion is not simulated.
 

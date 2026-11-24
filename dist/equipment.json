@@ -2,16 +2,16 @@
   "set": "TFTSet19",
   "mode": "PBE",
   "patch": "19.1",
-  "snapshot_date": "2026-11-21",
+  "snapshot_date": "2026-11-25",
   "source": "https://www.metatft.com/items?set=TFTSet19",
   "metadata": {
     "set": "TFTSet19",
     "setName": "Set 19",
     "patch": "pbe",
-    "generated": "2026-11-21T06:39:18.293Z",
-    "coreHash": "6727064c4aa3124e1d0857fb38a85fa5c86bd8e2",
-    "release": "rls-19.1.0.6011486.Set19.Shipping.pbe",
-    "manifest": "4E62BCFE8BD94F79",
+    "generated": "2026-11-23T21:39:48.080Z",
+    "coreHash": "59b4b05f6466b86738f39db57b20d58de631f0a4",
+    "release": "rls-19.1.0.6018196.Set19.Shipping.pbe",
+    "manifest": "1096C8A75AEA562C",
     "tooltips": "curvetable"
   },
   "lookups": [
@@ -1022,7 +1022,7 @@
         {
           "key": "ap",
           "label": "Ability power",
-          "value": "30%"
+          "value": "20%"
         },
         {
           "key": "manaregen",
@@ -1069,7 +1069,7 @@
           "AbilityPowerMultiplier": [
             [
               1,
-              0.3
+              0.2
             ]
           ],
           "ManaRegenBase": [
@@ -1101,7 +1101,7 @@
           "AbilityPowerMultiplier": [
             [
               1,
-              0.3
+              0.2
             ]
           ],
           "IndividualTargetCooldown": [
@@ -1618,7 +1618,7 @@
         {
           "key": "ad",
           "label": "Attack damage",
-          "value": "25%"
+          "value": "35%"
         },
         {
           "key": "as",
@@ -1647,7 +1647,7 @@
           "AttackDamage": [
             [
               1,
-              0.25
+              0.35
             ]
           ],
           "AttackSpeed": [
@@ -1667,7 +1667,7 @@
           "AttackDamage": [
             [
               1,
-              0.25
+              0.35
             ]
           ],
           "BaseRangeIncrease": [
@@ -2260,8 +2260,8 @@
       "id": "DA_Artifact_Hullcrusher",
       "name": "Hullcrusher",
       "name_zh": "碎船戰斧",
-      "description": "Combat Start: If there are no adjacent allies, gain 400 Health, 10% Attack Damage, and 10% Ability Power.",
-      "description_zh": "戰鬥開始：若沒有鄰近友軍，則增加400生命、10%物攻和10%魔攻。",
+      "description": "Combat Start: If there are no adjacent allies, gain 500 Health, 15% Attack Damage, and 15% Ability Power.",
+      "description_zh": "戰鬥開始：若沒有鄰近友軍，則增加500生命、15%物攻和15%魔攻。",
       "category": "artifact",
       "recipe": [],
       "stats": [
@@ -2297,19 +2297,19 @@
           "HealthBonus": [
             [
               1,
-              400
+              500
             ]
           ],
           "ADBonus": [
             [
               1,
-              0.1
+              0.15
             ]
           ],
           "APBonus": [
             [
               1,
-              0.1
+              0.15
             ]
           ],
           "ArmorBase": [
@@ -2341,19 +2341,19 @@
           "HealthBonus": [
             [
               1,
-              400
+              500
             ]
           ],
           "ADBonus": [
             [
               1,
-              0.1
+              0.15
             ]
           ],
           "APBonus": [
             [
               1,
-              0.1
+              0.15
             ]
           ]
         }
@@ -2577,27 +2577,27 @@
           "ProcDamage": [
             [
               1,
-              250
+              200
             ],
             [
               3,
-              350
+              300
             ],
             [
               4,
-              500
+              400
             ],
             [
               5,
-              600
+              500
             ],
             [
               6,
-              700
+              600
             ],
             [
               8,
-              700
+              600
             ]
           ]
         },
@@ -3017,8 +3017,8 @@
       "id": "DA_Artifact_MogulsMail",
       "name": "Mogul's Mail",
       "name_zh": "權貴之甲",
-      "description": "Grants 1 Armor, 1 Magic Resist, and 5 Health when taking damage, stacking up to 35 times.\n\nAt full stacks, grant 1 gold and continue gaining 1 gold every 11 seconds.\n\nGold generated this game: [current game value]\n\nUnique - only 1 per champion",
-      "description_zh": "受到傷害時，增加1物防、1魔防及5生命，最多累加35層。\n\n滿層時，獲得金錢，且每隔11秒獲得1金錢。\n\n本局產生的金錢量：[current game value]\n\n唯一：每一名英雄僅限1件",
+      "description": "Grants 1 Armor, 1 Magic Resist, and 3 Health when taking damage, stacking up to 35 times.\n\nAt full stacks, grant 1 gold and continue gaining 1 gold every 11 seconds.\n\nGold generated this game: [current game value]\n\nUnique - only 1 per champion",
+      "description_zh": "受到傷害時，增加1物防、1魔防及3生命，最多累加35層。\n\n滿層時，獲得金錢，且每隔11秒獲得1金錢。\n\n本局產生的金錢量：[current game value]\n\n唯一：每一名英雄僅限1件",
       "category": "artifact",
       "recipe": [],
       "stats": [
@@ -3063,7 +3063,7 @@
           "HealthPerStack": [
             [
               1,
-              5
+              3
             ]
           ],
           "MaxStacks": [
@@ -3119,7 +3119,7 @@
           "HealthPerStack": [
             [
               1,
-              5
+              3
             ]
           ]
         }
@@ -5880,15 +5880,15 @@
       "id": "DA_CrownguardRadiant",
       "name": "Prismatic Crownguard",
       "name_zh": "稜鏡皇冠守衛",
-      "description": "Combat start: Gain a [source values differ]% max Health Shield for 8 seconds.\n\nAll healing and shielding applied to the holder is increased by [source values differ].",
-      "description_zh": "戰鬥開始：獲得最大生命[source values differ]%的護盾，持續8秒。\n\n裝備者獲得的所有治療和護盾效果提升[source values differ]。",
+      "description": "Combat start: Gain a 30% max Health Shield for 8 seconds.\n\nAll healing and shielding applied to the holder is increased by 50%.",
+      "description_zh": "戰鬥開始：獲得最大生命30%的護盾，持續8秒。\n\n裝備者獲得的所有治療和護盾效果提升50%。",
       "category": "radiant",
       "recipe": [],
       "stats": [
         {
           "key": "health",
           "label": "Health",
-          "value": "[source values differ]"
+          "value": "200"
         },
         {
           "key": "ap",
@@ -5907,10 +5907,7 @@
       "upgrade": null,
       "traits": [],
       "missing_values": [],
-      "conflicting_values": [
-        "MaxHealthShieldPercent",
-        "HealingShieldingMultiplier"
-      ],
+      "conflicting_values": [],
       "dynamic": false,
       "source_data": {
         "description": "Combat start: Gain a <TFTCurveTable row=\"MaxHealthShieldPercent\" style=\"colorRadiant\"/><colorRadiant>%</> max Health Shield for <TFTCurveTable row=\"ShieldDuration\"/> seconds.\r\n\r\nAll healing and shielding applied to the holder is increased by <TFTCurveTable row=\"HealingShieldingMultiplier\" format=\"percent\" style=\"colorRadiant\"/>.",
@@ -5926,7 +5923,7 @@
           "MaxHealthShieldPercent": [
             [
               1,
-              20
+              30
             ]
           ],
           "ShieldDuration": [
@@ -5938,13 +5935,13 @@
           "HealingShieldingMultiplier": [
             [
               1,
-              0.25
+              0.5
             ]
           ],
           "Health": [
             [
               1,
-              100
+              200
             ]
           ],
           "AbilityPower": [
@@ -11331,20 +11328,20 @@
       "id": "DA_SteraksGageRadiant",
       "name": "Radiant Sterak's Gage",
       "name_zh": "聖光史特拉克手套",
-      "description": "At 40% Health, gain a Shield equal to [source values differ] of the wearer's maximum Health that rapidly decays over [source values differ] seconds.",
-      "description_zh": "生命降至40%時，獲得等同於裝備者[source values differ]最大生命的護盾。護盾會在[source values differ]秒內快速衰減。",
+      "description": "At 40% Health, gain a Shield equal to 80% of the wearer's maximum Health that rapidly decays over 6 seconds.",
+      "description_zh": "生命降至40%時，獲得等同於裝備者80%最大生命的護盾。護盾會在6秒內快速衰減。",
       "category": "radiant",
       "recipe": [],
       "stats": [
         {
           "key": "health",
           "label": "Health",
-          "value": "[source values differ]"
+          "value": "600"
         },
         {
           "key": "ad",
           "label": "Attack damage",
-          "value": "[source values differ]"
+          "value": "90%"
         }
       ],
       "image": "https://cdn.metatft.com/file/metatft/items/da_steraksgageradiant.png",
@@ -11353,10 +11350,7 @@
       "upgrade": null,
       "traits": [],
       "missing_values": [],
-      "conflicting_values": [
-        "ShieldMaxHealthRatio",
-        "Duration"
-      ],
+      "conflicting_values": [],
       "dynamic": false,
       "source_data": {
         "description": "At <TFTCurveTable row=\"MaxHealthProcThreshold\" format=\"percent\"/> Health, gain a Shield equal to <TFTCurveTable row=\"ShieldMaxHealthRatio\" format=\"percent\" style=\"colorRadiant\"/> of the wearer's maximum Health that rapidly decays over <TFTCurveTable row=\"Duration\" style=\"colorRadiant\"/> seconds.",
@@ -11378,25 +11372,25 @@
           "ShieldMaxHealthRatio": [
             [
               1,
-              0.4
+              0.8
             ]
           ],
           "Duration": [
             [
               1,
-              4
+              6
             ]
           ],
           "BaseHealth": [
             [
               1,
-              300
+              600
             ]
           ],
           "BaseAD": [
             [
               1,
-              0.45
+              0.9
             ]
           ]
         },
@@ -11721,20 +11715,20 @@
       "id": "DA_SunfireCape_Radiant",
       "name": "Radiant Sunfire Cape",
       "name_zh": "聖光日炎斗篷",
-      "description": "Gain [source values differ] max Health.\n\nEvery 2 seconds, deal [source values differ]% Burn and 33% Wound to an enemy within 2 hexes for 10 seconds.\n\nBurn: Deals a percent of the target’s max Health as true damage every second.\nWound: Reduces healing received.",
-      "description_zh": "增加[source values differ]最大生命。\n\n每2秒，對2格內的敵軍造成[source values differ]%燃燒與33%重創效果，持續10秒。\n\n燃燒：每秒造成目標一定比例最大生命的真實傷害。\n重創：降低獲得的治療效果",
+      "description": "Gain 16% max Health.\n\nEvery 2 seconds, deal 2% Burn and 33% Wound to an enemy within 2 hexes for 10 seconds.\n\nBurn: Deals a percent of the target’s max Health as true damage every second.\nWound: Reduces healing received.",
+      "description_zh": "增加16%最大生命。\n\n每2秒，對2格內的敵軍造成2%燃燒與33%重創效果，持續10秒。\n\n燃燒：每秒造成目標一定比例最大生命的真實傷害。\n重創：降低獲得的治療效果",
       "category": "radiant",
       "recipe": [],
       "stats": [
         {
           "key": "health",
           "label": "Health",
-          "value": "[source values differ]"
+          "value": "300"
         },
         {
           "key": "armor",
           "label": "Armor",
-          "value": "[source values differ]"
+          "value": "40"
         }
       ],
       "image": "https://cdn.metatft.com/file/metatft/items/da_sunfirecape_radiant.png",
@@ -11743,10 +11737,7 @@
       "upgrade": null,
       "traits": [],
       "missing_values": [],
-      "conflicting_values": [
-        "MaxHealthMultiplier",
-        "BurnPercent"
-      ],
+      "conflicting_values": [],
       "dynamic": false,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"MaxHealthMultiplier\" format=\"percentMinusOne\" style=\"colorRadiant\"/> max Health.\r\n\r\nEvery <TFTCurveTable row=\"BurnWoundFrequency\"/> seconds, deal <TFTCurveTable row=\"BurnPercent\" style=\"colorRadiant\"/><colorRadiant>%</> <Keyword>Burn</> and <TFTCurveTable row=\"WoundPercent\"/>% <Keyword>Wound</> to an enemy within 2 hexes for <TFTCurveTable row=\"BurnWoundDuration\"/> seconds.\r\n\r\n<Rules>Burn: Deals a percent of the target’s max Health as true damage every second.</>\r\n<Rules>Wound: Reduces healing received.</>",
@@ -11762,7 +11753,7 @@
           "MaxHealthMultiplier": [
             [
               1,
-              1.08
+              1.16
             ]
           ],
           "BurnWoundFrequency": [
@@ -11774,7 +11765,7 @@
           "BurnPercent": [
             [
               1,
-              1
+              2
             ]
           ],
           "WoundPercent": [
@@ -11792,13 +11783,13 @@
           "MaxHealth": [
             [
               1,
-              150
+              300
             ]
           ],
           "Armor": [
             [
               1,
-              20
+              40
             ]
           ]
         },
@@ -14440,12 +14431,12 @@
         {
           "key": "ad",
           "label": "Attack damage",
-          "value": "10%"
+          "value": "15%"
         },
         {
           "key": "ap",
           "label": "Ability power",
-          "value": "10%"
+          "value": "15%"
         }
       ],
       "image": "https://cdn.metatft.com/file/metatft/items/da_heartsteel19_emblem.png",
@@ -14497,13 +14488,13 @@
           "EmblemAD": [
             [
               1,
-              0.1
+              0.15
             ]
           ],
           "EmblemAP": [
             [
               1,
-              0.1
+              0.15
             ]
           ]
         },
@@ -14517,13 +14508,13 @@
           "EmblemAD": [
             [
               1,
-              0.1
+              0.15
             ]
           ],
           "EmblemAP": [
             [
               1,
-              0.1
+              0.15
             ]
           ],
           "EmblemAS": [
@@ -15287,7 +15278,7 @@
         {
           "key": "ad",
           "label": "Attack damage",
-          "value": "10%"
+          "value": "25%"
         }
       ],
       "image": "https://cdn.metatft.com/file/metatft/items/da_hitmaker19_emblem.png",
@@ -15320,7 +15311,7 @@
           "EmblemAD": [
             [
               1,
-              0.1
+              0.25
             ]
           ]
         },
@@ -15328,7 +15319,7 @@
           "EmblemAD": [
             [
               1,
-              0.1
+              0.25
             ]
           ],
           "EmblemAP": [
@@ -15497,12 +15488,12 @@
         {
           "key": "health",
           "label": "Health",
-          "value": "250"
+          "value": "300"
         },
         {
           "key": "as",
           "label": "Attack speed",
-          "value": "15%"
+          "value": "20%"
         }
       ],
       "image": "https://cdn.metatft.com/file/metatft/items/da_illbeats19_emblem.png",
@@ -15535,13 +15526,13 @@
           "EmblemHealth": [
             [
               1,
-              250
+              300
             ]
           ],
           "EmblemAS": [
             [
               1,
-              0.15
+              0.2
             ]
           ]
         },
@@ -15561,7 +15552,7 @@
           "EmblemAS": [
             [
               1,
-              0.15
+              0.2
             ]
           ],
           "EmblemArmor": [
@@ -15591,7 +15582,7 @@
           "EmblemHealth": [
             [
               1,
-              250
+              300
             ]
           ],
           "EmblemMR": [
@@ -15627,10 +15618,10 @@
             1
           ],
           "TFTCalculationAttributes.AttackSpeedCalc1": [
-            1.15,
-            1.15,
-            1.15,
-            1.15
+            1.2,
+            1.2,
+            1.2,
+            1.2
           ]
         },
         "attributeCalcs": {
@@ -15683,20 +15674,20 @@
                 "op": "add",
                 "type": "flat",
                 "values": [
-                  0.15,
-                  0.15,
-                  0.15,
-                  0.15
+                  0.2,
+                  0.2,
+                  0.2,
+                  0.2
                 ],
                 "row": "EmblemAS",
                 "table": "CT_IllBeats19_Emblem"
               }
             ],
             "values": [
-              1.15,
-              1.15,
-              1.15,
-              1.15
+              1.2,
+              1.2,
+              1.2,
+              1.2
             ],
             "resolved": true
           }
@@ -16489,17 +16480,17 @@
         {
           "key": "health",
           "label": "Health",
-          "value": "150"
+          "value": "100"
         },
         {
           "key": "ad",
           "label": "Attack damage",
-          "value": "15%"
+          "value": "10%"
         },
         {
           "key": "ap",
           "label": "Ability power",
-          "value": "15%"
+          "value": "10%"
         }
       ],
       "image": "https://cdn.metatft.com/file/metatft/items/da_kda19_emblem.png",
@@ -16533,54 +16524,48 @@
           "EmblemHealth": [
             [
               1,
-              150
+              100
             ]
           ],
           "EmblemAD": [
             [
               1,
-              0.15
+              0.1
             ]
           ],
           "EmblemAP": [
             [
               1,
-              0.15
+              0.1
             ]
           ]
         },
         "curveTable": {
+          "EmblemAD": [
+            [
+              1,
+              0.1
+            ]
+          ],
+          "EmblemAP": [
+            [
+              1,
+              0.1
+            ]
+          ],
+          "EmblemAS": [
+            [
+              1,
+              0
+            ]
+          ],
           "EmblemArmor": [
             [
               1,
               0
             ]
           ],
-          "EmblemManaRegen": [
-            [
-              1,
-              0
-            ]
-          ],
-          "EmblemMR": [
-            [
-              1,
-              0
-            ]
-          ],
-          "EmblemAD": [
-            [
-              1,
-              0.15
-            ]
-          ],
-          "EmblemAP": [
-            [
-              1,
-              0.15
-            ]
-          ],
-          "EmblemAS": [
+          "EmblemCritChance": [
             [
               1,
               0
@@ -16598,19 +16583,25 @@
               0
             ]
           ],
-          "EmblemOmnivamp": [
+          "EmblemHealth": [
+            [
+              1,
+              100
+            ]
+          ],
+          "EmblemMR": [
             [
               1,
               0
             ]
           ],
-          "EmblemHealth": [
+          "EmblemManaRegen": [
             [
               1,
-              150
+              0
             ]
           ],
-          "EmblemCritChance": [
+          "EmblemOmnivamp": [
             [
               1,
               0
