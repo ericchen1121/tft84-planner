@@ -63,8 +63,8 @@ The 3-cost, 2-cost, and 1-cost solver tabs use the same controls, trait scoring,
 | Solver | Population | Same-cost minimum | Same-cost backline carry minimum | Frontline minimum | 4-cost maximum | 5-cost maximum | Minimum synergy |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | 3-cost | 8 | 3 | 1 | 3 | 2 | 1 | 16 |
-| 2-cost | 7 | 3 | 1 | 2 | 2 | 1 | 14 |
-| 1-cost | 6 | 3 | 1 | 2 | 2 | 1 | 12 |
+| 2-cost | 7 | 3 | 1 | 2 | 2 | 0 | 14 |
+| 1-cost | 6 | 3 | 1 | 2 | 2 | 0 | 12 |
 
 All four solvers load their default lineups from embedded presets. Regenerate a low-cost preset after changing the roster or scoring with `node tools/benchmark.mjs --cost=3 --write-preset`, using the corresponding cost for each tab, then rebuild the app.
 

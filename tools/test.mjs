@@ -71,9 +71,9 @@ for(const mode of ['active_members','breakpoint','all_members']){
  compare(focused,{...c,trait_bonuses:{A:0}});
 }
 compare(sample,{...DEFAULTS,population:4,min_frontline:4,min_backline_four_cost:2,min_trait_score:0});
-for(const [cost,population,frontline] of [[3,8,3],[2,7,2],[1,6,2]]){
+for(const [cost,population,frontline,maxFive] of [[3,8,3,1],[2,7,2,0],[1,6,2,0]]){
  const profile=solverDefaults(cost);
- assert.deepEqual([profile.population,profile.min_target_cost,profile.min_backline_target_cost,profile.min_frontline,profile.max_four_cost,profile.max_five_cost],[population,3,1,frontline,2,1]);
+ assert.deepEqual([profile.population,profile.min_target_cost,profile.min_backline_target_cost,profile.min_frontline,profile.max_four_cost,profile.max_five_cost],[population,3,1,frontline,2,maxFive]);
  const units=[[cost,1,'Tank'],[cost,1,'Tank'],[cost,4,'Marksman'],[cost,4,'Tank'],[4,1,'Tank'],[4,1,'Tank'],[4,4,'Caster'],[5,1,'Tank'],[5,4,'Marksman'],[cost===1?2:1,4,'Caster']];
  const fixture={traits:[{name:'A',breakpoints:[1]}],units:units.map(([cost,range,role],i)=>({id:'low'+i,name:'Low '+i,cost,range,role,slots:1,traits:['A']}))};
  const criteria={...profile,min_trait_score:0};
