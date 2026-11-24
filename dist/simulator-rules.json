@@ -160,5 +160,9 @@
     "K|DA",
     "Pentakill",
     "True Damage"
+  ],
+  "retiredAugmentIds": [
+    "DA_CountingStars|CT_CountingStars|Gold|2-1",
+    "DA_HardCommit||Prismatic|2-1"
   ]
 }

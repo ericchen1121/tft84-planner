@@ -6,7 +6,7 @@ const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'
 const source=read('dist/augments.json'),catalog=read('dist/augment-tags.json');
 const before=JSON.stringify(source),tagged=applyAugmentTags(source,catalog),rows=tagged.augments;
 assert.equal(JSON.stringify(source),before,'Tag application must not mutate the source snapshot');
-assert.equal(rows.length,371);assert(rows.every(a=>a.tags.length));
+assert.equal(rows.length,369);assert(rows.every(a=>a.tags.length));
 assert.equal(new Set(AUGMENT_TAGS.map(t=>t.color)).size,10);
 const named=name=>rows.find(a=>a.name===name);
 const expectTags=(name,ids)=>{for(const id of ids)assert(named(name).tags.includes(id),name+' requires '+id);};
@@ -33,7 +33,7 @@ assert.equal(rows.filter(a=>a.tags.includes('hero')).length,7);
 assert.equal(rows.filter(a=>a.tags.includes('prismatic-cap')).length,9);
 expectTags('K/DA Prismatic Tour',['trait','strategy','growth','prismatic-cap','units','economy']);
 assert(!named('K/DA Prismatic Tour').tags.includes('equipment'),'Duplicator-only quest is not an equipment grant');
-expectTags('Counting Stars',['economy','strategy','growth']);
+assert(!named('Counting Stars'));assert(!named('Hard Commit'));
 const any=filterAugments(rows,{tags:['hero','prismatic-cap']}),all=filterAugments(rows,{tags:['equipment','growth'],tagMode:'all'});
 assert.equal(any.length,16);assert(all.length>0);assert(all.every(a=>a.tags.includes('equipment')&&a.tags.includes('growth')));
 assert.equal(filterAugments(rows,{tags:['hero','prismatic-cap'],tagMode:'all'}).length,0);
@@ -46,6 +46,6 @@ assert.throws(()=>applyAugmentTags({...source,augments:[{...source.augments[0],d
 assert.throws(()=>applyAugmentTags({...source,augments:[{...source.augments[0],id:'unreviewed'}]},catalog),/need review/);
 const html=fs.readFileSync(new URL('../index.html',import.meta.url),'utf8');
 const embedded=JSON.parse(html.match(/<script id="augment-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
-assert.equal(embedded.augments.length,371);assert(embedded.augments.every(a=>a.tags.length));assert(html.includes('id="augment-tag-filters"'));assert(html.includes('id="augment-equipment"'));
+assert.equal(embedded.augments.length,369);assert(embedded.augments.every(a=>a.tags.length));assert(html.includes('id="augment-tag-filters"'));assert(html.includes('id="augment-equipment"'));
 assert(!html.includes('/*__AUGMENTS__*/'));
-console.log(JSON.stringify({augment_tags:'PASS',classified:371,categories:10,hero:7,prismatic_quests:9,any_all_filter:true,equipment_subtypes:true,changed_effect_requires_review:true}));
+console.log(JSON.stringify({augment_tags:'PASS',classified:369,categories:10,hero:7,prismatic_quests:9,any_all_filter:true,equipment_subtypes:true,changed_effect_requires_review:true}));

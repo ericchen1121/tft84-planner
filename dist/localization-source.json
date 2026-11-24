@@ -1,14 +1,14 @@
 {
   "source": "https://data.metatft.com/lookups/TFTSet19_pbe_zh_tw.json",
-  "snapshot_date": "2026-11-21",
+  "snapshot_date": "2026-11-25",
   "metadata": {
     "set": "TFTSet19",
     "setName": "Set 19",
     "patch": "pbe",
-    "generated": "2026-11-21T00:38:30.278Z",
-    "coreHash": "cc5d992ec0dd8502685c86a480f93398ef4dbcca",
-    "release": "rls-19.1.0.6005555.Set19.Shipping.pbe",
-    "manifest": "577129E866661C1E",
+    "generated": "2026-11-23T21:39:48.080Z",
+    "coreHash": "59b4b05f6466b86738f39db57b20d58de631f0a4",
+    "release": "rls-19.1.0.6018196.Set19.Shipping.pbe",
+    "manifest": "1096C8A75AEA562C",
     "tooltips": "curvetable"
   },
   "units": {
@@ -405,7 +405,7 @@
     "u78": {
       "apiName": "DA_MissFortune19",
       "name": "Miss Fortune",
-      "name_zh": "Miss Fortune"
+      "name_zh": "好運姐"
     },
     "u79": {
       "apiName": "DA_Mordekaiser19",
@@ -415,7 +415,7 @@
     "u80": {
       "apiName": "DA_Nidalee19",
       "name": "Nidalee",
-      "name_zh": "Nidalee"
+      "name_zh": "奈德麗"
     },
     "u81": {
       "apiName": "DA_Nunu19",
@@ -435,7 +435,7 @@
     "u84": {
       "apiName": "DA_Taliyah19",
       "name": "Taliyah",
-      "name_zh": "Taliyah"
+      "name_zh": "塔莉雅"
     },
     "u85": {
       "apiName": "DA_Teemo19",
@@ -498,7 +498,7 @@
     },
     "Trickshot": {
       "apiName": "DA_Trickshot19",
-      "name_zh": "Trickshot"
+      "name_zh": "炫技射手"
     },
     "Classical": {
       "apiName": "DA_Virtuosos19",
@@ -590,11 +590,11 @@
     },
     "Composer": {
       "apiName": "DA_Malzahar19_UniqueTrait",
-      "name_zh": "Composer"
+      "name_zh": "作曲"
     },
     "Country": {
       "apiName": "DA_Alistar19_UniqueTrait",
-      "name_zh": "Country"
+      "name_zh": "鄉村樂"
     },
     "Manager": {
       "apiName": "DA_Manager19",
@@ -658,7 +658,7 @@
     },
     "One Monster Band": {
       "apiName": "DA_BaronNashor19_UniqueTrait",
-      "name_zh": "One Monster Band"
+      "name_zh": "一怪樂團"
     },
     "Boy Band": {
       "apiName": "DA_Rakan19_UniqueTrait",

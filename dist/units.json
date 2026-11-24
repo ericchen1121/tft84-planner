@@ -1,6 +1,6 @@
 {
   "source": "https://tactics.tools/info/set-update",
-  "snapshot_date": "2026-11-18",
+  "snapshot_date": "2026-11-25",
   "set": "Set 19 Prismatic Tour",
   "units": [
     {
@@ -22,8 +22,8 @@
       "id": "u1",
       "name": "Gnar",
       "cost": 1,
-      "range": 2,
-      "role": "DA_Role_AttackSpecialist_Ammo",
+      "range": 4,
+      "role": "DA_Role_HybridSpecialist_Ammo",
       "traits": [
         "Pentakill",
         "Trickshot"
@@ -67,7 +67,7 @@
       "id": "u4",
       "name": "Kennen",
       "cost": 1,
-      "range": 2,
+      "range": 1,
       "role": "DA_Role_MagicTank_Manaless",
       "traits": [
         "True Damage",
@@ -251,7 +251,7 @@
       "id": "u16",
       "name": "Ashe",
       "cost": 2,
-      "range": 4,
+      "range": 5,
       "role": "DA_Role_AttackMarksman",
       "traits": [
         "Beach Pop",
@@ -643,7 +643,7 @@
       "id": "u42",
       "name": "Kai'Sa",
       "cost": 3,
-      "range": 4,
+      "range": 5,
       "role": "DA_Role_AttackMarksman",
       "traits": [
         "K|DA",
@@ -795,7 +795,7 @@
       "id": "u52",
       "name": "Aurora",
       "cost": 4,
-      "range": 2,
+      "range": 4,
       "role": "DA_Role_MagicCaster",
       "traits": [
         "Ionic Spark",
@@ -901,7 +901,7 @@
       "id": "u59",
       "name": "Locke",
       "cost": 4,
-      "range": 2,
+      "range": 1,
       "role": "DA_Role_MagicAssassin",
       "traits": [
         "Rock",
@@ -961,7 +961,7 @@
       "id": "u63",
       "name": "Vayne",
       "cost": 4,
-      "range": 4,
+      "range": 5,
       "role": "DA_Role_AttackMarksman",
       "traits": [
         "Rock",
@@ -1109,7 +1109,7 @@
       "id": "u73",
       "name": "Aphelios",
       "cost": 5,
-      "range": 4,
+      "range": 5,
       "role": "DA_Role_AttackMarksman",
       "traits": [
         "Heartsteel"
@@ -1138,7 +1138,7 @@
       "id": "u75",
       "name": "Gwen",
       "cost": 5,
-      "range": 1,
+      "range": 2,
       "role": "DA_Role_MagicFighter",
       "traits": [
         "Ionic Spark",
@@ -1156,8 +1156,8 @@
       "range": 4,
       "role": "DA_Role_MagicCaster",
       "traits": [
-        "Gu Feng",
         "Windblessed",
+        "Gu Feng",
         "Prodigy"
       ],
       "slots": 1,
@@ -1183,7 +1183,7 @@
       "id": "u78",
       "name": "Miss Fortune",
       "cost": 5,
-      "range": 5,
+      "range": 4,
       "role": "DA_Role_AttackCaster",
       "traits": [
         "8-Bit",
@@ -1212,7 +1212,7 @@
       "id": "u80",
       "name": "Nidalee",
       "cost": 5,
-      "range": 2,
+      "range": 6,
       "role": "DA_Role_MagicFighter",
       "traits": [
         "Mariachi",
@@ -1362,7 +1362,7 @@
       "id": "u90",
       "name": "Baron Nashor",
       "cost": 7,
-      "range": 1,
+      "range": 2,
       "role": "DA_Role_AttackFighter",
       "traits": [
         "One Monster Band"
@@ -1376,10 +1376,11 @@
       "id": "u91",
       "name": "Rakan",
       "cost": 7,
-      "range": 1,
+      "range": 2,
       "role": "DA_Role_MagicAssassin",
       "traits": [
-        "Boy Band"
+        "Boy Band",
+        "Choreographer"
       ],
       "slots": 1,
       "unlock": true,
@@ -1391,7 +1392,7 @@
       "name": "Smeech",
       "cost": 7,
       "range": 1,
-      "role": "DA_Role_AttackSpecialist_Ammo",
+      "role": "DA_Role_AttackSpecialist_Time",
       "traits": [
         "Jazz",
         "Slayer"
@@ -1405,7 +1406,7 @@
       "id": "u93",
       "name": "Sona",
       "cost": 7,
-      "range": 0,
+      "range": 10,
       "role": "DA_Role_MagicSpecialist",
       "traits": [
         "Producer",
@@ -1629,7 +1630,7 @@
         4,
         5
       ],
-      "members": 7
+      "members": 8
     },
     {
       "name": "Renegade",
@@ -1808,5 +1809,7 @@
       ],
       "members": 1
     }
-  ]
+  ],
+  "balance_source": "https://data.metatft.com/lookups/TFTSet19_pbe_en_us.json",
+  "balance_release": "rls-19.1.0.6018196.Set19.Shipping.pbe"
 }

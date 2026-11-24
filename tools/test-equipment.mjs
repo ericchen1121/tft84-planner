@@ -21,6 +21,8 @@ assert.equal(equipmentCategory({tags:['Item.Equippable.Item.Radiant']}),'radiant
 assert.equal(resolveEquipmentText('<TFTAttribute attributeID="value"/>',{attributeValues:{value:[3,3,3]}}).text,'3');
 assert.equal(resolveEquipmentText('<TFTAttribute attributeID="value" fallbackRow="bonus"/>',{curveValues:{bonus:[[1,4]]}}).text,'4');
 assert.equal(resolveEquipmentText('{ItemTags.Foo.Current}',{}).text,'[current game value]');
+assert.equal(byId.get('DA_Artifact_Fishbones').stats.find(stat=>stat.key==='ad').value,'35%');
+assert(byId.get('DA_Artifact_Hullcrusher').description.includes('500 Health'));
 const before=JSON.stringify(items);filterEquipment(items,{category:'artifact'},'en');assert.equal(JSON.stringify(items),before);
 assert.throws(()=>buildEquipmentSnapshot({_metadata:{set:'TFTSet18'}},{_metadata:{set:'TFTSet19'}},'2026-11-21'),/mismatch/);
 const css=read('src/equipment.css');assert(css.includes('.augment-icon[data-tier="Silver"] img{filter:grayscale(1)'));assert(css.includes('.augment-icon[data-tier="Gold"] img{filter:grayscale(1)'));assert(css.includes('sepia(1)'));assert(read('src/augments.js').includes('wrap.dataset.tier=a.tier'));

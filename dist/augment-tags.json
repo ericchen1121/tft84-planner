@@ -1,12 +1,12 @@
 {
   "set": "TFTSet19",
-  "reviewed_at": "2026-11-22",
+  "reviewed_at": "2026-11-25",
   "source": "https://www.metatft.com/new-set",
   "notes": "Editorial multi-label classification reviewed against the MetaTFT effects and visible categories. Reference tags are retained as provenance, not blindly treated as effect labels. Growth means later-round rewards or permanent scaling, not a timed trigger within combat. Prismatic-cap means an explicit Prismatic trait quest, not augment rarity. Equipment subtypes describe possible grants, including conditional or temporary grants; normal item stats do not automatically add Combat. Generic unknown loot is not guessed into equipment subtypes. Labels are maintained by full variant identity and reviewed description hash.",
   "entries": {
     "DA_AdvancedLoan|CT_AdvancedLoan|Gold|2-1": {
       "name": "Advanced Loan",
-      "description_hash": "80e631e14ab43e82fa8ed0d5776e91657d86cde357ba70ac48018dcaacfb21f4",
+      "description_hash": "d321839599939c85362686b14b0e73a776576e2968321d436d75ef386c1c18bc",
       "tags": [
         "economy",
         "strategy"
@@ -297,7 +297,7 @@
     },
     "DA_VIPAccessPlusPlus|CT_BlindBoxPlusPlus|Silver|4-2": {
       "name": "Blind Box",
-      "description_hash": "63edea6d2a07371413840463d5696aab7786c8580bd08a61c70f9e480f37ecd7",
+      "description_hash": "1d53996544e27bfad1200a8fa70c1489caec3273ef8f45c04f259b0dccc2de34",
       "tags": [
         "strategy"
       ],
@@ -512,7 +512,7 @@
     },
     "DA_BundleOShrooms|CT_BundleOShroomsGold|Gold|2-1": {
       "name": "Bundle o' Shrooms II",
-      "description_hash": "4c1ebfc762458ecc6eb3e6327f981820f3348f168fadb46792b82ea8c9fd2b7b",
+      "description_hash": "c27c14f4ebd40645b03ee20e5fddccd7453dd700c1c148c9dbeafc01e45d9b58",
       "tags": [
         "economy",
         "health"
@@ -1065,22 +1065,6 @@
         "Combat"
       ]
     },
-    "DA_CountingStars|CT_CountingStars|Gold|2-1": {
-      "name": "Counting Stars",
-      "description_hash": "a0341c9b4df0d190c22e479628e9ec1b589eaec190549a4d4d25f8d4d4f3abe9",
-      "tags": [
-        "economy",
-        "growth",
-        "strategy"
-      ],
-      "details": {
-        "equipment": [],
-        "economy": [
-          "gold"
-        ]
-      },
-      "reference_tags": []
-    },
     "DA_CritQuintessence|CT_CritQuintessence|Silver|2-1": {
       "name": "Crit Rune",
       "description_hash": "9b790c88aad3807c08d4e730ead46574a47ba79a3df14397037db2d7ad43fe4b",
@@ -1256,7 +1240,7 @@
     },
     "DA_DoubleTrouble|CT_DoubleTrouble|Gold|2-1,3-2": {
       "name": "Double Trouble",
-      "description_hash": "ef3b269beabde4c10d1c146267bf1f0ae8fd2d1c28b21496fbede63856d80615",
+      "description_hash": "98c907a83d5e0333b950b76acffbc1a0db0bd04fcf88cfbd1f160647bdc57b22",
       "tags": [
         "combat",
         "strategy",
@@ -1454,7 +1438,7 @@
     },
     "DA_FeelingLucky|CT_FeelingLuckyPlus|Silver|4-2": {
       "name": "Feeling Lucky+",
-      "description_hash": "00b1f4e1622b9375dca8c1d31201b36cd4154394ee8c1f167ca85e64a34d591d",
+      "description_hash": "db3daa79d790c750b7ce46a7c89667a58df286abbf9566b5e05b3380f251d351",
       "tags": [
         "economy"
       ],
@@ -1658,7 +1642,7 @@
     },
     "DA_GainGold|CT_GainGoldPlus|Gold|4-2": {
       "name": "Gain 32 Gold",
-      "description_hash": "5b8cab1e09790785959f4825f5516da5db4db60e60b1e5f0234a6cb2353d7243",
+      "description_hash": "ab519c2310bdacb4de7224955f670093cc64a709bf08aa9ee9b2bf3b07d61df8",
       "tags": [
         "economy"
       ],
@@ -1754,7 +1738,7 @@
     },
     "DA_GoodForSomethingI|CT_GoodForSomethingI|Silver|2-1": {
       "name": "Good For Something",
-      "description_hash": "5f4e0cc2ee22ffe38d12558c807032903688c9b86263515816d3d5d9b7ecc27e",
+      "description_hash": "49d33ee6832291508d38aa520e42d9bf111fd48faafb28b164206c47c0a4cd56",
       "tags": [
         "economy",
         "growth",
@@ -2530,7 +2514,7 @@
     },
     "DA_19_PyramidScheme_Level3|CT_PyramidScheme_Level3|Silver|": {
       "name": "Pyramid Scheme, Level 3",
-      "description_hash": "f03af49f62407361e7fef9eae64dad9c36e91f7e6fb3dc34d1f31057fa5a3f7d",
+      "description_hash": "ef355f31bacac174bcc15e523d6ccc4a67ad37764966c0f1b989d3adfa1c5d97",
       "tags": [
         "economy",
         "strategy"
@@ -2547,7 +2531,7 @@
     },
     "DA_19_PyramidScheme_Level4|CT_PyramidScheme_Level3|Silver|": {
       "name": "Pyramid Scheme, Level 4",
-      "description_hash": "f03af49f62407361e7fef9eae64dad9c36e91f7e6fb3dc34d1f31057fa5a3f7d",
+      "description_hash": "ef355f31bacac174bcc15e523d6ccc4a67ad37764966c0f1b989d3adfa1c5d97",
       "tags": [
         "economy",
         "strategy"
@@ -2564,7 +2548,7 @@
     },
     "DA_19_PyramidScheme_Level5|CT_PyramidScheme_Level3|Silver|": {
       "name": "Pyramid Scheme, Level 5",
-      "description_hash": "f03af49f62407361e7fef9eae64dad9c36e91f7e6fb3dc34d1f31057fa5a3f7d",
+      "description_hash": "ef355f31bacac174bcc15e523d6ccc4a67ad37764966c0f1b989d3adfa1c5d97",
       "tags": [
         "economy",
         "strategy"
@@ -2581,7 +2565,7 @@
     },
     "DA_19_PyramidScheme_Level6|CT_PyramidScheme_Level3|Silver|": {
       "name": "Pyramid Scheme, Level 6",
-      "description_hash": "f03af49f62407361e7fef9eae64dad9c36e91f7e6fb3dc34d1f31057fa5a3f7d",
+      "description_hash": "ef355f31bacac174bcc15e523d6ccc4a67ad37764966c0f1b989d3adfa1c5d97",
       "tags": [
         "economy",
         "strategy"
@@ -2615,7 +2599,7 @@
     },
     "DA_19_PyramidScheme_Level8|CT_PyramidScheme_Level3|Silver|": {
       "name": "Pyramid Scheme, Level 8",
-      "description_hash": "f03af49f62407361e7fef9eae64dad9c36e91f7e6fb3dc34d1f31057fa5a3f7d",
+      "description_hash": "ef355f31bacac174bcc15e523d6ccc4a67ad37764966c0f1b989d3adfa1c5d97",
       "tags": [
         "economy",
         "strategy"
@@ -2731,7 +2715,7 @@
     },
     "DA_Omelas|CT_Omelas|Gold|2-1,3-2,4-2": {
       "name": "Sacrificial Dummy",
-      "description_hash": "37592184f910695858e15ca614f79a726b1d34f8e76da5c35b3dbbf6be6728e5",
+      "description_hash": "365d265a1ecbb23eb2f5b8c862ef4f36bc74270d4ca4f237868827021164a9bb",
       "tags": [
         "combat",
         "strategy",
@@ -2849,7 +2833,7 @@
     },
     "DA_StatsOnStats|CT_StatsOnStats|Silver|2-1": {
       "name": "Stats On Stats",
-      "description_hash": "184bba259190ab3ccc52cc13d7d109e07cb6c88f00a6744a42608610df9af424",
+      "description_hash": "7ec129590b017ba03634936f904853fb85f74faf7a05d4a554805ad0f9d41165",
       "tags": [
         "combat",
         "growth"
@@ -2864,7 +2848,7 @@
     },
     "DA_StatsOnStatsII|CT_StatsOnStatsII|Gold|2-1": {
       "name": "Stats On Stats II",
-      "description_hash": "5058eaff629bc56161ac3d57fe1a07e8565bc47253ed78c3717c80d989ec1c96",
+      "description_hash": "184bba259190ab3ccc52cc13d7d109e07cb6c88f00a6744a42608610df9af424",
       "tags": [
         "combat",
         "growth"
@@ -3042,7 +3026,7 @@
     },
     "DA_TheDropGold|CT_TheDropGold|Gold|3-2,4-2": {
       "name": "The Drop II",
-      "description_hash": "71bc1b9860dab3cba96a0514bd6f6da0cf5ee3125e91eb8301833226c4b9114c",
+      "description_hash": "4f6736f6fb681c71cfbf0cd3182baf929c1ffc5b6c723418ab0d06e4c14fd8d4",
       "tags": [
         "combat"
       ],
@@ -3056,7 +3040,7 @@
     },
     "DA_TheDrop|CT_TheDrop|Silver|3-2,4-2": {
       "name": "The Drop",
-      "description_hash": "a7c4f4b4afe1f3766907ac13f901ed8c0abf704d09071a53af37de05f992cc9a",
+      "description_hash": "8bfa8237e7b70114d34294d588e511c283cf5232425bc5a05b846585476ad8ea",
       "tags": [
         "combat"
       ],
@@ -3206,7 +3190,7 @@
     },
     "DA_VerticalityI|CT_VerticalityI|Silver|3-2,4-2": {
       "name": "Verticality",
-      "description_hash": "15d72c201914f7a3a298e9751f7bf7a0545fb198076d2b0c622ec98dfc1dd802",
+      "description_hash": "c374786f709bbf948240dd4d62f5e9ad49a8f818e60c404c4411386e309613a8",
       "tags": [
         "trait",
         "combat",
@@ -3222,7 +3206,7 @@
     },
     "DA_VerticalityII|CT_VerticalityII|Gold|3-2,4-2": {
       "name": "Verticality II",
-      "description_hash": "c159e3ee9c380ad6cced6bc4b2542767e6b1ac5abebfb7ea1898f02e21cdbc92",
+      "description_hash": "5ddefea9014cdaaf944d58bd8b123104f36540bad8c4b6ac61f85c904211e1bc",
       "tags": [
         "trait",
         "combat",
@@ -3238,7 +3222,7 @@
     },
     "DA_VerticalityIII|CT_VerticalityIII|Prismatic|3-2,4-2": {
       "name": "Verticality III",
-      "description_hash": "c23efe75934e97430a34d514f50182f864866b296ca19791f8e9fbd182ed90f3",
+      "description_hash": "00bb1d78ac6ae769a97a056548ab99856e15a8bc4d9a89ead0d5a2dddbe16c3f",
       "tags": [
         "trait",
         "combat",
@@ -3830,7 +3814,7 @@
     },
     "DA_Flexible|CT_Flexible|Prismatic|2-1": {
       "name": "Flexible",
-      "description_hash": "d1d65f7bbc0421b3d6752809dbfae092469ef8faf616eb1e51a1125da8aada03",
+      "description_hash": "856c2578cd5085ba121950634bfbf8af4f2c163a940512b310e2e8bb71dc9ca9",
       "tags": [
         "equipment",
         "trait",
@@ -3954,29 +3938,6 @@
         "equipment": [
           "completed",
           "radiant"
-        ],
-        "economy": [
-          "gold"
-        ]
-      },
-      "reference_tags": [
-        "Items"
-      ]
-    },
-    "DA_HardCommit||Prismatic|2-1": {
-      "name": "Hard Commit",
-      "description_hash": "7275be5a84ef567222ed5aa23c9be68741c620b6b2a7fac9ca3efd78c827bd6b",
-      "tags": [
-        "equipment",
-        "trait",
-        "economy",
-        "growth",
-        "strategy",
-        "units"
-      ],
-      "details": {
-        "equipment": [
-          "emblem"
         ],
         "economy": [
           "gold"
@@ -5527,7 +5488,7 @@
     },
     "DA_Augment19_Heartsteel_SmallSquad|CT_Augment19_Heartsteel_SmallSquad|Gold|2-1,3-2,4-2": {
       "name": "Small Squad",
-      "description_hash": "0367b81208c425faf7b2527fe94ee8d93c6925354107fd5c87ec733b288ecdc3",
+      "description_hash": "e15d91168639817632904fa70118ccfd8cb37685ee6221332b617a04aa1b97f3",
       "tags": [
         "trait",
         "combat",
@@ -5544,7 +5505,7 @@
     },
     "DA_Heavenscale19_TheImmortalJourney|CT_Heavenscale19_TheImmortalJourney|Prismatic|3-2": {
       "name": "The Immortal Journey",
-      "description_hash": "f7f4cccf867a0cf007b8073b8b6e70fc4e5c9dd8790985a557393f0dfa8ba86b",
+      "description_hash": "32ba994c361f307e7ae938342990a0fd7e08c7afc3b6c0ff40e2503186f15d97",
       "tags": [
         "equipment",
         "trait",
@@ -5817,7 +5778,7 @@
     },
     "DA_Jazz19_DigOnThis|CT_Jazz19_DigOnThis|Gold|2-1,3-2": {
       "name": "Dig on This",
-      "description_hash": "9f194288eed128736e7dea32d32af2dff390abc79961954eb18b4993840eec13",
+      "description_hash": "d1a71fcf3aa60976a1400743ba88228bbb9f2878a5c561f450677de862192435",
       "tags": [
         "trait",
         "combat",
@@ -5893,7 +5854,7 @@
     },
     "DA_19_KDAPrismaticTourPlus|CT_19_KDAPrismaticTourPlus|Prismatic|3-2": {
       "name": "K/DA Prismatic Tour+",
-      "description_hash": "ac810e29f35a1e84cd8e9f20ac6084370b295908a1672550c8b46c40c1fd44db",
+      "description_hash": "152c6624cecc9b03259f9837a11ad94c0bade59573255fa4836fd20e78bfc985",
       "tags": [
         "trait",
         "economy",
@@ -5914,7 +5875,7 @@
     },
     "DA_KDA19_RunningWild|CT_KDA19_RunningWild|Gold|3-2,4-2": {
       "name": "Running Wild",
-      "description_hash": "0756a1ada9573ec13882ef166da47869000691cb5de6cff136551bf93b569a91",
+      "description_hash": "93d03845564f8290e679fa52f4149a6dc2c1b9a9e68f629ef45c1690640d8b16",
       "tags": [
         "equipment",
         "trait",
@@ -5975,7 +5936,7 @@
     },
     "DA_Augment19_Manager_ManagementTrackPlus|CT_Augment19_Manager_ManagementTrackPlus|Prismatic|4-2": {
       "name": "Management Track+",
-      "description_hash": "abdf9ba25e50d2d286190e84946b98a5f8a88bc2233a406c104c831856165cad",
+      "description_hash": "8a58e9014a18d5a39c263d5d5bd0d7f4aeb4942d52ab632ccf55a45b285bfb6d",
       "tags": [
         "equipment",
         "trait",

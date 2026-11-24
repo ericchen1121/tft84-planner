@@ -37,7 +37,11 @@ export const TRAIT_ZH=Object.freeze({
   "Tango": "探戈",
   "Goth": "哥特",
   "Boy Band": "男團",
-  "Producer": "製作人"
+  "Producer": "製作人",
+  "Trickshot": "炫技射手",
+  "Composer": "作曲",
+  "Country": "鄉村樂",
+  "One Monster Band": "一怪樂團"
 });
 export const UI_ZH=Object.freeze({
 "Equipment":"裝備",
@@ -138,7 +142,7 @@ export const UI_ZH=Object.freeze({
   "Simulator":"模擬器",
   "Lineup simulator":"陣容模擬器",
   "YOUR LINEUP, YOUR STAGE":"打造你的舞台",
-  "Click or drag champions onto the board. Select a champion to set 1–4 stars.":"點擊或拖曳棋子上盤，選取棋子後可設定 1～4 星。",
+  "Click a champion to place it by attack range, or drag it to a hex. Select a champion to set 1–4 stars.":"點擊棋子會依攻擊距離排位，拖曳可指定格位。選取棋子後可設定 1～4 星。",
   "Undo":"復原上一步",
   "Clear board":"清空棋盤",
   "Board traits":"棋盤羈絆",
@@ -339,7 +343,7 @@ export const UI_ZH=Object.freeze({
   'Close champion info':'關閉棋子介紹',
   'Ability summaries omit star-level scaling. Some source values are not yet available.':'此處為技能機制摘要，省略各星等倍率；部分來源數值尚未公開。',
   '7-cost':'7 費','5-cost':'5 費','4-cost':'4 費','3-cost':'3 費','2-cost':'2 費','1-cost':'1 費',
-  'PBE / 19.1 · Full ability values · Snapshot Nov 19, 2026':'PBE / 19.1 · 完整技能數值 · 資料快照：2026/11/19',
+  '{patch} · Ability data · Snapshot {date}':'{patch} · 技能數值 · 資料快照 {date}',
   'Values: 1★ / 2★ / 3★':'數值順序：1★ / 2★ / 3★',
   '[unavailable]':'［來源未提供］',
   'Some values depend on the board or are missing from the source.':'部分數值依場上狀況而變動，或來源尚未提供。',
