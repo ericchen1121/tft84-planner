@@ -55,21 +55,23 @@ function portrait(u,{name=true,lazy=true,interactive=false}={}){
 }
 function analyze(ids,c=state.config){
  const team=ids.map(i=>DATA.units[i]),counts=new Map(Object.entries(c.trait_bonuses||{}));
- for(const u of team)for(const t of effectiveTraits(u,c))counts.set(t,(counts.get(t)||0)+1);
+ for(const u of team)for(const t of effectiveTraits(u,c))counts.set(t,(counts.get(t)||0)+solverTraitWeight(t));
  const members=DATA.traits.map(t=>DATA.units.filter(u=>effectiveTraits(u,c).includes(t.name)).length);
  const traits=[];let score=0;
  for(const t of DATA.traits){const n=counts.get(t.name)||0,m=members[traitByName.get(t.name).index];if(!c.include_unique_traits&&m<=1)continue;
   const active=n>=Math.min(...t.breakpoints);
-  const contribution=c.score_mode==='all_members'?n:!active?0:c.score_mode==='active_members'?n:Math.max(0,...t.breakpoints.filter(x=>x<=n));
+  const contribution=solverTraitPoints(t,n,c.score_mode);
   score+=contribution;if(active)traits.push({...t,count:n,bonus:c.trait_bonuses?.[t.name]||0,unique:m===1,contribution});
  }
  traits.sort((a,b)=>b.count-a.count||a.name.localeCompare(b.name));
  return {team,traits,score,front:team.filter(u=>u.range<=c.frontline_max_range).length,back:team.filter(u=>u.cost===4&&u.range>c.frontline_max_range&&c.backline_role_keywords.some(k=>u.role.includes(k))).length,four:team.filter(u=>u.cost===4).length,five:team.filter(u=>u.cost===5).length,slots:team.reduce((s,u)=>s+u.slots,0),unlocks:team.filter(u=>u.unlock).length};
 }
 function traitChip(trait){
- const chip=el('span','trait-chip'+(trait.unique?' unique':'')+(trait.bonus?' boosted':''));chip.title=t('{name}: {base} champion counts{bonus} · Breakpoints {points} · Score +{score}',{name:traitLabel(trait.name),base:trait.count-(trait.bonus||0),bonus:trait.bonus?t(' + {bonus} bonus = {total} total',{bonus:trait.bonus,total:trait.count}):'',points:trait.breakpoints.join('/'),score:trait.contribution});
+ const chip=el('span','trait-chip'+(trait.unique?' unique':'')+(trait.bonus?' boosted':''));
+ const stars=solverTraitWeight(trait.name)===2;
+ chip.title=t(stars?'{name}: {base} total stars (2 per champion){bonus} · Breakpoints {points} · Score +{score}':'{name}: {base} champion counts{bonus} · Breakpoints {points} · Score +{score}',{name:traitLabel(trait.name),base:trait.count-(trait.bonus||0),bonus:trait.bonus?t(' + {bonus} bonus = {total} total',{bonus:trait.bonus,total:trait.count}):'',points:trait.breakpoints.join('/'),score:trait.contribution});
  const url=ART.traits[trait.name]?.url;if(url){const img=new Image();img.alt='';img.src=url;img.loading='lazy';img.addEventListener('error',()=>img.remove());chip.append(img);}else chip.append(el('span','','✦'));
- chip.append(el('span','',traitLabel(trait.name)),el('b','',trait.count));if(trait.bonus)chip.append(el('small','bonus-tag','+'+trait.bonus));return chip;
+ chip.append(el('span','',traitLabel(trait.name)),el('b','',stars?trait.count+'★':trait.count));if(trait.bonus)chip.append(el('small','bonus-tag','+'+trait.bonus));return chip;
 }
 function ingest(chunk){
  state.chunks.push(chunk);const size=state.config.population+1;
@@ -90,6 +92,7 @@ function filterResults(reset=true){
  const q=$('result-query').value.trim().toLowerCase(),unit=$('champion-filter').value,unitIndex=unit?DATA.units.findIndex(u=>u.id===unit):-1,minScore=Number($('score-filter').value),sort=$('sort').value;
  state.filtered=state.records.filter(r=>{
   if(r.score<minScore)return false;
+  if(unitIndex<0&&!q)return true;
   const ids=recordIds(r);if(unitIndex>=0&&!ids.includes(unitIndex))return false;
   if(q){const haystack=(ids.map(i=>unitSearchText(DATA.units[i])+' '+traitSearchText(effectiveTraits(DATA.units[i],state.config))).join(' ')+' '+traitSearchText(Object.keys(state.config.trait_bonuses||{}))).toLowerCase();if(!q.split(/\s+/).every(word=>haystack.includes(word)))return false;}
   return true;
@@ -225,7 +228,7 @@ async function exportCsv(){
   for(let start=0;start<exportRows.length;start+=1000){
    let text='';for(let i=start;i<Math.min(start+1000,exportRows.length);i++){
     const r=exportRows[i],team=recordIds(r).map(index=>DATA.units[index]),counts=new Map(Object.entries(c.trait_bonuses||{}));
-    for(const u of team)for(const t of effectiveTraits(u,c))counts.set(t,(counts.get(t)||0)+1);
+    for(const u of team)for(const t of effectiveTraits(u,c))counts.set(t,(counts.get(t)||0)+solverTraitWeight(t));
     const active=DATA.traits.filter(trait=>(c.include_unique_traits||membership.get(trait.name)>1)&&(counts.get(trait.name)||0)>=Math.min(...trait.breakpoints)).map(trait=>traitLabel(trait.name)+':'+counts.get(trait.name)).join('; ');
     text+=[i+1,r.score,team.reduce((s,u)=>s+u.slots,0),r.four,team.filter(u=>u.cost===5).length,team.filter(u=>u.range<=c.frontline_max_range).length,team.filter(u=>u.cost===4&&u.range>c.frontline_max_range&&c.backline_role_keywords.some(k=>u.role.includes(k))).length,quote(team.map(u=>unitLabel(u)).join(' | ')),quote(active),quote(Object.entries(c.trait_bonuses||{}).map(([name,n])=>traitLabel(name)+':+'+n).join('; ')),quote(team.filter(u=>u.unlock).map(u=>unitLabel(u)).join(' | ')),t(state.status)].join(',')+'\r\n';
    }parts.push(text);await new Promise(resolve=>setTimeout(resolve,0));
@@ -271,12 +274,12 @@ async function init(){
  captureStaticTranslations();let preferred='zh-Hant';try{preferred=localStorage.getItem('eightfold-language')||preferred;}catch{}
  applyLanguage(preferred,true);populateSelects();populateRequiredTraits();bindEvents();bindRequirements();bindInfo();bindDesktopLayout();syncLabels();renderBonuses();
  try{
-  const encoded=$('preset-data').textContent.trim(),compressed=Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));
+  const presetData=$('preset-data'),encoded=presetData.textContent.trim(),compressed=Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));
   if(typeof DecompressionStream==='undefined')throw Error(t('Preset decompression is not supported in this browser.'));
   const stream=new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip'));
   state.preset=new Uint8Array(await new Response(stream).arrayBuffer());
-  if(state.preset.length!==68766*9)throw Error(t('Preset failed its integrity check.'));
-  clearResults({...DEFAULTS});ingest(state.preset);state.status='COMPLETE';updateStats();filterResults();setStatus(()=>t('Complete preset · {n} verified lineups',{n:'68,766'}));$('elapsed').textContent=t('Ready instantly');
+  if(state.preset.length!==Number(presetData.dataset.records)*(DEFAULTS.population+1)){state.preset=null;throw Error(t('Preset failed its integrity check.'));}
+  clearResults({...DEFAULTS});ingest(state.preset);state.status='COMPLETE';updateStats();filterResults();setStatus(()=>t('Complete preset · {n} verified lineups',{n:fmt(state.records.length)}));$('elapsed').textContent=t('Ready instantly');
  }catch(e){state.status='READY';setStatus(()=>t('Ready for a fresh search. {error}',{error:e.message}),'partial');clearResults({...DEFAULTS});renderResults();}
 }
 init();

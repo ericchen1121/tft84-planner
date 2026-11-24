@@ -42,7 +42,7 @@ A simple Traditional Chinese / English web app for visualizing every TFT lineup 
 - Search/filter/sort all results and export the filtered results as UTF-8 CSV.
 - Illustrative hex-board view for each lineup.
 - Responsive layout for desktop and mobile, keyboard-accessible controls and native dialogs.
-- All **68,766** verified default lineups embedded for immediate browsing.
+- All verified default lineups embedded for immediate browsing.
 
 ## Use without installing anything
 
@@ -54,9 +54,9 @@ All scripts, the source data and the verified preset are embedded in that file. 
 
 ## Search rules
 
-Default conditions are exactly 8 population, at least 3 four-cost champions, no more than 1 five-cost champion, synergy score at least 16, at least 5 champions with attack range ≤2, and at least 2 four-cost ranged marksmen/casters. Jhin's ranged ammo-specialist role is included. Seven-cost units are allowed; unlock history and shop access are not simulated. Baron Nashor takes 2 population. The Akali variants are mutually exclusive.
+Default conditions are exactly 8 population, at least 4 four-cost champions, no more than 1 five-cost champion, synergy score at least 16, at least 5 champions with attack range ≤2, and at least 2 four-cost ranged marksmen/casters. Jhin's ranged ammo-specialist role is included. Seven-cost units are allowed; unlock history and shop access are not simulated. Baron Nashor takes 2 population. The Akali variants are mutually exclusive.
 
-The default score adds the **member counts of active traits**, including one-champion unique traits. A 3-member trait with a 2/4/6 threshold contributes 3; a unique trait activated at 1 contributes 1; an inactive trait contributes 0. Other scoring methods are available under Advanced options.
+The default score adds the **highest reached breakpoint** of each trait. Three Arcanists reach the first 2/4/6 breakpoint and score 2. A unique trait activated at 1 contributes 1, and an inactive trait contributes 0. The solver assumes each K/DA champion is two-star. Two champions contribute four stars, reach the 3-star breakpoint and score 3. A +1 K/DA bonus adds one star to this total. Other scoring methods are available under Advanced options.
 
 ### Emblems / Trait +1
 
@@ -95,7 +95,7 @@ The test suite compares **58 independent brute-force cases** with the optimized 
 
 Run `node tools/benchmark.mjs --emblem` for a full-card-pool Frontman +1 search, including independent validation of every emitted lineup and its adjusted score.
 
-The full four-worker JavaScript search produced 68,766 lineups in **27.398 seconds** in the test runtime. Every lineup and score matched the independently checked C# results exactly. This measures the JavaScript engine and worker protocol in Node, not a browser UI benchmark; hardware and browser speed will vary. The default preset appears immediately, without rerunning search.
+The full four-worker JavaScript search checks that the embedded preset contains every default lineup and its score. The preset is ready for browsing as soon as the app loads.
 
 Preset score distribution: 16 → 58,460; 17 → 9,202; 18 → 1,042; 19 → 62.
 
@@ -126,7 +126,7 @@ Info now displays full ability text with numeric values, mana, star-level orderi
 
 Source: https://www.metatft.com/new-set, captured 2026-11-19. Every champion has full text; 9 entries still contain source placeholders or dynamic counters: Kobuko, Ziggs, Gragas, Viego, Jinx, Shyvana, Nunu & Willump, Teemo and Sona. They are explicitly marked unavailable / dependent on the current board. No missing numeric values are guessed. Repeated tooltip echoes are normalized. Damage/healing displayed by the source is not a simulator for arbitrary item or stat configurations.
 
-The current MetaTFT Info snapshot lists 32 unlockable entries. Info filters use that display snapshot. Solver data, its unlock flags, and all 68,766 verified preset lineups remain unchanged.
+The current MetaTFT Info snapshot lists 32 unlockable entries. Info filters use that display snapshot. Solver data supplies the unlock flags shown in lineup results.
 
 Each card and dialog reserves **5 circular recommended-item positions**. Recommendations are intentionally empty, as requested. Future recommendations can be set as item IDs in each unit's `recommended_items` array in `dist/info.json`; the renderer resolves images from `dist/items.json`. This is a list of suggested alternatives, not five equipped items, and does not affect solving.
 

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import zlib from 'node:zlib';
-import {prepare,solve,DEFAULTS,effectiveTraits,EMBLEM_TRAITS,filterRequiredRecords} from '../src/solver.mjs';
+import {prepare,solve,DEFAULTS,effectiveTraits,EMBLEM_TRAITS,filterRequiredRecords,solverTraitWeight,solverTraitPoints} from '../src/solver.mjs';
 import {TRAIT_ZH,t,traitLabel,traitSearchText,setLanguage,getLanguage,localizedStaticText} from '../src/i18n.mjs';
 setLanguage('en');
 const data=JSON.parse(fs.readFileSync(new URL('../dist/units.json',import.meta.url)));
@@ -19,13 +19,13 @@ function brute(data,c){
   if(team.filter(u=>u.range<=c.frontline_max_range).length<c.min_frontline)return;
   if(team.filter(u=>u.cost===4&&u.range>c.frontline_max_range&&c.backline_role_keywords.some(k=>u.role.includes(k))).length<c.min_backline_four_cost)return;
   for(const [name,min]of Object.entries(c.required_traits||{})){
-   const n=team.filter(u=>effectiveTraits(u,c).includes(name)).length+(c.trait_bonuses?.[name]||0);
+   const n=team.filter(u=>effectiveTraits(u,c).includes(name)).length*(name==='K|DA'?2:1)+(c.trait_bonuses?.[name]||0);
    const tier=Math.max(0,...data.traits.find(t=>t.name===name).breakpoints.filter(x=>x<=n));
    if(c.required_trait_mode==='exact_tier'?tier!==min:tier<min)return;
   }
   let score=0;
   for(const t of data.traits){if(!c.include_unique_traits&&members.get(t.name)<=1)continue;
-   const n=team.filter(u=>effectiveTraits(u,c).includes(t.name)).length+(c.trait_bonuses?.[t.name]||0);
+   const n=team.filter(u=>effectiveTraits(u,c).includes(t.name)).length*(t.name==='K|DA'?2:1)+(c.trait_bonuses?.[t.name]||0);
    if(c.score_mode==='all_members')score+=n;
    else if(n>=Math.min(...t.breakpoints))score+=c.score_mode==='active_members'?n:Math.max(...t.breakpoints.filter(p=>p<=n));
   }
@@ -64,6 +64,17 @@ for(const mode of ['active_members','breakpoint','all_members']){
  compare(focused,{...c,trait_bonuses:{A:0}});
 }
 compare(sample,{...DEFAULTS,population:4,min_frontline:4,min_backline_four_cost:2,min_trait_score:0});
+const tierData={
+ traits:[{name:'Arcanist',breakpoints:[2,4,6]},{name:'K|DA',breakpoints:[3,5,7]}],
+ units:Array.from({length:4},(_,i)=>({...focused.units[0],id:'tier'+i,name:'Tier '+i,traits:['Arcanist','K|DA']}))
+};
+const tierConfig={...DEFAULTS,population:3,min_four_cost:0,min_frontline:0,min_backline_four_cost:0,min_trait_score:7};
+const tierChunks=[];
+assert.equal(solve(tierData,tierConfig,{onChunk:bytes=>tierChunks.push(bytes)}).histogram[7],4);
+assert.equal(solve(tierData,{...tierConfig,population:2,min_trait_score:5,required_traits:{'K|DA':3},required_trait_mode:'exact_tier'}).histogram[5],6);
+assert.equal(solve(tierData,{...tierConfig,population:2,min_trait_score:7,trait_bonuses:{'K|DA':1},required_traits:{'K|DA':5}}).histogram[7],6);
+assert.deepEqual(filterRequiredRecords(tierData,tierChunks[0],{...tierConfig,required_traits:{'K|DA':5},required_trait_mode:'exact_tier'}),tierChunks[0]);
+assert.equal(filterRequiredRecords(tierData,tierChunks[0],{...tierConfig,required_traits:{'K|DA':3},required_trait_mode:'exact_tier'}).length,0);
 assert.throws(()=>prepare(data,{population:0}));assert.throws(()=>prepare(data,{extra_traits:{notAUnit:['A']}}));assert.throws(()=>prepare(data,{sona_feature_trait:'Fake'}));
 for(const trait_bonuses of [{Unknown:1},{Frontman:-1},{Frontman:1.5},{Frontman:17},[],null])assert.throws(()=>prepare(data,{trait_bonuses}));
 const timed=solve(data,{...DEFAULTS},{deadline:Date.now()-1});assert.equal(timed.status,'INCOMPLETE');
@@ -74,23 +85,25 @@ assert.equal((html.match(/id="app-data"/g)||[]).length,1);
 const capture=id=>html.match(new RegExp('<script id="'+id+'"[^>]*>([\\s\\S]*?)<\\/script>'))?.[1];
 const embedded=JSON.parse(capture('app-data'));assert.equal(embedded.units.length,94);assert.equal(embedded.traits.length,47);
 const embeddedArt=JSON.parse(capture('art-data'));assert.equal(Object.keys(embeddedArt.units).length,94);assert.equal(Object.values(embeddedArt.units).filter(a=>a.url).length,91);
-const compressed=Buffer.from(capture('preset-data'),'base64');const preset=zlib.gunzipSync(compressed);assert.equal(preset.length,68766*9);
+const compressed=Buffer.from(capture('preset-data'),'base64');const preset=zlib.gunzipSync(compressed);
+const presetRecords=Number(html.match(/id="preset-data"[^>]*data-records="(\d+)"/)?.[1]);
+assert(presetRecords>0);assert.equal(preset.length,presetRecords*(DEFAULTS.population+1));
 assert.deepEqual(preset,fs.readFileSync(new URL('dist/preset.bin',root)));
 const seen=new Set(),hist={};
-for(let p=0;p<preset.length;p+=9){const row=preset.subarray(p,p+9);assert(row[8]>=16);const ids=[...row.subarray(0,8)].filter(i=>i!==255).sort((a,b)=>a-b);const key=ids.join(',');assert(!seen.has(key));seen.add(key);const team=ids.map(i=>data.units[i]);assert.equal(team.reduce((s,u)=>s+u.slots,0),8);assert(team.filter(u=>u.cost===4).length>=3);assert(team.filter(u=>u.cost===5).length<=1);assert(team.filter(u=>u.range<=2).length>=5);assert(team.filter(u=>u.cost===4&&u.range>2&&DEFAULTS.backline_role_keywords.some(k=>u.role.includes(k))).length>=2);const counts=new Map();for(const u of team)for(const t of u.traits)counts.set(t,(counts.get(t)||0)+1);const score=data.traits.reduce((s,t)=>s+((counts.get(t.name)||0)>=Math.min(...t.breakpoints)?counts.get(t.name):0),0);assert.equal(score,row[8]);hist[score]=(hist[score]||0)+1;}
+for(let p=0;p<preset.length;p+=9){const row=preset.subarray(p,p+9);assert(row[8]>=16);const ids=[...row.subarray(0,8)].filter(i=>i!==255).sort((a,b)=>a-b);const key=ids.join(',');assert(!seen.has(key));seen.add(key);const team=ids.map(i=>data.units[i]);assert.equal(team.reduce((s,u)=>s+u.slots,0),8);assert(team.filter(u=>u.cost===4).length>=DEFAULTS.min_four_cost);assert(team.filter(u=>u.cost===5).length<=1);assert(team.filter(u=>u.range<=2).length>=5);assert(team.filter(u=>u.cost===4&&u.range>2&&DEFAULTS.backline_role_keywords.some(k=>u.role.includes(k))).length>=2);const counts=new Map();for(const u of team)for(const t of u.traits)counts.set(t,(counts.get(t)||0)+(t==='K|DA'?2:1));const score=data.traits.reduce((s,t)=>s+Math.max(0,...t.breakpoints.filter(point=>point<=(counts.get(t.name)||0))),0);assert.equal(score,row[8]);hist[score]=(hist[score]||0)+1;}
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size,'Duplicate DOM ids');
 const app=get('src/app.js');for(const m of app.matchAll(/\$\('([^']+)'\)/g))assert(ids.includes(m[1]),'Missing element: '+m[1]);
 function appFunction(name,next,context){const start=app.indexOf('function '+name+'(');assert(start>=0);const end=app.indexOf('\nfunction '+next+'(',start);assert(end>start);return new vm.Script('('+app.slice(start,end)+')').runInNewContext(context);}
 const presetMatch=appFunction('isPreset','populateSelects',{DEFAULTS});
 assert(presetMatch({...DEFAULTS}));assert(!presetMatch({...DEFAULTS,trait_bonuses:{Frontman:1}}));assert(presetMatch({...DEFAULTS,trait_bonuses:{Frontman:0}}));
 const bonusConfig={...DEFAULTS,population:2,min_four_cost:0,min_frontline:0,min_backline_four_cost:0,trait_bonuses:{A:1}};
-const analyze=appFunction('analyze','traitChip',{DATA:focused,effectiveTraits,traitByName:new Map(focused.traits.map((t,index)=>[t.name,{index}])),state:{config:bonusConfig}});
+const analyze=appFunction('analyze','traitChip',{DATA:focused,effectiveTraits,solverTraitWeight,solverTraitPoints,traitByName:new Map(focused.traits.map((t,index)=>[t.name,{index}])),state:{config:bonusConfig}});
 const displayed=analyze([0,1],bonusConfig);assert.equal(displayed.score,3);assert.equal(displayed.traits[0].count,3);assert.equal(displayed.traits[0].bonus,1);assert.equal(displayed.slots,2);
 // Exercise the actual CSV exporter with an emblem-activated trait, without a browser.
 let exported;
 const controls=new Map();const exportState={config:bonusConfig,running:false,status:'COMPLETE',filtered:[{score:3,four:2}]};
 const exportStart=app.indexOf('async function exportCsv('),exportEnd=app.indexOf('\nfunction bindEvents(',exportStart);
-const exportFn=new vm.Script('('+app.slice(exportStart,exportEnd)+')').runInNewContext({state:exportState,DATA:focused,effectiveTraits,recordIds:()=>[0,1],fmt:String,t,traitLabel,getLanguage,unitLabel:u=>u.name,notify:()=>{},$:id=>{if(!controls.has(id))controls.set(id,{});return controls.get(id);},Blob,setTimeout,download:(blob,name)=>{exported={blob,name};}});
+const exportFn=new vm.Script('('+app.slice(exportStart,exportEnd)+')').runInNewContext({state:exportState,DATA:focused,effectiveTraits,solverTraitWeight,recordIds:()=>[0,1],fmt:String,t,traitLabel,getLanguage,unitLabel:u=>u.name,notify:()=>{},$:id=>{if(!controls.has(id))controls.set(id,{});return controls.get(id);},Blob,setTimeout,download:(blob,name)=>{exported={blob,name};}});
 await exportFn();const csvText=await exported.blob.text();const csvLines=csvText.trim().split('\r\n'),headers=csvLines[0].replace(/^\uFEFF/,'').split(','),cells=csvLines[1].split(',');
 assert.equal(cells[headers.indexOf('trait_score')],'3');assert.equal(cells[headers.indexOf('population')],'2');assert.equal(cells[headers.indexOf('active_traits')],'"A:3"');assert.equal(cells[headers.indexOf('trait_bonuses')],'"A:+1"');assert.equal(exportState.exporting,false);
 const expectedTranslations={'Heartsteel':'心鋼之聲','Frontman':'主唱','Classical':'古典樂','Collab':'合作','Swiftstriker':'迅捷先鋒','Hitmaker':'金曲製造機','Encore':'要不要來首安可曲','Juggernaut':'重裝戰士','Beach Pop':'海灘流行樂','Pentakill':'殺五社','Slayer':'殺戮者','Rock':'搖滾樂','Manager':'經紀人','EDM':'電子舞曲','Choreographer':'編舞者','Jazz':'爵士樂','Gu Feng':'古風','Hyperpop':'超流行','Ionic Spark':'離子火花','Prodigy':'不世之才'};
@@ -103,7 +116,7 @@ for(const trait of data.traits){assert.equal(traitLabel(trait.name),expectedTran
 assert.equal(t('Search criteria'),'搜尋條件');assert.equal(t('Unknown label'),'Unknown label');assert.equal(t('{n} results',{n:12}),'12 組');assert.equal(localizedStaticText(' 3 Choreographer '),' 3 編舞者 ');
 const zhData={traits:[{name:'Frontman',breakpoints:[2]}],units:[{id:'a',name:'A',cost:4,range:1,slots:1,traits:['Frontman'],role:'Tank'},{id:'b',name:'B',cost:4,range:4,slots:1,traits:[],role:'Caster'}]};
 const zhConfig={...bonusConfig,trait_bonuses:{Frontman:1}};let zhExport;
-const zhFn=new vm.Script('('+app.slice(exportStart,exportEnd)+')').runInNewContext({state:{...exportState,config:zhConfig,filtered:[{score:2,four:2}]},DATA:zhData,effectiveTraits,recordIds:()=>[0,1],fmt:String,t,traitLabel,getLanguage,unitLabel:u=>u.name,notify:()=>{},$:()=>({}),Blob,setTimeout,download:(blob,name)=>{zhExport={blob,name};}});
+const zhFn=new vm.Script('('+app.slice(exportStart,exportEnd)+')').runInNewContext({state:{...exportState,config:zhConfig,filtered:[{score:2,four:2}]},DATA:zhData,effectiveTraits,solverTraitWeight,recordIds:()=>[0,1],fmt:String,t,traitLabel,getLanguage,unitLabel:u=>u.name,notify:()=>{},$:()=>({}),Blob,setTimeout,download:(blob,name)=>{zhExport={blob,name};}});
 await zhFn();const zhCsv=await zhExport.blob.text();assert(zhCsv.includes('羈絆分數'));assert(zhCsv.includes('"主唱:2"'));assert(zhCsv.includes('"主唱:+1"'));assert(zhCsv.includes('完整'));assert(zhExport.name.includes('zh-Hant'));
 assert.equal(JSON.stringify(data),canonicalBefore,'Translations must not mutate solver data');
 setLanguage('en');assert.equal(traitLabel('Frontman'),'Frontman');assert.equal(t('Search criteria'),'Search criteria');assert(ids.includes('language'));
