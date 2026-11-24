@@ -263,7 +263,7 @@ export const UI_ZH=Object.freeze({
   'Search champions or traits…':'搜尋棋子或羈絆…','Select all':'全部選取','Clear all':'全部清除',
   '94 selected':'已選取 94 張','Apply champion pool →':'套用棋子清單 →',
   'Close help':'關閉說明','A LITTLE CLARITY':'計分與條件說明','How the score works':'羈絆分數如何計算',
-  'Default trait scoring uses the highest reached breakpoint. K/DA counts two stars per champion and scores 2/4/6/8/9/10 points at 3/5/7/10/13/15 stars. Its score caps at 10.':'預設依已達成的最高門檻計分。K/DA 每張棋子以兩星計，3／5／7／10／13／15 星依序給 2／4／6／8／9／10 分，上限 10 分。',
+  'Default trait scoring uses the highest reached breakpoint. K/DA counts two stars per champion and scores 2/3/4/5/6/7 points at 3/5/7/10/13/15 stars. Its score caps at 7.':'預設依已達成的最高門檻計分。K/DA 每張棋子以兩星計，3／5／7／10／13／15 星依序給 2／3／4／5／6／7 分，上限 7 分。',
   '3 Arcanist':'3 奧術大師',
   'unique trait':'獨立羈絆','needs 2 to activate':'需要 2 人才啟動',
   'The default minimum is':'預設分數門檻為','. Unique traits count unless you switch them off.':'。除非關閉選項，否則獨立羈絆也會計分。',
