@@ -52,7 +52,7 @@ function simulatorHandleRemove(data){
 function renderSimulatorBoard(){
  const value=simulatorUI.value,context=simulatorContext(),summary=simulatorTraits(value,context),fragment=document.createDocumentFragment();
  for(let cell=0;cell<SIMULATOR_CELLS;cell++){
-  const row=Math.floor(cell/7),col=cell%7,placed=value.board[cell],unit=placed?DATA.units.find(u=>u.id===placed.unitId):null;
+  const row=Math.floor(cell/SIMULATOR_ROW_SIZE),col=cell%SIMULATOR_ROW_SIZE,placed=value.board[cell],unit=placed?DATA.units.find(u=>u.id===placed.unitId):null;
   const hex=el('button','sim-cell'+(placed?' occupied':'')+(simulatorUI.selected===cell?' selected':''));hex.id='sim-cell-'+cell;hex.type='button';hex.dataset.row=String(row);hex.dataset.cell=String(cell);hex.style.gridColumn=(col*2+1+row%2)+' / span 2';hex.style.gridRow=String(row+1);hex.setAttribute('aria-pressed',String(simulatorUI.selected===cell));if(unit){hex.dataset.cost=String(unit.cost);hex.style.setProperty('--sim-cost-color',simulatorCostColor(unit.cost));}
   hex.setAttribute('aria-label',placed?t('Row {row}, hex {col}: {name}, {stars} stars',{row:row+1,col:col+1,name:unitLabel(unit),stars:placed.stars}):t('Row {row}, hex {col}: empty',{row:row+1,col:col+1}));
   const inner=el('span','sim-hex-inner');hex.append(inner);

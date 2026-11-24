@@ -2,7 +2,7 @@
   "set": "TFTSet19",
   "mode": "PBE",
   "patch": "19.1",
-  "snapshot_date": "2026-11-21",
+  "snapshot_date": "2026-11-25",
   "source": "https://www.metatft.com/new-set",
   "lookups": [
     "https://data.metatft.com/lookups/TFTSet19_pbe_en_us.json",
@@ -12,10 +12,10 @@
     "set": "TFTSet19",
     "setName": "Set 19",
     "patch": "pbe",
-    "generated": "2026-11-21T06:39:18.293Z",
-    "coreHash": "6727064c4aa3124e1d0857fb38a85fa5c86bd8e2",
-    "release": "rls-19.1.0.6011486.Set19.Shipping.pbe",
-    "manifest": "4E62BCFE8BD94F79",
+    "generated": "2026-11-23T21:39:48.080Z",
+    "coreHash": "59b4b05f6466b86738f39db57b20d58de631f0a4",
+    "release": "rls-19.1.0.6018196.Set19.Shipping.pbe",
+    "manifest": "1096C8A75AEA562C",
     "tooltips": "curvetable"
   },
   "notes": "Only source-provided Traditional Chinese is used, independently for names and descriptions. Missing fields fall back to English. Curve values use the same English PBE release. Dynamic game counters and unavailable source values are explicit. Round availability is copied, not inferred.",
@@ -25,8 +25,8 @@
       "apiName": "DA_AdvancedLoan",
       "name": "Advanced Loan",
       "name_zh": "進階貸款",
-      "description": "Gain 22 Gold. Your next augment is one tier lower.",
-      "description_zh": "獲得22金錢。我方下一件增幅裝置降低一級。",
+      "description": "Gain 24 Gold. Your next augment is one tier lower.",
+      "description_zh": "獲得24金錢。我方下一件增幅裝置降低一級。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -45,21 +45,21 @@
           "GoldInstantBasic": [
             [
               1,
-              22
+              24
             ]
           ]
         },
         "curveTable": {
+          "GoldInstantBasic": [
+            [
+              1,
+              24
+            ]
+          ],
           "GoldInstantPlus": [
             [
               1,
               33
-            ]
-          ],
-          "GoldInstantBasic": [
-            [
-              1,
-              22
             ]
           ]
         }
@@ -95,16 +95,16 @@
           ]
         },
         "curveTable": {
+          "GoldInstantBasic": [
+            [
+              1,
+              24
+            ]
+          ],
           "GoldInstantPlus": [
             [
               1,
               33
-            ]
-          ],
-          "GoldInstantBasic": [
-            [
-              1,
-              22
             ]
           ]
         }
@@ -780,8 +780,8 @@
       "apiName": "DA_VIPAccessPlusPlus",
       "name": "Blind Box",
       "name_zh": "盲盒",
-      "description": "Gain a random Gold Augment, but lose 11 gold.",
-      "description_zh": "獲得一件隨機金級增幅裝置，但會失去11金錢。",
+      "description": "Gain a random Gold Augment, but lose 14 gold.",
+      "description_zh": "獲得一件隨機金級增幅裝置，但會失去14金錢。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -800,7 +800,7 @@
           "Gold_UpdateFilterIfThisChanges": [
             [
               1,
-              11
+              14
             ]
           ]
         },
@@ -808,7 +808,7 @@
           "Gold_UpdateFilterIfThisChanges": [
             [
               1,
-              11
+              14
             ]
           ]
         }
@@ -1601,8 +1601,8 @@
       "apiName": "DA_BundleOShrooms",
       "name": "Bundle o' Shrooms II",
       "name_zh": "蘑菇大禮包II",
-      "description": "Gain [source values differ] mushrooms, which each grant either 1 reroll, 2 XP, or 3 Tactician Health.\n\nMushrooms have a small chance to be HUGE and grant double loot.",
-      "description_zh": "獲得[source values differ]朵蘑菇，每朵蘑菇提供1次重抽、2經驗值，或3聯盟棋手生命。\n\n蘑菇有小機率變成超大蘑菇，給予雙倍戰利品",
+      "description": "Gain 11 mushrooms, which each grant either 1 reroll, 2 XP, or 3 Tactician Health.\n\nMushrooms have a small chance to be HUGE and grant double loot.",
+      "description_zh": "獲得11朵蘑菇，每朵蘑菇提供1次重抽、2經驗值，或3聯盟棋手生命。\n\n蘑菇有小機率變成超大蘑菇，給予雙倍戰利品",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -1612,9 +1612,7 @@
       "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_bundle_o__shrooms.png",
       "missing_values": [],
       "missing_values_zh": [],
-      "conflicting_values": [
-        "NumShrooms"
-      ],
+      "conflicting_values": [],
       "dynamic": false,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"NumShrooms\"/> mushrooms, which each grant either <TFTCurveTable row=\"RollsPerShroom_TOOLTIPONLY\"/> reroll, <TFTCurveTable row=\"XPPerShroom_TOOLTIPONLY\"/> XP, or <TFTCurveTable row=\"HealthPerShroom_TOOLTIPONLY\"/> Tactician Health.\r\n\r\n<rules>Mushrooms have a small chance to be HUGE and grant double loot.</>",
@@ -1623,7 +1621,7 @@
           "NumShrooms": [
             [
               1,
-              6
+              11
             ]
           ],
           "RollsPerShroom_TOOLTIPONLY": [
@@ -3629,57 +3627,6 @@
       }
     },
     {
-      "id": "DA_CountingStars|CT_CountingStars|Gold|2-1",
-      "apiName": "DA_CountingStars",
-      "name": "Counting Stars",
-      "name_zh": "數星星",
-      "description": "Gain 8 gold. Each time you 3-star a champion, gain 4 gold for each 3-star you have.",
-      "description_zh": "獲得8金錢。每次將1名英雄升至3星，即可根據擁有的3星英雄數量獲得金錢，每有1名獲得4金錢。",
-      "tier": "Gold",
-      "type": "regular",
-      "rounds": [
-        "2-1"
-      ],
-      "traits": [],
-      "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_counting_stars.png",
-      "missing_values": [],
-      "missing_values_zh": [],
-      "conflicting_values": [],
-      "dynamic": false,
-      "source_data": {
-        "description": "Gain <TFTCurveTable row=\"StartingGold\"/> gold. Each time you 3-star a champion, gain <TFTCurveTable row=\"GoldPer3Star\"/> gold for each 3-star you have.",
-        "description_zh": "獲得<TFTCurveTable row=\"StartingGold\"/>金錢。每次將1名英雄升至3星，即可根據擁有的3星英雄數量獲得金錢，每有1名獲得<TFTCurveTable row=\"GoldPer3Star\"/>金錢。",
-        "curveValues": {
-          "StartingGold": [
-            [
-              1,
-              8
-            ]
-          ],
-          "GoldPer3Star": [
-            [
-              1,
-              4
-            ]
-          ]
-        },
-        "curveTable": {
-          "GoldPer3Star": [
-            [
-              1,
-              4
-            ]
-          ],
-          "StartingGold": [
-            [
-              1,
-              8
-            ]
-          ]
-        }
-      }
-    },
-    {
       "id": "DA_CritQuintessence|CT_CritQuintessence|Silver|2-1",
       "apiName": "DA_CritQuintessence",
       "name": "Crit Rune",
@@ -4111,8 +4058,8 @@
       "apiName": "DA_DoubleTrouble",
       "name": "Double Trouble",
       "name_zh": "雙胞胎",
-      "description": "When you field exactly 2 copies of a champion, they both gain 25% Attack Damage and Ability Power and 25 Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
-      "description_zh": "部署正好2名相同英雄時，兩者都獲得25%物攻和魔攻，以及25雙防。將其升至3星時，獲得1名2星的複製體。",
+      "description": "When you field exactly 2 copies of a champion, they both gain 30% Attack Damage and Ability Power and 30 Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
+      "description_zh": "部署正好2名相同英雄時，兩者都獲得30%物攻和魔攻，以及30雙防。將其升至3星時，獲得1名2星的複製體。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -4132,13 +4079,13 @@
           "DamageStatAdd": [
             [
               1,
-              0.25
+              0.3
             ]
           ],
           "DefenseStatAdd": [
             [
               1,
-              25
+              30
             ]
           ]
         },
@@ -4146,13 +4093,13 @@
           "DamageStatAdd": [
             [
               1,
-              0.25
+              0.3
             ]
           ],
           "DefenseStatAdd": [
             [
               1,
-              25
+              30
             ]
           ]
         }
@@ -4884,8 +4831,8 @@
       "apiName": "DA_FeelingLucky",
       "name": "Feeling Lucky+",
       "name_zh": "鴻運當頭+",
-      "description": "Gain [source values differ] gold, then flip a coin. If heads, gain [source values differ] more gold.",
-      "description_zh": "獲得[source values differ]金錢，接著擲金幣。正面的話，再獲得[source values differ]金錢。",
+      "description": "Gain 18 gold, then flip a coin. If heads, gain 6 more gold.",
+      "description_zh": "獲得18金錢，接著擲金幣。正面的話，再獲得6金錢。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -4895,10 +4842,7 @@
       "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_feelinglucky.png",
       "missing_values": [],
       "missing_values_zh": [],
-      "conflicting_values": [
-        "GoldUpFront",
-        "GoldIfHeads"
-      ],
+      "conflicting_values": [],
       "dynamic": false,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"GoldUpFront\"/> gold, then flip a coin. If heads, gain <TFTCurveTable row=\"GoldIfHeads\"/> more gold.",
@@ -4907,13 +4851,13 @@
           "GoldUpFront": [
             [
               1,
-              12
+              18
             ]
           ],
           "GoldIfHeads": [
             [
               1,
-              4
+              6
             ]
           ]
         },
@@ -5577,10 +5521,10 @@
     {
       "id": "DA_GainGold|CT_GainGoldPlus|Gold|4-2",
       "apiName": "DA_GainGold",
-      "name": "Gain 32 Gold",
+      "name": "Gain 28 Gold",
       "name_zh": "獲得21金錢+",
-      "description": "Gain [source values differ] gold.",
-      "description_zh": "獲得[source values differ]金錢。",
+      "description": "Gain 28 gold.",
+      "description_zh": "獲得28金錢。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -5590,9 +5534,7 @@
       "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_gaingold.png",
       "missing_values": [],
       "missing_values_zh": [],
-      "conflicting_values": [
-        "NumGold"
-      ],
+      "conflicting_values": [],
       "dynamic": false,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"NumGold\"/> gold.",
@@ -5601,7 +5543,7 @@
           "NumGold": [
             [
               1,
-              21
+              28
             ]
           ]
         },
@@ -5610,6 +5552,12 @@
             [
               1,
               28
+            ]
+          ],
+          "REMEMBERTOCHANGEAUGMENTNAME": [
+            [
+              1,
+              0
             ]
           ]
         }
@@ -5926,8 +5874,8 @@
       "apiName": "DA_GoodForSomethingI",
       "name": "Good For Something",
       "name_zh": "死得有價值",
-      "description": "Champions that aren't holding items have a 40% chance to drop 1 gold on death.",
-      "description_zh": "未持有道具的英雄死亡時，有40%機率掉落1金錢。",
+      "description": "Champions that aren't holding items have a 45% chance to drop 1 gold on death.",
+      "description_zh": "未持有道具的英雄死亡時，有45%機率掉落1金錢。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -5946,7 +5894,7 @@
           "ChangeDrop": [
             [
               1,
-              0.4
+              0.45
             ]
           ],
           "GoldReward": [
@@ -5957,16 +5905,16 @@
           ]
         },
         "curveTable": {
+          "ChangeDrop": [
+            [
+              1,
+              0.45
+            ]
+          ],
           "GoldReward": [
             [
               1,
               1
-            ]
-          ],
-          "ChangeDrop": [
-            [
-              1,
-              0.4
             ]
           ]
         }
@@ -8521,8 +8469,8 @@
       "apiName": "DA_19_PyramidScheme_Level3",
       "name": "Pyramid Scheme, Level 3",
       "name_zh": null,
-      "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal [source values differ] gold from them and give them a weaker copy of this augment.",
-      "description_zh": "戰鬥開始：如果對手尚未加入金字塔計畫，就從對手身上偷取[source values differ]金錢，並給予對手此增幅裝置的弱化版本。",
+      "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal 1 gold from them and give them a weaker copy of this augment.",
+      "description_zh": "戰鬥開始：如果對手尚未加入金字塔計畫，就從對手身上偷取1金錢，並給予對手此增幅裝置的弱化版本。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [],
@@ -8530,9 +8478,7 @@
       "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_pyramid_scheme.png",
       "missing_values": [],
       "missing_values_zh": [],
-      "conflicting_values": [
-        "GoldToSteal"
-      ],
+      "conflicting_values": [],
       "dynamic": false,
       "source_data": {
         "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal <TFTCurveTable row=\"GoldToSteal\"/> gold from them and give them a weaker copy of this augment.",
@@ -8541,7 +8487,7 @@
           "GoldToSteal": [
             [
               1,
-              2
+              1
             ]
           ]
         },
@@ -8560,8 +8506,8 @@
       "apiName": "DA_19_PyramidScheme_Level4",
       "name": "Pyramid Scheme, Level 4",
       "name_zh": "金字塔計畫，等級4",
-      "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal [source values differ] gold from them and give them a weaker copy of this augment.",
-      "description_zh": "戰鬥開始：如果對手尚未加入金字塔計畫，就從對手身上偷取[source values differ]金錢，並給予對手此增幅裝置的弱化版本。",
+      "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal 1 gold from them and give them a weaker copy of this augment.",
+      "description_zh": "戰鬥開始：如果對手尚未加入金字塔計畫，就從對手身上偷取1金錢，並給予對手此增幅裝置的弱化版本。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [],
@@ -8569,9 +8515,7 @@
       "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_pyramid_scheme.png",
       "missing_values": [],
       "missing_values_zh": [],
-      "conflicting_values": [
-        "GoldToSteal"
-      ],
+      "conflicting_values": [],
       "dynamic": false,
       "source_data": {
         "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal <TFTCurveTable row=\"GoldToSteal\"/> gold from them and give them a weaker copy of this augment.",
@@ -8580,7 +8524,7 @@
           "GoldToSteal": [
             [
               1,
-              2
+              1
             ]
           ]
         },
@@ -8599,7 +8543,7 @@
       "apiName": "DA_19_PyramidScheme_Level5",
       "name": "Pyramid Scheme, Level 5",
       "name_zh": null,
-      "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal [source values differ] gold from them and give them a weaker copy of this augment.",
+      "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal 1 gold from them and give them a weaker copy of this augment.",
       "description_zh": null,
       "tier": "Silver",
       "type": "regular",
@@ -8608,9 +8552,7 @@
       "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_pyramid_scheme.png",
       "missing_values": [],
       "missing_values_zh": [],
-      "conflicting_values": [
-        "GoldToSteal"
-      ],
+      "conflicting_values": [],
       "dynamic": false,
       "source_data": {
         "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal <TFTCurveTable row=\"GoldToSteal\"/> gold from them and give them a weaker copy of this augment.",
@@ -8619,7 +8561,7 @@
           "GoldToSteal": [
             [
               1,
-              2
+              1
             ]
           ]
         },
@@ -8638,8 +8580,8 @@
       "apiName": "DA_19_PyramidScheme_Level6",
       "name": "Pyramid Scheme, Level 6",
       "name_zh": "金字塔計畫，等級6",
-      "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal [source values differ] gold from them and give them a weaker copy of this augment.",
-      "description_zh": "戰鬥開始：如果對手尚未加入金字塔計畫，就從對手身上偷取[source values differ]金錢，並給予對手此增幅裝置的弱化版本。",
+      "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal 1 gold from them and give them a weaker copy of this augment.",
+      "description_zh": "戰鬥開始：如果對手尚未加入金字塔計畫，就從對手身上偷取1金錢，並給予對手此增幅裝置的弱化版本。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [],
@@ -8647,9 +8589,7 @@
       "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_pyramid_scheme.png",
       "missing_values": [],
       "missing_values_zh": [],
-      "conflicting_values": [
-        "GoldToSteal"
-      ],
+      "conflicting_values": [],
       "dynamic": false,
       "source_data": {
         "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal <TFTCurveTable row=\"GoldToSteal\"/> gold from them and give them a weaker copy of this augment.",
@@ -8658,7 +8598,7 @@
           "GoldToSteal": [
             [
               1,
-              2
+              1
             ]
           ]
         },
@@ -8711,7 +8651,7 @@
       "apiName": "DA_19_PyramidScheme_Level8",
       "name": "Pyramid Scheme, Level 8",
       "name_zh": "金字塔計畫，等級8",
-      "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal [source values differ] gold from them and give them a weaker copy of this augment.",
+      "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal 1 gold from them and give them a weaker copy of this augment.",
       "description_zh": null,
       "tier": "Silver",
       "type": "regular",
@@ -8720,9 +8660,7 @@
       "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_pyramid_scheme.png",
       "missing_values": [],
       "missing_values_zh": [],
-      "conflicting_values": [
-        "GoldToSteal"
-      ],
+      "conflicting_values": [],
       "dynamic": false,
       "source_data": {
         "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal <TFTCurveTable row=\"GoldToSteal\"/> gold from them and give them a weaker copy of this augment.",
@@ -8731,7 +8669,7 @@
           "GoldToSteal": [
             [
               1,
-              2
+              1
             ]
           ]
         },
@@ -9022,8 +8960,8 @@
       "apiName": "DA_Omelas",
       "name": "Sacrificial Dummy",
       "name_zh": "獻祭假人",
-      "description": "Gain a Training Dummy with 50% Durability. While it lives, all damage your champions would take is redirected to the dummy.",
-      "description_zh": "獲得1個具有50%續戰力的訓練假人。只要假人在場，我方英雄將受到的所有傷害都會轉移到假人身上。",
+      "description": "Gain a Training Dummy with 60% Durability. While it lives, all damage your champions would take is redirected to the dummy.",
+      "description_zh": "獲得1個具有60%續戰力的訓練假人。只要假人在場，我方英雄將受到的所有傷害都會轉移到假人身上。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -9044,7 +8982,7 @@
           "IncomingDamageMultiplier": [
             [
               1,
-              0.5
+              0.4
             ]
           ]
         },
@@ -9052,7 +8990,7 @@
           "IncomingDamageMultiplier": [
             [
               1,
-              0.5
+              0.4
             ]
           ]
         }
@@ -9489,8 +9427,8 @@
       "apiName": "DA_StatsOnStats",
       "name": "Stats On Stats",
       "name_zh": null,
-      "description": "Now and after every 5 rounds, gain 3 stat boosting consumables.",
-      "description_zh": "現在和每經過5回合後，獲得3個提升能力值的消耗品。",
+      "description": "Now and after every 5 rounds, gain 2 stat boosting consumables.",
+      "description_zh": "現在和每經過5回合後，獲得2個提升能力值的消耗品。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -9515,7 +9453,7 @@
           "NumConsumables": [
             [
               1,
-              3
+              2
             ]
           ]
         },
@@ -9523,7 +9461,7 @@
           "NumConsumables": [
             [
               1,
-              3
+              2
             ]
           ],
           "RoundDelay": [
@@ -9540,8 +9478,8 @@
       "apiName": "DA_StatsOnStatsII",
       "name": "Stats On Stats II",
       "name_zh": "能力值堆起來II",
-      "description": "Now and after every 5 rounds, gain 4 stat boosting consumables.",
-      "description_zh": "現在和每經過5回合後，獲得4個提升能力值的消耗品。",
+      "description": "Now and after every 5 rounds, gain 3 stat boosting consumables.",
+      "description_zh": "現在和每經過5回合後，獲得3個提升能力值的消耗品。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -9566,7 +9504,7 @@
           "NumConsumables": [
             [
               1,
-              4
+              3
             ]
           ]
         },
@@ -9574,7 +9512,7 @@
           "NumConsumables": [
             [
               1,
-              4
+              3
             ]
           ],
           "RoundDelay": [
@@ -10177,8 +10115,8 @@
       "apiName": "DA_TheDropGold",
       "name": "The Drop II",
       "name_zh": "錢從天降II",
-      "description": "After 12 seconds of combat, your team heals 24% max Health and enemies take 12% max Health true damage.",
-      "description_zh": "戰鬥開始12秒後，我方隊伍回復24%最大生命，且敵軍受到12%最大生命的真實傷害。",
+      "description": "After 12 seconds of combat, your team heals 20% max Health and enemies take 12% max Health true damage.",
+      "description_zh": "戰鬥開始12秒後，我方隊伍回復20%最大生命，且敵軍受到12%最大生命的真實傷害。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -10204,7 +10142,7 @@
           "HealPercent": [
             [
               1,
-              0.24
+              0.2
             ]
           ],
           "DamagePercent": [
@@ -10236,7 +10174,7 @@
           "HealPercent": [
             [
               1,
-              0.24
+              0.2
             ]
           ],
           "NumLoot": [
@@ -10253,8 +10191,8 @@
       "apiName": "DA_TheDrop",
       "name": "The Drop",
       "name_zh": "電音高潮",
-      "description": "After 12 seconds of combat, your team heals 18% max Health and enemies take 8% max Health true damage.",
-      "description_zh": "戰鬥開始12秒後，我方隊伍回復18%最大生命，且敵軍受到8%最大生命的真實傷害。",
+      "description": "After 12 seconds of combat, your team heals 15% max Health and enemies take 8% max Health true damage.",
+      "description_zh": "戰鬥開始12秒後，我方隊伍回復15%最大生命，且敵軍受到8%最大生命的真實傷害。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -10280,7 +10218,7 @@
           "HealPercent": [
             [
               1,
-              0.18
+              0.15
             ]
           ],
           "DamagePercent": [
@@ -10312,7 +10250,7 @@
           "HealPercent": [
             [
               1,
-              0.18
+              0.15
             ]
           ],
           "NumLoot": [
@@ -10848,8 +10786,8 @@
       "apiName": "DA_VerticalityI",
       "name": "Verticality",
       "name_zh": "特性參天",
-      "description": "Champions gain 1.5% Attack Damage, 1.5% Ability Power, 1.5 Armor, and 1.5 Magic Resist for each ally that shares a trait with them.",
-      "description_zh": "每有1名擁有相同特性的友軍，英雄就會增加1.5%物攻、1.5%魔攻、1.5物防和1.5魔防。",
+      "description": "Champions gain 1% Attack Damage, 1% Ability Power, 1.5 Armor, and 1.5 Magic Resist for each ally that shares a trait with them.",
+      "description_zh": "每有1名擁有相同特性的友軍，英雄就會增加1%物攻、1%魔攻、1.5物防和1.5魔防。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -10869,7 +10807,7 @@
           "ADAP": [
             [
               1,
-              0.015
+              0.01
             ]
           ],
           "resists": [
@@ -10883,7 +10821,7 @@
           "ADAP": [
             [
               1,
-              0.015
+              0.01
             ]
           ],
           "Resists": [
@@ -10900,8 +10838,8 @@
       "apiName": "DA_VerticalityII",
       "name": "Verticality II",
       "name_zh": "特性參天 II",
-      "description": "Champions gain 2.5% Attack Damage, 2.5% Ability Power, 2 Armor, and 2 Magic Resist for each ally that shares a trait with them.",
-      "description_zh": "每有1名擁有相同特性的友軍，英雄就會增加2.5%物攻、2.5%魔攻、2物防和2魔防。",
+      "description": "Champions gain 2% Attack Damage, 2% Ability Power, 2 Armor, and 2 Magic Resist for each ally that shares a trait with them.",
+      "description_zh": "每有1名擁有相同特性的友軍，英雄就會增加2%物攻、2%魔攻、2物防和2魔防。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -10921,7 +10859,7 @@
           "ADAP": [
             [
               1,
-              0.025
+              0.02
             ]
           ],
           "resists": [
@@ -10935,7 +10873,7 @@
           "ADAP": [
             [
               1,
-              0.025
+              0.02
             ]
           ],
           "Resists": [
@@ -10952,8 +10890,8 @@
       "apiName": "DA_VerticalityIII",
       "name": "Verticality III",
       "name_zh": "特性參天 III",
-      "description": "Champions gain 4% Attack Damage, 4% Ability Power, 3.5 Armor, and 3.5 Magic Resist for each ally that shares a trait with them.",
-      "description_zh": "每有1名擁有相同特性的友軍，英雄就會增加4%物攻、4%魔攻、3.5物防和3.5魔防。",
+      "description": "Champions gain 3.5% Attack Damage, 3.5% Ability Power, 3 Armor, and 3 Magic Resist for each ally that shares a trait with them.",
+      "description_zh": "每有1名擁有相同特性的友軍，英雄就會增加3.5%物攻、3.5%魔攻、3物防和3魔防。",
       "tier": "Prismatic",
       "type": "regular",
       "rounds": [
@@ -10973,13 +10911,13 @@
           "ADAP": [
             [
               1,
-              0.04
+              0.035
             ]
           ],
           "resists": [
             [
               1,
-              3.5
+              3
             ]
           ]
         },
@@ -10987,13 +10925,13 @@
           "ADAP": [
             [
               1,
-              0.04
+              0.035
             ]
           ],
           "Resists": [
             [
               1,
-              3.5
+              3
             ]
           ]
         }
@@ -12968,8 +12906,8 @@
       "apiName": "DA_Flexible",
       "name": "Flexible",
       "name_zh": "靈活變通",
-      "description": "Gain 1 random Emblem. At the start of every Stage, gain a random Emblem. Your team gains 30 Health for each Emblem they are holding.",
-      "description_zh": "獲得1枚隨機徽章。每個階段開始時，隨機獲得1枚徽章。我方隊伍每持有1枚徽章，增加30生命。",
+      "description": "Gain 1 random Emblem. At the start of every Stage, gain a random Emblem. Your team gains 18 Health for each Emblem they are holding.",
+      "description_zh": "獲得1枚隨機徽章。每個階段開始時，隨機獲得1枚徽章。我方隊伍每持有1枚徽章，增加18生命。",
       "tier": "Prismatic",
       "type": "regular",
       "rounds": [
@@ -12988,7 +12926,7 @@
           "Health": [
             [
               1,
-              30
+              18
             ]
           ]
         },
@@ -12996,7 +12934,7 @@
           "Health": [
             [
               1,
-              30
+              18
             ]
           ]
         }
@@ -13336,31 +13274,6 @@
             ]
           ]
         }
-      }
-    },
-    {
-      "id": "DA_HardCommit||Prismatic|2-1",
-      "apiName": "DA_HardCommit",
-      "name": "Hard Commit",
-      "name_zh": "強力投入",
-      "description": "Gain a random emblem. Now and at the start of each stage, gain a 1-star champion of that trait with a cost equal to the Stage (max 5) and 3 gold.",
-      "description_zh": "獲得1枚隨機徽章。現在以及每個階段開始時，獲得1位該特性的1星英雄，費用等同於階段數(最多為5)，以及3金錢。",
-      "tier": "Prismatic",
-      "type": "regular",
-      "rounds": [
-        "2-1"
-      ],
-      "traits": [],
-      "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_hard-commit_tft_set12.png",
-      "missing_values": [],
-      "missing_values_zh": [],
-      "conflicting_values": [],
-      "dynamic": false,
-      "source_data": {
-        "description": "Gain a random emblem. Now and at the start of each stage, gain a 1-star champion of that trait with a cost equal to the Stage (max 5) and 3 gold.",
-        "description_zh": "獲得1枚隨機徽章。現在以及每個階段開始時，獲得1位該特性的1星英雄，費用等同於階段數(最多為5)，以及3金錢。",
-        "curveValues": {},
-        "curveTable": {}
       }
     },
     {
@@ -17412,8 +17325,8 @@
       "apiName": "DA_Augment19_Heartsteel_SmallSquad",
       "name": "Small Squad",
       "name_zh": "小分隊",
-      "description": "When you field 3 or fewer Heartsteel champions, increase their bonuses by 100%. Gain a Sett and an Ezreal.",
-      "description_zh": "當你場上有3名或更少的心鋼之聲英雄時，其加成會提升100%。獲得2名心鋼之聲英雄。",
+      "description": "When you field 3 or fewer Heartsteel champions, increase their bonuses by 125%. Gain a Sett and an Ezreal.",
+      "description_zh": "當你場上有3名或更少的心鋼之聲英雄時，其加成會提升125%。獲得2名心鋼之聲英雄。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -17439,34 +17352,34 @@
         "curveValues": {
           "MaxHeartsteelChamps": [
             [
-              0,
+              1,
               3
             ]
           ],
           "BonusPercentIncrease": [
             [
-              0,
-              1
+              1,
+              1.25
             ]
           ]
         },
         "curveTable": {
-          "NumChampsToGive": [
-            [
-              0,
-              2
-            ]
-          ],
           "BonusPercentIncrease": [
             [
-              0,
-              1
+              1,
+              1.25
             ]
           ],
           "MaxHeartsteelChamps": [
             [
-              0,
+              1,
               3
+            ]
+          ],
+          "NumChampsToGive": [
+            [
+              1,
+              2
             ]
           ]
         }
@@ -17477,8 +17390,8 @@
       "apiName": "DA_Heavenscale19_TheImmortalJourney",
       "name": "The Immortal Journey",
       "name_zh": "無盡旅程",
-      "description": "Gain a Xayah, a Spear of Shojin and 3 gold.",
-      "description_zh": "獲得1個剎雅、1把精進之矛及3金錢。",
+      "description": "Gain a Xayah, a Spear of Shojin and 6 gold.",
+      "description_zh": "獲得1個剎雅、1把精進之矛及6金錢。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -17502,16 +17415,16 @@
         "curveValues": {
           "GoldAmount": [
             [
-              0,
-              3
+              1,
+              6
             ]
           ]
         },
         "curveTable": {
           "GoldAmount": [
             [
-              0,
-              3
+              1,
+              6
             ]
           ]
         }
@@ -18059,8 +17972,8 @@
       "apiName": "DA_Jazz19_DigOnThis",
       "name": "Dig on This",
       "name_zh": "全心享受",
-      "description": "Your Jazz champions gain 100% increased Health and Damage Amp from the Jazz trait. Gain a Lucian and a Galio.",
-      "description_zh": "我方爵士樂英雄透過爵士樂特性獲得100%額外生命和傷害增幅。獲得1個路西恩及1個加里歐。",
+      "description": "Your Jazz champions gain 150% increased Health and Damage Amp from the Jazz trait. Gain a Lucian and a Galio.",
+      "description_zh": "我方爵士樂英雄透過爵士樂特性獲得150%額外生命和傷害增幅。獲得1個路西恩及1個加里歐。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -18086,7 +17999,7 @@
           "BonusPercent": [
             [
               1,
-              1
+              1.5
             ]
           ]
         },
@@ -18094,7 +18007,7 @@
           "BonusPercent": [
             [
               1,
-              1
+              1.5
             ]
           ]
         }
@@ -18212,8 +18125,8 @@
       "apiName": "DA_19_KDAPrismaticTourPlus",
       "name": "K/DA Prismatic Tour+",
       "name_zh": "K/DA稜鏡巡演+",
-      "description": "Gain the K/DA Prismatic Quest, 3 K/DA champions, 2 Tiny Duplicators, 2 Lesser Champion Duplicators, and 6 free rerolls.\n\nReach 21 star levels of K/DA champions!",
-      "description_zh": "獲得K/DA稜鏡任務、3名K/DA英雄、2個小小複製裝置、2個初級英雄複製裝置及6次免費重抽。\n\nK/DA英雄總星等達到21！",
+      "description": "Gain the K/DA Prismatic Quest, 3 K/DA champions, 1 Tiny Duplicators, 1 Lesser Champion Duplicators, and 6 free rerolls.\n\nReach 21 star levels of K/DA champions!",
+      "description_zh": "獲得K/DA稜鏡任務、3名K/DA英雄、1個小小複製裝置、1個初級英雄複製裝置及6次免費重抽。\n\nK/DA英雄總星等達到21！",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -18238,13 +18151,13 @@
           "TinyDupeCount": [
             [
               1,
-              2
+              1
             ]
           ],
           "LesserDupeCount": [
             [
               1,
-              2
+              1
             ]
           ],
           "RequiredStarLevels": [
@@ -18258,13 +18171,13 @@
           "LesserDupeCount": [
             [
               1,
-              2
+              1
             ]
           ],
           "TinyDupeCount": [
             [
               1,
-              2
+              1
             ]
           ],
           "RequiredStarLevels": [
@@ -18281,8 +18194,8 @@
       "apiName": "DA_KDA19_RunningWild",
       "name": "Running Wild",
       "name_zh": "猛禽走獸",
-      "description": "At Combat Start, your 2 strongest K/DA champions without 3 items get a temporary recommended item and 250 Health. Gain a Neeko and a Lillia.",
-      "description_zh": "戰鬥開始時，你 2 最強的K/DA英雄（未持有 3 道具）會獲得一個暫時推薦道具和 250 生命。「獲得1個妮可和1個精進之矛。",
+      "description": "At Combat Start, your 2 strongest K/DA champions without 3 items get a temporary recommended item and 100 Health. Gain a Neeko and a Lillia.",
+      "description_zh": "戰鬥開始時，你 2 最強的K/DA英雄（未持有 3 道具）會獲得一個暫時推薦道具和 100 生命。「獲得1個妮可和1個精進之矛。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -18307,40 +18220,40 @@
         "curveValues": {
           "NumChampions": [
             [
-              0,
+              1,
               2
             ]
           ],
           "ItemThreshold": [
             [
-              0,
+              1,
               3
             ]
           ],
           "BonusHealth": [
             [
-              0,
-              250
+              1,
+              100
             ]
           ]
         },
         "curveTable": {
-          "NumChampions": [
-            [
-              0,
-              2
-            ]
-          ],
           "BonusHealth": [
             [
-              0,
-              250
+              1,
+              100
             ]
           ],
           "ItemThreshold": [
             [
-              0,
+              1,
               3
+            ]
+          ],
+          "NumChampions": [
+            [
+              1,
+              2
             ]
           ]
         }
@@ -18482,8 +18395,8 @@
       "apiName": "DA_Augment19_Manager_ManagementTrackPlus",
       "name": "Management Track+",
       "name_zh": "管理進度+",
-      "description": "Gain a Manager Emblem and a Leona. When champions gain bonuses from Manager there is a 40% chance to gain 1 gold. \n\nAfter collecting [source values differ] gold from the Manager trait, gain a Dr. Mundo and a Warmog's Armor.",
-      "description_zh": "獲得1枚經紀人徽章及1個雷歐娜。當英雄從經紀人獲得加成時，有40%機率獲得1金錢。\n\n從經紀人特性取得[source values differ]金錢後，獲得1個蒙多醫生和1件好戰者鎧甲。",
+      "description": "Gain a Manager Emblem and a Leona. When champions gain bonuses from Manager there is a 40% chance to gain 1 gold. \n\nAfter collecting 30 gold from the Manager trait, gain a Dr. Mundo and a Warmog's Armor.",
+      "description_zh": "獲得1枚經紀人徽章及1個雷歐娜。當英雄從經紀人獲得加成時，有40%機率獲得1金錢。\n\n從經紀人特性取得30金錢後，獲得1個蒙多醫生和1件好戰者鎧甲。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -18499,9 +18412,7 @@
       "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_management_track.png",
       "missing_values": [],
       "missing_values_zh": [],
-      "conflicting_values": [
-        "GoldReq"
-      ],
+      "conflicting_values": [],
       "dynamic": false,
       "source_data": {
         "description": "Gain a Manager Emblem and a Leona. When champions gain bonuses from Manager there is a <TFTCurveTable row=\"GoldChance\" format=\"percent\"/> chance to gain <TFTCurveTable row=\"GoldToGrant\"/> gold. \r\n\r\nAfter collecting <TFTCurveTable row=\"GoldReq\"/> gold from the Manager trait, gain a Dr. Mundo and a Warmog's Armor.",
@@ -18522,7 +18433,7 @@
           "GoldReq": [
             [
               1,
-              40
+              30
             ]
           ]
         },
