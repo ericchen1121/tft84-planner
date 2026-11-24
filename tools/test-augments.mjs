@@ -3,12 +3,12 @@ import fs from 'node:fs';
 import {filterAugments,augmentName,augmentText} from '../src/augment-model.mjs';
 import {resolveAugmentText,buildAugmentSnapshot} from './augment-source.mjs';
 const data=JSON.parse(fs.readFileSync(new URL('../dist/augments.json',import.meta.url),'utf8')),rows=data.augments;
-assert.equal(data.set,'TFTSet19');assert.equal(data.mode,'PBE');assert.equal(rows.length,371);
-assert.equal(new Set(rows.map(a=>a.id)).size,371);
-assert.deepEqual(Object.fromEntries(['Silver','Gold','Prismatic'].map(t=>[t,rows.filter(a=>a.tier===t).length])),{Silver:101,Gold:147,Prismatic:123});
-assert.equal(rows.filter(a=>a.name_zh).length,348);assert.equal(rows.filter(a=>a.description_zh).length,349);
+assert.equal(data.set,'TFTSet19');assert.equal(data.mode,'PBE');assert.equal(rows.length,369);
+assert.equal(new Set(rows.map(a=>a.id)).size,369);
+assert.deepEqual(Object.fromEntries(['Silver','Gold','Prismatic'].map(t=>[t,rows.filter(a=>a.tier===t).length])),{Silver:101,Gold:146,Prismatic:122});
+assert.equal(rows.filter(a=>a.name_zh).length,346);assert.equal(rows.filter(a=>a.description_zh).length,347);
 for(const a of rows){assert(a.name&&a.description);assert(!/<\/?(?:TFT|Rules|Keyword)/i.test(a.description));assert(!/<\/?(?:TFT|Rules|Keyword)/i.test(a.description_zh||''));assert(a.rounds.every(r=>['2-1','3-2','4-2'].includes(r)));if(a.image)assert.equal(new URL(a.image).hostname,'cdn.metatft.com');}
-const loan=rows.find(a=>a.apiName==='DA_AdvancedLoan');assert.equal(augmentName(loan,'zh-Hant'),'進階貸款');assert.equal(augmentName(loan,'en'),'Advanced Loan');assert(augmentText(loan,'zh-Hant').includes('22金錢'));assert(augmentText(loan,'en').includes('22 Gold'));
+const loan=rows.find(a=>a.apiName==='DA_AdvancedLoan');assert.equal(augmentName(loan,'zh-Hant'),'進階貸款');assert.equal(augmentName(loan,'en'),'Advanced Loan');assert(augmentText(loan,'zh-Hant').includes('24金錢'));assert(augmentText(loan,'en').includes('24 Gold'));
 const fallback=rows.find(a=>a.apiName==='DA_WorldTour');assert.equal(fallback.name_zh,null);assert.equal(augmentName(fallback,'zh-Hant'),fallback.name);
 assert(filterAugments(rows,{query:'進階貸款',round:'2-1',tier:'Gold'},'zh-Hant').some(a=>a.id===loan.id));
 assert(filterAugments(rows,{query:'Advanced Loan'},'zh-Hant').some(a=>a.id===loan.id));
@@ -23,7 +23,7 @@ assert(rows.find(a=>a.apiName==='DA_WovenMagic').description.includes('[current 
 assert(rows.find(a=>a.name==='Magic Roll').description.includes('[current game value]'));
 assert(rows.every(a=>!a.description.includes('{Augment.')&&!(a.description_zh||'').includes('{Augment.')));
 assert(rows.find(a=>a.apiName==='DA_19_PyramidScheme_Level7').description.includes('[unavailable]'));
-assert(sameApi.find(a=>a.name==='Gain 32 Gold').description.includes('[source values differ]'));
+assert.equal(sameApi.find(a=>a.name==='Gain 28 Gold').description,'Gain 28 gold.');
 assert.equal(resolveAugmentText('<Rules>Gain <TFTCurveTable row="value" format="percentMinusOne"/></>',{curveValues:{value:[[1,1.3]]}}).text,'Gain 30%');
 assert.equal(resolveAugmentText('<TFTCurveTable row="missing"/>',{}).text,'[unavailable]');
 assert.equal(resolveAugmentText('<TFTCurveTable row="value"/>',{curveValues:{value:[[1,3]]},curveTable:{value:[[1,4]]}}).text,'[source values differ]');

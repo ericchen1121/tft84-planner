@@ -2,12 +2,12 @@
 function unitLabel(u){return getLanguage()==='zh-Hant'?(INFO.units[u.id]?.name_zh||u.name):u.name;}
 function unitSearchText(u){return u.name+' '+(INFO.units[u.id]?.name_zh||'');}
 function abilityLabel(u){const a=INFO.units[u.id];return getLanguage()==='zh-Hant'?(a?.ability_zh||a?.ability||''):a?.ability||'';}
-function abilitySummary(u){const a=INFO.units[u.id];return a?.full_description||(getLanguage()==='zh-Hant'?(a?.description_zh||a?.description||''):a?.description||'');}
+function abilitySummary(u){const a=INFO.units[u.id];return getLanguage()==='zh-Hant'?(a?.full_description_zh||a?.full_description||a?.description_zh||a?.description||''):(a?.full_description||a?.description||'');}
 function hasInfoUnlock(u){const a=INFO.units[u.id];return Array.isArray(a?.full_unlock)?a.full_unlock.length>0:u.unlock;}
 function infoUnlockLines(u){const a=INFO.units[u.id];if(!hasInfoUnlock(u))return [];if(getLanguage()==='zh-Hant'&&a.unlock_zh)return [a.unlock_zh];return a.full_unlock||[a.unlock||t('Unlock required')];}
 function infoPortrait(u,options){const p=portrait(u,options);p.title=unitLabel(u)+' · '+u.cost+'g · '+t('Range {range}',{range:u.range});return p;}
 function numericDescription(u,cls){
- const paragraph=el('p',cls),text=abilitySummary(u).replaceAll('[unavailable]',t('[unavailable]')).replaceAll('?',t('[unavailable]'));
+ const paragraph=el('p',cls),text=abilitySummary(u).replaceAll('[unavailable]',t('[unavailable]'));
  for(const segment of numericSegments(text,u.id)){
   if(segment.scaled||segment.types.length){
    const classes=[segment.scaled?'skill-value':'',segment.types.length?'numeric-value value-'+segment.types.join('-'):''].filter(Boolean).join(' ');
@@ -33,7 +33,7 @@ function recommendedEquipment(u){
  }
  box.append(row);if(!recommended.length)box.append(el('small','equipment-pending',t('No PBE item data available')));return box;
 }
-function roleLabel(u){const role=u.role.replace('DA_Role_','').replace('_Manaless','');const labels={MagicTank:['Magic tank','魔法坦克'],AttackTank:['Attack tank','物理坦克'],MagicCaster:['Magic caster','魔法法師'],AttackCaster:['Attack caster','物理法師'],MagicFighter:['Magic fighter','魔法鬥士'],AttackFighter:['Attack fighter','物理鬥士'],MagicAssassin:['Magic assassin','魔法刺客'],AttackAssassin:['Attack assassin','物理刺客'],AttackMarksman:['Attack marksman','物理射手'],MagicMarksman:['Magic marksman','魔法射手'],AttackSpecialist_Ammo:['Attack specialist','物理專家'],MagicSpecialist:['Magic specialist','魔法專家']};return labels[role]?.[getLanguage()==='zh-Hant'?1:0]||role.replace(/_/g,' ');}
+function roleLabel(u){const role=u.role.replace('DA_Role_','').replace(/_(?:Manaless|Ammo|Time)$/,'');const labels={MagicTank:['Magic tank','魔法坦克'],AttackTank:['Attack tank','物理坦克'],MagicCaster:['Magic caster','魔法法師'],AttackCaster:['Attack caster','物理法師'],MagicFighter:['Magic fighter','魔法鬥士'],AttackFighter:['Attack fighter','物理鬥士'],MagicAssassin:['Magic assassin','魔法刺客'],AttackAssassin:['Attack assassin','物理刺客'],AttackMarksman:['Attack marksman','物理射手'],MagicMarksman:['Magic marksman','魔法射手'],AttackSpecialist:['Attack specialist','物理專家'],MagicSpecialist:['Magic specialist','魔法專家'],HybridSpecialist:['Hybrid specialist','混合專家']};return labels[role]?.[getLanguage()==='zh-Hant'?1:0]||role.replace(/_/g,' ');}
 function infoUnits(){
  const words=$('info-query').value.trim().toLowerCase().split(/\s+/).filter(Boolean),cost=Number($('info-cost').value),trait=$('info-trait').value,unlock=$('info-unlock').value;
  return DATA.units.filter(u=>{
@@ -49,6 +49,7 @@ function populateInfoTraits(){
 }
 function infoTraits(u){const row=el('div','info-traits');for(const name of u.traits){const chip=el('span','trait-chip');const url=ART.traits[name]?.url;if(url){const img=new Image();img.alt='';img.loading='lazy';img.src=url;img.addEventListener('error',()=>img.remove());chip.append(img);}chip.append(document.createTextNode(traitLabel(name)));row.append(chip);}return row;}
 function renderInfo(){
+ $('info-snapshot').textContent=t('{patch} · Ability data · Snapshot {date}',{patch:INFO.patch,date:INFO.snapshot_date.replaceAll('-','/')});
  const units=infoUnits(),fragment=document.createDocumentFragment();
  for(const u of units){
   const card=el('button','info-card');card.type='button';card.style.setProperty('--rarity',rarity[u.cost]||rarity[1]);card.setAttribute('aria-label',t('View {name} details',{name:unitLabel(u)}));
@@ -64,7 +65,7 @@ function showInfo(id){
  const header=el('div','info-detail-header');header.append(infoPortrait(u,{name:false,lazy:false}));const title=el('div');title.append(el('span','eyebrow',t('CHAMPION INFO')));const name=el('h2','',unitLabel(u));name.id='info-title';title.append(name,el('p','',roleLabel(u)));header.append(title);content.append(header,infoTraits(u));
  const stats=el('div','info-detail-stats');for(const [label,value]of [['Cost',u.cost+'g'],['Attack range',u.range],['Mana',a.full_mana||a.mana||'—']]){const item=el('div');item.append(el('small','',t(label)),el('strong','',value));stats.append(item);}content.append(stats);
  content.append(el('h3','',abilityLabel(u)),el('small','star-scaling',t('Values: 1★ / 2★ / 3★')),numericDescription(u,'info-description'));
- if(a.source_missing_values)content.append(el('p','source-missing',t('Some values depend on the board or are missing from the source.')));
+ if(abilitySummary(u).includes('[unavailable]'))content.append(el('p','source-missing',t('Some values depend on the board or are missing from the source.')));
  content.append(infoUnlockBlock(u),recommendedEquipment(u));
  content.append(el('p','field-hint',t('PBE source values; damage and healing scale with stats. Skills follow the source language.')));
  const source=el('p','field-hint',t('References:')+' ');for(const [label,url]of [['MetaTFT','https://www.metatft.com/new-set'],['tactics.tools','https://tactics.tools/info/set-update']]){const link=el('a','',label+' ↗');link.href=url;link.target='_blank';link.rel='noopener noreferrer';source.append(link,document.createTextNode(' '));}content.append(source);
