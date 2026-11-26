@@ -77,3 +77,17 @@
 /* The unlock badge sits outside the crop so art and cost labels stay intact. */
 .portrait-frame{position:relative}
 .unlock-badge{position:absolute;left:-4px;top:-4px;width:clamp(16px,1.6vw,22px);height:clamp(16px,1.6vw,22px);z-index:3;pointer-events:none;border:1.5px solid #b9a8ff;border-radius:50%;box-shadow:0 1px 3px #0009;background:#202b60 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e1dcff' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 10V6a4 4 0 0 1 8 0v2'/%3E%3Crect x='5' y='10' width='12' height='10' rx='2'/%3E%3Cpath d='M11 14v2'/%3E%3C/svg%3E") center/76% 76% no-repeat}
+
+.collab-section{grid-column:1/-1}
+.collab-toolbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) auto;align-items:center;gap:8px}
+.collab-toolbar select{width:100%;min-width:0}
+#collab-selected:not(:empty){margin-top:8px}
+#collab-options{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,215px),1fr));gap:8px;max-height:220px;overflow:auto}
+#collab-options:not(:empty){margin-top:8px}
+#collab-options button,#collab-selected{display:flex;gap:4px;align-items:center}
+#collab-options button{justify-content:center;padding:6px}
+#collab-options button[aria-pressed="true"]{border-color:var(--gold)}
+.collab-section .portrait{width:clamp(24px,7vw,34px);height:clamp(24px,7vw,34px)}
+.collab-section .portrait img{object-position:center}
+.collab-section .cost-label{display:none}
+@media(max-width:420px){.collab-toolbar .text-button{grid-column:1/-1;justify-self:start}}

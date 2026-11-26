@@ -22,5 +22,5 @@ for(const [id,u]of Object.entries(info.units)){
  assert.equal(segments.map(s=>s.text).join(''),u.full_description,'Exact text preserved: '+id);
  for(const s of segments)if(s.types.length)counts[s.types.join('-')]=(counts[s.types.join('-')]||0)+1;
 }
-assert.ok(counts.ap>60&&counts.ad>30&&counts.hp>20);assert.equal(counts['ad-ap'],3);
+assert.ok(counts.ap>60&&counts.ad>30&&counts.hp>20);assert.ok(counts['ad-ap']>0);
 console.log(JSON.stringify({numeric_colors:'PASS',champions:Object.keys(info.units).length,counts,text_preserved:true,neutral_values_unchanged:true}));

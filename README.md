@@ -130,11 +130,11 @@ Source: [tactics.tools Set Update](https://tactics.tools/info/set-update). Champ
 
 ## Champion Info / 棋子圖鑑
 
-Champion Data contains all 94 champions with bilingual search and cost, trait, and unlock filters. The Taiwan lookup supplies 89 Traditional Chinese names and 72 complete Traditional Chinese ability descriptions.
+Champion Data contains all 94 champions with bilingual search and cost, trait, and unlock filters. The Taiwan lookup supplies 94 Traditional Chinese names and 94 Traditional Chinese ability descriptions, with unavailable source values marked.
 
 Info now displays full ability text with numeric values, mana, star-level ordering and highlighted numeric sequences. Population labels are omitted throughout Info. Unlock conditions are visible directly on the cards. Click a card for the same full description in a dialog. Content follows the source language, with English taking precedence when a translation is incomplete or materially different (notably Vladimir and Rakan's loss streak).
 
-The 2026-11-25 snapshot uses the MetaTFT Set 19 PBE lookup release rls-19.1.0.6018196.Set19.Shipping.pbe. It updates solver roles, ranges and trait membership, plus unit tooltips and mana. Four presets were regenerated. Missing values are explicit, and incomplete or outdated skill translations fall back to English.
+The 2026-11-26 snapshot uses the MetaTFT Set 19 PBE lookup release rls-19.1.0.6037882.Set19.Shipping.pbe. It updates unit tooltips and mana. Solver roles, ranges and native trait membership match the previous snapshot. Missing values are explicit, and incomplete or outdated skill translations fall back to English.
 
 The current MetaTFT Info snapshot lists 32 unlockable entries. Info filters use that display snapshot. Solver data supplies the unlock flags shown in lineup results.
 
@@ -189,9 +189,9 @@ Team-code audit: all 91 mapped IDs still agree with the current lookup and the o
 
 ## Augment library / 海克斯圖鑑
 
-The Augments tab lists all 369 entries in the 2026-11-25 MetaTFT Set 19 PBE snapshot (101 Silver, 146 Gold, 122 Prismatic). Search names/effects/traits in either language; combine tier, stage and general/trait filters; browse 24 cards per page and open full descriptions in a dialog. Keyboard tab navigation, direct #augments links and language switching preserve the solver and filters.
+The Augments tab lists all 372 entries in the 2026-11-26 MetaTFT Set 19 PBE snapshot (101 Silver, 149 Gold, 122 Prismatic). Search names/effects/traits in either language; combine tier, stage and general/trait filters; browse 24 cards per page and open full descriptions in a dialog. Keyboard tab navigation, direct #augments links and language switching preserve the solver and filters.
 
-346 names and 347 descriptions have official Traditional Chinese text in the source. Each missing field independently falls back to English. Values resolve curve-table placeholders including percentages and stage-range columns. One entry has a missing source value and four have dynamic game fields. Unresolved values are marked in the description. Round metadata is copied from the source; entries without listed rounds remain visible. Distinct tiers/stages/curves can share an API name, so composite identities retain every variant.
+371 names and 372 descriptions have official Traditional Chinese text in the source. Each missing field independently falls back to English. Values resolve curve-table placeholders including percentages and stage-range columns. One entry has a missing source value and four have dynamic game fields. Unresolved values are marked in the description. Round metadata is copied from the source; entries without listed rounds remain visible. Distinct tiers/stages/curves can share an API name, so composite identities retain every variant.
 
 Run npm run refresh:augments to fetch and rebuild this dataset. dist/augments.json retains raw text and curve data for audit; the standalone HTML only embeds display fields. This is a reference library and does not apply augment effects to the solver.
 
@@ -203,7 +203,7 @@ Actual augment artwork is tinted by rarity in cards and dialogs: grayscale silve
 
 ## Augment effect tags
 
-All 371 variants now have reviewed multi-label categories, shared with the web UI: ten colors, any/all tag filters, and equipment subtypes. Champion resource grants and Tactician health are separate categories. Prismatic trait quests are separate from augment rarity; hero upgrades require champion ability/role changes. `dist/augment-tags.json` records variant identities, reviewed description hashes, and MetaTFT reference categories. New or changed effects require review before building. These are editorial classifications based on the source effects, not official Riot labels.
+All 372 variants now have reviewed multi-label categories, shared with the web UI: ten colors, any/all tag filters, and equipment subtypes. Champion resource grants and Tactician health are separate categories. Prismatic trait quests are separate from augment rarity; hero upgrades require champion ability/role changes. `dist/augment-tags.json` records variant identities, reviewed description hashes, and MetaTFT reference categories. New or changed effects require review before building. These are editorial classifications based on the source effects, not official Riot labels.
 
 ## Lineup simulator
 

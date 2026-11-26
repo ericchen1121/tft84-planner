@@ -2,16 +2,16 @@
   "set": "TFTSet19",
   "mode": "PBE",
   "patch": "19.1",
-  "snapshot_date": "2026-11-25",
+  "snapshot_date": "2026-11-26",
   "source": "https://www.metatft.com/items?set=TFTSet19",
   "metadata": {
     "set": "TFTSet19",
     "setName": "Set 19",
     "patch": "pbe",
-    "generated": "2026-11-23T21:39:48.080Z",
-    "coreHash": "59b4b05f6466b86738f39db57b20d58de631f0a4",
-    "release": "rls-19.1.0.6018196.Set19.Shipping.pbe",
-    "manifest": "1096C8A75AEA562C",
+    "generated": "2026-11-26T06:41:21.997Z",
+    "coreHash": "1ab9e13d70181a41cb707d684ab7e077fd22fe12",
+    "release": "rls-19.1.0.6037882.Set19.Shipping.pbe",
+    "manifest": "06BB7C972BA1E6E1",
     "tooltips": "curvetable"
   },
   "lookups": [
@@ -111,7 +111,7 @@
       "name": "Randuin's Omen",
       "name_zh": "蘭頓之兆",
       "description": "Grant 33 Armor and Magic Resist to the holder and allies within 1 hex.",
-      "description_zh": null,
+      "description_zh": "賦予裝備者以及1格內的友軍33雙防。",
       "category": "support",
       "recipe": [],
       "stats": [
@@ -131,7 +131,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Grant <TFTCurveTable row=\"AllyResists\"/> Armor and Magic Resist to the holder and allies within <TFTCurveTable row=\"AllyHexes\"/> hex.",
-        "description_zh": "Grant <TFTCurveTable row=\"AllyResists\"/> Armor and Magic Resist to the holder and allies within <TFTCurveTable row=\"AllyHexes\"/> hex.",
+        "description_zh": "賦予裝備者以及<TFTCurveTable row=\"AllyHexes\"/>格內的友軍<TFTCurveTable row=\"AllyResists\"/>雙防。",
         "statLine": "<TFTCurveTable row=\"Health\" icon=\"icon.Health\" type=\"stat\"/>",
         "composition": [],
         "tags": [
@@ -1015,7 +1015,7 @@
       "name": "Blighting Jewel",
       "name_zh": "枯萎寶石",
       "description": "Dealing magic damage reduces the target’s Magic Resist by 3. If their Magic Resist is 0, grant the holder 2 Mana instead. \n\nDamage over time effects can only trigger on each enemy once every 0.5 seconds.",
-      "description_zh": null,
+      "description_zh": "造成魔法傷害會降低目標3魔防。若其魔防為0，改為賦予裝備者2魔力。\n\n每0.5秒內，持續傷害效果只能對各個敵軍觸發一次。",
       "category": "artifact",
       "recipe": [],
       "stats": [
@@ -1040,7 +1040,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Dealing magic damage reduces the target’s Magic Resist by <TFTCurveTable row=\"MagicResistShred\"/>. If their Magic Resist is 0, grant the holder <TFTCurveTable row=\"ManaGain\"/> Mana instead. \r\n\r\n<rules>Damage over time effects can only trigger on each enemy once every</> <TFTCurveTable row=\"DOTCooldown\" style=\"rules\"/> <rules>seconds.</>",
-        "description_zh": "Dealing magic damage reduces the target’s Magic Resist by <TFTCurveTable row=\"MagicResistShred\"/>. If their Magic Resist is 0, grant the holder <TFTCurveTable row=\"ManaGain\"/> Mana instead. \r\n\r\n<rules>Damage over time effects can only trigger on each enemy once every</> <TFTCurveTable row=\"DOTCooldown\" style=\"rules\"/> <rules>seconds.</>",
+        "description_zh": "造成魔法傷害會降低目標<TFTCurveTable row=\"MagicResistShred\"/>魔防。若其魔防為0，改為賦予裝備者<TFTCurveTable row=\"ManaGain\"/>魔力。\r\n\r\n<rules>每</><TFTCurveTable row=\"DOTCooldown\" style=\"rules\"/><rules>秒</>內，持續傷害效果只能對各個敵軍觸發一次。",
         "statLine": "<TFTCurveTable row=\"AbilityPowerMultiplier\" icon=\"icon.AP\" format=\"percent\" type=\"stat\"/>  <TFTCurveTable row=\"ManaRegenBase\" icon=\"icon.ManaRegen\" type=\"stat\"/>",
         "composition": [],
         "tags": [
@@ -1239,7 +1239,7 @@
       "name": "Dawncore",
       "name_zh": "破曉之核",
       "description": "The holder's Abilities cost 10 less Mana to cast. Subsequent casts make the Ability cost 5% less, to a minimum of 15.",
-      "description_zh": "降低裝備者最大魔力10。後續施放減少最大魔力5%，下限為：15。",
+      "description_zh": "裝備者施放技能所需魔力減少10。後續施放會使此技能的消耗降低5%，最低至15。",
       "category": "artifact",
       "recipe": [],
       "stats": [
@@ -1269,7 +1269,7 @@
       "dynamic": false,
       "source_data": {
         "description": "The holder's Abilities cost <TFTCurveTable row=\"FlatMaxManaReduction\"/> less Mana to cast. Subsequent casts make the Ability cost <TFTCurveTable row=\"ReductionOnSpellcastPercent\"/>% less, to a minimum of <TFTCurveTable row=\"MinimumMana\"/>.",
-        "description_zh": "降低裝備者最大魔力<TFTCurveTable row=\"FlatMaxManaReduction\"/>。後續施放減少最大魔力<TFTCurveTable row=\"ReductionOnSpellcastPercent\"/>%，下限為：<TFTCurveTable row=\"MinimumMana\"/>。",
+        "description_zh": "裝備者施放技能所需魔力減少<TFTCurveTable row=\"FlatMaxManaReduction\"/>。後續施放會使此技能的消耗降低<TFTCurveTable row=\"ReductionOnSpellcastPercent\"/>%，最低至<TFTCurveTable row=\"MinimumMana\"/>。",
         "statLine": "<TFTCurveTable row=\"AttackDamage\" icon=\"icon.AD\" format=\"percent\" type=\"stat\"/> <TFTCurveTable row=\"AbilityPower\" icon=\"icon.AP\" format=\"percent\" type=\"stat\"/> <TFTCurveTable row=\"ManaRegen\" icon=\"icon.ManaRegen\" type=\"stat\"/>",
         "composition": [],
         "tags": [
@@ -4465,7 +4465,7 @@
       "name": "Zhonya's Paradox",
       "name_zh": "中婭悖論之鐘",
       "description": "Once per combat at 40% Health, become invulnerable, unstoppable, and untargetable for 3 seconds.\n\nUnique - only 1 per champion",
-      "description_zh": "每場戰鬥一次：在40%生命時，進入免疫傷害狀態且無法被指定，持續3秒。\n\n唯一：每一名英雄僅限1件",
+      "description_zh": "每場戰鬥一次：在40%生命時，進入無敵且無人能擋狀態，而且無法被指定，持續3秒。\n\n唯一：每一名英雄僅限1件",
       "category": "artifact",
       "recipe": [],
       "stats": [
@@ -4495,7 +4495,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Once per combat at <TFTCurveTable row=\"HealthRatioThreshold\" format=\"percent\"/> Health, become invulnerable, unstoppable, and untargetable for <TFTCurveTable row=\"InvulnerableDuration\"/> seconds.\r\n\r\n<rules>Unique - only 1 per champion</>",
-        "description_zh": "每場戰鬥一次：在<TFTCurveTable row=\"HealthRatioThreshold\" format=\"percent\"/>生命時，進入免疫傷害狀態且無法被指定，持續<TFTCurveTable row=\"InvulnerableDuration\"/>秒。\r\n\r\n<rules>唯一：每一名英雄僅限1件</>",
+        "description_zh": "每場戰鬥一次：在<TFTCurveTable row=\"HealthRatioThreshold\" format=\"percent\"/>生命時，進入無敵且無人能擋狀態，而且無法被指定，持續<TFTCurveTable row=\"InvulnerableDuration\"/>秒。\r\n\r\n<rules>唯一：每一名英雄僅限1件</>",
         "statLine": "<TFTCurveTable row=\"AbilityPower\" type=\"stat\" icon=\"icon.AP\" format=\"percent\"/> <TFTCurveTable row=\"Armor\" type=\"stat\" icon=\"icon.Armor\"/> <TFTCurveTable row=\"MagicResist\" type=\"stat\" icon=\"icon.MR\"/>",
         "composition": [],
         "tags": [
@@ -4572,8 +4572,8 @@
       "id": "DA_Bloodthirster",
       "name": "Bloodthirster",
       "name_zh": "嗜血者",
-      "description": "Once per combat at 60% Health, gain a 25% max Health Shield. After this effect triggers gain 15% Omnivamp for the rest of combat.",
-      "description_zh": null,
+      "description": "Once per combat at 50% Health, gain a 25% max Health Shield. After this effect triggers gain 15% Omnivamp for the rest of combat.",
+      "description_zh": "每場戰鬥一次：生命掉到50%時，獲得25%最大生命的護盾。此效果觸發後，獲得15%全能吸血，持續到戰鬥結束。",
       "category": "normal",
       "recipe": [
         "DA_Component_BFSword",
@@ -4611,7 +4611,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Once per combat at <TFTCurveTable row=\"ThresholdMaxHealthRatio\" format=\"percent\"/> Health, gain a <TFTCurveTable row=\"ShieldMaxHealthRatio\" format=\"percent\"/> max Health Shield. After this effect triggers gain <TFTCurveTable row=\"AdditionalOmnivamp\" format=\"percent\"/> Omnivamp for the rest of combat.",
-        "description_zh": "Once per combat at <TFTCurveTable row=\"ThresholdMaxHealthRatio\" format=\"percent\"/> Health, gain a <TFTCurveTable row=\"ShieldMaxHealthRatio\" format=\"percent\"/> max Health Shield. After this effect triggers gain <TFTCurveTable row=\"AdditionalOmnivamp\" format=\"percent\"/> Omnivamp for the rest of combat.",
+        "description_zh": "每場戰鬥一次：生命掉到<TFTCurveTable row=\"ThresholdMaxHealthRatio\" format=\"percent\"/>時，獲得<TFTCurveTable row=\"ShieldMaxHealthRatio\" format=\"percent\"/>最大生命的護盾。此效果觸發後，獲得<TFTCurveTable row=\"AdditionalOmnivamp\" format=\"percent\"/>全能吸血，持續到戰鬥結束。",
         "statLine": "<TFTCurveTable row=\"BaseAD\" icon=\"icon.AD\" format=\"percent\" type=\"stat\"/> <TFTCurveTable row=\"BaseAP\" icon=\"icon.AP\" type=\"stat\" format=\"percent\"/> <TFTCurveTable row=\"BaseMagicResist\" icon=\"icon.MR\" type=\"stat\"/> <TFTCurveTable row=\"BaseOmnivamp\" icon=\"icon.Omnivamp\" type=\"stat\" format=\"percent\"/>",
         "composition": [
           "DA_Component_BFSword",
@@ -4625,7 +4625,7 @@
           "ThresholdMaxHealthRatio": [
             [
               1,
-              0.6
+              0.5
             ]
           ],
           "ShieldMaxHealthRatio": [
@@ -4711,7 +4711,7 @@
           "ThresholdMaxHealthRatio": [
             [
               1,
-              0.6
+              0.5
             ]
           ]
         }
@@ -4721,8 +4721,8 @@
       "id": "DA_BloodthirsterRadiant",
       "name": "Radiant Bloodthirster",
       "name_zh": "聖光嗜血者",
-      "description": "Once per combat at 60% Health, gain a 50% max Health Shield. After this effect triggers gain 30% Omnivamp for the rest of combat.",
-      "description_zh": "每場戰鬥一次：生命掉到60%時，獲得50%最大生命的護盾。此效果觸發後，獲得30%全能吸血，持續到戰鬥結束。",
+      "description": "Once per combat at 50% Health, gain a 50% max Health Shield. After this effect triggers gain 30% Omnivamp for the rest of combat.",
+      "description_zh": "每場戰鬥一次：生命掉到50%時，獲得50%最大生命的護盾。此效果觸發後，獲得30%全能吸血，持續到戰鬥結束。",
       "category": "radiant",
       "recipe": [],
       "stats": [
@@ -4769,7 +4769,7 @@
           "ThresholdMaxHealthRatio": [
             [
               1,
-              0.6
+              0.5
             ]
           ],
           "ShieldMaxHealthRatio": [
@@ -4855,7 +4855,7 @@
           "ThresholdMaxHealthRatio": [
             [
               1,
-              0.6
+              0.5
             ]
           ]
         }
@@ -6076,7 +6076,7 @@
       "name": "Radiant Deathblade",
       "name_zh": "聖光死神之刃",
       "description": "Gain 30% additional Attack Damage from all sources.[current game value]",
-      "description_zh": null,
+      "description_zh": "從所有來源獲得30%額外物理傷害。[current game value]",
       "category": "radiant",
       "recipe": [],
       "stats": [
@@ -6096,7 +6096,7 @@
       "dynamic": true,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"ADMultiplier\" format=\"percentMinusOne\" style=\"colorRadiant\"/> additional Attack Damage from all sources.{ItemTags.Deathblade.DeadlierBladeStacks}",
-        "description_zh": "Gain <TFTCurveTable row=\"ADMultiplier\" format=\"percentMinusOne\" style=\"colorRadiant\"/> additional Attack Damage from all sources.{ItemTags.Deathblade.DeadlierBladeStacks}",
+        "description_zh": "從所有來源獲得<TFTCurveTable row=\"ADMultiplier\" format=\"percentMinusOne\" style=\"colorRadiant\"/>額外物理傷害。{ItemTags.Deathblade.DeadlierBladeStacks}",
         "statLine": "<TFTCurveTable row=\"AttackDamage\" icon=\"icon.AD\" format=\"percent\" type=\"stat\" fallbackRow=\"AttackDamage\"/>",
         "composition": [],
         "tags": [
@@ -8044,7 +8044,7 @@
     {
       "id": "DA_IonicSpark",
       "name": "Ionic Spark",
-      "name_zh": "離子星火",
+      "name_zh": null,
       "description": "30% Shred enemies within 2 hexes. When enemies cast an Ability, deal magic damage equal to 150% of the Mana spent.\n\nShred: Reduce Magic Resist",
       "description_zh": "2格內的敵軍受到30%削抗。每當敵軍施放技能，造成等同於150%其消耗魔力的魔法傷害。\n\n削抗：減少魔法防禦",
       "category": "normal",
@@ -8170,7 +8170,7 @@
     {
       "id": "DA_IonicSparkRadiant",
       "name": "Radiant Ionic Spark",
-      "name_zh": "聖光離子星火",
+      "name_zh": "聖光Ionic Spark",
       "description": "30% Shred enemies within 2 hexes. When enemies cast an Ability, deal magic damage equal to 300% of the Mana spent.\n\nShred: Reduce Magic Resist",
       "description_zh": "2格內的敵軍受到30%削抗。每當敵軍施放技能，造成等同於300%其消耗魔力的魔法傷害。\n\n削抗：減少魔防",
       "category": "radiant",
@@ -9986,7 +9986,7 @@
       "name": "Radiant Quicksilver",
       "name_zh": "聖光水銀兜帽",
       "description": "Gain Unstoppable for the first 45 seconds of combat. \n\nGain 6% stacking Attack Speed every second.",
-      "description_zh": "戰鬥開始：變得無人能擋，持續45秒。\n\n每秒增加6%可累加攻速。",
+      "description_zh": "戰鬥開始45秒內處於無人能擋狀態。\n\n每秒增加6%可累加攻速。",
       "category": "radiant",
       "recipe": [],
       "stats": [
@@ -10016,7 +10016,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain Unstoppable for the first <TFTCurveTable row=\"EffectDuration\" style=\"colorRadiant\"/> seconds of combat. \r\n\r\nGain <TFTCurveTable row=\"StacksToAtkSpd\" format=\"percentMinusOne\" style=\"colorRadiant\"/> stacking Attack Speed every second.",
-        "description_zh": "戰鬥開始：變得無人能擋，持續<TFTCurveTable row=\"EffectDuration\" style=\"colorRadiant\"/>秒。\r\n\r\n每秒增加<TFTCurveTable row=\"StacksToAtkSpd\" format=\"percentMinusOne\" style=\"colorRadiant\"/>可累加攻速。",
+        "description_zh": "戰鬥開始<TFTCurveTable row=\"EffectDuration\" style=\"colorRadiant\"/>秒內處於無人能擋狀態。\r\n\r\n每秒增加<TFTCurveTable row=\"StacksToAtkSpd\" format=\"percentMinusOne\" style=\"colorRadiant\"/>可累加攻速。",
         "statLine": "<TFTCurveTable row=\"Base_MagicResist\" icon=\"icon.MR\" type=\"stat\"/> <TFTCurveTable row=\"Base_AttackSpeed\" icon=\"icon.AS\" format=\"percentMinusOne\" type=\"stat\"/> <TFTCurveTable row=\"Base_CritChance\" icon=\"icon.CritChance\" format=\"percent\" type=\"stat\"/>",
         "composition": [],
         "tags": [
@@ -10101,7 +10101,7 @@
       "name": "Rabadon's Deathcap",
       "name_zh": "死亡之帽",
       "description": "Gain 15% additional Ability Power from all sources.[current game value]",
-      "description_zh": null,
+      "description_zh": "所有來源的魔攻增加15%。[current game value]",
       "category": "normal",
       "recipe": [
         "DA_Component_NeedlesslyLargeRod",
@@ -10124,7 +10124,7 @@
       "dynamic": true,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"APMultiplier\" format=\"percentMinusOne\"/> additional Ability Power from all sources.{ItemTags.RabadonsDeathcap.DeadlierCapsStacks}",
-        "description_zh": "Gain <TFTCurveTable row=\"APMultiplier\" format=\"percentMinusOne\"/> additional Ability Power from all sources.{ItemTags.RabadonsDeathcap.DeadlierCapsStacks}",
+        "description_zh": "所有來源的魔攻增加<TFTCurveTable row=\"APMultiplier\" format=\"percentMinusOne\"/>。{ItemTags.RabadonsDeathcap.DeadlierCapsStacks}",
         "statLine": "<TFTCurveTable row=\"AbilityPower\" icon=\"icon.AP\" format=\"percent\" type=\"stat\" fallbackRow=\"AbilityPower\"/>",
         "composition": [
           "DA_Component_NeedlesslyLargeRod",
@@ -10169,7 +10169,7 @@
       "name": "Radiant Rabadon's Deathcap",
       "name_zh": "聖光死亡之帽",
       "description": "Gain 30% additional Ability Power from all sources.[current game value]",
-      "description_zh": null,
+      "description_zh": "所有來源的魔攻增加30%。[current game value]",
       "category": "radiant",
       "recipe": [],
       "stats": [
@@ -10189,7 +10189,7 @@
       "dynamic": true,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"APMultiplier\" format=\"percentMinusOne\" style=\"colorRadiant\"/> additional Ability Power from all sources.{ItemTags.RabadonsDeathcap.DeadlierCapsStacks}",
-        "description_zh": "Gain <TFTCurveTable row=\"APMultiplier\" format=\"percentMinusOne\" style=\"colorRadiant\"/> additional Ability Power from all sources.{ItemTags.RabadonsDeathcap.DeadlierCapsStacks}",
+        "description_zh": "所有來源的魔攻增加<TFTCurveTable row=\"APMultiplier\" format=\"percentMinusOne\" style=\"colorRadiant\"/>。{ItemTags.RabadonsDeathcap.DeadlierCapsStacks}",
         "statLine": "<TFTCurveTable row=\"AbilityPower\" icon=\"icon.AP\" format=\"percent\" type=\"stat\" fallbackRow=\"AbilityPower\"/>",
         "composition": [],
         "tags": [
@@ -10480,7 +10480,7 @@
       "name": "Salvager",
       "name_zh": "回收工具",
       "description": "Use on a champion to remove all their items and break them down into components.\n \nTactician's items and Emblems cannot be broken apart.\nCannot be used on champions in combat.\nConsumable: This item disappears when used.",
-      "description_zh": "用在英雄身上即可解除其所有道具，並將完整道具分解為組件。\n \n[消耗品：此道具在使用後就會消失。]",
+      "description_zh": "用在英雄身上即可解除其所有道具，並將完整道具分解為組件。\n \n聯盟棋手的道具與徽章無法分解。\n無法對戰鬥中的英雄使用。\n消耗品：此道具在使用後就會消失。",
       "category": "other",
       "recipe": [],
       "stats": [],
@@ -10494,7 +10494,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Use on a champion to remove all their items and break them down into components.\r\n \r\n<Rules>Tactician's items and Emblems cannot be broken apart.</>\r\n<Rules>Cannot be used on champions in combat.</>\r\n<Rules>Consumable: This item disappears when used.</>",
-        "description_zh": "用在英雄身上即可解除其所有道具，並將完整道具分解為組件。\r\n \r\n<rules>[消耗品：此道具在使用後就會消失。]</>",
+        "description_zh": "用在英雄身上即可解除其所有道具，並將完整道具分解為組件。\r\n \r\n<Rules>聯盟棋手的道具與徽章無法分解。</>\r\n<Rules>無法對戰鬥中的英雄使用。</>\r\n<Rules>消耗品：此道具在使用後就會消失。</>",
         "statLine": null,
         "composition": [],
         "tags": [
@@ -10519,12 +10519,12 @@
         {
           "key": "ad",
           "label": "Attack damage",
-          "value": "15%"
+          "value": "18%"
         },
         {
           "key": "ap",
           "label": "Ability power",
-          "value": "15%"
+          "value": "18%"
         },
         {
           "key": "manaregen",
@@ -10564,13 +10564,13 @@
           "AttackDamage": [
             [
               1,
-              0.15
+              0.18
             ]
           ],
           "AbilityPower": [
             [
               1,
-              0.15
+              0.18
             ]
           ],
           "ManaPerSecond": [
@@ -10584,7 +10584,7 @@
           "AbilityPower": [
             [
               1,
-              0.15
+              0.18
             ]
           ],
           "ManaPerSecond": [
@@ -10596,7 +10596,7 @@
           "AttackDamage": [
             [
               1,
-              0.15
+              0.18
             ]
           ],
           "ManaPerAttack": [
@@ -10620,12 +10620,12 @@
         {
           "key": "ad",
           "label": "Attack damage",
-          "value": "30%"
+          "value": "35%"
         },
         {
           "key": "ap",
           "label": "Ability power",
-          "value": "30%"
+          "value": "35%"
         },
         {
           "key": "manaregen",
@@ -10663,13 +10663,13 @@
           "AttackDamage": [
             [
               1,
-              0.3
+              0.35
             ]
           ],
           "AbilityPower": [
             [
               1,
-              0.3
+              0.35
             ]
           ],
           "ManaPerSecond": [
@@ -10683,7 +10683,7 @@
           "AbilityPower": [
             [
               1,
-              0.3
+              0.35
             ]
           ],
           "ManaPerSecond": [
@@ -10695,7 +10695,7 @@
           "AttackDamage": [
             [
               1,
-              0.3
+              0.35
             ]
           ],
           "ManaPerAttack": [
@@ -11219,8 +11219,8 @@
       "id": "DA_SteraksGage",
       "name": "Sterak's Gage",
       "name_zh": "史特拉克手套",
-      "description": "At 40% Health, gain a Shield equal to 40% of the wearer's maximum Health that rapidly decays over 4 seconds.",
-      "description_zh": "生命降至40%時，獲得等同於裝備者40%最大生命的護盾。護盾會在4秒內快速衰減。",
+      "description": "At 60% Health, gain a Shield equal to 40% of the wearer's maximum Health that rapidly decays over 4 seconds.",
+      "description_zh": "生命降至60%時，獲得等同於裝備者40%最大生命的護盾。護盾會在4秒內快速衰減。",
       "category": "normal",
       "recipe": [
         "DA_Component_BFSword",
@@ -11262,7 +11262,7 @@
           "MaxHealthProcThreshold": [
             [
               1,
-              0.4
+              0.6
             ]
           ],
           "ShieldMaxHealthRatio": [
@@ -11312,7 +11312,7 @@
           "MaxHealthProcThreshold": [
             [
               1,
-              0.4
+              0.6
             ]
           ],
           "Duration": [
@@ -11328,8 +11328,8 @@
       "id": "DA_SteraksGageRadiant",
       "name": "Radiant Sterak's Gage",
       "name_zh": "聖光史特拉克手套",
-      "description": "At 40% Health, gain a Shield equal to 80% of the wearer's maximum Health that rapidly decays over 6 seconds.",
-      "description_zh": "生命降至40%時，獲得等同於裝備者80%最大生命的護盾。護盾會在6秒內快速衰減。",
+      "description": "At 60% Health, gain a Shield equal to 80% of the wearer's maximum Health that rapidly decays over 6 seconds.",
+      "description_zh": "生命降至60%時，獲得等同於裝備者80%最大生命的護盾。護盾會在6秒內快速衰減。",
       "category": "radiant",
       "recipe": [],
       "stats": [
@@ -11366,7 +11366,7 @@
           "MaxHealthProcThreshold": [
             [
               1,
-              0.4
+              0.6
             ]
           ],
           "ShieldMaxHealthRatio": [
@@ -11422,7 +11422,7 @@
           "MaxHealthProcThreshold": [
             [
               1,
-              0.4
+              0.6
             ]
           ]
         }
@@ -12779,7 +12779,7 @@
         {
           "key": "health",
           "label": "Health",
-          "value": "500"
+          "value": "550"
         }
       ],
       "image": "https://cdn.metatft.com/file/metatft/items/da_warmogsarmor.png",
@@ -12812,7 +12812,7 @@
           "Base_Health": [
             [
               1,
-              500
+              550
             ]
           ]
         },
@@ -12826,7 +12826,7 @@
           "Base_Health": [
             [
               1,
-              500
+              550
             ]
           ]
         }
@@ -12844,7 +12844,7 @@
         {
           "key": "health",
           "label": "Health",
-          "value": "1200"
+          "value": "1300"
         }
       ],
       "image": "https://cdn.metatft.com/file/metatft/items/da_warmogsarmorradiant.png",
@@ -12875,7 +12875,7 @@
           "Base_Health": [
             [
               1,
-              1200
+              1300
             ]
           ]
         },
@@ -12889,7 +12889,7 @@
           "Base_Health": [
             [
               1,
-              1200
+              1300
             ]
           ]
         }
@@ -12945,7 +12945,7 @@
       "name": "Dr. Mundo's Record Contract",
       "name_zh": "蒙多醫生的唱片合約",
       "description": "Use on a champion to sign them as a Recording Artist. They gain 5% Damage Amp and their kills grant Dr. Mundo permanent Health.\n\nCannot be used on champions in combat.\nBench or sell the champion to remove the contract!",
-      "description_zh": "用在英雄身上，可將其簽下成為唱片藝人。該英雄每次擊殺會讓蒙多醫生永久提升生命，並獲得5%傷害增幅。\n\n無法對戰鬥中的英雄使用。\n消耗品：此道具在使用後就會消失。\n裝備的英雄被出售或放到備戰區時，會退還此道具。",
+      "description_zh": "用在英雄身上，可將其簽下成為唱片藝人。他們會獲得5%傷害增幅，取得擊殺時，賦予蒙多醫生永久生命。\n\n無法對戰鬥中的英雄使用。\n將該英雄放到備戰區或出售，即可解除契約！",
       "category": "other",
       "recipe": [],
       "stats": [],
@@ -12959,7 +12959,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Use on a champion to sign them as a Recording Artist. They gain <TFTCurveTable row=\"HeadlinerDA\" format=\"percent\"/> Damage Amp and their kills grant Dr. Mundo permanent Health.\r\n\r\n<Rules>Cannot be used on champions in combat.</>\r\n<Rules>Bench or sell the champion to remove the contract!</>",
-        "description_zh": "用在英雄身上，可將其簽下成為唱片藝人。該英雄每次擊殺會讓蒙多醫生永久提升生命，並獲得<TFTCurveTable row=\"HeadlinerDA\" format=\"percent\"/>傷害增幅。\r\n\r\n<Rules>無法對戰鬥中的英雄使用。</>\r\n<Rules>消耗品：此道具在使用後就會消失。</>\r\n<Rules>裝備的英雄被出售或放到備戰區時，會退還此道具。</>",
+        "description_zh": "用在英雄身上，可將其簽下成為唱片藝人。他們會獲得<TFTCurveTable row=\"HeadlinerDA\" format=\"percent\"/>傷害增幅，取得擊殺時，賦予蒙多醫生永久生命。\r\n\r\n<Rules>無法對戰鬥中的英雄使用。</>\r\n<Rules>將該英雄放到備戰區或出售，即可解除契約！</>",
         "statLine": null,
         "composition": [],
         "tags": [
@@ -13278,7 +13278,8 @@
         "tags": [
           "Emblem",
           "Item.Equippable.Item.Craftable",
-          "Item.Equippable.Item.Emblem"
+          "Item.Equippable.Item.Emblem",
+          "Item.Equippable.WeStickTogetherBanned"
         ],
         "curveValues": {
           "ResistConversionRatio": [
@@ -13469,7 +13470,7 @@
       "name": "Choreographer Emblem",
       "name_zh": "編舞者徽章",
       "description": "The holder gains the Choreographer trait and an additional bonus based on if they're placed in the front 2 rows or back 2 rows.\n\nFront: 25% increased healing and shielding.\n\nBack: 20% Attack Speed and additional movement speed.\n\nElusive - Cannot be crafted.",
-      "description_zh": "裝備者獲得「編舞者」特性，若根據放置在前兩排或後兩排獲得不同額外加成。\n\n前排：提升25%治療與護盾效果。\n\n後排：提升20%攻速與額外跑速。",
+      "description_zh": "裝備者獲得編舞者特性，並根據其放置在前2排或後2排的位置，獲得額外加成。\n\n前排：提升25%治療與護盾效果。\n\n後排：提升20%攻速與額外跑速。\n\n難以捉摸：無法合成。",
       "category": "emblem",
       "recipe": [],
       "stats": [
@@ -13499,7 +13500,7 @@
       "dynamic": false,
       "source_data": {
         "description": "The holder gains the Choreographer trait and an additional bonus based on if they're placed in the front 2 rows or back 2 rows.\r\n\r\nFront: <TFTCurveTable row=\"IncomingHealShieldBonus\" format=\"percent\"/> increased healing and shielding.\r\n\r\nBack: <TFTCurveTable row=\"BackAttackSpeedMultiplier\" format=\"percentMinusOne\"/> Attack Speed and additional movement speed.\r\n\r\n<Rules>Elusive - Cannot be crafted.</>",
-        "description_zh": "裝備者獲得「編舞者」特性，若根據放置在前兩排或後兩排獲得不同額外加成。\r\n\r\n前排：提升<TFTCurveTable row=\"IncomingHealShieldBonus\" format=\"percent\"/>治療與護盾效果。\r\n\r\n後排：提升<TFTCurveTable row=\"BackAttackSpeedMultiplier\" format=\"percentMinusOne\"/>攻速與額外跑速。",
+        "description_zh": "裝備者獲得編舞者特性，並根據其放置在前2排或後2排的位置，獲得額外加成。\r\n\r\n前排：提升<TFTCurveTable row=\"IncomingHealShieldBonus\" format=\"percent\"/>治療與護盾效果。\r\n\r\n後排：提升<TFTCurveTable row=\"BackAttackSpeedMultiplier\" format=\"percentMinusOne\"/>攻速與額外跑速。\r\n\r\n<Rules>難以捉摸：無法合成。</>",
         "statLine": "<TFTCurveTable row=\"EmblemHealth\" icon=\"icon.Health\" type=\"stat\"/> <TFTCurveTable row=\"EmblemManaRegen\" icon=\"icon.ManaRegen\" type=\"stat\"/>",
         "composition": [],
         "tags": [
@@ -13951,7 +13952,7 @@
       "name": "Frontman Emblem",
       "name_zh": "主唱徽章",
       "description": "The holder gains the Frontman trait. \n\nEvery 5 seconds, the next attack deals 12% of the holder's max Health as magic damage.",
-      "description_zh": null,
+      "description_zh": "裝備者獲得主唱特性。\n\n每5秒，下一次普攻造成裝備者最大生命12%的魔法傷害。",
       "category": "emblem",
       "recipe": [
         "DA_Component_FryingPan",
@@ -13979,7 +13980,7 @@
       "dynamic": false,
       "source_data": {
         "description": "The holder gains the Frontman trait. \r\n\r\nEvery <TFTCurveTable row=\"EmpoweredAttackCadence\"/> seconds, the next attack deals <TFTCurveTable row=\"PercentHealthDamage\" format=\"percent\"/> of the holder's max Health as magic damage.",
-        "description_zh": "The holder gains the Frontman trait. \r\n\r\nEvery <TFTCurveTable row=\"EmpoweredAttackCadence\"/> seconds, the next attack deals <TFTCurveTable row=\"PercentHealthDamage\" format=\"percent\"/> of the holder's max Health as magic damage.",
+        "description_zh": "裝備者獲得主唱特性。\r\n\r\n每<TFTCurveTable row=\"EmpoweredAttackCadence\"/>秒，下一次普攻造成裝備者最大生命<TFTCurveTable row=\"PercentHealthDamage\" format=\"percent\"/>的魔法傷害。",
         "statLine": "<TFTCurveTable row=\"EmblemHealth\" icon=\"icon.Health\" type=\"stat\"/> ",
         "composition": [
           "DA_Component_FryingPan",
@@ -13988,7 +13989,8 @@
         "tags": [
           "Emblem",
           "Item.Equippable.Item.Craftable",
-          "Item.Equippable.Item.Emblem"
+          "Item.Equippable.Item.Emblem",
+          "Item.Equippable.WeStickTogetherBanned"
         ],
         "curveValues": {
           "EmpoweredAttackCadence": [
@@ -14191,7 +14193,7 @@
       "name": "Hyperpop Emblem",
       "name_zh": "超流行徽章",
       "description": "The holder gains the Hyperpop trait.\n\nElusive - Cannot be crafted.",
-      "description_zh": null,
+      "description_zh": "裝備者獲得超流行特性。\n\n難以捉摸：無法合成。",
       "category": "emblem",
       "recipe": [],
       "stats": [
@@ -14221,7 +14223,7 @@
       "dynamic": false,
       "source_data": {
         "description": "The holder gains the Hyperpop trait.\r\n\r\n<Rules>Elusive - Cannot be crafted.</>",
-        "description_zh": "The holder gains the Hyperpop trait.\r\n\r\n<Rules>Elusive - Cannot be crafted.</>",
+        "description_zh": "裝備者獲得超流行特性。\r\n\r\n<Rules>難以捉摸：無法合成。</>",
         "statLine": "<TFTCurveTable row=\"EmblemHealth\" icon=\"icon.Health\" type=\"stat\"/> <TFTCurveTable row=\"EmblemAS\" icon=\"icon.AS\" type=\"stat\" format=\"percent\"/>",
         "composition": [],
         "tags": [
@@ -14882,7 +14884,7 @@
       "name": "Bias Selector #2",
       "name_zh": "偏好選擇器#2",
       "description": "Use on another Heartsteel member to improve their Ability.\n\n[current game value]",
-      "description_zh": null,
+      "description_zh": "用在另一名心鋼之聲成員身上，以強化其技能。\n\n[current game value]",
       "category": "other",
       "recipe": [],
       "stats": [],
@@ -14896,7 +14898,7 @@
       "dynamic": true,
       "source_data": {
         "description": "Use on another Heartsteel member to improve their Ability.\r\n\r\n{Set19.Trait.Heartsteel.Selected.Selected2Tooltip}",
-        "description_zh": "Use on another Heartsteel member to improve their Ability.\r\n\r\n{Set19.Trait.Heartsteel.Selected.Selected2Tooltip}",
+        "description_zh": "用在另一名心鋼之聲成員身上，以強化其技能。\r\n\r\n{Set19.Trait.Heartsteel.Selected.Selected2Tooltip}",
         "statLine": null,
         "composition": [],
         "tags": [
@@ -14911,8 +14913,8 @@
       "id": "DA_Heavenscale19_DangerousItem",
       "name": "Scroll of The Beast",
       "name_zh": "饕餮之卷",
-      "description": "Immediately gain XP equal to 20% of your Player Health ([current game value][current game value] XP). The Beast Who Devours All Song looms over you for the rest of the game. If you lose 2 player combats in a row, The Beast consumes YOU!\n\nWhen you win player combat, gain 6 XP, increased to 250 at Level 10. Reach Level 11 by gaining 999 XP to enlighten The Beast and obtain Heavenly power.\n\nOnly Gu Feng champions can hold this item.",
-      "description_zh": null,
+      "description": "Immediately gain XP equal to 20% of your Player Health ([current game value][current game value] XP). The Beast Who Devours All Song looms over you for the rest of the game. If you lose 2 player combats in a row, The Beast consumes YOU!\n\nWhen you win player combat, gain 4 XP, increased to 200 at Level 10. Reach Level 11 by gaining 999 XP to enlighten The Beast and obtain Heavenly power.\n\nOnly Gu Feng champions can hold this item.",
+      "description_zh": "立即獲得等同於你玩家生命20%的經驗值([current game value][current game value]經驗值)。吞噬一切歌曲的饕餮在剩餘對戰中不斷威脅著你。如果連續輸掉2場玩家戰鬥，饕餮會吞噬你！\n\n贏得玩家戰鬥時，獲得4經驗值，等級10時提升為200。獲得999經驗值時升至等級11，即可感化饕餮並取得天祈之力。\n\n僅有古風英雄可裝備此道具。",
       "category": "other",
       "recipe": [],
       "stats": [
@@ -14947,7 +14949,7 @@
       "dynamic": true,
       "source_data": {
         "description": "Immediately gain XP equal to <TFTCurveTable row=\"PlayerHealthXPPercent\" format=\"percent\"/> of your Player Health ({Set19.Trait.Heavenscale.Tooltip.PostDangerousTakenXPGained}<TFTAttribute attributeId=\"TFTCalculationAttributes.GenericCalc1\"/> XP). <Keyword>The Beast Who Devours All Song</> looms over you for the rest of the game. If you lose <TFTCurveTable row=\"ConsecutiveLossesBeforeEat\"/> player combats in a row, <Keyword>The Beast</> consumes <colorStatReduced>YOU!</>\r\n\r\nWhen you win player combat, gain <TFTCurveTable row=\"BaseWinXP\"/> XP, increased to <TFTCurveTable row=\"FinaleWinXP\"/> at Level 10. Reach Level 11 by gaining <TFTCurveTable row=\"Level11XP\"/> XP to enlighten <Keyword>The Beast</> and obtain <colorRadiant>Heavenly</> power.\r\n\r\n<Rules>Only Gu Feng champions can hold this item.</>",
-        "description_zh": "Immediately gain XP equal to <TFTCurveTable row=\"PlayerHealthXPPercent\" format=\"percent\"/> of your Player Health ({Set19.Trait.Heavenscale.Tooltip.PostDangerousTakenXPGained}<TFTAttribute attributeId=\"TFTCalculationAttributes.GenericCalc1\"/> XP). <Keyword>The Beast Who Devours All Song</> looms over you for the rest of the game. If you lose <TFTCurveTable row=\"ConsecutiveLossesBeforeEat\"/> player combats in a row, <Keyword>The Beast</> consumes <colorStatReduced>YOU!</>\r\n\r\nWhen you win player combat, gain <TFTCurveTable row=\"BaseWinXP\"/> XP, increased to <TFTCurveTable row=\"FinaleWinXP\"/> at Level 10. Reach Level 11 by gaining <TFTCurveTable row=\"Level11XP\"/> XP to enlighten <Keyword>The Beast</> and obtain <colorRadiant>Heavenly</> power.\r\n\r\n<Rules>Only Gu Feng champions can hold this item.</>",
+        "description_zh": "立即獲得等同於你玩家生命<TFTCurveTable row=\"PlayerHealthXPPercent\" format=\"percent\"/>的經驗值({Set19.Trait.Heavenscale.Tooltip.PostDangerousTakenXPGained}<TFTAttribute attributeId=\"TFTCalculationAttributes.GenericCalc1\"/>經驗值)。<Keyword>吞噬一切歌曲的饕餮</>在剩餘對戰中不斷威脅著你。如果連續輸掉<TFTCurveTable row=\"ConsecutiveLossesBeforeEat\"/>場玩家戰鬥，<Keyword>饕餮</>會吞噬<colorStatReduced>你！</>\r\n\r\n贏得玩家戰鬥時，獲得<TFTCurveTable row=\"BaseWinXP\"/>經驗值，等級10時提升為<TFTCurveTable row=\"FinaleWinXP\"/>。獲得<TFTCurveTable row=\"Level11XP\"/>經驗值時升至等級11，即可感化<Keyword>饕餮</>並取得<colorRadiant>天祈</>之力。\r\n\r\n<Rules>僅有古風英雄可裝備此道具。</>",
         "statLine": "<TFTCurveTable row=\"BaseAD\" icon=\"icon.AD\" type=\"stat\" format=\"percent\"/> <TFTCurveTable row=\"BaseAP\" icon=\"icon.AP\" type=\"stat\" format=\"percent\"/> <TFTCurveTable row=\"BaseOmnivamp\" icon=\"icon.Omnivamp\" format=\"percent\" type=\"stat\"/> <TFTCurveTable row=\"BaseManaRegen\" icon=\"icon.ManaRegen\" type=\"stat\"/>",
         "composition": [],
         "tags": [
@@ -14978,21 +14980,21 @@
           "BaseWinXP": [
             [
               0,
-              6
+              4
             ],
             [
               3,
-              6
+              4
             ]
           ],
           "FinaleWinXP": [
             [
               0,
-              250
+              200
             ],
             [
               3,
-              250
+              200
             ]
           ],
           "BaseAD": [
@@ -15160,11 +15162,11 @@
           "FinaleWinXP": [
             [
               0,
-              250
+              200
             ],
             [
               3,
-              250
+              200
             ]
           ],
           "PlayerHealthXPPercent": [
@@ -15180,11 +15182,11 @@
           "BaseWinXP": [
             [
               0,
-              6
+              4
             ],
             [
               3,
-              6
+              4
             ]
           ],
           "BaseOmnivamp": [
@@ -15225,7 +15227,7 @@
       "name": "Scroll of Heavenly Prayer",
       "name_zh": "天祈之卷",
       "description": "Each round: equip 1 random recommended item. \n\nOnly Gu Feng champions can hold this item.",
-      "description_zh": "戰鬥開始時，這會變成隨機推薦道具。\n\n只能由古風英雄裝備。",
+      "description_zh": "每個回合：裝備1件隨機建議道具。\n\n只有古風英雄可裝備此道具。",
       "category": "other",
       "recipe": [],
       "stats": [],
@@ -15239,7 +15241,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Each round: equip 1 random recommended item. \r\n\r\n<Rules>Only Gu Feng champions can hold this item.</>",
-        "description_zh": "戰鬥開始時，這會變成隨機推薦道具。\r\n\r\n<Rules>只能由古風英雄裝備。</>",
+        "description_zh": "每個回合：裝備1件隨機建議道具。\r\n\r\n<Rules>只有古風英雄可裝備此道具。</>",
         "statLine": null,
         "composition": [],
         "tags": [
@@ -15478,7 +15480,7 @@
       "name": "IllBeats Emblem",
       "name_zh": "ILLBEATS徽章",
       "description": "The holder gains the IllBeats trait.",
-      "description_zh": null,
+      "description_zh": "裝備者獲得IllBeats特性。",
       "category": "emblem",
       "recipe": [
         "DA_Component_Spatula",
@@ -15511,7 +15513,7 @@
       "dynamic": false,
       "source_data": {
         "description": "The holder gains the IllBeats trait.",
-        "description_zh": "The holder gains the IllBeats trait.",
+        "description_zh": "裝備者獲得IllBeats特性。",
         "statLine": "<TFTCurveTable row=\"EmblemHealth\" icon=\"icon.Health\" type=\"stat\"/> <TFTCurveTable row=\"EmblemAS\" icon=\"icon.AS\" type=\"stat\" format=\"percent\"/> ",
         "composition": [
           "DA_Component_Spatula",
@@ -15932,7 +15934,7 @@
       "name": "Ionic Spark Prismatic Quest",
       "name_zh": "Ionic Spark稜鏡任務",
       "description": "Become Ionic Spark's #1 fan!",
-      "description_zh": "成為離子星火的頭號粉絲！",
+      "description_zh": "成為Ionic Spark的頭號粉絲！",
       "category": "other",
       "recipe": [],
       "stats": [],
@@ -15946,7 +15948,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Become Ionic Spark's #1 fan!",
-        "description_zh": "成為離子星火的頭號粉絲！",
+        "description_zh": "成為Ionic Spark的頭號粉絲！",
         "statLine": null,
         "composition": [],
         "tags": [
@@ -16035,7 +16037,7 @@
       "name": "Jazz Emblem",
       "name_zh": "爵士樂徽章",
       "description": "The holder gains the Jazz trait.\n\nElusive - Cannot be crafted.",
-      "description_zh": "裝備者獲得爵士樂特性。",
+      "description_zh": "裝備者獲得爵士樂特性。\n\n難以捉摸：無法合成。",
       "category": "emblem",
       "recipe": [],
       "stats": [
@@ -16065,7 +16067,7 @@
       "dynamic": false,
       "source_data": {
         "description": "The holder gains the Jazz trait.\r\n\r\n<Rules>Elusive - Cannot be crafted.</>",
-        "description_zh": "裝備者獲得爵士樂特性。",
+        "description_zh": "裝備者獲得爵士樂特性。\r\n\r\n<Rules>難以捉摸：無法合成。</>",
         "statLine": "<TFTCurveTable row=\"EmblemHealth\" icon=\"icon.Health\" type=\"stat\"/> <TFTCurveTable row=\"EmblemAS\" icon=\"icon.AS\" type=\"stat\" format=\"percent\"/> ",
         "composition": [],
         "tags": [
@@ -16249,7 +16251,7 @@
       "name": "Juggernaut Emblem",
       "name_zh": "重裝戰士徽章",
       "description": "The holder gains the Juggernaut trait and becomes unstoppable. \n\nThey also gain 5% Damage Amp per 1,000 max Health.\n\nElusive - Cannot be crafted.",
-      "description_zh": null,
+      "description_zh": "裝備者獲得重裝戰士特性，並變得無法阻擋。\n\n此外，裝備者每有1,000最大生命，便會獲得5%傷害增幅。\n\n難以捉摸：無法合成。",
       "category": "emblem",
       "recipe": [],
       "stats": [
@@ -16274,12 +16276,13 @@
       "dynamic": false,
       "source_data": {
         "description": "The holder gains the Juggernaut trait and becomes unstoppable. \r\n\r\nThey also gain <TFTCurveTable row=\"DamageAmpPer1000Health\" format=\"percent\"/> Damage Amp per 1,000 max Health.\r\n\r\n<Rules>Elusive - Cannot be crafted.</>",
-        "description_zh": "The holder gains the Juggernaut trait and becomes unstoppable. \r\n\r\nThey also gain <TFTCurveTable row=\"DamageAmpPer1000Health\" format=\"percent\"/> Damage Amp per 1,000 max Health.\r\n\r\n<Rules>Elusive - Cannot be crafted.</>",
+        "description_zh": "裝備者獲得重裝戰士特性，並變得無法阻擋。\r\n\r\n此外，裝備者每有1,000最大生命，便會獲得<TFTCurveTable row=\"DamageAmpPer1000Health\" format=\"percent\"/>傷害增幅。\r\n\r\n<Rules>難以捉摸：無法合成。</>",
         "statLine": "<TFTCurveTable row=\"EmblemHealth\" icon=\"Icon.Health\" type=\"stat\"/>",
         "composition": [],
         "tags": [
           "Emblem",
-          "Item.Equippable.Item.Emblem.Elusive"
+          "Item.Equippable.Item.Emblem.Elusive",
+          "Item.Equippable.WeStickTogetherBanned"
         ],
         "curveValues": {
           "DamageAmpPer1000Health": [
@@ -16895,7 +16898,7 @@
       "name": "Manager Emblem",
       "name_zh": "經紀人徽章",
       "description": "The holder gains the Manager trait.\n\nOn cast, grant the ally in the Spotlight Hex 20% of Mana spent.\n\nElusive - Cannot be crafted.",
-      "description_zh": "裝備者獲得經紀人特性。\n\n施放時，使聚光燈棋格上的友軍獲得相當於所消耗魔力20%的魔力。",
+      "description_zh": "裝備者獲得經紀人特性。\n\n施放技能時，賦予聚光燈棋格上的友軍相當於所消耗魔力20%的魔力。\n\n難以捉摸：無法合成。",
       "category": "emblem",
       "recipe": [],
       "stats": [
@@ -16925,7 +16928,7 @@
       "dynamic": false,
       "source_data": {
         "description": "The holder gains the Manager trait.\r\n\r\nOn cast, grant the ally in the Spotlight Hex <TFTCurveTable row=\"EmblemMaxManaPercent\" format=\"percent\"/> of Mana spent.\r\n\r\n<Rules>Elusive - Cannot be crafted.</>",
-        "description_zh": "裝備者獲得經紀人特性。\r\n\r\n施放時，使聚光燈棋格上的友軍獲得相當於所消耗魔力<TFTCurveTable row=\"EmblemMaxManaPercent\" format=\"percent\"/>的魔力。",
+        "description_zh": "裝備者獲得經紀人特性。\r\n\r\n施放技能時，賦予聚光燈棋格上的友軍相當於所消耗魔力<TFTCurveTable row=\"EmblemMaxManaPercent\" format=\"percent\"/>的魔力。\r\n\r\n<Rules>難以捉摸：無法合成。</>",
         "statLine": "<TFTCurveTable row=\"EmblemHealth\" icon=\"icon.Health\" type=\"stat\"/> <TFTCurveTable row=\"EmblemManaRegen\" icon=\"icon.Mana\" type=\"stat\"/>",
         "composition": [],
         "tags": [
@@ -17448,7 +17451,7 @@
     {
       "id": "DA_Pentakill19_Emblem",
       "name": "Pentakill Emblem",
-      "name_zh": null,
+      "name_zh": "殺五社徽章",
       "description": "The holder gains the Pentakill trait.",
       "description_zh": "裝備者獲得殺五社特性。",
       "category": "emblem",
@@ -18656,7 +18659,7 @@
       "name": "True Damage Emblem",
       "name_zh": "True Damage徽章",
       "description": "The holder gains the True Damage trait.\n\nElusive - Cannot be crafted.",
-      "description_zh": null,
+      "description_zh": "裝備者獲得True Damage特性。\n\n難以捉摸：無法合成。",
       "category": "emblem",
       "recipe": [],
       "stats": [
@@ -18691,7 +18694,7 @@
       "dynamic": false,
       "source_data": {
         "description": "The holder gains the True Damage trait.\r\n\r\n<Rules>Elusive - Cannot be crafted.</>",
-        "description_zh": "The holder gains the True Damage trait.\r\n\r\n<Rules>Elusive - Cannot be crafted.</>",
+        "description_zh": "裝備者獲得True Damage特性。\r\n\r\n<Rules>難以捉摸：無法合成。</>",
         "statLine": "<TFTCurveTable row=\"EmblemHealth\" icon=\"icon.Health\" type=\"stat\"/> <TFTCurveTable row=\"EmblemAD\" icon=\"icon.AD\" type=\"stat\" format=\"percent\"/> <TFTCurveTable row=\"EmblemAP\" icon=\"icon.AP\" type=\"stat\" format=\"percent\"/>",
         "composition": [],
         "tags": [

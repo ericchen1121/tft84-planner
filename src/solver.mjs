@@ -4,7 +4,7 @@ export const DEFAULTS = Object.freeze({
   min_frontline:5,frontline_max_range:2,min_backline_four_cost:2,
   include_unique_traits:true,include_seven_cost:true,score_mode:'breakpoint',
   backline_role_keywords:['Marksman','Caster','Specialist_Ammo'],
-  exclude_unit_ids:[],extra_traits:{},trait_bonuses:{},required_traits:{},required_trait_mode:'at_least',sona_feature_trait:null,max_seconds:590,threads:4
+  exclude_unit_ids:[],collab_unit_ids:[],extra_traits:{},trait_bonuses:{},required_traits:{},required_trait_mode:'at_least',sona_feature_trait:null,max_seconds:590,threads:4
 });
 
 const LOW_COST_RULES={
@@ -28,7 +28,7 @@ export const EMBLEM_TRAITS=Object.freeze([
 ]);
 
 export function effectiveTraits(u,c) {
-  return [...new Set([...u.traits,...(c.extra_traits?.[u.id]||[]),...(u.name==='Sona'&&c.sona_feature_trait?[c.sona_feature_trait]:[])])];
+  return [...new Set([...u.traits,...(c.extra_traits?.[u.id]||[]),...(c.collab_unit_ids?.includes(u.id)?['Collab']:[]),...(u.name==='Sona'&&c.sona_feature_trait?[c.sona_feature_trait]:[])])];
 }
 
 export function solverTraitWeight(name){
@@ -93,6 +93,7 @@ export function prepare(data, settings={}) {
   const excluded=new Set(c.exclude_unit_ids);
   const ids=new Set(data.units.map(u=>u.id));
   if([...excluded].some(id=>!ids.has(id))||Object.keys(c.extra_traits).some(id=>!ids.has(id)))throw Error('Unknown champion in settings.');
+  if(!Array.isArray(c.collab_unit_ids)||c.collab_unit_ids.some(id=>!ids.has(id)))throw Error('Unknown champion in settings.');
   const allTraits=data.units.map(u=>effectiveTraits(u,c));
   if(allTraits.some(ts=>ts.some(t=>!tids.has(t))))throw Error('Unknown extra trait.');
   const membership=data.traits.map(t=>allTraits.filter(ts=>ts.includes(t.name)).length);
