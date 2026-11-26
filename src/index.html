@@ -37,9 +37,10 @@
  <div id="required-list" aria-live="polite"></div><p class="field-hint">Check multiple traits and set a tier for each. All checked traits must be met; emblems count.</p><p class="field-hint">At least 4 Classical also accepts 6 Classical; exact tier 4 accepts 4–5 members.</p>
 </section>
 <section class="required-section collab-section" aria-labelledby="collab-heading">
- <label class="field-title" id="collab-heading" for="collab-query">Match Collab group</label>
- <div class="collab-toolbar"><input id="collab-query" type="search" autocomplete="off" placeholder="Search by one or two champion names"><button id="clear-collab" class="text-button" type="button" hidden>Clear group</button></div>
- <p id="collab-selected" class="field-hint" role="status"></p>
+ <h3 class="field-title" id="collab-heading">Match Collab group</h3>
+ <div class="collab-toolbar"><select id="collab-first" aria-label="First Collab champion"></select><select id="collab-second" aria-label="Second Collab champion"></select><button id="clear-collab" class="text-button" type="button" hidden>Clear group</button></div>
+ <p id="collab-status" class="field-hint" role="status"></p>
+ <div id="collab-selected"></div>
  <div id="collab-options" aria-label="Matching Collab groups"></div>
 </section></div><div class="criteria-switches"><label class="toggle-line"><span>Count unique traits<small>Include one-champion traits</small></span><input name="include_unique_traits" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>
         <label class="toggle-line"><span>Include 7-cost champions<small>Unlock requirements are not checked</small></span><input name="include_seven_cost" type="checkbox" checked><span class="switch" aria-hidden="true"></span></label>

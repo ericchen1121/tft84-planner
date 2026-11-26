@@ -2,7 +2,7 @@
 const DATA=JSON.parse(document.getElementById('app-data').textContent);
 const ART=JSON.parse(document.getElementById('art-data').textContent);
 const INFO=JSON.parse(document.getElementById('info-data').textContent);
-const COLLAB_GROUPS=JSON.parse(document.getElementById('collab-data').textContent);
+const {groups:COLLAB_GROUPS,portraits:COLLAB_PORTRAITS}=JSON.parse(document.getElementById('collab-data').textContent);
 const ITEMS=JSON.parse(document.getElementById('item-data').textContent);
 const $=id=>document.getElementById(id);
 const fmt=n=>new Intl.NumberFormat(getLanguage()==='zh-Hant'?'zh-TW':'en-US').format(n);
@@ -14,7 +14,7 @@ const solverStates=Object.fromEntries(Object.entries(SOLVER_VIEWS).map(([view,co
   running:false,status:'LOADING',searchId:0,preset:null,dirty:false,elapsed:''}];
 }));
 let state=solverStates.solver,initialPickers;
-const appUI={view:'solver',infoUnit:null,collabGroup:null};
+const appUI={view:'solver',infoUnit:null,collabGroup:null,collabFilters:['','']};
 const criteriaNumbers=['population','min_target_cost','max_four_cost','max_five_cost','min_trait_score','min_frontline','frontline_max_range','min_backline_target_cost','max_seconds'];
 const criteriaChoices=['include_unique_traits','include_seven_cost','score_mode','sona_feature_trait'];
 const solverPickers=['result-query','champion-filter','score-filter','sort','required-query','pool-query','extra-unit','extra-trait','emblem-trait'];
@@ -110,12 +110,12 @@ function activateSolver(view){
  state.presetTask??=loadPreset(state);
  return true;
 }
-function portrait(u,{name=true,lazy=true,interactive=false}={}){
+function portrait(u,{name=true,lazy=true,interactive=false,imageUrl}={}){
  const wrap=el(interactive?'button':'div',name?'champion':'');if(interactive){wrap.type='button';wrap.classList.add('champion-info-button');wrap.setAttribute('aria-label',t('View {name} details',{name:unitLabel(u)}));wrap.setAttribute('aria-haspopup','dialog');wrap.setAttribute('aria-controls','info-dialog');wrap.addEventListener('click',()=>showInfo(u.id));}wrap.title=t('{name} · {cost}-cost · Range {range}{slots}\n{traits}{unlock}',{name:unitLabel(u),cost:u.cost,range:u.range,slots:u.slots>1?t(' · {n} slots',{n:u.slots}):'',traits:u.traits.map(name=>traitLabel(name)).join(' / '),unlock:hasInfoUnlock(u)?t('\nUnlock required'):''});
  const p=el('div','portrait');p.style.setProperty('--rarity',rarity[u.cost]||rarity[1]);
  const fallback=el('span','fallback',u.name.replace(/\(.*\)/,'').trim().split(/\s+/).map(s=>s[0]).slice(0,2).join(''));
  p.append(fallback);
- const url=ART.units[u.id]?.url||INFO.units[u.id]?.image;
+ const url=imageUrl||ART.units[u.id]?.url||INFO.units[u.id]?.image;
  if(url){const img=new Image();img.alt=unitLabel(u);img.loading=lazy?'lazy':'eager';img.referrerPolicy='no-referrer';img.src=url;img.addEventListener('load',()=>{fallback.hidden=true;});img.addEventListener('error',()=>{img.remove();fallback.hidden=false;});p.append(img);}
  p.append(el('span','cost-label',u.cost));const frame=el('div','portrait-frame');frame.append(p);if(hasInfoUnlock(u)){const badge=el('span','unlock-badge');badge.setAttribute('role','img');badge.setAttribute('aria-label',t('Unlock required'));badge.title=t('Unlock required');frame.append(badge);}wrap.append(frame);if(name)wrap.append(el('div','champion-name',unitLabel(u).replace(/ \(.*\)/,'')));return wrap;
 }
@@ -194,7 +194,7 @@ function renderResults(){
  const bonusTotal=Object.values(c.trait_bonuses||{}).reduce((s,n)=>s+n,0);
  const coreContext=c.target_cost===4?'{population} population · {min}+ {cost} · {unique}{bonus}':'{population} population · {min}+ {cost} · Up to {max} four-costs · {unique}{bonus}';
  $('results-context').textContent=t(coreContext,{population:c.population,min:c.min_target_cost,max:c.max_four_cost,cost,unique:t(c.include_unique_traits?'Unique traits included':'Unique traits excluded'),bonus:bonusTotal?t(' · +{n} trait bonuses',{n:bonusTotal}):''});
- if(c.collab_unit_ids.length)$('results-context').textContent+=' · '+collabLabel(COLLAB_GROUPS.indexOf(c.collab_unit_ids));
+ if(c.collab_unit_ids.length)$('results-context').textContent+=' · '+t('Collab group applied');
  const required=requiredSummary(c);if(required)$('results-context').textContent+=' · '+required;
 }
 function showBoard(r){
@@ -339,9 +339,8 @@ async function exportCsv(){
  }catch(e){notify(t('Export failed: {error}',{error:e.message}));}finally{state.exporting=false;$('search').disabled=false;$('export').disabled=false;$('language').disabled=false;}
 }
 function bindEvents(){
- $('criteria-form').addEventListener('submit',runSearch);$('criteria-form').addEventListener('input',e=>{if(e.target.id!=='collab-query')markDirty();});
- $('collab-query').addEventListener('input',renderCollab);
- $('collab-query').addEventListener('keydown',e=>{if(e.key==='Enter')e.preventDefault();});
+ $('criteria-form').addEventListener('submit',runSearch);$('criteria-form').addEventListener('input',e=>{if(!e.target.closest('.collab-section'))markDirty();});
+ bindCollabFilters();
  $('clear-collab').addEventListener('click',()=>selectCollab(null));
  for(const button of document.querySelectorAll('[data-step]'))button.addEventListener('click',()=>{const [id,delta]=button.dataset.step.split(':'),input=$(id);input.value=Math.max(Number(input.min),Math.min(Number(input.max),Number(input.value)+Number(delta)));markDirty();});
  $('reset').addEventListener('click',()=>{$('criteria-form').reset();selectCollab(null);state.excluded.clear();state.extras={};state.bonuses={};state.required={};state.requiredMode='at_least';applyCriteria(state.defaults);renderRequirements();populateRequiredTraits();renderExtras();renderBonuses();markDirty();notify(t('Default criteria restored.'));});

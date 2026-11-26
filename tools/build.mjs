@@ -20,7 +20,7 @@ for(const cost of [4,3,2,1]){
 }
 const i18n=read('src/i18n.mjs').replace(/^export /gm,'')+'\n'+read('src/numeric-values.mjs').replace(/^export /gm,'');
 const payloads={STYLES:read('src/styles.css'),DATA:JSON.stringify(data),INFO:JSON.stringify(JSON.parse(read('dist/info.json'))),ART:JSON.stringify(artwork),...presetPayloads,SOLVER:solver,APP:solver.replace(/^export /gm,'')+'\n'+i18n+'\n'+read('src/info.js')+'\n'+read('src/app.js')};
-payloads.COLLAB=JSON.stringify(JSON.parse(read('dist/collab-groups.json')));
+payloads.COLLAB=JSON.stringify({groups:JSON.parse(read('dist/collab-groups.json')),portraits:JSON.parse(read('dist/collab-portraits.json'))});
 payloads.ITEMS=JSON.stringify(JSON.parse(read('dist/items.json')));
 payloads.STYLES+='\n'+read('src/layout.css');
 payloads.APP=solver.replace(/^export /gm,'')+'\n'+i18n+'\n'+read('src/info.js')+'\n'+read('src/collab.js')+'\n'+read('src/requirements.js')+'\n'+read('src/app.js');
