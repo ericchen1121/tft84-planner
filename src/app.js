@@ -2,6 +2,7 @@
 const DATA=JSON.parse(document.getElementById('app-data').textContent);
 const ART=JSON.parse(document.getElementById('art-data').textContent);
 const INFO=JSON.parse(document.getElementById('info-data').textContent);
+const COLLAB_GROUPS=JSON.parse(document.getElementById('collab-data').textContent);
 const ITEMS=JSON.parse(document.getElementById('item-data').textContent);
 const $=id=>document.getElementById(id);
 const fmt=n=>new Intl.NumberFormat(getLanguage()==='zh-Hant'?'zh-TW':'en-US').format(n);
@@ -13,7 +14,7 @@ const solverStates=Object.fromEntries(Object.entries(SOLVER_VIEWS).map(([view,co
   running:false,status:'LOADING',searchId:0,preset:null,dirty:false,elapsed:''}];
 }));
 let state=solverStates.solver,initialPickers;
-const appUI={view:'solver',infoUnit:null};
+const appUI={view:'solver',infoUnit:null,collabGroup:null};
 const criteriaNumbers=['population','min_target_cost','max_four_cost','max_five_cost','min_trait_score','min_frontline','frontline_max_range','min_backline_target_cost','max_seconds'];
 const criteriaChoices=['include_unique_traits','include_seven_cost','score_mode','sona_feature_trait'];
 const solverPickers=['result-query','champion-filter','score-filter','sort','required-query','pool-query','extra-unit','extra-trait','emblem-trait'];
@@ -37,6 +38,7 @@ function readConfig(){
  c.include_seven_cost=form.elements.namedItem('include_seven_cost').checked;
  c.score_mode=$('score_mode').value;c.sona_feature_trait=$('sona_feature_trait').value||null;
  c.exclude_unit_ids=[...state.excluded];c.extra_traits=JSON.parse(JSON.stringify(state.extras));c.trait_bonuses={...state.bonuses};
+ c.collab_unit_ids=appUI.collabGroup===null?[]:COLLAB_GROUPS[appUI.collabGroup];
  c.required_traits={...state.required};c.required_trait_mode=state.requiredMode;
  c.threads=Math.max(1,Math.min(4,(navigator.hardwareConcurrency||4)-1));
  prepare(DATA,c);return c;
@@ -44,7 +46,7 @@ function readConfig(){
 function isPreset(c,defaults=solverDefaults(c.target_cost)){
  return ['population','target_cost','max_four_cost','max_five_cost','min_trait_score','min_frontline','frontline_max_range','include_unique_traits','include_seven_cost','score_mode'].every(k=>c[k]===defaults[k])&&
   (c.min_target_cost??c.min_four_cost)===defaults.min_target_cost&&(c.min_backline_target_cost??c.min_backline_four_cost)===defaults.min_backline_target_cost&&
-  !c.sona_feature_trait&&!c.exclude_unit_ids.length&&!Object.keys(c.extra_traits).length&&!Object.values(c.trait_bonuses||{}).some(n=>n>0);
+  !c.sona_feature_trait&&!c.collab_unit_ids.length&&!c.exclude_unit_ids.length&&!Object.keys(c.extra_traits).length&&!Object.values(c.trait_bonuses||{}).some(n=>n>0);
 }
 function populateSelects(){
  const saved=Object.fromEntries(['champion-filter','extra-unit','sona_feature_trait','extra-trait','emblem-trait','score-filter'].map(id=>[id,$(id).value]));
@@ -192,6 +194,7 @@ function renderResults(){
  const bonusTotal=Object.values(c.trait_bonuses||{}).reduce((s,n)=>s+n,0);
  const coreContext=c.target_cost===4?'{population} population · {min}+ {cost} · {unique}{bonus}':'{population} population · {min}+ {cost} · Up to {max} four-costs · {unique}{bonus}';
  $('results-context').textContent=t(coreContext,{population:c.population,min:c.min_target_cost,max:c.max_four_cost,cost,unique:t(c.include_unique_traits?'Unique traits included':'Unique traits excluded'),bonus:bonusTotal?t(' · +{n} trait bonuses',{n:bonusTotal}):''});
+ if(c.collab_unit_ids.length)$('results-context').textContent+=' · '+collabLabel(COLLAB_GROUPS.indexOf(c.collab_unit_ids));
  const required=requiredSummary(c);if(required)$('results-context').textContent+=' · '+required;
 }
 function showBoard(r){
@@ -336,9 +339,12 @@ async function exportCsv(){
  }catch(e){notify(t('Export failed: {error}',{error:e.message}));}finally{state.exporting=false;$('search').disabled=false;$('export').disabled=false;$('language').disabled=false;}
 }
 function bindEvents(){
- $('criteria-form').addEventListener('submit',runSearch);$('criteria-form').addEventListener('input',markDirty);
+ $('criteria-form').addEventListener('submit',runSearch);$('criteria-form').addEventListener('input',e=>{if(e.target.id!=='collab-query')markDirty();});
+ $('collab-query').addEventListener('input',renderCollab);
+ $('collab-query').addEventListener('keydown',e=>{if(e.key==='Enter')e.preventDefault();});
+ $('clear-collab').addEventListener('click',()=>selectCollab(null));
  for(const button of document.querySelectorAll('[data-step]'))button.addEventListener('click',()=>{const [id,delta]=button.dataset.step.split(':'),input=$(id);input.value=Math.max(Number(input.min),Math.min(Number(input.max),Number(input.value)+Number(delta)));markDirty();});
- $('reset').addEventListener('click',()=>{$('criteria-form').reset();state.excluded.clear();state.extras={};state.bonuses={};state.required={};state.requiredMode='at_least';applyCriteria(state.defaults);renderRequirements();populateRequiredTraits();renderExtras();renderBonuses();markDirty();notify(t('Default criteria restored.'));});
+ $('reset').addEventListener('click',()=>{$('criteria-form').reset();selectCollab(null);state.excluded.clear();state.extras={};state.bonuses={};state.required={};state.requiredMode='at_least';applyCriteria(state.defaults);renderRequirements();populateRequiredTraits();renderExtras();renderBonuses();markDirty();notify(t('Default criteria restored.'));});
  $('language').addEventListener('change',()=>applyLanguage($('language').value));
  $('add-emblem').addEventListener('click',()=>{const trait=$('emblem-trait').value;setBonus(trait,(state.bonuses[trait]||0)+1);});
  $('stop').addEventListener('click',()=>finish('INCOMPLETE','Stopped by you'));
@@ -364,7 +370,7 @@ function applyLanguage(language,initial=false){
  try{localStorage.setItem('eightfold-language',getLanguage());}catch{}
  for(const entry of staticTranslations){if(!entry.node.isConnected)continue;const value=localizedStaticText(entry.source);if(entry.attr)entry.node.setAttribute(entry.attr,value);else entry.node.textContent=value;}
  if(initial)return;
- populateSelects();populateRequiredTraits();renderRequirements();renderExtras();renderBonuses();renderSolverLabels();updateStats();filterResults(false);populateInfoTraits();if(appUI.view==='info')renderInfo();populateAugmentTagFilters();if(appUI.view==='augments')renderAugments();populateEquipmentFilters();if(appUI.view==='equipment')renderEquipment();if(appUI.view==='simulator')renderSimulator();if($('equipment-dialog').open&&equipmentUI.selected)showEquipment(equipmentUI.selected);if($('augment-dialog').open&&augmentUI.selected)showAugment(augmentUI.selected);if($('info-dialog').open&&appUI.infoUnit)showInfo(appUI.infoUnit);
+ renderCollab();populateSelects();populateRequiredTraits();renderRequirements();renderExtras();renderBonuses();renderSolverLabels();updateStats();filterResults(false);populateInfoTraits();if(appUI.view==='info')renderInfo();populateAugmentTagFilters();if(appUI.view==='augments')renderAugments();populateEquipmentFilters();if(appUI.view==='equipment')renderEquipment();if(appUI.view==='simulator')renderSimulator();if($('equipment-dialog').open&&equipmentUI.selected)showEquipment(equipmentUI.selected);if($('augment-dialog').open&&augmentUI.selected)showAugment(augmentUI.selected);if($('info-dialog').open&&appUI.infoUnit)showInfo(appUI.infoUnit);
  renderSearchStatus();
  if($('pool-dialog').open)renderPool();if($('board-dialog').open&&state.boardRecord)showBoard(state.boardRecord);
 }
@@ -386,6 +392,6 @@ function init(){
  captureStaticTranslations();let preferred='zh-Hant';try{preferred=localStorage.getItem('eightfold-language')||preferred;}catch{}
  applyLanguage(preferred,true);populateSelects();
  initialPickers=Object.fromEntries(solverPickers.map(id=>[id,$(id).value]));
- applyCriteria(state.defaults);populateRequiredTraits();bindEvents();bindRequirements();bindInfo();renderBonuses();
+ applyCriteria(state.defaults);populateRequiredTraits();bindEvents();bindRequirements();bindInfo();renderBonuses();renderCollab();
 }
 init();

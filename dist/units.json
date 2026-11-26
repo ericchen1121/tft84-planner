@@ -1,6 +1,6 @@
 {
   "source": "https://tactics.tools/info/set-update",
-  "snapshot_date": "2026-11-25",
+  "snapshot_date": "2026-11-26",
   "set": "Set 19 Prismatic Tour",
   "units": [
     {
@@ -1811,5 +1811,5 @@
     }
   ],
   "balance_source": "https://data.metatft.com/lookups/TFTSet19_pbe_en_us.json",
-  "balance_release": "rls-19.1.0.6018196.Set19.Shipping.pbe"
+  "balance_release": "rls-19.1.0.6037882.Set19.Shipping.pbe"
 }

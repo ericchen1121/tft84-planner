@@ -1,14 +1,14 @@
 {
   "source": "https://data.metatft.com/lookups/TFTSet19_pbe_zh_tw.json",
-  "snapshot_date": "2026-11-25",
+  "snapshot_date": "2026-11-26",
   "metadata": {
     "set": "TFTSet19",
     "setName": "Set 19",
     "patch": "pbe",
-    "generated": "2026-11-23T21:39:48.080Z",
-    "coreHash": "59b4b05f6466b86738f39db57b20d58de631f0a4",
-    "release": "rls-19.1.0.6018196.Set19.Shipping.pbe",
-    "manifest": "1096C8A75AEA562C",
+    "generated": "2026-11-26T06:41:21.997Z",
+    "coreHash": "1ab9e13d70181a41cb707d684ab7e077fd22fe12",
+    "release": "rls-19.1.0.6037882.Set19.Shipping.pbe",
+    "manifest": "06BB7C972BA1E6E1",
     "tooltips": "curvetable"
   },
   "units": {
@@ -150,7 +150,7 @@
     "u27": {
       "apiName": "DA_Qiyana19",
       "name": "Qiyana",
-      "name_zh": "Qiyana"
+      "name_zh": "姬亞娜"
     },
     "u28": {
       "apiName": "DA_RenataGlasc19",
@@ -240,7 +240,7 @@
     "u45": {
       "apiName": "DA_Swain19",
       "name": "Swain",
-      "name_zh": "Swain"
+      "name_zh": "斯溫"
     },
     "u46": {
       "apiName": "DA_Syndra19",
@@ -300,7 +300,7 @@
     "u57": {
       "apiName": "DA_Kayle19",
       "name": "Kayle",
-      "name_zh": "Kayle"
+      "name_zh": "凱爾"
     },
     "u58": {
       "apiName": "DA_Leona19",
@@ -345,7 +345,7 @@
     "u66": {
       "apiName": "DA_Yasuo19",
       "name": "Yasuo",
-      "name_zh": "Yasuo"
+      "name_zh": "犽宿"
     },
     "u67": {
       "apiName": "DA_Yone19",
@@ -410,7 +410,7 @@
     "u79": {
       "apiName": "DA_Mordekaiser19",
       "name": "Mordekaiser",
-      "name_zh": "Mordekaiser"
+      "name_zh": "魔鬥凱薩"
     },
     "u80": {
       "apiName": "DA_Nidalee19",
@@ -558,7 +558,7 @@
     },
     "Illbeats": {
       "apiName": "DA_Illbeats19",
-      "name_zh": "Illbeats"
+      "name_zh": "IllBeats"
     },
     "EDM": {
       "apiName": "DA_EDM19",
@@ -582,7 +582,7 @@
     },
     "Indie": {
       "apiName": "DA_Seraphine19_IndieTrait",
-      "name_zh": "獨立音樂"
+      "name_zh": "硬地音樂"
     },
     "Emo": {
       "apiName": "DA_Amumu19_UniqueTrait",
@@ -594,7 +594,7 @@
     },
     "Country": {
       "apiName": "DA_Alistar19_UniqueTrait",
-      "name_zh": "鄉村樂"
+      "name_zh": "鄉村音樂"
     },
     "Manager": {
       "apiName": "DA_Manager19",

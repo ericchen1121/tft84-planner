@@ -6,7 +6,7 @@ const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'
 const source=read('dist/augments.json'),catalog=read('dist/augment-tags.json');
 const before=JSON.stringify(source),tagged=applyAugmentTags(source,catalog),rows=tagged.augments;
 assert.equal(JSON.stringify(source),before,'Tag application must not mutate the source snapshot');
-assert.equal(rows.length,369);assert(rows.every(a=>a.tags.length));
+assert.equal(rows.length,372);assert(rows.every(a=>a.tags.length));
 assert.equal(new Set(AUGMENT_TAGS.map(t=>t.color)).size,10);
 const named=name=>rows.find(a=>a.name===name);
 const expectTags=(name,ids)=>{for(const id of ids)assert(named(name).tags.includes(id),name+' requires '+id);};
@@ -46,6 +46,6 @@ assert.throws(()=>applyAugmentTags({...source,augments:[{...source.augments[0],d
 assert.throws(()=>applyAugmentTags({...source,augments:[{...source.augments[0],id:'unreviewed'}]},catalog),/need review/);
 const html=fs.readFileSync(new URL('../index.html',import.meta.url),'utf8');
 const embedded=JSON.parse(html.match(/<script id="augment-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
-assert.equal(embedded.augments.length,369);assert(embedded.augments.every(a=>a.tags.length));assert(html.includes('id="augment-tag-filters"'));assert(html.includes('id="augment-equipment"'));
+assert.equal(embedded.augments.length,372);assert(embedded.augments.every(a=>a.tags.length));assert(html.includes('id="augment-tag-filters"'));assert(html.includes('id="augment-equipment"'));
 assert(!html.includes('/*__AUGMENTS__*/'));
-console.log(JSON.stringify({augment_tags:'PASS',classified:369,categories:10,hero:7,prismatic_quests:9,any_all_filter:true,equipment_subtypes:true,changed_effect_requires_review:true}));
+console.log(JSON.stringify({augment_tags:'PASS',classified:372,categories:10,hero:7,prismatic_quests:9,any_all_filter:true,equipment_subtypes:true,changed_effect_requires_review:true}));

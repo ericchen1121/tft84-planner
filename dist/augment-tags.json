@@ -1,6 +1,6 @@
 {
   "set": "TFTSet19",
-  "reviewed_at": "2026-11-25",
+  "reviewed_at": "2026-11-26",
   "source": "https://www.metatft.com/new-set",
   "notes": "Editorial multi-label classification reviewed against the MetaTFT effects and visible categories. Reference tags are retained as provenance, not blindly treated as effect labels. Growth means later-round rewards or permanent scaling, not a timed trigger within combat. Prismatic-cap means an explicit Prismatic trait quest, not augment rarity. Equipment subtypes describe possible grants, including conditional or temporary grants; normal item stats do not automatically add Combat. Generic unknown loot is not guessed into equipment subtypes. Labels are maintained by full variant identity and reviewed description hash.",
   "entries": {
@@ -220,6 +220,24 @@
         "Combat"
       ]
     },
+    "DA_BigGrabBag|CT_BigGrabBag|Gold|3-2,4-2": {
+      "tags": [
+        "equipment",
+        "economy"
+      ],
+      "details": {
+        "equipment": [
+          "component",
+          "utility"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [],
+      "name": "Big Grab Bag",
+      "description_hash": "04e5e39b37475cdb19d1d5677c4ffc80348c9b49ec72ee628b4b8f2eb764edbb"
+    },
     "DA_BirthdayPresent|CT_BirthdayPresent|Prismatic|2-1": {
       "name": "Birthday Present",
       "description_hash": "cbf42d2a90513fe57874777dd90d2512d179ccb3a2108d0efe8c9f33991987f7",
@@ -326,7 +344,7 @@
     },
     "DA_BonusGift|CT_BonusGift|Gold|2-1": {
       "name": "Bonus Gifts",
-      "description_hash": "f677888a951b86a692a0124f3794b5b168befd4ce36470321c5970a0948c9aef",
+      "description_hash": "cd00c87142cb2dc0b5b56a05c7a24c222e3e961041d73cd80bbf7e6cb2f22272",
       "tags": [
         "economy"
       ],
@@ -340,7 +358,7 @@
     },
     "DA_BonusGiftPlus|CT_BonusGiftPlus|Gold|3-2": {
       "name": "Bonus Gifts+",
-      "description_hash": "aa73b235703ca0eeb938fe93b571b65f19ea1f78278f94b0153c8e6d242f675b",
+      "description_hash": "1cfb9c5161bf802d2528499caf6628c2903b6e46cd4fbdd5e41b1bb7ceb3f470",
       "tags": [
         "economy"
       ],
@@ -1320,7 +1338,7 @@
     },
     "DA_ElectrochargeII|CT_Electrocharge|Gold|2-1,3-2,4-2": {
       "name": "Electrocharge II",
-      "description_hash": "27862fb2de48e1b83d04a634ce0084fb340ade8831ce0f81912b7b2b1503d688",
+      "description_hash": "7026e97f2df165d8f22c6144143b3b1cccd12fe79a50567df69a1d8c6a8d8aea",
       "tags": [
         "combat"
       ],
@@ -1641,7 +1659,7 @@
       ]
     },
     "DA_GainGold|CT_GainGoldPlus|Gold|4-2": {
-      "name": "Gain 32 Gold",
+      "name": "Gain 28 Gold",
       "description_hash": "ab519c2310bdacb4de7224955f670093cc64a709bf08aa9ee9b2bf3b07d61df8",
       "tags": [
         "economy"
@@ -2634,7 +2652,7 @@
     },
     "DA_19_RareCollection|CT_RareCollection|Gold|3-2,4-2": {
       "name": "Rare Collection",
-      "description_hash": "63d9e8431508ecd6e230b83bcce6681c72a9b2cd1764f584bb17ef0eddb10764",
+      "description_hash": "18c6fae75c7fbbd5bed15ef92ff2e07fa90d163ad2cfb40b08b9950b0cfd36c8",
       "tags": [
         "combat",
         "strategy"
@@ -3026,7 +3044,7 @@
     },
     "DA_TheDropGold|CT_TheDropGold|Gold|3-2,4-2": {
       "name": "The Drop II",
-      "description_hash": "4f6736f6fb681c71cfbf0cd3182baf929c1ffc5b6c723418ab0d06e4c14fd8d4",
+      "description_hash": "13f06c4668b093178e28a37001f46ea23358347f2b973d5cf153047d056dd5e4",
       "tags": [
         "combat"
       ],
@@ -3040,7 +3058,7 @@
     },
     "DA_TheDrop|CT_TheDrop|Silver|3-2,4-2": {
       "name": "The Drop",
-      "description_hash": "8bfa8237e7b70114d34294d588e511c283cf5232425bc5a05b846585476ad8ea",
+      "description_hash": "95c6fcec73b1601feb129024241597fb6c35890ea61d6d92c0a58b49bbf7fa80",
       "tags": [
         "combat"
       ],
@@ -4019,7 +4037,7 @@
     },
     "DA_InfinityProtection|CT_InfinityProtection|Gold|2-1": {
       "name": "Infinity Protection",
-      "description_hash": "018c6f076c74972965424186916104225e553e9c841c6d2d471a7c7d92e466cf",
+      "description_hash": "6d065f3b44a3d7c1b7762589ffb310ea4fab05dd076afd92fcd6c64e5c8ebada",
       "tags": [
         "equipment",
         "combat",
@@ -4376,9 +4394,49 @@
         "Items"
       ]
     },
+    "DA_PandorasItemsIIMinus|CT_PandorasItems|Gold|2-1": {
+      "name": "Pandora's Items II",
+      "description_hash": "02f1c90f5a0e8d565264574d914a66b4d252e68bc40a3255bc21ba0689170471",
+      "tags": [
+        "equipment",
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
     "DA_PandorasItemsIIPlus|CT_PandorasItems|Gold|3-2": {
       "name": "Pandora's Items II+",
       "description_hash": "60b19b952cec84ed2566c5192f1b8cae6c83723a0699dc4fa59ac8de87356d9c",
+      "tags": [
+        "equipment",
+        "economy",
+        "strategy"
+      ],
+      "details": {
+        "equipment": [
+          "component"
+        ],
+        "economy": [
+          "gold"
+        ]
+      },
+      "reference_tags": [
+        "Items"
+      ]
+    },
+    "DA_PandorasItemsIIPlusPlus|CT_PandorasItems|Gold|4-2": {
+      "name": "Pandora's Items II++",
+      "description_hash": "59c2223244ecf229274579a9cc36a77f4c21580685ab10693d10a36a2b1bd244",
       "tags": [
         "equipment",
         "economy",
@@ -4747,7 +4805,7 @@
     },
     "DA_SpiritOfRedemption|CT_SpiritOfRedemption|Gold|2-1,3-2": {
       "name": "Spirit Of Redemption",
-      "description_hash": "4dbc331fcdf36abf1489fdcaa0540513637dbdd8c8c6b3fb829a026f561add78",
+      "description_hash": "4acaf53f2150a1853f82064f52eb0f8a042db25eda482182bfe86e26a98fb05f",
       "tags": [
         "equipment",
         "combat"
@@ -5505,7 +5563,7 @@
     },
     "DA_Heavenscale19_TheImmortalJourney|CT_Heavenscale19_TheImmortalJourney|Prismatic|3-2": {
       "name": "The Immortal Journey",
-      "description_hash": "32ba994c361f307e7ae938342990a0fd7e08c7afc3b6c0ff40e2503186f15d97",
+      "description_hash": "02e7dca1027ba77d8e98a08c9ec54c1b7e8020eaaef51e0d6fb4c48a6601e700",
       "tags": [
         "equipment",
         "trait",
@@ -5640,7 +5698,7 @@
     },
     "DA_IonicSpark19_ForeverBurningBrighter|CT_IonicSpark19_ForeverBurningBrighter|Gold|2-1": {
       "name": "Forever Burning Brighter",
-      "description_hash": "c0e3e8395a7f8e2fc55f53e99695dac6d2cc30211495dfdb3ab6d1822a459600",
+      "description_hash": "fd58e5cb67b716063b72bf0f61f0ff829b1e1a8867e34b38cf7eba5e223c869d",
       "tags": [
         "trait",
         "combat",
@@ -5723,7 +5781,7 @@
     },
     "DA_IonicSpark19_OurHeartsAligned|CT_IonicSpark19_OurHeartsAligned|Gold|3-2,4-2": {
       "name": "Our Hearts Aligned",
-      "description_hash": "e87ea1ea6a6e95f4788dcb3e4985716e2e37447960d4411f5ce473b761288169",
+      "description_hash": "5296f0482137169b541d3f0d7453396c9117c7beab355e207d8f750cf8c4bc25",
       "tags": [
         "trait",
         "combat",
@@ -5875,7 +5933,7 @@
     },
     "DA_KDA19_RunningWild|CT_KDA19_RunningWild|Gold|3-2,4-2": {
       "name": "Running Wild",
-      "description_hash": "93d03845564f8290e679fa52f4149a6dc2c1b9a9e68f629ef45c1690640d8b16",
+      "description_hash": "33c0d489c13e3ee4a714146f824e3155aa1886e7f32e77cc71eed2200c727057",
       "tags": [
         "equipment",
         "trait",
@@ -5912,7 +5970,7 @@
     },
     "DA_Augment19_Manager_ManagementTrack|CT_Augment19_Manager_ManagementTrack|Prismatic|3-2": {
       "name": "Management Track",
-      "description_hash": "3af7dbea5bccdda675a6f403a593c13a17805641d5a4242243e43c6deb97b1a3",
+      "description_hash": "9aa94d6920b3ac0ccd5cca0556885510cca843c99a2ba58e077eb8a8653a0808",
       "tags": [
         "equipment",
         "trait",
@@ -5936,7 +5994,7 @@
     },
     "DA_Augment19_Manager_ManagementTrackPlus|CT_Augment19_Manager_ManagementTrackPlus|Prismatic|4-2": {
       "name": "Management Track+",
-      "description_hash": "8a58e9014a18d5a39c263d5d5bd0d7f4aeb4942d52ab632ccf55a45b285bfb6d",
+      "description_hash": "1d6626ff331175fe57762fafb78a38bce30579abf41653d7483e5527d4d688d7",
       "tags": [
         "equipment",
         "trait",
