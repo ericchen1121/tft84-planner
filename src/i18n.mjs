@@ -45,12 +45,14 @@ export const TRAIT_ZH=Object.freeze({
 });
 export const UI_ZH=Object.freeze({
   'Match Collab group':'本局合作奕子',
-  'Search by one or two champion names':'輸入一、兩個棋子名稱',
+  'First Collab champion':'第一位合作棋子',
+  'Second Collab champion':'第二位合作棋子',
+  'Choose one or two champions, then select a group.':'選一至兩位棋子，再點選下方的合作組合。',
+  'Selected Collab group':'已選擇的合作組合',
+  'Collab group applied':'已套用合作組合',
   'Clear group':'清除合作組合',
   'Matching Collab groups':'符合的合作組合',
   'No Collab group selected.':'未選擇合作組合。',
-  'No Collab groups match.':'找不到符合的合作組合。',
-  'Collab group {n}':'合作第 {n} 組',
   "Choose this game's Collab group above the search button. Sona's featured trait can be set in Advanced options.":'請在搜尋按鈕上方選擇本局合作組合。索娜的額外羈絆可以在進階選項設定。',
 "Equipment":"裝備",
 "Equipment Library":"裝備圖鑑",

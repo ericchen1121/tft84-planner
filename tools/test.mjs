@@ -233,7 +233,8 @@ assert(requiredCounts['at_least{"Classical":4}']>0);
 assert(presetMatch({...DEFAULTS,required_traits:{Classical:4}}),'Trait-only constraints can filter the complete cache');
 console.log(JSON.stringify({required_traits:'PASS',independent_cases:cases,preset_subsets:requiredCounts}));
 
-const groups=JSON.parse(capture('collab-data'));
+const {groups,portraits}=JSON.parse(capture('collab-data'));
+assert(groups.flat().every(id=>portraits[id]?.startsWith('https://cdn.metatft.com/file/metatft/champions/')));
 assert.equal(groups.length,40);
 assert.equal(new Set(groups.map(group=>[...group].sort().join(','))).size,40);
 assert(groups.every(group=>group.length===5&&new Set(group).size===5&&group.every(id=>data.units.some(u=>u.id===id))));
