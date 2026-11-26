@@ -188,8 +188,8 @@ const infoControls=new Map(['info-query','info-cost','info-trait','info-unlock']
 const helpers=new vm.Script(get('src/info.js')+';({unitLabel,unitSearchText,abilitySummary,infoUnits})').runInNewContext({DATA:data,INFO:info,getLanguage,traitSearchText,$:id=>infoControls.get(id)});
 setLanguage('zh-Hant');assert.equal(helpers.unitLabel(data.units[0]),'伊莉絲');assert.equal(helpers.unitLabel(data.units.find(u=>u.name==='Leona')),'雷歐娜');
 assert.equal(helpers.abilitySummary(data.units[1]),info.units.u1.full_description_zh);
-assert.equal(helpers.abilitySummary(data.units[88]),info.units.u88.full_description);
-assert.equal(info.units.u88.full_description_zh,null,'An outdated translation falls back to current English');
+assert.equal(helpers.abilitySummary(data.units[88]),info.units.u88.full_description_zh);
+assert.match(info.units.u88.full_description_zh,/全能吸血/);
 assert(helpers.unitSearchText(data.units[0]).includes('Elise'));assert(helpers.unitSearchText(data.units[0]).includes('伊莉絲'));
 assert.equal(helpers.infoUnits().length,94);infoControls.get('info-query').value='伊莉絲';assert.equal(helpers.infoUnits()[0].id,'u0');infoControls.get('info-query').value='Elise';assert.equal(helpers.infoUnits()[0].id,'u0');
 infoControls.get('info-query').value='';infoControls.get('info-cost').value='4';infoControls.get('info-trait').value='K|DA';const subset=helpers.infoUnits();assert(subset.length);assert(subset.every(u=>u.cost===4&&u.traits.includes('K|DA')));
@@ -207,7 +207,7 @@ assert(itemIds.has('DA_IonicSpark19_Emblem'));assert(itemIds.has('DA_TrueDamage1
 let missing=0,unlocks=0;
 for(const u of data.units){const a=info.units[u.id];assert(a.full_description.length>30);assert(/^\d+\/\d+$/.test(a.full_mana));assert.equal(a.source_missing_values,a.full_description.includes('[unavailable]'));assert(Array.isArray(a.full_unlock));assert(Array.isArray(a.recommended_items));assert(a.recommended_items.length<=5);for(const id of a.recommended_items)assert(itemIds.has(id));missing+=+a.source_missing_values;unlocks+=+(a.full_unlock.length>0);}
 assert.equal(missing,11);assert.equal(unlocks,32);assert(info.units.u0.full_description.includes('280/330/400'));assert(info.units.u49.full_description.includes('235/350/2000'));assert(info.units.u88.full_description.includes('30%/30%/100% Omnivamp'));
-assert.equal(info.units.u30.full_mana,'0/55');assert.equal(info.units.u59.full_mana,'0/25');assert.equal(info.units.u83.full_mana,'40/100');
+assert.equal(info.units.u43.full_mana,'0/55');assert.equal(info.units.u30.full_mana,'0/55');assert.equal(info.units.u59.full_mana,'0/25');assert.equal(info.units.u83.full_mana,'40/100');
 assert.equal(data.units[1].range,4);assert(isBacklineCarry(data.units[1],DEFAULTS));
 assert.equal(data.units[52].range,4);assert(data.units[91].traits.includes('Choreographer'));
 assert(!get('src/info.js').includes("['Population',u.slots]"));assert(!get('src/info.js').includes("t('{n} slots'"));assert(get('src/info.js').includes('infoUnlockBlock(u),recommendedEquipment(u)'));assert(get('src/info.js').includes('slot<5'));
@@ -232,3 +232,15 @@ for(const required_trait_mode of ['at_least','exact_tier'])for(const required_tr
 assert(requiredCounts['at_least{"Classical":4}']>0);
 assert(presetMatch({...DEFAULTS,required_traits:{Classical:4}}),'Trait-only constraints can filter the complete cache');
 console.log(JSON.stringify({required_traits:'PASS',independent_cases:cases,preset_subsets:requiredCounts}));
+
+const groups=JSON.parse(capture('collab-data'));
+assert.equal(groups.length,40);
+assert.equal(new Set(groups.map(group=>[...group].sort().join(','))).size,40);
+assert(groups.every(group=>group.length===5&&new Set(group).size===5&&group.every(id=>data.units.some(u=>u.id===id))));
+assert.deepEqual(groups[0],['u10','u17','u18','u44','u74']);
+const matchFixture={...data,units:data.units.filter(u=>groups[0].includes(u.id)||u.id==='u93')};
+const matchCriteria={...DEFAULTS,population:5,min_four_cost:0,min_frontline:0,min_backline_four_cost:0,min_trait_score:0,collab_unit_ids:groups[0]};
+assert.deepEqual(data.units.filter(u=>effectiveTraits(u,matchCriteria).includes('Collab')).map(u=>u.id).sort(),[...groups[0],'u93'].sort());
+assert.deepEqual(data.units.filter(u=>effectiveTraits(u,DEFAULTS).includes('Collab')).map(u=>u.id),['u93']);
+for(const min of [3,5])compare(matchFixture,{...matchCriteria,required_traits:{Collab:min},include_unique_traits:false});
+assert(!presetMatch({...DEFAULTS,collab_unit_ids:groups[0]},DEFAULTS));

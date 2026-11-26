@@ -1,5 +1,5 @@
 {
-  "snapshot_date": "2026-11-25",
+  "snapshot_date": "2026-11-26",
   "sources": [
     "https://www.metatft.com/new-set",
     "https://tactics.tools/info/set-update",
@@ -31,12 +31,12 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Elise19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "變身為蜘蛛形態，獲得280/330/400生命。然後，向本回合造成最多傷害的敵軍射出蛛網，使擊中的第一個敵軍暈眩1.5秒，並造成90/135/200魔法傷害。\n\n後續施放會回復230/300/350生命，然後發射蛛網。"
     },
     "u1": {
       "name_zh": "吶兒",
       "ability": "Hard Rock",
-      "ability_zh": "努力工作",
+      "ability_zh": "堅硬岩石",
       "mana": "0/3",
       "description": "Passive: Every 3rd attack is replaced with a rock that deals physical damage and grants Gnar Attack Speed.",
       "description_zh": null,
@@ -127,12 +127,12 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Kennen19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "被動：使接下來承受的所有傷害降低13/16/21。每秒電擊相鄰敵軍，造成12/18/30魔法傷害。"
     },
     "u5": {
       "name_zh": "柯布柯",
       "ability": "Pump It Up!",
-      "ability_zh": null,
+      "ability_zh": "嗨翻全場！",
       "mana": "40/90",
       "description": "Passive: Your strongest Kobuko gains bonus Health based on Hyperpop Hype.\n\nActive: Amp Up, healing each second for the duration.",
       "description_zh": "最強大的柯布柯依超能流行熱潮獲得額外生命。主動進入嗨起來狀態並持續回復生命；來源尚有未公開數值。",
@@ -164,7 +164,7 @@
       "description_zh": null,
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Heal 280/350/550 Health and strike the target, dealing 120/180/270 magic damage to enemies in a 1 hex radius and 10% Weakening them for 5 seconds. \n\nWeaken: reduce Damage Amp",
+      "full_description": "Heal 305/375/575 Health and strike the target, dealing 120/180/270 magic damage to enemies in a 1 hex radius and 10% Weakening them for 5 seconds. \n\nWeaken: reduce Damage Amp",
       "full_mana": "40/100",
       "source_missing_values": false,
       "recommended_items": [
@@ -177,12 +177,12 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Lillia19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "回復280/350/550生命並攻擊目標，對1格範圍內的敵軍造成120/180/270魔法傷害，以及10% 虛弱效果，持續5秒。\n\n虛弱：降低造成的傷害"
+      "full_description_zh": "回復305/375/575生命並攻擊目標，對1格範圍內的敵軍造成120/180/270魔法傷害，以及10%虛弱效果，持續5秒。\n\n虛弱：降低傷害增幅"
     },
     "u7": {
       "name_zh": "妮可",
       "ability": "K/DA Fan Club",
-      "ability_zh": null,
+      "ability_zh": "K/DA粉絲俱樂部",
       "mana": "0/40",
       "description": "Convene the K/DA fan club and throw confetti streams at the target, each dealing magic damage. If a stream kills, permanently gain Ability Power.",
       "description_zh": null,
@@ -201,12 +201,12 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Neeko19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "召集K/DA粉絲俱樂部，朝目標拋灑3 條彩帶，每條彩帶造成70/105/155魔法傷害。如果擊殺敵人，會永久獲得1%魔攻。\n\n目前加成：[unavailable]魔攻"
+      "full_description_zh": "召集K/DA粉絲俱樂部，朝目標拋撒3條彩帶，每條彩帶造成70/105/155魔法傷害。若造成擊殺，永久獲得1%魔攻。\n\n目前加成：[unavailable]魔攻"
     },
     "u8": {
       "name_zh": "歐拉夫",
       "ability": "Ragnarok 'n' Roll",
-      "ability_zh": null,
+      "ability_zh": "諸神搖滾",
       "mana": "0/0",
       "description": "Passive: On attack, heal. On death, instead heal to full and gain Attack Speed, but lose a percentage of maximum Health each second.",
       "description_zh": "普攻會治療自己。首次死亡時改為回滿生命並提高攻速，但之後會持續損失生命。",
@@ -225,7 +225,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Olaf19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "被動：普攻時回復18.5/22.5/31.5生命。\n\n死亡時，改為回復至滿血並增加100%攻速，但每秒持續損失22%最大生命。"
+      "full_description_zh": "被動：普攻時回復18.5/22.5/31.5生命。\n\n死亡時，改為回復至滿血並增加100%攻速，但每秒混持續損失22%最大生命。"
     },
     "u9": {
       "name_zh": "賽特",
@@ -249,12 +249,12 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Sett19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "被動：從所有來源獲得的最大生命增加30%。\n\n主動：治療228/238/248。攻擊目標兩次，每次命中造成49物理傷害。\n\n心鋼之聲升級：每4秒，治療4%最大生命，回復量根據已損失生命最多提高100%。"
     },
     "u10": {
       "name_zh": "塔里克",
       "ability": "Good Reverberations",
-      "ability_zh": "旋律迴響",
+      "ability_zh": "正面迴響",
       "mana": "30/90",
       "description": "Grant a shield to Taric and a nearby damaged ally for a duration.",
       "description_zh": null,
@@ -273,7 +273,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Taric19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "賦予塔里克及鄰近一名受傷友軍275/350/500護盾，持續4秒。"
     },
     "u11": {
       "name_zh": "法洛士",
@@ -321,12 +321,12 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Yunara19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "普攻會額外發射1顆會造成16/25/37物理傷害的法球，持續到戰鬥結束。"
     },
     "u13": {
       "name_zh": "希格斯",
       "ability": "GlitterBOM3S",
-      "ability_zh": null,
+      "ability_zh": "亮片火乍3單",
       "mana": "0/50",
       "description": "Passive: Attacks deal bonus magic damage.\n\nActive: Throw a bomb at the target, dealing magic damage to them and adjacent enemies.",
       "description_zh": "普攻附帶額外魔法傷害。主動向目標投擲炸彈，傷害目標及相鄰敵軍；來源尚有未公開數值。",
@@ -374,13 +374,13 @@
     "u15": {
       "name_zh": "安妮",
       "ability": "We DID Start the Fire",
-      "ability_zh": null,
+      "ability_zh": "引火者就是我",
       "mana": "20/80",
       "description": "Gain a shield, then unleash a cone of fire that deals magic damage to enemies and Burns and Wounds them for 4 seconds.",
       "description_zh": "獲得護盾，噴出扇形火焰造成魔法傷害，並施加燃燒與重創。",
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Gain 350/400/550 Shield for 4 seconds. Unleash a cone of fire, dealing 80/120/180 magic damage to enemies. 1% Burn and Wound them for 4 seconds.",
+      "full_description": "Gain 325/375/525 Shield for 4 seconds. Unleash a cone of fire, dealing 80/120/180 magic damage to enemies. 1% Burn and Wound them for 4 seconds.",
       "full_mana": "20/80",
       "source_missing_values": false,
       "recommended_items": [
@@ -393,12 +393,12 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Annie19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "獲得350/400/550護盾，持續4秒。朝扇形範圍噴射火焰，對敵軍造成80/120/180魔法傷害、1%燃燒和重創，持續4秒。"
+      "full_description_zh": "獲得325/375/525護盾，持續4秒。朝扇形範圍噴射火焰，對敵軍造成80/120/180魔法傷害、1%燃燒和重創，持續4秒。"
     },
     "u16": {
       "name_zh": "艾希",
       "ability": "Feelin' Shot Shot Shot",
-      "ability_zh": null,
+      "ability_zh": "熱情咻咻咻",
       "mana": "20/60",
       "description": "Her next attacks gain Attack Speed and become flurries of arrows. Each arrow deals physical damage.",
       "description_zh": "強化接下來數次普攻，提高攻速並使每次攻擊連射三支箭。",
@@ -443,7 +443,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Camille19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "被動：當目標死亡時，對下一個目標發動鋼鐵鉤射並造成90/135/210物理傷害。\n\n主動：使出掃踢，對扇形範圍內造成240/360/585物理傷害。"
     },
     "u18": {
       "name_zh": "伊澤瑞爾",
@@ -454,7 +454,7 @@
       "description_zh": null,
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Fire a missile that marks the target, then fire a second blast that detonates it. The explosion deals 240/360/545 physical damage to the target and 79.2/118.8/179.85 physical damage to enemies within 1 hex.\n\nHeartsteel Upgrade: Detonation deals 25% more damage. Every 3rd cast hits enemies in a 2 hex radius instead.",
+      "full_description": "Fire a missile that marks the target, then fire a second blast that detonates it. The explosion deals 220/330/510 physical damage to the target and 72.6/108.9/168.3 physical damage to enemies within 1 hex.\n\nHeartsteel Upgrade: Detonation deals 25% more damage. Every 3rd cast hits enemies in a 2 hex radius instead.",
       "full_mana": "0/35",
       "source_missing_values": false,
       "recommended_items": [
@@ -467,18 +467,18 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Ezreal19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "發射能量彈標記目標，再發射一道能量波將其引爆。爆炸對目標造成220/330/510物理傷害，並對1格內的敵軍造成72.6/108.9/168.3物理傷害。\n\n心鋼之聲升級：引爆造成25%額外傷害。每第3次施放改為命中2格範圍內的敵軍。"
     },
     "u19": {
       "name_zh": "古拉格斯",
       "ability": "Fan Clubbing",
-      "ability_zh": null,
+      "ability_zh": "歡樂粉絲",
       "mana": "30/80",
       "description": "Become boisterous, restoring Health each second and dealing bonus magic damage on attack. For each 3-star K/DA ally, both effects increase.",
       "description_zh": "短暫進入喧鬧狀態，持續回復生命並讓普攻附帶魔法傷害。三星K/DA友軍會提高這兩種效果。",
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Become boisterous for 5 seconds, restoring 75/80/87 Health per second and dealing 117/137/157 bonus magic damage on attack.\n\nFor every 3-star K/DA ally, increase both effects by 15%. (Total Increase: [unavailable])",
+      "full_description": "Become boisterous for 5 seconds, restoring 79/85/93 Health per second and dealing 117/137/157 bonus magic damage on attack.\n\nFor every 3-star K/DA ally, increase both effects by 12%. (Total Increase: [unavailable])",
       "full_mana": "30/80",
       "source_missing_values": true,
       "recommended_items": [
@@ -491,7 +491,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Gragas19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "變得喧鬧5秒，每秒回復75/80/87生命，且普攻時會造成117/137/157額外魔法傷害。\n\n每擁有1位3星K/DA友軍，這兩個效果就會提升15%。(總提升：[unavailable])"
+      "full_description_zh": "變得喧鬧5秒，每秒回復79/85/93生命，且普攻時會造成117/137/157額外魔法傷害。\n\n每擁有1位3星K/DA友軍，這兩個效果就會提升12%。(總提升：[unavailable])"
     },
     "u20": {
       "name_zh": "伊羅旖",
@@ -502,7 +502,7 @@
       "description_zh": null,
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Active: Heal 275/325/525 and deal 120/180/270 magic damage in a 2 hex line.\n\nQuest: On cast during player combat, Illaoi gains 2 Fame + 1 more for every 10g you have, up to 70g. At 185 Fame, Illaoi goes Platinum, gaining 15% Durability and dropping 1 gold on cast instead.",
+      "full_description": "Active: Heal 300/350/550 and deal 120/180/270 magic damage in a 2 hex line.\n\nQuest: On cast during player combat, Illaoi gains 2 Fame + 1 more for every 10g you have, up to 70g. At 185 Fame, Illaoi goes Platinum, gaining 15% Durability and dropping 1 gold on cast instead.",
       "full_mana": "30/90",
       "source_missing_values": false,
       "recommended_items": [
@@ -515,7 +515,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Illaoi19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "主動：回復275/325/525生命並在2格直線上造成120/180/270魔法傷害。\n\n任務：在玩家戰鬥期間施放時，伊羅旖獲得2點聲望，且每擁有10金錢再加1點，最多採計70金錢。達185點聲望時，伊羅旖晉升為白金，獲得15%續戰力，且施放時改為掉落1金錢。"
+      "full_description_zh": "主動：回復300/350/550生命並在2格直線上造成120/180/270魔法傷害。\n\n任務：在玩家戰鬥期間施放時，伊羅旖獲得2點聲望，且每擁有10金錢再加1點，最多採計70金錢。達185點聲望時，伊羅旖晉升為白金，獲得15%續戰力，且施放時改為掉落1金錢。"
     },
     "u21": {
       "name_zh": "賈克斯",
@@ -574,7 +574,7 @@
       "description_zh": null,
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Dash to a nearby hex, then fire 2 shots at target that each deal 93/142/218 physical damage.",
+      "full_description": "Dash to a nearby hex, then fire 2 shots at target that each deal 98/147/223 physical damage.",
       "full_mana": "0/20",
       "source_missing_values": false,
       "recommended_items": [
@@ -587,7 +587,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Lucian19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "衝刺到附近棋格，隨後朝目標發射2發子彈，每發造成93/142/218物理傷害。"
+      "full_description_zh": "衝刺到附近棋格，隨後朝目標發射2發子彈，每發造成98/147/223物理傷害。"
     },
     "u24": {
       "name_zh": "露璐",
@@ -664,7 +664,7 @@
       "full_description_zh": "創造一個壯麗的2格魔能領域，持續5秒。啟動時，每秒回復100/130/225，範圍內的友軍也會回復20/30/50。敵軍若擁有比納瑟斯更低的最大生命，會受到30/45/70魔法傷害並被迷倒。\n\n被迷倒的敵人會為經典英雄帶來增益效果。"
     },
     "u27": {
-      "name_zh": null,
+      "name_zh": "姬亞娜",
       "ability": "Shuffled Playlist",
       "ability_zh": "隨機播放清單",
       "mana": "0/40",
@@ -685,7 +685,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Qiyana19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "被動：姬亞娜的環刃會定期變色，讓技能獲得不同的額外效果。\n\n主動：衝刺攻擊直線上的敵軍，對目標造成240/360/545物理傷害，並對命中的其他敵軍造成120/180/272.5物理傷害。\n\n紅色：造成20%額外傷害\n綠色：回復相當於所造成傷害20%的生命\n藍色：回復10魔力\n金色：獲得1金錢，並隨機附加其中一個其他效果。(獲得金錢：[unavailable])"
+      "full_description_zh": "被動：姬亞娜的環刃會定期變色，賦予技能額外效果。\n\n主動：衝刺攻擊直線上的敵軍，對目標造成240/360/545物理傷害，並對命中的其他敵軍造成120/180/272.5物理傷害。\n\n紅色：造成20%額外傷害。\n綠色：回復相當於所造成傷害20%的生命。\n藍色：回復10魔力。\n金色：獲得1金錢，並隨機使用其他效果。(獲得金錢：[unavailable])"
     },
     "u28": {
       "name_zh": "睿娜妲．格萊斯克",
@@ -696,7 +696,7 @@
       "description_zh": "向目標與附近敵軍施加持續造成魔法傷害的毒素，優先選擇未中毒敵軍。毒素也會迷倒敵軍，目標星級不高於睿娜妲時持續較久。",
       "unlock": "Equip the required number of items to a Classical or Choreographer champion.",
       "unlock_zh": null,
-      "full_description": "Fire a musical bar at the target, applying 2 stacks of Toxin. Toxin stacks deal 160/240/580 magic damage over 15 seconds. Additionally, apply 1 stack of Toxin to 2 nearby enemies, prioritizing unpoisoned enemies. \n\nEnemies are Captivated for 3 seconds upon Toxin application, increased to 9 seconds if their star level is less than Renata's.\n\nCaptivated enemies grant bonuses to Classical champions.",
+      "full_description": "Fire a musical bar at the target, applying 2 stacks of Toxin. Toxin stacks deal 160/240/580 magic damage over 15 seconds. Additionally, apply 1 stack of Toxin to 2 nearby enemies, prioritizing unpoisoned enemies. \n\nEnemies are Captivated for 3 seconds upon Toxin application, increased to 6 seconds if their star level is less than Renata's.\n\nCaptivated enemies grant bonuses to Classical champions.",
       "full_mana": "0/45",
       "source_missing_values": false,
       "recommended_items": [
@@ -708,7 +708,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/RenataGlasc19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "向目標射出一個音樂小節，施加2層毒素。毒素層數會在15秒內造成160/240/580魔法傷害。此外，對2名鄰近敵軍施加1層毒素，優先選擇未中毒的敵軍。\n\n敵軍被施加毒素後會被迷倒3秒，如果他們的星等低於睿娜妲，時間增加至9秒。\n\n被迷倒的敵軍會賦予古典樂英雄加成效果。"
+      "full_description_zh": "向目標射出一個音樂小節，施加2層毒素。毒素層數會在15秒內造成160/240/580魔法傷害。此外，對2名鄰近敵軍施加1層毒素，優先選擇未中毒的敵軍。\n\n敵軍被施加毒素後會被迷倒3秒，如果他們的星等低於睿娜妲，時間增加至6秒。\n\n被迷倒的敵軍會賦予古典樂英雄加成效果。"
     },
     "u29": {
       "name_zh": "雷尼克頓",
@@ -743,7 +743,7 @@
       "description_zh": "暴擊可讓敵軍進入迷倒狀態。主動朝目標連續發射多顆子彈；迷倒敵軍會觸發古典樂效果。",
       "unlock": "Equip the required number of items to a Classical, Renegade, or Trickshot champion.",
       "unlock_zh": null,
-      "full_description": "Passive: When Samira critically strikes an enemy, they become Captivated for 7 seconds.\n\nActive: Fire 10 bullets at the current target, each dealing 42/63/95 damage.\n\nCaptivated enemies grant bonuses to Classical champions.",
+      "full_description": "Passive: When Samira critically strikes an enemy, they become Captivated for 7 seconds.\n\nActive: Fire 10 bullets at the current target, each dealing 35/53/79 damage.\n\nCaptivated enemies grant bonuses to Classical champions.",
       "full_mana": "0/55",
       "source_missing_values": false,
       "recommended_items": [
@@ -758,7 +758,7 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/Samira19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "被動：煞蜜拉暴擊敵軍時，使其進入迷倒狀態，持續7秒\n\n主動：對當前目標發射10顆子彈，每顆造成42/63/95傷害。\n\n被迷倒的敵軍會賦予古典樂英雄加成效果。"
+      "full_description_zh": "被動：煞蜜拉暴擊敵軍時，使其進入迷倒狀態，持續7秒\n\n主動：對當前目標發射10顆子彈，每顆造成35/53/79傷害。\n\n被迷倒的敵軍會賦予古典樂英雄加成效果。"
     },
     "u31": {
       "name_zh": "瑟菈紛",
@@ -810,12 +810,12 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/Tristana19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "向3名鄰近敵軍投擲炸彈並引爆，每顆炸彈造成140/210/315物理傷害。最後一擊會造成280/420/630傷害。"
     },
     "u33": {
       "name_zh": "阿姆姆",
       "ability": "So Sad and Lorn",
-      "ability_zh": "哭哭與孤寂",
+      "ability_zh": "傷心又孤單",
       "mana": "60/120",
       "description": "Heal and toss bandages at the nearest enemies, dealing magic damage and stunning them.",
       "description_zh": "治療自己，並向附近多名敵軍投擲繃帶，造成魔法傷害與暈眩。",
@@ -845,7 +845,7 @@
       "description_zh": "獲得旅者之角，裝備後可在施放時取得經驗值，普攻額外回復魔力。主動發出小精靈波，造成會隨穿透次數降低的魔法傷害。",
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Passive: Gain the Horn of the Traveler. While equipped, casts generate XP and attacks grant bonus Mana.\n\nActive: Summon a wave of meeps that deal 245/365/590 magic damage to enemies hit, reduced by 30% for each one it passes through (minimum 30%).",
+      "full_description": "Passive: Gain the Horn of the Traveler. While equipped, casts generate XP and attacks grant bonus Mana.\n\nActive: Summon a wave of meeps that deal 265/400/650 magic damage to enemies hit, reduced by 30% for each one it passes through (minimum 30%).",
       "full_mana": "20/80",
       "source_missing_values": false,
       "recommended_items": [
@@ -858,7 +858,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Bard19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "被動：獲得漂泊旅人號角。裝備時，施放技能會產生經驗值，普攻則會賦予額外魔力。\n\n主動：召喚米普浪潮，對命中的敵軍造成265/400/650魔法傷害；每穿透一名敵軍，傷害降低30% (最低30%)。"
     },
     "u35": {
       "name_zh": "布郎姆",
@@ -887,13 +887,13 @@
     "u36": {
       "name_zh": "布蕾爾",
       "ability": "Snack Attack",
-      "ability_zh": null,
+      "ability_zh": "進擊的點心",
       "mana": "0/30",
       "description": "Heals and kicks a snack at the furthest enemy within range. Dashes toward it, dealing physical damage in an area. Then chow downs, gaining Attack Speed for the next several attacks and replacing them with slashes that deal physical damage.",
       "description_zh": "治療自己並向遠處敵軍踢出點心，接著衝向目標造成範圍傷害。隨後數次攻擊獲得高攻速並轉為揮砍。",
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Heal 100/150/200 and kick a snack at the furthest enemy within 3 hexes. Dash toward it, dealing 95/145/230 physical damage in a 1 hex area.\n\nThen chow down, gaining 200% Attack Speed for the next 3 attacks and replacing them with slashes that deal 80/120/190 physical damage.",
+      "full_description": "Heal 80/120/160 and kick a snack at the furthest enemy within 3 hexes. Dash toward it, dealing 95/145/230 physical damage in a 1 hex area.\n\nThen chow down, gaining 200% Attack Speed for the next 3 attacks and replacing them with slashes that deal 80/120/190 physical damage.",
       "full_mana": "0/30",
       "source_missing_values": false,
       "recommended_items": [
@@ -906,7 +906,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Briar19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "回復 100/150/200 並向 3 格內最遠的敵人踢出一個點心。衝向目標，在 1 格範圍內造成 95/145/230 物理傷害。接著大快朵頤，獲得 200% 攻速，持續 3 次攻擊，並將這些攻擊替換為揮砍，造成 80/120/190 物理傷害。"
+      "full_description_zh": "治療80/120/160，並朝3格內距離最遠的敵軍踢出一個點心。衝向點心，在1格範圍內造成95/145/230物理傷害。\n\n接著大快朵頤，增加200%攻速，持續3次普攻，並將這些普攻替換為揮砍，造成80/120/190物理傷害。"
     },
     "u37": {
       "name_zh": "達瑞文",
@@ -917,7 +917,7 @@
       "description_zh": "向目標投擲旋轉唱片，造成物理傷害。唱片留下漩渦，持續對附近敵軍造成分攤傷害。",
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Throw a massive spinning record at the target, dealing 155/235/370 physical damage. The record leaves behind a vortex that lasts 3 seconds and deals 130/200/310 physical damage per second split amongst enemies within 1 hex.",
+      "full_description": "Throw a massive spinning record at the target, dealing 155/235/370 physical damage. The record leaves behind a vortex that lasts 3 seconds and deals 140/215/335 physical damage per second split amongst enemies within 1 hex.",
       "full_mana": "0/60",
       "source_missing_values": false,
       "recommended_items": [
@@ -930,7 +930,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Draven19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "朝目標投擲一張巨大的旋轉唱片，造成155/235/370物理傷害。唱片會留下持續3秒的漩渦，對1格範圍內的敵軍每秒造成130/200/310物理傷害，傷害由敵軍均分"
+      "full_description_zh": "朝目標投擲一張巨大的旋轉唱片，造成155/235/370物理傷害。唱片會留下持續3秒的漩渦，對1格範圍內的敵軍每秒造成140/215/335物理傷害，傷害由敵軍均分"
     },
     "u38": {
       "name_zh": "艾克",
@@ -1028,7 +1028,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/KSante19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "獲得550/650/800護盾，持續4秒。向目標衝刺並對其推擊，對目標與其他命中的敵軍造成1.25秒暈眩效果。然後重擊目標，造成150/225/360物理傷害。蓄力後，嘲諷鄰近敵軍。\n\n心鋼之聲升級：獲得2525雙防，並在普攻時造成50/75/12050/75/120額外物理傷害。"
     },
     "u42": {
       "name_zh": "凱莎",
@@ -1058,13 +1058,13 @@
       "name_zh": "馬爾札哈",
       "ability": "Forbidden Cacophony",
       "ability_zh": "禁忌雜音",
-      "mana": "0/50",
+      "mana": "0/55",
       "description": "Fire a beam at the target, dealing magic damage over time. The energy rhythmically explodes 4 times, reducing the Magic Resist of enemies in an area and dealing magic damage with each explosion.",
       "description_zh": "以持續光束傷害目標，期間多次爆炸，傷害附近敵軍並降低魔防。",
       "unlock": null,
       "unlock_zh": null,
       "full_description": "Fire a beam at the target for 2 seconds, dealing 260/390/625 magic damage. The energy rhythmically explodes 4 times, 30% Shredding enemies in a 1 hex area for 4 seconds, and dealing 36/54/86 magic damage each time.\n\nShred: reduce Magic Resist",
-      "full_mana": "0/50",
+      "full_mana": "0/55",
       "source_missing_values": false,
       "recommended_items": [
         "DA_JeweledGauntlet",
@@ -1081,13 +1081,13 @@
     "u44": {
       "name_zh": "姍娜",
       "ability": "Reverberation Devastation",
-      "ability_zh": null,
+      "ability_zh": "回響浩劫",
       "mana": "0/20",
       "description": "Blast the target, dealing physical damage and marking them. If they’re already marked, detonate the mark instead, dealing damage. Detonating the mark or killing a marked enemy grants Damage Amp until the end of combat.",
       "description_zh": "轟擊並標記目標。再次命中已標記敵軍時引爆標記；引爆或擊殺帶有標記的敵軍，會永久提高該場戰鬥的傷害增幅。",
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Blast the target, dealing 200/300/480 physical damage and marking them. If they are marked, detonate it instead, dealing 300/450/720 damage.\n\nOn detonation or killing a marked enemy, gain 8% Damage Amp until the end of combat.",
+      "full_description": "Blast the target, dealing 200/300/510 physical damage and marking them. If they are marked, detonate it instead, dealing 300/450/765 damage.\n\nOn detonation or killing a marked enemy, gain 8% Damage Amp until the end of combat.",
       "full_mana": "0/20",
       "source_missing_values": false,
       "recommended_items": [
@@ -1100,10 +1100,10 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Senna19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "轟擊目標，造成200/300/480物理傷害並標記目標。若目標已有標記，則引爆標記，造成300/450/720傷害。\n\n引爆或擊殺被標記的敵軍時，獲得8%傷害增幅，持續到戰鬥結束。"
+      "full_description_zh": "轟擊目標，造成200/300/510物理傷害並標記目標。若目標已有標記，則引爆標記，造成300/450/765傷害。\n\n引爆或擊殺被標記的敵軍時，獲得8%傷害增幅，持續到戰鬥結束。"
     },
     "u45": {
-      "name_zh": null,
+      "name_zh": "斯溫",
       "ability": "A Cruel Devil's Thesis",
       "ability_zh": "殘酷惡魔的論文",
       "mana": "70/120",
@@ -1135,7 +1135,7 @@
       "description_zh": null,
       "unlock": "Field the required number of unique star levels of Beach Pop or Choreographer.",
       "unlock_zh": null,
-      "full_description": "Spike a volleyball at target, dealing 330/495/790 magic damage. It bounces to an enemy behind them with the least items, dealing 110/165/265 magic damage.",
+      "full_description": "Spike a volleyball at target, dealing 350/525/850 magic damage. It bounces to an enemy behind them with the least items, dealing 110/165/265 magic damage.",
       "full_mana": "0/30",
       "source_missing_values": false,
       "recommended_items": [
@@ -1148,12 +1148,12 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Syndra19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "向目標扣殺排球，造成350/525/850魔法傷害。它會彈跳到身後道具最少的敵軍身上，造成110/165/265魔法傷害。"
     },
     "u47": {
       "name_zh": "泰貝爾",
       "ability": "Girl's Best Friend",
-      "ability_zh": null,
+      "ability_zh": "女孩最好的朋友",
       "mana": "40/100",
       "description": "Passive: At low health or when your strongest Annie dies, become enraged, gaining max Health, Attack Damage, and Attack Speed that decays over time.\n\nActive: Gain a shield for a fixed duration. If enraged, refresh the decaying Attack Speed.",
       "description_zh": "低生命或最強大的安妮陣亡時進入暴怒，增加最大生命、物攻與會衰減的攻速。主動獲得護盾，暴怒期間也會重設攻速衰減。",
@@ -1185,7 +1185,7 @@
       "description_zh": null,
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Summon [unavailable] swords around the target. After a brief delay, impale them, dealing 31/47/74 physical damage per sword.\n\nEvery 8 takedowns, gain a permanent sword. (Current Takedowns: [unavailable])",
+      "full_description": "Summon [unavailable] swords around the target. After a brief delay, impale them, dealing 29/45/70 physical damage per sword.\n\nEvery 8 takedowns, gain a permanent sword. (Current Takedowns: [unavailable])",
       "full_mana": "0/40",
       "source_missing_values": true,
       "recommended_items": [
@@ -1198,7 +1198,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Viego19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "在目標周圍召喚[unavailable]把劍。短暫延遲後刺穿目標，每把劍造成29/45/70物理傷害。\n\n每參與8次擊殺，永久獲得一把劍。(目前參與擊殺次數：[unavailable])"
     },
     "u49": {
       "name_zh": "阿璃",
@@ -1222,7 +1222,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Ahri19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "被動：戰鬥開始時獲得6道魅火，施放技能後獲得2/2/4道，最多14道。然後進入心流狀態，提升跑速並強化接下來的施放。\n\n主動：將所有魅火射向目標，每道造成28/42/400魔法傷害。若在心流狀態，改為向目標發射1顆愛心，造成235/350/2000魔法傷害，並將魅火分配給目標周圍2格內所有敵軍。"
     },
     "u50": {
       "name_zh": "亞歷斯塔",
@@ -1254,7 +1254,7 @@
     "u51": {
       "name_zh": "亞盧妮",
       "ability": "Spotlight",
-      "ability_zh": "焦點商品",
+      "ability_zh": "聚光燈",
       "mana": "20/65",
       "description": "Call down a spotlight on the target, dealing magic damage. Nearby enemies split magic damage. If the target dies, excess damage is split among the nearest enemies.\n\nHeartsteel Upgrade: Fire blasts at the target that deal magic damage.",
       "description_zh": null,
@@ -1276,7 +1276,7 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/Alune19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "召喚聚光燈照射目標，造成315/475/2250魔法傷害。2格內所有敵軍分攤340/510/2750魔法傷害。若目標死亡，溢出傷害會由最靠近的2名敵軍分攤。\n\n心鋼之聲升級：向目標發射5次爆破，分別造成30/45/7230/45/72魔法傷害。"
     },
     "u52": {
       "name_zh": "歐羅拉",
@@ -1300,7 +1300,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Aurora19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "閃現離開，並沿著最佳路線釋放一發蒼炎衝擊。爆炸會對生命最高的兩名敵人造成 320/480/2000 魔法傷害，並對其餘敵人造成 95/145/1500 魔法傷害。然後閃現回去。"
+      "full_description_zh": "瞬移離開，並沿著最佳路線射出一道魔法衝擊。衝擊波會對生命最高的2名敵軍造成320/480/2000魔法傷害，並對其餘敵軍造成95/145/1500魔法傷害。然後瞬移回到原本位置。"
     },
     "u53": {
       "name_zh": "蓋倫",
@@ -1311,7 +1311,7 @@
       "description_zh": "治療自己，隨後向目標發射能量波，造成物理傷害並降低敵軍造成的傷害。",
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Heal 456/506/2556, then fire a wave towards the current target, dealing 70/105/2800 physical damage to enemies hit and 10% Weakening them for 4 seconds. \n\nWeaken: Reduce Damage Dealt",
+      "full_description": "Heal 506/556/2556, then fire a wave towards the current target, dealing 70/105/2800 physical damage to enemies hit and 10% Weakening them for 4 seconds. \n\nWeaken: Reduce Damage Dealt",
       "full_mana": "30/100",
       "source_missing_values": false,
       "recommended_items": [
@@ -1324,12 +1324,12 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Garen19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "治療456/506/2556，隨後向當前目標發射一道能量波，對命中的敵軍造成70/105/2800物理傷害和10%虛弱效果，持續4秒。\n\n虛弱：降低造成的傷害"
+      "full_description_zh": "治療506/556/2556，隨後向當前目標發射一道能量波，對命中的敵軍造成70/105/2800物理傷害和10%虛弱效果，持續4秒。\n\n虛弱：降低造成的傷害"
     },
     "u54": {
       "name_zh": "葛雷夫",
       "ability": "Left Hand Free",
-      "ability_zh": null,
+      "ability_zh": "左手空空",
       "mana": "0/30",
       "description": "For the next attacks, gain Attack Speed, dash to targets, and fire a cone of bullets that each deal physical damage. On a kill, empower an additional attack.",
       "description_zh": "強化接下來的普攻，提高攻速並衝向目標，以扇形散彈造成物理傷害。擊殺可追加強化普攻。",
@@ -1353,13 +1353,13 @@
     "u55": {
       "name_zh": "燼",
       "ability": "String Quartet",
-      "ability_zh": null,
+      "ability_zh": "弦樂四重奏",
       "mana": "4/4",
       "description": "Passive: Convert bonus Attack Speed into Attack Damage. Attacks summon violins that strike in unison, dealing physical damage and captivating the target. Every fourth attack deals empowered physical damage and resets the violins. From the fourth sequence onward, all violins remain out, Jhin gains infinite range, and his attacks pierce targets, dealing reduced damage with each target hit.",
       "description_zh": null,
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Passive: Convert 1% bonus Attack Speed into 0.8% Attack Damage.\n\nAttacks summon violins that attack in unison, dealing 27/41/124 physical damage and Captivating the target for 4 seconds. Every 4th attack is empowered, dealing 94/141/848 physical damage and resetting the violins.\n\nOn the 4th sequence onwards, all violins remain out, Jhin gains infinite range, and attacks pierce, dealing 60% reduced damage for each target hit.",
+      "full_description": "Passive: Convert 1% bonus Attack Speed into 0.8% Attack Damage.\n\nAttacks summon violins that attack in unison, dealing 25/38/124 physical damage and Captivating the target for 4 seconds. Every 4th attack is empowered, dealing 94/141/848 physical damage and resetting the violins.\n\nOn the 4th sequence onwards, all violins remain out, Jhin gains infinite range, and attacks pierce, dealing 60% reduced damage for each target hit.",
       "full_mana": "4/4",
       "source_missing_values": false,
       "recommended_items": [
@@ -1372,7 +1372,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Jhin19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "被動：將1%額外攻速轉換為0.8%物攻。\n\n普攻會召喚小提琴同步攻擊，造成27/41/124物理傷害，並迷倒目標4秒。每第4下普攻會獲得強化，造成94/141/848物理傷害並重置小提琴。\n\n從第4次連擊開始，所有小提琴都會留在場上，燼獲得無限射程，攻擊會穿透目標，每命中一個目標，傷害減少60%。"
+      "full_description_zh": "被動：將1%額外攻速轉換為0.8%物攻。\n\n普攻會召喚小提琴同步攻擊，造成25/38/124物理傷害，並迷倒目標4秒。每第4下普攻會獲得強化，造成94/141/848物理傷害並重置小提琴。\n\n從第4次連擊開始，所有小提琴都會留在場上，燼獲得無限射程，攻擊會穿透目標，每命中一個目標，傷害減少60%。"
     },
     "u56": {
       "name_zh": "吉茵珂絲",
@@ -1399,10 +1399,10 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/Jinx19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "迅速向鄰近敵軍發射[unavailable]飛彈，每枚造成49/74/380物理傷害。"
     },
     "u57": {
-      "name_zh": null,
+      "name_zh": "凱爾",
       "ability": "Stairway to Hell",
       "ability_zh": "通往地獄的階梯",
       "mana": "0/50",
@@ -1450,7 +1450,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Leona19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "獲得600/750/2000護盾，持續4秒。召喚 7/7/25 道輝芒光束轟擊附近敵人，每道造成 50/75/1500 魔法傷害，並使目標的魔法防禦降低 4。"
+      "full_description_zh": "獲得600/750/2000護盾，持續4秒。召喚7/7/25道光束轟擊鄰近敵軍，每道造成50/75/1500魔法傷害，並使目標的魔防降低4。"
     },
     "u59": {
       "name_zh": "洛克",
@@ -1461,7 +1461,7 @@
       "description_zh": null,
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Passive: Attacks deal 45/68/500 bonus magic damage. All damage Locke deals to enemies is increased by 15% for each mark he has applied to them.\n\nActive: Hurl 3 Soul Nails at the furthest enemy within 4 hexes, each dealing 15/22/400 magic damage and marking all enemies hit. Then, teleport to the enemy and deal 125/185/2500 magic damage.",
+      "full_description": "Passive: Attacks deal 50/75/500 bonus magic damage. All damage Locke deals to enemies is increased by 15% for each mark he has applied to them.\n\nActive: Hurl 3 Soul Nails at the furthest enemy within 4 hexes, each dealing 15/22/400 magic damage and marking all enemies hit. Then, teleport to the enemy and deal 125/185/2500 magic damage.",
       "full_mana": "0/25",
       "source_missing_values": false,
       "recommended_items": [
@@ -1474,7 +1474,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Locke19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "被動：普攻會造成45/68/500額外魔法傷害。洛克對敵軍造成的所有傷害，會因他對其施加的每層標記而提高15%。\n\n主動：向4格範圍內最遠的敵軍投擲3根咒釘，每根造成15/22/400魔法傷害，並標記所有被擊中的敵軍。然後，傳送到敵軍身邊並造成125/185/2500魔法傷害。"
+      "full_description_zh": "被動：普攻會造成50/75/500額外魔法傷害。洛克對敵軍造成的所有傷害，會因他對其施加的每層標記而提高15%。\n\n主動：向4格範圍內最遠的敵軍投擲3根咒釘，每根造成15/22/400魔法傷害，並標記所有被擊中的敵軍。然後，傳送到敵軍身邊並造成125/185/2500魔法傷害。"
     },
     "u60": {
       "name_zh": "梅爾",
@@ -1522,7 +1522,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Shyvana19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "被動：生命降至70%/70%/95%時，變身為聖龍形態。變身期間獲得250/450/3000最大生命、150%/150%/250%攻速，且每3次普攻會在1格範圍內造成100/150/3000額外魔法傷害。\n\n主動：獲得[unavailable]護盾，持續4秒。"
     },
     "u62": {
       "name_zh": "瑟雷西",
@@ -1533,7 +1533,7 @@
       "description_zh": "生命低於瑟雷西的敵軍對其造成傷害時，會被迷倒。主動治療自己，並從附近敵軍汲取最大生命。",
       "unlock": "Have enemies spend 275 seconds Captivated by Classical.",
       "unlock_zh": "敵人受到古典樂迷倒的時間累計達 275 秒。",
-      "full_description": "Passive: Every 6 seconds, Captivate the farthest enemy who is not already Captivated for 12 seconds.\n\nActive: Heal 350/450/2000. Then drain 80/100/1000 max Health from up to 3 nearby enemies over 3 seconds. While draining, gain 15% Durability.\n\nCaptivated enemies grant bonuses to Classical champions.",
+      "full_description": "Passive: Every 6 seconds, Captivate the farthest enemy who is not already Captivated for 12 seconds.\n\nActive: Heal 300/400/2000. Then drain 80/100/1000 max Health from up to 3 nearby enemies over 3 seconds. While draining, gain 15% Durability.\n\nCaptivated enemies grant bonuses to Classical champions.",
       "full_mana": "40/100",
       "source_missing_values": false,
       "recommended_items": [
@@ -1548,12 +1548,12 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/Thresh19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "被動：每隔6秒，迷倒距離最遠且尚未被魅惑的敵軍，持續12秒。\n\n主動：回復350/450/2000生命。接著，在3秒內從最多3位鄰近敵軍汲取80/100/1000最大生命。汲取時，獲得15%續戰力。\n\n被迷倒的敵軍會賦予古典樂英雄加成效果。"
+      "full_description_zh": "被動：每隔6秒，迷倒距離最遠且尚未被魅惑的敵軍，持續12秒。\n\n主動：回復300/400/2000生命。接著，在3秒內從最多3位鄰近敵軍汲取80/100/1000最大生命。汲取時，獲得15%續戰力。\n\n被迷倒的敵軍會賦予古典樂英雄加成效果。"
     },
     "u63": {
       "name_zh": "汎",
       "ability": "Darkest Hour",
-      "ability_zh": null,
+      "ability_zh": "通緝時刻",
       "mana": "0/50",
       "description": "Passive: On cast or when hit, tumble and gain Durability for a duration (cooldown applies).\n\nActive: Gain demonic power, enhancing the next attacks to deal physical damage based on Attack Damage and the target’s max Health.",
       "description_zh": null,
@@ -1580,7 +1580,7 @@
     "u64": {
       "name_zh": "悟空",
       "ability": "The Tricks of the Many Mythical Tricksters",
-      "ability_zh": "眾多神話詭計者的詭計",
+      "ability_zh": "百般神通戲法",
       "mana": "40/100",
       "description": "Heals Wukong and sends out clones in a 2-Hex circle that quickly return. Clones steal Armor and Magic Resist from enemies they pass through and deal physical damage. When they return, Wukong gains the stolen defenses.",
       "description_zh": "治療自己並派出多個分身。分身穿透敵軍時造成物理傷害並竊取雙防，返回後將雙防交給悟空。",
@@ -1606,7 +1606,7 @@
     "u65": {
       "name_zh": "剎雅",
       "ability": "Feathers Flying Like Leaves on the Wind",
-      "ability_zh": "羽毛如風中落葉般飛舞",
+      "ability_zh": "羽毛飛舞如風中落葉",
       "mana": "0/60",
       "description": "Summon feathers that strike the target, each dealing physical damage and reducing its Armor.",
       "description_zh": "召喚大量羽毛攻擊目標，每根造成物理傷害並降低物防。",
@@ -1628,7 +1628,7 @@
       "full_description_zh": "召喚30/30/60根羽毛攻擊目標，每根羽毛造成25/38/166物理傷害並使物防降低1。"
     },
     "u66": {
-      "name_zh": null,
+      "name_zh": "犽宿",
       "ability": "Last Breath",
       "ability_zh": "奪命氣息",
       "mana": "0/30",
@@ -1652,7 +1652,7 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/Yasuo19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "衝刺並向前突刺，對一條直線上的敵人造成 180/270/1400 物理傷害。每第3次施放時，擊飛目標並造成 400/600/2500 物理傷害。\n\n然後將他們猛力摔下，對 1/1/2 格內的敵人造成 210/315/2200 物理傷害。"
+      "full_description_zh": "衝刺並向前突刺，對直線上的敵軍造成180/270/1400物理傷害。\n\n每第3次施放會擊飛目標，並造成400/600/2500物理傷害。隨後將目標往地面重擊，對1/1/2格內的敵軍造成210/315/2200物理傷害。"
     },
     "u67": {
       "name_zh": "犽凝",
@@ -1663,7 +1663,7 @@
       "description_zh": "技能依物攻或魔攻中較高者調整。主動快速連擊目標與附近敵軍，最後施展強力斬擊；心鋼之聲升級增加斬擊並無視部分物防。",
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Passive: This ability scales Attack Damage or Ability Power, whichever is higher. Attacks deal 55/82/123 physical damage.\n\nActive: Rapidly strike the target and up to 2 nearby enemies 10/10/30 times, each dealing 38/57/350 physical damage. After the assault, unleash a massive slash that deals 185/280/1500 physical damage to target.\n\nHeartsteel Upgrade: Casts strike 2 more times and ignore 25% of Armor.",
+      "full_description": "Passive: This ability scales Attack Damage or Ability Power, whichever is higher. Attacks deal 58/87/130.5 physical damage.\n\nActive: Rapidly strike the target and up to 2 nearby enemies 10/10/30 times, each dealing 40/60/350 physical damage. After the assault, unleash a massive slash that deals 185/280/1500 physical damage to target.\n\nHeartsteel Upgrade: Casts strike 2 more times and ignore 25% of Armor.",
       "full_mana": "0/50",
       "source_missing_values": false,
       "recommended_items": [
@@ -1676,7 +1676,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Yone19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "被動：此技能會根據物攻或魔攻進行調整(取較高者)。普攻造成55/82/123物理傷害。\n\n主動：快速攻擊目標及最多2名鄰近敵軍共計10/10/30次，每次造成38/57/350物理傷害。突襲後，施放一次強力斬擊，對目標造成185/280/1500物理傷害。\n\n心鋼之聲升級：再施放2次斬擊，且無視25%的物防。"
+      "full_description_zh": "被動：此技能會根據物攻或魔攻進行調整(取較高者)。普攻造成58/87/130.5物理傷害。\n\n主動：快速攻擊目標及最多2名鄰近敵軍共計10/10/30次，每次造成40/60/350物理傷害。突襲後，施放一次強力斬擊，對目標造成185/280/1500物理傷害。\n\n心鋼之聲升級：再施放2次斬擊，且無視25%的物防。"
     },
     "u68": {
       "name_zh": "約瑞科",
@@ -1777,7 +1777,7 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/AkaliKDA19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "踩著滑板穿越最長的一列未上色敵軍，對命中的敵軍造成80/120/5999物理傷害，並將他們及路徑上的所有格子噴上油漆。身上有油漆或站在上色格子上的敵軍會被施加10%易傷。\n\n每第3次施放時會點燃油漆，對所有身上有油漆或站在上色格子上的敵軍造成260/390/19496.75物理傷害。\n\n易傷：提升承受傷害"
+      "full_description_zh": "踩著滑板穿越最長的一列未上色敵軍，對命中的敵軍造成80/120/5999物理傷害，並將他們及路徑上的所有格子噴上油漆。身上有油漆或站在上色格子上的敵軍會被施加10%易傷\n\n。每第3次施放時會點燃油漆，對所有身上有油漆或站在上色格子上的敵軍造成260/390/19496.75物理傷害。\n\n易傷：提升承受傷害"
     },
     "u72": {
       "name_zh": "阿卡莉 (True Damage)",
@@ -1788,7 +1788,7 @@
       "description_zh": "B面被動會在累積參與擊殺後回復玩家生命。主動斬擊目前目標，對坦克傷害較高，施放時獲得續戰力並避開普攻鎖定；最後投擲範圍炸彈。",
       "unlock": "Earn the required True Damage Bling without K|DA Akali unlocked.",
       "unlock_zh": "尚未解鎖K/DA阿卡莉時，獲得375 True Damage閃光。",
-      "full_description": "B-Side Passive: After every 4 takedowns, gain 1/1/10 Player Health. ([unavailable]/4)\n\nActive: Rapidly slash through the current target, dealing 520/780/9999 magic damage, increased by 50% against Tanks. While casting, gain 25% Durability and become untargetable by attacks. \n\nAfterwards, blink over the target and throw a bomb that deals 620/930/9999 magic damage split amongst all enemies within 2/2/8 hexes.",
+      "full_description": "B-Side Passive: After every 4 takedowns, gain 1/1/10 Player Health. ([unavailable]/4)\n\nActive: Rapidly slash through the current target, dealing 520/780/9999 magic damage, increased by 50% against Tanks. While casting, gain 25% Durability and become untargetable by attacks. \n\nAfterwards, blink over the target and throw a bomb that deals 560/875/9999 magic damage split amongst all enemies within 2/2/8 hexes.",
       "full_mana": "0/50",
       "source_missing_values": true,
       "recommended_items": [
@@ -1803,7 +1803,7 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/Akali_TrueDamage19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "B面被動：每參與擊殺4次，獲得1/1/10玩家生命。([unavailable]/4)\n\n主動：迅速斬擊目前目標，造成520/780/9999魔法傷害，對坦克額外造成50%傷害。施放技能時，獲得25%續戰力，且不會成為普攻的目標。\n\n接著，瞬移到目標上方，投擲一顆炸彈，造成620/930/9999魔法傷害(由2/2/8格內所有敵軍分攤)。"
+      "full_description_zh": "B面被動：每參與擊殺4次，獲得1/1/10玩家生命。([unavailable]/4)\n\n主動：迅速斬擊目前目標，造成520/780/9999魔法傷害，對坦克額外造成50%傷害。施放技能時，獲得25%續戰力，且不會成為普攻的目標。\n\n接著，瞬移到目標上方，投擲一顆炸彈，造成560/875/9999魔法傷害(由2/2/8格內所有敵軍分攤)。"
     },
     "u73": {
       "name_zh": "亞菲利歐",
@@ -1814,7 +1814,7 @@
       "description_zh": "普攻累積環型飛刃並提高普攻傷害，集滿後獲得物攻與無限射程。主動魔彈能分裂、穿透敵軍，並短暫提高攻速。心鋼之聲升級可提供起始飛刃。",
       "unlock": "Reach the required star level on Alune or Yone.",
       "unlock_zh": "擁有2星亞盧妮或犽凝。",
-      "full_description": "Passive: Gain a Chakram every 4 attacks, up to 15. Attacks deal 7/10/200 bonus physical damage for every Chakram equipped. After collecting 15, gain 30%/30%/500% Attack Damage and infinite range.\n\nActive: Fire bolts at the 3 nearest enemies that deal 340/510/3300 physical damage, then split into 16 bolts that deal 51/76.5/3300 physical damage to enemies they pass through. Gain 75% Attack Speed for 4 seconds.\n\nHeartsteel Upgrade: Start combat with 5 Chakrams equipped.",
+      "full_description": "Passive: Gain a Chakram every 4 attacks, up to 15. Attacks deal 7/10/200 bonus physical damage for every Chakram equipped. After collecting 15, gain 30%/30%/500% Attack Damage and infinite range.\n\nActive: Fire bolts at the 3 nearest enemies that deal 375/565/3300 physical damage, then split into 16 bolts that deal 56.25/84.75/3300 physical damage to enemies they pass through. Gain 75% Attack Speed for 4 seconds.\n\nHeartsteel Upgrade: Start combat with 5 Chakrams equipped.",
       "full_mana": "40/180",
       "source_missing_values": false,
       "recommended_items": [
@@ -1829,7 +1829,7 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/Aphelios19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "被動：每4次普攻獲得1枚環型飛刃，最多獲得15個。每裝備1枚環型飛刃，普攻便會造成額外7/10/200物理傷害。收集15枚後會增加30%/30%/500%物攻和無限射程。\n\n主動：向3個最靠近的敵軍射出魔彈，造成340/510/3300物理傷害，然後分裂成16發魔彈，對沿途穿透的敵軍造成51/76.5/3300物理傷害。提升75%攻速，持續4秒。\n\n心鋼之聲升級：戰鬥開始時裝備5枚環型飛刃。"
+      "full_description_zh": "被動：每4次普攻獲得1枚環型飛刃，最多獲得15個。每裝備1枚環型飛刃，普攻便會造成額外7/10/200物理傷害。收集15枚後會增加30%/30%/500%物攻和無限射程。\n\n主動：向3個最靠近的敵軍射出魔彈，造成375/565/3300物理傷害，然後分裂成16發魔彈，對沿途穿透的敵軍造成56.25/84.75/3300物理傷害。提升75%攻速，持續4秒。\n\n心鋼之聲升級：戰鬥開始時裝備5枚環型飛刃。"
     },
     "u74": {
       "name_zh": "蒙多醫生",
@@ -1853,7 +1853,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/DrMundo19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "被動： 當蒙多醫生擁有 3000 上限生命或更多時，會進入嗨翻全場狀態，獲得 25%/25%/300% 上限生命，並使攻擊額外造成 89/114/2300 魔法傷害。\n\n主動： 在 5/5/3.5 秒內回復 555/605/4300 生命，並對 2/2/5 格內的所有敵人每秒造成 25/29/102 魔法傷害。"
+      "full_description_zh": "被動：蒙多醫生擁有3000或更高最大生命期間，會進入「活力充沛」狀態，獲得25%/25%/300%最大生命，且普攻會額外造成89/114/2300魔法傷害。\n\n主動：在5/5/3.5秒內回復555/605/4300生命，每秒對2/2/5格內的所有敵軍造成25/29/102魔法傷害。"
     },
     "u75": {
       "name_zh": "關",
@@ -1890,7 +1890,7 @@
       "description_zh": "向附近敵軍發射天界龍族。施放四次後，天界疾風籠罩競技場，持續傷害全體敵軍。",
       "unlock": "Earn the required interest while fielding Xayah.",
       "unlock_zh": "派出剎雅時，獲得20利息。",
-      "full_description": "Fire celestial dragons at up to 3 nearby enemies, each dealing 155/250/9999 magic damage.\n\nAfter 4/4/1 casts, the arena is enveloped by the Heaven's Gale, dealing 1800/2700/9000 magic damage to every enemy over 45 seconds.",
+      "full_description": "Fire celestial dragons at up to 3 nearby enemies, each dealing 155/250/9999 magic damage.\n\nAfter 4/4/1 casts, the arena is enveloped by the Heaven's Gale, dealing 1950/3000/9000 magic damage to every enemy over 45 seconds.",
       "full_mana": "0/45",
       "source_missing_values": false,
       "recommended_items": [
@@ -1905,7 +1905,7 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/Janna19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "向最多3名鄰近敵軍釋放天界龍族，各造成155/250/9999魔法傷害。\n\n在4/4/1次施放後，競技場將被「天界疾風」籠罩，於45秒內對每名敵軍造成1800/2700/9000魔法傷害。"
+      "full_description_zh": "向最多3名鄰近敵軍釋放天界龍族，各造成155/250/9999魔法傷害。\n\n在4/4/1次施放後，競技場將被「天界疾風」籠罩，於45秒內對每名敵軍造成1950/3000/9000魔法傷害。"
     },
     "u77": {
       "name_zh": "李星",
@@ -1958,7 +1958,7 @@
       "full_description_zh": "對目標發射一顆彈珠，造成165/250/2245物理傷害。命中敵軍後，彈珠會持續彈跳，直到對敵軍造成12次傷害，傷害逐次降低30%。(最低傷害：20%)"
     },
     "u79": {
-      "name_zh": null,
+      "name_zh": "魔鬥凱薩",
       "ability": "Hand of Doom",
       "ability_zh": "末日之手",
       "mana": "0/60",
@@ -1992,7 +1992,7 @@
       "description_zh": "美洲獅形態會連續猛撲，逐次提高傷害；人類形態會治療自己、投擲標槍，並以落花傷害附近敵軍。",
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Pounce Party: Pounce 4/4/99 times on enemies, dealing 125/185/2000 magic damage, increased by 40%/40%/75% each pounce.\n\nDance of Life: Heal 325/500/2000. Hurl a javelin at the target, dealing 360/540/3000 magic damage and scattering 3 flowers around them. Flowers deal 80/120/500 magic damage to enemies in a 1 Hex radius after a brief delay.\n\nCasts Pounce Party in Cougar Form and Dance of Life in Human form.",
+      "full_description": "Pounce Party: Pounce 4/4/99 times on enemies, dealing 140/210/2000 magic damage, increased by 40%/40%/75% each pounce.\n\nDance of Life: Heal 325/500/2000. Hurl a javelin at the target, dealing 360/540/3000 magic damage and scattering 3 flowers around them. Flowers deal 80/120/500 magic damage to enemies in a 1 Hex radius after a brief delay.\n\nCasts Pounce Party in Cougar Form and Dance of Life in Human form.",
       "full_mana": "20/45",
       "source_missing_values": false,
       "recommended_items": [
@@ -2005,7 +2005,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Nidalee19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "撲擊派對：朝敵軍猛撲4/4/99次，造成125/185/2000魔法傷害，傷害逐次+ 40%/40%/75%。\n\n生命之舞：回復325/500/2000生命。朝目標投擲標槍，造成360/540/3000魔法傷害，並在目標周圍撒落3朵花。片刻後，花朵對1格範圍內的敵軍造成80/120/500魔法傷害。\n\n處於美洲獅形態時施放「撲擊派對」，處於人類形態時施放「生命之舞」。"
+      "full_description_zh": "撲擊派對：朝敵軍猛撲4/4/99次，造成140/210/2000魔法傷害，傷害逐次+ 40%/40%/75%。\n\n生命之舞：回復325/500/2000生命。朝目標投擲標槍，造成360/540/3000魔法傷害，並在目標周圍撒落3朵花。片刻後，花朵對1格範圍內的敵軍造成80/120/500魔法傷害。\n\n處於美洲獅形態時施放「撲擊派對」，處於人類形態時施放「生命之舞」。"
     },
     "u81": {
       "name_zh": "努努和威朗普",
@@ -2029,7 +2029,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Nunu19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "被動：獲得10/10/40魔力回復。繞著迪斯可球緩慢滾動，對沿途穿過的所有敵軍造成[unavailable]魔法傷害。\n\n主動：跑速提升，並讓迪斯可球的大小和傷害提升30%/30%/200%，持續到戰鬥結束。"
     },
     "u82": {
       "name_zh": "派克",
@@ -2080,7 +2080,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Rell19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "節奏爆破者：在4秒內，獲得650/800/2000護盾並召喚3個喇叭。喇叭每秒發出聲波，對命中的敵軍造成104/156/1950魔法傷害。\n\n金屬小馬俱樂部：衝撞敵群，對中心敵軍造成124.8/187.2/39000魔法傷害，並造成由2格內所有敵軍分攤的187.2/280.8/39000傷害。\n\n未騎乘時施放節奏爆破者，騎乘時施放金屬小馬俱樂部。"
     },
     "u84": {
       "name_zh": "塔莉雅",
@@ -2143,7 +2143,7 @@
       "description_zh": null,
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Passive: At Combat Start, draw a card for each champion in the shop. If your shop has refreshed this round, gain loot based on the cards drawn!\n\n1 or 2 of a Kind: 1/1/100 Gold\n3 of a Kind: Random champion\n4 of a Kind: Mystery Box\n5 of a Kind: Royale Mystery Box!\n\nActive: The next 5 attacks gain 100% Attack Speed and are replaced with cards that deal 100/150/2000 magic damage to the target and 30/45/1000 magic damage to 2 nearby enemies.",
+      "full_description": "Passive: At Combat Start, draw a card for each champion in the shop. If your shop has refreshed this round, gain loot based on the cards drawn!\n\n1 or 2 of a Kind: 1/1/100 Gold\n3 of a Kind: Random champion\n4 of a Kind: Mystery Box\n5 of a Kind: Royale Mystery Box!\n\nActive: The next 5 attacks gain 100% Attack Speed and are replaced with cards that deal 110/165/2000 magic damage to the target and 30/45/1000 magic damage to 2 nearby enemies.",
       "full_mana": "0/50",
       "source_missing_values": false,
       "recommended_items": [
@@ -2156,7 +2156,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/TwistedFate19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "被動：戰鬥開始時，每有一位商店中的英雄，便抽一張牌。如果你的商店在本回合已刷新，將根據抽到的卡牌獲得戰利品！\n\n1或2張相同：1/1/100金錢\n3張相同：隨機英雄\n4張相同：神祕禮盒\n5張相同：皇家神祕禮盒！\n\n主動：接下來5次普攻獲得100%攻速，並改為對目標造成110/165/2000魔法傷害，以及對2名鄰近敵軍造成30/45/1000魔法傷害的卡牌。"
     },
     "u87": {
       "name_zh": "菲艾",
@@ -2207,7 +2207,7 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/Vladimir19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "被動：獲得30%/30%/100%全能吸血。受到減益效果影響的敵軍會被迷倒。\n\n主動：對最靠近的3名敵軍造成120/180/999魔法傷害，並對他們施加迷倒，持續3秒。\n\n每第5/5/1次施放時，會在盤面上掉下一盞吊燈。吊燈會對所有敵軍造成400/640/9999魔法傷害，每遠離中心1格，傷害降低10%。\n\n減益效果：燃燒、重創、削抗、破甲、魔力掠奪、虛弱、緩速、易傷"
     },
     "u89": {
       "name_zh": "婕莉",
@@ -2218,7 +2218,7 @@
       "description_zh": "四處衝刺，快速向目前目標發射多道雷射，造成物理傷害並無視部分物防。",
       "unlock": null,
       "unlock_zh": null,
-      "full_description": "Quickly dash around the arena, aiming 6 lasers at the current target. Lasers fire in rapid succession, each dealing 165/245/1500 physical damage to enemies hit and ignoring 40% of their Armor.",
+      "full_description": "Quickly dash around the arena, aiming 6 lasers at the current target. Lasers fire in rapid succession, each dealing 155/235/1500 physical damage to enemies hit and ignoring 40% of their Armor.",
       "full_mana": "0/150",
       "source_missing_values": false,
       "recommended_items": [
@@ -2231,7 +2231,7 @@
       "full_unlock": [],
       "recommendation_source": "https://www.metatft.com/units/Zeri19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "在競技場中四處衝刺，瞄準目前目標發射6道雷射。雷射會快速連續發射，每道雷射對命中的敵軍造成165/245/1500物理傷害，並無視其40%物防。"
+      "full_description_zh": "在競技場中四處衝刺，瞄準目前目標發射6道雷射。雷射會快速連續發射，每道雷射對命中的敵軍造成155/235/1500物理傷害，並無視其40%物防。"
     },
     "u90": {
       "name_zh": "巴龍納什",
@@ -2242,7 +2242,7 @@
       "description_zh": null,
       "unlock": "Collect all members of Baron's ensemble.\nDeal the required damage with your strongest Malzahar.",
       "unlock_zh": "收集巴龍樂團全部5名成員，並用最強大的馬爾札哈造成60000傷害。",
-      "full_description": "Summon an 8-man orchestra and a Riff Herald, knocking up all enemies for 1 seconds. Deal 550/825/2475 physical damage and 650/1000/3000 magic damage split among all enemies.\n\nEach minion attacks 4 times, with each attack dealing 33/50/250 physical damage.",
+      "full_description": "Summon an 8-man orchestra and a Riff Herald, knocking up all enemies for 1 seconds. Deal 550/825/2475 physical damage and 650/1000/3000 magic damage split among all enemies.\n\nEach minion attacks 4 times, with each attack dealing 35/55/250 physical damage.",
       "full_mana": "80/120",
       "source_missing_values": false,
       "recommended_items": [
@@ -2258,7 +2258,7 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/BaronNashor19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "召喚一支8人樂團和一隻預示者，擊飛所有敵軍1秒。造成550/825/2475物理傷害和650/1000/3000魔法傷害(由所有敵軍分攤)。\n\n每個士兵普攻4次，每次普攻造成35/55/250物理傷害。"
     },
     "u91": {
       "name_zh": "銳空",
@@ -2286,7 +2286,7 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/Rakan19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": "衝向附近的小組敵人，然後將 8/8/32 羽毛分散給1格內的敵人，每根羽毛造成 115/190/2400 魔法傷害。主要的銳空會擊中2格內的敵人並短暫擊飛他們。"
+      "full_description_zh": "衝向鄰近的敵軍群體，然後猛擲8/8/32根羽毛，分散在1格內的敵軍身上；每根羽毛造成115/190/2400魔法傷害。\n\n銳空主要會擊中2格內的敵軍，並將其短暫擊飛。"
     },
     "u92": {
       "name_zh": "斯米奇",
@@ -2326,7 +2326,7 @@
       "unlock": "Inspire Collab champions the required number of times.\nLevel 10",
       "unlock_zh": null,
       "image": "https://cdn.metatft.com/cdn-cgi/image/width=256,height=152,format=auto/https://cdn.metatft.com/file/metatft/championsplashes/da_sona19.png",
-      "full_description": "Passive: Cannot attack, instead every 3 seconds, gain [unavailable] Mana, deal 120/180/1000 magic damage to the 3/3/10 nearest enemies, and 2/2/5 allies gain 40/65/9999 Shield for 3/3/10 seconds. Sona is Unstoppable.\n\nActive: Unleash a sonic wave across the battlefield, dealing 1500/2400/9999999 magic damage split between all enemies and Stunning them for 2/2/30 seconds. Allies gain 250/450/99999 Shield split amongst allies for 5/5/10 seconds.",
+      "full_description": "Passive: Cannot attack, instead every 3 seconds, gain [unavailable] Mana, deal 120/180/1000 magic damage to the 3/3/10 nearest enemies, and 2/2/5 allies gain 40/65/9999 Shield for 3/3/10 seconds. Sona is Unstoppable.\n\nActive: Unleash a sonic wave across the battlefield, dealing 1650/2600/9999999 magic damage split between all enemies and Stunning them for 2/2/30 seconds. Allies gain 250/500/99999 Shield split amongst allies for 5/5/10 seconds.",
       "full_mana": "0/220",
       "source_missing_values": true,
       "recommended_items": [
@@ -2342,7 +2342,7 @@
       ],
       "recommendation_source": "https://www.metatft.com/units/Sona19?set=TFTSet19",
       "recommendation_status": "available",
-      "full_description_zh": null
+      "full_description_zh": "被動：無法普攻，改為每3秒獲得[unavailable]魔力，對3/3/10名最靠近的敵軍造成120/180/1000魔法傷害，並賦予2/2/5名友軍40/65/9999護盾，持續3/3/10秒。索娜進入無人能擋狀態。\n\n主動：在戰場上釋放一道音波，造成1650/2600/9999999魔法傷害(由所有敵軍均分)，並使其暈眩2/2/30秒。友軍獲得250/500/99999護盾(由所有友軍均分)，持續5/5/10秒。"
     }
   },
   "patch": "PBE / 19.1",
@@ -2364,7 +2364,7 @@
   },
   "localization": {
     "source": "https://data.metatft.com/lookups/TFTSet19_pbe_zh_tw.json",
-    "snapshot_date": "2026-11-25"
+    "snapshot_date": "2026-11-26"
   },
-  "ability_release": "rls-19.1.0.6018196.Set19.Shipping.pbe"
+  "ability_release": "rls-19.1.0.6037882.Set19.Shipping.pbe"
 }

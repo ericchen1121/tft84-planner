@@ -7,7 +7,7 @@
   "items": [
     {
       "id": "DA_IonicSparkRadiant",
-      "name_zh": "聖光離子星火",
+      "name_zh": "聖光Ionic Spark",
       "name": "Radiant Ionic Spark",
       "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_ionicsparkradiant.png",
       "source": "https://www.metatft.com/items/DA_IonicSparkRadiant?set=TFTSet19"
@@ -616,7 +616,7 @@
     },
     {
       "id": "DA_Pentakill19_Emblem",
-      "name_zh": "Pentakill Emblem",
+      "name_zh": "殺五社徽章",
       "name": "Pentakill Emblem",
       "image": "https://cdn.metatft.com/cdn-cgi/image/width=48,height=48,format=auto/https://cdn.metatft.com/file/metatft/items/da_pentakill19_emblem.png",
       "source": "https://www.metatft.com/items/DA_Pentakill19_Emblem?set=TFTSet19"

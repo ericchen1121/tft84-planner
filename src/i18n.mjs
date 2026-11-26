@@ -23,7 +23,7 @@ export const TRAIT_ZH=Object.freeze({
   "Bodyguard": "保鑣",
   "Arcanist": "奧術大師",
   "Renegade": "叛徒",
-  "Indie": "獨立音樂",
+  "Indie": "硬地音樂",
   "Emo": "情緒搖滾",
   "Synthwave": "合成波",
   "Freestyle": "自由發揮",
@@ -40,10 +40,18 @@ export const TRAIT_ZH=Object.freeze({
   "Producer": "製作人",
   "Trickshot": "炫技射手",
   "Composer": "作曲",
-  "Country": "鄉村樂",
+  "Country": "鄉村音樂",
   "One Monster Band": "一怪樂團"
 });
 export const UI_ZH=Object.freeze({
+  'Match Collab group':'本局合作奕子',
+  'Search by one or two champion names':'輸入一、兩個棋子名稱',
+  'Clear group':'清除合作組合',
+  'Matching Collab groups':'符合的合作組合',
+  'No Collab group selected.':'未選擇合作組合。',
+  'No Collab groups match.':'找不到符合的合作組合。',
+  'Collab group {n}':'合作第 {n} 組',
+  "Choose this game's Collab group above the search button. Sona's featured trait can be set in Advanced options.":'請在搜尋按鈕上方選擇本局合作組合。索娜的額外羈絆可以在進階選項設定。',
 "Equipment":"裝備",
 "Equipment Library":"裝備圖鑑",
 "BUILD YOUR NEXT ADVANTAGE":"打造下一次優勢",

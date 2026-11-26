@@ -2,7 +2,7 @@
   "set": "TFTSet19",
   "mode": "PBE",
   "patch": "19.1",
-  "snapshot_date": "2026-11-25",
+  "snapshot_date": "2026-11-26",
   "source": "https://www.metatft.com/new-set",
   "lookups": [
     "https://data.metatft.com/lookups/TFTSet19_pbe_en_us.json",
@@ -12,10 +12,10 @@
     "set": "TFTSet19",
     "setName": "Set 19",
     "patch": "pbe",
-    "generated": "2026-11-23T21:39:48.080Z",
-    "coreHash": "59b4b05f6466b86738f39db57b20d58de631f0a4",
-    "release": "rls-19.1.0.6018196.Set19.Shipping.pbe",
-    "manifest": "1096C8A75AEA562C",
+    "generated": "2026-11-26T06:41:21.997Z",
+    "coreHash": "1ab9e13d70181a41cb707d684ab7e077fd22fe12",
+    "release": "rls-19.1.0.6037882.Set19.Shipping.pbe",
+    "manifest": "06BB7C972BA1E6E1",
     "tooltips": "curvetable"
   },
   "notes": "Only source-provided Traditional Chinese is used, independently for names and descriptions. Missing fields fall back to English. Curve values use the same English PBE release. Dynamic game counters and unavailable source values are explicit. Round availability is copied, not inferred.",
@@ -508,7 +508,7 @@
       "id": "DA_BattleOfTheBands|CT_BattleOfTheBands|Gold|3-2,4-2",
       "apiName": "DA_BattleOfTheBands",
       "name": "Battle of the Bands",
-      "name_zh": null,
+      "name_zh": "樂團爭霸",
       "description": "If you have 2 or more active Bands, your team gains 18% Attack Damage and Ability Power.",
       "description_zh": "如果你有2個或更多啟動中的樂團，我方隊伍獲得 18%物攻和魔攻。",
       "tier": "Gold",
@@ -548,6 +548,46 @@
             ]
           ],
           "RequiredOrigins": [
+            [
+              1,
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "DA_BigGrabBag|CT_BigGrabBag|Gold|3-2,4-2",
+      "apiName": "DA_BigGrabBag",
+      "name": "Big Grab Bag",
+      "name_zh": "大禮包",
+      "description": "Gain 3 random components, 2 gold, and 1 Reforger.",
+      "description_zh": "獲得3個隨機組件、2金錢及1台重鑄器。",
+      "tier": "Gold",
+      "type": "regular",
+      "rounds": [
+        "3-2",
+        "4-2"
+      ],
+      "traits": [],
+      "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_biggrabbag_gold_big.png",
+      "missing_values": [],
+      "missing_values_zh": [],
+      "conflicting_values": [],
+      "dynamic": false,
+      "source_data": {
+        "description": "Gain 3 random components, <TFTCurveTable row=\"Gold\"/> gold, and 1 Reforger.",
+        "description_zh": "獲得3個隨機組件、<TFTCurveTable row=\"Gold\"/>金錢及1台重鑄器。",
+        "curveValues": {
+          "Gold": [
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        "curveTable": {
+          "Gold": [
             [
               1,
               2
@@ -623,9 +663,9 @@
       "id": "DA_VIPAccess|CT_BlindBox|Silver|2-1",
       "apiName": "DA_VIPAccess",
       "name": "Blind Box",
-      "name_zh": null,
+      "name_zh": "盲盒",
       "description": "Gain a random Gold Augment, but lose 5 gold.",
-      "description_zh": null,
+      "description_zh": "獲得一件隨機金級增幅裝置，但會失去5金錢。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -639,7 +679,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a random Gold Augment, but lose <TFTCurveTable row=\"Gold_UpdateFilterIfThisChanges\"/> gold.",
-        "description_zh": "Gain a random Gold Augment, but lose <TFTCurveTable row=\"Gold_UpdateFilterIfThisChanges\"/> gold.",
+        "description_zh": "獲得一件隨機金級增幅裝置，但會失去<TFTCurveTable row=\"Gold_UpdateFilterIfThisChanges\"/>金錢。",
         "curveValues": {
           "Gold_UpdateFilterIfThisChanges": [
             [
@@ -876,8 +916,8 @@
       "apiName": "DA_BonusGift",
       "name": "Bonus Gifts",
       "name_zh": "額外禮物",
-      "description": "Whenever you open a loot orb, you have a 25% chance to gain a gray loot orb. Gain 1 gray loot orbs.",
-      "description_zh": "開啟戰利品晶球時，有25%機率獲得1顆灰色戰利品晶球。獲得1顆灰色戰利品晶球。",
+      "description": "Whenever you open a loot orb, you have a 35% chance to gain a gray loot orb. Gain 1 gray loot orbs.",
+      "description_zh": "開啟戰利品晶球時，有35%機率獲得1顆灰色戰利品晶球。獲得1顆灰色戰利品晶球。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -896,7 +936,7 @@
           "Chance": [
             [
               1,
-              0.25
+              0.35
             ]
           ],
           "StartingOrbs": [
@@ -916,7 +956,7 @@
           "Chance": [
             [
               1,
-              0.25
+              0.35
             ]
           ],
           "StartingOrbs": [
@@ -930,6 +970,12 @@
               1,
               3
             ]
+          ],
+          "NonPVEChance": [
+            [
+              1,
+              0.18
+            ]
           ]
         }
       }
@@ -939,8 +985,8 @@
       "apiName": "DA_BonusGiftPlus",
       "name": "Bonus Gifts+",
       "name_zh": "額外禮物+",
-      "description": "Whenever you open a loot orb, you have a 25% chance to gain a gray loot orb. Gain 2 gray loot orbs.",
-      "description_zh": "開啟戰利品晶球時，有25%機率獲得1顆灰色戰利品晶球。獲得2顆灰色戰利品晶球。",
+      "description": "Whenever you open a loot orb, you have a 35% chance to gain a gray loot orb. Gain 2 gray loot orbs.",
+      "description_zh": "開啟戰利品晶球時，有35%機率獲得1顆灰色戰利品晶球。獲得2顆灰色戰利品晶球。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -959,7 +1005,7 @@
           "Chance": [
             [
               1,
-              0.25
+              0.35
             ]
           ],
           "StartingOrbs": [
@@ -973,7 +1019,7 @@
           "Chance": [
             [
               1,
-              0.25
+              0.35
             ]
           ],
           "StartingOrbs": [
@@ -2765,7 +2811,7 @@
       "name": "Champion Airdrop",
       "name_zh": "英雄空投",
       "description": "Gain 3 2-cost champions now and 3 more after 5 rounds. After each airdrop, increase the round delay and the number of champions by 1.",
-      "description_zh": null,
+      "description_zh": "立即獲得3名2費英雄，5回合後再獲得3名。每次空投後，回合延遲和英雄數量增加1。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -2779,7 +2825,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"Champions_0\"/> <TFTCurveTable row=\"ChampionCost_TOOLTIPONLY\"/>-cost champions now and <TFTCurveTable row=\"Champions_1\"/> more after <TFTCurveTable row=\"Delay_1\"/> rounds. After each airdrop, increase the round delay and the number of champions by <TFTCurveTable row=\"Increase_TOOLTIPONLY\"/>.",
-        "description_zh": "Gain <TFTCurveTable row=\"Champions_0\"/> <TFTCurveTable row=\"ChampionCost_TOOLTIPONLY\"/>-cost champions now and <TFTCurveTable row=\"Champions_1\"/> more after <TFTCurveTable row=\"Delay_1\"/> rounds. After each airdrop, increase the round delay and the number of champions by <TFTCurveTable row=\"Increase_TOOLTIPONLY\"/>.",
+        "description_zh": "立即獲得<TFTCurveTable row=\"Champions_0\"/>名<TFTCurveTable row=\"ChampionCost_TOOLTIPONLY\"/>費英雄，<TFTCurveTable row=\"Delay_1\"/>回合後再獲得<TFTCurveTable row=\"Champions_1\"/>名。每次空投後，回合延遲和英雄數量增加<TFTCurveTable row=\"Increase_TOOLTIPONLY\"/>。",
         "curveValues": {
           "Champions_0": [
             [
@@ -2941,7 +2987,7 @@
       "id": "DA_CheatCodeGold||Gold|2-1",
       "apiName": "DA_CheatCodeGold",
       "name": "Cheat Code II",
-      "name_zh": null,
+      "name_zh": "作弊密碼II",
       "description": "Now and at the start of each stage, get a new cheat code. The first time you perform that exact sequence of actions, gain a reward.",
       "description_zh": "現在及每個階段開始時，都會獲得一組新的作弊碼。第一次依照指定順序完成完全相同的動作時，即可獲得獎勵。",
       "tier": "Gold",
@@ -3632,7 +3678,7 @@
       "name": "Crit Rune",
       "name_zh": "暴擊符文",
       "description": "Gain 8 gold. Your team gains 1% Critical Strike Chance.",
-      "description_zh": null,
+      "description_zh": "獲得8金錢。我方隊伍增加1%%暴擊率。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -3646,7 +3692,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"Gold\"/> gold. Your team gains <TFTCurveTable row=\"Chance\" format=\"percent\"/> Critical Strike Chance.",
-        "description_zh": "Gain <TFTCurveTable row=\"Gold\"/> gold. Your team gains <TFTCurveTable row=\"Chance\" format=\"percent\"/> Critical Strike Chance.",
+        "description_zh": "獲得<TFTCurveTable row=\"Gold\"/>金錢。我方隊伍增加<TFTCurveTable row=\"Chance\" format=\"percent\"/>%暴擊率。",
         "curveValues": {
           "Gold": [
             [
@@ -3683,7 +3729,7 @@
       "name": "Crit Rune+",
       "name_zh": "暴擊符文+",
       "description": "Gain 14 gold. Your team gains 1% Critical Strike Chance.",
-      "description_zh": null,
+      "description_zh": "獲得14金錢。我方隊伍增加1%%暴擊率。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -3697,7 +3743,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"Gold\"/> gold. Your team gains <TFTCurveTable row=\"Chance\" format=\"percent\"/> Critical Strike Chance.",
-        "description_zh": "Gain <TFTCurveTable row=\"Gold\"/> gold. Your team gains <TFTCurveTable row=\"Chance\" format=\"percent\"/> Critical Strike Chance.",
+        "description_zh": "獲得<TFTCurveTable row=\"Gold\"/>金錢。我方隊伍增加<TFTCurveTable row=\"Chance\" format=\"percent\"/>%暴擊率。",
         "curveValues": {
           "Gold": [
             [
@@ -4134,9 +4180,9 @@
       "id": "DA_DuplicatorDeal|CT_DuplicatorDeal|Prismatic|4-2",
       "apiName": "DA_DuplicatorDeal",
       "name": "Duplicator Deal",
-      "name_zh": null,
+      "name_zh": "複製裝置交易",
       "description": "Gain 3 Champion Duplicators. You can no longer 3-star champions.",
-      "description_zh": null,
+      "description_zh": "獲得3件英雄複製器。你無法再將英雄升到三星。",
       "tier": "Prismatic",
       "type": "regular",
       "rounds": [
@@ -4150,7 +4196,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"NumDupes\"/> Champion Duplicators. You can no longer 3-star champions.",
-        "description_zh": "Gain <TFTCurveTable row=\"NumDupes\"/> Champion Duplicators. You can no longer 3-star champions.",
+        "description_zh": "獲得<TFTCurveTable row=\"NumDupes\"/>件英雄複製器。你無法再將英雄升到三星。",
         "curveValues": {
           "NumDupes": [
             [
@@ -4309,19 +4355,19 @@
           "DamageII": [
             [
               1,
-              35
+              55
             ],
             [
               2,
-              65
+              55
             ],
             [
               3,
-              90
+              85
             ],
             [
               4,
-              120
+              110
             ]
           ],
           "Cooldown": [
@@ -4352,8 +4398,8 @@
       "apiName": "DA_ElectrochargeII",
       "name": "Electrocharge II",
       "name_zh": "電光反擊II",
-      "description": "Every 4 attacks an ally takes, they deal 35-120 (based on current Stage) magic damage to nearby enemies (1 second cooldown).",
-      "description_zh": "每次一名友軍受到4次攻擊，會對鄰近敵軍造成35-120(依當前階段而定)魔法傷害(1秒冷卻)。",
+      "description": "Every 4 attacks an ally takes, they deal 55-110 (based on current Stage) magic damage to nearby enemies (1 second cooldown).",
+      "description_zh": "每次一名友軍受到4次攻擊，會對鄰近敵軍造成55-110(依當前階段而定)魔法傷害(1秒冷卻)。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -4384,19 +4430,19 @@
           "DamageII": [
             [
               1,
-              35
+              55
             ],
             [
               2,
-              65
+              55
             ],
             [
               3,
-              90
+              85
             ],
             [
               4,
-              120
+              110
             ]
           ],
           "Cooldown": [
@@ -4428,19 +4474,19 @@
           "DamageII": [
             [
               1,
-              35
+              55
             ],
             [
               2,
-              65
+              55
             ],
             [
               3,
-              90
+              85
             ],
             [
               4,
-              120
+              110
             ]
           ],
           "Cooldown": [
@@ -4928,7 +4974,7 @@
       "name": "Fighter Flight II",
       "name_zh": "或戰或跑II",
       "description": "Your Fighters and Assassins move faster and gain 18% Attack Speed. These bonuses are doubled while below 50% Health.",
-      "description_zh": "你的鬥士和刺客移動速度更快，並獲得 18% 攻速。當你的生命低於 50% 時，這些加成會加倍。",
+      "description_zh": "我方鬥士和刺客移動速度加快，並獲得18%攻速。生命低於50%時，這些加成會加倍。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -4943,7 +4989,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Your Fighters and Assassins move faster and gain <TFTCurveTable row=\"AttackSpeed\" format=\"percent\"/> Attack Speed. These bonuses are doubled while below <TFTCurveTable row=\"EmpowerHealthThreshold\" format=\"percent\"/> Health.",
-        "description_zh": "你的鬥士和刺客移動速度更快，並獲得 <TFTCurveTable row=\"AttackSpeed\" format=\"percent\"/> 攻速。當你的生命低於 <TFTCurveTable row=\"EmpowerHealthThreshold\" format=\"percent\"/> 時，這些加成會加倍。",
+        "description_zh": "我方鬥士和刺客移動速度加快，並獲得<TFTCurveTable row=\"AttackSpeed\" format=\"percent\"/>攻速。生命低於<TFTCurveTable row=\"EmpowerHealthThreshold\" format=\"percent\"/>時，這些加成會加倍。",
         "curveValues": {
           "AttackSpeed": [
             [
@@ -5298,7 +5344,7 @@
       "name": "3/4 Time",
       "name_zh": "3/4拍",
       "description": "Gain 3 gold, 3 player Health, and 3 rerolls now, and a random 3-cost champion in 4 rounds.",
-      "description_zh": null,
+      "description_zh": "獲得3金錢、3玩家生命和3次重抽，並在4回合後隨機獲得1名3費英雄。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -5312,7 +5358,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"Gold\"/> gold, <TFTCurveTable row=\"Health\"/> player Health, and <TFTCurveTable row=\"Rerolls\"/> rerolls now, and a random <TFTCurveTable row=\"ChampionCost\"/>-cost champion in <TFTCurveTable row=\"Delay\"/> rounds.",
-        "description_zh": "Gain <TFTCurveTable row=\"Gold\"/> gold, <TFTCurveTable row=\"Health\"/> player Health, and <TFTCurveTable row=\"Rerolls\"/> rerolls now, and a random <TFTCurveTable row=\"ChampionCost\"/>-cost champion in <TFTCurveTable row=\"Delay\"/> rounds.",
+        "description_zh": "獲得<TFTCurveTable row=\"Gold\"/>金錢、<TFTCurveTable row=\"Health\"/>玩家生命和<TFTCurveTable row=\"Rerolls\"/>次重抽，並在<TFTCurveTable row=\"Delay\"/>回合後隨機獲得1名<TFTCurveTable row=\"ChampionCost\"/>費英雄。",
         "curveValues": {
           "Gold": [
             [
@@ -5522,7 +5568,7 @@
       "id": "DA_GainGold|CT_GainGoldPlus|Gold|4-2",
       "apiName": "DA_GainGold",
       "name": "Gain 28 Gold",
-      "name_zh": "獲得21金錢+",
+      "name_zh": "獲得28金錢",
       "description": "Gain 28 gold.",
       "description_zh": "獲得28金錢。",
       "tier": "Gold",
@@ -6602,7 +6648,7 @@
       "id": "DA_JeweledLotus_I|CT_JeweledLotus|Gold|3-2,4-2",
       "apiName": "DA_JeweledLotus_I",
       "name": "Jeweled Lotus",
-      "name_zh": "珠光蓮花I",
+      "name_zh": "珠光蓮花",
       "description": "Your team gains 15% Critical Strike Chance and Precision.\n\nPrecision: Ability damage can critically strike. Additional Precision grants 10% Critical Strike Damage.",
       "description_zh": "我方隊伍增加15%暴擊率並獲得精準。\n\n精準：技能傷害可以暴擊。額外精準會賦予10%暴擊傷害。",
       "tier": "Gold",
@@ -8364,7 +8410,7 @@
       "name": "Pyramid Scheme",
       "name_zh": "金字塔計畫",
       "description": "After fighting a player who isn't in the Pyramid Scheme, steal 3 gold from them and give them a weaker copy of this augment. \n\nRound Start: Gain 1 gold per player in the Scheme, or 10 gold if all players are in the Scheme",
-      "description_zh": null,
+      "description_zh": "和尚未加入金字塔計畫的對手對戰，就從他身上偷取3金錢，並給予對手此增幅裝置的弱化版本。\n\n回合開始：計畫中每多一個玩家就可獲得1金錢，如所有玩家都在計劃中則可獲得10金錢。",
       "tier": "Prismatic",
       "type": "regular",
       "rounds": [
@@ -8378,7 +8424,7 @@
       "dynamic": false,
       "source_data": {
         "description": "After fighting a player who isn't in the Pyramid Scheme, steal <TFTCurveTable row=\"GoldToSteal\"/> gold from them and give them a weaker copy of this augment. \r\n\r\nRound Start: Gain <TFTCurveTable row=\"GoldPerPlayer\"/> gold per player in the Scheme, or <TFTCurveTable row=\"CapGold\"/> gold if all players are in the Scheme",
-        "description_zh": "After fighting a player who isn't in the Pyramid Scheme, steal <TFTCurveTable row=\"GoldToSteal\"/> gold from them and give them a weaker copy of this augment. \r\n\r\nRound Start: Gain <TFTCurveTable row=\"GoldPerPlayer\"/> gold per player in the Scheme, or <TFTCurveTable row=\"CapGold\"/> gold if all players are in the Scheme",
+        "description_zh": "和尚未加入金字塔計畫的對手對戰，就從他身上偷取<TFTCurveTable row=\"GoldToSteal\"/>金錢，並給予對手此增幅裝置的弱化版本。\r\n\r\n回合開始：計畫中每多一個玩家就可獲得<TFTCurveTable row=\"GoldPerPlayer\"/>金錢，如所有玩家都在計劃中則可獲得<TFTCurveTable row=\"CapGold\"/>金錢。",
         "curveValues": {
           "GoldToSteal": [
             [
@@ -8468,7 +8514,7 @@
       "id": "DA_19_PyramidScheme_Level3|CT_PyramidScheme_Level3|Silver|",
       "apiName": "DA_19_PyramidScheme_Level3",
       "name": "Pyramid Scheme, Level 3",
-      "name_zh": null,
+      "name_zh": "金字塔計畫，等級3",
       "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal 1 gold from them and give them a weaker copy of this augment.",
       "description_zh": "戰鬥開始：如果對手尚未加入金字塔計畫，就從對手身上偷取1金錢，並給予對手此增幅裝置的弱化版本。",
       "tier": "Silver",
@@ -8542,9 +8588,9 @@
       "id": "DA_19_PyramidScheme_Level5|CT_PyramidScheme_Level3|Silver|",
       "apiName": "DA_19_PyramidScheme_Level5",
       "name": "Pyramid Scheme, Level 5",
-      "name_zh": null,
+      "name_zh": "金字塔計畫，等級5",
       "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal 1 gold from them and give them a weaker copy of this augment.",
-      "description_zh": null,
+      "description_zh": "戰鬥開始：如果對手尚未加入金字塔計畫，就從對手身上偷取1金錢，並給予對手此增幅裝置的弱化版本。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [],
@@ -8556,7 +8602,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal <TFTCurveTable row=\"GoldToSteal\"/> gold from them and give them a weaker copy of this augment.",
-        "description_zh": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal <TFTCurveTable row=\"GoldToSteal\"/> gold from them and give them a weaker copy of this augment.",
+        "description_zh": "戰鬥開始：如果對手尚未加入金字塔計畫，就從對手身上偷取<TFTCurveTable row=\"GoldToSteal\"/>金錢，並給予對手此增幅裝置的弱化版本。",
         "curveValues": {
           "GoldToSteal": [
             [
@@ -8616,7 +8662,7 @@
       "id": "DA_19_PyramidScheme_Level7|CT_PyramidScheme_Level3|Silver|",
       "apiName": "DA_19_PyramidScheme_Level7",
       "name": "Pyramid Scheme, Level 7",
-      "name_zh": null,
+      "name_zh": "金字塔計畫，等級7",
       "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal [unavailable] gold from them and give them a weaker copy of this augment.",
       "description_zh": "戰鬥開始：如果對手尚未加入金字塔計畫，就從對手身上偷取[unavailable]金錢，並給予對手此增幅裝置的弱化版本。",
       "tier": "Silver",
@@ -8652,7 +8698,7 @@
       "name": "Pyramid Scheme, Level 8",
       "name_zh": "金字塔計畫，等級8",
       "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal 1 gold from them and give them a weaker copy of this augment.",
-      "description_zh": null,
+      "description_zh": "戰鬥開始：如果對手尚未加入金字塔計畫，就從對手身上偷取1金錢，並給予對手此增幅裝置的弱化版本。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [],
@@ -8664,7 +8710,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal <TFTCurveTable row=\"GoldToSteal\"/> gold from them and give them a weaker copy of this augment.",
-        "description_zh": "Combat start: If your opponent isn't already in the Pyramid Scheme, steal <TFTCurveTable row=\"GoldToSteal\"/> gold from them and give them a weaker copy of this augment.",
+        "description_zh": "戰鬥開始：如果對手尚未加入金字塔計畫，就從對手身上偷取<TFTCurveTable row=\"GoldToSteal\"/>金錢，並給予對手此增幅裝置的弱化版本。",
         "curveValues": {
           "GoldToSteal": [
             [
@@ -8727,8 +8773,8 @@
       "apiName": "DA_19_RareCollection",
       "name": "Rare Collection",
       "name_zh": "稀有收藏",
-      "description": "Your team gains 50 Health and 3% Attack Speed per unique unlockable champion fielded.",
-      "description_zh": "每部署一名不同的可解鎖英雄，我方隊伍獲得50生命及3%攻速。",
+      "description": "Your team gains 40 Health and 3% Attack Speed per unique unlockable champion fielded.",
+      "description_zh": "每部署一名不同的可解鎖英雄，我方隊伍獲得40生命及3%攻速。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -8748,7 +8794,7 @@
           "Health": [
             [
               1,
-              50
+              40
             ]
           ],
           "AttackSpeed": [
@@ -8768,7 +8814,7 @@
           "Health": [
             [
               1,
-              50
+              40
             ]
           ]
         }
@@ -8780,7 +8826,7 @@
       "name": "Reunion Show",
       "name_zh": "重聚演出",
       "description": "Gain 10 gold of champions that all share a trait.",
-      "description_zh": "獲得總價值10金錢且擁有相同特性的單位。",
+      "description_zh": "獲得總價值10金錢且具有共同特性的英雄。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -8794,7 +8840,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"GoldValue\"/> gold of champions that all share a trait.",
-        "description_zh": "獲得總價值<TFTCurveTable row=\"GoldValue\"/>金錢且擁有相同特性的單位。",
+        "description_zh": "獲得總價值<TFTCurveTable row=\"GoldValue\"/>金錢且具有共同特性的英雄。",
         "curveValues": {
           "GoldValue": [
             [
@@ -8825,7 +8871,7 @@
       "name": "Reunion Show II",
       "name_zh": "重聚演出 II",
       "description": "Gain 16 gold of champions that all share a trait.",
-      "description_zh": null,
+      "description_zh": "獲得總價值16金錢且具有共同特性的英雄。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -8839,7 +8885,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain <TFTCurveTable row=\"GoldValue\"/> gold of champions that all share a trait.",
-        "description_zh": "Gain <TFTCurveTable row=\"GoldValue\"/> gold of champions that all share a trait.",
+        "description_zh": "獲得總價值<TFTCurveTable row=\"GoldValue\"/>金錢且具有共同特性的英雄。",
         "curveValues": {
           "GoldValue": [
             [
@@ -9289,7 +9335,7 @@
       "name": "Stand United",
       "name_zh": "並肩作戰",
       "description": "Your team gains 1.5% Attack Damage and 1.5% Ability Power for each active non-unique trait.",
-      "description_zh": "隊伍中每有一項啟動中的非唯一特性，我方單位便增加1.5%物攻和1.5%魔攻。",
+      "description_zh": "每啟動一個非唯一特性，我方隊伍增加1.5%物攻與1.5%魔攻。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -9304,7 +9350,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Your team gains <TFTCurveTable row=\"AttackDamagePercentagePerTrait\" format=\"percent\"/> Attack Damage and <TFTCurveTable row=\"AbilityPowerPerTrait\" format=\"percent\"/> Ability Power for each active non-unique trait.",
-        "description_zh": "隊伍中每有一項啟動中的非唯一特性，我方單位便增加<TFTCurveTable row=\"AttackDamagePercentagePerTrait\" format=\"percent\"/>物攻和<TFTCurveTable row=\"AbilityPowerPerTrait\" format=\"percent\"/>魔攻。 ",
+        "description_zh": "每啟動一個非唯一特性，我方隊伍增加<TFTCurveTable row=\"AttackDamagePercentagePerTrait\" format=\"percent\"/>物攻與<TFTCurveTable row=\"AbilityPowerPerTrait\" format=\"percent\"/>魔攻。",
         "curveValues": {
           "AttackDamagePercentagePerTrait": [
             [
@@ -9339,7 +9385,7 @@
       "id": "DA_StarOfTheShow|CT_StarOfTheShow|Prismatic|2-1",
       "apiName": "DA_StarOfTheShow",
       "name": "Star of the Show",
-      "name_zh": null,
+      "name_zh": "全場焦點",
       "description": "Gain a 2-star 1-cost non-Tank champion and an Emblem for one of their traits. On Stage 3-1, gain 6 more copies of that champion.",
       "description_zh": "獲得1個2星1費非坦克英雄，以及1枚對應其特性的徽章。在階段3-1時，獲得6個該英雄的複製體。",
       "tier": "Prismatic",
@@ -9426,7 +9472,7 @@
       "id": "DA_StatsOnStats|CT_StatsOnStats|Silver|2-1",
       "apiName": "DA_StatsOnStats",
       "name": "Stats On Stats",
-      "name_zh": null,
+      "name_zh": "能力值堆起來",
       "description": "Now and after every 5 rounds, gain 2 stat boosting consumables.",
       "description_zh": "現在和每經過5回合後，獲得2個提升能力值的消耗品。",
       "tier": "Silver",
@@ -9528,7 +9574,7 @@
       "id": "DA_DangerousDuetII|CT_BestFriends|Gold|3-2,4-2",
       "apiName": "DA_DangerousDuetII",
       "name": "Strange Duet II",
-      "name_zh": null,
+      "name_zh": "奇異二重唱II",
       "description": "Allies that start combat isolated in pairs gain 5% Durability and 8% Damage Amp.",
       "description_zh": "戰鬥開始時，成對孤立的友軍獲得5%續戰力和8%傷害增幅。",
       "tier": "Gold",
@@ -9592,7 +9638,7 @@
       "id": "DA_DangerousDuetIII|CT_BestFriends|Prismatic|3-2,4-2",
       "apiName": "DA_DangerousDuetIII",
       "name": "Strange Duet III",
-      "name_zh": null,
+      "name_zh": "奇異二重唱III",
       "description": "Allies that start combat isolated in pairs gain 8% Durability and 14% Damage Amp.",
       "description_zh": "戰鬥開始時，成對孤立的友軍獲得8%續戰力和14%傷害增幅。",
       "tier": "Prismatic",
@@ -9656,7 +9702,7 @@
       "id": "DA_DangerousDuet|CT_BestFriends|Silver|3-2,4-2",
       "apiName": "DA_DangerousDuet",
       "name": "Strange Duet",
-      "name_zh": null,
+      "name_zh": "奇異二重唱",
       "description": "Allies that start combat isolated in pairs gain 3% Durability and 5% Damage Amp.",
       "description_zh": "戰鬥開始時，成對孤立的友軍獲得3%續戰力和5%傷害增幅。",
       "tier": "Silver",
@@ -9722,7 +9768,7 @@
       "name": "Submit to the Pit",
       "name_zh": "進入衝撞區",
       "description": "Your and your opponent’s front 2 rows are The Pit. Allies gain 3% Attack Damage and Ability Power for every second they are in The Pit.",
-      "description_zh": "友軍位於戰場中央4排時，每秒可獲得3%物攻與魔攻。",
+      "description_zh": "你和對手的前兩排是衝撞區。友軍位於衝撞區時，每秒獲得3%物攻與魔攻。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -9737,7 +9783,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Your and your opponent’s front 2 rows are The Pit. Allies gain <TFTCurveTable row=\"AttackDamageAndAbilityPowerPerSecond\" format=\"percent\"/> Attack Damage and Ability Power for every second they are in The Pit.",
-        "description_zh": "友軍位於戰場中央4排時，每秒可獲得<TFTCurveTable row=\"AttackDamageAndAbilityPowerPerSecond\" format=\"percent\"/>物攻與魔攻。",
+        "description_zh": "你和對手的前兩排是衝撞區。友軍位於衝撞區時，每秒獲得<TFTCurveTable row=\"AttackDamageAndAbilityPowerPerSecond\" format=\"percent\"/>物攻與魔攻。",
         "curveValues": {
           "AttackDamageAndAbilityPowerPerSecond": [
             [
@@ -9964,7 +10010,7 @@
       "id": "DA_ZZRotAugment|CT_ZZRot|Gold|2-1,3-2,4-2",
       "apiName": "DA_ZZRotAugment",
       "name": "Zz'Rot Portal",
-      "name_zh": null,
+      "name_zh": "虛空之門",
       "description": "Gain a Zz'Rot Portal, an item which summons a large Voidspawn.",
       "description_zh": "獲得一道虛空之門，能召喚1隻巨型虛空蟲。",
       "tier": "Gold",
@@ -10115,8 +10161,8 @@
       "apiName": "DA_TheDropGold",
       "name": "The Drop II",
       "name_zh": "錢從天降II",
-      "description": "After 12 seconds of combat, your team heals 20% max Health and enemies take 12% max Health true damage.",
-      "description_zh": "戰鬥開始12秒後，我方隊伍回復20%最大生命，且敵軍受到12%最大生命的真實傷害。",
+      "description": "After 12 seconds of combat, your team heals 16% max Health and enemies take 12% max Health true damage.",
+      "description_zh": "戰鬥開始12秒後，我方隊伍回復16%最大生命，且敵軍受到12%最大生命的真實傷害。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -10142,7 +10188,7 @@
           "HealPercent": [
             [
               1,
-              0.2
+              0.16
             ]
           ],
           "DamagePercent": [
@@ -10174,7 +10220,7 @@
           "HealPercent": [
             [
               1,
-              0.2
+              0.16
             ]
           ],
           "NumLoot": [
@@ -10191,8 +10237,8 @@
       "apiName": "DA_TheDrop",
       "name": "The Drop",
       "name_zh": "電音高潮",
-      "description": "After 12 seconds of combat, your team heals 15% max Health and enemies take 8% max Health true damage.",
-      "description_zh": "戰鬥開始12秒後，我方隊伍回復15%最大生命，且敵軍受到8%最大生命的真實傷害。",
+      "description": "After 12 seconds of combat, your team heals 12% max Health and enemies take 8% max Health true damage.",
+      "description_zh": "戰鬥開始12秒後，我方隊伍回復12%最大生命，且敵軍受到8%最大生命的真實傷害。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -10218,7 +10264,7 @@
           "HealPercent": [
             [
               1,
-              0.15
+              0.12
             ]
           ],
           "DamagePercent": [
@@ -10250,7 +10296,7 @@
           "HealPercent": [
             [
               1,
-              0.15
+              0.12
             ]
           ],
           "NumLoot": [
@@ -10473,7 +10519,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Your team gains <TFTCurveTable row=\"Health\"/> Health, <TFTCurveTable row=\"ADAP\" format=\"percent\"/> Attack Damage, <TFTCurveTable row=\"ADAP\" format=\"percent\"/> Ability Power, <TFTCurveTable row=\"Resists\"/> Armor, <TFTCurveTable row=\"Resists\"/> Magic Resist, <TFTCurveTable row=\"AttackSpeed\" format=\"percentMinusOne\"/> Attack Speed, and <TFTCurveTable row=\"Mana\"/> Mana.",
-        "description_zh": "我方隊伍獲得<TFTCurveTable row=\"Health\"/>生命、<TFTCurveTable row=\"ADAP\" format=\"percent\"/>物攻、<TFTCurveTable row=\"ADAP\" format=\"percent\"/>魔攻、<TFTCurveTable row=\"Resists\"/>物防、<TFTCurveTable row=\"Resists\"/>魔防、<TFTCurveTable row=\"AttackSpeed\" format=\"percentMinusOne\"/>攻速及<TFTCurveTable row=\"Mana\"/>魔力。 ",
+        "description_zh": "我方隊伍獲得<TFTCurveTable row=\"Health\"/>生命、<TFTCurveTable row=\"ADAP\" format=\"percent\"/>物攻、<TFTCurveTable row=\"ADAP\" format=\"percent\"/>魔攻、<TFTCurveTable row=\"Resists\"/>物防、<TFTCurveTable row=\"Resists\"/>魔防、<TFTCurveTable row=\"AttackSpeed\" format=\"percentMinusOne\"/>攻速及<TFTCurveTable row=\"Mana\"/>魔力。",
         "curveValues": {
           "Health": [
             [
@@ -10979,9 +11025,9 @@
       "id": "DA_WorldTour|CT_WorldTour|Silver|2-1",
       "apiName": "DA_WorldTour",
       "name": "World Tour",
-      "name_zh": null,
+      "name_zh": "世界巡迴",
       "description": "After every 7 player combats, gain a completed item anvil.",
-      "description_zh": "每7場玩家戰鬥後，獲得一個完整道具鐵砧。",
+      "description_zh": "每7場玩家戰鬥後，獲得1個完整道具鐵砧。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -10995,7 +11041,7 @@
       "dynamic": false,
       "source_data": {
         "description": "After every <TFTCurveTable row=\"CombatInterval\"/> player combats, gain a completed item anvil.",
-        "description_zh": "每<TFTCurveTable row=\"CombatInterval\"/>場玩家戰鬥後，獲得一個完整道具鐵砧。",
+        "description_zh": "每<TFTCurveTable row=\"CombatInterval\"/>場玩家戰鬥後，獲得1個完整道具鐵砧。",
         "curveValues": {
           "CombatInterval": [
             [
@@ -11932,7 +11978,7 @@
       "id": "DA_Staffsmith|CT_Staffsmith|Gold|4-2",
       "apiName": "DA_Staffsmith",
       "name": "Staffsmith II",
-      "name_zh": null,
+      "name_zh": "杖匠II",
       "description": "Gain 1 random completed item that builds from Needlessly Large Rod now and another in 1 round.",
       "description_zh": "立即獲得1件由巨型魔棒合成的隨機完整道具，並於1回合後再獲得1件。",
       "tier": "Gold",
@@ -13449,8 +13495,8 @@
       "apiName": "DA_InfinityProtection",
       "name": "Infinity Protection",
       "name_zh": "無限守護",
-      "description": "Gain 3 gold now. On Stage 3-7, gain an Infinity Force. Infinity Force gives allies in the same row a 12% Health shield.\n\nMonsters Attack Championship, 2023",
-      "description_zh": "立即獲得3金錢。在3-7階段，獲得1個無盡之力。「無盡之力」會賦予同一排的友軍等同12%生命的護盾。\n\n2023《怪物來襲！》冠軍賽",
+      "description": "Gain 5 gold now. On Stage 3-7, gain an Infinity Force. Infinity Force gives allies in the same row a 15% Health shield.\n\nMonsters Attack Championship, 2023",
+      "description_zh": "立即獲得5金錢。在3-7階段，獲得1個無盡之力。「無盡之力」會賦予同一排的友軍等同15%生命的護盾。\n\n2023《怪物來襲！》冠軍賽",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -13469,7 +13515,7 @@
           "GoldAmount": [
             [
               1,
-              3
+              5
             ]
           ],
           "UnlockStage": [
@@ -13487,7 +13533,7 @@
           "HealthPercent": [
             [
               1,
-              0.12
+              0.15
             ]
           ]
         },
@@ -13495,13 +13541,13 @@
           "GoldAmount": [
             [
               1,
-              3
+              5
             ]
           ],
           "HealthPercent": [
             [
               1,
-              0.12
+              0.15
             ]
           ],
           "UnlockStage": [
@@ -13671,7 +13717,7 @@
       "name": "Latent Forge",
       "name_zh": "潛在火爐",
       "description": "After 8 player combats, gain an Artifact Anvil.",
-      "description_zh": "在8個玩家對戰回合後，獲得1個神器鐵砧。",
+      "description_zh": "在8個玩家戰鬥回合後，獲得1個神器鐵砧。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -13685,7 +13731,7 @@
       "dynamic": false,
       "source_data": {
         "description": "After <TFTCurveTable row=\"WaitRounds\"/> player combats, gain an Artifact Anvil.",
-        "description_zh": "在<TFTCurveTable row=\"WaitRounds\"/>個玩家對戰回合後，獲得1個神器鐵砧。",
+        "description_zh": "在<TFTCurveTable row=\"WaitRounds\"/>個玩家戰鬥回合後，獲得1個神器鐵砧。",
         "curveValues": {
           "WaitRounds": [
             [
@@ -14406,12 +14452,87 @@
       }
     },
     {
+      "id": "DA_PandorasItemsIIMinus|CT_PandorasItems|Gold|2-1",
+      "apiName": "DA_PandorasItemsIIMinus",
+      "name": "Pandora's Items II",
+      "name_zh": "潘朵拉的道具 II",
+      "description": "Round start: items on your bench are randomized.\n\nGain 2 random components and 1 gold.",
+      "description_zh": "回合開始：我方備戰區中的道具將隨機變化。\n\n獲得2個隨機組件和1金錢。",
+      "tier": "Gold",
+      "type": "regular",
+      "rounds": [
+        "2-1"
+      ],
+      "traits": [],
+      "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_pandorasitems.png",
+      "missing_values": [],
+      "missing_values_zh": [],
+      "conflicting_values": [],
+      "dynamic": false,
+      "source_data": {
+        "description": "Round start: items on your bench are randomized.\r\n\r\nGain <TFTCurveTable row=\"NumberOfComponentsII\"/> random components and <TFTCurveTable row=\"GoldAmountIIMinus\"/> gold.",
+        "description_zh": "回合開始：我方備戰區中的道具將隨機變化。\r\n\r\n獲得<TFTCurveTable row=\"NumberOfComponentsII\"/>個隨機組件和<TFTCurveTable row=\"GoldAmountIIMinus\"/>金錢。",
+        "curveValues": {
+          "NumberOfComponentsII": [
+            [
+              1,
+              2
+            ]
+          ],
+          "GoldAmountIIMinus": [
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "curveTable": {
+          "NumberOfComponentsII": [
+            [
+              1,
+              2
+            ]
+          ],
+          "NumberOfRadiantItemsIII": [
+            [
+              1,
+              1
+            ]
+          ],
+          "NumberOfComponentsI": [
+            [
+              1,
+              1
+            ]
+          ],
+          "GoldAmountIIPlus": [
+            [
+              1,
+              4
+            ]
+          ],
+          "GoldAmountIIPlusPlus": [
+            [
+              1,
+              7
+            ]
+          ],
+          "GoldAmountIIMinus": [
+            [
+              1,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "DA_PandorasItemsIIPlus|CT_PandorasItems|Gold|3-2",
       "apiName": "DA_PandorasItemsIIPlus",
       "name": "Pandora's Items II+",
       "name_zh": "潘朵拉的道具II+",
       "description": "Round start: items on your bench are randomized.\n\nGain 2 random components and 4 gold.",
-      "description_zh": "回合開始：我方備戰區中的道具將隨機變化。\n\n獲得2個隨機組件及4金錢。",
+      "description_zh": "回合開始：我方備戰區中的道具將隨機變化。\n\n獲得2個隨機組件和4金錢。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -14425,7 +14546,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Round start: items on your bench are randomized.\r\n\r\nGain <TFTCurveTable row=\"NumberOfComponentsII\"/> random components and <TFTCurveTable row=\"GoldAmountIIPlus\"/> gold.",
-        "description_zh": "回合開始：我方備戰區中的道具將隨機變化。\r\n\r\n獲得<TFTCurveTable row=\"NumberOfComponentsII\"/>個隨機組件及<TFTCurveTable row=\"GoldAmountIIPlus\"/>金錢。",
+        "description_zh": "回合開始：我方備戰區中的道具將隨機變化。\r\n\r\n獲得<TFTCurveTable row=\"NumberOfComponentsII\"/>個隨機組件和<TFTCurveTable row=\"GoldAmountIIPlus\"/>金錢。",
         "curveValues": {
           "NumberOfComponentsII": [
             [
@@ -14437,6 +14558,81 @@
             [
               1,
               4
+            ]
+          ]
+        },
+        "curveTable": {
+          "NumberOfComponentsII": [
+            [
+              1,
+              2
+            ]
+          ],
+          "NumberOfRadiantItemsIII": [
+            [
+              1,
+              1
+            ]
+          ],
+          "NumberOfComponentsI": [
+            [
+              1,
+              1
+            ]
+          ],
+          "GoldAmountIIPlus": [
+            [
+              1,
+              4
+            ]
+          ],
+          "GoldAmountIIPlusPlus": [
+            [
+              1,
+              7
+            ]
+          ],
+          "GoldAmountIIMinus": [
+            [
+              1,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "DA_PandorasItemsIIPlusPlus|CT_PandorasItems|Gold|4-2",
+      "apiName": "DA_PandorasItemsIIPlusPlus",
+      "name": "Pandora's Items II++",
+      "name_zh": "潘朵拉的道具II++",
+      "description": "Round start: items on your bench are randomized.\n\nGain 2 random components and 7 gold.",
+      "description_zh": "回合開始：我方備戰區中的道具將隨機變化。\n\n獲得2個隨機組件和7金錢。",
+      "tier": "Gold",
+      "type": "regular",
+      "rounds": [
+        "4-2"
+      ],
+      "traits": [],
+      "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_pandorasitems.png",
+      "missing_values": [],
+      "missing_values_zh": [],
+      "conflicting_values": [],
+      "dynamic": false,
+      "source_data": {
+        "description": "Round start: items on your bench are randomized.\r\n\r\nGain <TFTCurveTable row=\"NumberOfComponentsII\"/> random components and <TFTCurveTable row=\"GoldAmountIIPlusPlus\"/> gold.",
+        "description_zh": "回合開始：我方備戰區中的道具將隨機變化。\r\n\r\n獲得<TFTCurveTable row=\"NumberOfComponentsII\"/>個隨機組件和<TFTCurveTable row=\"GoldAmountIIPlusPlus\"/>金錢。",
+        "curveValues": {
+          "NumberOfComponentsII": [
+            [
+              1,
+              2
+            ]
+          ],
+          "GoldAmountIIPlusPlus": [
+            [
+              1,
+              7
             ]
           ]
         },
@@ -15480,8 +15676,8 @@
       "apiName": "DA_SpiritOfRedemption",
       "name": "Spirit Of Redemption",
       "name_zh": "靈魂救贖",
-      "description": "Gain a Spirit Visage. Every 5 seconds, Spirit Visage heals allies within 1 hex for 9% of their missing Health.",
-      "description_zh": "獲得1件振奮盔甲。每5秒，振奮盔甲會治療1格內的友軍，治療量等同於其已損失生命的9%。",
+      "description": "Gain a Spirit Visage. Every 5 seconds, Spirit Visage heals allies within 1 hex for 8% of their missing Health.",
+      "description_zh": "獲得1件振奮盔甲。每5秒，振奮盔甲會治療1格內的友軍，治療量等同於其已損失生命的8%。",
       "tier": "Gold",
       "type": "regular",
       "rounds": [
@@ -15513,7 +15709,7 @@
           "PercentMissingHealth": [
             [
               1,
-              0.09
+              0.08
             ]
           ]
         },
@@ -15527,7 +15723,7 @@
           "PercentMissingHealth": [
             [
               1,
-              0.09
+              0.08
             ]
           ],
           "HexRange": [
@@ -16503,7 +16699,7 @@
       "id": "DA_Annie19_HeroAugment||Gold|2-1",
       "apiName": "DA_Annie19_HeroAugment",
       "name": "Tibbers! I Can't See the Stage",
-      "name_zh": null,
+      "name_zh": "泰貝爾！我看不到舞台",
       "description": "Gain an Annie and unlock Tibbers. Your strongest Annie becomes a Magic Caster that leaps onto your strongest Tibbers at the start of combat.",
       "description_zh": "獲得1個安妮並解鎖泰貝爾。我方最強大的安妮變成魔攻法師，在戰鬥開始時跳到我方最強大的泰貝爾身上。",
       "tier": "Gold",
@@ -16530,7 +16726,7 @@
       "name": "Bite Marks",
       "name_zh": "咬痕",
       "description": "Gain an Elise. Your strongest Elise becomes a Magic Assassin with a bite that she recasts on low Health enemies on kill.",
-      "description_zh": null,
+      "description_zh": "獲得1個伊莉絲。我方最強大的伊莉絲變成魔攻刺客，她的撕咬攻擊擊殺殘血敵軍後即可再次使用。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -16544,7 +16740,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain an Elise. Your strongest Elise becomes a Magic Assassin with a bite that she recasts on low Health enemies on kill.",
-        "description_zh": "Gain an Elise. Your strongest Elise becomes a Magic Assassin with a bite that she recasts on low Health enemies on kill.",
+        "description_zh": "獲得1個伊莉絲。我方最強大的伊莉絲變成魔攻刺客，她的撕咬攻擊擊殺殘血敵軍後即可再次使用。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -16555,7 +16751,7 @@
       "name": "He's Electric",
       "name_zh": "他是閃電使者",
       "description": "Gain a Kennen. Your strongest Kennen becomes a Magic Assassin who permanently adds True Damage to his Ability on kills.",
-      "description_zh": "獲得1個凱能。我方最強大的凱能變成魔法刺客，每次擊殺都會使其技能永久增加真實傷害。",
+      "description_zh": "獲得1個凱能。我方最強大的凱能變成魔攻刺客，每次擊殺都會使其技能永久增加真實傷害。",
       "tier": "Silver",
       "type": "regular",
       "rounds": [
@@ -16569,7 +16765,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Kennen. Your strongest Kennen becomes a Magic Assassin who permanently adds True Damage to his Ability on kills.",
-        "description_zh": "獲得1個凱能。我方最強大的凱能變成魔法刺客，每次擊殺都會使其技能永久增加真實傷害。",
+        "description_zh": "獲得1個凱能。我方最強大的凱能變成魔攻刺客，每次擊殺都會使其技能永久增加真實傷害。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -16680,7 +16876,7 @@
       "name": "Arcanist Circlet",
       "name_zh": "奧術大師之環",
       "description": "Gain an Arcanist Emblem, a Tear of the Goddess, and a Swain.",
-      "description_zh": "獲得1枚奧術大師徽章、1滴女神之淚及1個阿璃。",
+      "description_zh": "獲得1枚奧術大師徽章、1滴女神之淚及1個斯溫。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -16701,7 +16897,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain an Arcanist Emblem, a Tear of the Goddess, and a Swain.",
-        "description_zh": "獲得1枚奧術大師徽章、1滴女神之淚及1個阿璃。",
+        "description_zh": "獲得1枚奧術大師徽章、1滴女神之淚及1個斯溫。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -16881,7 +17077,7 @@
       "name": "Rock Circlet",
       "name_zh": "搖滾樂之環",
       "description": "Gain a Rock Emblem, a Needlessly Large Rod, and a Swain.",
-      "description_zh": "獲得1枚搖滾樂徽章、1把巨型魔棒及1個洛克。",
+      "description_zh": "獲得1枚搖滾樂徽章、1把巨型魔棒及1個斯溫。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -16902,7 +17098,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Rock Emblem, a Needlessly Large Rod, and a Swain.",
-        "description_zh": "獲得1枚搖滾樂徽章、1把巨型魔棒及1個洛克。",
+        "description_zh": "獲得1枚搖滾樂徽章、1把巨型魔棒及1個斯溫。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -16944,7 +17140,7 @@
       "name": "Deathbringer",
       "name_zh": "冥使威壓",
       "description": "Every 2 takedowns by Rock champions or the Infernal Idol permanently grants him 15 Health and 2% Attack Damage and Ability Power. Gain a Varus, an Olaf, and a Camille.",
-      "description_zh": "搖滾樂英雄或煉獄偶像每參與擊殺2次，永久獲得15生命和2%物攻與魔攻。獲得3名搖滾樂英雄。",
+      "description_zh": "搖滾樂英雄或煉獄偶像每參與擊殺2次，永久獲得15生命和2%物攻與魔攻。獲得1個法洛士、1個歐拉夫及1個卡蜜兒。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -16964,7 +17160,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Every <TFTCurveTable row=\"TakedownsPerStack\" precision=\"0\"/> takedowns by Rock champions or the Infernal Idol permanently grants him <TFTCurveTable row=\"HealthPerStack\" precision=\"0\"/> Health and <TFTCurveTable row=\"AttackDamagePerStack\"/>% Attack Damage and Ability Power. Gain a Varus, an Olaf, and a Camille.",
-        "description_zh": "搖滾樂英雄或煉獄偶像每參與擊殺<TFTCurveTable row=\"TakedownsPerStack\" precision=\"0\"/>次，永久獲得<TFTCurveTable row=\"HealthPerStack\" precision=\"0\"/>生命和<TFTCurveTable row=\"AttackDamagePerStack\"/>%物攻與魔攻。獲得3名搖滾樂英雄。",
+        "description_zh": "搖滾樂英雄或煉獄偶像每參與擊殺<TFTCurveTable row=\"TakedownsPerStack\" precision=\"0\"/>次，永久獲得<TFTCurveTable row=\"HealthPerStack\" precision=\"0\"/>生命和<TFTCurveTable row=\"AttackDamagePerStack\"/>%物攻與魔攻。獲得1個法洛士、1個歐拉夫及1個卡蜜兒。",
         "curveValues": {
           "TakedownsPerStack": [
             [
@@ -17013,7 +17209,7 @@
       "name": "Rock All Nite",
       "name_zh": "徹夜搖滾",
       "description": "Rock champions gain 10% Attack Damage and Ability Power. Every 2 seconds the Infernal Idol lives, they gain 1% more. Gain a Varus, an Olaf, and a Camille.",
-      "description_zh": null,
+      "description_zh": "搖滾樂英雄增加10%物攻和魔攻。煉獄偶像每存活2秒，再增加1%。獲得1個法洛士、1個歐拉夫及1個卡蜜兒。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -17035,7 +17231,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Rock champions gain <TFTCurveTable row=\"ArrivalAttackDamage\"/>% Attack Damage and Ability Power. Every <TFTCurveTable row=\"RampIntervalSeconds\"/> seconds the Infernal Idol lives, they gain <TFTCurveTable row=\"RampPercent\"/>% more. Gain a Varus, an Olaf, and a Camille.",
-        "description_zh": "Rock champions gain <TFTCurveTable row=\"ArrivalAttackDamage\"/>% Attack Damage and Ability Power. Every <TFTCurveTable row=\"RampIntervalSeconds\"/> seconds the Infernal Idol lives, they gain <TFTCurveTable row=\"RampPercent\"/>% more. Gain a Varus, an Olaf, and a Camille.",
+        "description_zh": "搖滾樂英雄增加<TFTCurveTable row=\"ArrivalAttackDamage\"/>%物攻和魔攻。煉獄偶像每存活<TFTCurveTable row=\"RampIntervalSeconds\"/>秒，再增加<TFTCurveTable row=\"RampPercent\"/>%。獲得1個法洛士、1個歐拉夫及1個卡蜜兒。",
         "curveValues": {
           "ArrivalAttackDamage": [
             [
@@ -17147,7 +17343,7 @@
       "name": "Big Solo",
       "name_zh": "單打獨鬥",
       "description": "Your Heartsteel Biases gain 150% more of all active Heartsteel bonuses. Gain a Sett, a Kayn, and an Ezreal.",
-      "description_zh": "我方心鋼之聲偏好英雄會額外獲得150%所有已啟用的心鋼之聲加成。獲得3名心鋼之聲英雄。",
+      "description_zh": "我方心鋼之聲本命英雄額外獲得150%所有已啟用的心鋼之聲加成。獲得1個賽特、1個慨影及1個伊澤瑞爾。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -17169,7 +17365,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Your Heartsteel Biases gain <TFTCurveTable row=\"ActiveBonusPercentIncrease\" format=\"percent\"/> more of all active Heartsteel bonuses. Gain a Sett, a Kayn, and an Ezreal.",
-        "description_zh": "我方心鋼之聲偏好英雄會額外獲得<TFTCurveTable row=\"ActiveBonusPercentIncrease\" format=\"percent\"/>所有已啟用的心鋼之聲加成。獲得<TFTCurveTable row=\"NumChampsToGive\"/>名心鋼之聲英雄。",
+        "description_zh": "我方心鋼之聲本命英雄額外獲得<TFTCurveTable row=\"ActiveBonusPercentIncrease\" format=\"percent\"/>所有已啟用的心鋼之聲加成。獲得1個賽特、1個慨影及1個伊澤瑞爾。",
         "curveValues": {
           "ActiveBonusPercentIncrease": [
             [
@@ -17200,7 +17396,7 @@
       "name": "Heartsteel Circlet",
       "name_zh": "心鋼之聲之環",
       "description": "Gain a Heartsteel Emblem, a Sparring Gloves, and a K'Sante.",
-      "description_zh": null,
+      "description_zh": "獲得1枚心鋼之聲徽章、1副格鬥手套及1個卡桑帝。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -17221,7 +17417,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Heartsteel Emblem, a Sparring Gloves, and a K'Sante.",
-        "description_zh": "Gain a Heartsteel Emblem, a Sparring Gloves, and a K'Sante.",
+        "description_zh": "獲得1枚心鋼之聲徽章、1副格鬥手套及1個卡桑帝。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -17261,9 +17457,9 @@
       "id": "DA_19_HeartsteelPrismaticTour||Prismatic|2-1",
       "apiName": "DA_19_HeartsteelPrismaticTour",
       "name": "Heartsteel Prismatic Tour",
-      "name_zh": null,
+      "name_zh": "心鋼之聲稜鏡巡演",
       "description": "Gain the Heartsteel Prismatic Quest, 3 Heartsteel champions, a Lucky Item Chest, and 7 gold.\n\nHave Heartsteel allies deal damage, block damage, and heal health with 7 Heartsteel active!",
-      "description_zh": null,
+      "description_zh": "獲得心鋼之聲稜鏡任務、3名心鋼之聲英雄、1個幸運道具寶箱及7金錢。\n\n啟動(7)心鋼之聲時，使用心鋼之聲友軍造成傷害、格擋傷害和回復生命！",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -17283,7 +17479,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain the Heartsteel Prismatic Quest, 3 Heartsteel champions, a Lucky Item Chest, and 7 gold.\r\n\r\n<rules>Have Heartsteel allies deal damage, block damage, and heal health with 7 Heartsteel active!</>",
-        "description_zh": "Gain the Heartsteel Prismatic Quest, 3 Heartsteel champions, a Lucky Item Chest, and 7 gold.\r\n\r\n<rules>Have Heartsteel allies deal damage, block damage, and heal health with 7 Heartsteel active!</>",
+        "description_zh": "獲得心鋼之聲稜鏡任務、3名心鋼之聲英雄、1個幸運道具寶箱及7金錢。\r\n\r\n<rules>啟動(7)心鋼之聲時，使用心鋼之聲友軍造成傷害、格擋傷害和回復生命！</>",
         "curveValues": {},
         "curveTable": {}
       }
@@ -17326,7 +17522,7 @@
       "name": "Small Squad",
       "name_zh": "小分隊",
       "description": "When you field 3 or fewer Heartsteel champions, increase their bonuses by 125%. Gain a Sett and an Ezreal.",
-      "description_zh": "當你場上有3名或更少的心鋼之聲英雄時，其加成會提升125%。獲得2名心鋼之聲英雄。",
+      "description_zh": "部署3名以下心鋼之聲英雄時，其加成會提升125%。獲得1個賽特及1個伊澤瑞爾。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -17348,7 +17544,7 @@
       "dynamic": false,
       "source_data": {
         "description": "When you field <TFTCurveTable row=\"MaxHeartsteelChamps\"/> or fewer Heartsteel champions, increase their bonuses by <TFTCurveTable row=\"BonusPercentIncrease\" format=\"percent\"/>. Gain a Sett and an Ezreal.",
-        "description_zh": "當你場上有<TFTCurveTable row=\"MaxHeartsteelChamps\"/>名或更少的心鋼之聲英雄時，其加成會提升<TFTCurveTable row=\"BonusPercentIncrease\" format=\"percent\"/>。獲得<TFTCurveTable row=\"NumChampsToGive\"/>名心鋼之聲英雄。",
+        "description_zh": "部署<TFTCurveTable row=\"MaxHeartsteelChamps\"/>名以下心鋼之聲英雄時，其加成會提升<TFTCurveTable row=\"BonusPercentIncrease\" format=\"percent\"/>。獲得1個賽特及1個伊澤瑞爾。",
         "curveValues": {
           "MaxHeartsteelChamps": [
             [
@@ -17390,8 +17586,8 @@
       "apiName": "DA_Heavenscale19_TheImmortalJourney",
       "name": "The Immortal Journey",
       "name_zh": "無盡旅程",
-      "description": "Gain a Xayah, a Spear of Shojin and 6 gold.",
-      "description_zh": "獲得1個剎雅、1把精進之矛及6金錢。",
+      "description": "Gain a Xayah, a Spear of Shojin and 10 gold.",
+      "description_zh": "獲得1個剎雅、1把精進之矛及10金錢。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -17416,7 +17612,7 @@
           "GoldAmount": [
             [
               1,
-              6
+              10
             ]
           ]
         },
@@ -17424,7 +17620,7 @@
           "GoldAmount": [
             [
               1,
-              6
+              10
             ]
           ]
         }
@@ -17436,7 +17632,7 @@
       "name": "Hitmaker Circlet",
       "name_zh": "金曲製造機之環",
       "description": "Gain a Hitmaker Emblem, a B.F. Sword, and a Senna.",
-      "description_zh": null,
+      "description_zh": "獲得1枚金曲製造機徽章、1把暴風之劍及1個姍娜。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -17457,7 +17653,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Hitmaker Emblem, a B.F. Sword, and a Senna.",
-        "description_zh": "Gain a Hitmaker Emblem, a B.F. Sword, and a Senna.",
+        "description_zh": "獲得1枚金曲製造機徽章、1把暴風之劍及1個姍娜。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -17531,7 +17727,7 @@
       "name": "Illbeats Crown",
       "name_zh": "Illbeats之冠",
       "description": "Gain an Illbeats Emblem, a Spear of Shojin, and a Draven.",
-      "description_zh": "獲得1枚Illbeats徽章、1個石像鬼磐核及1個布郎姆。",
+      "description_zh": "獲得1枚Illbeats徽章、1把精進之矛及1個達瑞文。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -17551,7 +17747,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain an Illbeats Emblem, a Spear of Shojin, and a Draven.",
-        "description_zh": "獲得1枚Illbeats徽章、1個石像鬼磐核及1個布郎姆。",
+        "description_zh": "獲得1枚Illbeats徽章、1把精進之矛及1個達瑞文。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -17560,9 +17756,9 @@
       "id": "DA_19_IonicSparkCirclet||Prismatic|3-2,4-2",
       "apiName": "DA_19_IonicSparkCirclet",
       "name": "Ionic Spark Circlet",
-      "name_zh": "離子星火之環",
+      "name_zh": "Ionic Spark之環",
       "description": "Gain an Ionic Spark Emblem, a Needlessly Large Rod, and a Briar.",
-      "description_zh": null,
+      "description_zh": "獲得1枚Ionic Spark徽章、1把巨型魔棒及1個布蕾爾。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -17583,7 +17779,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain an Ionic Spark Emblem, a Needlessly Large Rod, and a Briar.",
-        "description_zh": "Gain an Ionic Spark Emblem, a Needlessly Large Rod, and a Briar.",
+        "description_zh": "獲得1枚Ionic Spark徽章、1把巨型魔棒及1個布蕾爾。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -17594,7 +17790,7 @@
       "name": "Ionic Spark Crown",
       "name_zh": "Ionic Spark之冠",
       "description": "Gain an Ionic Spark Emblem, a Negatron Cloak, and an Elise.",
-      "description_zh": "獲得1枚Ionic Spark徽章、1個離子星火及1個安妮。",
+      "description_zh": "獲得1枚Ionic Spark徽章、1件負極斗篷及1個伊莉絲。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -17614,7 +17810,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain an Ionic Spark Emblem, a Negatron Cloak, and an Elise.",
-        "description_zh": "獲得1枚Ionic Spark徽章、1個離子星火及1個安妮。",
+        "description_zh": "獲得1枚Ionic Spark徽章、1件負極斗篷及1個伊莉絲。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -17624,8 +17820,8 @@
       "apiName": "DA_IonicSpark19_ForeverBurningBrighter",
       "name": "Forever Burning Brighter",
       "name_zh": "永遠熾亮燃燒",
-      "description": "Your Ionic Spark champions gain 8% Attack Damage and Ability Power, increased permanently by 1% for every 30 gifts given by fans. Gain an Elise, a Yunara, and an Annie.",
-      "description_zh": "我方Ionic Spark英雄增加8%物攻和魔攻，粉絲每贈送30份禮物，該加成永久提升1%。獲得3名Ionic Spark英雄。",
+      "description": "Your Ionic Spark champions gain 5% Attack Damage and Ability Power, increased permanently by 1% for every 50 gifts given by fans. Gain an Elise, a Yunara, and an Annie.",
+      "description_zh": "我方Ionic Spark英雄增加5%物攻和魔攻，粉絲每贈送50份禮物，該加成永久提升1%。獲得1個伊莉絲、1個尤娜拉及1個安妮。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -17645,12 +17841,12 @@
       "dynamic": false,
       "source_data": {
         "description": "Your Ionic Spark champions gain <TFTCurveTable row=\"BaseBonusPercent\" precision=\"0\"/>% Attack Damage and Ability Power, increased permanently by <TFTCurveTable row=\"BonusPercentPerStep\" precision=\"0\"/>% for every <TFTCurveTable row=\"GiftsPerStep\" precision=\"0\"/> gifts given by fans. Gain an Elise, a Yunara, and an Annie.",
-        "description_zh": "我方Ionic Spark英雄增加<TFTCurveTable row=\"BaseBonusPercent\" precision=\"0\"/>%物攻和魔攻，粉絲每贈送<TFTCurveTable row=\"GiftsPerStep\" precision=\"0\"/>份禮物，該加成永久提升<TFTCurveTable row=\"BonusPercentPerStep\" precision=\"0\"/>%。獲得3名Ionic Spark英雄。",
+        "description_zh": "我方Ionic Spark英雄增加<TFTCurveTable row=\"BaseBonusPercent\" precision=\"0\"/>%物攻和魔攻，粉絲每贈送<TFTCurveTable row=\"GiftsPerStep\" precision=\"0\"/>份禮物，該加成永久提升<TFTCurveTable row=\"BonusPercentPerStep\" precision=\"0\"/>%。獲得1個伊莉絲、1個尤娜拉及1個安妮。",
         "curveValues": {
           "BaseBonusPercent": [
             [
               0,
-              8
+              5
             ]
           ],
           "BonusPercentPerStep": [
@@ -17662,7 +17858,7 @@
           "GiftsPerStep": [
             [
               0,
-              30
+              50
             ]
           ]
         },
@@ -17670,13 +17866,13 @@
           "BaseBonusPercent": [
             [
               0,
-              8
+              5
             ]
           ],
           "GiftsPerStep": [
             [
               0,
-              30
+              50
             ]
           ],
           "BonusPercentPerStep": [
@@ -17694,7 +17890,7 @@
       "name": "Ionic Spark Prismatic Tour",
       "name_zh": "Ionic Spark稜鏡巡演",
       "description": "Gain the Ionic Spark Prismatic Quest, 3 Ionic Spark champions, a Lucky Item Chest, and 7 gold.\n\nWith 7 Ionic Spark active, collect album signatures over 10 rounds, then field 10 Ionic Spark!",
-      "description_zh": null,
+      "description_zh": "獲得離子星火稜鏡任務、3名離子星火英雄、1個幸運道具寶箱與7金錢。\n\n啟動(7)離子星火時，持續10回合收集專輯簽名，然後部署(10)離子星火！",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -17714,7 +17910,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain the Ionic Spark Prismatic Quest, 3 Ionic Spark champions, a Lucky Item Chest, and 7 gold.\r\n\r\n<rules>With 7 Ionic Spark active, collect album signatures over 10 rounds, then field 10 Ionic Spark!</>",
-        "description_zh": "Gain the Ionic Spark Prismatic Quest, 3 Ionic Spark champions, a Lucky Item Chest, and 7 gold.\r\n\r\n<rules>With 7 Ionic Spark active, collect album signatures over 10 rounds, then field 10 Ionic Spark!</>",
+        "description_zh": "獲得離子星火稜鏡任務、3名離子星火英雄、1個幸運道具寶箱與7金錢。\r\n\r\n<rules>啟動(7)離子星火時，持續10回合收集專輯簽名，然後部署(10)離子星火！</>",
         "curveValues": {},
         "curveTable": {}
       }
@@ -17723,7 +17919,7 @@
       "id": "DA_19_IonicSparkPrismaticTourPlus||Prismatic|3-2,4-2",
       "apiName": "DA_19_IonicSparkPrismaticTourPlus",
       "name": "Ionic Spark Prismatic Tour+",
-      "name_zh": null,
+      "name_zh": "Ionic Spark稜鏡巡演+",
       "description": "Gain the Ionic Spark Prismatic Quest, 3 Ionic Spark champions, 2 components, and 10 gold.\n\nWith 7 Ionic Spark active, collect album signatures over 10 rounds, then field 10 Ionic Spark!",
       "description_zh": "獲得Ionic Spark稜鏡任務、3名Ionic Spark英雄、2個組件與10金錢。\n\n啟用7 Ionic Spark時，持續10回合收集專輯簽名，然後部署10個Ionic Spark！",
       "tier": "Prismatic",
@@ -17757,7 +17953,7 @@
       "name": "Light up the Sky",
       "name_zh": "點亮星空",
       "description": "Every 3 seconds, the 3 highest Health enemies take 5% max Health magic damage + 1% for every Ionic Spark champion you have fielded. Gain an Elise, a Yunara, and an Annie.",
-      "description_zh": "每3秒，生命值最高的3名敵軍會受到5%最大生命的魔法傷害，場上每有一位Ionic Spark英雄，傷害增加1%。獲得3名Ionic Spark英雄。",
+      "description_zh": "每3秒，生命值最高的3名敵軍會受到5%最大生命的魔法傷害，場上每有一位Ionic Spark英雄，傷害增加1%。獲得1個伊莉絲、1個尤娜拉及1個安妮。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -17779,7 +17975,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Every <TFTCurveTable row=\"IntervalSeconds\" precision=\"0\"/> seconds, the <TFTCurveTable row=\"TargetCount\"/> highest Health enemies take <TFTCurveTable row=\"DamagePercentBase\" format=\"p\"/> max Health magic damage + <TFTCurveTable row=\"DamagePercentPerChampion\" format=\"p\"/> for every Ionic Spark champion you have fielded. Gain an Elise, a Yunara, and an Annie.",
-        "description_zh": "每<TFTCurveTable row=\"IntervalSeconds\" precision=\"0\"/>秒，生命值最高的<TFTCurveTable row=\"TargetCount\"/>名敵軍會受到<TFTCurveTable row=\"DamagePercentBase\" format=\"p\"/>最大生命的魔法傷害，場上每有一位Ionic Spark英雄，傷害增加<TFTCurveTable row=\"DamagePercentPerChampion\" format=\"p\"/>。獲得3名Ionic Spark英雄。",
+        "description_zh": "每<TFTCurveTable row=\"IntervalSeconds\" precision=\"0\"/>秒，生命值最高的<TFTCurveTable row=\"TargetCount\"/>名敵軍會受到<TFTCurveTable row=\"DamagePercentBase\" format=\"p\"/>最大生命的魔法傷害，場上每有一位Ionic Spark英雄，傷害增加<TFTCurveTable row=\"DamagePercentPerChampion\" format=\"p\"/>。獲得1個伊莉絲、1個尤娜拉及1個安妮。",
         "curveValues": {
           "IntervalSeconds": [
             [
@@ -17839,8 +18035,8 @@
       "apiName": "DA_IonicSpark19_OurHeartsAligned",
       "name": "Our Hearts Aligned",
       "name_zh": "我們心心相印",
-      "description": "Every time Ionic Spark champions collectively spend 600 Mana, they all gain a 10% max Health Shield for 6 seconds. Gain an Elise, a Yunara, and an Annie.",
-      "description_zh": "每當Ionic Spark英雄總共消耗600魔力時，他們會獲得一個10%最大生命的護盾，持續6秒。獲得3名Ionic Spark英雄。",
+      "description": "Every time Ionic Spark champions collectively spend 650 Mana, they all gain a 10% max Health Shield for 6 seconds. Gain an Elise, a Yunara, and an Annie.",
+      "description_zh": "每當Ionic Spark英雄總共消耗650魔力，他們會獲得一個10%最大生命的護盾，持續6秒。獲得1個伊莉絲、1個尤娜拉及1個安妮。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -17861,12 +18057,12 @@
       "dynamic": false,
       "source_data": {
         "description": "Every time Ionic Spark champions collectively spend <TFTCurveTable row=\"ManaPerShield\" precision=\"0\"/> Mana, they all gain a <TFTCurveTable row=\"ShieldPercentMaxHealth\" format=\"p\"/> max Health Shield for <TFTCurveTable row=\"Duration\" precision=\"0\"/> seconds. Gain an Elise, a Yunara, and an Annie.",
-        "description_zh": "每當Ionic Spark英雄總共消耗<TFTCurveTable row=\"ManaPerShield\" precision=\"0\"/>魔力時，他們會獲得一個<TFTCurveTable row=\"ShieldPercentMaxHealth\" format=\"p\"/>最大生命的護盾，持續<TFTCurveTable row=\"Duration\" precision=\"0\"/>秒。獲得3名Ionic Spark英雄。",
+        "description_zh": "每當Ionic Spark英雄總共消耗<TFTCurveTable row=\"ManaPerShield\" precision=\"0\"/>魔力，他們會獲得一個<TFTCurveTable row=\"ShieldPercentMaxHealth\" format=\"p\"/>最大生命的護盾，持續<TFTCurveTable row=\"Duration\" precision=\"0\"/>秒。獲得1個伊莉絲、1個尤娜拉及1個安妮。",
         "curveValues": {
           "ManaPerShield": [
             [
               0,
-              600
+              650
             ]
           ],
           "ShieldPercentMaxHealth": [
@@ -17886,7 +18082,7 @@
           "ManaPerShield": [
             [
               0,
-              600
+              650
             ]
           ],
           "ShieldPercentMaxHealth": [
@@ -17942,7 +18138,7 @@
       "name": "Jazz Crown",
       "name_zh": "爵士樂之冠",
       "description": "Gain a Jazz Emblem, a Spirit Visage, and a Galio.",
-      "description_zh": "獲得1枚爵士樂徽章、1把精進之矛及1個路西恩。",
+      "description_zh": "獲得1枚爵士樂徽章、1副振奮盔甲及1個加里歐。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -17962,7 +18158,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Jazz Emblem, a Spirit Visage, and a Galio.",
-        "description_zh": "獲得1枚爵士樂徽章、1把精進之矛及1個路西恩。",
+        "description_zh": "獲得1枚爵士樂徽章、1副振奮盔甲及1個加里歐。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -18019,7 +18215,7 @@
       "name": "K/DA Circlet",
       "name_zh": "K/DA之環",
       "description": "Gain a K/DA Emblem, a Needlessly Large Rod, and a Kai'Sa.",
-      "description_zh": "獲得1枚K/DA徽章、1把巨型魔棒及1個雷歐娜。",
+      "description_zh": "獲得1枚K/DA徽章、1把巨型魔棒及1個凱莎。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -18040,7 +18236,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a K/DA Emblem, a Needlessly Large Rod, and a Kai'Sa.",
-        "description_zh": "獲得1枚K/DA徽章、1把巨型魔棒及1個雷歐娜。",
+        "description_zh": "獲得1枚K/DA徽章、1把巨型魔棒及1個凱莎。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -18051,7 +18247,7 @@
       "name": "K/DA Crown",
       "name_zh": "K/DA之冠",
       "description": "Gain a K/DA Emblem, a Needlessly Large Rod, and a Neeko.",
-      "description_zh": "獲得一枚K/DA徽章、1個鬼索的狂暴之刃及1個凱莎。",
+      "description_zh": "獲得1枚K/DA徽章、1把巨型魔棒及1個妮可。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -18071,7 +18267,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a K/DA Emblem, a Needlessly Large Rod, and a Neeko.",
-        "description_zh": "獲得一枚K/DA徽章、1個鬼索的狂暴之刃及1個凱莎。",
+        "description_zh": "獲得1枚K/DA徽章、1把巨型魔棒及1個妮可。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -18102,7 +18298,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain the K/DA Prismatic Quest, 3 K/DA champions, 2 Tiny Duplicators, a Lesser Champion Duplicator, and 10 gold.\r\n\r\n<rules>Reach </><TFTCurveTable row=\"RequiredStarLevels\" style=\"rules\"/> <rules>star levels of K/DA champions!</>",
-        "description_zh": "獲得K/DA稜鏡任務、3名K/DA英雄、2個小小複製裝置、1個初級英雄複製裝置及10金錢。\r\n\r\n<rules>K/DA英雄總星等達到<TFTCurveTable row=\"RequiredStarLevels\"/>！</>",
+        "description_zh": "獲得K/DA稜鏡任務、3名K/DA英雄、2個小小複製裝置、1個初級英雄複製裝置及10金錢。\r\n\r\n<rules>K/DA英雄總星等達到</><TFTCurveTable row=\"RequiredStarLevels\" style=\"rules\"/><rules>！</>",
         "curveValues": {},
         "curveTable": {
           "RequiredTraitLevelForProgress": [
@@ -18194,8 +18390,8 @@
       "apiName": "DA_KDA19_RunningWild",
       "name": "Running Wild",
       "name_zh": "猛禽走獸",
-      "description": "At Combat Start, your 2 strongest K/DA champions without 3 items get a temporary recommended item and 100 Health. Gain a Neeko and a Lillia.",
-      "description_zh": "戰鬥開始時，你 2 最強的K/DA英雄（未持有 3 道具）會獲得一個暫時推薦道具和 100 生命。「獲得1個妮可和1個精進之矛。",
+      "description": "At Combat Start, your 2 strongest K/DA champions without 3 items get a temporary recommended item and 30 Health. Gain a Neeko and a Lillia.",
+      "description_zh": "戰鬥開始時，我方最強大且沒有3道具的2名K/DA英雄，會暫時獲得一個推薦道具及30生命。獲得1個妮可及1個莉莉亞。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -18216,7 +18412,7 @@
       "dynamic": false,
       "source_data": {
         "description": "At Combat Start, your <TFTCurveTable row=\"NumChampions\" precision=\"0\"/> strongest K/DA champions without <TFTCurveTable row=\"ItemThreshold\" precision=\"0\"/> items get a temporary recommended item and <TFTCurveTable row=\"BonusHealth\" precision=\"0\"/> Health. Gain a Neeko and a Lillia.",
-        "description_zh": "戰鬥開始時，你 <TFTCurveTable row=\"NumChampions\" precision=\"0\"/> 最強的K/DA英雄（未持有 <TFTCurveTable row=\"ItemThreshold\" precision=\"0\"/> 道具）會獲得一個暫時推薦道具和 <TFTCurveTable row=\"BonusHealth\" precision=\"0\"/> 生命。「獲得1個妮可和1個精進之矛。",
+        "description_zh": "戰鬥開始時，我方最強大且沒有<TFTCurveTable row=\"ItemThreshold\" precision=\"0\"/>道具的<TFTCurveTable row=\"NumChampions\" precision=\"0\"/>名K/DA英雄，會暫時獲得一個推薦道具及<TFTCurveTable row=\"BonusHealth\" precision=\"0\"/>生命。獲得1個妮可及1個莉莉亞。",
         "curveValues": {
           "NumChampions": [
             [
@@ -18233,7 +18429,7 @@
           "BonusHealth": [
             [
               1,
-              100
+              30
             ]
           ]
         },
@@ -18241,7 +18437,7 @@
           "BonusHealth": [
             [
               1,
-              100
+              30
             ]
           ],
           "ItemThreshold": [
@@ -18265,7 +18461,7 @@
       "name": "Star Power",
       "name_zh": "星光力量",
       "description": "When you 2-star a K/DA champion, gain a free K/DA champion. Gain a Lillia and a Neeko.",
-      "description_zh": null,
+      "description_zh": "當你將一名K/DA英雄升到2星時，獲得一名免費的K/DA英雄。獲得1個莉莉亞及1個妮可。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -18285,7 +18481,7 @@
       "dynamic": false,
       "source_data": {
         "description": "When you 2-star a K/DA champion, gain a free K/DA champion. Gain a Lillia and a Neeko.",
-        "description_zh": "When you 2-star a K/DA champion, gain a free K/DA champion. Gain a Lillia and a Neeko.",
+        "description_zh": "當你將一名K/DA英雄升到2星時，獲得一名免費的K/DA英雄。獲得1個莉莉亞及1個妮可。",
         "curveValues": {},
         "curveTable": {
           "SameCostChance": [
@@ -18326,8 +18522,8 @@
       "apiName": "DA_Augment19_Manager_ManagementTrack",
       "name": "Management Track",
       "name_zh": "管理進度",
-      "description": "Gain a Manager Emblem and a Leona. When champions gain bonuses from Manager there is a 40% chance to gain 1 gold. \n\nAfter collecting 40 gold from the Manager trait, gain a Dr. Mundo and a Warmog's Armor.",
-      "description_zh": "獲得1枚經紀人徽章及1個雷歐娜。當英雄從經紀人獲得加成時，有40%機率獲得1金錢。\n\n從經紀人特性取得40金錢後，獲得1個蒙多醫生和1件好戰者鎧甲。",
+      "description": "Gain a Manager Emblem and a Leona. When champions gain bonuses from Manager there is a 40% chance to gain 1 gold. \n\nAfter collecting 35 gold from the Manager trait, gain a Dr. Mundo and a Warmog's Armor.",
+      "description_zh": "獲得1枚經紀人徽章及1個雷歐娜。英雄透過經紀人獲得加成時，有40%機率獲得1金錢。\n\n透過經紀人特性獲得35金錢後，獲得1個蒙多醫生和1件好戰者鎧甲。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -18347,7 +18543,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Manager Emblem and a Leona. When champions gain bonuses from Manager there is a <TFTCurveTable row=\"GoldChance\" format=\"percent\"/> chance to gain <TFTCurveTable row=\"GoldToGrant\"/> gold. \r\n\r\nAfter collecting <TFTCurveTable row=\"GoldReq\"/> gold from the Manager trait, gain a Dr. Mundo and a Warmog's Armor.",
-        "description_zh": "獲得1枚經紀人徽章及1個雷歐娜。當英雄從經紀人獲得加成時，有<TFTCurveTable row=\"GoldChance\" format=\"percent\"/>機率獲得<TFTCurveTable row=\"GoldToGrant\"/>金錢。\r\n\r\n從經紀人特性取得<TFTCurveTable row=\"GoldReq\"/>金錢後，獲得1個蒙多醫生和1件好戰者鎧甲。",
+        "description_zh": "獲得1枚經紀人徽章及1個雷歐娜。英雄透過經紀人獲得加成時，有<TFTCurveTable row=\"GoldChance\" format=\"percent\"/>機率獲得<TFTCurveTable row=\"GoldToGrant\"/>金錢。\r\n\r\n透過經紀人特性獲得<TFTCurveTable row=\"GoldReq\"/>金錢後，獲得1個蒙多醫生和1件好戰者鎧甲。",
         "curveValues": {
           "GoldChance": [
             [
@@ -18364,7 +18560,7 @@
           "GoldReq": [
             [
               1,
-              40
+              35
             ]
           ]
         },
@@ -18378,7 +18574,7 @@
           "GoldReq": [
             [
               1,
-              40
+              35
             ]
           ],
           "GoldChance": [
@@ -18395,8 +18591,8 @@
       "apiName": "DA_Augment19_Manager_ManagementTrackPlus",
       "name": "Management Track+",
       "name_zh": "管理進度+",
-      "description": "Gain a Manager Emblem and a Leona. When champions gain bonuses from Manager there is a 40% chance to gain 1 gold. \n\nAfter collecting 30 gold from the Manager trait, gain a Dr. Mundo and a Warmog's Armor.",
-      "description_zh": "獲得1枚經紀人徽章及1個雷歐娜。當英雄從經紀人獲得加成時，有40%機率獲得1金錢。\n\n從經紀人特性取得30金錢後，獲得1個蒙多醫生和1件好戰者鎧甲。",
+      "description": "Gain a Manager Emblem and a Leona. When champions gain bonuses from Manager there is a 40% chance to gain 1 gold. \n\nAfter collecting 20 gold from the Manager trait, gain a Dr. Mundo and a Warmog's Armor.",
+      "description_zh": "獲得1枚經紀人徽章及1個雷歐娜。當英雄從經紀人獲得加成時，有40%機率獲得1金錢。\n\n從經紀人特性取得20金錢後，獲得1個蒙多醫生和1件好戰者鎧甲。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -18433,7 +18629,7 @@
           "GoldReq": [
             [
               1,
-              30
+              20
             ]
           ]
         },
@@ -18447,7 +18643,7 @@
           "GoldReq": [
             [
               1,
-              30
+              20
             ]
           ],
           "GoldToGrant": [
@@ -18463,9 +18659,9 @@
       "id": "DA_Augment19_Manager_StakeholderMeeting|CT_Augment19_Manager_StakeholderMeeting|Gold|3-2",
       "apiName": "DA_Augment19_Manager_StakeholderMeeting",
       "name": "Stakeholder Management",
-      "name_zh": "利害關係人管理",
+      "name_zh": "相關人員管理",
       "description": "Gain 2 additional Manager hexes. Managers placed in Manager hexes gain 10% max Health and an additional 50% of hex bonuses. In 4 rounds gain a Leona and 2 Prodigy champions.",
-      "description_zh": "獲得2個額外的經紀人棋格。放置在經紀人棋格上的經紀人會獲得10%最大生命，並額外獲得50%棋格加成。4回合後，獲得1個雷歐娜。",
+      "description_zh": "獲得2個額外的經紀人棋格。放置在經紀人棋格上的經紀人會獲得10%最大生命，並額外獲得50%棋格加成。4回合後，獲得1個雷歐娜和2個不世之才英雄。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -18485,7 +18681,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain 2 additional Manager hexes. Managers placed in Manager hexes gain <TFTCurveTable row=\"HealthPercent\" format=\"percentMinusOne\"/> max Health and an additional <TFTCurveTable row=\"HexPercentIncrease\" format=\"percentMinusOne\"/> of hex bonuses. In <TFTCurveTable row=\"NumRounds\"/> rounds gain a Leona and 2 Prodigy champions.",
-        "description_zh": "獲得2個額外的經紀人棋格。放置在經紀人棋格上的經紀人會獲得<TFTCurveTable row=\"HealthPercent\" format=\"percentMinusOne\"/>最大生命，並額外獲得<TFTCurveTable row=\"HexPercentIncrease\" format=\"percentMinusOne\"/>棋格加成。<TFTCurveTable row=\"NumRounds\"/>回合後，獲得1個雷歐娜。",
+        "description_zh": "獲得2個額外的經紀人棋格。放置在經紀人棋格上的經紀人會獲得<TFTCurveTable row=\"HealthPercent\" format=\"percentMinusOne\"/>最大生命，並額外獲得<TFTCurveTable row=\"HexPercentIncrease\" format=\"percentMinusOne\"/>棋格加成。<TFTCurveTable row=\"NumRounds\"/>回合後，獲得1個雷歐娜和2個不世之才英雄。",
         "curveValues": {
           "HealthPercent": [
             [
@@ -18532,9 +18728,9 @@
       "id": "DA_Augment19_Manager_StakeholderMeetingLate|CT_Augment19_Manager_StakeholderMeeting|Gold|4-2",
       "apiName": "DA_Augment19_Manager_StakeholderMeetingLate",
       "name": "Stakeholder Management+",
-      "name_zh": "相關人員管理+",
+      "name_zh": "利害關係人管理+",
       "description": "Gain 2 additional Manager hexes. Managers placed in Manager hexes gain 10% max Health and an additional 50% of hex bonuses. Gain a Leona and 2 Prodigy champions.",
-      "description_zh": "獲得2個額外的經紀人棋格。放置在經紀人棋格上的經紀人會獲得10%最大生命，並額外獲得50%棋格加成。獲得1個雷歐娜。",
+      "description_zh": "獲得2個額外的經紀人棋格。放置在經紀人棋格上的經紀人會獲得10%最大生命，並額外獲得50%棋格加成。獲得1個雷歐娜及2個不世之才英雄。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -18554,7 +18750,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain 2 additional Manager hexes. Managers placed in Manager hexes gain <TFTCurveTable row=\"HealthPercent\" format=\"percentMinusOne\"/> max Health and an additional <TFTCurveTable row=\"HexPercentIncrease\" format=\"percentMinusOne\"/> of hex bonuses. Gain a Leona and 2 Prodigy champions.",
-        "description_zh": "獲得2個額外的經紀人棋格。放置在經紀人棋格上的經紀人會獲得<TFTCurveTable row=\"HealthPercent\" format=\"percentMinusOne\"/>最大生命，並額外獲得<TFTCurveTable row=\"HexPercentIncrease\" format=\"percentMinusOne\"/>棋格加成。獲得1個雷歐娜。",
+        "description_zh": "獲得2個額外的經紀人棋格。放置在經紀人棋格上的經紀人會獲得<TFTCurveTable row=\"HealthPercent\" format=\"percentMinusOne\"/>最大生命，並額外獲得<TFTCurveTable row=\"HexPercentIncrease\" format=\"percentMinusOne\"/>棋格加成。獲得1個雷歐娜及2個不世之才英雄。",
         "curveValues": {
           "HealthPercent": [
             [
@@ -18597,7 +18793,7 @@
       "name": "Slayer Circlet",
       "name_zh": "殺戮者之環",
       "description": "Gain a Slayer Emblem, a Chain Vest, and a Briar.",
-      "description_zh": "獲得1枚殺戮者徽章、1個鎖子甲及1個犽凝。",
+      "description_zh": "獲得1枚殺戮者徽章、1件鎖子甲及1個布蕾爾。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -18618,7 +18814,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Slayer Emblem, a Chain Vest, and a Briar.",
-        "description_zh": "獲得1枚殺戮者徽章、1個鎖子甲及1個犽凝。",
+        "description_zh": "獲得1枚殺戮者徽章、1件鎖子甲及1個布蕾爾。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -18629,7 +18825,7 @@
       "name": "Slayer Crown",
       "name_zh": "殺戮者之冠",
       "description": "Gain a Slayer Emblem, a Titan's Resolve, and a Camille.",
-      "description_zh": null,
+      "description_zh": "獲得1枚殺戮者徽章、1個泰坦的決意及1個卡蜜兒。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -18649,7 +18845,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Slayer Emblem, a Titan's Resolve, and a Camille.",
-        "description_zh": "Gain a Slayer Emblem, a Titan's Resolve, and a Camille.",
+        "description_zh": "獲得1枚殺戮者徽章、1個泰坦的決意及1個卡蜜兒。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -18658,9 +18854,9 @@
       "id": "DA_19_OceanSongCirclet||Prismatic|3-2,4-2",
       "apiName": "DA_19_OceanSongCirclet",
       "name": "Beach Pop Circlet",
-      "name_zh": null,
+      "name_zh": "海灘流行樂之環",
       "description": "Gain a Beach Pop Emblem, a Sparring Gloves, and a Syndra.",
-      "description_zh": "獲得1枚海灘流行樂徽章、1副格鬥手套及1個葛雷夫。",
+      "description_zh": "獲得1枚海灘流行樂徽章、1副格鬥手套及1個星朵拉。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -18681,7 +18877,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Beach Pop Emblem, a Sparring Gloves, and a Syndra.",
-        "description_zh": "獲得1枚海灘流行樂徽章、1副格鬥手套及1個葛雷夫。",
+        "description_zh": "獲得1枚海灘流行樂徽章、1副格鬥手套及1個星朵拉。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -18692,7 +18888,7 @@
       "name": "Beach Pop Crown",
       "name_zh": "海灘流行樂之冠",
       "description": "Gain a Beach Pop Emblem, a Blue Buff, and a Syndra.",
-      "description_zh": "獲得一個海灘流行徽章、一個藍Buff，以及一個星朵拉。",
+      "description_zh": "獲得1枚海灘流行樂徽章、1個藍Buff及1個星朵拉。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -18712,7 +18908,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Beach Pop Emblem, a Blue Buff, and a Syndra.",
-        "description_zh": "獲得一個海灘流行徽章、一個藍Buff，以及一個星朵拉。",
+        "description_zh": "獲得1枚海灘流行樂徽章、1個藍Buff及1個星朵拉。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -18753,11 +18949,11 @@
             ],
             [
               2,
-              0.4
+              0.45
             ],
             [
               10,
-              0.4
+              0.45
             ]
           ],
           "SpecialLootChancePerStage": [
@@ -18809,7 +19005,7 @@
       "name": "Pentakill Circlet",
       "name_zh": "殺五社之環",
       "description": "Gain a Pentakill Emblem, a Negatron Cloak, and a Viego.",
-      "description_zh": null,
+      "description_zh": "獲得1枚殺五社徽章、1件負極斗篷及1個維爾戈。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -18830,7 +19026,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Pentakill Emblem, a Negatron Cloak, and a Viego.",
-        "description_zh": "Gain a Pentakill Emblem, a Negatron Cloak, and a Viego.",
+        "description_zh": "獲得1枚殺五社徽章、1件負極斗篷及1個維爾戈。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -18839,9 +19035,9 @@
       "id": "DA_19_PentakillCrown||Prismatic|2-1",
       "apiName": "DA_19_PentakillCrown",
       "name": "Pentakill Crown",
-      "name_zh": "殺五社皇冠",
+      "name_zh": "殺五社之冠",
       "description": "Gain a Pentakill Emblem, a Recurve Bow, and a Gnar.",
-      "description_zh": "獲得1枚殺五社徽章、1個巨人殺手及1個維爾戈。",
+      "description_zh": "獲得1枚殺五社徽章、1把反曲弓及1個吶兒。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -18861,7 +19057,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Pentakill Emblem, a Recurve Bow, and a Gnar.",
-        "description_zh": "獲得1枚殺五社徽章、1個巨人殺手及1個維爾戈。",
+        "description_zh": "獲得1枚殺五社徽章、1把反曲弓及1個吶兒。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -18872,7 +19068,7 @@
       "name": "Gathering Storm",
       "name_zh": "天寒地凍",
       "description": "Your Pentakill champions gain 8 Health permanently every time the Pentakill trait executes an enemy. Gain an Olaf, a Gnar, and a Karthus.",
-      "description_zh": "每次殺五社特性處決敵軍，我方殺五社英雄永久增加8生命。獲得3名殺五社英雄。",
+      "description_zh": "每次殺五社特性處決敵軍，我方殺五社英雄永久增加8生命。獲得1個歐拉夫、1個吶兒及1個卡爾瑟斯。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -18892,7 +19088,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Your Pentakill champions gain <TFTCurveTable row=\"HealthPerSummon\" precision=\"0\"/> Health permanently every time the Pentakill trait executes an enemy. Gain an Olaf, a Gnar, and a Karthus.",
-        "description_zh": "每次殺五社特性處決敵軍，我方殺五社英雄永久增加<TFTCurveTable row=\"HealthPerSummon\" precision=\"0\"/>生命。獲得3名殺五社英雄。",
+        "description_zh": "每次殺五社特性處決敵軍，我方殺五社英雄永久增加<TFTCurveTable row=\"HealthPerSummon\" precision=\"0\"/>生命。獲得1個歐拉夫、1個吶兒及1個卡爾瑟斯。",
         "curveValues": {
           "HealthPerSummon": [
             [
@@ -18952,7 +19148,7 @@
       "id": "DA_19_PentakillPrismaticTourPlus||Prismatic|3-2,4-2",
       "apiName": "DA_19_PentakillPrismaticTourPlus",
       "name": "Pentakill Prismatic Tour+",
-      "name_zh": null,
+      "name_zh": "殺五社稜鏡巡演+",
       "description": "Gain the Pentakill Prismatic Quest, 3 Pentakill champions, 2 components, and 10 gold.\n\nWith 7 Pentakill active, have the Lightbringer get kills and reach level 10!",
       "description_zh": "獲得殺五社稜鏡任務、3名殺五社英雄、2個組件及10金錢。\n\n啟動7殺五社特性時，讓光之使者取得多次擊殺並達到等級10！",
       "tier": "Prismatic",
@@ -18968,7 +19164,7 @@
           "name_zh": "殺五社"
         }
       ],
-      "image": "https://cdn.metatft.com/file/metatft/augments/t_missing-t3.png",
+      "image": "https://cdn.metatft.com/file/metatft/augments/t_augmenticon_pentakill_prismatic_tour.png",
       "missing_values": [],
       "missing_values_zh": [],
       "conflicting_values": [],
@@ -18986,7 +19182,7 @@
       "name": "Renegade Circlet",
       "name_zh": "叛徒之環",
       "description": "Gain a Renegade Emblem, a Sparring Gloves, and a 2-star Qiyana.",
-      "description_zh": null,
+      "description_zh": "獲得1枚叛徒徽章、1副格鬥手套及1個2星姬亞娜。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -19007,7 +19203,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Renegade Emblem, a Sparring Gloves, and a 2-star Qiyana.",
-        "description_zh": "Gain a Renegade Emblem, a Sparring Gloves, and a 2-star Qiyana.",
+        "description_zh": "獲得1枚叛徒徽章、1副格鬥手套及1個2星姬亞娜。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -19076,7 +19272,7 @@
           "AverageDropProbability": [
             [
               0,
-              0.11
+              0.15
             ]
           ],
           "MaxTolerance": [
@@ -19182,7 +19378,7 @@
       "id": "DA_19_SwiftstrikerCirclet||Prismatic|3-2,4-2",
       "apiName": "DA_19_SwiftstrikerCirclet",
       "name": "Swiftstriker Circlet",
-      "name_zh": null,
+      "name_zh": "迅捷先鋒之環",
       "description": "Gain a Swiftstriker Emblem, a Recurve Bow, and a Bard.",
       "description_zh": "獲得1枚迅捷先鋒徽章、1把反曲弓及1個巴德。",
       "tier": "Prismatic",
@@ -19216,7 +19412,7 @@
       "name": "Swiftstriker Crown",
       "name_zh": "迅捷先鋒之冠",
       "description": "Gain a Swiftstriker Emblem, a Rabadon's Deathcap, and a Bard.",
-      "description_zh": "獲得1枚迅捷先鋒徽章、1把海克斯科技槍刃及1個巴德。",
+      "description_zh": "獲得1枚迅捷先鋒徽章、1頂死亡之帽及1個巴德。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -19236,7 +19432,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Swiftstriker Emblem, a Rabadon's Deathcap, and a Bard.",
-        "description_zh": "獲得1枚迅捷先鋒徽章、1把海克斯科技槍刃及1個巴德。",
+        "description_zh": "獲得1枚迅捷先鋒徽章、1頂死亡之帽及1個巴德。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -19247,7 +19443,7 @@
       "name": "Death by a Thousand Cuts",
       "name_zh": "千刀萬剮",
       "description": "After 250 and 1000 Swiftstriker attacks, gain a Completed Item Anvil and 12 Gold. Gain a Ziggs and a Yunara.",
-      "description_zh": null,
+      "description_zh": "經過250與1000次迅捷先鋒普攻後，獲得1個完整道具鐵砧及12金錢。獲得1個希格斯及1個尤娜拉。",
       "tier": "Gold",
       "type": "trait",
       "rounds": [
@@ -19267,7 +19463,7 @@
       "dynamic": false,
       "source_data": {
         "description": "After <TFTCurveTable row=\"Threshold1\"/> and <TFTCurveTable row=\"Threshold2\"/> Swiftstriker attacks, gain a Completed Item Anvil and <TFTCurveTable row=\"GoldPerCashout\"/> Gold. Gain a Ziggs and a Yunara.",
-        "description_zh": "After <TFTCurveTable row=\"Threshold1\"/> and <TFTCurveTable row=\"Threshold2\"/> Swiftstriker attacks, gain a Completed Item Anvil and <TFTCurveTable row=\"GoldPerCashout\"/> Gold. Gain a Ziggs and a Yunara.",
+        "description_zh": "經過<TFTCurveTable row=\"Threshold1\"/>與<TFTCurveTable row=\"Threshold2\"/>次迅捷先鋒普攻後，獲得1個完整道具鐵砧及<TFTCurveTable row=\"GoldPerCashout\"/>金錢。獲得1個希格斯及1個尤娜拉。",
         "curveValues": {
           "Threshold1": [
             [
@@ -19391,7 +19587,7 @@
       "name": "Pain into Passion",
       "name_zh": "化苦痛為熱情",
       "description": "On the A-Side, True Damage champions gain 1% Attack Speed and 10 Health for every 30 Bling collected. On the B-Side, gain 3 Gold after losing combat. \n\nGain a Kennen, a Qiyana, and a Senna.",
-      "description_zh": "在A面，True Damage英雄每收集30個閃光，就會增加1%攻速和10生命。在B面，輸掉戰鬥會獲得3金錢。\n\n獲得3名True Damage英雄。",
+      "description_zh": "在A面，每收集30閃光，True Damage英雄增加1%攻速和10生命。在B面，輸掉戰鬥會獲得3金錢。\n\n獲得1個凱能、1個姬亞娜及1個姍娜。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -19411,7 +19607,7 @@
       "dynamic": false,
       "source_data": {
         "description": "On the A-Side, True Damage champions gain <TFTCurveTable row=\"AttackSpeedPerStep\"/>% Attack Speed and <TFTCurveTable row=\"HealthPerStep\"/> Health for every <TFTCurveTable row=\"BlingPerStep\"/> Bling collected. On the B-Side, gain <TFTCurveTable row=\"GoldOnLoss\" precision=\"0\"/> Gold after losing combat. \r\n\r\nGain a Kennen, a Qiyana, and a Senna.",
-        "description_zh": "在A面，True Damage英雄每收集<TFTCurveTable row=\"BlingPerStep\"/>個閃光，就會增加<TFTCurveTable row=\"AttackSpeedPerStep\"/>%攻速和<TFTCurveTable row=\"HealthPerStep\"/>生命。在B面，輸掉戰鬥會獲得<TFTCurveTable row=\"GoldOnLoss\" precision=\"0\"/>金錢。\r\n\r\n獲得3名True Damage英雄。",
+        "description_zh": "在A面，每收集<TFTCurveTable row=\"BlingPerStep\"/>閃光，True Damage英雄增加<TFTCurveTable row=\"AttackSpeedPerStep\"/>%攻速和<TFTCurveTable row=\"HealthPerStep\"/>生命。在B面，輸掉戰鬥會獲得<TFTCurveTable row=\"GoldOnLoss\" precision=\"0\"/>金錢。\r\n\r\n獲得1個凱能、1個姬亞娜及1個姍娜。",
         "curveValues": {
           "AttackSpeedPerStep": [
             [
@@ -19470,7 +19666,7 @@
       "id": "DA_19_TrueDamagePrismaticTour||Prismatic|4-2",
       "apiName": "DA_19_TrueDamagePrismaticTour",
       "name": "True Damage Prismatic Tour",
-      "name_zh": null,
+      "name_zh": "True Damage稜鏡巡演",
       "description": "Gain the True Damage Prismatic Quest, 3 True Damage champions, 3 components, and 2 gold.\n\nHit the right sequence of wins and losses with 5 True Damage active!",
       "description_zh": "獲得True Damage稜鏡任務、3名True Damage英雄、3個組件和2金錢。\n\n在5名True Damage成員位於隊伍中時，達成正確的勝負順序！",
       "tier": "Prismatic",
@@ -19562,7 +19758,7 @@
       "name": "Classical Circlet",
       "name_zh": "古典樂之環",
       "description": "Gain a Classical Emblem, a Tear of the Goddess, and a 2-star Renata.",
-      "description_zh": "獲得1枚古典樂徽章、1把暴風之劍及1個燼。",
+      "description_zh": "獲得1枚經典徽章、1滴女神之淚及1個2星睿娜妲。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -19583,7 +19779,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Classical Emblem, a Tear of the Goddess, and a 2-star Renata.",
-        "description_zh": "獲得1枚古典樂徽章、1把暴風之劍及1個燼。",
+        "description_zh": "獲得1枚經典徽章、1滴女神之淚及1個2星睿娜妲。",
         "curveValues": {},
         "curveTable": {}
       }
@@ -19592,9 +19788,9 @@
       "id": "DA_19_VirtuososCrown||Prismatic|2-1",
       "apiName": "DA_19_VirtuososCrown",
       "name": "Classical Crown",
-      "name_zh": "古典樂王冠",
+      "name_zh": "古典樂之冠",
       "description": "Gain a Classical Emblem, a Gargoyle Stoneplate, and a Nasus.",
-      "description_zh": "獲得1枚古典樂徽章、1副振奮盔甲及1個納瑟斯。",
+      "description_zh": "獲得1枚古典樂徽章、1個石像鬼磐核及1個納瑟斯。",
       "tier": "Prismatic",
       "type": "trait",
       "rounds": [
@@ -19614,7 +19810,7 @@
       "dynamic": false,
       "source_data": {
         "description": "Gain a Classical Emblem, a Gargoyle Stoneplate, and a Nasus.",
-        "description_zh": "獲得1枚古典樂徽章、1副振奮盔甲及1個納瑟斯。",
+        "description_zh": "獲得1枚古典樂徽章、1個石像鬼磐核及1個納瑟斯。",
         "curveValues": {},
         "curveTable": {}
       }
